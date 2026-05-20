@@ -338,7 +338,7 @@ function Benefits() {
     { icon: Globe, title: "Remote-work friendly", body: "Built for distributed teams and modern online work." },
   ];
   return (
-    <section id="benefits" className="relative py-24">
+    <section id="benefits" className="relative py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4">
         <div data-reveal className="mx-auto max-w-2xl text-center">
           <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">Benefits</p>
@@ -379,7 +379,7 @@ function HowItWorks() {
     { n: "03", title: "Start using smarter AI workflows", body: "Put intelligent automation to work — instantly." },
   ];
   return (
-    <section id="how" className="relative bg-gradient-to-b from-background to-secondary/40 py-24">
+    <section id="how" className="relative bg-gradient-to-b from-background to-secondary/40 py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4">
         <div data-reveal className="mx-auto max-w-2xl text-center">
           <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">How it works</p>
@@ -419,7 +419,7 @@ function Features() {
     { icon: LineChart, title: "Productivity Insights", body: "Better systems for better results." },
   ];
   return (
-    <section className="py-24">
+    <section className="py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4">
         <div data-reveal className="mx-auto max-w-2xl text-center">
           <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">Features</p>
@@ -570,7 +570,7 @@ function SocialProofInner() {
     { icon: Sparkles, label: "Designed for productivity" },
   ];
   return (
-    <section className="relative overflow-hidden py-24">
+    <section className="relative overflow-hidden py-16 md:py-24">
       <div className="pointer-events-none absolute inset-0 bg-hero opacity-60" />
       <div className="relative mx-auto max-w-6xl px-4">
         <div data-reveal className="mx-auto max-w-2xl text-center">
@@ -653,7 +653,7 @@ function FAQ() {
     },
   ];
   return (
-    <section id="faq" className="py-24">
+    <section id="faq" className="py-16 md:py-24">
       <div className="mx-auto max-w-3xl px-4">
         <div data-reveal className="text-center">
           <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">FAQ</p>
@@ -685,7 +685,7 @@ function FAQ() {
 
 function FinalCta() {
   return (
-    <section className="relative overflow-hidden py-28">
+    <section className="relative overflow-hidden py-20 md:py-28">
       <div className="pointer-events-none absolute inset-0 bg-gradient-primary opacity-[0.07]" />
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[420px] w-[640px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/15 blur-3xl" />
       <div className="relative mx-auto max-w-3xl px-4 text-center">
