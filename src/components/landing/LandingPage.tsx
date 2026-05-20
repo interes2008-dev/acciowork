@@ -13,6 +13,9 @@ import {
   Check,
   Menu,
   X,
+  Star,
+  Lock,
+  Clock,
 } from "lucide-react";
 import {
   Accordion,
@@ -51,6 +54,8 @@ type CtaProps = {
   className?: string;
   trackingId: string;
   icon?: boolean;
+  href?: string;
+  external?: boolean;
 };
 
 function Cta({
@@ -60,29 +65,35 @@ function Cta({
   className = "",
   trackingId,
   icon = true,
+  href,
+  external = true,
 }: CtaProps) {
   const base =
-    "inline-flex items-center justify-center gap-2 rounded-full font-medium transition-all duration-300 whitespace-nowrap";
+    "group inline-flex items-center justify-center gap-2 rounded-full font-medium transition-all duration-300 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2";
   const sizes =
     size === "lg" ? "h-12 px-7 text-[15px]" : "h-10 px-5 text-sm";
   const variants = {
     primary:
-      "bg-gradient-primary text-primary-foreground shadow-elegant hover:-translate-y-0.5 hover:shadow-glow",
+      "bg-gradient-primary text-primary-foreground shadow-elegant hover:-translate-y-0.5 hover:shadow-glow active:translate-y-0",
     outline:
       "border border-border bg-background/60 backdrop-blur text-foreground hover:bg-background hover:border-primary/40",
     ghost: "text-foreground hover:bg-muted",
   } as const;
+  const finalHref = href ?? REFERRAL_URL;
+  const isExternal = external && !href;
   return (
     <a
-      href={REFERRAL_URL}
-      target="_blank"
-      rel="noopener noreferrer"
+      href={finalHref}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
       onClick={() => trackCta(trackingId)}
       data-cta={trackingId}
       className={`${base} ${sizes} ${variants[variant]} ${className}`}
     >
       {label}
-      {icon && <ArrowRight className="h-4 w-4" />}
+      {icon && (
+        <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+      )}
     </a>
   );
 }
