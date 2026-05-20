@@ -690,17 +690,19 @@ function FinalCta() {
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[420px] w-[640px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/15 blur-3xl" />
       <div className="relative mx-auto max-w-3xl px-4 text-center">
         <h2 data-reveal className="text-balance text-4xl font-semibold tracking-tight md:text-6xl">
-          Ready to explore <span className="text-gradient">smarter work?</span>
+          Start working <span className="text-gradient">smarter today</span>
         </h2>
         <p data-reveal className="mx-auto mt-5 max-w-xl text-balance text-base text-muted-foreground md:text-lg">
-          Start in minutes and discover AI-powered workflows.
+          Free access · No credit card · Cancel anytime. Get your AI workflow live in under 2 minutes.
         </p>
         <div data-reveal className="mt-9 flex justify-center">
-          <Cta label="Start Now" trackingId="final_cta" />
+          <Cta label="Get Free Access" trackingId="final_cta" />
         </div>
-        <p data-reveal className="mt-5 text-xs text-muted-foreground">
-          Quick setup · Beginner friendly
-        </p>
+        <div data-reveal className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-muted-foreground">
+          <span className="inline-flex items-center gap-1.5"><Lock className="h-3.5 w-3.5 text-primary" /> Secure access</span>
+          <span className="inline-flex items-center gap-1.5"><Clock className="h-3.5 w-3.5 text-primary" /> 2-min setup</span>
+          <span className="inline-flex items-center gap-1.5"><Check className="h-3.5 w-3.5 text-primary" /> No card required</span>
+        </div>
       </div>
     </section>
   );
