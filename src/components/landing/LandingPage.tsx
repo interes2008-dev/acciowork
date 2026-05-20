@@ -513,9 +513,9 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
 
 function SocialProof() {
   const stats = [
-    { v: 99, suffix: "%", label: "Designed for productivity" },
-    { v: 24, suffix: "/7", label: "Always-on AI assistance" },
-    { v: 60, suffix: "s", label: "Time to first action" },
+    { v: 10, suffix: "k+", label: "Workflows launched with AI" },
+    { v: 42, suffix: "%", label: "Avg. time saved per task" },
+    { v: 2, suffix: " min", label: "Average setup time" },
   ];
   const pillars = [
     { icon: ShieldCheck, label: "Built for smarter workflows" },
@@ -546,6 +546,7 @@ function SocialProof() {
             </div>
           ))}
         </div>
+        <Testimonials />
         <div className="mt-8 grid gap-3 sm:grid-cols-3">
           {pillars.map((p) => (
             <div
