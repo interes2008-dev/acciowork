@@ -13,6 +13,9 @@ import {
   Check,
   Menu,
   X,
+  Star,
+  Lock,
+  Clock,
 } from "lucide-react";
 import {
   Accordion,
@@ -51,6 +54,8 @@ type CtaProps = {
   className?: string;
   trackingId: string;
   icon?: boolean;
+  href?: string;
+  external?: boolean;
 };
 
 function Cta({
@@ -60,29 +65,35 @@ function Cta({
   className = "",
   trackingId,
   icon = true,
+  href,
+  external = true,
 }: CtaProps) {
   const base =
-    "inline-flex items-center justify-center gap-2 rounded-full font-medium transition-all duration-300 whitespace-nowrap";
+    "group inline-flex items-center justify-center gap-2 rounded-full font-medium transition-all duration-300 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2";
   const sizes =
     size === "lg" ? "h-12 px-7 text-[15px]" : "h-10 px-5 text-sm";
   const variants = {
     primary:
-      "bg-gradient-primary text-primary-foreground shadow-elegant hover:-translate-y-0.5 hover:shadow-glow",
+      "bg-gradient-primary text-primary-foreground shadow-elegant hover:-translate-y-0.5 hover:shadow-glow active:translate-y-0",
     outline:
       "border border-border bg-background/60 backdrop-blur text-foreground hover:bg-background hover:border-primary/40",
     ghost: "text-foreground hover:bg-muted",
   } as const;
+  const finalHref = href ?? REFERRAL_URL;
+  const isExternal = external && !href;
   return (
     <a
-      href={REFERRAL_URL}
-      target="_blank"
-      rel="noopener noreferrer"
+      href={finalHref}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
       onClick={() => trackCta(trackingId)}
       data-cta={trackingId}
       className={`${base} ${sizes} ${variants[variant]} ${className}`}
     >
       {label}
-      {icon && <ArrowRight className="h-4 w-4" />}
+      {icon && (
+        <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+      )}
     </a>
   );
 }
@@ -191,7 +202,7 @@ function Navbar() {
 
 function Hero() {
   return (
-    <section id="top" className="bg-hero relative overflow-hidden pt-32 pb-16 md:pt-40 md:pb-24">
+    <section id="top" className="bg-hero relative overflow-hidden pt-28 pb-14 md:pt-40 md:pb-24">
       {/* ambient glows */}
       <div className="pointer-events-none absolute -top-32 left-1/2 h-[480px] w-[640px] -translate-x-1/2 rounded-full bg-primary/20 blur-3xl animate-pulse-glow" />
       <div className="pointer-events-none absolute right-0 top-40 h-72 w-72 rounded-full bg-accent/40 blur-3xl" />
@@ -202,35 +213,41 @@ function Hero() {
           className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white/60 px-4 py-1.5 text-xs font-medium text-primary backdrop-blur"
         >
           <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse-glow" />
-          New · AI-powered workflows for modern work
+          Now live · AI-powered workflows for modern work
         </div>
         <h1
           data-reveal
-          className="mx-auto max-w-4xl text-balance text-4xl font-semibold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl"
+          className="mx-auto max-w-4xl text-balance text-[2.4rem] font-semibold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
         >
-          Find Better <span className="text-gradient">Work Opportunities</span>{" "}
-          with AI
+          Work smarter with <span className="text-gradient">AI that finds your next opportunity</span>
         </h1>
         <p
           data-reveal
-          className="mx-auto mt-6 max-w-2xl text-balance text-base text-muted-foreground md:text-lg"
+          className="mx-auto mt-5 max-w-2xl text-balance text-base text-muted-foreground md:mt-6 md:text-lg"
         >
-          Discover smarter tools, better workflows, and new opportunities powered by AI.
+          Join thousands using Accio to discover curated tools, automate workflows, and unlock better online work — in minutes, not weeks.
         </p>
 
         <div
           data-reveal
-          className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row"
+          className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row md:mt-9"
         >
-          <Cta label="Start Free" trackingId="hero_primary" />
-          <Cta label="Explore Features" variant="outline" trackingId="hero_secondary" icon={false} />
+          <Cta label="Get Free Access" trackingId="hero_primary" />
+          <Cta
+            label="See How It Works"
+            variant="outline"
+            trackingId="hero_secondary"
+            icon={false}
+            href="#how"
+            external={false}
+          />
         </div>
 
         <ul
           data-reveal
-          className="mt-7 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground"
+          className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[13px] text-muted-foreground md:mt-7 md:text-sm"
         >
-          {["Fast setup", "Beginner friendly", "AI-powered workflow"].map((t) => (
+          {["Free to start", "No card required", "2-min setup"].map((t) => (
             <li key={t} className="inline-flex items-center gap-1.5">
               <Check className="h-4 w-4 text-primary" />
               {t}
@@ -238,7 +255,7 @@ function Hero() {
           ))}
         </ul>
 
-        <div data-reveal className="relative mx-auto mt-14 max-w-5xl">
+        <div data-reveal className="relative mx-auto mt-12 max-w-5xl md:mt-14">
           <div className="absolute -inset-6 -z-10 rounded-[2.5rem] bg-gradient-primary opacity-20 blur-3xl" />
           <div className="relative overflow-hidden rounded-3xl border border-white/60 bg-white/40 p-2 shadow-elegant backdrop-blur">
             <img
@@ -246,6 +263,9 @@ function Hero() {
               alt="AI productivity dashboard preview"
               width={1280}
               height={960}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
               className="w-full rounded-2xl"
             />
           </div>
@@ -318,7 +338,7 @@ function Benefits() {
     { icon: Globe, title: "Remote-work friendly", body: "Built for distributed teams and modern online work." },
   ];
   return (
-    <section id="benefits" className="relative py-24">
+    <section id="benefits" className="relative py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4">
         <div data-reveal className="mx-auto max-w-2xl text-center">
           <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">Benefits</p>
@@ -359,7 +379,7 @@ function HowItWorks() {
     { n: "03", title: "Start using smarter AI workflows", body: "Put intelligent automation to work — instantly." },
   ];
   return (
-    <section id="how" className="relative bg-gradient-to-b from-background to-secondary/40 py-24">
+    <section id="how" className="relative bg-gradient-to-b from-background to-secondary/40 py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4">
         <div data-reveal className="mx-auto max-w-2xl text-center">
           <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">How it works</p>
@@ -399,7 +419,7 @@ function Features() {
     { icon: LineChart, title: "Productivity Insights", body: "Better systems for better results." },
   ];
   return (
-    <section className="py-24">
+    <section className="py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4">
         <div data-reveal className="mx-auto max-w-2xl text-center">
           <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">Features</p>
@@ -492,10 +512,57 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
 }
 
 function SocialProof() {
+  return <SocialProofInner />;
+}
+
+function Testimonials() {
+  const items = [
+    {
+      quote: "Setup took two minutes. I had AI-curated opportunities in my inbox the same day.",
+      name: "Maya R.",
+      role: "Freelance designer",
+    },
+    {
+      quote: "Finally a workflow tool that actually saves time instead of adding more tabs.",
+      name: "Jordan T.",
+      role: "Remote ops lead",
+    },
+    {
+      quote: "The AI suggestions feel personal — not the usual generic noise.",
+      name: "Priya S.",
+      role: "Product consultant",
+    },
+  ];
+  return (
+    <div className="mt-10 grid gap-4 md:grid-cols-3">
+      {items.map((t) => (
+        <figure
+          key={t.name}
+          data-reveal
+          className="rounded-3xl border border-border/70 bg-card/80 p-6 text-left shadow-soft backdrop-blur"
+        >
+          <div className="flex gap-0.5 text-primary" aria-label="5 star rating">
+            {Array.from({ length: 5 }).map((_, i) => (
+              <Star key={i} className="h-3.5 w-3.5 fill-current" />
+            ))}
+          </div>
+          <blockquote className="mt-3 text-sm leading-relaxed text-foreground/85">
+            “{t.quote}”
+          </blockquote>
+          <figcaption className="mt-4 text-xs text-muted-foreground">
+            <span className="font-medium text-foreground/80">{t.name}</span> · {t.role}
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+  );
+}
+
+function SocialProofInner() {
   const stats = [
-    { v: 99, suffix: "%", label: "Designed for productivity" },
-    { v: 24, suffix: "/7", label: "Always-on AI assistance" },
-    { v: 60, suffix: "s", label: "Time to first action" },
+    { v: 10, suffix: "k+", label: "Workflows launched with AI" },
+    { v: 42, suffix: "%", label: "Avg. time saved per task" },
+    { v: 2, suffix: " min", label: "Average setup time" },
   ];
   const pillars = [
     { icon: ShieldCheck, label: "Built for smarter workflows" },
@@ -503,7 +570,7 @@ function SocialProof() {
     { icon: Sparkles, label: "Designed for productivity" },
   ];
   return (
-    <section className="relative overflow-hidden py-24">
+    <section className="relative overflow-hidden py-16 md:py-24">
       <div className="pointer-events-none absolute inset-0 bg-hero opacity-60" />
       <div className="relative mx-auto max-w-6xl px-4">
         <div data-reveal className="mx-auto max-w-2xl text-center">
@@ -526,6 +593,7 @@ function SocialProof() {
             </div>
           ))}
         </div>
+        <Testimonials />
         <div className="mt-8 grid gap-3 sm:grid-cols-3">
           {pillars.map((p) => (
             <div
@@ -585,7 +653,7 @@ function FAQ() {
     },
   ];
   return (
-    <section id="faq" className="py-24">
+    <section id="faq" className="py-16 md:py-24">
       <div className="mx-auto max-w-3xl px-4">
         <div data-reveal className="text-center">
           <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">FAQ</p>
@@ -617,22 +685,24 @@ function FAQ() {
 
 function FinalCta() {
   return (
-    <section className="relative overflow-hidden py-28">
+    <section className="relative overflow-hidden py-20 md:py-28">
       <div className="pointer-events-none absolute inset-0 bg-gradient-primary opacity-[0.07]" />
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[420px] w-[640px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/15 blur-3xl" />
       <div className="relative mx-auto max-w-3xl px-4 text-center">
         <h2 data-reveal className="text-balance text-4xl font-semibold tracking-tight md:text-6xl">
-          Ready to explore <span className="text-gradient">smarter work?</span>
+          Start working <span className="text-gradient">smarter today</span>
         </h2>
         <p data-reveal className="mx-auto mt-5 max-w-xl text-balance text-base text-muted-foreground md:text-lg">
-          Start in minutes and discover AI-powered workflows.
+          Free access · No credit card · Cancel anytime. Get your AI workflow live in under 2 minutes.
         </p>
         <div data-reveal className="mt-9 flex justify-center">
-          <Cta label="Start Now" trackingId="final_cta" />
+          <Cta label="Get Free Access" trackingId="final_cta" />
         </div>
-        <p data-reveal className="mt-5 text-xs text-muted-foreground">
-          Quick setup · Beginner friendly
-        </p>
+        <div data-reveal className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-muted-foreground">
+          <span className="inline-flex items-center gap-1.5"><Lock className="h-3.5 w-3.5 text-primary" /> Secure access</span>
+          <span className="inline-flex items-center gap-1.5"><Clock className="h-3.5 w-3.5 text-primary" /> 2-min setup</span>
+          <span className="inline-flex items-center gap-1.5"><Check className="h-3.5 w-3.5 text-primary" /> No card required</span>
+        </div>
       </div>
     </section>
   );
@@ -677,14 +747,30 @@ function Footer() {
 }
 
 function StickyMobileCta() {
+  const [hidden, setHidden] = useState(false);
+  useEffect(() => {
+    const onScroll = () => {
+      const doc = document.documentElement;
+      const max = doc.scrollHeight - window.innerHeight;
+      setHidden(max > 0 && window.scrollY / max > 0.95);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 px-4 pb-4 md:hidden">
-      <div className="glass-strong flex items-center justify-between gap-3 rounded-2xl border border-white/50 p-3 shadow-elegant">
+    <div
+      className={`fixed inset-x-0 bottom-0 z-40 px-3 pb-3 transition-all duration-300 md:hidden ${
+        hidden ? "translate-y-full opacity-0" : "translate-y-0 opacity-100"
+      }`}
+      aria-hidden={hidden}
+    >
+      <div className="glass-strong flex items-center justify-between gap-3 rounded-2xl border border-white/50 p-2.5 shadow-elegant">
         <div className="pl-1">
-          <div className="text-sm font-semibold">Try it free</div>
-          <div className="text-[11px] text-muted-foreground">Get started in minutes</div>
+          <div className="text-sm font-semibold leading-tight">Get free access</div>
+          <div className="text-[11px] text-muted-foreground">No card · 2-min setup</div>
         </div>
-        <Cta label="Start" size="md" trackingId="sticky_mobile" />
+        <Cta label="Start free" size="md" trackingId="sticky_mobile" />
       </div>
     </div>
   );
@@ -698,6 +784,10 @@ function ExitIntent() {
       shown.current = true;
       return;
     }
+    // Desktop-only exit intent — avoid annoying mobile users with auto-popups
+    if (window.matchMedia("(max-width: 767px)").matches) {
+      return;
+    }
     const onLeave = (e: MouseEvent) => {
       if (shown.current) return;
       if (e.clientY <= 0) {
@@ -707,17 +797,8 @@ function ExitIntent() {
       }
     };
     document.addEventListener("mouseleave", onLeave);
-    // mobile fallback: trigger after 25s if not shown
-    const t = window.setTimeout(() => {
-      if (!shown.current) {
-        shown.current = true;
-        sessionStorage.setItem("aw_exit_shown", "1");
-        setOpen(true);
-      }
-    }, 25000);
     return () => {
       document.removeEventListener("mouseleave", onLeave);
-      window.clearTimeout(t);
     };
   }, []);
 
