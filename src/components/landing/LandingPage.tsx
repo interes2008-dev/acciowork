@@ -202,7 +202,7 @@ function Navbar() {
 
 function Hero() {
   return (
-    <section id="top" className="bg-hero relative overflow-hidden pt-32 pb-16 md:pt-40 md:pb-24">
+    <section id="top" className="bg-hero relative overflow-hidden pt-28 pb-14 md:pt-40 md:pb-24">
       {/* ambient glows */}
       <div className="pointer-events-none absolute -top-32 left-1/2 h-[480px] w-[640px] -translate-x-1/2 rounded-full bg-primary/20 blur-3xl animate-pulse-glow" />
       <div className="pointer-events-none absolute right-0 top-40 h-72 w-72 rounded-full bg-accent/40 blur-3xl" />
@@ -213,35 +213,41 @@ function Hero() {
           className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white/60 px-4 py-1.5 text-xs font-medium text-primary backdrop-blur"
         >
           <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse-glow" />
-          New · AI-powered workflows for modern work
+          Now live · AI-powered workflows for modern work
         </div>
         <h1
           data-reveal
-          className="mx-auto max-w-4xl text-balance text-4xl font-semibold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl"
+          className="mx-auto max-w-4xl text-balance text-[2.4rem] font-semibold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
         >
-          Find Better <span className="text-gradient">Work Opportunities</span>{" "}
-          with AI
+          Work smarter with <span className="text-gradient">AI that finds your next opportunity</span>
         </h1>
         <p
           data-reveal
-          className="mx-auto mt-6 max-w-2xl text-balance text-base text-muted-foreground md:text-lg"
+          className="mx-auto mt-5 max-w-2xl text-balance text-base text-muted-foreground md:mt-6 md:text-lg"
         >
-          Discover smarter tools, better workflows, and new opportunities powered by AI.
+          Join thousands using Accio to discover curated tools, automate workflows, and unlock better online work — in minutes, not weeks.
         </p>
 
         <div
           data-reveal
-          className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row"
+          className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row md:mt-9"
         >
-          <Cta label="Start Free" trackingId="hero_primary" />
-          <Cta label="Explore Features" variant="outline" trackingId="hero_secondary" icon={false} />
+          <Cta label="Get Free Access" trackingId="hero_primary" />
+          <Cta
+            label="See How It Works"
+            variant="outline"
+            trackingId="hero_secondary"
+            icon={false}
+            href="#how"
+            external={false}
+          />
         </div>
 
         <ul
           data-reveal
-          className="mt-7 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground"
+          className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[13px] text-muted-foreground md:mt-7 md:text-sm"
         >
-          {["Fast setup", "Beginner friendly", "AI-powered workflow"].map((t) => (
+          {["Free to start", "No card required", "2-min setup"].map((t) => (
             <li key={t} className="inline-flex items-center gap-1.5">
               <Check className="h-4 w-4 text-primary" />
               {t}
@@ -249,7 +255,7 @@ function Hero() {
           ))}
         </ul>
 
-        <div data-reveal className="relative mx-auto mt-14 max-w-5xl">
+        <div data-reveal className="relative mx-auto mt-12 max-w-5xl md:mt-14">
           <div className="absolute -inset-6 -z-10 rounded-[2.5rem] bg-gradient-primary opacity-20 blur-3xl" />
           <div className="relative overflow-hidden rounded-3xl border border-white/60 bg-white/40 p-2 shadow-elegant backdrop-blur">
             <img
@@ -257,6 +263,9 @@ function Hero() {
               alt="AI productivity dashboard preview"
               width={1280}
               height={960}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
               className="w-full rounded-2xl"
             />
           </div>
