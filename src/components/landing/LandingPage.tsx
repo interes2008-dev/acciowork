@@ -745,14 +745,30 @@ function Footer() {
 }
 
 function StickyMobileCta() {
+  const [hidden, setHidden] = useState(false);
+  useEffect(() => {
+    const onScroll = () => {
+      const doc = document.documentElement;
+      const max = doc.scrollHeight - window.innerHeight;
+      setHidden(max > 0 && window.scrollY / max > 0.95);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 px-4 pb-4 md:hidden">
-      <div className="glass-strong flex items-center justify-between gap-3 rounded-2xl border border-white/50 p-3 shadow-elegant">
+    <div
+      className={`fixed inset-x-0 bottom-0 z-40 px-3 pb-3 transition-all duration-300 md:hidden ${
+        hidden ? "translate-y-full opacity-0" : "translate-y-0 opacity-100"
+      }`}
+      aria-hidden={hidden}
+    >
+      <div className="glass-strong flex items-center justify-between gap-3 rounded-2xl border border-white/50 p-2.5 shadow-elegant">
         <div className="pl-1">
-          <div className="text-sm font-semibold">Try it free</div>
-          <div className="text-[11px] text-muted-foreground">Get started in minutes</div>
+          <div className="text-sm font-semibold leading-tight">Get free access</div>
+          <div className="text-[11px] text-muted-foreground">No card · 2-min setup</div>
         </div>
-        <Cta label="Start" size="md" trackingId="sticky_mobile" />
+        <Cta label="Start free" size="md" trackingId="sticky_mobile" />
       </div>
     </div>
   );
