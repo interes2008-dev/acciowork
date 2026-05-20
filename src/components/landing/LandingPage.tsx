@@ -782,6 +782,10 @@ function ExitIntent() {
       shown.current = true;
       return;
     }
+    // Desktop-only exit intent — avoid annoying mobile users with auto-popups
+    if (window.matchMedia("(max-width: 767px)").matches) {
+      return;
+    }
     const onLeave = (e: MouseEvent) => {
       if (shown.current) return;
       if (e.clientY <= 0) {
@@ -791,17 +795,8 @@ function ExitIntent() {
       }
     };
     document.addEventListener("mouseleave", onLeave);
-    // mobile fallback: trigger after 25s if not shown
-    const t = window.setTimeout(() => {
-      if (!shown.current) {
-        shown.current = true;
-        sessionStorage.setItem("aw_exit_shown", "1");
-        setOpen(true);
-      }
-    }, 25000);
     return () => {
       document.removeEventListener("mouseleave", onLeave);
-      window.clearTimeout(t);
     };
   }, []);
 
