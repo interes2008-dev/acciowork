@@ -512,6 +512,53 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
 }
 
 function SocialProof() {
+  return <SocialProofInner />;
+}
+
+function Testimonials() {
+  const items = [
+    {
+      quote: "Setup took two minutes. I had AI-curated opportunities in my inbox the same day.",
+      name: "Maya R.",
+      role: "Freelance designer",
+    },
+    {
+      quote: "Finally a workflow tool that actually saves time instead of adding more tabs.",
+      name: "Jordan T.",
+      role: "Remote ops lead",
+    },
+    {
+      quote: "The AI suggestions feel personal — not the usual generic noise.",
+      name: "Priya S.",
+      role: "Product consultant",
+    },
+  ];
+  return (
+    <div className="mt-10 grid gap-4 md:grid-cols-3">
+      {items.map((t) => (
+        <figure
+          key={t.name}
+          data-reveal
+          className="rounded-3xl border border-border/70 bg-card/80 p-6 text-left shadow-soft backdrop-blur"
+        >
+          <div className="flex gap-0.5 text-primary" aria-label="5 star rating">
+            {Array.from({ length: 5 }).map((_, i) => (
+              <Star key={i} className="h-3.5 w-3.5 fill-current" />
+            ))}
+          </div>
+          <blockquote className="mt-3 text-sm leading-relaxed text-foreground/85">
+            “{t.quote}”
+          </blockquote>
+          <figcaption className="mt-4 text-xs text-muted-foreground">
+            <span className="font-medium text-foreground/80">{t.name}</span> · {t.role}
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+  );
+}
+
+function SocialProofInner() {
   const stats = [
     { v: 10, suffix: "k+", label: "Workflows launched with AI" },
     { v: 42, suffix: "%", label: "Avg. time saved per task" },
