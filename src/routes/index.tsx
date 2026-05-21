@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import LandingPage from "@/components/landing/LandingPage";
-import heroDashboard from "@/assets/hero-dashboard.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -10,25 +9,24 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Discover smarter opportunities with AI-powered workflows and premium productivity tools.",
+          "Research markets, compare suppliers, generate content and automate workflows with Accio Work — your AI workspace for smarter business work.",
       },
       {
         name: "keywords",
         content:
-          "AI work, smarter work, productivity, remote work, AI tools, workflow optimization",
+          "Accio Work, AI sourcing, supplier search, market research, AI workflows, product discovery, business automation",
       },
       { property: "og:title", content: "Accio Work | AI-Powered Work Opportunities" },
       {
         property: "og:description",
         content:
-          "Discover smarter opportunities with AI-powered workflows and premium productivity tools.",
+          "Research markets, compare suppliers, generate content and automate workflows with Accio Work — your AI workspace for smarter business work.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
     ],
     links: [
       { rel: "canonical", href: "/" },
-      { rel: "preload", as: "image", href: heroDashboard, fetchpriority: "high" },
     ],
   }),
 });
