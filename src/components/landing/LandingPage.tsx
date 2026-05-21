@@ -1,21 +1,26 @@
 import { useEffect, useRef, useState } from "react";
 import {
   Sparkles,
-  Rocket,
   Brain,
   Workflow,
   Search,
   LineChart,
   Zap,
   ShieldCheck,
-  Globe,
   ArrowRight,
   Check,
   Menu,
   X,
-  Star,
   Lock,
   Clock,
+  Factory,
+  TrendingUp,
+  PackageSearch,
+  FileText,
+  Lightbulb,
+  BarChart3,
+  Wand2,
+  ArrowUpRight,
 } from "lucide-react";
 import {
   Accordion,
@@ -24,13 +29,11 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import heroDashboard from "@/assets/hero-dashboard.png";
 
 const REFERRAL_URL =
   "https://www.accio.com/invite-work?sId=KECtp1GttZ42%2FwpJUH5IxQ%3D%3D&ic=IC506004212009&tenant=accio&src=p_referral_IC506004212009&return_url=https%3A%2F%2Fwww.accio.com%2Fwork%2F";
 
 function trackCta(label: string) {
-  // Lightweight CTA tracking — wires up to GA / Meta Pixel when present.
   type AnyWin = Window & {
     dataLayer?: Array<Record<string, unknown>>;
     gtag?: (...args: unknown[]) => void;
@@ -70,8 +73,7 @@ function Cta({
 }: CtaProps) {
   const base =
     "group inline-flex items-center justify-center gap-2 rounded-full font-medium transition-all duration-300 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2";
-  const sizes =
-    size === "lg" ? "h-12 px-7 text-[15px]" : "h-10 px-5 text-sm";
+  const sizes = size === "lg" ? "h-12 px-7 text-[15px]" : "h-10 px-5 text-sm";
   const variants = {
     primary:
       "bg-gradient-primary text-primary-foreground shadow-elegant hover:-translate-y-0.5 hover:shadow-glow active:translate-y-0",
@@ -152,11 +154,11 @@ function Navbar() {
             </span>
           </a>
           <div className="hidden items-center gap-8 md:flex">
-            <a href="#how" className="text-sm text-muted-foreground hover:text-foreground">
-              How It Works
+            <a href="#capabilities" className="text-sm text-muted-foreground hover:text-foreground">
+              Capabilities
             </a>
-            <a href="#benefits" className="text-sm text-muted-foreground hover:text-foreground">
-              Benefits
+            <a href="#how" className="text-sm text-muted-foreground hover:text-foreground">
+              How it works
             </a>
             <a href="#faq" className="text-sm text-muted-foreground hover:text-foreground">
               FAQ
@@ -164,7 +166,7 @@ function Navbar() {
           </div>
           <div className="flex items-center gap-2">
             <Cta
-              label="Start with Accio"
+              label="Try Accio Work Free"
               size="md"
               trackingId="navbar"
               icon={false}
@@ -182,16 +184,16 @@ function Navbar() {
         {open && (
           <div className="glass-strong mx-2 mt-2 rounded-2xl border border-white/40 p-4 shadow-soft md:hidden">
             <div className="flex flex-col gap-3">
-              <a href="#how" onClick={() => setOpen(false)} className="text-sm">
-                How It Works
+              <a href="#capabilities" onClick={() => setOpen(false)} className="text-sm">
+                Capabilities
               </a>
-              <a href="#benefits" onClick={() => setOpen(false)} className="text-sm">
-                Benefits
+              <a href="#how" onClick={() => setOpen(false)} className="text-sm">
+                How it works
               </a>
               <a href="#faq" onClick={() => setOpen(false)} className="text-sm">
                 FAQ
               </a>
-              <Cta label="Start with Accio" size="md" trackingId="navbar_mobile" />
+              <Cta label="Try Accio Work Free" size="md" trackingId="navbar_mobile" />
             </div>
           </div>
         )}
@@ -200,39 +202,106 @@ function Navbar() {
   );
 }
 
-function Hero() {
-  return (
-    <section id="top" className="bg-hero relative overflow-hidden pt-28 pb-14 md:pt-40 md:pb-24">
-      {/* ambient glows */}
-      <div className="pointer-events-none absolute -top-32 left-1/2 h-[480px] w-[640px] -translate-x-1/2 rounded-full bg-primary/20 blur-3xl animate-pulse-glow" />
-      <div className="pointer-events-none absolute right-0 top-40 h-72 w-72 rounded-full bg-accent/40 blur-3xl" />
+const CHIPS: { label: string; icon: typeof Search }[] = [
+  { label: "Supplier Search", icon: Factory },
+  { label: "Market Research", icon: BarChart3 },
+  { label: "Product Discovery", icon: PackageSearch },
+  { label: "Trend Analysis", icon: TrendingUp },
+  { label: "AI Content Creation", icon: FileText },
+  { label: "Workflow Automation", icon: Workflow },
+  { label: "Business Insights", icon: Lightbulb },
+];
 
-      <div className="relative mx-auto max-w-6xl px-4 text-center">
+function Hero() {
+  const [query, setQuery] = useState("");
+  const go = () => {
+    trackCta("hero_search");
+    window.open(REFERRAL_URL, "_blank", "noopener,noreferrer");
+  };
+  return (
+    <section id="top" className="bg-hero relative overflow-hidden pt-24 pb-12 md:pt-32 md:pb-20">
+      <div className="pointer-events-none absolute -top-40 left-1/2 h-[520px] w-[760px] -translate-x-1/2 rounded-full bg-primary/20 blur-3xl animate-pulse-glow" />
+      <div className="pointer-events-none absolute right-0 top-40 h-72 w-72 rounded-full bg-accent/50 blur-3xl" />
+      <div className="pointer-events-none absolute left-0 bottom-0 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
+
+      <div className="relative mx-auto max-w-5xl px-4 text-center">
         <div
           data-reveal
-          className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white/60 px-4 py-1.5 text-xs font-medium text-primary backdrop-blur"
+          className="mx-auto mb-5 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white/60 px-4 py-1.5 text-xs font-medium text-primary backdrop-blur"
         >
           <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse-glow" />
-          Now live · AI-powered workflows for modern work
+          AI workspace for sourcing, research & automation
         </div>
         <h1
           data-reveal
-          className="mx-auto max-w-4xl text-balance text-[2.4rem] font-semibold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
+          className="mx-auto max-w-4xl text-balance text-[2.2rem] font-semibold leading-[1.05] tracking-tight sm:text-5xl md:text-[3.6rem] lg:text-6xl"
         >
-          Work smarter with <span className="text-gradient">AI that finds your next opportunity</span>
+          Everything you need to{" "}
+          <span className="text-gradient">work smarter</span> — powered by AI
         </h1>
         <p
           data-reveal
-          className="mx-auto mt-5 max-w-2xl text-balance text-base text-muted-foreground md:mt-6 md:text-lg"
+          className="mx-auto mt-4 max-w-2xl text-balance text-base text-muted-foreground md:mt-5 md:text-lg"
         >
-          Join thousands using Accio to discover curated tools, automate workflows, and unlock better online work — in minutes, not weeks.
+          Research markets, compare suppliers, discover opportunities, automate
+          workflows, and get results faster with Accio Work.
         </p>
+
+        {/* Premium search panel */}
+        <form
+          data-reveal
+          onSubmit={(e) => {
+            e.preventDefault();
+            go();
+          }}
+          className="relative mx-auto mt-8 max-w-3xl"
+        >
+          <div className="absolute -inset-3 -z-10 rounded-[2rem] bg-gradient-primary opacity-20 blur-2xl" />
+          <div className="glass-strong flex items-center gap-2 rounded-2xl border border-white/60 p-2 shadow-elegant md:rounded-full">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary md:rounded-full">
+              <Search className="h-4.5 w-4.5" />
+            </div>
+            <input
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Describe what you want help with..."
+              className="min-w-0 flex-1 bg-transparent px-1 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none md:text-[15px]"
+              aria-label="What do you want help with?"
+            />
+            <button
+              type="submit"
+              onClick={() => trackCta("hero_search_btn")}
+              className="group inline-flex h-11 items-center gap-1.5 rounded-xl bg-gradient-primary px-4 text-sm font-medium text-primary-foreground shadow-soft transition-all hover:shadow-glow md:rounded-full md:px-5"
+            >
+              <Wand2 className="h-4 w-4" />
+              <span className="hidden sm:inline">Ask AI</span>
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </button>
+          </div>
+
+          {/* Chips */}
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-2">
+            {CHIPS.map((c) => (
+              <a
+                key={c.label}
+                href={REFERRAL_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackCta(`chip_${c.label}`)}
+                className="group inline-flex items-center gap-1.5 rounded-full border border-border/70 bg-white/70 px-3.5 py-1.5 text-xs text-foreground/80 backdrop-blur transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:bg-white hover:text-foreground hover:shadow-soft md:text-[13px]"
+              >
+                <c.icon className="h-3.5 w-3.5 text-primary" />
+                {c.label}
+              </a>
+            ))}
+          </div>
+        </form>
 
         <div
           data-reveal
-          className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row md:mt-9"
+          className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row"
         >
-          <Cta label="Get Free Access" trackingId="hero_primary" />
+          <Cta label="Try Accio Work Free" trackingId="hero_primary" />
           <Cta
             label="See How It Works"
             variant="outline"
@@ -245,113 +314,76 @@ function Hero() {
 
         <ul
           data-reveal
-          className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[13px] text-muted-foreground md:mt-7 md:text-sm"
+          className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[13px] text-muted-foreground"
         >
-          {["Free to start", "No card required", "2-min setup"].map((t) => (
-            <li key={t} className="inline-flex items-center gap-1.5">
-              <Check className="h-4 w-4 text-primary" />
-              {t}
-            </li>
-          ))}
+          {["Beginner friendly", "Fast setup", "No credit card required", "AI-powered assistance"].map(
+            (t) => (
+              <li key={t} className="inline-flex items-center gap-1.5">
+                <Check className="h-4 w-4 text-primary" />
+                {t}
+              </li>
+            ),
+          )}
         </ul>
-
-        <div data-reveal className="relative mx-auto mt-12 max-w-5xl md:mt-14">
-          <div className="absolute -inset-6 -z-10 rounded-[2.5rem] bg-gradient-primary opacity-20 blur-3xl" />
-          <div className="relative overflow-hidden rounded-3xl border border-white/60 bg-white/40 p-2 shadow-elegant backdrop-blur">
-            <img
-              src={heroDashboard}
-              alt="AI productivity dashboard preview"
-              width={1280}
-              height={960}
-              loading="eager"
-              fetchPriority="high"
-              decoding="async"
-              className="w-full rounded-2xl"
-            />
-          </div>
-          {/* floating cards */}
-          <div className="absolute -left-3 top-10 hidden animate-float rounded-2xl border border-white/60 bg-white/80 p-3 shadow-soft backdrop-blur md:flex">
-            <div className="flex items-center gap-2 text-xs">
-              <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                <Zap className="h-3.5 w-3.5" />
-              </span>
-              <div>
-                <div className="font-medium">+42% faster</div>
-                <div className="text-muted-foreground">workflow speed</div>
-              </div>
-            </div>
-          </div>
-          <div className="absolute -right-3 bottom-10 hidden animate-float rounded-2xl border border-white/60 bg-white/80 p-3 shadow-soft backdrop-blur md:flex [animation-delay:1.5s]">
-            <div className="flex items-center gap-2 text-xs">
-              <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                <Brain className="h-3.5 w-3.5" />
-              </span>
-              <div>
-                <div className="font-medium">AI Assist</div>
-                <div className="text-muted-foreground">active now</div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
 }
 
-function TrustBar() {
+function Capabilities() {
   const items = [
-    { icon: Rocket, label: "Smart onboarding" },
-    { icon: LineChart, label: "Productivity focused" },
-    { icon: Zap, label: "Fast access" },
-    { icon: Brain, label: "AI-powered workflow" },
+    {
+      icon: Factory,
+      title: "Find suppliers faster",
+      body: "Compare manufacturers and sourcing options quickly with AI-ranked matches.",
+    },
+    {
+      icon: TrendingUp,
+      title: "Research products & trends",
+      body: "Discover opportunities and real-time market demand in seconds.",
+    },
+    {
+      icon: FileText,
+      title: "Generate business content",
+      body: "Create listings, descriptions, reports and documents in your tone.",
+    },
+    {
+      icon: BarChart3,
+      title: "Analyze markets",
+      body: "Get intelligent insights and clear business recommendations.",
+    },
+    {
+      icon: Workflow,
+      title: "Automate repetitive work",
+      body: "Save hours every week with smarter AI workflows.",
+    },
+    {
+      icon: Lightbulb,
+      title: "Discover opportunities",
+      body: "Receive recommendations personalized to your goals and niche.",
+    },
   ];
   return (
-    <section className="border-y border-border/60 bg-background/60 py-10">
-      <div className="mx-auto max-w-6xl px-4">
-        <p data-reveal className="text-center text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
-          Designed for modern online work
-        </p>
-        <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4">
-          {items.map((it) => (
-            <div
-              key={it.label}
-              data-reveal
-              className="flex items-center justify-center gap-2 rounded-xl border border-border/60 bg-card/60 px-4 py-3 text-sm text-foreground/80 backdrop-blur"
-            >
-              <it.icon className="h-4 w-4 text-primary" />
-              {it.label}
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Benefits() {
-  const benefits = [
-    { icon: Brain, title: "AI-powered discovery", body: "Surface relevant opportunities tailored to how you work." },
-    { icon: Zap, title: "Faster workflows", body: "Cut friction with intelligent shortcuts and automations." },
-    { icon: Sparkles, title: "Smart recommendations", body: "Get personalized suggestions that actually help." },
-    { icon: Workflow, title: "Workflow optimization", body: "Streamline tasks across tools with a unified flow." },
-    { icon: Rocket, title: "Easy onboarding", body: "Get up and running in minutes — no setup pain." },
-    { icon: Globe, title: "Remote-work friendly", body: "Built for distributed teams and modern online work." },
-  ];
-  return (
-    <section id="benefits" className="relative py-16 md:py-24">
+    <section id="capabilities" className="relative py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4">
         <div data-reveal className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">Benefits</p>
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">
+            Capabilities
+          </p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
-            Why people choose <span className="text-gradient">smarter workflows</span>
+            What can <span className="text-gradient">Accio Work</span> do?
           </h2>
+          <p className="mt-4 text-muted-foreground md:text-lg">
+            One AI workspace for sourcing, research, content and automation — built for
+            modern business work.
+          </p>
         </div>
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {benefits.map((b) => (
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {items.map((b) => (
             <div
               key={b.title}
               data-reveal
-              className="group relative overflow-hidden rounded-2xl border border-border/70 bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-elegant"
+              className="group relative overflow-hidden rounded-2xl border border-border/70 bg-card/80 p-6 backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-elegant"
             >
               <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/5 transition-all duration-500 group-hover:bg-primary/10" />
               <div className="relative">
@@ -365,7 +397,229 @@ function Benefits() {
           ))}
         </div>
         <div data-reveal className="mt-12 flex justify-center">
-          <Cta label="Start Smarter" trackingId="benefits_cta" />
+          <Cta label="Try Accio Work Free" trackingId="capabilities_cta" />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ============ Preview Mockup cards ============ */
+
+function SupplierCard() {
+  const rows = [
+    { name: "Shenzhen Lumio Co.", score: 96, tag: "Verified" },
+    { name: "Greenline Manufacturing", score: 91, tag: "Top match" },
+    { name: "Aria Industrial Group", score: 88, tag: "Fast ship" },
+  ];
+  return (
+    <div className="rounded-3xl border border-white/60 bg-white/85 p-5 shadow-elegant backdrop-blur">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary">
+            <Factory className="h-4 w-4" />
+          </span>
+          <p className="text-sm font-semibold">Supplier comparison</p>
+        </div>
+        <span className="rounded-full bg-emerald-500/10 px-2 py-0.5 text-[10px] font-medium text-emerald-600">
+          AI ranked
+        </span>
+      </div>
+      <div className="mt-4 space-y-2">
+        {rows.map((r) => (
+          <div
+            key={r.name}
+            className="flex items-center justify-between rounded-xl border border-border/60 bg-background/60 px-3 py-2.5"
+          >
+            <div>
+              <div className="text-xs font-medium">{r.name}</div>
+              <div className="text-[10px] text-muted-foreground">{r.tag}</div>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="h-1.5 w-20 overflow-hidden rounded-full bg-muted">
+                <div
+                  className="h-full rounded-full bg-gradient-primary"
+                  style={{ width: `${r.score}%` }}
+                />
+              </div>
+              <span className="text-xs font-semibold tabular-nums">{r.score}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function TrendCard() {
+  const bars = [32, 48, 41, 60, 55, 72, 68, 84, 79, 92];
+  return (
+    <div className="rounded-3xl border border-white/60 bg-white/85 p-5 shadow-elegant backdrop-blur">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary">
+            <TrendingUp className="h-4 w-4" />
+          </span>
+          <p className="text-sm font-semibold">Trend analysis</p>
+        </div>
+        <span className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-medium text-primary">
+          <ArrowUpRight className="h-3 w-3" /> +24%
+        </span>
+      </div>
+      <div className="mt-4 flex h-28 items-end gap-1.5">
+        {bars.map((h, i) => (
+          <div
+            key={i}
+            className="flex-1 rounded-md bg-gradient-to-t from-primary/30 to-primary/80"
+            style={{ height: `${h}%` }}
+          />
+        ))}
+      </div>
+      <div className="mt-3 flex items-center justify-between text-[10px] text-muted-foreground">
+        <span>Smart home · 90d</span>
+        <span>High demand</span>
+      </div>
+    </div>
+  );
+}
+
+function ProductCard() {
+  return (
+    <div className="rounded-3xl border border-white/60 bg-white/85 p-5 shadow-elegant backdrop-blur">
+      <div className="flex items-center gap-2">
+        <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary">
+          <PackageSearch className="h-4 w-4" />
+        </span>
+        <p className="text-sm font-semibold">Product research</p>
+      </div>
+      <div className="mt-4 grid grid-cols-3 gap-2">
+        {[0, 1, 2, 3, 4, 5].map((i) => (
+          <div key={i} className="rounded-xl border border-border/60 bg-background/60 p-2">
+            <div className="aspect-square rounded-lg bg-gradient-to-br from-primary/15 to-accent/40" />
+            <div className="mt-1.5 h-1.5 w-3/4 rounded-full bg-foreground/10" />
+            <div className="mt-1 h-1.5 w-1/2 rounded-full bg-foreground/10" />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function ReportCard() {
+  return (
+    <div className="rounded-3xl border border-white/60 bg-white/85 p-5 shadow-elegant backdrop-blur">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary">
+            <FileText className="h-4 w-4" />
+          </span>
+          <p className="text-sm font-semibold">AI-generated report</p>
+        </div>
+        <span className="rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-medium text-primary">
+          Draft
+        </span>
+      </div>
+      <div className="mt-4 space-y-2">
+        <div className="h-2 w-11/12 rounded-full bg-foreground/10" />
+        <div className="h-2 w-10/12 rounded-full bg-foreground/10" />
+        <div className="h-2 w-9/12 rounded-full bg-foreground/10" />
+        <div className="h-2 w-7/12 rounded-full bg-foreground/10" />
+        <div className="mt-3 rounded-xl border border-border/60 bg-secondary/40 p-3">
+          <div className="flex items-center gap-2 text-[11px] font-medium text-primary">
+            <Sparkles className="h-3.5 w-3.5" /> Summary
+          </div>
+          <div className="mt-1.5 h-1.5 w-full rounded-full bg-foreground/10" />
+          <div className="mt-1 h-1.5 w-5/6 rounded-full bg-foreground/10" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function WorkflowCard() {
+  const steps = ["Source", "Compare", "Decide", "Order"];
+  return (
+    <div className="rounded-3xl border border-white/60 bg-white/85 p-5 shadow-elegant backdrop-blur">
+      <div className="flex items-center gap-2">
+        <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary">
+          <Workflow className="h-4 w-4" />
+        </span>
+        <p className="text-sm font-semibold">Workflow recommendation</p>
+      </div>
+      <div className="mt-4 flex items-center gap-2">
+        {steps.map((s, i) => (
+          <div key={s} className="flex flex-1 items-center gap-2">
+            <div className="flex-1 rounded-xl border border-border/60 bg-background/60 px-2.5 py-2 text-center text-[11px] font-medium">
+              {s}
+            </div>
+            {i < steps.length - 1 && (
+              <ArrowRight className="h-3.5 w-3.5 shrink-0 text-muted-foreground" />
+            )}
+          </div>
+        ))}
+      </div>
+      <div className="mt-3 flex items-center gap-2 rounded-xl bg-emerald-500/10 px-3 py-2 text-[11px] text-emerald-700">
+        <Zap className="h-3.5 w-3.5" /> Saves ~6 hours / week
+      </div>
+    </div>
+  );
+}
+
+function InsightCard() {
+  return (
+    <div className="rounded-3xl border border-white/60 bg-white/85 p-5 shadow-elegant backdrop-blur">
+      <div className="flex items-center gap-2">
+        <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary">
+          <Lightbulb className="h-4 w-4" />
+        </span>
+        <p className="text-sm font-semibold">Market insight</p>
+      </div>
+      <div className="mt-4 grid grid-cols-3 gap-2">
+        {[
+          { k: "Demand", v: "High" },
+          { k: "Margin", v: "32%" },
+          { k: "Risk", v: "Low" },
+        ].map((m) => (
+          <div key={m.k} className="rounded-xl border border-border/60 bg-background/60 p-3 text-center">
+            <div className="text-[10px] text-muted-foreground">{m.k}</div>
+            <div className="mt-0.5 text-sm font-semibold text-gradient">{m.v}</div>
+          </div>
+        ))}
+      </div>
+      <div className="mt-3 space-y-1.5">
+        <div className="h-1.5 w-full rounded-full bg-foreground/10" />
+        <div className="h-1.5 w-4/5 rounded-full bg-foreground/10" />
+      </div>
+    </div>
+  );
+}
+
+function PreviewSection() {
+  return (
+    <section className="relative overflow-hidden py-16 md:py-24">
+      <div className="pointer-events-none absolute inset-0 bg-hero opacity-70" />
+      <div className="relative mx-auto max-w-6xl px-4">
+        <div data-reveal className="mx-auto max-w-2xl text-center">
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">Preview</p>
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
+            A glimpse inside <span className="text-gradient">Accio Work</span>
+          </h2>
+          <p className="mt-4 text-muted-foreground md:text-lg">
+            Realistic surfaces from sourcing to insights — every result one click away.
+          </p>
+        </div>
+
+        <div className="relative mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div data-reveal className="lg:[transform:translateY(8px)]"><SupplierCard /></div>
+          <div data-reveal className="lg:[transform:translateY(-8px)]"><TrendCard /></div>
+          <div data-reveal className="lg:[transform:translateY(4px)]"><ProductCard /></div>
+          <div data-reveal className="lg:[transform:translateY(-4px)]"><ReportCard /></div>
+          <div data-reveal className="lg:[transform:translateY(8px)]"><WorkflowCard /></div>
+          <div data-reveal className="lg:[transform:translateY(-8px)]"><InsightCard /></div>
+        </div>
+
+        <div data-reveal className="mt-12 flex justify-center">
+          <Cta label="Open Accio Work" trackingId="preview_cta" />
         </div>
       </div>
     </section>
@@ -374,9 +628,19 @@ function Benefits() {
 
 function HowItWorks() {
   const steps = [
-    { n: "01", title: "Create access", body: "Sign up in minutes with frictionless onboarding." },
-    { n: "02", title: "Explore opportunities", body: "Browse AI-curated tools and workflows that match your goals." },
-    { n: "03", title: "Start using smarter AI workflows", body: "Put intelligent automation to work — instantly." },
+    { n: "01", title: "Sign up", body: "Create your free account in under a minute.", icon: Sparkles },
+    {
+      n: "02",
+      title: "Choose what you need",
+      body: "Search, analyze, compare, research, or automate.",
+      icon: Search,
+    },
+    {
+      n: "03",
+      title: "Get AI-powered results",
+      body: "Start working smarter in minutes — not days.",
+      icon: Wand2,
+    },
   ];
   return (
     <section id="how" className="relative bg-gradient-to-b from-background to-secondary/40 py-16 md:py-24">
@@ -395,8 +659,11 @@ function HowItWorks() {
               data-reveal
               className="relative rounded-2xl border border-border/70 bg-card/80 p-7 backdrop-blur transition-all hover:-translate-y-1 hover:shadow-elegant"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-primary text-sm font-semibold text-primary-foreground shadow-elegant">
-                {s.n}
+              <div className="flex items-center gap-3">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-primary text-sm font-semibold text-primary-foreground shadow-elegant">
+                  {s.n}
+                </div>
+                <s.icon className="h-5 w-5 text-primary/70" />
               </div>
               <h3 className="mt-5 text-lg font-semibold tracking-tight">{s.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.body}</p>
@@ -404,209 +671,49 @@ function HowItWorks() {
           ))}
         </div>
         <div data-reveal className="mt-12 flex justify-center">
-          <Cta label="Get Started Now" trackingId="how_cta" />
+          <Cta label="Get Free Access" trackingId="how_cta" />
         </div>
       </div>
     </section>
   );
 }
 
-function Features() {
-  const features = [
-    { icon: Search, title: "Smart Search", body: "Find opportunities faster." },
-    { icon: Brain, title: "AI Assistance", body: "Improve workflows using AI." },
-    { icon: Workflow, title: "Workflow Optimization", body: "Save time and work smarter." },
-    { icon: LineChart, title: "Productivity Insights", body: "Better systems for better results." },
+function Trust() {
+  const reasons = [
+    { icon: Zap, title: "Faster research", body: "Cut hours of digging down to a clear answer." },
+    { icon: Brain, title: "Better decisions", body: "AI-assisted insights you can actually act on." },
+    { icon: Workflow, title: "Less repetitive work", body: "Hand off the boring tasks to your AI workspace." },
+    { icon: LineChart, title: "Smarter productivity", body: "Spend more time on the work that grows your business." },
   ];
   return (
     <section className="py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4">
         <div data-reveal className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">Features</p>
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">Why Accio Work</p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
-            Premium tools, <span className="text-gradient">effortless workflows</span>
+            Why people use <span className="text-gradient">Accio Work</span>
           </h2>
         </div>
-        <div className="mt-14 grid gap-6 md:grid-cols-2">
-          {features.map((f, i) => (
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {reasons.map((r) => (
             <div
-              key={f.title}
+              key={r.title}
               data-reveal
-              className="relative overflow-hidden rounded-3xl border border-border/70 bg-card p-7 transition-all hover:-translate-y-1 hover:shadow-elegant"
+              className="rounded-2xl border border-border/70 bg-card/80 p-6 backdrop-blur transition-all hover:-translate-y-1 hover:shadow-soft"
             >
-              <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-primary text-primary-foreground shadow-soft">
-                  <f.icon className="h-5 w-5" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold tracking-tight">{f.title}</h3>
-                  <p className="mt-1.5 text-sm text-muted-foreground">{f.body}</p>
-                </div>
-              </div>
-              {/* mini mock */}
-              <div className="relative mt-6 overflow-hidden rounded-2xl border border-border/60 bg-secondary/40 p-4">
-                <div className="flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-destructive/60" />
-                  <span className="h-2 w-2 rounded-full bg-yellow-400/70" />
-                  <span className="h-2 w-2 rounded-full bg-emerald-400/70" />
-                </div>
-                <div className="mt-3 space-y-2">
-                  <div className="h-2 w-3/4 rounded-full bg-foreground/10" />
-                  <div className="h-2 w-1/2 rounded-full bg-foreground/10" />
-                  <div className="mt-3 grid grid-cols-3 gap-2">
-                    {[0, 1, 2].map((k) => (
-                      <div
-                        key={k}
-                        className="h-12 rounded-lg bg-gradient-to-br from-primary/15 to-primary/5"
-                        style={{ opacity: 0.6 + ((i + k) % 3) * 0.15 }}
-                      />
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div data-reveal className="mt-12 flex justify-center">
-          <Cta label="Explore Accio" trackingId="features_cta" />
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
-  const [value, setValue] = useState(0);
-  const ref = useRef<HTMLSpanElement | null>(null);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            const start = performance.now();
-            const dur = 1400;
-            const tick = (now: number) => {
-              const p = Math.min(1, (now - start) / dur);
-              const eased = 1 - Math.pow(1 - p, 3);
-              setValue(Math.round(to * eased));
-              if (p < 1) requestAnimationFrame(tick);
-            };
-            requestAnimationFrame(tick);
-            io.disconnect();
-          }
-        });
-      },
-      { threshold: 0.4 },
-    );
-    io.observe(el);
-    return () => io.disconnect();
-  }, [to]);
-  return (
-    <span ref={ref}>
-      {value}
-      {suffix}
-    </span>
-  );
-}
-
-function SocialProof() {
-  return <SocialProofInner />;
-}
-
-function Testimonials() {
-  const items = [
-    {
-      quote: "Setup took two minutes. I had AI-curated opportunities in my inbox the same day.",
-      name: "Maya R.",
-      role: "Freelance designer",
-    },
-    {
-      quote: "Finally a workflow tool that actually saves time instead of adding more tabs.",
-      name: "Jordan T.",
-      role: "Remote ops lead",
-    },
-    {
-      quote: "The AI suggestions feel personal — not the usual generic noise.",
-      name: "Priya S.",
-      role: "Product consultant",
-    },
-  ];
-  return (
-    <div className="mt-10 grid gap-4 md:grid-cols-3">
-      {items.map((t) => (
-        <figure
-          key={t.name}
-          data-reveal
-          className="rounded-3xl border border-border/70 bg-card/80 p-6 text-left shadow-soft backdrop-blur"
-        >
-          <div className="flex gap-0.5 text-primary" aria-label="5 star rating">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <Star key={i} className="h-3.5 w-3.5 fill-current" />
-            ))}
-          </div>
-          <blockquote className="mt-3 text-sm leading-relaxed text-foreground/85">
-            “{t.quote}”
-          </blockquote>
-          <figcaption className="mt-4 text-xs text-muted-foreground">
-            <span className="font-medium text-foreground/80">{t.name}</span> · {t.role}
-          </figcaption>
-        </figure>
-      ))}
-    </div>
-  );
-}
-
-function SocialProofInner() {
-  const stats = [
-    { v: 10, suffix: "k+", label: "Workflows launched with AI" },
-    { v: 42, suffix: "%", label: "Avg. time saved per task" },
-    { v: 2, suffix: " min", label: "Average setup time" },
-  ];
-  const pillars = [
-    { icon: ShieldCheck, label: "Built for smarter workflows" },
-    { icon: Globe, label: "Created for modern online work" },
-    { icon: Sparkles, label: "Designed for productivity" },
-  ];
-  return (
-    <section className="relative overflow-hidden py-16 md:py-24">
-      <div className="pointer-events-none absolute inset-0 bg-hero opacity-60" />
-      <div className="relative mx-auto max-w-6xl px-4">
-        <div data-reveal className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">Trust</p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
-            Built for modern online work
-          </h2>
-        </div>
-        <div className="mt-12 grid gap-5 md:grid-cols-3">
-          {stats.map((s) => (
-            <div
-              key={s.label}
-              data-reveal
-              className="rounded-3xl border border-border/70 bg-card/80 p-8 text-center shadow-soft backdrop-blur"
-            >
-              <div className="text-4xl font-semibold tracking-tight text-gradient md:text-5xl">
-                <Counter to={s.v} suffix={s.suffix} />
-              </div>
-              <div className="mt-2 text-sm text-muted-foreground">{s.label}</div>
-            </div>
-          ))}
-        </div>
-        <Testimonials />
-        <div className="mt-8 grid gap-3 sm:grid-cols-3">
-          {pillars.map((p) => (
-            <div
-              key={p.label}
-              data-reveal
-              className="flex items-center gap-3 rounded-2xl border border-border/70 bg-card/80 px-5 py-4 backdrop-blur"
-            >
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                <p.icon className="h-4 w-4" />
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                <r.icon className="h-5 w-5" />
               </span>
-              <span className="text-sm text-foreground/80">{p.label}</span>
+              <h3 className="mt-4 text-base font-semibold tracking-tight">{r.title}</h3>
+              <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{r.body}</p>
             </div>
           ))}
+        </div>
+        <div data-reveal className="mx-auto mt-10 flex max-w-3xl flex-wrap items-center justify-center gap-x-5 gap-y-2 rounded-2xl border border-border/60 bg-card/70 px-5 py-4 text-xs text-muted-foreground backdrop-blur">
+          <span className="inline-flex items-center gap-1.5"><ShieldCheck className="h-3.5 w-3.5 text-primary" /> Secure & private</span>
+          <span className="inline-flex items-center gap-1.5"><Clock className="h-3.5 w-3.5 text-primary" /> 2-min setup</span>
+          <span className="inline-flex items-center gap-1.5"><Lock className="h-3.5 w-3.5 text-primary" /> No card required</span>
+          <span className="inline-flex items-center gap-1.5"><Check className="h-3.5 w-3.5 text-primary" /> Beginner friendly</span>
         </div>
       </div>
     </section>
@@ -633,23 +740,27 @@ function FAQ() {
   const items = [
     {
       q: "What is Accio Work?",
-      a: "Accio Work is an AI-powered platform that helps you discover smarter tools, workflows and opportunities for modern online work.",
+      a: "Accio Work is an AI workspace that helps you research markets, compare suppliers, generate business content, and automate repetitive workflows in one place.",
     },
     {
-      q: "How does it work?",
-      a: "Create access, explore curated opportunities, and start using intelligent workflows that adapt to how you work.",
+      q: "What can I actually do with it?",
+      a: "Find and compare suppliers, run product and trend research, generate listings or reports, analyze markets, and automate recurring tasks — all from a single AI-powered interface.",
     },
     {
-      q: "Is it beginner friendly?",
-      a: "Yes. Onboarding is designed to be simple — most people get value within minutes, with no technical setup required.",
+      q: "Do I need to be technical?",
+      a: "No. You simply describe what you need in plain language and Accio Work returns structured results, suggestions, and ready-to-use content.",
     },
     {
       q: "Is registration free?",
-      a: "Getting started is free. You can explore the platform without commitment.",
+      a: "Yes — you can create an account and start using Accio Work for free. No credit card required to get started.",
     },
     {
-      q: "How quickly can I get started?",
-      a: "In just a few minutes. Click any “Start” button on this page to begin.",
+      q: "How quickly can I get value?",
+      a: "Most people see their first useful result within a few minutes of signing up. Setup takes around two minutes.",
+    },
+    {
+      q: "Is this the official Accio?",
+      a: "acciowork.pro is an independent informational landing page. All CTAs send you to the official Accio platform to sign up.",
     },
   ];
   return (
@@ -664,7 +775,11 @@ function FAQ() {
         <div data-reveal className="mt-10 rounded-3xl border border-border/70 bg-card/70 p-2 backdrop-blur">
           <Accordion type="single" collapsible className="w-full">
             {items.map((it, i) => (
-              <AccordionItem key={it.q} value={`item-${i}`} className="border-b border-border/60 last:border-0 px-4">
+              <AccordionItem
+                key={it.q}
+                value={`item-${i}`}
+                className="border-b border-border/60 px-4 last:border-0"
+              >
                 <AccordionTrigger className="text-left text-base font-medium">
                   {it.q}
                 </AccordionTrigger>
@@ -676,7 +791,7 @@ function FAQ() {
           </Accordion>
         </div>
         <div data-reveal className="mt-10 flex justify-center">
-          <Cta label="Start Today" trackingId="faq_cta" />
+          <Cta label="Get Free Access" trackingId="faq_cta" />
         </div>
       </div>
     </section>
@@ -692,16 +807,28 @@ function FinalCta() {
         <h2 data-reveal className="text-balance text-4xl font-semibold tracking-tight md:text-6xl">
           Start working <span className="text-gradient">smarter today</span>
         </h2>
-        <p data-reveal className="mx-auto mt-5 max-w-xl text-balance text-base text-muted-foreground md:text-lg">
-          Free access · No credit card · Cancel anytime. Get your AI workflow live in under 2 minutes.
+        <p
+          data-reveal
+          className="mx-auto mt-5 max-w-xl text-balance text-base text-muted-foreground md:text-lg"
+        >
+          Explore smarter workflows, research tools, and AI-powered assistance in minutes.
         </p>
         <div data-reveal className="mt-9 flex justify-center">
           <Cta label="Get Free Access" trackingId="final_cta" />
         </div>
-        <div data-reveal className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-muted-foreground">
-          <span className="inline-flex items-center gap-1.5"><Lock className="h-3.5 w-3.5 text-primary" /> Secure access</span>
-          <span className="inline-flex items-center gap-1.5"><Clock className="h-3.5 w-3.5 text-primary" /> 2-min setup</span>
-          <span className="inline-flex items-center gap-1.5"><Check className="h-3.5 w-3.5 text-primary" /> No card required</span>
+        <div
+          data-reveal
+          className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-muted-foreground"
+        >
+          <span className="inline-flex items-center gap-1.5">
+            <Lock className="h-3.5 w-3.5 text-primary" /> Secure access
+          </span>
+          <span className="inline-flex items-center gap-1.5">
+            <Clock className="h-3.5 w-3.5 text-primary" /> 2-min setup
+          </span>
+          <span className="inline-flex items-center gap-1.5">
+            <Check className="h-3.5 w-3.5 text-primary" /> No card required
+          </span>
         </div>
       </div>
     </section>
@@ -722,21 +849,23 @@ function Footer() {
             </span>
           </a>
           <p className="mt-3 max-w-xs text-sm text-muted-foreground">
-            Independent informational website.
+            Independent informational website. Not affiliated with Accio.
           </p>
         </div>
         <div className="flex gap-10 text-sm">
           <div>
-            <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">Links</p>
+            <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
+              Links
+            </p>
             <ul className="mt-4 space-y-2">
+              <li><a href="#capabilities" className="text-foreground/80 hover:text-foreground">Capabilities</a></li>
+              <li><a href="#how" className="text-foreground/80 hover:text-foreground">How it works</a></li>
               <li><a href="#faq" className="text-foreground/80 hover:text-foreground">FAQ</a></li>
-              <li><a href="#" className="text-foreground/80 hover:text-foreground">Terms</a></li>
-              <li><a href="#" className="text-foreground/80 hover:text-foreground">Privacy</a></li>
             </ul>
           </div>
         </div>
         <div className="md:text-right">
-          <Cta label="Launch Accio" trackingId="footer_cta" />
+          <Cta label="Try Accio Work Free" trackingId="footer_cta" />
         </div>
       </div>
       <div className="mx-auto mt-10 max-w-6xl px-4 text-xs text-muted-foreground">
@@ -767,7 +896,7 @@ function StickyMobileCta() {
     >
       <div className="glass-strong flex items-center justify-between gap-3 rounded-2xl border border-white/50 p-2.5 shadow-elegant">
         <div className="pl-1">
-          <div className="text-sm font-semibold leading-tight">Get free access</div>
+          <div className="text-sm font-semibold leading-tight">Try Accio Work free</div>
           <div className="text-[11px] text-muted-foreground">No card · 2-min setup</div>
         </div>
         <Cta label="Start free" size="md" trackingId="sticky_mobile" />
@@ -784,10 +913,7 @@ function ExitIntent() {
       shown.current = true;
       return;
     }
-    // Desktop-only exit intent — avoid annoying mobile users with auto-popups
-    if (window.matchMedia("(max-width: 767px)").matches) {
-      return;
-    }
+    if (window.matchMedia("(max-width: 767px)").matches) return;
     const onLeave = (e: MouseEvent) => {
       if (shown.current) return;
       if (e.clientY <= 0) {
@@ -797,14 +923,16 @@ function ExitIntent() {
       }
     };
     document.addEventListener("mouseleave", onLeave);
-    return () => {
-      document.removeEventListener("mouseleave", onLeave);
-    };
+    return () => document.removeEventListener("mouseleave", onLeave);
   }, []);
 
   if (!open) return null;
   return (
-    <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 animate-fade-up" role="dialog" aria-modal="true">
+    <div
+      className="fixed inset-0 z-[60] flex items-center justify-center p-4 animate-fade-up"
+      role="dialog"
+      aria-modal="true"
+    >
       <div
         className="absolute inset-0 bg-foreground/30 backdrop-blur-sm"
         onClick={() => setOpen(false)}
@@ -822,10 +950,10 @@ function ExitIntent() {
         </div>
         <h3 className="mt-4 text-2xl font-semibold tracking-tight">Before you go…</h3>
         <p className="mt-2 text-sm text-muted-foreground">
-          Explore smarter opportunities powered by AI.
+          Try Accio Work free — research, sourcing, and automation in one AI workspace.
         </p>
         <div className="mt-6 flex flex-col gap-2">
-          <Cta label="Start Free" trackingId="exit_popup_primary" />
+          <Cta label="Get Free Access" trackingId="exit_popup_primary" />
           <Button
             variant="ghost"
             onClick={() => setOpen(false)}
@@ -846,20 +974,18 @@ export default function LandingPage() {
       <Navbar />
       <main>
         <Hero />
-        <TrustBar />
-        <Benefits />
+        <Capabilities />
         <MidCta headline="Ready to work smarter?" label="Try It Now" id="mid_cta_1" />
+        <PreviewSection />
         <HowItWorks />
-        <Features />
+        <Trust />
         <MidCta headline="Explore AI-powered opportunities" label="Launch Access" id="mid_cta_2" />
-        <SocialProof />
         <FAQ />
         <FinalCta />
       </main>
       <Footer />
       <StickyMobileCta />
       <ExitIntent />
-      {/* Spacer so sticky mobile CTA doesn't cover footer */}
       <div className="h-20 md:hidden" aria-hidden />
     </div>
   );
