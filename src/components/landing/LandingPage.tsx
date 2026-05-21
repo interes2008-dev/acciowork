@@ -229,7 +229,7 @@ function Hero() {
           data-reveal
           className="mx-auto mb-5 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white/60 px-4 py-1.5 text-xs font-medium text-primary backdrop-blur"
         >
-          <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse-glow" />
+          <span className="h-1.5 w-1.5 rounded-full bg-emerald-accent animate-pulse-glow" />
           AI workspace for sourcing, research & automation
         </div>
         <h1
@@ -290,7 +290,7 @@ function Hero() {
                 onClick={() => trackCta(`chip_${c.label}`)}
                 className="group inline-flex items-center gap-1.5 rounded-full border border-border/70 bg-white/70 px-3.5 py-1.5 text-xs text-foreground/80 backdrop-blur transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:bg-white hover:text-foreground hover:shadow-soft md:text-[13px]"
               >
-                <c.icon className="h-3.5 w-3.5 text-primary" />
+                <c.icon className="h-3.5 w-3.5 text-emerald-accent" />
                 {c.label}
               </a>
             ))}
