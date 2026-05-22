@@ -158,19 +158,15 @@
 
 @layer utilities {
   .bg-hero { background: var(--gradient-hero); }
-  .bg-gradient-primary { background: var(--gradient-primary); }
   .bg-gradient-emerald { background: var(--gradient-emerald); }
+  .bg-gradient-mint-soft { background: var(--gradient-mint-soft); }
   .text-emerald-accent { color: var(--accent-emerald); }
   .bg-emerald-accent { background: var(--accent-emerald); }
-  .text-gradient {
-    background: var(--gradient-text);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
+  .bg-mint-50 { background: var(--mint-50); }
+  .bg-mint-100 { background: var(--mint-100); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .shadow-card-hover { box-shadow: var(--shadow-card-hover); }
   .shadow-elegant { box-shadow: var(--shadow-elegant); }
-  .shadow-soft { box-shadow: var(--shadow-soft); }
-  .shadow-glow { box-shadow: var(--shadow-glow); }
   .glass {
     background: color-mix(in oklab, white 70%, transparent);
     backdrop-filter: saturate(180%) blur(14px);
