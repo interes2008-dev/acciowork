@@ -98,44 +98,17 @@ function HeroVisual() {
           <span className="h-3 w-3 rounded-full bg-[#FEBC2E]" />
           <span className="h-3 w-3 rounded-full bg-[#28C840]" />
         </div>
-        {/* dark UI */}
-        <div className="bg-[#0B0F14] p-8 text-white sm:p-12">
-          <div className="flex items-start gap-4">
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#FFE6C7] to-[#FFC68A] text-2xl">🧑‍💼</div>
-            <div>
-              <div className="text-[15px] font-medium text-white/70">Master of Cash</div>
-              <div className="mt-2 text-[19px] font-semibold sm:text-[22px]">
-                Analyzing your Shopify store's backend data …
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-10 flex items-center gap-2 text-[15px] font-medium text-white/90">
-            <Calendar className="h-4 w-4" /> 30 Days Roadmap (Mar.1st–Mar.31st)
-          </div>
-
-          <div className="mt-6 flex items-center gap-4 text-[14px]">
-            <span className="text-white/60">$0</span>
-            <div className="relative h-12 flex-1 overflow-hidden rounded-full bg-white/5">
-              <div className="absolute inset-y-0 left-0 flex w-[55%] items-center rounded-full bg-gradient-to-r from-[#7CE7C2] to-[#17B26A] px-5 text-[14px] font-semibold text-[#053B27]">
-                Last Month's Performance
-              </div>
-              <div className="absolute inset-y-0 right-0 flex w-[45%] items-center justify-center text-[15px] font-bold text-[#17B26A]">
-                Gap: $4,500
-              </div>
-            </div>
-            <span className="text-white/80">$10,000</span>
-          </div>
-
-          <p className="mt-8 text-[17px] leading-relaxed text-white/90 sm:text-[19px]">
-            Given last month's performance, we must increase{" "}
-            <span className="font-semibold text-[#7CE7C2]">CVR</span> and{" "}
-            <span className="font-semibold text-[#7CE7C2]">AOV</span> to reach $10,000 Goal
-          </p>
-
-          <div className="mt-10 inline-block rounded-md bg-black/60 px-4 py-2 text-[14px] text-white/80 ring-1 ring-white/10">
-            dissecting Alex's store data to define the gap
-          </div>
+        {/* hero video */}
+        <div className="bg-black">
+          <video
+            className="block h-auto w-full"
+            src="/home.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+          />
         </div>
       </div>
     </div>
