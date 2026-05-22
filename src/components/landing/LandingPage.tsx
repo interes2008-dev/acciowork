@@ -1,992 +1,518 @@
 import { useEffect, useRef, useState } from "react";
 import {
+  Apple,
+  ChevronDown,
+  Globe,
+  Headphones,
   Sparkles,
-  Brain,
-  Workflow,
-  Search,
-  LineChart,
-  Zap,
-  ShieldCheck,
-  ArrowRight,
-  Check,
-  Menu,
-  X,
-  Lock,
-  Clock,
-  Factory,
-  TrendingUp,
-  PackageSearch,
-  FileText,
-  Lightbulb,
-  BarChart3,
-  Wand2,
-  ArrowUpRight,
+  Calendar,
 } from "lucide-react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
 
 const REFERRAL_URL =
   "https://www.accio.com/invite-work?sId=KECtp1GttZ42%2FwpJUH5IxQ%3D%3D&ic=IC506004212009&tenant=accio&src=p_referral_IC506004212009&return_url=https%3A%2F%2Fwww.accio.com%2Fwork%2F";
 
-function trackCta(label: string) {
-  type AnyWin = Window & {
-    dataLayer?: Array<Record<string, unknown>>;
-    gtag?: (...args: unknown[]) => void;
-    fbq?: (...args: unknown[]) => void;
-  };
-  const w = window as AnyWin;
-  try {
-    w.dataLayer = w.dataLayer || [];
-    w.dataLayer.push({ event: "cta_click", cta_label: label });
-    w.gtag?.("event", "cta_click", { cta_label: label });
-    w.fbq?.("trackCustom", "CTAClick", { cta_label: label });
-  } catch {
-    /* no-op */
-  }
+/* ---------- Reveal-on-scroll hook ---------- */
+function useReveal<T extends HTMLElement>() {
+  const ref = useRef<T | null>(null);
+  const [shown, setShown] = useState(false);
+  useEffect(() => {
+    if (!ref.current) return;
+    const obs = new IntersectionObserver(
+      ([e]) => e.isIntersecting && (setShown(true), obs.disconnect()),
+      { threshold: 0.08, rootMargin: "0px 0px -40px 0px" },
+    );
+    obs.observe(ref.current);
+    return () => obs.disconnect();
+  }, []);
+  return { ref, shown };
 }
 
-type CtaProps = {
-  label: string;
-  variant?: "primary" | "ghost" | "outline";
-  size?: "lg" | "md";
-  className?: string;
-  trackingId: string;
-  icon?: boolean;
-  href?: string;
-  external?: boolean;
-};
-
-function Cta({
-  label,
-  variant = "primary",
-  size = "lg",
-  className = "",
-  trackingId,
-  icon = true,
-  href,
-  external = true,
-}: CtaProps) {
-  const base =
-    "group inline-flex items-center justify-center gap-2 rounded-full font-medium transition-all duration-300 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 focus-visible:ring-offset-2";
-  const sizes = size === "lg" ? "h-12 px-7 text-[15px]" : "h-10 px-5 text-sm";
-  const variants = {
-    primary:
-      "bg-gradient-primary text-primary-foreground shadow-elegant hover:-translate-y-0.5 hover:shadow-glow active:translate-y-0",
-    outline:
-      "border border-border bg-background/60 backdrop-blur text-foreground hover:bg-background hover:border-primary/40",
-    ghost: "text-foreground hover:bg-muted",
-  } as const;
-  const finalHref = href ?? REFERRAL_URL;
-  const isExternal = external && !href;
+/* ---------- Brand ---------- */
+function Logo({ size = 28 }: { size?: number }) {
   return (
-    <a
-      href={finalHref}
-      target={isExternal ? "_blank" : undefined}
-      rel={isExternal ? "noopener noreferrer" : undefined}
-      onClick={() => trackCta(trackingId)}
-      data-cta={trackingId}
-      className={`${base} ${sizes} ${variants[variant]} ${className}`}
-    >
-      {label}
-      {icon && (
-        <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
-      )}
-    </a>
+    <div className="flex items-center gap-1.5 font-bold tracking-tight" style={{ fontSize: size }}>
+      <svg width={size * 0.95} height={size} viewBox="0 0 28 28" aria-hidden>
+        <defs>
+          <linearGradient id="accioTri" x1="0" y1="1" x2="1" y2="0">
+            <stop offset="0%" stopColor="#0F172A" />
+            <stop offset="55%" stopColor="#17B26A" />
+            <stop offset="100%" stopColor="#7CE7C2" />
+          </linearGradient>
+        </defs>
+        <path d="M14 3 L26 25 L2 25 Z" fill="url(#accioTri)" />
+      </svg>
+      <span className="text-foreground">Accio</span>
+    </div>
   );
 }
 
-function useReveal() {
-  useEffect(() => {
-    const els = document.querySelectorAll<HTMLElement>("[data-reveal]");
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.classList.add("animate-fade-up");
-            (e.target as HTMLElement).style.opacity = "1";
-            io.unobserve(e.target);
-          }
-        });
-      },
-      { threshold: 0.12 },
-    );
-    els.forEach((el) => {
-      el.style.opacity = "0";
-      io.observe(el);
-    });
-    return () => io.disconnect();
-  }, []);
-}
-
+/* ---------- Navbar ---------- */
 function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-  const [open, setOpen] = useState(false);
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled ? "py-2" : "py-4"
-      }`}
-    >
-      <div className="mx-auto max-w-6xl px-4">
-        <nav
-          className={`glass flex items-center justify-between rounded-full border border-white/40 px-4 py-2.5 transition-all duration-300 ${
-            scrolled ? "shadow-soft" : ""
-          }`}
-        >
-          <a href="#top" className="flex items-center gap-2 pl-1">
-            <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-primary text-primary-foreground shadow-soft">
-              <Sparkles className="h-3.5 w-3.5" />
-            </span>
-            <span className="text-[15px] font-semibold tracking-tight">
-              acciowork<span className="text-primary">.pro</span>
-            </span>
+    <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/85 backdrop-blur-md">
+      <div className="mx-auto flex h-20 max-w-[1280px] items-center justify-between px-6">
+        <div className="flex items-center gap-10">
+          <a href="#top" className="flex items-center"><Logo size={26} /></a>
+          <nav className="hidden items-center gap-8 text-[15px] font-medium text-foreground/80 md:flex">
+            <a href="#pricing" className="hover:text-foreground">Pricing</a>
+            <button className="flex items-center gap-1 hover:text-foreground">Help Center <ChevronDown className="h-4 w-4 opacity-60" /></button>
+            <button className="flex items-center gap-1 hover:text-foreground">Events <span>🔥</span> <ChevronDown className="h-4 w-4 opacity-60" /></button>
+          </nav>
+        </div>
+        <div className="flex items-center gap-5">
+          <Headphones className="hidden h-5 w-5 text-foreground/70 md:block" />
+          <button className="hidden items-center gap-1.5 text-[15px] font-medium text-foreground/80 md:flex">
+            <Globe className="h-4 w-4" /> English <ChevronDown className="h-4 w-4 opacity-60" />
+          </button>
+          <a
+            href={REFERRAL_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex h-11 items-center rounded-full bg-[#0F172A] px-5 text-[14px] font-semibold text-white transition hover:bg-[#0F172A]/90"
+          >
+            Download Accio Work
           </a>
-          <div className="hidden items-center gap-8 md:flex">
-            <a href="#capabilities" className="text-sm text-muted-foreground hover:text-foreground">
-              Capabilities
-            </a>
-            <a href="#how" className="text-sm text-muted-foreground hover:text-foreground">
-              How it works
-            </a>
-            <a href="#faq" className="text-sm text-muted-foreground hover:text-foreground">
-              FAQ
-            </a>
-          </div>
-          <div className="flex items-center gap-2">
-            <Cta
-              label="Try Accio Work Free"
-              size="md"
-              trackingId="navbar"
-              icon={false}
-              className="hidden md:inline-flex"
-            />
-            <button
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full text-foreground md:hidden"
-              onClick={() => setOpen((o) => !o)}
-              aria-label="Menu"
-            >
-              {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-            </button>
-          </div>
-        </nav>
-        {open && (
-          <div className="glass-strong mx-2 mt-2 rounded-2xl border border-white/40 p-4 shadow-soft md:hidden">
-            <div className="flex flex-col gap-3">
-              <a href="#capabilities" onClick={() => setOpen(false)} className="text-sm">
-                Capabilities
-              </a>
-              <a href="#how" onClick={() => setOpen(false)} className="text-sm">
-                How it works
-              </a>
-              <a href="#faq" onClick={() => setOpen(false)} className="text-sm">
-                FAQ
-              </a>
-              <Cta label="Try Accio Work Free" size="md" trackingId="navbar_mobile" />
-            </div>
-          </div>
-        )}
+        </div>
       </div>
     </header>
   );
 }
 
-const CHIPS: { label: string; icon: typeof Search }[] = [
-  { label: "Supplier Search", icon: Factory },
-  { label: "Market Research", icon: BarChart3 },
-  { label: "Product Discovery", icon: PackageSearch },
-  { label: "Trend Analysis", icon: TrendingUp },
-  { label: "AI Content Creation", icon: FileText },
-  { label: "Workflow Automation", icon: Workflow },
-  { label: "Business Insights", icon: Lightbulb },
-];
+/* ---------- Hero ---------- */
+function TrustPill({ children }: { children: React.ReactNode }) {
+  return (
+    <span className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-white px-4 py-2 text-[14px] font-medium text-foreground shadow-card">
+      <Sparkles className="h-3.5 w-3.5 text-[#17B26A]" />
+      {children}
+    </span>
+  );
+}
+
+function HeroVisual() {
+  return (
+    <div className="relative mx-auto mt-16 max-w-[1180px] px-2 sm:px-4">
+      <div className="overflow-hidden rounded-[28px] bg-white shadow-elegant ring-1 ring-border/70">
+        {/* browser bar */}
+        <div className="flex items-center gap-2 border-b border-border/60 bg-white px-5 py-3.5">
+          <span className="h-3 w-3 rounded-full bg-[#FF5F57]" />
+          <span className="h-3 w-3 rounded-full bg-[#FEBC2E]" />
+          <span className="h-3 w-3 rounded-full bg-[#28C840]" />
+        </div>
+        {/* dark UI */}
+        <div className="bg-[#0B0F14] p-8 text-white sm:p-12">
+          <div className="flex items-start gap-4">
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#FFE6C7] to-[#FFC68A] text-2xl">🧑‍💼</div>
+            <div>
+              <div className="text-[15px] font-medium text-white/70">Master of Cash</div>
+              <div className="mt-2 text-[19px] font-semibold sm:text-[22px]">
+                Analyzing your Shopify store's backend data …
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-10 flex items-center gap-2 text-[15px] font-medium text-white/90">
+            <Calendar className="h-4 w-4" /> 30 Days Roadmap (Mar.1st–Mar.31st)
+          </div>
+
+          <div className="mt-6 flex items-center gap-4 text-[14px]">
+            <span className="text-white/60">$0</span>
+            <div className="relative h-12 flex-1 overflow-hidden rounded-full bg-white/5">
+              <div className="absolute inset-y-0 left-0 flex w-[55%] items-center rounded-full bg-gradient-to-r from-[#7CE7C2] to-[#17B26A] px-5 text-[14px] font-semibold text-[#053B27]">
+                Last Month's Performance
+              </div>
+              <div className="absolute inset-y-0 right-0 flex w-[45%] items-center justify-center text-[15px] font-bold text-[#17B26A]">
+                Gap: $4,500
+              </div>
+            </div>
+            <span className="text-white/80">$10,000</span>
+          </div>
+
+          <p className="mt-8 text-[17px] leading-relaxed text-white/90 sm:text-[19px]">
+            Given last month's performance, we must increase{" "}
+            <span className="font-semibold text-[#7CE7C2]">CVR</span> and{" "}
+            <span className="font-semibold text-[#7CE7C2]">AOV</span> to reach $10,000 Goal
+          </p>
+
+          <div className="mt-10 inline-block rounded-md bg-black/60 px-4 py-2 text-[14px] text-white/80 ring-1 ring-white/10">
+            dissecting Alex's store data to define the gap
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 function Hero() {
-  const [query, setQuery] = useState("");
-  const go = () => {
-    trackCta("hero_search");
-    window.open(REFERRAL_URL, "_blank", "noopener,noreferrer");
-  };
   return (
-    <section id="top" className="bg-hero relative overflow-hidden pt-24 pb-12 md:pt-32 md:pb-20">
-      <div className="pointer-events-none absolute -top-40 left-1/2 h-[520px] w-[760px] -translate-x-1/2 rounded-full bg-primary/20 blur-3xl animate-pulse-glow" />
-      <div className="pointer-events-none absolute right-0 top-40 h-72 w-72 rounded-full bg-accent/50 blur-3xl" />
-      <div className="pointer-events-none absolute left-0 bottom-0 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
-
-      <div className="relative mx-auto max-w-5xl px-4 text-center">
-        <div
-          data-reveal
-          className="mx-auto mb-5 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white/60 px-4 py-1.5 text-xs font-medium text-primary backdrop-blur"
-        >
-          <span className="h-1.5 w-1.5 rounded-full bg-emerald-accent animate-pulse-glow" />
-          AI workspace for sourcing, research & automation
-        </div>
-        <h1
-          data-reveal
-          className="mx-auto max-w-4xl text-balance text-[2.2rem] font-semibold leading-[1.05] tracking-tight sm:text-5xl md:text-[3.6rem] lg:text-6xl"
-        >
-          Everything you need to{" "}
-          <span className="text-gradient">work smarter</span> — powered by AI
+    <section id="top" className="relative overflow-hidden bg-hero pb-24 pt-20 sm:pt-28">
+      <div className="mx-auto max-w-[1280px] px-6 text-center">
+        <h1 className="mx-auto flex items-center justify-center gap-3 text-[44px] font-extrabold tracking-tight text-foreground sm:text-[72px]">
+          <Logo size={56} />
+          <span>Work</span>
         </h1>
-        <p
-          data-reveal
-          className="mx-auto mt-4 max-w-2xl text-balance text-base text-muted-foreground md:mt-5 md:text-lg"
-        >
-          Research markets, compare suppliers, discover opportunities, automate
-          workflows, and get results faster with Accio Work.
+
+        <p className="mx-auto mt-10 max-w-3xl text-[22px] font-bold text-foreground sm:text-[28px]">
+          Your 24/7 agentic business team
         </p>
 
-        {/* Premium search panel */}
-        <form
-          data-reveal
-          onSubmit={(e) => {
-            e.preventDefault();
-            go();
-          }}
-          className="relative mx-auto mt-8 max-w-3xl"
-        >
-          <div className="absolute -inset-3 -z-10 rounded-[2rem] bg-gradient-primary opacity-20 blur-2xl" />
-          <div className="glass-strong flex items-center gap-2 rounded-2xl border border-white/60 p-2 shadow-elegant md:rounded-full">
-            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary md:rounded-full">
-              <Search className="h-4.5 w-4.5" />
-            </div>
-            <input
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="Describe what you want help with..."
-              className="min-w-0 flex-1 bg-transparent px-1 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none md:text-[15px]"
-              aria-label="What do you want help with?"
-            />
-            <button
-              type="submit"
-              onClick={() => trackCta("hero_search_btn")}
-              className="group inline-flex h-11 items-center gap-1.5 rounded-xl bg-gradient-primary px-4 text-sm font-medium text-primary-foreground shadow-soft transition-all hover:shadow-glow md:rounded-full md:px-5"
-            >
-              <Wand2 className="h-4 w-4" />
-              <span className="hidden sm:inline">Ask AI</span>
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-            </button>
-          </div>
-
-          {/* Chips */}
-          <div className="mt-5 flex flex-wrap items-center justify-center gap-2">
-            {CHIPS.map((c) => (
-              <a
-                key={c.label}
-                href={REFERRAL_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => trackCta(`chip_${c.label}`)}
-                className="group inline-flex items-center gap-1.5 rounded-full border border-border/70 bg-white/70 px-3.5 py-1.5 text-xs text-foreground/80 backdrop-blur transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:bg-white hover:text-foreground hover:shadow-soft md:text-[13px]"
-              >
-                <c.icon className="h-3.5 w-3.5 text-emerald-accent" />
-                {c.label}
-              </a>
-            ))}
-          </div>
-        </form>
-
-        <div
-          data-reveal
-          className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row"
-        >
-          <Cta label="Try Accio Work Free" trackingId="hero_primary" />
-          <Cta
-            label="See How It Works"
-            variant="outline"
-            trackingId="hero_secondary"
-            icon={false}
-            href="#how"
-            external={false}
-          />
+        <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
+          <TrustPill>Zero learning curve</TrustPill>
+          <TrustPill>Built for business</TrustPill>
+          <TrustPill>Enterprise-grade security</TrustPill>
         </div>
 
-        <ul
-          data-reveal
-          className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[13px] text-muted-foreground"
-        >
-          {["Beginner friendly", "Fast setup", "No credit card required", "AI-powered assistance"].map(
-            (t) => (
-              <li key={t} className="inline-flex items-center gap-1.5">
-                <Check className="h-4 w-4 text-primary" />
-                {t}
-              </li>
-            ),
-          )}
-        </ul>
-      </div>
-    </section>
-  );
-}
+        <p className="mx-auto mt-8 max-w-3xl text-[16px] leading-relaxed text-muted-foreground sm:text-[17px]">
+          Automates your business end-to-end — research &amp; analysis, sourcing &amp; negotiation,
+          marketing &amp; sales, operations &amp; CRM — delivering real profit.
+        </p>
 
-function Capabilities() {
-  const items = [
-    {
-      icon: Factory,
-      title: "Find suppliers faster",
-      body: "Compare manufacturers and sourcing options quickly with AI-ranked matches.",
-    },
-    {
-      icon: TrendingUp,
-      title: "Research products & trends",
-      body: "Discover opportunities and real-time market demand in seconds.",
-    },
-    {
-      icon: FileText,
-      title: "Generate business content",
-      body: "Create listings, descriptions, reports and documents in your tone.",
-    },
-    {
-      icon: BarChart3,
-      title: "Analyze markets",
-      body: "Get intelligent insights and clear business recommendations.",
-    },
-    {
-      icon: Workflow,
-      title: "Automate repetitive work",
-      body: "Save hours every week with smarter AI workflows.",
-    },
-    {
-      icon: Lightbulb,
-      title: "Discover opportunities",
-      body: "Receive recommendations personalized to your goals and niche.",
-    },
-  ];
-  return (
-    <section id="capabilities" className="relative py-16 md:py-24">
-      <div className="mx-auto max-w-6xl px-4">
-        <div data-reveal className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">
-            Capabilities
-          </p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
-            What can <span className="text-gradient">Accio Work</span> do?
-          </h2>
-          <p className="mt-4 text-muted-foreground md:text-lg">
-            One AI workspace for sourcing, research, content and automation — built for
-            modern business work.
-          </p>
-        </div>
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {items.map((b) => (
-            <div
-              key={b.title}
-              data-reveal
-              className="group relative overflow-hidden rounded-2xl border border-border/70 bg-card/80 p-6 backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-elegant"
-            >
-              <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/5 transition-all duration-500 group-hover:bg-primary/10" />
-              <div className="relative">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-primary text-primary-foreground shadow-soft">
-                  <b.icon className="h-5 w-5" />
-                </div>
-                <h3 className="mt-5 text-lg font-semibold tracking-tight">{b.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{b.body}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div data-reveal className="mt-12 flex justify-center">
-          <Cta label="Try Accio Work Free" trackingId="capabilities_cta" />
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ============ Preview Mockup cards ============ */
-
-function SupplierCard() {
-  const rows = [
-    { name: "Shenzhen Lumio Co.", score: 96, tag: "Verified" },
-    { name: "Greenline Manufacturing", score: 91, tag: "Top match" },
-    { name: "Aria Industrial Group", score: 88, tag: "Fast ship" },
-  ];
-  return (
-    <div className="rounded-3xl border border-white/60 bg-white/85 p-5 shadow-elegant backdrop-blur">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary">
-            <Factory className="h-4 w-4" />
-          </span>
-          <p className="text-sm font-semibold">Supplier comparison</p>
-        </div>
-        <span className="rounded-full bg-emerald-500/10 px-2 py-0.5 text-[10px] font-medium text-emerald-600">
-          AI ranked
-        </span>
-      </div>
-      <div className="mt-4 space-y-2">
-        {rows.map((r) => (
-          <div
-            key={r.name}
-            className="flex items-center justify-between rounded-xl border border-border/60 bg-background/60 px-3 py-2.5"
+        <div className="mt-10 flex flex-col items-center">
+          <a
+            href={REFERRAL_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-3 rounded-full bg-[#0F172A] py-4 pl-6 pr-2 text-[16px] font-semibold text-white shadow-elegant transition hover:scale-[1.02]"
           >
-            <div>
-              <div className="text-xs font-medium">{r.name}</div>
-              <div className="text-[10px] text-muted-foreground">{r.tag}</div>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="h-1.5 w-20 overflow-hidden rounded-full bg-muted">
-                <div
-                  className="h-full rounded-full bg-gradient-primary"
-                  style={{ width: `${r.score}%` }}
-                />
-              </div>
-              <span className="text-xs font-semibold tabular-nums">{r.score}</span>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function TrendCard() {
-  const bars = [32, 48, 41, 60, 55, 72, 68, 84, 79, 92];
-  return (
-    <div className="rounded-3xl border border-white/60 bg-white/85 p-5 shadow-elegant backdrop-blur">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary">
-            <TrendingUp className="h-4 w-4" />
-          </span>
-          <p className="text-sm font-semibold">Trend analysis</p>
-        </div>
-        <span className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-medium text-primary">
-          <ArrowUpRight className="h-3 w-3" /> +24%
-        </span>
-      </div>
-      <div className="mt-4 flex h-28 items-end gap-1.5">
-        {bars.map((h, i) => (
-          <div
-            key={i}
-            className="flex-1 rounded-md bg-gradient-to-t from-primary/30 to-primary/80"
-            style={{ height: `${h}%` }}
-          />
-        ))}
-      </div>
-      <div className="mt-3 flex items-center justify-between text-[10px] text-muted-foreground">
-        <span>Smart home · 90d</span>
-        <span>High demand</span>
-      </div>
-    </div>
-  );
-}
-
-function ProductCard() {
-  return (
-    <div className="rounded-3xl border border-white/60 bg-white/85 p-5 shadow-elegant backdrop-blur">
-      <div className="flex items-center gap-2">
-        <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary">
-          <PackageSearch className="h-4 w-4" />
-        </span>
-        <p className="text-sm font-semibold">Product research</p>
-      </div>
-      <div className="mt-4 grid grid-cols-3 gap-2">
-        {[0, 1, 2, 3, 4, 5].map((i) => (
-          <div key={i} className="rounded-xl border border-border/60 bg-background/60 p-2">
-            <div className="aspect-square rounded-lg bg-gradient-to-br from-primary/15 to-accent/40" />
-            <div className="mt-1.5 h-1.5 w-3/4 rounded-full bg-foreground/10" />
-            <div className="mt-1 h-1.5 w-1/2 rounded-full bg-foreground/10" />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function ReportCard() {
-  return (
-    <div className="rounded-3xl border border-white/60 bg-white/85 p-5 shadow-elegant backdrop-blur">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary">
-            <FileText className="h-4 w-4" />
-          </span>
-          <p className="text-sm font-semibold">AI-generated report</p>
-        </div>
-        <span className="rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-medium text-primary">
-          Draft
-        </span>
-      </div>
-      <div className="mt-4 space-y-2">
-        <div className="h-2 w-11/12 rounded-full bg-foreground/10" />
-        <div className="h-2 w-10/12 rounded-full bg-foreground/10" />
-        <div className="h-2 w-9/12 rounded-full bg-foreground/10" />
-        <div className="h-2 w-7/12 rounded-full bg-foreground/10" />
-        <div className="mt-3 rounded-xl border border-border/60 bg-secondary/40 p-3">
-          <div className="flex items-center gap-2 text-[11px] font-medium text-primary">
-            <Sparkles className="h-3.5 w-3.5" /> Summary
-          </div>
-          <div className="mt-1.5 h-1.5 w-full rounded-full bg-foreground/10" />
-          <div className="mt-1 h-1.5 w-5/6 rounded-full bg-foreground/10" />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function WorkflowCard() {
-  const steps = ["Source", "Compare", "Decide", "Order"];
-  return (
-    <div className="rounded-3xl border border-white/60 bg-white/85 p-5 shadow-elegant backdrop-blur">
-      <div className="flex items-center gap-2">
-        <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary">
-          <Workflow className="h-4 w-4" />
-        </span>
-        <p className="text-sm font-semibold">Workflow recommendation</p>
-      </div>
-      <div className="mt-4 flex items-center gap-2">
-        {steps.map((s, i) => (
-          <div key={s} className="flex flex-1 items-center gap-2">
-            <div className="flex-1 rounded-xl border border-border/60 bg-background/60 px-2.5 py-2 text-center text-[11px] font-medium">
-              {s}
-            </div>
-            {i < steps.length - 1 && (
-              <ArrowRight className="h-3.5 w-3.5 shrink-0 text-muted-foreground" />
-            )}
-          </div>
-        ))}
-      </div>
-      <div className="mt-3 flex items-center gap-2 rounded-xl bg-emerald-500/10 px-3 py-2 text-[11px] text-emerald-700">
-        <Zap className="h-3.5 w-3.5" /> Saves ~6 hours / week
-      </div>
-    </div>
-  );
-}
-
-function InsightCard() {
-  return (
-    <div className="rounded-3xl border border-white/60 bg-white/85 p-5 shadow-elegant backdrop-blur">
-      <div className="flex items-center gap-2">
-        <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary">
-          <Lightbulb className="h-4 w-4" />
-        </span>
-        <p className="text-sm font-semibold">Market insight</p>
-      </div>
-      <div className="mt-4 grid grid-cols-3 gap-2">
-        {[
-          { k: "Demand", v: "High" },
-          { k: "Margin", v: "32%" },
-          { k: "Risk", v: "Low" },
-        ].map((m) => (
-          <div key={m.k} className="rounded-xl border border-border/60 bg-background/60 p-3 text-center">
-            <div className="text-[10px] text-muted-foreground">{m.k}</div>
-            <div className="mt-0.5 text-sm font-semibold text-gradient">{m.v}</div>
-          </div>
-        ))}
-      </div>
-      <div className="mt-3 space-y-1.5">
-        <div className="h-1.5 w-full rounded-full bg-foreground/10" />
-        <div className="h-1.5 w-4/5 rounded-full bg-foreground/10" />
-      </div>
-    </div>
-  );
-}
-
-function PreviewSection() {
-  return (
-    <section className="relative overflow-hidden py-16 md:py-24">
-      <div className="pointer-events-none absolute inset-0 bg-hero opacity-70" />
-      <div className="relative mx-auto max-w-6xl px-4">
-        <div data-reveal className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">Preview</p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
-            A glimpse inside <span className="text-gradient">Accio Work</span>
-          </h2>
-          <p className="mt-4 text-muted-foreground md:text-lg">
-            Realistic surfaces from sourcing to insights — every result one click away.
-          </p>
-        </div>
-
-        <div className="relative mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <div data-reveal className="lg:[transform:translateY(8px)]"><SupplierCard /></div>
-          <div data-reveal className="lg:[transform:translateY(-8px)]"><TrendCard /></div>
-          <div data-reveal className="lg:[transform:translateY(4px)]"><ProductCard /></div>
-          <div data-reveal className="lg:[transform:translateY(-4px)]"><ReportCard /></div>
-          <div data-reveal className="lg:[transform:translateY(8px)]"><WorkflowCard /></div>
-          <div data-reveal className="lg:[transform:translateY(-8px)]"><InsightCard /></div>
-        </div>
-
-        <div data-reveal className="mt-12 flex justify-center">
-          <Cta label="Open Accio Work" trackingId="preview_cta" />
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function HowItWorks() {
-  const steps = [
-    { n: "01", title: "Sign up", body: "Create your free account in under a minute.", icon: Sparkles },
-    {
-      n: "02",
-      title: "Choose what you need",
-      body: "Search, analyze, compare, research, or automate.",
-      icon: Search,
-    },
-    {
-      n: "03",
-      title: "Get AI-powered results",
-      body: "Start working smarter in minutes — not days.",
-      icon: Wand2,
-    },
-  ];
-  return (
-    <section id="how" className="relative bg-gradient-to-b from-background to-secondary/40 py-16 md:py-24">
-      <div className="mx-auto max-w-6xl px-4">
-        <div data-reveal className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">How it works</p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
-            Three steps to smarter work
-          </h2>
-        </div>
-        <div className="relative mt-14 grid gap-6 md:grid-cols-3">
-          <div className="pointer-events-none absolute left-0 right-0 top-12 hidden h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent md:block" />
-          {steps.map((s) => (
-            <div
-              key={s.n}
-              data-reveal
-              className="relative rounded-2xl border border-border/70 bg-card/80 p-7 backdrop-blur transition-all hover:-translate-y-1 hover:shadow-elegant"
-            >
-              <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-primary text-sm font-semibold text-primary-foreground shadow-elegant">
-                  {s.n}
-                </div>
-                <s.icon className="h-5 w-5 text-primary/70" />
-              </div>
-              <h3 className="mt-5 text-lg font-semibold tracking-tight">{s.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.body}</p>
-            </div>
-          ))}
-        </div>
-        <div data-reveal className="mt-12 flex justify-center">
-          <Cta label="Get Free Access" trackingId="how_cta" />
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Trust() {
-  const reasons = [
-    { icon: Zap, title: "Faster research", body: "Cut hours of digging down to a clear answer." },
-    { icon: Brain, title: "Better decisions", body: "AI-assisted insights you can actually act on." },
-    { icon: Workflow, title: "Less repetitive work", body: "Hand off the boring tasks to your AI workspace." },
-    { icon: LineChart, title: "Smarter productivity", body: "Spend more time on the work that grows your business." },
-  ];
-  return (
-    <section className="py-16 md:py-24">
-      <div className="mx-auto max-w-6xl px-4">
-        <div data-reveal className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">Why Accio Work</p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
-            Why people use <span className="text-gradient">Accio Work</span>
-          </h2>
-        </div>
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {reasons.map((r) => (
-            <div
-              key={r.title}
-              data-reveal
-              className="rounded-2xl border border-border/70 bg-card/80 p-6 backdrop-blur transition-all hover:-translate-y-1 hover:shadow-soft"
-            >
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                <r.icon className="h-5 w-5" />
-              </span>
-              <h3 className="mt-4 text-base font-semibold tracking-tight">{r.title}</h3>
-              <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{r.body}</p>
-            </div>
-          ))}
-        </div>
-        <div data-reveal className="mx-auto mt-10 flex max-w-3xl flex-wrap items-center justify-center gap-x-5 gap-y-2 rounded-2xl border border-border/60 bg-card/70 px-5 py-4 text-xs text-muted-foreground backdrop-blur">
-          <span className="inline-flex items-center gap-1.5"><ShieldCheck className="h-3.5 w-3.5 text-primary" /> Secure & private</span>
-          <span className="inline-flex items-center gap-1.5"><Clock className="h-3.5 w-3.5 text-primary" /> 2-min setup</span>
-          <span className="inline-flex items-center gap-1.5"><Lock className="h-3.5 w-3.5 text-primary" /> No card required</span>
-          <span className="inline-flex items-center gap-1.5"><Check className="h-3.5 w-3.5 text-primary" /> Beginner friendly</span>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function MidCta({ headline, label, id }: { headline: string; label: string; id: string }) {
-  return (
-    <section className="py-10">
-      <div className="mx-auto max-w-5xl px-4">
-        <div
-          data-reveal
-          className="flex flex-col items-center justify-between gap-5 rounded-3xl border border-border/70 bg-gradient-to-br from-primary/5 via-card to-accent/30 px-6 py-7 shadow-soft md:flex-row md:px-10"
-        >
-          <p className="text-lg font-medium tracking-tight md:text-xl">{headline}</p>
-          <Cta label={label} trackingId={id} />
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function FAQ() {
-  const items = [
-    {
-      q: "What is Accio Work?",
-      a: "Accio Work is an AI workspace that helps you research markets, compare suppliers, generate business content, and automate repetitive workflows in one place.",
-    },
-    {
-      q: "What can I actually do with it?",
-      a: "Find and compare suppliers, run product and trend research, generate listings or reports, analyze markets, and automate recurring tasks — all from a single AI-powered interface.",
-    },
-    {
-      q: "Do I need to be technical?",
-      a: "No. You simply describe what you need in plain language and Accio Work returns structured results, suggestions, and ready-to-use content.",
-    },
-    {
-      q: "Is registration free?",
-      a: "Yes — you can create an account and start using Accio Work for free. No credit card required to get started.",
-    },
-    {
-      q: "How quickly can I get value?",
-      a: "Most people see their first useful result within a few minutes of signing up. Setup takes around two minutes.",
-    },
-    {
-      q: "Is this the official Accio?",
-      a: "acciowork.pro is an independent informational landing page. All CTAs send you to the official Accio platform to sign up.",
-    },
-  ];
-  return (
-    <section id="faq" className="py-16 md:py-24">
-      <div className="mx-auto max-w-3xl px-4">
-        <div data-reveal className="text-center">
-          <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">FAQ</p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">
-            Questions, answered
-          </h2>
-        </div>
-        <div data-reveal className="mt-10 rounded-3xl border border-border/70 bg-card/70 p-2 backdrop-blur">
-          <Accordion type="single" collapsible className="w-full">
-            {items.map((it, i) => (
-              <AccordionItem
-                key={it.q}
-                value={`item-${i}`}
-                className="border-b border-border/60 px-4 last:border-0"
-              >
-                <AccordionTrigger className="text-left text-base font-medium">
-                  {it.q}
-                </AccordionTrigger>
-                <AccordionContent className="text-sm leading-relaxed text-muted-foreground">
-                  {it.a}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-        <div data-reveal className="mt-10 flex justify-center">
-          <Cta label="Get Free Access" trackingId="faq_cta" />
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function FinalCta() {
-  return (
-    <section className="relative overflow-hidden py-20 md:py-28">
-      <div className="pointer-events-none absolute inset-0 bg-gradient-primary opacity-[0.07]" />
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[420px] w-[640px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/15 blur-3xl" />
-      <div className="relative mx-auto max-w-3xl px-4 text-center">
-        <h2 data-reveal className="text-balance text-4xl font-semibold tracking-tight md:text-6xl">
-          Start working <span className="text-gradient">smarter today</span>
-        </h2>
-        <p
-          data-reveal
-          className="mx-auto mt-5 max-w-xl text-balance text-base text-muted-foreground md:text-lg"
-        >
-          Explore smarter workflows, research tools, and AI-powered assistance in minutes.
-        </p>
-        <div data-reveal className="mt-9 flex justify-center">
-          <Cta label="Get Free Access" trackingId="final_cta" />
-        </div>
-        <div
-          data-reveal
-          className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-muted-foreground"
-        >
-          <span className="inline-flex items-center gap-1.5">
-            <Lock className="h-3.5 w-3.5 text-primary" /> Secure access
-          </span>
-          <span className="inline-flex items-center gap-1.5">
-            <Clock className="h-3.5 w-3.5 text-primary" /> 2-min setup
-          </span>
-          <span className="inline-flex items-center gap-1.5">
-            <Check className="h-3.5 w-3.5 text-primary" /> No card required
-          </span>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Footer() {
-  return (
-    <footer className="border-t border-border/60 bg-background py-12">
-      <div className="mx-auto grid max-w-6xl gap-8 px-4 md:grid-cols-3">
-        <div>
-          <a href="#top" className="flex items-center gap-2">
-            <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-primary text-primary-foreground shadow-soft">
-              <Sparkles className="h-3.5 w-3.5" />
-            </span>
-            <span className="text-[15px] font-semibold tracking-tight">
-              acciowork<span className="text-primary">.pro</span>
+            <Apple className="h-5 w-5" />
+            <span>Download for macOS</span>
+            <span className="ml-2 inline-flex items-center gap-1 rounded-full bg-white/10 px-4 py-2 text-[13px] font-medium text-white/90">
+              Apple Silicon <ChevronDown className="h-3.5 w-3.5" />
             </span>
           </a>
-          <p className="mt-3 max-w-xs text-sm text-muted-foreground">
-            Independent informational website. Not affiliated with Accio.
-          </p>
-        </div>
-        <div className="flex gap-10 text-sm">
-          <div>
-            <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
-              Links
-            </p>
-            <ul className="mt-4 space-y-2">
-              <li><a href="#capabilities" className="text-foreground/80 hover:text-foreground">Capabilities</a></li>
-              <li><a href="#how" className="text-foreground/80 hover:text-foreground">How it works</a></li>
-              <li><a href="#faq" className="text-foreground/80 hover:text-foreground">FAQ</a></li>
-            </ul>
-          </div>
-        </div>
-        <div className="md:text-right">
-          <Cta label="Try Accio Work Free" trackingId="footer_cta" />
+          <p className="mt-3 text-[13px] text-muted-foreground">For macOS 11 or later</p>
         </div>
       </div>
-      <div className="mx-auto mt-10 max-w-6xl px-4 text-xs text-muted-foreground">
-        © {new Date().getFullYear()} acciowork.pro
+
+      <HeroVisual />
+    </section>
+  );
+}
+
+/* ---------- Section: Built for every business need ---------- */
+const BUSINESS_TABS = [
+  "Launch Store",
+  "Monitor Competitors",
+  "Source & Negotiate",
+  "Promote on Social",
+  "Customize Tools",
+  "Organize Files",
+  "Analyze Bestsellers",
+];
+
+function StoreMockup() {
+  const items = [
+    { c: "from-orange-200 to-orange-300", e: "🐻" },
+    { c: "from-emerald-200 to-emerald-300", e: "🦖" },
+    { c: "from-pink-200 to-pink-300", e: "🐷" },
+    { c: "from-sky-200 to-sky-300", e: "🐲" },
+    { c: "from-yellow-200 to-yellow-300", e: "🐤" },
+  ];
+  return (
+    <div className="relative h-full w-full overflow-hidden rounded-[20px] bg-gradient-to-br from-[#3DD3C9] via-[#2D7CF2] to-[#9B5BFF] p-5 sm:p-8">
+      <div className="rounded-xl bg-white shadow-elegant">
+        <div className="flex items-center gap-2 border-b border-border/60 px-3 py-2">
+          <span className="h-2.5 w-2.5 rounded-full bg-[#FF5F57]" />
+          <span className="h-2.5 w-2.5 rounded-full bg-[#FEBC2E]" />
+          <span className="h-2.5 w-2.5 rounded-full bg-[#28C840]" />
+          <div className="ml-3 flex-1 rounded-md bg-muted px-3 py-1 text-[11px] text-muted-foreground">
+            pause-play-4.myshopify.com
+          </div>
+        </div>
+        <div className="flex items-center justify-between border-b border-border/60 px-4 py-3 text-[12px] font-semibold">
+          <span>Pause &amp; Play</span>
+          <span className="text-muted-foreground">Home  Catalog  Contact</span>
+        </div>
+        <div className="flex items-center justify-between bg-gradient-to-r from-[#9B5BFF] to-[#E94BD0] px-4 py-2 text-[11px] font-semibold text-white">
+          <span>Easter Sale Ends in:</span>
+          <span className="flex gap-1">
+            {["15", "03", "23", "14"].map((n) => (
+              <span key={n} className="rounded bg-white/20 px-1.5 py-0.5">{n}</span>
+            ))}
+          </span>
+          <span className="rounded bg-white px-2 py-1 text-[10px] text-[#9B5BFF]">SHOP DEALS</span>
+        </div>
+        <div className="px-4 pb-5 pt-4">
+          <div className="mb-3 flex items-center justify-between">
+            <h4 className="text-[14px] font-bold">Easter Flash Sale Collection</h4>
+            <span className="text-[11px] text-muted-foreground">View all</span>
+          </div>
+          <div className="grid grid-cols-5 gap-2">
+            {items.map((it, i) => (
+              <div key={i} className="text-center">
+                <div className={`relative aspect-square rounded-md bg-gradient-to-br ${it.c} flex items-center justify-center text-3xl`}>
+                  <span className="absolute right-1 top-1 rounded bg-white/90 px-1 text-[8px] font-semibold">Sale</span>
+                  {it.e}
+                </div>
+                <div className="mt-1.5 truncate text-[9px] font-medium">Monster Plush</div>
+                <div className="text-[8px] text-muted-foreground">$24.99 <s>$34.99</s></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function BusinessNeeds() {
+  const [active, setActive] = useState(0);
+  const { ref, shown } = useReveal<HTMLDivElement>();
+  return (
+    <section className="bg-[#F7F8FA] py-24 sm:py-32">
+      <div className="mx-auto max-w-[1280px] px-6">
+        <h2 className="text-center text-[34px] font-extrabold tracking-tight text-foreground sm:text-[44px]">
+          Built for every business need
+        </h2>
+
+        <div className="mt-12 flex flex-wrap justify-center gap-3">
+          {BUSINESS_TABS.map((t, i) => (
+            <button
+              key={t}
+              onClick={() => setActive(i)}
+              className={`rounded-full px-5 py-2.5 text-[14px] font-semibold transition ${
+                i === active
+                  ? "bg-[#17B26A] text-white shadow-card"
+                  : "border border-border bg-white text-foreground/70 hover:text-foreground"
+              }`}
+            >
+              {t}
+            </button>
+          ))}
+        </div>
+
+        <div
+          ref={ref}
+          className={`mt-14 grid gap-8 rounded-[28px] bg-white p-8 shadow-card md:grid-cols-2 md:p-12 ${
+            shown ? "animate-fade-up" : "opacity-0"
+          }`}
+        >
+          <div className="flex flex-col justify-center">
+            <span className="inline-flex w-fit items-center rounded-full bg-[#DDF7EE] px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#17B26A]">
+              Launch Store
+            </span>
+            <h3 className="mt-6 text-[32px] font-extrabold leading-tight tracking-tight text-foreground sm:text-[40px]">
+              From idea to first sale in minutes
+            </h3>
+            <p className="mt-6 max-w-md text-[16px] leading-relaxed text-muted-foreground">
+              Spin up a complete online store with products, listings, design, and SEO ready out of
+              the box – and start selling the moment you go live.
+            </p>
+          </div>
+          <StoreMockup />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ---------- Platform intro ---------- */
+function PlatformIntro() {
+  return (
+    <section className="py-28 sm:py-36">
+      <div className="mx-auto max-w-[1280px] px-6 text-center">
+        <span className="inline-flex items-center rounded-full bg-[#DDF7EE] px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-[#17B26A]">
+          Platform
+        </span>
+        <h2 className="mt-8 text-[36px] font-extrabold tracking-tight text-foreground sm:text-[50px]">
+          Everything you need in one place
+        </h2>
+        <p className="mx-auto mt-6 max-w-2xl text-[17px] leading-relaxed text-muted-foreground">
+          Accio Work is more than chat. It brings together everything you need, from AI agents to
+          built-in tools, so you can work faster in one place.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+/* ---------- Capability cards ---------- */
+type CardData = {
+  title: string;
+  cat: string;
+  isNew?: boolean;
+  thumb: { from: string; to: string; emoji?: string; label?: string };
+};
+
+const CATEGORY_ICON: Record<string, string> = {
+  "Go-to-market": "🏬",
+  "Product research": "📈",
+  "Product design": "🎨",
+  "Supplier sourcing": "🏭",
+  "Business analysis": "📊",
+};
+
+function CardThumb({ thumb }: { thumb: CardData["thumb"] }) {
+  return (
+    <div
+      className="relative flex h-[180px] w-full items-center justify-center overflow-hidden rounded-[16px]"
+      style={{ background: `linear-gradient(135deg, ${thumb.from}, ${thumb.to})` }}
+    >
+      <span className="text-6xl drop-shadow-sm">{thumb.emoji}</span>
+      {thumb.label && (
+        <div className="absolute inset-x-4 bottom-4 rounded-lg bg-white/85 px-3 py-2 text-[11px] font-semibold text-foreground/80 backdrop-blur">
+          {thumb.label}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function CapabilityCard({ c }: { c: CardData }) {
+  return (
+    <a
+      href={REFERRAL_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group relative flex flex-col gap-5 rounded-[20px] border border-border/70 bg-white p-5 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover"
+    >
+      {c.isNew && (
+        <span className="absolute right-0 top-0 rounded-bl-[14px] rounded-tr-[20px] bg-[#17B26A] px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white">
+          New
+        </span>
+      )}
+      <h3 className="min-h-[56px] pr-10 text-[16px] font-bold leading-snug text-foreground">
+        {c.title}
+      </h3>
+      <div className="flex items-center gap-2 text-[13px] text-muted-foreground">
+        <span aria-hidden>{CATEGORY_ICON[c.cat] || "✦"}</span>
+        {c.cat}
+      </div>
+      <CardThumb thumb={c.thumb} />
+    </a>
+  );
+}
+
+/* card data — 5 rows × 5 cards + 1 row × 2 large cards */
+const ROWS: CardData[][] = [
+  [
+    { title: "Plan in-store activation with training, displays & metrics", cat: "Go-to-market", isNew: true, thumb: { from: "#CDEFE0", to: "#A6E1C7", emoji: "🐶", label: "Comprehensive In-Store Launch Plan" } },
+    { title: "Map leading indicators for Halloween decoration trend", cat: "Product research", isNew: true, thumb: { from: "#FFE0B2", to: "#FFB74D", emoji: "🎃" } },
+    { title: "Turn inspiration into designs and matching suppliers", cat: "Product design", thumb: { from: "#E0F2EC", to: "#B8E2D2", emoji: "🐕" } },
+    { title: "Spot rising trends early to guide sourcing and design", cat: "Product research", thumb: { from: "#D7E8F5", to: "#A9CFEC", emoji: "📊" } },
+    { title: "Quickly source products that meet all key certifications", cat: "Supplier sourcing", thumb: { from: "#E6F4EC", to: "#BFE6CE", emoji: "🪥" } },
+  ],
+  [
+    { title: "Diagnose declining category growth in mature markets", cat: "Business analysis", isNew: true, thumb: { from: "#E3F0F8", to: "#BFD9EC", emoji: "💧" } },
+    { title: "Craft high-converting Amazon listing content", cat: "Go-to-market", thumb: { from: "#DDF7EE", to: "#B5E6D2", emoji: "☕" } },
+    { title: "Find manufacturers for small, custom runs", cat: "Supplier sourcing", thumb: { from: "#E8F5F0", to: "#C2E5D3", emoji: "💎" } },
+    { title: "Evaluate private label threat in premium yoga mats", cat: "Business analysis", isNew: true, thumb: { from: "#EAF6E8", to: "#C9E8C1", emoji: "🧘" } },
+    { title: "Design a thematic product for an upcoming holiday", cat: "Product design", isNew: true, thumb: { from: "#F4EAE0", to: "#E3CDB6", emoji: "🎄" } },
+  ],
+  [
+    { title: "Create A/B test copy with variations", cat: "Go-to-market", isNew: true, thumb: { from: "#E4ECF3", to: "#C6D7E5", emoji: "💡" } },
+    { title: "Fully investigate suppliers to avoid sourcing risks", cat: "Supplier sourcing", thumb: { from: "#EAEFF4", to: "#CFDAE5", emoji: "🏢" } },
+    { title: "Model FX impact on cost and pricing", cat: "Business analysis", thumb: { from: "#DCF3EE", to: "#B4E1D6", emoji: "💱" } },
+    { title: "Analyze pain points to spot new product directions", cat: "Product research", thumb: { from: "#E4F1E1", to: "#C5E0C0", emoji: "🐕" } },
+    { title: "Plan a pre-launch campaign with UGC and influencer", cat: "Go-to-market", isNew: true, thumb: { from: "#E9F4D3", to: "#CFE7A6", emoji: "🧘‍♀️" } },
+  ],
+  [
+    { title: "Analyze segment size and margins to spot opportunity", cat: "Business analysis", thumb: { from: "#E1EBF5", to: "#B9D3EC", emoji: "📈" } },
+    { title: "Turn viral IP into product ideas with visual designs", cat: "Product design", thumb: { from: "#DCE8F5", to: "#B0CCED", emoji: "🧥" } },
+    { title: "Uncover unmet needs and design product concepts", cat: "Product research", thumb: { from: "#E3F4E5", to: "#BEE3C5", emoji: "👟" } },
+    { title: "Recommend products based on audience and scenario", cat: "Supplier sourcing", thumb: { from: "#EEF1F4", to: "#D2D9E2", emoji: "🎧" } },
+    { title: "Create a strategy for seasonal product bundling", cat: "Go-to-market", isNew: true, thumb: { from: "#E2EEF6", to: "#BDD7EB", emoji: "🌸" } },
+  ],
+  [
+    { title: "Find style-fit factories and draft inquiry emails", cat: "Supplier sourcing", thumb: { from: "#DDF1EA", to: "#B6E1D0", emoji: "🧵" } },
+    { title: "Analyze potential market impact of regulation", cat: "Business analysis", thumb: { from: "#EEF2F6", to: "#CDD7E1", emoji: "📑" } },
+    { title: "Track material innovations for formulation upgrades", cat: "Product research", isNew: true, thumb: { from: "#DDEEF5", to: "#B5D7E8", emoji: "🧴" } },
+    { title: "Tailor product descriptions for different marketplace", cat: "Go-to-market", isNew: true, thumb: { from: "#DBF1E9", to: "#A6DCC4", emoji: "🛏️" } },
+    { title: "Validate and visualize innovative product ideas", cat: "Product design", thumb: { from: "#DCEEEC", to: "#B5DAD7", emoji: "🔊" } },
+  ],
+  [
+    { title: "Create a sourcing list for an event", cat: "Supplier sourcing", thumb: { from: "#F6E8E5", to: "#E8C6BF", emoji: "🎈" } },
+    { title: "Assess manufacturing relocation risks", cat: "Business analysis", isNew: true, thumb: { from: "#EAF1EF", to: "#CCDBD8", emoji: "💨" } },
+    { title: "Define target persona and key purchase triggers", cat: "Product research", isNew: true, thumb: { from: "#E3F1DE", to: "#C0E0B6", emoji: "📖" } },
+    { title: "Enhance product listing with comparison chart", cat: "Go-to-market", isNew: true, thumb: { from: "#ECEEF1", to: "#CFD4DA", emoji: "🪑" } },
+    { title: "Develop products based on a specific use case", cat: "Product design", thumb: { from: "#E5F1E1", to: "#C3E0BB", emoji: "🐶" } },
+  ],
+];
+
+const LARGE_PAIR: CardData[] = [
+  { title: "Develop a refill pilot program", cat: "Product research", isNew: true, thumb: { from: "#1F6E7B", to: "#2DA7A2", emoji: "🧴" } },
+  { title: "Find competitive design tweaks for bestsellers", cat: "Product design", thumb: { from: "#DCEEF5", to: "#B0D6E6", emoji: "👜" } },
+];
+
+function CardGridSection({ row, idx }: { row: CardData[]; idx: number }) {
+  const { ref, shown } = useReveal<HTMLDivElement>();
+  return (
+    <div
+      ref={ref}
+      className={`mx-auto mt-6 max-w-[1280px] px-6 ${shown ? "animate-fade-up" : "opacity-0"}`}
+      style={{ animationDelay: `${idx * 40}ms` }}
+    >
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
+        {row.map((c) => <CapabilityCard key={c.title} c={c} />)}
+      </div>
+    </div>
+  );
+}
+
+function CardGrids() {
+  return (
+    <section className="bg-gradient-mint-soft pb-24">
+      <div className="mx-auto max-w-[1280px] px-6 pb-10">
+        {/* Filter tabs */}
+        <div className="flex flex-wrap items-center gap-8 border-b border-border/70 text-[15px] font-semibold">
+          {["All", "Business analysis", "Product design", "Supplier sourcing", "Product research", "Go-to-market"].map((t, i) => (
+            <button key={t} className={`relative pb-3 ${i === 0 ? "text-foreground" : "text-muted-foreground hover:text-foreground"}`}>
+              {t}
+              {i === 0 && <span className="absolute inset-x-0 -bottom-px h-[3px] rounded-full bg-[#17B26A]" />}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {ROWS.map((row, i) => <CardGridSection key={i} row={row} idx={i} />)}
+
+      {/* Last large pair */}
+      <div className="mx-auto mt-6 max-w-[1280px] px-6">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
+          {LARGE_PAIR.map((c) => <CapabilityCard key={c.title} c={c} />)}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ---------- Footer ---------- */
+function Footer() {
+  return (
+    <footer className="border-t border-border/70 bg-background py-20">
+      <div className="mx-auto flex max-w-[1280px] flex-col items-center gap-8 px-6 text-center">
+        <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 text-[16px] text-muted-foreground">
+          <span className="font-medium">Partnered with</span>
+          <span className="text-[22px] font-bold text-[#FF6A00]">
+            Alibaba<span className="text-foreground">.com</span>
+          </span>
+          <span className="text-[22px] font-bold tracking-tight">
+            <span className="text-foreground">euro</span>
+            <span className="text-[#1F8A55]">pages</span>
+          </span>
+          <span className="inline-flex items-center gap-1 text-[22px] font-bold lowercase text-foreground">
+            wlw <span className="h-2 w-2 rounded-full bg-[#17B26A]" />
+          </span>
+        </div>
+
+        <div className="mt-8 flex items-center gap-3 text-[13px] text-muted-foreground">
+          <Logo size={18} />
+          <span>· © {new Date().getFullYear()} Accio Work. All rights reserved.</span>
+        </div>
       </div>
     </footer>
   );
 }
 
-function StickyMobileCta() {
-  const [hidden, setHidden] = useState(false);
-  useEffect(() => {
-    const onScroll = () => {
-      const doc = document.documentElement;
-      const max = doc.scrollHeight - window.innerHeight;
-      setHidden(max > 0 && window.scrollY / max > 0.95);
-    };
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-  return (
-    <div
-      className={`fixed inset-x-0 bottom-0 z-40 px-3 pb-3 transition-all duration-300 md:hidden ${
-        hidden ? "translate-y-full opacity-0" : "translate-y-0 opacity-100"
-      }`}
-      aria-hidden={hidden}
-    >
-      <div className="glass-strong flex items-center justify-between gap-3 rounded-2xl border border-white/50 p-2.5 shadow-elegant">
-        <div className="pl-1">
-          <div className="text-sm font-semibold leading-tight">Try Accio Work free</div>
-          <div className="text-[11px] text-muted-foreground">No card · 2-min setup</div>
-        </div>
-        <Cta label="Start free" size="md" trackingId="sticky_mobile" />
-      </div>
-    </div>
-  );
-}
-
-function ExitIntent() {
-  const [open, setOpen] = useState(false);
-  const shown = useRef(false);
-  useEffect(() => {
-    if (sessionStorage.getItem("aw_exit_shown")) {
-      shown.current = true;
-      return;
-    }
-    if (window.matchMedia("(max-width: 767px)").matches) return;
-    const onLeave = (e: MouseEvent) => {
-      if (shown.current) return;
-      if (e.clientY <= 0) {
-        shown.current = true;
-        sessionStorage.setItem("aw_exit_shown", "1");
-        setOpen(true);
-      }
-    };
-    document.addEventListener("mouseleave", onLeave);
-    return () => document.removeEventListener("mouseleave", onLeave);
-  }, []);
-
-  if (!open) return null;
-  return (
-    <div
-      className="fixed inset-0 z-[60] flex items-center justify-center p-4 animate-fade-up"
-      role="dialog"
-      aria-modal="true"
-    >
-      <div
-        className="absolute inset-0 bg-foreground/30 backdrop-blur-sm"
-        onClick={() => setOpen(false)}
-      />
-      <div className="glass-strong relative w-full max-w-md rounded-3xl border border-white/60 p-8 text-center shadow-elegant">
-        <button
-          aria-label="Close"
-          onClick={() => setOpen(false)}
-          className="absolute right-3 top-3 inline-flex h-8 w-8 items-center justify-center rounded-full text-muted-foreground hover:bg-muted"
-        >
-          <X className="h-4 w-4" />
-        </button>
-        <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-primary text-primary-foreground shadow-glow">
-          <Sparkles className="h-5 w-5" />
-        </div>
-        <h3 className="mt-4 text-2xl font-semibold tracking-tight">Before you go…</h3>
-        <p className="mt-2 text-sm text-muted-foreground">
-          Try Accio Work free — research, sourcing, and automation in one AI workspace.
-        </p>
-        <div className="mt-6 flex flex-col gap-2">
-          <Cta label="Get Free Access" trackingId="exit_popup_primary" />
-          <Button
-            variant="ghost"
-            onClick={() => setOpen(false)}
-            className="rounded-full text-muted-foreground"
-          >
-            Maybe later
-          </Button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
+/* ---------- Page ---------- */
 export default function LandingPage() {
-  useReveal();
   return (
-    <div className="min-h-screen bg-background text-foreground antialiased">
+    <main className="min-h-screen bg-background text-foreground antialiased">
       <Navbar />
-      <main>
-        <Hero />
-        <Capabilities />
-        <MidCta headline="Ready to work smarter?" label="Try It Now" id="mid_cta_1" />
-        <PreviewSection />
-        <HowItWorks />
-        <Trust />
-        <MidCta headline="Explore AI-powered opportunities" label="Launch Access" id="mid_cta_2" />
-        <FAQ />
-        <FinalCta />
-      </main>
+      <Hero />
+      <BusinessNeeds />
+      <PlatformIntro />
+      <CardGrids />
       <Footer />
-      <StickyMobileCta />
-      <ExitIntent />
-      <div className="h-20 md:hidden" aria-hidden />
-    </div>
+    </main>
   );
 }
