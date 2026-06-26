@@ -192,11 +192,14 @@ function StoreMockup() {
 function CompetitorMockup() {
   return (
     <div className="relative h-full w-full overflow-hidden rounded-[20px] bg-gradient-to-br from-[#3DD3C9] via-[#2D7CF2] to-[#9B5BFF] p-3 sm:p-5">
-      <img
-        src={competitorMonitoringImg}
-        alt="Competitor monitoring dashboard"
-        className="block h-full w-full rounded-xl object-cover object-left shadow-elegant"
-        loading="lazy"
+      <video
+        className="block h-full w-full rounded-xl object-cover shadow-elegant"
+        src="/accio-competitor.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
       />
     </div>
   );
