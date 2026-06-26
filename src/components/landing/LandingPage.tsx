@@ -204,6 +204,22 @@ function CompetitorMockup() {
   );
 }
 
+function SourceMockup() {
+  return (
+    <div className="relative h-full w-full overflow-hidden rounded-[20px] bg-gradient-to-br from-[#3DD3C9] via-[#2D7CF2] to-[#9B5BFF] p-3 sm:p-5">
+      <video
+        className="block h-full w-full rounded-xl object-cover shadow-elegant"
+        src="/accio-source.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+      />
+    </div>
+  );
+}
+
 type TabContent = {
   badge: string;
   title: string;
@@ -234,6 +250,22 @@ const TAB_CONTENT: Record<string, TabContent> = {
       </div>
     ),
     visual: <CompetitorMockup />,
+  },
+  "Source & Negotiate": {
+    badge: "Source & Negotiate",
+    title: "Get the right supplier at the right price",
+    body: "Find verified suppliers, send inquiries, and negotiate by email – all handled for you until you land the best deal.",
+    extra: (
+      <div className="mt-8 grid max-w-md grid-cols-[auto_auto_1fr] items-center gap-x-5 gap-y-1 rounded-2xl bg-[#EAF7F0] p-5">
+        <span className="text-[11px] font-bold uppercase tracking-wider text-[#17B26A]">You</span>
+        <span />
+        <span className="text-[11px] font-bold uppercase tracking-wider text-[#17B26A]">AI</span>
+        <span className="text-[15px] font-semibold text-foreground">0 calls</span>
+        <span className="px-2 text-foreground/40">→</span>
+        <span className="text-[15px] font-semibold text-foreground">verified suppliers, inquiries</span>
+      </div>
+    ),
+    visual: <SourceMockup />,
   },
 };
 
