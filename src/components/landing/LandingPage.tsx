@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import competitorMonitoringImg from "@/assets/competitor-monitoring.png";
 import {
   Apple,
   ChevronDown,
@@ -188,9 +189,57 @@ function StoreMockup() {
   );
 }
 
+function CompetitorMockup() {
+  return (
+    <div className="relative h-full w-full overflow-hidden rounded-[20px] bg-gradient-to-br from-[#3DD3C9] via-[#2D7CF2] to-[#9B5BFF] p-3 sm:p-5">
+      <img
+        src={competitorMonitoringImg}
+        alt="Competitor monitoring dashboard"
+        className="block h-full w-full rounded-xl object-cover object-left shadow-elegant"
+        loading="lazy"
+      />
+    </div>
+  );
+}
+
+type TabContent = {
+  badge: string;
+  title: string;
+  body: string;
+  extra?: React.ReactNode;
+  visual: React.ReactNode;
+};
+
+const TAB_CONTENT: Record<string, TabContent> = {
+  "Launch Store": {
+    badge: "Launch Store",
+    title: "From idea to first sale in minutes",
+    body: "Spin up a complete online store with products, listings, design, and SEO ready out of the box – and start selling the moment you go live.",
+    visual: <StoreMockup />,
+  },
+  "Monitor Competitors": {
+    badge: "Monitor Competitors",
+    title: "Schedule once, run automatically",
+    body: "Track competitors' pricing, products, and campaigns with scheduled tasks – and turn every finding into a sharper strategy you can act on.",
+    extra: (
+      <div className="mt-8 grid max-w-md grid-cols-[auto_auto_1fr] items-center gap-x-5 gap-y-1 rounded-2xl bg-[#EAF7F0] p-5">
+        <span className="text-[11px] font-bold uppercase tracking-wider text-[#17B26A]">You</span>
+        <span />
+        <span className="text-[11px] font-bold uppercase tracking-wider text-[#17B26A]">AI</span>
+        <span className="text-[15px] font-semibold text-foreground">set once</span>
+        <span className="px-2 text-foreground/40">→</span>
+        <span className="text-[15px] font-semibold text-foreground">pricing, products, campaigns</span>
+      </div>
+    ),
+    visual: <CompetitorMockup />,
+  },
+};
+
 function BusinessNeeds() {
   const [active, setActive] = useState(0);
   const { ref, shown } = useReveal<HTMLDivElement>();
+  const activeName = BUSINESS_TABS[active];
+  const content = TAB_CONTENT[activeName] ?? TAB_CONTENT["Launch Store"];
   return (
     <section className="bg-[#F7F8FA] py-24 sm:py-32">
       <div className="mx-auto max-w-[1280px] px-6">
@@ -216,23 +265,24 @@ function BusinessNeeds() {
 
         <div
           ref={ref}
+          key={activeName}
           className={`mt-14 grid gap-8 rounded-[28px] bg-white p-8 shadow-card md:grid-cols-2 md:p-12 ${
             shown ? "animate-fade-up" : "opacity-0"
           }`}
         >
           <div className="flex flex-col justify-center">
             <span className="inline-flex w-fit items-center rounded-full bg-[#DDF7EE] px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#17B26A]">
-              Launch Store
+              {content.badge}
             </span>
             <h3 className="mt-6 text-[32px] font-extrabold leading-tight tracking-tight text-foreground sm:text-[40px]">
-              From idea to first sale in minutes
+              {content.title}
             </h3>
             <p className="mt-6 max-w-md text-[16px] leading-relaxed text-muted-foreground">
-              Spin up a complete online store with products, listings, design, and SEO ready out of
-              the box – and start selling the moment you go live.
+              {content.body}
             </p>
+            {content.extra}
           </div>
-          <StoreMockup />
+          {content.visual}
         </div>
       </div>
     </section>
