@@ -173,56 +173,17 @@ const BUSINESS_TABS = [
 ];
 
 function StoreMockup() {
-  const items = [
-    { c: "from-orange-200 to-orange-300", e: "🐻" },
-    { c: "from-emerald-200 to-emerald-300", e: "🦖" },
-    { c: "from-pink-200 to-pink-300", e: "🐷" },
-    { c: "from-sky-200 to-sky-300", e: "🐲" },
-    { c: "from-yellow-200 to-yellow-300", e: "🐤" },
-  ];
   return (
-    <div className="relative h-full w-full overflow-hidden rounded-[20px] bg-gradient-to-br from-[#3DD3C9] via-[#2D7CF2] to-[#9B5BFF] p-5 sm:p-8">
-      <div className="rounded-xl bg-white shadow-elegant">
-        <div className="flex items-center gap-2 border-b border-border/60 px-3 py-2">
-          <span className="h-2.5 w-2.5 rounded-full bg-[#FF5F57]" />
-          <span className="h-2.5 w-2.5 rounded-full bg-[#FEBC2E]" />
-          <span className="h-2.5 w-2.5 rounded-full bg-[#28C840]" />
-          <div className="ml-3 flex-1 rounded-md bg-muted px-3 py-1 text-[11px] text-muted-foreground">
-            pause-play-4.myshopify.com
-          </div>
-        </div>
-        <div className="flex items-center justify-between border-b border-border/60 px-4 py-3 text-[12px] font-semibold">
-          <span>Pause &amp; Play</span>
-          <span className="text-muted-foreground">Home  Catalog  Contact</span>
-        </div>
-        <div className="flex items-center justify-between bg-gradient-to-r from-[#9B5BFF] to-[#E94BD0] px-4 py-2 text-[11px] font-semibold text-white">
-          <span>Easter Sale Ends in:</span>
-          <span className="flex gap-1">
-            {["15", "03", "23", "14"].map((n) => (
-              <span key={n} className="rounded bg-white/20 px-1.5 py-0.5">{n}</span>
-            ))}
-          </span>
-          <span className="rounded bg-white px-2 py-1 text-[10px] text-[#9B5BFF]">SHOP DEALS</span>
-        </div>
-        <div className="px-4 pb-5 pt-4">
-          <div className="mb-3 flex items-center justify-between">
-            <h4 className="text-[14px] font-bold">Easter Flash Sale Collection</h4>
-            <span className="text-[11px] text-muted-foreground">View all</span>
-          </div>
-          <div className="grid grid-cols-5 gap-2">
-            {items.map((it, i) => (
-              <div key={i} className="text-center">
-                <div className={`relative aspect-square rounded-md bg-gradient-to-br ${it.c} flex items-center justify-center text-3xl`}>
-                  <span className="absolute right-1 top-1 rounded bg-white/90 px-1 text-[8px] font-semibold">Sale</span>
-                  {it.e}
-                </div>
-                <div className="mt-1.5 truncate text-[9px] font-medium">Monster Plush</div>
-                <div className="text-[8px] text-muted-foreground">$24.99 <s>$34.99</s></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+    <div className="relative h-full w-full overflow-hidden rounded-[20px] bg-gradient-to-br from-[#3DD3C9] via-[#2D7CF2] to-[#9B5BFF] p-3 sm:p-5">
+      <video
+        className="block h-full w-full rounded-xl object-cover shadow-elegant"
+        src="/accio-store.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+      />
     </div>
   );
 }
