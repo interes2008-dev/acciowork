@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import competitorMonitoringImg from "@/assets/competitor-monitoring.png";
 import {
   Apple,
   ChevronDown,
