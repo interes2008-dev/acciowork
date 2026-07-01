@@ -107,6 +107,7 @@ function HeroVisual() {
             muted
             loop
             playsInline
+            controls
             preload="metadata"
           />
         </div>
