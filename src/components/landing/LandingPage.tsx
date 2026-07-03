@@ -429,7 +429,7 @@ function BusinessNeeds() {
         <div
           ref={ref}
           key={activeName}
-          className={`mt-14 grid gap-8 rounded-[28px] bg-white p-8 shadow-card md:grid-cols-2 md:p-12 ${
+          className={`mt-14 grid gap-8 rounded-[28px] bg-white p-8 shadow-card md:grid-cols-2 md:p-12 md:min-h-[560px] ${
             shown ? "animate-fade-up" : "opacity-0"
           }`}
         >
@@ -445,7 +445,9 @@ function BusinessNeeds() {
             </p>
             {content.extra}
           </div>
-          {content.visual}
+          <div className="aspect-[4/3] w-full md:aspect-auto md:h-full">
+            {content.visual}
+          </div>
         </div>
       </div>
     </section>
