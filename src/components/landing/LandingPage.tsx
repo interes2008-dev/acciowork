@@ -405,12 +405,12 @@ function BusinessNeeds() {
   const content = TAB_CONTENT[activeName] ?? TAB_CONTENT["Launch Store"];
   return (
     <section className="bg-[#F7F8FA] py-24 sm:py-32">
-      <div className="mx-auto max-w-[1280px] px-6">
-        <h2 className="text-center text-[34px] font-extrabold tracking-tight text-foreground sm:text-[44px]">
+      <div className="mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-8">
+        <h2 className="text-center text-[28px] font-bold tracking-tight text-foreground sm:text-[36px]" style={{ lineHeight: "40px" }}>
           Built for every business need
         </h2>
 
-        <div className="mt-12 flex flex-wrap justify-center gap-3">
+        <div className="mt-10 flex flex-wrap justify-center gap-3">
           {BUSINESS_TABS.map((t, i) => (
             <button
               key={t}
@@ -429,7 +429,7 @@ function BusinessNeeds() {
         <div
           ref={ref}
           key={activeName}
-          className={`mt-14 grid gap-8 rounded-[28px] bg-white p-8 shadow-card md:grid-cols-2 md:p-12 md:min-h-[560px] ${
+          className={`relative mx-auto mt-10 grid w-full max-w-[1100px] gap-8 overflow-hidden rounded-2xl border border-border/70 bg-white p-8 shadow-card md:grid-cols-2 md:p-12 md:min-h-[637px] ${
             shown ? "animate-fade-up" : "opacity-0"
           }`}
         >
@@ -437,10 +437,10 @@ function BusinessNeeds() {
             <span className="inline-flex w-fit items-center rounded-full bg-[#DDF7EE] px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#17B26A]">
               {content.badge}
             </span>
-            <h3 className="mt-6 text-[32px] font-extrabold leading-tight tracking-tight text-foreground sm:text-[40px]">
+            <h3 className="mt-6 text-[28px] font-bold tracking-tight text-foreground sm:text-[36px]" style={{ lineHeight: "45px" }}>
               {content.title}
             </h3>
-            <p className="mt-6 max-w-md text-[16px] leading-relaxed text-muted-foreground">
+            <p className="mt-6 max-w-md text-[18px] text-muted-foreground" style={{ lineHeight: "29px" }}>
               {content.body}
             </p>
             {content.extra}
