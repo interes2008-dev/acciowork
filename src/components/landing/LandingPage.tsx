@@ -482,6 +482,190 @@ function BusinessNeeds() {
   );
 }
 
+/* ---------- Why choose Accio Work ---------- */
+function WhyChoose() {
+  return (
+    <section className="bg-[#F7F8FA] pb-24 sm:pb-32">
+      <div className="mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-8">
+        <h2 className="text-center text-[28px] font-bold tracking-tight text-foreground sm:text-[36px]" style={{ lineHeight: "1.15" }}>
+          Why choose Accio Work?
+        </h2>
+
+        <div className="mt-12 grid gap-6 md:grid-cols-3 md:grid-rows-2">
+          {/* Left tall — team of specialists */}
+          <div className="rounded-[28px] bg-gradient-to-br from-[#F1F3F6] to-[#E7EBF0] p-8 md:row-span-2 md:p-10">
+            <h3 className="text-[22px] font-bold leading-tight text-foreground sm:text-[24px]">
+              One AI for everything. Or a<br />team of specialists.
+            </h3>
+            <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
+              A general agent handles daily tasks. Add specialists for sales, sourcing, design — each with its own expertise and memory.
+            </p>
+            <AgentsMockup />
+          </div>
+
+          {/* Middle top — dark, connectors */}
+          <div className="rounded-[28px] bg-[#0E1210] p-8 text-white md:p-10">
+            <h3 className="text-[22px] font-bold leading-tight sm:text-[24px]">
+              Connect once. Automate<br />everything.
+            </h3>
+            <p className="mt-4 text-[15px] leading-relaxed text-white/70">
+              Shopify, Gmail, Slack, LinkedIn, and 50+ more — one-click setup. No integration projects, no developers needed.
+            </p>
+            <ConnectorsRow />
+          </div>
+
+          {/* Right top — green, security */}
+          <div className="relative overflow-hidden rounded-[28px] bg-gradient-to-br from-[#C6EFDA] to-[#A2E3C0] p-8 md:p-10">
+            <h3 className="text-[22px] font-bold leading-tight text-[#0F4E33] sm:text-[24px]">
+              Your data. Your control.
+            </h3>
+            <p className="mt-4 text-[15px] leading-relaxed text-[#0F4E33]/75">
+              Sandboxed execution. You approve every critical action. Data sovereignty backed by Alibaba's infrastructure.
+            </p>
+            <svg viewBox="0 0 48 48" className="absolute bottom-6 right-6 h-12 w-12 text-[#0F7B4A]" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M24 4 L42 12 V24 C42 34 34 42 24 44 C14 42 6 34 6 24 V12 Z" />
+              <path d="M16 24 L22 30 L34 18" />
+            </svg>
+          </div>
+
+          {/* Bottom wide — blue, one platform */}
+          <div className="relative overflow-hidden rounded-[28px] bg-gradient-to-br from-[#DCE7FA] to-[#C3D5F5] p-8 md:col-span-2 md:p-10">
+            <div className="max-w-md">
+              <h3 className="text-[22px] font-bold leading-tight text-[#0F2954] sm:text-[24px]">
+                One platform. Analysis, design, automation.
+              </h3>
+              <p className="mt-4 text-[15px] leading-relaxed text-[#0F2954]/70">
+                Sourcing reports, concept design, landing pages, competitor tracking — pick a skill, schedule it, forget about it.
+              </p>
+            </div>
+            <PlatformMockup />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function AgentsMockup() {
+  const agents = [
+    { name: "Market Scout", tint: "#FFD8B4", initial: "M", msg: "EU demand for portable humidifiers ↑ 38% last 30d." },
+    { name: "Sourcing Expert", tint: "#FFC8B8", initial: "S", msg: "Got 12 verified Shenzhen suppliers · MOQ 100+ · BSCI ✓" },
+    { name: "Product Designer", tint: "#FFE5A8", initial: "P", msg: "3 concept variants in matte finish — ready to review." },
+    { name: "Listing Copywriter", tint: "#F8C8C8", initial: "L", msg: "SEO title drafted — projected +37% CTR." },
+  ];
+  return (
+    <div className="mt-8 rounded-2xl bg-white p-4 shadow-card">
+      <div className="flex items-center justify-between border-b border-border/50 pb-3">
+        <div className="flex items-center gap-1.5">
+          <span className="h-2.5 w-2.5 rounded-full bg-[#FF5F57]" />
+          <span className="h-2.5 w-2.5 rounded-full bg-[#FEBC2E]" />
+          <span className="h-2.5 w-2.5 rounded-full bg-[#28C840]" />
+        </div>
+        <span className="text-[12px] font-mono text-muted-foreground">#new-product-launch</span>
+      </div>
+      <div className="mt-4 flex flex-col gap-3">
+        {agents.map((a) => (
+          <div key={a.name} className="flex items-start gap-3">
+            <div
+              className="grid h-9 w-9 shrink-0 place-items-center rounded-lg text-[13px] font-bold text-foreground/80"
+              style={{ background: a.tint }}
+            >
+              {a.initial}
+            </div>
+            <div className="min-w-0 flex-1">
+              <div className="text-[13px] font-bold text-foreground">{a.name}</div>
+              <div className="mt-1 rounded-lg bg-[#F5F6F8] px-3 py-2 text-[12.5px] leading-snug text-foreground/80">
+                {a.msg}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function ConnectorsRow() {
+  const apps = [
+    { label: "X", bg: "#FFFFFF", fg: "#000000", glyph: "𝕏" },
+    { label: "in", bg: "#0A66C2", fg: "#FFFFFF", glyph: "in" },
+    { label: "N", bg: "#FFFFFF", fg: "#000000", glyph: "N" },
+    { label: "M", bg: "#FFFFFF", fg: "#EA4335", glyph: "M" },
+    { label: "A", bg: "#FF6A00", fg: "#FFFFFF", glyph: "a" },
+    { label: "S", bg: "#3F3F46", fg: "#FFFFFF", glyph: "S" },
+  ];
+  return (
+    <div className="mt-10 flex items-center gap-3 overflow-hidden">
+      {apps.map((a, i) => (
+        <div
+          key={i}
+          className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl text-[20px] font-bold shadow-lg"
+          style={{ background: a.bg, color: a.fg }}
+        >
+          {a.glyph}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function PlatformMockup() {
+  return (
+    <div className="pointer-events-none relative mt-6 h-[220px] md:absolute md:right-6 md:top-8 md:h-[240px] md:w-[520px]">
+      {/* Sourcing card */}
+      <div className="absolute left-2 top-2 w-[220px] rotate-[-4deg] rounded-2xl bg-white p-4 shadow-elegant">
+        <div className="flex items-center gap-2 text-[12px] font-semibold text-foreground/80">
+          <span className="grid h-5 w-5 place-items-center rounded bg-[#DCE7FA] text-[10px] text-[#3B82F6]">📊</span>
+          Sourcing
+        </div>
+        <div className="mt-3 text-[26px] font-extrabold text-foreground">
+          32<span className="ml-1 text-[12px] font-medium text-muted-foreground">suppliers</span>
+        </div>
+        <svg viewBox="0 0 180 40" className="mt-2 h-10 w-full text-[#3B82F6]" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M0 30 L30 22 L60 26 L90 14 L120 18 L150 8 L180 12" />
+        </svg>
+      </div>
+      {/* Design card */}
+      <div className="absolute left-[180px] top-0 w-[240px] rounded-2xl bg-white p-4 shadow-elegant">
+        <div className="flex items-center justify-between text-[12px] font-semibold text-foreground/80">
+          <span className="flex items-center gap-2">
+            <span className="h-2 w-2 rounded-full bg-[#8B5CF6]" />
+            Design
+          </span>
+          <span className="text-[10px] text-muted-foreground">v2.3</span>
+        </div>
+        <div className="mt-1 text-[11px] text-muted-foreground">12 variations generated</div>
+        <div className="mt-3 grid grid-cols-2 gap-2">
+          <div className="grid h-14 place-items-center rounded-lg bg-[#F1F3F6]">
+            <div className="h-6 w-6 rounded-full bg-gradient-to-br from-[#8B5CF6] to-[#EC4899]" />
+          </div>
+          <div className="grid h-14 place-items-center rounded-lg bg-[#F1F3F6] text-foreground/40">→</div>
+        </div>
+        <div className="mt-2 flex items-center gap-1.5">
+          <span className="text-[10px] text-muted-foreground">Palette</span>
+          <span className="h-3 w-3 rounded-full bg-[#8B5CF6]" />
+          <span className="h-3 w-3 rounded-full bg-[#3B82F6]" />
+          <span className="h-3 w-3 rounded-full bg-[#EC4899]" />
+        </div>
+      </div>
+      {/* HTML preview card */}
+      <div className="absolute right-0 top-10 w-[240px] rotate-[3deg] rounded-2xl bg-white p-4 shadow-elegant">
+        <div className="flex items-center gap-2 text-[12px] font-semibold text-foreground/80">
+          <span className="font-mono text-[#17B26A]">&lt; / &gt;</span>
+          HTML
+          <span className="ml-auto rounded bg-[#DDF7EE] px-1.5 py-0.5 text-[9px] font-bold text-[#17B26A]">live preview</span>
+        </div>
+        <div className="mt-2 rounded-lg border border-border/60 bg-[#F7F8FA] px-2 py-1 text-[10px] text-muted-foreground">store.accio.com</div>
+        <div className="mt-2 h-16 rounded-lg bg-gradient-to-br from-[#E8F7EE] to-[#DDF0FF]" />
+        <div className="mt-2 flex justify-between">
+          <span className="rounded bg-[#17B26A] px-2 py-1 text-[9px] font-bold text-white">Shop now</span>
+          <span className="grid h-5 w-5 place-items-center rounded bg-[#FEF3C7] text-[10px]">▲</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 /* ---------- Platform intro ---------- */
 function PlatformIntro() {
   return (
@@ -687,6 +871,7 @@ export default function LandingPage() {
       <Navbar />
       <Hero />
       <BusinessNeeds />
+      <WhyChoose />
       <PlatformIntro />
       <CardGrids />
       <Footer />
