@@ -437,19 +437,19 @@ function BusinessNeeds() {
   return (
     <section className="bg-[#F7F8FA] py-24 sm:py-32">
       <div className="mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center text-[40px] font-extrabold tracking-tight text-foreground sm:text-[64px]" style={{ lineHeight: "1.05" }}>
+        <h2 className="text-center text-[28px] font-bold tracking-tight text-foreground sm:text-[36px]" style={{ lineHeight: "40px" }}>
           Built for every business need
         </h2>
 
-        <div className="mt-12 flex flex-wrap justify-center gap-3">
+        <div className="mt-10 flex flex-wrap justify-center gap-3">
           {BUSINESS_TABS.map((t, i) => (
             <button
               key={t}
               onClick={() => setActive(i)}
-              className={`rounded-full px-6 py-3 text-[16px] font-semibold transition ${
+              className={`rounded-full px-6 py-3 text-[14px] font-medium transition ${
                 i === active
                   ? "bg-[#DDF7EE] text-[#17B26A]"
-                  : "border border-border/70 bg-white text-foreground/70 hover:text-foreground"
+                  : "border border-border/70 bg-white text-foreground/60 hover:text-foreground"
               }`}
             >
               {t}
@@ -460,15 +460,15 @@ function BusinessNeeds() {
         <div
           ref={ref}
           key={activeName}
-          className={`relative mx-auto mt-12 grid w-full max-w-[1320px] gap-10 overflow-hidden rounded-[28px] bg-white p-8 shadow-elegant md:grid-cols-2 md:p-14 md:min-h-[640px] ${
+          className={`relative mx-auto mt-12 grid w-full max-w-[1320px] gap-10 overflow-hidden rounded-[32px] bg-white p-8 md:grid-cols-2 md:p-12 md:min-h-[507px] ${
             shown ? "animate-fade-up" : "opacity-0"
           }`}
         >
           <div className="flex flex-col justify-center">
-            <h3 className="text-[32px] font-extrabold tracking-tight text-foreground sm:text-[44px]" style={{ lineHeight: "1.15" }}>
+            <h3 className="text-[28px] font-bold tracking-tight text-foreground sm:text-[36px]" style={{ lineHeight: "45px" }}>
               {content.title}
             </h3>
-            <p className="mt-6 max-w-md text-[18px] text-muted-foreground" style={{ lineHeight: "1.6" }}>
+            <p className="mt-6 max-w-md text-[18px] text-muted-foreground" style={{ lineHeight: "29px" }}>
               {content.body}
             </p>
             {content.extra}
