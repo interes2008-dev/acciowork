@@ -175,9 +175,9 @@ const BUSINESS_TABS = [
 
 function StoreMockup() {
   return (
-    <div className="relative h-full w-full overflow-hidden rounded-[20px] bg-gradient-to-br from-[#3DD3C9] via-[#2D7CF2] to-[#9B5BFF] p-3 sm:p-5">
+    <div className="relative h-full w-full overflow-hidden rounded-[20px] bg-gradient-to-br from-[#3DD3C9] via-[#2D7CF2] to-[#9B5BFF]">
       <video
-        className="block h-full w-full rounded-xl object-cover shadow-elegant"
+        className="block h-full w-full h-full w-full rounded-[20px] object-cover shadow-elegant"
         src="/accio-store.mp4"
         autoPlay
         muted
@@ -191,9 +191,9 @@ function StoreMockup() {
 
 function CompetitorMockup() {
   return (
-    <div className="relative h-full w-full overflow-hidden rounded-[20px] bg-gradient-to-br from-[#3DD3C9] via-[#2D7CF2] to-[#9B5BFF] p-3 sm:p-5">
+    <div className="relative h-full w-full overflow-hidden rounded-[20px] bg-gradient-to-br from-[#3DD3C9] via-[#2D7CF2] to-[#9B5BFF]">
       <video
-        className="block h-full w-full rounded-xl object-cover shadow-elegant"
+        className="block h-full w-full h-full w-full rounded-[20px] object-cover shadow-elegant"
         src="/accio-competitor.mp4"
         autoPlay
         muted
@@ -207,9 +207,9 @@ function CompetitorMockup() {
 
 function SourceMockup() {
   return (
-    <div className="relative h-full w-full overflow-hidden rounded-[20px] bg-gradient-to-br from-[#3DD3C9] via-[#2D7CF2] to-[#9B5BFF] p-3 sm:p-5">
+    <div className="relative h-full w-full overflow-hidden rounded-[20px] bg-gradient-to-br from-[#3DD3C9] via-[#2D7CF2] to-[#9B5BFF]">
       <video
-        className="block h-full w-full rounded-xl object-cover shadow-elegant"
+        className="block h-full w-full h-full w-full rounded-[20px] object-cover shadow-elegant"
         src="/accio-source.mp4"
         autoPlay
         muted
@@ -223,9 +223,9 @@ function SourceMockup() {
 
 function PromoteMockup() {
   return (
-    <div className="relative h-full w-full overflow-hidden rounded-[20px] bg-gradient-to-br from-[#3DD3C9] via-[#2D7CF2] to-[#9B5BFF] p-3 sm:p-5">
+    <div className="relative h-full w-full overflow-hidden rounded-[20px] bg-gradient-to-br from-[#3DD3C9] via-[#2D7CF2] to-[#9B5BFF]">
       <video
-        className="block h-full w-full rounded-xl object-cover shadow-elegant"
+        className="block h-full w-full h-full w-full rounded-[20px] object-cover shadow-elegant"
         src="/accio-promote.mp4"
         autoPlay
         muted
@@ -239,9 +239,9 @@ function PromoteMockup() {
 
 function ToolsMockup() {
   return (
-    <div className="relative h-full w-full overflow-hidden rounded-[20px] bg-gradient-to-br from-[#3DD3C9] via-[#2D7CF2] to-[#9B5BFF] p-3 sm:p-5">
+    <div className="relative h-full w-full overflow-hidden rounded-[20px] bg-gradient-to-br from-[#3DD3C9] via-[#2D7CF2] to-[#9B5BFF]">
       <video
-        className="block h-full w-full rounded-xl object-cover shadow-elegant"
+        className="block h-full w-full h-full w-full rounded-[20px] object-cover shadow-elegant"
         src="/accio-tools.mp4"
         autoPlay
         muted
@@ -255,9 +255,9 @@ function ToolsMockup() {
 
 function OrganizeMockup() {
   return (
-    <div className="relative h-full w-full overflow-hidden rounded-[20px] bg-gradient-to-br from-[#3DD3C9] via-[#2D7CF2] to-[#9B5BFF] p-3 sm:p-5">
+    <div className="relative h-full w-full overflow-hidden rounded-[20px] bg-gradient-to-br from-[#3DD3C9] via-[#2D7CF2] to-[#9B5BFF]">
       <video
-        className="block h-full w-full rounded-xl object-cover shadow-elegant"
+        className="block h-full w-full h-full w-full rounded-[20px] object-cover shadow-elegant"
         src="/accio-organize.mp4"
         autoPlay
         muted
@@ -271,9 +271,9 @@ function OrganizeMockup() {
 
 function AnalyzeMockup() {
   return (
-    <div className="relative h-full w-full overflow-hidden rounded-[20px] bg-gradient-to-br from-[#3DD3C9] via-[#2D7CF2] to-[#9B5BFF] p-3 sm:p-5">
+    <div className="relative h-full w-full overflow-hidden rounded-[20px] bg-gradient-to-br from-[#3DD3C9] via-[#2D7CF2] to-[#9B5BFF]">
       <video
-        className="block h-full w-full rounded-xl object-cover shadow-elegant"
+        className="block h-full w-full h-full w-full rounded-[20px] object-cover shadow-elegant"
         src="/accio-analyze.mp4"
         autoPlay
         muted
@@ -429,7 +429,7 @@ function BusinessNeeds() {
         <div
           ref={ref}
           key={activeName}
-          className={`mt-14 grid gap-8 rounded-[28px] bg-white p-8 shadow-card md:grid-cols-2 md:p-12 ${
+          className={`mt-14 grid gap-8 rounded-[28px] bg-white p-8 shadow-card md:grid-cols-2 md:p-12 md:min-h-[560px] ${
             shown ? "animate-fade-up" : "opacity-0"
           }`}
         >
@@ -445,7 +445,9 @@ function BusinessNeeds() {
             </p>
             {content.extra}
           </div>
-          {content.visual}
+          <div className="aspect-[4/3] w-full md:aspect-auto md:h-full">
+            {content.visual}
+          </div>
         </div>
       </div>
     </section>
