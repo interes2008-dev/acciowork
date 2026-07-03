@@ -304,96 +304,36 @@ const TAB_CONTENT: Record<string, TabContent> = {
     badge: "Monitor Competitors",
     title: "Schedule once, run automatically",
     body: "Track competitors' pricing, products, and campaigns with scheduled tasks – and turn every finding into a sharper strategy you can act on.",
-    extra: (
-      <div className="mt-8 grid max-w-md grid-cols-[auto_auto_1fr] items-center gap-x-5 gap-y-1 rounded-2xl bg-[#EAF7F0] p-5">
-        <span className="text-[11px] font-bold uppercase tracking-wider text-[#17B26A]">You</span>
-        <span />
-        <span className="text-[11px] font-bold uppercase tracking-wider text-[#17B26A]">AI</span>
-        <span className="text-[15px] font-semibold text-foreground">set once</span>
-        <span className="px-2 text-foreground/40">→</span>
-        <span className="text-[15px] font-semibold text-foreground">pricing, products, campaigns</span>
-      </div>
-    ),
     visual: <CompetitorMockup />,
   },
   "Source & Negotiate": {
     badge: "Source & Negotiate",
     title: "Get the right supplier at the right price",
     body: "Find verified suppliers, send inquiries, and negotiate by email – all handled for you until you land the best deal.",
-    extra: (
-      <div className="mt-8 grid max-w-md grid-cols-[auto_auto_1fr] items-center gap-x-5 gap-y-1 rounded-2xl bg-[#EAF7F0] p-5">
-        <span className="text-[11px] font-bold uppercase tracking-wider text-[#17B26A]">You</span>
-        <span />
-        <span className="text-[11px] font-bold uppercase tracking-wider text-[#17B26A]">AI</span>
-        <span className="text-[15px] font-semibold text-foreground">0 calls</span>
-        <span className="px-2 text-foreground/40">→</span>
-        <span className="text-[15px] font-semibold text-foreground">verified suppliers, inquiries</span>
-      </div>
-    ),
     visual: <SourceMockup />,
   },
   "Promote on Social": {
     badge: "Promote on Social",
     title: "Post, engage, and grow on autopilot",
     body: "Create viral-ready content, schedule posts across platforms, engage with your audience, and track what works – day and night.",
-    extra: (
-      <div className="mt-8 grid max-w-md grid-cols-[auto_auto_1fr] items-center gap-x-5 gap-y-1 rounded-2xl bg-[#EAF7F0] p-5">
-        <span className="text-[11px] font-bold uppercase tracking-wider text-[#17B26A]">You</span>
-        <span />
-        <span className="text-[11px] font-bold uppercase tracking-wider text-[#17B26A]">AI</span>
-        <span className="text-[15px] font-semibold text-foreground">post once</span>
-        <span className="px-2 text-foreground/40">→</span>
-        <span className="text-[15px] font-semibold text-foreground">scheduling, engagement, analytics</span>
-      </div>
-    ),
     visual: <PromoteMockup />,
   },
   "Customize Tools": {
     badge: "Customize Tools",
     title: "Custom business tools – with zero coding",
     body: "Just describe what you need – calculators, dashboards, trackers, or websites – and get a working tool built on the spot, evolving as your business grows.",
-    extra: (
-      <div className="mt-8 grid max-w-md grid-cols-[auto_auto_1fr] items-center gap-x-5 gap-y-1 rounded-2xl bg-[#EAF7F0] p-5">
-        <span className="text-[11px] font-bold uppercase tracking-wider text-[#17B26A]">You</span>
-        <span />
-        <span className="text-[11px] font-bold uppercase tracking-wider text-[#17B26A]">AI</span>
-        <span className="text-[15px] font-semibold text-foreground">describe once</span>
-        <span className="px-2 text-foreground/40">→</span>
-        <span className="text-[15px] font-semibold text-foreground">calculators, dashboards, trackers</span>
-      </div>
-    ),
     visual: <ToolsMockup />,
   },
   "Organize Files": {
     badge: "Organize Files",
     title: "Turn messy documents into clear decisions",
     body: "Upload quotes, invoices, reports, or any file – see everything organized into clean tables and charts, ready to compare and act on in seconds.",
-    extra: (
-      <div className="mt-8 grid max-w-md grid-cols-[auto_auto_1fr] items-center gap-x-5 gap-y-1 rounded-2xl bg-[#EAF7F0] p-5">
-        <span className="text-[11px] font-bold uppercase tracking-wider text-[#17B26A]">You</span>
-        <span />
-        <span className="text-[11px] font-bold uppercase tracking-wider text-[#17B26A]">AI</span>
-        <span className="text-[15px] font-semibold text-foreground">upload files</span>
-        <span className="px-2 text-foreground/40">→</span>
-        <span className="text-[15px] font-semibold text-foreground">tables, charts, insights</span>
-      </div>
-    ),
     visual: <OrganizeMockup />,
   },
   "Analyze Bestsellers": {
     badge: "Analyze Bestsellers",
     title: "Know your market in one click",
     body: "Get market insight with data from Jungle Scout, TikTok, Reddit, Alibaba.com, and more verified sources.",
-    extra: (
-      <div className="mt-8 grid max-w-md grid-cols-[auto_auto_1fr] items-center gap-x-5 gap-y-1 rounded-2xl bg-[#EAF7F0] p-5">
-        <span className="text-[11px] font-bold uppercase tracking-wider text-[#17B26A]">You</span>
-        <span />
-        <span className="text-[11px] font-bold uppercase tracking-wider text-[#17B26A]">AI</span>
-        <span className="text-[15px] font-semibold text-foreground">1 click</span>
-        <span className="px-2 text-foreground/40">→</span>
-        <span className="text-[15px] font-semibold text-foreground">trends, demand, rankings</span>
-      </div>
-    ),
     visual: <AnalyzeMockup />,
   },
 };
@@ -410,15 +350,15 @@ function BusinessNeeds() {
           Built for every business need
         </h2>
 
-        <div className="mt-10 flex flex-wrap justify-center gap-3">
+        <div className="mt-10 flex flex-wrap justify-center gap-2 sm:gap-3">
           {BUSINESS_TABS.map((t, i) => (
             <button
               key={t}
               onClick={() => setActive(i)}
-              className={`rounded-full px-5 py-2.5 text-[14px] font-semibold transition ${
+              className={`rounded-full px-5 py-2.5 text-[15px] font-medium transition ${
                 i === active
-                  ? "bg-[#17B26A] text-white shadow-card"
-                  : "border border-border bg-white text-foreground/70 hover:text-foreground"
+                  ? "bg-[#17B26A] text-white"
+                  : "border border-border/70 bg-white text-foreground/70 hover:text-foreground"
               }`}
             >
               {t}
@@ -429,7 +369,7 @@ function BusinessNeeds() {
         <div
           ref={ref}
           key={activeName}
-          className={`relative mx-auto mt-10 grid w-full max-w-[1100px] gap-8 overflow-hidden rounded-2xl border border-border/70 bg-white p-8 shadow-card md:grid-cols-2 md:p-12 md:min-h-[637px] ${
+          className={`relative mx-auto mt-10 grid w-full max-w-[1100px] gap-8 overflow-hidden rounded-2xl bg-white p-6 shadow-elegant md:grid-cols-2 md:p-10 md:min-h-[637px] ${
             shown ? "animate-fade-up" : "opacity-0"
           }`}
         >
