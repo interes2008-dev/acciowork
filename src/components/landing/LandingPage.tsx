@@ -269,6 +269,22 @@ function OrganizeMockup() {
   );
 }
 
+function AnalyzeMockup() {
+  return (
+    <div className="relative h-full w-full overflow-hidden rounded-[20px] bg-gradient-to-br from-[#3DD3C9] via-[#2D7CF2] to-[#9B5BFF] p-3 sm:p-5">
+      <video
+        className="block h-full w-full rounded-xl object-cover shadow-elegant"
+        src="/accio-analyze.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+      />
+    </div>
+  );
+}
+
 type TabContent = {
   badge: string;
   title: string;
@@ -363,6 +379,22 @@ const TAB_CONTENT: Record<string, TabContent> = {
       </div>
     ),
     visual: <OrganizeMockup />,
+  },
+  "Analyze Bestsellers": {
+    badge: "Analyze Bestsellers",
+    title: "Know your market in one click",
+    body: "Get market insight with data from Jungle Scout, TikTok, Reddit, Alibaba.com, and more verified sources.",
+    extra: (
+      <div className="mt-8 grid max-w-md grid-cols-[auto_auto_1fr] items-center gap-x-5 gap-y-1 rounded-2xl bg-[#EAF7F0] p-5">
+        <span className="text-[11px] font-bold uppercase tracking-wider text-[#17B26A]">You</span>
+        <span />
+        <span className="text-[11px] font-bold uppercase tracking-wider text-[#17B26A]">AI</span>
+        <span className="text-[15px] font-semibold text-foreground">1 click</span>
+        <span className="px-2 text-foreground/40">→</span>
+        <span className="text-[15px] font-semibold text-foreground">trends, demand, rankings</span>
+      </div>
+    ),
+    visual: <AnalyzeMockup />,
   },
 };
 
