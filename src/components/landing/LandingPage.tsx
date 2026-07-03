@@ -298,42 +298,133 @@ const TAB_CONTENT: Record<string, TabContent> = {
     badge: "Launch Store",
     title: "From idea to first sale in minutes",
     body: "Spin up a complete online store with products, listings, design, and SEO ready out of the box – and start selling the moment you go live.",
+    extra: (
+      <div className="mt-8 grid max-w-md grid-cols-[1fr_auto_1fr] items-center gap-x-4 rounded-2xl bg-[#EAF7F0] px-6 py-5">
+        <div className="flex flex-col gap-1">
+          <span className="text-[12px] font-bold uppercase tracking-wider text-[#17B26A]">You</span>
+          <span className="text-[17px] font-semibold text-foreground">1 idea</span>
+        </div>
+        <span className="text-[#17B26A]">→</span>
+        <div className="flex flex-col gap-1">
+          <span className="text-[12px] font-bold uppercase tracking-wider text-[#17B26A]">AI</span>
+          <span className="text-[17px] font-semibold text-foreground">products, listings, SEO</span>
+        </div>
+      </div>
+    ),
     visual: <StoreMockup />,
   },
   "Monitor Competitors": {
     badge: "Monitor Competitors",
     title: "Schedule once, run automatically",
     body: "Track competitors' pricing, products, and campaigns with scheduled tasks – and turn every finding into a sharper strategy you can act on.",
+    extra: (
+      <div className="mt-8 grid max-w-md grid-cols-[1fr_auto_1fr] items-center gap-x-4 rounded-2xl bg-[#EAF7F0] px-6 py-5">
+        <div className="flex flex-col gap-1">
+          <span className="text-[12px] font-bold uppercase tracking-wider text-[#17B26A]">You</span>
+          <span className="text-[17px] font-semibold text-foreground">set once</span>
+        </div>
+        <span className="text-[#17B26A]">→</span>
+        <div className="flex flex-col gap-1">
+          <span className="text-[12px] font-bold uppercase tracking-wider text-[#17B26A]">AI</span>
+          <span className="text-[17px] font-semibold text-foreground">pricing, products, campaigns</span>
+        </div>
+      </div>
+    ),
     visual: <CompetitorMockup />,
   },
   "Source & Negotiate": {
     badge: "Source & Negotiate",
     title: "Get the right supplier at the right price",
     body: "Find verified suppliers, send inquiries, and negotiate by email – all handled for you until you land the best deal.",
+    extra: (
+      <div className="mt-8 grid max-w-md grid-cols-[1fr_auto_1fr] items-center gap-x-4 rounded-2xl bg-[#EAF7F0] px-6 py-5">
+        <div className="flex flex-col gap-1">
+          <span className="text-[12px] font-bold uppercase tracking-wider text-[#17B26A]">You</span>
+          <span className="text-[17px] font-semibold text-foreground">0 calls</span>
+        </div>
+        <span className="text-[#17B26A]">→</span>
+        <div className="flex flex-col gap-1">
+          <span className="text-[12px] font-bold uppercase tracking-wider text-[#17B26A]">AI</span>
+          <span className="text-[17px] font-semibold text-foreground">verified suppliers, inquiries</span>
+        </div>
+      </div>
+    ),
     visual: <SourceMockup />,
   },
   "Promote on Social": {
     badge: "Promote on Social",
     title: "Post, engage, and grow on autopilot",
     body: "Create viral-ready content, schedule posts across platforms, engage with your audience, and track what works – day and night.",
+    extra: (
+      <div className="mt-8 grid max-w-md grid-cols-[1fr_auto_1fr] items-center gap-x-4 rounded-2xl bg-[#EAF7F0] px-6 py-5">
+        <div className="flex flex-col gap-1">
+          <span className="text-[12px] font-bold uppercase tracking-wider text-[#17B26A]">You</span>
+          <span className="text-[17px] font-semibold text-foreground">post once</span>
+        </div>
+        <span className="text-[#17B26A]">→</span>
+        <div className="flex flex-col gap-1">
+          <span className="text-[12px] font-bold uppercase tracking-wider text-[#17B26A]">AI</span>
+          <span className="text-[17px] font-semibold text-foreground">scheduling, engagement, analytics</span>
+        </div>
+      </div>
+    ),
     visual: <PromoteMockup />,
   },
   "Customize Tools": {
     badge: "Customize Tools",
     title: "Custom business tools – with zero coding",
     body: "Just describe what you need – calculators, dashboards, trackers, or websites – and get a working tool built on the spot, evolving as your business grows.",
+    extra: (
+      <div className="mt-8 grid max-w-md grid-cols-[1fr_auto_1fr] items-center gap-x-4 rounded-2xl bg-[#EAF7F0] px-6 py-5">
+        <div className="flex flex-col gap-1">
+          <span className="text-[12px] font-bold uppercase tracking-wider text-[#17B26A]">You</span>
+          <span className="text-[17px] font-semibold text-foreground">describe once</span>
+        </div>
+        <span className="text-[#17B26A]">→</span>
+        <div className="flex flex-col gap-1">
+          <span className="text-[12px] font-bold uppercase tracking-wider text-[#17B26A]">AI</span>
+          <span className="text-[17px] font-semibold text-foreground">calculators, dashboards, trackers</span>
+        </div>
+      </div>
+    ),
     visual: <ToolsMockup />,
   },
   "Organize Files": {
     badge: "Organize Files",
     title: "Turn messy documents into clear decisions",
     body: "Upload quotes, invoices, reports, or any file – see everything organized into clean tables and charts, ready to compare and act on in seconds.",
+    extra: (
+      <div className="mt-8 grid max-w-md grid-cols-[1fr_auto_1fr] items-center gap-x-4 rounded-2xl bg-[#EAF7F0] px-6 py-5">
+        <div className="flex flex-col gap-1">
+          <span className="text-[12px] font-bold uppercase tracking-wider text-[#17B26A]">You</span>
+          <span className="text-[17px] font-semibold text-foreground">upload files</span>
+        </div>
+        <span className="text-[#17B26A]">→</span>
+        <div className="flex flex-col gap-1">
+          <span className="text-[12px] font-bold uppercase tracking-wider text-[#17B26A]">AI</span>
+          <span className="text-[17px] font-semibold text-foreground">tables, charts, insights</span>
+        </div>
+      </div>
+    ),
     visual: <OrganizeMockup />,
   },
   "Analyze Bestsellers": {
     badge: "Analyze Bestsellers",
     title: "Know your market in one click",
     body: "Get market insight with data from Jungle Scout, TikTok, Reddit, Alibaba.com, and more verified sources.",
+    extra: (
+      <div className="mt-8 grid max-w-md grid-cols-[1fr_auto_1fr] items-center gap-x-4 rounded-2xl bg-[#EAF7F0] px-6 py-5">
+        <div className="flex flex-col gap-1">
+          <span className="text-[12px] font-bold uppercase tracking-wider text-[#17B26A]">You</span>
+          <span className="text-[17px] font-semibold text-foreground">1 click</span>
+        </div>
+        <span className="text-[#17B26A]">→</span>
+        <div className="flex flex-col gap-1">
+          <span className="text-[12px] font-bold uppercase tracking-wider text-[#17B26A]">AI</span>
+          <span className="text-[17px] font-semibold text-foreground">trends, demand, rankings</span>
+        </div>
+      </div>
+    ),
     visual: <AnalyzeMockup />,
   },
 };
@@ -346,18 +437,18 @@ function BusinessNeeds() {
   return (
     <section className="bg-[#F7F8FA] py-24 sm:py-32">
       <div className="mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center text-[28px] font-bold tracking-tight text-foreground sm:text-[36px]" style={{ lineHeight: "40px" }}>
+        <h2 className="text-center text-[40px] font-extrabold tracking-tight text-foreground sm:text-[64px]" style={{ lineHeight: "1.05" }}>
           Built for every business need
         </h2>
 
-        <div className="mt-10 flex flex-wrap justify-center gap-2 sm:gap-3">
+        <div className="mt-12 flex flex-wrap justify-center gap-3">
           {BUSINESS_TABS.map((t, i) => (
             <button
               key={t}
               onClick={() => setActive(i)}
-              className={`rounded-full px-5 py-2.5 text-[15px] font-medium transition ${
+              className={`rounded-full px-6 py-3 text-[16px] font-semibold transition ${
                 i === active
-                  ? "bg-[#17B26A] text-white"
+                  ? "bg-[#DDF7EE] text-[#17B26A]"
                   : "border border-border/70 bg-white text-foreground/70 hover:text-foreground"
               }`}
             >
@@ -369,18 +460,15 @@ function BusinessNeeds() {
         <div
           ref={ref}
           key={activeName}
-          className={`relative mx-auto mt-10 grid w-full max-w-[1100px] gap-8 overflow-hidden rounded-2xl bg-white p-6 shadow-elegant md:grid-cols-2 md:p-10 md:min-h-[637px] ${
+          className={`relative mx-auto mt-12 grid w-full max-w-[1320px] gap-10 overflow-hidden rounded-[28px] bg-white p-8 shadow-elegant md:grid-cols-2 md:p-14 md:min-h-[640px] ${
             shown ? "animate-fade-up" : "opacity-0"
           }`}
         >
           <div className="flex flex-col justify-center">
-            <span className="inline-flex w-fit items-center rounded-full bg-[#DDF7EE] px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#17B26A]">
-              {content.badge}
-            </span>
-            <h3 className="mt-6 text-[28px] font-bold tracking-tight text-foreground sm:text-[36px]" style={{ lineHeight: "45px" }}>
+            <h3 className="text-[32px] font-extrabold tracking-tight text-foreground sm:text-[44px]" style={{ lineHeight: "1.15" }}>
               {content.title}
             </h3>
-            <p className="mt-6 max-w-md text-[18px] text-muted-foreground" style={{ lineHeight: "29px" }}>
+            <p className="mt-6 max-w-md text-[18px] text-muted-foreground" style={{ lineHeight: "1.6" }}>
               {content.body}
             </p>
             {content.extra}
