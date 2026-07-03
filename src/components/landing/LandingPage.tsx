@@ -350,15 +350,15 @@ function BusinessNeeds() {
           Built for every business need
         </h2>
 
-        <div className="mt-10 flex flex-wrap justify-center gap-3">
+        <div className="mt-10 flex flex-wrap justify-center gap-2 sm:gap-3">
           {BUSINESS_TABS.map((t, i) => (
             <button
               key={t}
               onClick={() => setActive(i)}
-              className={`rounded-full px-5 py-2.5 text-[14px] font-semibold transition ${
+              className={`rounded-full px-5 py-2.5 text-[15px] font-medium transition ${
                 i === active
-                  ? "bg-[#17B26A] text-white shadow-card"
-                  : "border border-border bg-white text-foreground/70 hover:text-foreground"
+                  ? "bg-[#17B26A] text-white"
+                  : "border border-border/70 bg-white text-foreground/70 hover:text-foreground"
               }`}
             >
               {t}
@@ -369,7 +369,7 @@ function BusinessNeeds() {
         <div
           ref={ref}
           key={activeName}
-          className={`relative mx-auto mt-10 grid w-full max-w-[1100px] gap-8 overflow-hidden rounded-2xl border border-border/70 bg-white p-8 shadow-card md:grid-cols-2 md:p-12 md:min-h-[637px] ${
+          className={`relative mx-auto mt-10 grid w-full max-w-[1100px] gap-8 overflow-hidden rounded-2xl bg-white p-6 shadow-elegant md:grid-cols-2 md:p-10 md:min-h-[637px] ${
             shown ? "animate-fade-up" : "opacity-0"
           }`}
         >
