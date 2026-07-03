@@ -871,6 +871,7 @@ export default function LandingPage() {
       <Navbar />
       <Hero />
       <BusinessNeeds />
+      <WhyChoose />
       <PlatformIntro />
       <CardGrids />
       <Footer />
