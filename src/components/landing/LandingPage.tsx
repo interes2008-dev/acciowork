@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import heroPoster from "@/assets/hero-poster.png.asset.json";
 import {
   Apple,
   ChevronDown,
@@ -103,12 +104,11 @@ function HeroVisual() {
           <video
             className="block h-auto w-full"
             src="/home.mp4"
-            autoPlay
-            muted
             loop
             playsInline
             controls
             preload="metadata"
+            poster={heroPoster.url}
           />
         </div>
       </div>
