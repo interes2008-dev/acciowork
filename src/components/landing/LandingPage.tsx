@@ -667,6 +667,190 @@ function PlatformMockup() {
 }
 
 /* ---------- Platform intro ---------- */
+/* ---------- Testimonials ---------- */
+type Testimonial = {
+  name: string;
+  role: string;
+  avatar: string;
+  text: React.ReactNode;
+};
+
+const TESTIMONIALS_ROW_1: Testimonial[] = [
+  {
+    name: "Joseph S.",
+    role: "Global Sourcing Manager",
+    avatar: "https://i.pravatar.cc/80?img=13",
+    text: (
+      <>
+        Accio Work quickly transforms scattered non-standard supplier quotes into comparable data. It's the{" "}
+        <mark className="bg-[#DDF7EE] text-foreground">first AI that truly understands</mark> the complexity of global trade.
+      </>
+    ),
+  },
+  {
+    name: "Mia C.",
+    role: "Weekend Founder",
+    avatar: "https://i.pravatar.cc/80?img=47",
+    text: (
+      <>
+        I had product ideas saved for months, but no clue how to source or launch. Accio Work helped me move from scattered notes to{" "}
+        <mark className="bg-[#DDF7EE] text-foreground">a real product to sell</mark>.
+      </>
+    ),
+  },
+  {
+    name: "Luna M.",
+    role: "Dropshipping seller",
+    avatar: "https://i.pravatar.cc/80?img=45",
+    text: (
+      <>
+        Accio Work scans Reddit, TikTok, and Amazon to <mark className="bg-[#DDF7EE] text-foreground">pinpoint winners</mark> and source directly from suppliers. It's the ultimate tool to outpace competition on viral trends.
+      </>
+    ),
+  },
+  {
+    name: "Keshia B.",
+    role: "Side-Hustler",
+    avatar: "https://i.pravatar.cc/80?img=48",
+    text: (
+      <>
+        I only had nights for my store. I love that Accio Work could automate niche analysis and{" "}
+        <mark className="bg-[#DDF7EE] text-foreground">supplier follow-ups</mark> while I was at my day job.
+      </>
+    ),
+  },
+  {
+    name: "Jay W.",
+    role: "Streetwear Brand Owner",
+    avatar: "https://i.pravatar.cc/80?img=15",
+    text: (
+      <>
+        Accio Work <mark className="bg-[#DDF7EE] text-foreground">cuts my production time by weeks</mark> with professional tech pack generation and supplier auto negotiation. More importantly, I know my designs are 100% secure.
+      </>
+    ),
+  },
+];
+
+const TESTIMONIALS_ROW_2: Testimonial[] = [
+  {
+    name: "Nina K.",
+    role: "Outdoor Brand Founder",
+    avatar: "https://i.pravatar.cc/80?img=49",
+    text: (
+      <>
+        I used to spend <mark className="bg-[#DDF7EE] text-foreground">10h/week</mark> managing content freelancers, but Accio Work now automates everything from content to publishing and only takes me{" "}
+        <mark className="bg-[#DDF7EE] text-foreground">10 min/week</mark>.
+      </>
+    ),
+  },
+  {
+    name: "Sara N.",
+    role: "Nail Salon Manager",
+    avatar: "https://i.pravatar.cc/80?img=32",
+    text: (
+      <>
+        Very easy to use. I think I <mark className="bg-[#DDF7EE] text-foreground">finally get how AI can help</mark> my business.
+      </>
+    ),
+  },
+  {
+    name: "Clara E.",
+    role: "Procurement Specialist",
+    avatar: "https://i.pravatar.cc/80?img=44",
+    text: (
+      <>
+        Supplier research always felt like chasing missing details. Now with Accio Work's proactive follow-up, I can get to a{" "}
+        <mark className="bg-[#DDF7EE] text-foreground">clean shortlist faster</mark>.
+      </>
+    ),
+  },
+  {
+    name: "Andrew P.",
+    role: "Wedding & Event Planner",
+    avatar: "https://i.pravatar.cc/80?img=12",
+    text: (
+      <>
+        This tool helped me find diverse suppliers at much lower prices, while perfectly coordinating delivery with my event dates. My{" "}
+        <mark className="bg-[#DDF7EE] text-foreground">bookings grow by 30+%</mark> thanks to Accio Work.
+      </>
+    ),
+  },
+  {
+    name: "Joan W.",
+    role: "Supply Chain Consultant",
+    avatar: "https://i.pravatar.cc/80?img=5",
+    text: (
+      <>
+        Unlike other AIs, Accio Work is powered by the <mark className="bg-[#DDF7EE] text-foreground">real trade data</mark> from alibaba.com and market intelligence like Jungle Scout. Definitely a must-have for e-commerce sellers.
+      </>
+    ),
+  },
+];
+
+function TestimonialCard({ t }: { t: Testimonial }) {
+  return (
+    <article className="mx-3 w-[360px] shrink-0 rounded-[24px] bg-white p-6 shadow-card">
+      <header className="flex items-center gap-3">
+        <img
+          src={t.avatar}
+          alt={t.name}
+          loading="lazy"
+          className="h-11 w-11 rounded-full object-cover"
+        />
+        <div>
+          <div className="text-[15px] font-bold text-foreground">{t.name}</div>
+          <div className="text-[13px] text-muted-foreground">{t.role}</div>
+        </div>
+      </header>
+      <p className="mt-4 text-[15px] leading-[1.55] text-foreground/85">{t.text}</p>
+    </article>
+  );
+}
+
+function MarqueeRow({
+  items,
+  direction,
+}: {
+  items: Testimonial[];
+  direction: "left" | "right";
+}) {
+  const doubled = [...items, ...items];
+  return (
+    <div className="group relative overflow-hidden py-3">
+      <div
+        className={`flex w-max ${
+          direction === "left" ? "animate-marquee-left" : "animate-marquee-right"
+        } [animation-play-state:running] group-hover:[animation-play-state:paused]`}
+      >
+        {doubled.map((t, i) => (
+          <TestimonialCard key={`${t.name}-${i}`} t={t} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function Testimonials() {
+  return (
+    <section className="relative overflow-hidden bg-mint-50 py-24 sm:py-32">
+      <div className="mx-auto max-w-[1280px] px-6 text-center">
+        <h2 className="text-[36px] font-extrabold tracking-tight text-foreground sm:text-[50px]">
+          Loved by <span className="text-[#17B26A]">10+ Million</span> monthly
+          <br />
+          active users
+        </h2>
+      </div>
+      <div className="relative mt-14 space-y-3">
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-[color-mix(in_oklab,var(--mint-50)_100%,transparent)] to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-[color-mix(in_oklab,var(--mint-50)_100%,transparent)] to-transparent" />
+        <MarqueeRow items={TESTIMONIALS_ROW_1} direction="left" />
+        <MarqueeRow items={TESTIMONIALS_ROW_2} direction="right" />
+      </div>
+    </section>
+  );
+}
+
+/* ---------- Platform intro ---------- */
 function PlatformIntro() {
   return (
     <section className="py-28 sm:py-36">
