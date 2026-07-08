@@ -1107,6 +1107,46 @@ function CardGrids() {
   );
 }
 
+/* ---------- Final CTA ---------- */
+function FinalCta() {
+  return (
+    <section className="relative overflow-hidden bg-hero py-28 sm:py-36">
+      <div className="mx-auto max-w-[1100px] px-6 text-center">
+        <h2 className="text-[44px] font-extrabold tracking-tight text-foreground sm:text-[72px]">
+          Try Accio Work today.
+        </h2>
+        <p className="mx-auto mt-6 max-w-xl text-[18px] leading-relaxed text-muted-foreground sm:text-[20px]">
+          Enjoy the ultimate work experience with Accio Work.
+        </p>
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <a
+            href={REFERRAL_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 rounded-full bg-foreground px-7 py-4 text-[16px] font-semibold text-background transition-transform hover:-translate-y-0.5"
+          >
+            <Apple className="h-5 w-5" />
+            Download for macOS
+            <span className="mx-1 h-5 w-px bg-background/25" />
+            <span className="inline-flex items-center gap-1 text-[14px] font-medium text-background/80">
+              Apple Silicon <ChevronDown className="h-4 w-4" />
+            </span>
+          </a>
+          <a
+            href={REFERRAL_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center rounded-full border border-border bg-background px-8 py-4 text-[16px] font-semibold text-foreground transition-colors hover:bg-mint-50"
+          >
+            Quick Start
+          </a>
+        </div>
+        <p className="mt-5 text-[13px] text-muted-foreground">For macOS 11 or later</p>
+      </div>
+    </section>
+  );
+}
+
 /* ---------- Footer ---------- */
 function Footer() {
   return (
@@ -1145,6 +1185,7 @@ export default function LandingPage() {
       <WhyChoose />
       <Testimonials />
       <Faq />
+      <FinalCta />
       <Footer />
     </main>
   );
