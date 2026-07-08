@@ -1144,7 +1144,6 @@ export default function LandingPage() {
       <BusinessNeeds />
       <WhyChoose />
       <Testimonials />
-      <CardGrids />
       <Faq />
       <Footer />
     </main>
