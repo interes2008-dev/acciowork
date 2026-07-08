@@ -850,21 +850,108 @@ function Testimonials() {
   );
 }
 
-/* ---------- Platform intro ---------- */
-function PlatformIntro() {
+/* ---------- FAQ ---------- */
+type FaqItem = {
+  q: string;
+  a: string;
+  link?: { label: string; href: string };
+};
+
+const FAQS: FaqItem[] = [
+  {
+    q: "How is Accio Work different from a normal AI chat tool?",
+    a: "Typical chat tools only answer with text. Accio Work is an execution-oriented agent platform that can read local files, run terminal commands, control your browser, and call external APIs. It does not just tell you what to do — it helps you do the work.",
+    link: { label: "Read the quickstart guide", href: REFERRAL_URL },
+  },
+  {
+    q: "Which LLMs are supported?",
+    a: "We currently support Gemini, GPT-4o, Claude, and Qwen. You can assign different models to different agents. Model access is routed through our gateway so you do not have to manage a complicated API-key setup.",
+    link: { label: "View agent capabilities", href: REFERRAL_URL },
+  },
+  {
+    q: "What can the browser automation do?",
+    a: "Accio Work can control a real browser via Chrome DevTools Protocol. Agents can search the web, scrape pages, fill out forms, take screenshots, and navigate multi-step workflows — all hands-free. Browser access is treated as a sensitive capability and requires explicit permission.",
+    link: { label: "View agent tools", href: REFERRAL_URL },
+  },
+  {
+    q: "Can I schedule agents to run automatically?",
+    a: "Yes. The Automations feature lets you create cron-like scheduled tasks — either by describing them in natural language in a chat, or by configuring them on the Automations page. Schedules run locally, so they work even without an internet connection. Missed runs are reconciled on restart.",
+    link: { label: "View automation docs", href: REFERRAL_URL },
+  },
+  {
+    q: "How do I connect an agent to Telegram or DingTalk?",
+    a: "Open the Channels page in the client, choose the platform you need, and follow the setup guide to add a bot token. Accio Work supports Telegram, Discord, DingTalk, Lark (Feishu), and WeChat. Once connected, the agent can reply in chats or receive tasks automatically.",
+    link: { label: "View supported channels", href: REFERRAL_URL },
+  },
+  {
+    q: "What are Skills and how do they extend agents?",
+    a: "Skills are plugin packs that give agents domain-specific abilities — code review, copywriting, SEO audit, and more. You can install skills from the marketplace or create your own. Accio Work also supports the Model Context Protocol (MCP) standard for integrating external tool servers.",
+    link: { label: "View skills management", href: REFERRAL_URL },
+  },
+  {
+    q: "Which platforms are supported?",
+    a: "Accio Work is available for macOS (Apple Silicon and Intel) and Windows (x64). It is a native desktop application built with Electron, so you get full access to local system resources.",
+  },
+  {
+    q: "Can multiple agents collaborate on a task?",
+    a: "Yes. The Teams feature lets you create agent groups with a Team Lead and member agents. The TL can delegate subtasks, coordinate work through group chat, and orchestrate multi-agent workflows — useful for complex projects that benefit from specialized roles.",
+    link: { label: "View agent team docs", href: REFERRAL_URL },
+  },
+];
+
+function FaqRow({ item, open, onToggle }: { item: FaqItem; open: boolean; onToggle: () => void }) {
   return (
-    <section className="py-28 sm:py-36">
-      <div className="mx-auto max-w-[1280px] px-6 text-center">
-        <span className="inline-flex items-center rounded-full bg-[#DDF7EE] px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-[#17B26A]">
-          Platform
-        </span>
-        <h2 className="mt-8 text-[36px] font-extrabold tracking-tight text-foreground sm:text-[50px]">
-          Everything you need in one place
+    <div className="rounded-[20px] border border-border/70 bg-mint-50/60 transition-colors hover:bg-mint-50">
+      <button
+        type="button"
+        onClick={onToggle}
+        aria-expanded={open}
+        className="flex w-full items-center justify-between gap-6 px-7 py-6 text-left"
+      >
+        <span className="text-[17px] font-bold text-foreground sm:text-[18px]">{item.q}</span>
+        <ChevronDown
+          className={`h-5 w-5 shrink-0 text-[#17B26A] transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+        />
+      </button>
+      {open && (
+        <div className="px-7 pb-7 -mt-1">
+          <p className="text-[15px] leading-relaxed text-muted-foreground sm:text-[16px]">
+            {item.a}
+          </p>
+          {item.link && (
+            <a
+              href={item.link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-1.5 text-[15px] font-semibold text-[#17B26A] hover:underline"
+            >
+              {item.link.label} <span aria-hidden>→</span>
+            </a>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function Faq() {
+  const [openIdx, setOpenIdx] = useState<number | null>(0);
+  return (
+    <section className="py-24 sm:py-32">
+      <div className="mx-auto max-w-[880px] px-6">
+        <h2 className="text-center text-[44px] font-extrabold tracking-tight text-foreground sm:text-[64px]">
+          FAQ
         </h2>
-        <p className="mx-auto mt-6 max-w-2xl text-[17px] leading-relaxed text-muted-foreground">
-          Accio Work is more than chat. It brings together everything you need, from AI agents to
-          built-in tools, so you can work faster in one place.
-        </p>
+        <div className="mt-12 flex flex-col gap-4">
+          {FAQS.map((item, i) => (
+            <FaqRow
+              key={item.q}
+              item={item}
+              open={openIdx === i}
+              onToggle={() => setOpenIdx(openIdx === i ? null : i)}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -1057,8 +1144,8 @@ export default function LandingPage() {
       <BusinessNeeds />
       <WhyChoose />
       <Testimonials />
-      <PlatformIntro />
       <CardGrids />
+      <Faq />
       <Footer />
     </main>
   );
