@@ -1,0 +1,7 @@
+# Accio Work
+
+> AI-powered workspace for market research, supplier discovery, content generation, and business workflow automation.
+
+## Pages
+
+- [Home](/): Overview of Accio Work — features, testimonials, FAQ, and download.

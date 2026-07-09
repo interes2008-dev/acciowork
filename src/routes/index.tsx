@@ -23,10 +23,33 @@ export const Route = createFileRoute("/")({
           "Research markets, compare suppliers, generate content and automate workflows with Accio Work — your AI workspace for smarter business work.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://acciowork.pro/" },
     ],
     links: [
-      { rel: "canonical", href: "/" },
+      { rel: "canonical", href: "https://acciowork.pro/" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Accio Work",
+          url: "https://acciowork.pro/",
+          description:
+            "Research markets, compare suppliers, generate content and automate workflows with Accio Work — your AI workspace for smarter business work.",
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Accio Work",
+          url: "https://acciowork.pro/",
+          logo: "https://acciowork.pro/favicon.svg",
+        }),
+      },
     ],
   }),
 });
