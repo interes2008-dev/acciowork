@@ -508,7 +508,7 @@ function WhyChoose() {
             <h3 className="text-[22px] font-bold leading-tight sm:text-[24px]">
               Connect once. Automate<br />everything.
             </h3>
-            <p className="mt-4 text-[15px] leading-relaxed text-white/70">
+            <p className="mt-4 text-[15px] leading-relaxed text-white/90">
               Shopify, Gmail, Slack, LinkedIn, and 50+ more — one-click setup. No integration projects, no developers needed.
             </p>
             <ConnectorsRow />
@@ -519,7 +519,7 @@ function WhyChoose() {
             <h3 className="text-[22px] font-bold leading-tight text-[#0F4E33] sm:text-[24px]">
               Your data. Your control.
             </h3>
-            <p className="mt-4 text-[15px] leading-relaxed text-[#0F4E33]/75">
+            <p className="mt-4 text-[15px] leading-relaxed text-[#0F4E33]">
               Sandboxed execution. You approve every critical action. Data sovereignty backed by Alibaba's infrastructure.
             </p>
             <svg viewBox="0 0 48 48" className="absolute bottom-6 right-6 h-12 w-12 text-[#0F7B4A]" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -534,7 +534,7 @@ function WhyChoose() {
               <h3 className="text-[22px] font-bold leading-tight text-[#0F2954] sm:text-[24px]">
                 One platform. Analysis, design, automation.
               </h3>
-              <p className="mt-4 text-[15px] leading-relaxed text-[#0F2954]/70">
+              <p className="mt-4 text-[15px] leading-relaxed text-[#0F2954]">
                 Sourcing reports, concept design, landing pages, competitor tracking — pick a skill, schedule it, forget about it.
               </p>
             </div>
