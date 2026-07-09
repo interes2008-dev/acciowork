@@ -72,6 +72,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "yandex-verification", content: "bcf646e91b8ebb07" },
+      { name: "google-site-verification", content: "DeEzULQO3ZpMSdtk9-332HGGxIq78-NxAz3z8JyE4rQ" },
+      { name: "msvalidate.01", content: "59482D5F4C57AEF2EA0D999CC9DFF4EE" },
       { title: "Lovable App" },
       { name: "description", content: "Accio Work Hub is a premium, mobile-first landing page designed to maximize referral registrations and CTA clicks for the Accio Work project." },
       { name: "author", content: "Lovable" },
