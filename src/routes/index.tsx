@@ -23,6 +23,9 @@ export const Route = createFileRoute("/")({
           "Research markets, compare suppliers, generate content and automate workflows with Accio Work — your AI workspace for smarter business work.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Accio Work" },
+      { property: "og:locale", content: "en_US" },
+      { property: "og:locale:alternate", content: "ru_RU" },
       { property: "og:url", content: "https://acciowork.pro/" },
       { property: "og:image", content: "https://acciowork.pro/og-image.png" },
       { property: "og:image:width", content: "1200" },
@@ -37,8 +40,8 @@ export const Route = createFileRoute("/")({
     ],
     links: [
       { rel: "canonical", href: "https://acciowork.pro/" },
-      { rel: "alternate", hreflang: "en", href: "https://acciowork.pro/?lang=en" },
-      { rel: "alternate", hreflang: "ru", href: "https://acciowork.pro/?lang=ru" },
+      { rel: "alternate", hreflang: "en", href: "https://acciowork.pro/" },
+      { rel: "alternate", hreflang: "ru", href: "https://acciowork.pro/ru" },
       { rel: "alternate", hreflang: "x-default", href: "https://acciowork.pro/" },
     ],
     scripts: [

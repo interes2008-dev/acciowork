@@ -13,6 +13,9 @@ const STORAGE_KEY = "accio_lang";
 function detectInitial(): Lang {
   if (typeof window === "undefined") return "en";
   try {
+    if (window.location.pathname.replace(/\/+$/, "").toLowerCase() === "/ru") return "ru";
+  } catch {}
+  try {
     const param = new URLSearchParams(window.location.search).get("lang");
     if (param === "ru" || param === "en") return param;
   } catch {}

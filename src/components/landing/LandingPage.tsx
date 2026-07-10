@@ -105,6 +105,12 @@ function LanguageSwitcher() {
                 onClick={() => {
                   setLang(code);
                   setOpen(false);
+                  if (typeof window !== "undefined") {
+                    const target = code === "ru" ? "/ru" : "/";
+                    if (window.location.pathname !== target) {
+                      window.history.pushState({}, "", target);
+                    }
+                  }
                 }}
                 className={`flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-[14px] font-medium transition ${
                   lang === code ? "bg-mint-50 text-foreground" : "text-foreground/80 hover:bg-mint-50"
