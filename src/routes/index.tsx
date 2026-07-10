@@ -24,6 +24,16 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://acciowork.pro/" },
+      { property: "og:image", content: "https://acciowork.pro/og-image.png" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:type", content: "image/png" },
+      { property: "og:image:alt", content: "Accio Work AI workspace for sourcing, research and automation" },
+      { name: "twitter:image", content: "https://acciowork.pro/og-image.png" },
+      { name: "twitter:image:alt", content: "Accio Work AI workspace for sourcing, research and automation" },
+      { name: "twitter:title", content: "Accio Work | AI-Powered Work Opportunities" },
+      { name: "twitter:description", content: "Research markets, compare suppliers, generate content and automate workflows with Accio Work." },
+
     ],
     links: [
       { rel: "canonical", href: "https://acciowork.pro/" },
