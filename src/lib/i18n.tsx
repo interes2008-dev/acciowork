@@ -13,10 +13,17 @@ const STORAGE_KEY = "accio_lang";
 function detectInitial(): Lang {
   if (typeof window === "undefined") return "en";
   try {
+    const param = new URLSearchParams(window.location.search).get("lang");
+    if (param === "ru" || param === "en") return param;
+  } catch {}
+  try {
     const saved = window.localStorage.getItem(STORAGE_KEY);
     if (saved === "ru" || saved === "en") return saved;
   } catch {}
-  const nav = (typeof navigator !== "undefined" && (navigator.language || (navigator.languages && navigator.languages[0]))) || "";
+  const nav =
+    (typeof navigator !== "undefined" &&
+      (navigator.language || (navigator.languages && navigator.languages[0]))) ||
+    "";
   return nav.toLowerCase().startsWith("ru") ? "ru" : "en";
 }
 
