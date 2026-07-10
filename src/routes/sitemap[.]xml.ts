@@ -7,20 +7,31 @@ interface SitemapEntry {
   path: string;
   changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
   priority?: string;
+  alternates?: { hreflang: string; href: string }[];
 }
 
 export const Route = createFileRoute("/sitemap.xml")({
   server: {
     handlers: {
       GET: async () => {
+        const alternates = [
+          { hreflang: "en", href: `${BASE_URL}/` },
+          { hreflang: "ru", href: `${BASE_URL}/ru` },
+          { hreflang: "x-default", href: `${BASE_URL}/` },
+        ];
         const entries: SitemapEntry[] = [
-          { path: "/", changefreq: "weekly", priority: "1.0" },
+          { path: "/", changefreq: "weekly", priority: "1.0", alternates },
+          { path: "/ru", changefreq: "weekly", priority: "0.9", alternates },
         ];
 
         const urls = entries.map((e) =>
           [
             `  <url>`,
             `    <loc>${BASE_URL}${e.path}</loc>`,
+            ...(e.alternates ?? []).map(
+              (a) =>
+                `    <xhtml:link rel="alternate" hreflang="${a.hreflang}" href="${a.href}" />`,
+            ),
             e.changefreq ? `    <changefreq>${e.changefreq}</changefreq>` : null,
             e.priority ? `    <priority>${e.priority}</priority>` : null,
             `  </url>`,
@@ -31,7 +42,7 @@ export const Route = createFileRoute("/sitemap.xml")({
 
         const xml = [
           `<?xml version="1.0" encoding="UTF-8"?>`,
-          `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`,
+          `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">`,
           ...urls,
           `</urlset>`,
         ].join("\n");
