@@ -17,11 +17,13 @@ export const Route = createFileRoute("/sitemap.xml")({
         const alternates = [
           { hreflang: "en", href: `${BASE_URL}/` },
           { hreflang: "ru", href: `${BASE_URL}/ru` },
+          { hreflang: "de", href: `${BASE_URL}/de` },
           { hreflang: "x-default", href: `${BASE_URL}/` },
         ];
         const entries: SitemapEntry[] = [
           { path: "/", changefreq: "weekly", priority: "1.0", alternates },
           { path: "/ru", changefreq: "weekly", priority: "0.9", alternates },
+          { path: "/de", changefreq: "weekly", priority: "0.9", alternates },
         ];
 
         const urls = entries.map((e) =>
