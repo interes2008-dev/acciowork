@@ -76,7 +76,7 @@ function LanguageSwitcher() {
     return () => document.removeEventListener("mousedown", onDoc);
   }, [open]);
 
-  const options: Lang[] = ["en", "ru"];
+  const options: Lang[] = ["en", "ru", "de"];
 
   return (
     <div ref={rootRef} className="relative">
@@ -106,7 +106,7 @@ function LanguageSwitcher() {
                   setLang(code);
                   setOpen(false);
                   if (typeof window !== "undefined") {
-                    const target = code === "ru" ? "/ru" : "/";
+                    const target = code === "ru" ? "/ru" : code === "de" ? "/de" : "/";
                     if (window.location.pathname !== target) {
                       window.history.pushState({}, "", target);
                     }

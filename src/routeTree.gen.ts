@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as RuRouteImport } from './routes/ru'
+import { Route as DeRouteImport } from './routes/de'
 import { Route as IndexRouteImport } from './routes/index'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -23,6 +24,11 @@ const RuRoute = RuRouteImport.update({
   path: '/ru',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DeRoute = DeRouteImport.update({
+  id: '/de',
+  path: '/de',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -31,30 +37,34 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/de': typeof DeRoute
   '/ru': typeof RuRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/de': typeof DeRoute
   '/ru': typeof RuRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/de': typeof DeRoute
   '/ru': typeof RuRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/ru' | '/sitemap.xml'
+  fullPaths: '/' | '/de' | '/ru' | '/sitemap.xml'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/ru' | '/sitemap.xml'
-  id: '__root__' | '/' | '/ru' | '/sitemap.xml'
+  to: '/' | '/de' | '/ru' | '/sitemap.xml'
+  id: '__root__' | '/' | '/de' | '/ru' | '/sitemap.xml'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DeRoute: typeof DeRoute
   RuRoute: typeof RuRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
@@ -75,6 +85,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RuRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/de': {
+      id: '/de'
+      path: '/de'
+      fullPath: '/de'
+      preLoaderRoute: typeof DeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -87,6 +104,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DeRoute: DeRoute,
   RuRoute: RuRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
 }

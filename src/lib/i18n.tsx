@@ -13,21 +13,26 @@ const STORAGE_KEY = "accio_lang";
 function detectInitial(): Lang {
   if (typeof window === "undefined") return "en";
   try {
-    if (window.location.pathname.replace(/\/+$/, "").toLowerCase() === "/ru") return "ru";
+    const path = window.location.pathname.replace(/\/+$/, "").toLowerCase();
+    if (path === "/ru") return "ru";
+    if (path === "/de") return "de";
   } catch {}
   try {
     const param = new URLSearchParams(window.location.search).get("lang");
-    if (param === "ru" || param === "en") return param;
+    if (param === "ru" || param === "en" || param === "de") return param;
   } catch {}
   try {
     const saved = window.localStorage.getItem(STORAGE_KEY);
-    if (saved === "ru" || saved === "en") return saved;
+    if (saved === "ru" || saved === "en" || saved === "de") return saved;
   } catch {}
   const nav =
     (typeof navigator !== "undefined" &&
       (navigator.language || (navigator.languages && navigator.languages[0]))) ||
     "";
-  return nav.toLowerCase().startsWith("ru") ? "ru" : "en";
+  const low = nav.toLowerCase();
+  if (low.startsWith("ru")) return "ru";
+  if (low.startsWith("de")) return "de";
+  return "en";
 }
 
 export function I18nProvider({ children }: { children: ReactNode }) {
