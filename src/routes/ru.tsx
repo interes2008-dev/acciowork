@@ -42,6 +42,7 @@ export const Route = createFileRoute("/ru")({
       { rel: "canonical", href: "https://acciowork.pro/ru" },
       { rel: "alternate", hreflang: "en", href: "https://acciowork.pro/" },
       { rel: "alternate", hreflang: "ru", href: "https://acciowork.pro/ru" },
+      { rel: "alternate", hreflang: "de", href: "https://acciowork.pro/de" },
       { rel: "alternate", hreflang: "x-default", href: "https://acciowork.pro/" },
     ],
     scripts: [
