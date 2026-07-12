@@ -100,13 +100,12 @@ export const Route = createFileRoute("/api/public/cron/generate-articles")({
           url.searchParams.get("key") ??
           request.headers.get("x-cron-key") ??
           request.headers.get("apikey");
-        const expected =
-          process.env.CRON_SECRET ??
-          process.env.SUPABASE_PUBLISHABLE_KEY ??
-          "";
-        if (!expected || supplied !== expected && supplied !== process.env.SUPABASE_PUBLISHABLE_KEY) {
-          return new Response("Unauthorized", { status: 401 });
-        }
+        const anon = process.env.SUPABASE_PUBLISHABLE_KEY ?? "";
+        const cronSecret = process.env.CRON_SECRET ?? "";
+        const isAllowed =
+          (!!cronSecret && supplied === cronSecret) ||
+          (!!anon && supplied === anon);
+        if (!isAllowed) return new Response("Unauthorized", { status: 401 });
 
         const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
 

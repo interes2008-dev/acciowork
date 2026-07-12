@@ -13,6 +13,7 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as RuRouteImport } from './routes/ru'
 import { Route as DeRouteImport } from './routes/de'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ApiPublicCronGenerateArticlesRouteImport } from './routes/api/public/cron/generate-articles'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
@@ -34,18 +35,26 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiPublicCronGenerateArticlesRoute =
+  ApiPublicCronGenerateArticlesRouteImport.update({
+    id: '/api/public/cron/generate-articles',
+    path: '/api/public/cron/generate-articles',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/de': typeof DeRoute
   '/ru': typeof RuRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/api/public/cron/generate-articles': typeof ApiPublicCronGenerateArticlesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/de': typeof DeRoute
   '/ru': typeof RuRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/api/public/cron/generate-articles': typeof ApiPublicCronGenerateArticlesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -53,13 +62,30 @@ export interface FileRoutesById {
   '/de': typeof DeRoute
   '/ru': typeof RuRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/api/public/cron/generate-articles': typeof ApiPublicCronGenerateArticlesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/de' | '/ru' | '/sitemap.xml'
+  fullPaths:
+    | '/'
+    | '/de'
+    | '/ru'
+    | '/sitemap.xml'
+    | '/api/public/cron/generate-articles'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/de' | '/ru' | '/sitemap.xml'
-  id: '__root__' | '/' | '/de' | '/ru' | '/sitemap.xml'
+  to:
+    | '/'
+    | '/de'
+    | '/ru'
+    | '/sitemap.xml'
+    | '/api/public/cron/generate-articles'
+  id:
+    | '__root__'
+    | '/'
+    | '/de'
+    | '/ru'
+    | '/sitemap.xml'
+    | '/api/public/cron/generate-articles'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -67,6 +93,7 @@ export interface RootRouteChildren {
   DeRoute: typeof DeRoute
   RuRoute: typeof RuRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  ApiPublicCronGenerateArticlesRoute: typeof ApiPublicCronGenerateArticlesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -99,6 +126,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/cron/generate-articles': {
+      id: '/api/public/cron/generate-articles'
+      path: '/api/public/cron/generate-articles'
+      fullPath: '/api/public/cron/generate-articles'
+      preLoaderRoute: typeof ApiPublicCronGenerateArticlesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -107,6 +141,7 @@ const rootRouteChildren: RootRouteChildren = {
   DeRoute: DeRoute,
   RuRoute: RuRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  ApiPublicCronGenerateArticlesRoute: ApiPublicCronGenerateArticlesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
