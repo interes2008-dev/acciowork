@@ -1,0 +1,1 @@
+CREATE POLICY "No public access to topics" ON public.blog_topics FOR SELECT USING (false);
