@@ -1,6 +1,4 @@
-import { useSuspenseQuery } from "@tanstack/react-query";
-import { useServerFn } from "@tanstack/react-start";
-import { listArticles, type ArticleListItem } from "@/lib/blog.functions";
+import type { ArticleListItem } from "@/lib/blog.functions";
 import { BlogShell } from "./BlogShell";
 
 const COPY: Record<"en" | "ru" | "de", { title: string; lede: string; empty: string; read: string; minutes: string }> = {
@@ -27,16 +25,9 @@ const COPY: Record<"en" | "ru" | "de", { title: string; lede: string; empty: str
   },
 };
 
-export function BlogList({ lang }: { lang: "en" | "ru" | "de" }) {
-  const fetchArticles = useServerFn(listArticles);
-  const { data } = useSuspenseQuery({
-    queryKey: ["blog", "list", lang],
-    queryFn: () => fetchArticles({ data: { lang, limit: 60 } }),
-  });
-
+export function BlogList({ lang, articles }: { lang: "en" | "ru" | "de"; articles: ArticleListItem[] }) {
   const copy = COPY[lang];
   const base = lang === "ru" ? "/ru/blog" : lang === "de" ? "/de/blog" : "/blog";
-  const articles = data as ArticleListItem[];
 
   return (
     <BlogShell>
