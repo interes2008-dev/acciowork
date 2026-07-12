@@ -15,6 +15,7 @@ import { Route as DeRouteImport } from './routes/de'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as RuBlogRouteImport } from './routes/ru.blog'
+import { Route as DeBlogRouteImport } from './routes/de.blog'
 import { Route as ApiPublicCronGenerateArticlesRouteImport } from './routes/api/public/cron/generate-articles'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -47,6 +48,11 @@ const RuBlogRoute = RuBlogRouteImport.update({
   path: '/blog',
   getParentRoute: () => RuRoute,
 } as any)
+const DeBlogRoute = DeBlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => DeRoute,
+} as any)
 const ApiPublicCronGenerateArticlesRoute =
   ApiPublicCronGenerateArticlesRouteImport.update({
     id: '/api/public/cron/generate-articles',
@@ -57,18 +63,20 @@ const ApiPublicCronGenerateArticlesRoute =
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
-  '/de': typeof DeRoute
+  '/de': typeof DeRouteWithChildren
   '/ru': typeof RuRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/de/blog': typeof DeBlogRoute
   '/ru/blog': typeof RuBlogRoute
   '/api/public/cron/generate-articles': typeof ApiPublicCronGenerateArticlesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
-  '/de': typeof DeRoute
+  '/de': typeof DeRouteWithChildren
   '/ru': typeof RuRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/de/blog': typeof DeBlogRoute
   '/ru/blog': typeof RuBlogRoute
   '/api/public/cron/generate-articles': typeof ApiPublicCronGenerateArticlesRoute
 }
@@ -76,9 +84,10 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
-  '/de': typeof DeRoute
+  '/de': typeof DeRouteWithChildren
   '/ru': typeof RuRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/de/blog': typeof DeBlogRoute
   '/ru/blog': typeof RuBlogRoute
   '/api/public/cron/generate-articles': typeof ApiPublicCronGenerateArticlesRoute
 }
@@ -90,6 +99,7 @@ export interface FileRouteTypes {
     | '/de'
     | '/ru'
     | '/sitemap.xml'
+    | '/de/blog'
     | '/ru/blog'
     | '/api/public/cron/generate-articles'
   fileRoutesByTo: FileRoutesByTo
@@ -99,6 +109,7 @@ export interface FileRouteTypes {
     | '/de'
     | '/ru'
     | '/sitemap.xml'
+    | '/de/blog'
     | '/ru/blog'
     | '/api/public/cron/generate-articles'
   id:
@@ -108,6 +119,7 @@ export interface FileRouteTypes {
     | '/de'
     | '/ru'
     | '/sitemap.xml'
+    | '/de/blog'
     | '/ru/blog'
     | '/api/public/cron/generate-articles'
   fileRoutesById: FileRoutesById
@@ -115,7 +127,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BlogRoute: typeof BlogRoute
-  DeRoute: typeof DeRoute
+  DeRoute: typeof DeRouteWithChildren
   RuRoute: typeof RuRouteWithChildren
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   ApiPublicCronGenerateArticlesRoute: typeof ApiPublicCronGenerateArticlesRoute
@@ -165,6 +177,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RuBlogRouteImport
       parentRoute: typeof RuRoute
     }
+    '/de/blog': {
+      id: '/de/blog'
+      path: '/blog'
+      fullPath: '/de/blog'
+      preLoaderRoute: typeof DeBlogRouteImport
+      parentRoute: typeof DeRoute
+    }
     '/api/public/cron/generate-articles': {
       id: '/api/public/cron/generate-articles'
       path: '/api/public/cron/generate-articles'
@@ -174,6 +193,16 @@ declare module '@tanstack/react-router' {
     }
   }
 }
+
+interface DeRouteChildren {
+  DeBlogRoute: typeof DeBlogRoute
+}
+
+const DeRouteChildren: DeRouteChildren = {
+  DeBlogRoute: DeBlogRoute,
+}
+
+const DeRouteWithChildren = DeRoute._addFileChildren(DeRouteChildren)
 
 interface RuRouteChildren {
   RuBlogRoute: typeof RuBlogRoute
@@ -188,7 +217,7 @@ const RuRouteWithChildren = RuRoute._addFileChildren(RuRouteChildren)
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BlogRoute: BlogRoute,
-  DeRoute: DeRoute,
+  DeRoute: DeRouteWithChildren,
   RuRoute: RuRouteWithChildren,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   ApiPublicCronGenerateArticlesRoute: ApiPublicCronGenerateArticlesRoute,
