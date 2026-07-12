@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
+import { listAllPublishedForSitemap } from "@/lib/blog.functions";
 
 const BASE_URL = "https://acciowork.pro";
 
@@ -24,7 +25,20 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/", changefreq: "weekly", priority: "1.0", alternates },
           { path: "/ru", changefreq: "weekly", priority: "0.9", alternates },
           { path: "/de", changefreq: "weekly", priority: "0.9", alternates },
+          { path: "/blog", changefreq: "daily", priority: "0.8" },
+          { path: "/ru/blog", changefreq: "daily", priority: "0.8" },
+          { path: "/de/blog", changefreq: "daily", priority: "0.8" },
         ];
+
+        try {
+          const articles = await listAllPublishedForSitemap();
+          for (const a of articles) {
+            const prefix = a.lang === "ru" ? "/ru/blog" : a.lang === "de" ? "/de/blog" : "/blog";
+            entries.push({ path: `${prefix}/${a.slug}`, changefreq: "monthly", priority: "0.7" });
+          }
+        } catch {
+          // sitemap should still render even if the DB read fails
+        }
 
         const urls = entries.map((e) =>
           [
