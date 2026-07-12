@@ -3,7 +3,7 @@ import { I18nProvider } from "@/lib/i18n";
 import { BlogList } from "@/components/blog/BlogList";
 import { listArticles } from "@/lib/blog.functions";
 
-export const Route = createFileRoute("/de/blog")({
+export const Route = createFileRoute("/de/blog/")({
   loader: async () => ({ articles: await listArticles({ data: { lang: "de", limit: 60 } }) }),
   head: () => ({
     meta: [
