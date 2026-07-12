@@ -1,4 +1,3 @@
-import { Link } from "@tanstack/react-router";
 import { useI18n } from "@/lib/i18n";
 
 function Logo() {
@@ -21,7 +20,7 @@ export function BlogShell({ children }: { children: React.ReactNode }) {
           <a href={home} className="flex items-center"><Logo /></a>
           <nav className="flex items-center gap-6 text-sm text-foreground/80">
             <a href={home} className="hover:text-foreground">Home</a>
-            <Link to={blog} className="hover:text-foreground">Blog</Link>
+            <a href={blog} className="hover:text-foreground">Blog</a>
           </nav>
         </div>
       </header>
