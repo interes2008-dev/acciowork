@@ -129,7 +129,8 @@ function LanguageSwitcher() {
 
 /* ---------- Navbar ---------- */
 function Navbar() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
+  const blogHref = lang === "ru" ? "/ru/blog" : lang === "de" ? "/de/blog" : "/blog";
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-[1280px] items-center justify-between px-6">
@@ -137,6 +138,7 @@ function Navbar() {
           <a href="#top" className="flex items-center"><Logo size={26} /></a>
           <nav className="hidden items-center gap-8 text-[15px] font-medium text-foreground/80 md:flex">
             <a href="#pricing" className="hover:text-foreground">{t.nav.pricing}</a>
+            <a href={blogHref} className="hover:text-foreground">{t.nav.blog}</a>
             <button className="flex items-center gap-1 hover:text-foreground">{t.nav.help} <ChevronDown className="h-4 w-4 opacity-60" /></button>
             <button className="flex items-center gap-1 hover:text-foreground">{t.nav.events} <span>🔥</span> <ChevronDown className="h-4 w-4 opacity-60" /></button>
           </nav>
