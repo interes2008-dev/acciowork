@@ -14,7 +14,98 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      blog_articles: {
+        Row: {
+          body_md: string
+          cover_prompt: string | null
+          cover_url: string | null
+          created_at: string
+          description: string
+          id: string
+          keywords: string[]
+          lang: string
+          published_at: string
+          reading_minutes: number
+          slug: string
+          status: string
+          title: string
+          topic_id: string | null
+        }
+        Insert: {
+          body_md: string
+          cover_prompt?: string | null
+          cover_url?: string | null
+          created_at?: string
+          description: string
+          id?: string
+          keywords?: string[]
+          lang: string
+          published_at?: string
+          reading_minutes?: number
+          slug: string
+          status?: string
+          title: string
+          topic_id?: string | null
+        }
+        Update: {
+          body_md?: string
+          cover_prompt?: string | null
+          cover_url?: string | null
+          created_at?: string
+          description?: string
+          id?: string
+          keywords?: string[]
+          lang?: string
+          published_at?: string
+          reading_minutes?: number
+          slug?: string
+          status?: string
+          title?: string
+          topic_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "blog_articles_topic_id_fkey"
+            columns: ["topic_id"]
+            isOneToOne: false
+            referencedRelation: "blog_topics"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      blog_topics: {
+        Row: {
+          angle: string
+          audience: string
+          capability: string
+          created_at: string
+          id: string
+          keyword: string
+          seed_title: string
+          used_at: string | null
+        }
+        Insert: {
+          angle: string
+          audience: string
+          capability: string
+          created_at?: string
+          id?: string
+          keyword: string
+          seed_title: string
+          used_at?: string | null
+        }
+        Update: {
+          angle?: string
+          audience?: string
+          capability?: string
+          created_at?: string
+          id?: string
+          keyword?: string
+          seed_title?: string
+          used_at?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
