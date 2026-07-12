@@ -33,6 +33,7 @@ export type Dict = {
     events: string;
     language: string;
     download: string;
+    blog: string;
   };
   hero: {
     brand: string;
@@ -94,6 +95,7 @@ const en: Dict = {
     events: "Events",
     language: "English",
     download: "Download Accio Work",
+    blog: "Blog",
   },
   hero: {
     brand: "Work",
@@ -236,6 +238,7 @@ const ru: Dict = {
     events: "События",
     language: "Русский",
     download: "Скачать Accio Work",
+    blog: "Блог",
   },
   hero: {
     brand: "Work",
@@ -378,6 +381,7 @@ const de: Dict = {
     events: "Events",
     language: "Deutsch",
     download: "Accio Work herunterladen",
+    blog: "Blog",
   },
   hero: {
     brand: "Work",
