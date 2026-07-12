@@ -40,10 +40,10 @@ export const Route = createFileRoute("/ru")({
     ],
     links: [
       { rel: "canonical", href: "https://acciowork.pro/ru" },
-      { rel: "alternate", hreflang: "en", href: "https://acciowork.pro/" },
-      { rel: "alternate", hreflang: "ru", href: "https://acciowork.pro/ru" },
-      { rel: "alternate", hreflang: "de", href: "https://acciowork.pro/de" },
-      { rel: "alternate", hreflang: "x-default", href: "https://acciowork.pro/" },
+      { rel: "alternate", hrefLang: "en", href: "https://acciowork.pro/" },
+      { rel: "alternate", hrefLang: "ru", href: "https://acciowork.pro/ru" },
+      { rel: "alternate", hrefLang: "de", href: "https://acciowork.pro/de" },
+      { rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/" },
     ],
     scripts: [
       {
