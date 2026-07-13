@@ -130,7 +130,16 @@ function LanguageSwitcher() {
 /* ---------- Navbar ---------- */
 function Navbar() {
   const { t, lang } = useI18n();
-  const blogHref = lang === "ru" ? "/ru/blog" : lang === "de" ? "/de/blog" : "/blog";
+  const [blogHref, setBlogHref] = useState(
+    lang === "ru" ? "/ru/blog" : lang === "de" ? "/de/blog" : "/blog",
+  );
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const p = window.location.pathname.toLowerCase();
+    if (p.startsWith("/ru")) setBlogHref("/ru/blog");
+    else if (p.startsWith("/de")) setBlogHref("/de/blog");
+    else setBlogHref("/blog");
+  }, [lang]);
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-[1280px] items-center justify-between px-6">
