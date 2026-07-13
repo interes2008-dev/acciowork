@@ -52,37 +52,50 @@ export function BlogArticle({
 
   return (
     <BlogShell>
-      <a href={base} className="mb-8 inline-block text-sm text-foreground/60 hover:text-foreground">
+      <a href={base} className="mb-10 inline-block text-sm text-foreground/60 hover:text-foreground">
         {BACK[lang]}
       </a>
 
-      <article className="mx-auto max-w-3xl">
-        <div className="mb-6 text-xs uppercase tracking-[0.2em] text-emerald-700/80">
-          {date} · {article.reading_minutes} {MIN[lang]}
-        </div>
-        <h1 className="text-4xl font-semibold leading-tight tracking-tight text-foreground md:text-5xl">
-          {article.title}
-        </h1>
-        <p className="mt-5 text-lg text-foreground/70">{article.description}</p>
+      <article className="mx-auto max-w-[46rem]">
+        <header className="text-center">
+          <div className="mb-8 text-[11px] font-medium uppercase tracking-[0.28em] text-emerald-800/80">
+            <span>{date}</span>
+            <span className="mx-3 text-foreground/25">·</span>
+            <span>{article.reading_minutes} {MIN[lang]}</span>
+          </div>
+          <h1 className="font-serif-display text-[2.5rem] font-semibold leading-[1.08] tracking-[-0.025em] text-foreground md:text-[3.5rem]">
+            {article.title}
+          </h1>
+          <div className="mx-auto mt-8 h-px w-16 bg-emerald-700/40" />
+          <p className="font-serif-display mx-auto mt-8 max-w-[38rem] text-xl italic leading-relaxed text-foreground/70 md:text-[1.35rem]">
+            {article.description}
+          </p>
+        </header>
 
         {article.cover_url ? (
-          <div className="mt-10 overflow-hidden rounded-2xl border border-border/60 bg-muted/40">
+          <figure className="mt-14 overflow-hidden rounded-2xl border border-border/40 bg-muted/40 shadow-[0_20px_60px_-30px_rgba(0,0,0,0.25)]">
             <img src={article.cover_url} alt="" className="h-auto w-full" />
-          </div>
+          </figure>
         ) : null}
 
-        <div className="prose prose-neutral prose-lg mt-12 max-w-none prose-headings:font-semibold prose-headings:tracking-tight prose-a:text-emerald-800 prose-a:no-underline hover:prose-a:underline">
+        <div className="article-prose mt-14">
           <ReactMarkdown remarkPlugins={[remarkGfm]}>{article.body_md}</ReactMarkdown>
         </div>
 
-        <aside className="mt-16 rounded-2xl bg-emerald-50 p-8 md:p-10">
-          <h2 className="text-2xl font-semibold text-emerald-950">{cta.title}</h2>
-          <p className="mt-3 text-foreground/75">{cta.body}</p>
+        <div className="mx-auto my-16 flex items-center justify-center gap-3 text-emerald-800/60">
+          <span className="h-px w-16 bg-emerald-800/20" />
+          <span className="text-xs tracking-[0.4em]">ACCIO</span>
+          <span className="h-px w-16 bg-emerald-800/20" />
+        </div>
+
+        <aside className="rounded-3xl bg-gradient-to-br from-emerald-50 via-emerald-50/60 to-white p-8 ring-1 ring-emerald-100 md:p-12">
+          <h2 className="font-serif-display text-3xl font-semibold tracking-tight text-emerald-950 md:text-4xl">{cta.title}</h2>
+          <p className="mt-4 text-lg text-foreground/75">{cta.body}</p>
           <a
             href="https://www.accio.com/invite-work?sId=KECtp1GttZ42%2FwpJUH5IxQ%3D%3D&ic=IC506004212009&tenant=accio&src=p_referral_IC506004212009&return_url=https%3A%2F%2Fwww.accio.com%2Fwork%2F"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 inline-flex items-center rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition hover:bg-foreground/90"
+            className="mt-7 inline-flex items-center rounded-full bg-foreground px-7 py-3.5 text-sm font-medium text-background transition hover:bg-foreground/90"
           >
             {cta.button}
           </a>
