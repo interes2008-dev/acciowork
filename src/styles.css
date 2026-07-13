@@ -205,3 +205,199 @@
 }
 .animate-marquee-left { animation: marquee-left 60s linear infinite; }
 .animate-marquee-right { animation: marquee-right 60s linear infinite; }
+
+/* ============================================================
+ * Magazine-grade article typography
+ * Used by <div class="article-prose"> in BlogArticle.
+ * ============================================================ */
+.font-serif-display {
+  font-family: "Fraunces", "Iowan Old Style", "Georgia", serif;
+  font-optical-sizing: auto;
+  font-feature-settings: "ss01", "ss02";
+}
+
+.article-prose {
+  font-size: 1.185rem;
+  line-height: 1.78;
+  color: oklch(0.28 0.02 250);
+  font-feature-settings: "kern", "liga", "onum";
+  hanging-punctuation: first last;
+  text-rendering: optimizeLegibility;
+}
+.article-prose > * + * { margin-top: 1.35em; }
+
+.article-prose p {
+  margin: 0;
+  letter-spacing: -0.003em;
+}
+
+/* Drop cap on the first paragraph */
+.article-prose > p:first-of-type::first-letter {
+  font-family: "Fraunces", "Georgia", serif;
+  font-weight: 600;
+  float: left;
+  font-size: 4.6em;
+  line-height: 0.88;
+  padding: 0.28rem 0.7rem 0 0;
+  margin-right: 0.05em;
+  color: oklch(0.16 0.02 250);
+}
+
+.article-prose h2 {
+  font-family: "Fraunces", "Georgia", serif;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: oklch(0.14 0.02 250);
+  margin-top: 2.6em;
+  margin-bottom: 0.6em;
+}
+.article-prose h2::before {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 2px;
+  background: oklch(0.72 0.16 165);
+  margin-bottom: 1rem;
+}
+
+.article-prose h3 {
+  font-family: "Fraunces", "Georgia", serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  color: oklch(0.16 0.02 250);
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+.article-prose h4 {
+  font-weight: 600;
+  font-size: 0.82rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: oklch(0.42 0.09 165);
+  margin-top: 2em;
+  margin-bottom: 0.4em;
+}
+
+.article-prose a {
+  color: oklch(0.35 0.11 165);
+  text-decoration: none;
+  background-image: linear-gradient(oklch(0.72 0.16 165 / 0.35), oklch(0.72 0.16 165 / 0.35));
+  background-position: 0 92%;
+  background-repeat: no-repeat;
+  background-size: 100% 0.18em;
+  transition: background-size 0.2s ease;
+}
+.article-prose a:hover { background-size: 100% 100%; }
+
+.article-prose strong { color: oklch(0.14 0.02 250); font-weight: 600; }
+.article-prose em { font-style: italic; }
+
+.article-prose blockquote {
+  margin: 2.2em 0;
+  padding: 0.2em 0 0.2em 1.6em;
+  border-left: 3px solid oklch(0.72 0.16 165);
+  font-family: "Fraunces", "Georgia", serif;
+  font-style: italic;
+  font-size: 1.45rem;
+  line-height: 1.5;
+  color: oklch(0.18 0.02 250);
+  letter-spacing: -0.01em;
+}
+.article-prose blockquote p { margin: 0; }
+
+.article-prose ul, .article-prose ol {
+  padding-left: 1.35em;
+  margin: 0;
+}
+.article-prose ul { list-style: none; padding-left: 0; }
+.article-prose ul > li {
+  position: relative;
+  padding-left: 1.6em;
+  margin-top: 0.55em;
+}
+.article-prose ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.78em;
+  width: 0.6em;
+  height: 2px;
+  background: oklch(0.72 0.16 165);
+}
+.article-prose ol { list-style: decimal; }
+.article-prose ol > li::marker { color: oklch(0.42 0.09 165); font-weight: 600; }
+.article-prose ol > li { margin-top: 0.55em; padding-left: 0.3em; }
+
+.article-prose hr {
+  border: 0;
+  margin: 3em auto;
+  width: 40%;
+  text-align: center;
+  height: 1em;
+}
+.article-prose hr::before {
+  content: "· · ·";
+  letter-spacing: 0.6em;
+  color: oklch(0.55 0.05 165);
+  font-size: 1.1rem;
+}
+
+.article-prose img {
+  width: 100%;
+  border-radius: 1rem;
+  margin: 2em 0;
+}
+
+.article-prose code {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.88em;
+  background: oklch(0.96 0.01 165);
+  padding: 0.15em 0.4em;
+  border-radius: 0.35em;
+  color: oklch(0.22 0.06 165);
+}
+.article-prose pre {
+  background: oklch(0.16 0.02 250);
+  color: oklch(0.95 0.01 165);
+  padding: 1.25rem 1.5rem;
+  border-radius: 0.9rem;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin: 2em 0;
+}
+.article-prose pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+.article-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2em 0;
+  font-size: 0.98rem;
+}
+.article-prose th, .article-prose td {
+  padding: 0.75em 1em;
+  text-align: left;
+  border-bottom: 1px solid oklch(0.9 0.01 250);
+}
+.article-prose th {
+  font-weight: 600;
+  color: oklch(0.14 0.02 250);
+  border-bottom: 2px solid oklch(0.16 0.02 250);
+}
+
+@media (max-width: 640px) {
+  .article-prose { font-size: 1.09rem; line-height: 1.72; }
+  .article-prose h2 { font-size: 1.65rem; }
+  .article-prose h3 { font-size: 1.25rem; }
+  .article-prose blockquote { font-size: 1.2rem; padding-left: 1.1em; }
+  .article-prose > p:first-of-type::first-letter { font-size: 3.8em; padding-right: 0.5rem; }
+}
