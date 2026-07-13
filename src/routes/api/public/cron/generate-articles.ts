@@ -51,10 +51,33 @@ async function callAI(system: string, user: string): Promise<GeneratedArticle> {
   try {
     parsed = JSON.parse(content) as GeneratedArticle;
   } catch {
-    // Try to extract the first {...} block
-    const match = content.match(/\{[\s\S]*\}/);
-    if (!match) throw new Error("AI returned non-JSON content");
-    parsed = JSON.parse(match[0]) as GeneratedArticle;
+    // Extract the first balanced {...} block (model sometimes appends extra prose or a second object)
+    const start = content.indexOf("{");
+    if (start < 0) throw new Error("AI returned non-JSON content");
+    let depth = 0;
+    let inStr = false;
+    let esc = false;
+    let end = -1;
+    for (let i = start; i < content.length; i++) {
+      const ch = content[i];
+      if (inStr) {
+        if (esc) esc = false;
+        else if (ch === "\\") esc = true;
+        else if (ch === '"') inStr = false;
+      } else {
+        if (ch === '"') inStr = true;
+        else if (ch === "{") depth++;
+        else if (ch === "}") {
+          depth--;
+          if (depth === 0) {
+            end = i;
+            break;
+          }
+        }
+      }
+    }
+    if (end < 0) throw new Error("AI returned unbalanced JSON");
+    parsed = JSON.parse(content.slice(start, end + 1)) as GeneratedArticle;
   }
   return parsed;
 }
