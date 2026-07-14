@@ -13,6 +13,8 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as RuRouteImport } from './routes/ru'
 import { Route as DeRouteImport } from './routes/de'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as RuIndexRouteImport } from './routes/ru.index'
+import { Route as DeIndexRouteImport } from './routes/de.index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as RuBlogIndexRouteImport } from './routes/ru.blog.index'
@@ -40,6 +42,16 @@ const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
+} as any)
+const RuIndexRoute = RuIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => RuRoute,
+} as any)
+const DeIndexRoute = DeIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => DeRoute,
 } as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
   id: '/blog/',
@@ -85,6 +97,8 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog/': typeof BlogIndexRoute
+  '/de/': typeof DeIndexRoute
+  '/ru/': typeof RuIndexRoute
   '/de/blog/$slug': typeof DeBlogSlugRoute
   '/ru/blog/$slug': typeof RuBlogSlugRoute
   '/de/blog/': typeof DeBlogIndexRoute
@@ -93,11 +107,11 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/de': typeof DeRouteWithChildren
-  '/ru': typeof RuRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog': typeof BlogIndexRoute
+  '/de': typeof DeIndexRoute
+  '/ru': typeof RuIndexRoute
   '/de/blog/$slug': typeof DeBlogSlugRoute
   '/ru/blog/$slug': typeof RuBlogSlugRoute
   '/de/blog': typeof DeBlogIndexRoute
@@ -112,6 +126,8 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/blog/': typeof BlogIndexRoute
+  '/de/': typeof DeIndexRoute
+  '/ru/': typeof RuIndexRoute
   '/de/blog/$slug': typeof DeBlogSlugRoute
   '/ru/blog/$slug': typeof RuBlogSlugRoute
   '/de/blog/': typeof DeBlogIndexRoute
@@ -127,6 +143,8 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/blog/$slug'
     | '/blog/'
+    | '/de/'
+    | '/ru/'
     | '/de/blog/$slug'
     | '/ru/blog/$slug'
     | '/de/blog/'
@@ -135,11 +153,11 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/de'
-    | '/ru'
     | '/sitemap.xml'
     | '/blog/$slug'
     | '/blog'
+    | '/de'
+    | '/ru'
     | '/de/blog/$slug'
     | '/ru/blog/$slug'
     | '/de/blog'
@@ -153,6 +171,8 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/blog/$slug'
     | '/blog/'
+    | '/de/'
+    | '/ru/'
     | '/de/blog/$slug'
     | '/ru/blog/$slug'
     | '/de/blog/'
@@ -199,6 +219,20 @@ declare module '@tanstack/react-router' {
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/ru/': {
+      id: '/ru/'
+      path: '/'
+      fullPath: '/ru/'
+      preLoaderRoute: typeof RuIndexRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/de/': {
+      id: '/de/'
+      path: '/'
+      fullPath: '/de/'
+      preLoaderRoute: typeof DeIndexRouteImport
+      parentRoute: typeof DeRoute
     }
     '/blog/': {
       id: '/blog/'
@@ -253,11 +287,13 @@ declare module '@tanstack/react-router' {
 }
 
 interface DeRouteChildren {
+  DeIndexRoute: typeof DeIndexRoute
   DeBlogSlugRoute: typeof DeBlogSlugRoute
   DeBlogIndexRoute: typeof DeBlogIndexRoute
 }
 
 const DeRouteChildren: DeRouteChildren = {
+  DeIndexRoute: DeIndexRoute,
   DeBlogSlugRoute: DeBlogSlugRoute,
   DeBlogIndexRoute: DeBlogIndexRoute,
 }
@@ -265,11 +301,13 @@ const DeRouteChildren: DeRouteChildren = {
 const DeRouteWithChildren = DeRoute._addFileChildren(DeRouteChildren)
 
 interface RuRouteChildren {
+  RuIndexRoute: typeof RuIndexRoute
   RuBlogSlugRoute: typeof RuBlogSlugRoute
   RuBlogIndexRoute: typeof RuBlogIndexRoute
 }
 
 const RuRouteChildren: RuRouteChildren = {
+  RuIndexRoute: RuIndexRoute,
   RuBlogSlugRoute: RuBlogSlugRoute,
   RuBlogIndexRoute: RuBlogIndexRoute,
 }
