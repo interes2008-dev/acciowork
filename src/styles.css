@@ -217,8 +217,8 @@
 }
 
 .article-prose {
-  font-size: 1.185rem;
-  line-height: 1.78;
+  font-size: 1.05rem;
+  line-height: 1.72;
   color: oklch(0.28 0.02 250);
   font-feature-settings: "kern", "liga", "onum";
   hanging-punctuation: first last;
