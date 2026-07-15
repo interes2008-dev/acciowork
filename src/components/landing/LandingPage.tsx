@@ -443,20 +443,20 @@ function WhyChoose() {
           {t.why.heading}
         </h2>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3 md:grid-rows-2">
-          <div className="rounded-[28px] bg-gradient-to-br from-[#F1F3F6] to-[#E7EBF0] p-8 md:row-span-2 md:p-10">
+        <div className="mt-12 grid grid-cols-[minmax(0,1fr)] gap-6 md:grid-cols-3 md:grid-rows-2">
+          <div className="min-w-0 overflow-hidden rounded-[28px] bg-gradient-to-br from-[#F1F3F6] to-[#E7EBF0] p-6 sm:p-8 md:row-span-2 md:p-10">
             <h3 className="text-[22px] font-bold leading-tight text-foreground sm:text-[24px]">{t.why.aiTitle}</h3>
             <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">{t.why.aiBody}</p>
             <AgentsMockup />
           </div>
 
-          <div className="rounded-[28px] bg-[#0E1210] p-8 text-white md:p-10">
+          <div className="min-w-0 overflow-hidden rounded-[28px] bg-[#0E1210] p-6 text-white sm:p-8 md:p-10">
             <h3 className="text-[22px] font-bold leading-tight sm:text-[24px]">{t.why.connectTitle}</h3>
             <p className="mt-4 text-[15px] leading-relaxed text-white/90">{t.why.connectBody}</p>
             <ConnectorsRow />
           </div>
 
-          <div className="relative overflow-hidden rounded-[28px] bg-gradient-to-br from-[#C6EFDA] to-[#A2E3C0] p-8 md:p-10">
+          <div className="relative min-w-0 overflow-hidden rounded-[28px] bg-gradient-to-br from-[#C6EFDA] to-[#A2E3C0] p-6 sm:p-8 md:p-10">
             <h3 className="text-[22px] font-bold leading-tight text-[#0F4E33] sm:text-[24px]">{t.why.dataTitle}</h3>
             <p className="mt-4 text-[15px] leading-relaxed text-[#0F4E33]">{t.why.dataBody}</p>
             <svg viewBox="0 0 48 48" className="absolute bottom-6 right-6 h-12 w-12 text-[#0F7B4A]" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -465,7 +465,7 @@ function WhyChoose() {
             </svg>
           </div>
 
-          <div className="relative overflow-hidden rounded-[28px] bg-gradient-to-br from-[#DCE7FA] to-[#C3D5F5] p-8 md:col-span-2 md:p-10">
+          <div className="relative min-w-0 overflow-hidden rounded-[28px] bg-gradient-to-br from-[#DCE7FA] to-[#C3D5F5] p-6 sm:p-8 md:col-span-2 md:p-10">
             <div className="max-w-md">
               <h3 className="text-[22px] font-bold leading-tight text-[#0F2954] sm:text-[24px]">{t.why.platformTitle}</h3>
               <p className="mt-4 text-[15px] leading-relaxed text-[#0F2954]">{t.why.platformBody}</p>
