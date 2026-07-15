@@ -1,11 +1,20 @@
 import { useI18n } from "@/lib/i18n";
 
-function Logo() {
+function Logo({ size = 28 }: { size?: number }) {
   return (
-    <span className="flex items-center gap-2 text-[17px] font-semibold tracking-tight text-foreground">
-      <span className="inline-block h-6 w-6 rounded-md bg-foreground" />
-      Accio Work
-    </span>
+    <div className="flex items-center gap-1.5 font-bold tracking-tight" style={{ fontSize: size }}>
+      <svg width={size * 0.95} height={size} viewBox="0 0 28 28" aria-hidden>
+        <defs>
+          <linearGradient id="accioTriBlog" x1="0" y1="1" x2="1" y2="0">
+            <stop offset="0%" stopColor="#0F172A" />
+            <stop offset="55%" stopColor="#17B26A" />
+            <stop offset="100%" stopColor="#7CE7C2" />
+          </linearGradient>
+        </defs>
+        <path d="M14 3 L26 25 L2 25 Z" fill="url(#accioTriBlog)" />
+      </svg>
+      <span className="text-foreground">Accio</span>
+    </div>
   );
 }
 
