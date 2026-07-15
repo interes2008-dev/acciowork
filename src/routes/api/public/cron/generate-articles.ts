@@ -93,11 +93,15 @@ async function generateCover(prompt: string): Promise<string | null> {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "google/gemini-2.5-flash-image",
+        model: "google/gemini-3-pro-image",
         messages: [
           {
             role: "user",
-            content: `Editorial magazine cover illustration, cinematic, soft mint and near-black palette, no text, no logos, no watermarks. Scene: ${prompt}`,
+            content: `Premium editorial magazine cover illustration for the Accio Work blog. Ultra high quality, photorealistic-meets-editorial, cinematic lighting, rich depth of field, soft mint-green and near-black palette with subtle cyan-to-emerald gradient accents matching the Accio brand.
+
+Feature the Accio Work brand mark prominently but tastefully in the composition: a sleek geometric triangular "A" logo (a solid black upward triangle with a bright gradient inner triangle flowing from cyan at the top through emerald green to a soft mint fade at the bottom, exactly matching the site's brand mark). Place it as a clean vector-style graphic element in the composition (for example on a device screen, poster, signage, or as a subtle watermark motif), rendered crisply with correct proportions. No other text, no other logos, no watermarks, no lettering.
+
+Scene: ${prompt}`,
           },
         ],
         modalities: ["image", "text"],
