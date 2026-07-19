@@ -18,6 +18,7 @@ export const Route = createFileRoute("/ru/blog/")({
       { rel: "alternate", hrefLang: "en", href: "https://acciowork.pro/blog" },
       { rel: "alternate", hrefLang: "ru", href: "https://acciowork.pro/ru/blog" },
       { rel: "alternate", hrefLang: "de", href: "https://acciowork.pro/de/blog" },
+      { rel: "alternate", hrefLang: "it", href: "https://acciowork.pro/it/blog" },
       { rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/blog" },
     ],
   }),
