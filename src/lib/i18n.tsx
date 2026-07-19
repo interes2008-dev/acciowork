@@ -16,14 +16,18 @@ function detectInitial(): Lang {
     const path = window.location.pathname.replace(/\/+$/, "").toLowerCase();
     if (path === "/ru") return "ru";
     if (path === "/de") return "de";
+    if (path === "/it") return "it";
+    if (path.startsWith("/it/")) return "it";
+    if (path.startsWith("/ru/")) return "ru";
+    if (path.startsWith("/de/")) return "de";
   } catch {}
   try {
     const param = new URLSearchParams(window.location.search).get("lang");
-    if (param === "ru" || param === "en" || param === "de") return param;
+    if (param === "ru" || param === "en" || param === "de" || param === "it") return param;
   } catch {}
   try {
     const saved = window.localStorage.getItem(STORAGE_KEY);
-    if (saved === "ru" || saved === "en" || saved === "de") return saved;
+    if (saved === "ru" || saved === "en" || saved === "de" || saved === "it") return saved;
   } catch {}
   const nav =
     (typeof navigator !== "undefined" &&
@@ -32,6 +36,7 @@ function detectInitial(): Lang {
   const low = nav.toLowerCase();
   if (low.startsWith("ru")) return "ru";
   if (low.startsWith("de")) return "de";
+  if (low.startsWith("it")) return "it";
   return "en";
 }
 
