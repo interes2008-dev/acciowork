@@ -19,21 +19,31 @@ export const Route = createFileRoute("/sitemap.xml")({
           { hreflang: "en", href: `${BASE_URL}/` },
           { hreflang: "ru", href: `${BASE_URL}/ru` },
           { hreflang: "de", href: `${BASE_URL}/de` },
+          { hreflang: "it", href: `${BASE_URL}/it` },
           { hreflang: "x-default", href: `${BASE_URL}/` },
         ];
         const entries: SitemapEntry[] = [
           { path: "/", changefreq: "weekly", priority: "1.0", alternates },
           { path: "/ru", changefreq: "weekly", priority: "0.9", alternates },
           { path: "/de", changefreq: "weekly", priority: "0.9", alternates },
+          { path: "/it", changefreq: "weekly", priority: "0.9", alternates },
           { path: "/blog", changefreq: "daily", priority: "0.8" },
           { path: "/ru/blog", changefreq: "daily", priority: "0.8" },
           { path: "/de/blog", changefreq: "daily", priority: "0.8" },
+          { path: "/it/blog", changefreq: "daily", priority: "0.8" },
         ];
 
         try {
           const articles = await listAllPublishedForSitemap();
           for (const a of articles) {
-            const prefix = a.lang === "ru" ? "/ru/blog" : a.lang === "de" ? "/de/blog" : "/blog";
+            const prefix =
+              a.lang === "ru"
+                ? "/ru/blog"
+                : a.lang === "de"
+                  ? "/de/blog"
+                  : a.lang === "it"
+                    ? "/it/blog"
+                    : "/blog";
             entries.push({ path: `${prefix}/${a.slug}`, changefreq: "monthly", priority: "0.7" });
           }
         } catch {
