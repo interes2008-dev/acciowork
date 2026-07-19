@@ -76,7 +76,7 @@ function LanguageSwitcher() {
     return () => document.removeEventListener("mousedown", onDoc);
   }, [open]);
 
-  const options: Lang[] = ["en", "ru", "de"];
+  const options: Lang[] = ["en", "ru", "de", "it"];
 
   return (
     <div ref={rootRef} className="relative">
@@ -106,7 +106,8 @@ function LanguageSwitcher() {
                   setLang(code);
                   setOpen(false);
                   if (typeof window !== "undefined") {
-                    const target = code === "ru" ? "/ru" : code === "de" ? "/de" : "/";
+                    const target =
+                      code === "ru" ? "/ru" : code === "de" ? "/de" : code === "it" ? "/it" : "/";
                     if (window.location.pathname !== target) {
                       window.history.pushState({}, "", target);
                     }
@@ -131,13 +132,20 @@ function LanguageSwitcher() {
 function Navbar() {
   const { t, lang } = useI18n();
   const [blogHref, setBlogHref] = useState(
-    lang === "ru" ? "/ru/blog" : lang === "de" ? "/de/blog" : "/blog",
+    lang === "ru"
+      ? "/ru/blog"
+      : lang === "de"
+        ? "/de/blog"
+        : lang === "it"
+          ? "/it/blog"
+          : "/blog",
   );
   useEffect(() => {
     if (typeof window === "undefined") return;
     const p = window.location.pathname.toLowerCase();
     if (p.startsWith("/ru")) setBlogHref("/ru/blog");
     else if (p.startsWith("/de")) setBlogHref("/de/blog");
+    else if (p.startsWith("/it")) setBlogHref("/it/blog");
     else setBlogHref("/blog");
   }, [lang]);
   return (
