@@ -1,4 +1,4 @@
-export type Lang = "en" | "ru" | "de";
+export type Lang = "en" | "ru" | "de" | "it";
 
 export type Testimonial = {
   name: string;
@@ -85,7 +85,7 @@ export type Dict = {
     partneredWith: string;
     rights: string;
   };
-  langNames: { en: string; ru: string; de: string };
+  langNames: { en: string; ru: string; de: string; it: string };
 };
 
 const en: Dict = {
