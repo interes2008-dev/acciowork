@@ -1,11 +1,12 @@
 // Server-only prompt builder + text sanitizer used by the daily generation cron.
 
-export type BlogLang = "en" | "ru" | "de";
+export type BlogLang = "en" | "ru" | "de" | "it";
 
 export const LANG_LABEL: Record<BlogLang, string> = {
   en: "English",
   ru: "Russian (Русский)",
   de: "German (Deutsch)",
+  it: "Italian (Italiano)",
 };
 
 const CAPABILITY_SHEET = `
@@ -89,10 +90,33 @@ Struktur:
 - cover_prompt: ein englischer Satz für ein Editorial-Coverbild (kein Text, keine Logos im Bild).
 `;
 
+const STYLE_RULES_IT = `
+Stai scrivendo per il blog di Accio Work. Voce: autore esperto di prodotto e operations per una rivista tech premium (livello Wired Italia). Sicuro, umano, concreto, senza marketing-parlato.
+
+Regole rigide:
+- Non usare mai la lineetta lunga (—) o media (–) come pausa di frase. Riscrivi con punto, virgola, parentesi o due punti. Il trattino nei composti ("modello-AI") è consentito.
+- Non aprire con cliché: "Nel mondo di oggi", "Nell'era dell'AI", "Immagina un mondo in cui".
+- Vietato usare: "approfondire", "inoltre", "in conclusione", "sbloccare", "sfruttare" come parola-jolly, "senza soluzione di continuità", "rivoluzionare", "game-changer", "portare al livello successivo", "svelare il potenziale", "in definitiva", "è importante notare".
+- Non impilare più di tre punti elenco di seguito. Preferisci veri paragrafi.
+- Non inventare funzioni del prodotto. Usa solo le capacità elencate nella scheda sotto.
+- Varia la lunghezza delle frasi. Frasi brevi accanto a frasi lunghe. Ritmo vivo.
+- In ogni sezione: uno scenario concreto, un numero o un esempio reale.
+- Finale: un invito pacato e onesto a provare Accio Work, non un urlo di marketing.
+
+Struttura:
+- title: incisivo, 5-10 parole, senza spam SEO.
+- description: una frase onesta, 140-160 caratteri.
+- body: 1200-1800 parole, markdown. H2 per le sezioni, H3 raramente. Primo paragrafo prima dei titoli.
+- slug: kebab-case, 3-6 parole, solo lettere latine.
+- keywords: 4-6 frasi brevi che una persona reale cercherebbe.
+- cover_prompt: una frase in inglese che descrive una cover editoriale (nessun testo e nessun logo nell'immagine).
+`;
+
 const STYLE_RULES: Record<BlogLang, string> = {
   en: STYLE_RULES_EN,
   ru: STYLE_RULES_RU,
   de: STYLE_RULES_DE,
+  it: STYLE_RULES_IT,
 };
 
 export type TopicSeed = {
