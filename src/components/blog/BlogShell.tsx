@@ -35,7 +35,7 @@ function LanguageSwitcher() {
     return () => document.removeEventListener("mousedown", onDoc);
   }, [open]);
 
-  const options: Lang[] = ["en", "ru", "de"];
+  const options: Lang[] = ["en", "ru", "de", "it"];
 
   return (
     <div ref={rootRef} className="relative">
@@ -66,7 +66,13 @@ function LanguageSwitcher() {
                   setOpen(false);
                   if (typeof window !== "undefined") {
                     const target =
-                      code === "ru" ? "/ru/blog" : code === "de" ? "/de/blog" : "/blog";
+                      code === "ru"
+                        ? "/ru/blog"
+                        : code === "de"
+                          ? "/de/blog"
+                          : code === "it"
+                            ? "/it/blog"
+                            : "/blog";
                     if (window.location.pathname !== target) {
                       window.location.assign(target);
                     }
@@ -89,8 +95,9 @@ function LanguageSwitcher() {
 
 export function BlogShell({ children }: { children: React.ReactNode }) {
   const { lang } = useI18n();
-  const home = lang === "ru" ? "/ru" : lang === "de" ? "/de" : "/";
-  const blog = lang === "ru" ? "/ru/blog" : lang === "de" ? "/de/blog" : "/blog";
+  const home = lang === "ru" ? "/ru" : lang === "de" ? "/de" : lang === "it" ? "/it" : "/";
+  const blog =
+    lang === "ru" ? "/ru/blog" : lang === "de" ? "/de/blog" : lang === "it" ? "/it/blog" : "/blog";
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur">
