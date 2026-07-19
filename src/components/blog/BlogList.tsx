@@ -1,7 +1,7 @@
 import type { ArticleListItem } from "@/lib/blog.functions";
 import { BlogShell } from "./BlogShell";
 
-const COPY: Record<"en" | "ru" | "de", { title: string; lede: string; empty: string; read: string; minutes: string }> = {
+const COPY: Record<"en" | "ru" | "de" | "it", { title: string; lede: string; empty: string; read: string; minutes: string }> = {
   en: {
     title: "The Accio Work journal",
     lede: "Field notes on running a modern business with an AI team you can actually direct.",
@@ -23,11 +23,19 @@ const COPY: Record<"en" | "ru" | "de", { title: string; lede: string; empty: str
     read: "Lesen",
     minutes: "Min. Lesezeit",
   },
+  it: {
+    title: "Il journal di Accio Work",
+    lede: "Appunti dal campo su come si conduce un business moderno con un team di AI che puoi davvero dirigere.",
+    empty: "Ogni giorno atterra qui un nuovo articolo. Torna domani.",
+    read: "Leggi",
+    minutes: "min di lettura",
+  },
 };
 
-export function BlogList({ lang, articles }: { lang: "en" | "ru" | "de"; articles: ArticleListItem[] }) {
+export function BlogList({ lang, articles }: { lang: "en" | "ru" | "de" | "it"; articles: ArticleListItem[] }) {
   const copy = COPY[lang];
-  const base = lang === "ru" ? "/ru/blog" : lang === "de" ? "/de/blog" : "/blog";
+  const base =
+    lang === "ru" ? "/ru/blog" : lang === "de" ? "/de/blog" : lang === "it" ? "/it/blog" : "/blog";
 
   return (
     <BlogShell>
@@ -63,11 +71,14 @@ export function BlogList({ lang, articles }: { lang: "en" | "ru" | "de"; article
               </div>
               <div className="flex flex-1 flex-col gap-3 p-6">
                 <div className="text-xs text-foreground/50">
-                  {new Date(a.published_at).toLocaleDateString(lang === "en" ? "en-US" : lang === "ru" ? "ru-RU" : "de-DE", {
+                  {new Date(a.published_at).toLocaleDateString(
+                    lang === "en" ? "en-US" : lang === "ru" ? "ru-RU" : lang === "it" ? "it-IT" : "de-DE",
+                    {
                     day: "numeric",
                     month: "short",
                     year: "numeric",
-                  })}{" "}
+                    },
+                  )}{" "}
                   · {a.reading_minutes} {copy.minutes}
                 </div>
                 <h2 className="text-xl font-semibold tracking-tight text-foreground group-hover:text-emerald-800">

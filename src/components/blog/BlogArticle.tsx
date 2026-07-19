@@ -3,19 +3,21 @@ import remarkGfm from "remark-gfm";
 import type { ArticleFull } from "@/lib/blog.functions";
 import { BlogShell } from "./BlogShell";
 
-const BACK: Record<"en" | "ru" | "de", string> = {
+const BACK: Record<"en" | "ru" | "de" | "it", string> = {
   en: "← All articles",
   ru: "← Все статьи",
   de: "← Alle Artikel",
+  it: "← Tutti gli articoli",
 };
 
-const MIN: Record<"en" | "ru" | "de", string> = {
+const MIN: Record<"en" | "ru" | "de" | "it", string> = {
   en: "min read",
   ru: "мин чтения",
   de: "Min. Lesezeit",
+  it: "min di lettura",
 };
 
-const CTA: Record<"en" | "ru" | "de", { title: string; body: string; button: string; note: string }> = {
+const CTA: Record<"en" | "ru" | "de" | "it", { title: string; body: string; button: string; note: string }> = {
   en: {
     title: "Try Accio Work for yourself",
     body: "Everything in this article is one download away. Free trial with bonus credits, macOS and Windows.",
@@ -34,19 +36,26 @@ const CTA: Record<"en" | "ru" | "de", { title: string; body: string; button: str
     button: "Accio Work herunterladen",
     note: "Läuft auf Apple Silicon und Intel Macs sowie unter Windows 10 oder neuer.",
   },
+  it: {
+    title: "Prova Accio Work in prima persona",
+    body: "Tutto ciò che leggi in questo articolo è a un download di distanza. Prova gratuita con crediti bonus, per macOS e Windows.",
+    button: "Scarica Accio Work",
+    note: "Funziona su Mac Apple Silicon e Intel, e su Windows 10 o versioni successive.",
+  },
 };
 
 export function BlogArticle({
   lang,
   article,
 }: {
-  lang: "en" | "ru" | "de";
+  lang: "en" | "ru" | "de" | "it";
   article: ArticleFull;
 }) {
-  const base = lang === "ru" ? "/ru/blog" : lang === "de" ? "/de/blog" : "/blog";
+  const base =
+    lang === "ru" ? "/ru/blog" : lang === "de" ? "/de/blog" : lang === "it" ? "/it/blog" : "/blog";
   const cta = CTA[lang];
   const date = new Date(article.published_at).toLocaleDateString(
-    lang === "en" ? "en-US" : lang === "ru" ? "ru-RU" : "de-DE",
+    lang === "en" ? "en-US" : lang === "ru" ? "ru-RU" : lang === "it" ? "it-IT" : "de-DE",
     { day: "numeric", month: "long", year: "numeric" },
   );
 

@@ -3,18 +3,18 @@ import { I18nProvider } from "@/lib/i18n";
 import { BlogList } from "@/components/blog/BlogList";
 import { listArticles } from "@/lib/blog.functions";
 
-export const Route = createFileRoute("/blog/")({
-  loader: async () => ({ articles: await listArticles({ data: { lang: "en", limit: 60 } }) }),
+export const Route = createFileRoute("/it/blog/")({
+  loader: async () => ({ articles: await listArticles({ data: { lang: "it", limit: 60 } }) }),
   head: () => ({
     meta: [
-      { title: "Accio Work Blog — practical writing on AI-run business operations" },
-      { name: "description", content: "Field notes on running a modern business with an AI team you can actually direct. New articles every day." },
-      { property: "og:title", content: "Accio Work Blog" },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://acciowork.pro/blog" },
+      { title: "Blog Accio Work — spunti pratici su un business guidato dall'AI" },
+      { name: "description", content: "Appunti dal campo su come si conduce un business moderno con un team di AI che puoi davvero dirigere. Nuovi articoli ogni giorno." },
+      { property: "og:title", content: "Blog Accio Work" },
+      { property: "og:locale", content: "it_IT" },
+      { property: "og:url", content: "https://acciowork.pro/it/blog" },
     ],
     links: [
-      { rel: "canonical", href: "https://acciowork.pro/blog" },
+      { rel: "canonical", href: "https://acciowork.pro/it/blog" },
       { rel: "alternate", hrefLang: "en", href: "https://acciowork.pro/blog" },
       { rel: "alternate", hrefLang: "ru", href: "https://acciowork.pro/ru/blog" },
       { rel: "alternate", hrefLang: "de", href: "https://acciowork.pro/de/blog" },
@@ -22,16 +22,16 @@ export const Route = createFileRoute("/blog/")({
       { rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/blog" },
     ],
   }),
-  component: BlogEn,
+  component: BlogIt,
   errorComponent: ({ error }) => <div className="p-10 text-center">{error.message}</div>,
-  notFoundComponent: () => <div className="p-10 text-center">Not found</div>,
+  notFoundComponent: () => <div className="p-10 text-center">Non trovato</div>,
 });
 
-function BlogEn() {
+function BlogIt() {
   const { articles } = Route.useLoaderData();
   return (
     <I18nProvider>
-      <BlogList lang="en" articles={articles} />
+      <BlogList lang="it" articles={articles} />
     </I18nProvider>
   );
 }
