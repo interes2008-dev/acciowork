@@ -1,0 +1,2 @@
+ALTER TABLE public.blog_articles DROP CONSTRAINT IF EXISTS blog_articles_lang_check;
+ALTER TABLE public.blog_articles ADD CONSTRAINT blog_articles_lang_check CHECK (lang = ANY (ARRAY['en'::text, 'ru'::text, 'de'::text, 'it'::text]));
