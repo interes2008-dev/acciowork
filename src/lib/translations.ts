@@ -228,7 +228,7 @@ const en: Dict = {
     partneredWith: "Partnered with",
     rights: "All rights reserved.",
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch" },
+  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano" },
 };
 
 const ru: Dict = {
@@ -371,7 +371,7 @@ const ru: Dict = {
     partneredWith: "В партнёрстве с",
     rights: "Все права защищены.",
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch" },
+  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano" },
 };
 
 const de: Dict = {
@@ -514,7 +514,7 @@ const de: Dict = {
     partneredWith: "In Partnerschaft mit",
     rights: "Alle Rechte vorbehalten.",
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch" },
+  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano" },
 };
 
 export const translations: Record<Lang, Dict> = { en, ru, de };
