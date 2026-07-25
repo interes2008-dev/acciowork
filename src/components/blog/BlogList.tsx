@@ -1,7 +1,7 @@
 import type { ArticleListItem } from "@/lib/blog.functions";
 import { BlogShell } from "./BlogShell";
 
-const COPY: Record<"en" | "ru" | "de" | "it", { title: string; lede: string; empty: string; read: string; minutes: string }> = {
+const COPY: Record<"en" | "ru" | "de" | "it" | "es", { title: string; lede: string; empty: string; read: string; minutes: string }> = {
   en: {
     title: "The Accio Work journal",
     lede: "Field notes on running a modern business with an AI team you can actually direct.",
@@ -30,12 +30,19 @@ const COPY: Record<"en" | "ru" | "de" | "it", { title: string; lede: string; emp
     read: "Leggi",
     minutes: "min di lettura",
   },
+  es: {
+    title: "El journal de Accio Work",
+    lede: "Apuntes de campo sobre cómo llevar un negocio moderno con un equipo de IA al que de verdad puedes dirigir.",
+    empty: "Cada día aterriza aquí un nuevo artículo. Vuelve mañana.",
+    read: "Leer",
+    minutes: "min de lectura",
+  },
 };
 
-export function BlogList({ lang, articles }: { lang: "en" | "ru" | "de" | "it"; articles: ArticleListItem[] }) {
+export function BlogList({ lang, articles }: { lang: "en" | "ru" | "de" | "it" | "es"; articles: ArticleListItem[] }) {
   const copy = COPY[lang];
   const base =
-    lang === "ru" ? "/ru/blog" : lang === "de" ? "/de/blog" : lang === "it" ? "/it/blog" : "/blog";
+    lang === "ru" ? "/ru/blog" : lang === "de" ? "/de/blog" : lang === "it" ? "/it/blog" : lang === "es" ? "/es/blog" : "/blog";
 
   return (
     <BlogShell>
@@ -72,7 +79,7 @@ export function BlogList({ lang, articles }: { lang: "en" | "ru" | "de" | "it"; 
               <div className="flex flex-1 flex-col gap-3 p-6">
                 <div className="text-xs text-foreground/50">
                   {new Date(a.published_at).toLocaleDateString(
-                    lang === "en" ? "en-US" : lang === "ru" ? "ru-RU" : lang === "it" ? "it-IT" : "de-DE",
+                    lang === "en" ? "en-US" : lang === "ru" ? "ru-RU" : lang === "it" ? "it-IT" : lang === "es" ? "es-ES" : "de-DE",
                     {
                     day: "numeric",
                     month: "short",

@@ -1,45 +1,45 @@
 import { createFileRoute } from "@tanstack/react-router";
 import LandingPage from "@/components/landing/LandingPage";
 
-export const Route = createFileRoute("/de/")({
-  component: IndexDe,
+export const Route = createFileRoute("/es/")({
+  component: IndexEs,
   head: () => ({
     meta: [
-      { title: "Accio Work | KI-Plattform für Sourcing und Business-Automatisierung" },
+      { title: "Accio Work | Plataforma de IA para sourcing y automatización de negocio" },
       {
         name: "description",
         content:
-          "Accio Work — KI-Arbeitsbereich: Marktanalyse, Lieferantenvergleich, Content-Erstellung und Automatisierung von Geschäftsprozessen auf einer Plattform.",
+          "Accio Work — espacio de trabajo con IA: análisis de mercado, comparación de proveedores, creación de contenido y automatización de procesos en una sola plataforma.",
       },
       {
         name: "keywords",
         content:
-          "Accio Work, KI Lieferantensuche, Marktanalyse, Business-Automatisierung, KI-Assistent, Sourcing, Großhandel Lieferanten, Wettbewerbsanalyse, Content-Erstellung",
+          "Accio Work, sourcing con IA, buscar proveedores, análisis de mercado, automatización de negocio, asistente IA, e-commerce, análisis de competencia, contenido con IA",
       },
-      { property: "og:locale", content: "de_DE" },
+      { property: "og:locale", content: "es_ES" },
       { property: "og:locale:alternate", content: "en_US" },
-      { property: "og:title", content: "Accio Work | KI-Plattform für Sourcing und Business-Automatisierung" },
+      { property: "og:title", content: "Accio Work | Plataforma de IA para sourcing y automatización" },
       {
         property: "og:description",
         content:
-          "Accio Work — KI-Arbeitsbereich: Marktanalyse, Lieferantenvergleich, Content-Erstellung und Prozessautomatisierung.",
+          "Accio Work — espacio de trabajo con IA: análisis de mercado, comparación de proveedores, creación de contenido y automatización de procesos.",
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Accio Work" },
-      { property: "og:url", content: "https://acciowork.pro/de" },
+      { property: "og:url", content: "https://acciowork.pro/es" },
       { property: "og:image", content: "https://acciowork.pro/og-image.png" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { property: "og:image:type", content: "image/png" },
-      { property: "og:image:alt", content: "Accio Work — KI-Arbeitsbereich für Sourcing, Analyse und Automatisierung" },
+      { property: "og:image:alt", content: "Accio Work — espacio de trabajo con IA para sourcing, análisis y automatización" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Accio Work | KI-Plattform für Sourcing" },
-      { name: "twitter:description", content: "KI-Arbeitsbereich: Sourcing, Wettbewerbsanalyse, Content-Erstellung und Automatisierung." },
+      { name: "twitter:title", content: "Accio Work | Plataforma de IA para sourcing" },
+      { name: "twitter:description", content: "Espacio de trabajo con IA: sourcing, análisis de competencia, contenido y automatización." },
       { name: "twitter:image", content: "https://acciowork.pro/og-image.png" },
-      { name: "twitter:image:alt", content: "Accio Work — KI-Plattform für Unternehmen" },
+      { name: "twitter:image:alt", content: "Accio Work — plataforma de IA para el negocio" },
     ],
     links: [
-      { rel: "canonical", href: "https://acciowork.pro/de" },
+      { rel: "canonical", href: "https://acciowork.pro/es" },
       { rel: "alternate", hrefLang: "en", href: "https://acciowork.pro/" },
       { rel: "alternate", hrefLang: "ru", href: "https://acciowork.pro/ru" },
       { rel: "alternate", hrefLang: "de", href: "https://acciowork.pro/de" },
@@ -54,10 +54,10 @@ export const Route = createFileRoute("/de/")({
           "@context": "https://schema.org",
           "@type": "WebSite",
           name: "Accio Work",
-          url: "https://acciowork.pro/de",
-          inLanguage: "de-DE",
+          url: "https://acciowork.pro/es",
+          inLanguage: "es-ES",
           description:
-            "KI-Arbeitsbereich: Marktanalyse, Lieferantenvergleich, Content-Erstellung und Prozessautomatisierung.",
+            "Espacio de trabajo con IA: análisis de mercado, comparación de proveedores, creación de contenido y automatización de procesos.",
         }),
       },
       {
@@ -78,7 +78,7 @@ export const Route = createFileRoute("/de/")({
           name: "Accio Work",
           applicationCategory: "BusinessApplication",
           operatingSystem: "Web, macOS, Windows",
-          inLanguage: "de-DE",
+          inLanguage: "es-ES",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
         }),
       },
@@ -86,6 +86,6 @@ export const Route = createFileRoute("/de/")({
   }),
 });
 
-function IndexDe() {
+function IndexEs() {
   return <LandingPage />;
 }

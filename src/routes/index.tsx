@@ -27,6 +27,8 @@ export const Route = createFileRoute("/")({
       { property: "og:locale", content: "en_US" },
       { property: "og:locale:alternate", content: "ru_RU" },
       { property: "og:locale:alternate", content: "de_DE" },
+      { property: "og:locale:alternate", content: "it_IT" },
+      { property: "og:locale:alternate", content: "es_ES" },
       { property: "og:url", content: "https://acciowork.pro/" },
       { property: "og:image", content: "https://acciowork.pro/og-image.png" },
       { property: "og:image:width", content: "1200" },
@@ -45,6 +47,7 @@ export const Route = createFileRoute("/")({
       { rel: "alternate", hrefLang: "ru", href: "https://acciowork.pro/ru" },
       { rel: "alternate", hrefLang: "de", href: "https://acciowork.pro/de" },
       { rel: "alternate", hrefLang: "it", href: "https://acciowork.pro/it" },
+      { rel: "alternate", hrefLang: "es", href: "https://acciowork.pro/es" },
       { rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/" },
     ],
     scripts: [
