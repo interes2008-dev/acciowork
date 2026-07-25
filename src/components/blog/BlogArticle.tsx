@@ -3,21 +3,23 @@ import remarkGfm from "remark-gfm";
 import type { ArticleFull } from "@/lib/blog.functions";
 import { BlogShell } from "./BlogShell";
 
-const BACK: Record<"en" | "ru" | "de" | "it", string> = {
+const BACK: Record<"en" | "ru" | "de" | "it" | "es", string> = {
   en: "← All articles",
   ru: "← Все статьи",
   de: "← Alle Artikel",
   it: "← Tutti gli articoli",
+  es: "← Todos los artículos",
 };
 
-const MIN: Record<"en" | "ru" | "de" | "it", string> = {
+const MIN: Record<"en" | "ru" | "de" | "it" | "es", string> = {
   en: "min read",
   ru: "мин чтения",
   de: "Min. Lesezeit",
   it: "min di lettura",
+  es: "min de lectura",
 };
 
-const CTA: Record<"en" | "ru" | "de" | "it", { title: string; body: string; button: string; note: string }> = {
+const CTA: Record<"en" | "ru" | "de" | "it" | "es", { title: string; body: string; button: string; note: string }> = {
   en: {
     title: "Try Accio Work for yourself",
     body: "Everything in this article is one download away. Free trial with bonus credits, macOS and Windows.",
@@ -42,20 +44,26 @@ const CTA: Record<"en" | "ru" | "de" | "it", { title: string; body: string; butt
     button: "Scarica Accio Work",
     note: "Funziona su Mac Apple Silicon e Intel, e su Windows 10 o versioni successive.",
   },
+  es: {
+    title: "Prueba Accio Work tú mismo",
+    body: "Todo lo que lees en este artículo está a un descargar de distancia. Prueba gratuita con créditos de bonificación, para macOS y Windows.",
+    button: "Descargar Accio Work",
+    note: "Funciona en Mac Apple Silicon e Intel, y en Windows 10 o posterior.",
+  },
 };
 
 export function BlogArticle({
   lang,
   article,
 }: {
-  lang: "en" | "ru" | "de" | "it";
+  lang: "en" | "ru" | "de" | "it" | "es";
   article: ArticleFull;
 }) {
   const base =
-    lang === "ru" ? "/ru/blog" : lang === "de" ? "/de/blog" : lang === "it" ? "/it/blog" : "/blog";
+    lang === "ru" ? "/ru/blog" : lang === "de" ? "/de/blog" : lang === "it" ? "/it/blog" : lang === "es" ? "/es/blog" : "/blog";
   const cta = CTA[lang];
   const date = new Date(article.published_at).toLocaleDateString(
-    lang === "en" ? "en-US" : lang === "ru" ? "ru-RU" : lang === "it" ? "it-IT" : "de-DE",
+    lang === "en" ? "en-US" : lang === "ru" ? "ru-RU" : lang === "it" ? "it-IT" : lang === "es" ? "es-ES" : "de-DE",
     { day: "numeric", month: "long", year: "numeric" },
   );
 

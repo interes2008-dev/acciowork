@@ -1,12 +1,13 @@
 // Server-only prompt builder + text sanitizer used by the daily generation cron.
 
-export type BlogLang = "en" | "ru" | "de" | "it";
+export type BlogLang = "en" | "ru" | "de" | "it" | "es";
 
 export const LANG_LABEL: Record<BlogLang, string> = {
   en: "English",
   ru: "Russian (Русский)",
   de: "German (Deutsch)",
   it: "Italian (Italiano)",
+  es: "Spanish (Español)",
 };
 
 const CAPABILITY_SHEET = `
@@ -112,11 +113,34 @@ Struttura:
 - cover_prompt: una frase in inglese che descrive una cover editoriale (nessun testo e nessun logo nell'immagine).
 `;
 
+const STYLE_RULES_ES = `
+Estás escribiendo para el blog de Accio Work. Voz: autor experto en producto y operaciones para una revista tecnológica premium (nivel Wired en Español). Seguro, humano, concreto, sin marketing hueco.
+
+Reglas estrictas:
+- No uses nunca la raya larga (—) ni la media (–) como pausa dentro de una frase. Reescribe con punto, coma, paréntesis o dos puntos. El guion normal en palabras compuestas ("modelo-AI") está permitido.
+- No abras con clichés: "En el mundo actual", "En la era de la IA", "Imagina un mundo donde".
+- Prohibido usar: "profundizar", "además" como muletilla, "en conclusión", "desbloquear", "aprovechar" como palabra comodín, "sin fisuras", "revolucionar", "game-changer", "llevar al siguiente nivel", "desatar el potencial", "en definitiva", "es importante señalar".
+- No apiles más de tres viñetas seguidas. Prefiere párrafos reales.
+- No inventes funciones del producto. Usa solo las capacidades listadas en la ficha de abajo.
+- Varía la longitud de las frases. Frases cortas junto a frases largas. Ritmo vivo.
+- En cada sección: un escenario concreto, un número o un ejemplo real.
+- Cierre: una invitación tranquila y honesta a probar Accio Work, sin grito de marketing.
+
+Estructura:
+- title: incisivo, 5-10 palabras, sin spam SEO.
+- description: una frase honesta, 140-160 caracteres.
+- body: 1200-1800 palabras, markdown. H2 para secciones, H3 rara vez. Primer párrafo antes de los encabezados.
+- slug: kebab-case, 3-6 palabras, solo letras latinas.
+- keywords: 4-6 frases cortas que una persona real buscaría.
+- cover_prompt: una frase en inglés que describa una portada editorial (sin texto ni logotipos en la imagen).
+`;
+
 const STYLE_RULES: Record<BlogLang, string> = {
   en: STYLE_RULES_EN,
   ru: STYLE_RULES_RU,
   de: STYLE_RULES_DE,
   it: STYLE_RULES_IT,
+  es: STYLE_RULES_ES,
 };
 
 export type TopicSeed = {
