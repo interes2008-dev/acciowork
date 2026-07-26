@@ -12,7 +12,7 @@ import { I18nProvider, useI18n, renderHighlighted } from "@/lib/i18n";
 import type { Lang, TabKey, Testimonial as TestimonialT } from "@/lib/translations";
 
 const REFERRAL_URL =
-  "https://www.accio.com/invite-work?sId=KECtp1GttZ42%2FwpJUH5IxQ%3D%3D&ic=IC506004212009&tenant=accio&src=p_referral_IC506004212009&return_url=https%3A%2F%2Fwww.accio.com%2Fwork%2F";
+  "https://www.accio.com/login?sId=KECtp1GttZ42%2FwpJUH5IxQ%3D%3D&ic=IC506004212009&tenant=accio&src=p_referral_IC506004212009&source=invite_center&return_url=https%3A%2F%2Fwww.accio.com%2Fwork%2F";
 
 const TAB_KEYS: TabKey[] = ["launch", "monitor", "source", "promote", "tools", "organize", "analyze"];
 
