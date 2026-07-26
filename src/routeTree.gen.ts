@@ -9,28 +9,37 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ZhRouteImport } from './routes/zh'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as RuRouteImport } from './routes/ru'
 import { Route as ItRouteImport } from './routes/it'
 import { Route as EsRouteImport } from './routes/es'
 import { Route as DeRouteImport } from './routes/de'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ZhIndexRouteImport } from './routes/zh.index'
 import { Route as RuIndexRouteImport } from './routes/ru.index'
 import { Route as ItIndexRouteImport } from './routes/it.index'
 import { Route as EsIndexRouteImport } from './routes/es.index'
 import { Route as DeIndexRouteImport } from './routes/de.index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as ZhBlogIndexRouteImport } from './routes/zh.blog.index'
 import { Route as RuBlogIndexRouteImport } from './routes/ru.blog.index'
 import { Route as ItBlogIndexRouteImport } from './routes/it.blog.index'
 import { Route as EsBlogIndexRouteImport } from './routes/es.blog.index'
 import { Route as DeBlogIndexRouteImport } from './routes/de.blog.index'
+import { Route as ZhBlogSlugRouteImport } from './routes/zh.blog.$slug'
 import { Route as RuBlogSlugRouteImport } from './routes/ru.blog.$slug'
 import { Route as ItBlogSlugRouteImport } from './routes/it.blog.$slug'
 import { Route as EsBlogSlugRouteImport } from './routes/es.blog.$slug'
 import { Route as DeBlogSlugRouteImport } from './routes/de.blog.$slug'
 import { Route as ApiPublicCronGenerateArticlesRouteImport } from './routes/api/public/cron/generate-articles'
 
+const ZhRoute = ZhRouteImport.update({
+  id: '/zh',
+  path: '/zh',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -60,6 +69,11 @@ const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
+} as any)
+const ZhIndexRoute = ZhIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ZhRoute,
 } as any)
 const RuIndexRoute = RuIndexRouteImport.update({
   id: '/',
@@ -91,6 +105,11 @@ const BlogSlugRoute = BlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ZhBlogIndexRoute = ZhBlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => ZhRoute,
+} as any)
 const RuBlogIndexRoute = RuBlogIndexRouteImport.update({
   id: '/blog/',
   path: '/blog/',
@@ -110,6 +129,11 @@ const DeBlogIndexRoute = DeBlogIndexRouteImport.update({
   id: '/blog/',
   path: '/blog/',
   getParentRoute: () => DeRoute,
+} as any)
+const ZhBlogSlugRoute = ZhBlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => ZhRoute,
 } as any)
 const RuBlogSlugRoute = RuBlogSlugRouteImport.update({
   id: '/blog/$slug',
@@ -145,20 +169,24 @@ export interface FileRoutesByFullPath {
   '/it': typeof ItRouteWithChildren
   '/ru': typeof RuRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/zh': typeof ZhRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
   '/blog/': typeof BlogIndexRoute
   '/de/': typeof DeIndexRoute
   '/es/': typeof EsIndexRoute
   '/it/': typeof ItIndexRoute
   '/ru/': typeof RuIndexRoute
+  '/zh/': typeof ZhIndexRoute
   '/de/blog/$slug': typeof DeBlogSlugRoute
   '/es/blog/$slug': typeof EsBlogSlugRoute
   '/it/blog/$slug': typeof ItBlogSlugRoute
   '/ru/blog/$slug': typeof RuBlogSlugRoute
+  '/zh/blog/$slug': typeof ZhBlogSlugRoute
   '/de/blog/': typeof DeBlogIndexRoute
   '/es/blog/': typeof EsBlogIndexRoute
   '/it/blog/': typeof ItBlogIndexRoute
   '/ru/blog/': typeof RuBlogIndexRoute
+  '/zh/blog/': typeof ZhBlogIndexRoute
   '/api/public/cron/generate-articles': typeof ApiPublicCronGenerateArticlesRoute
 }
 export interface FileRoutesByTo {
@@ -170,14 +198,17 @@ export interface FileRoutesByTo {
   '/es': typeof EsIndexRoute
   '/it': typeof ItIndexRoute
   '/ru': typeof RuIndexRoute
+  '/zh': typeof ZhIndexRoute
   '/de/blog/$slug': typeof DeBlogSlugRoute
   '/es/blog/$slug': typeof EsBlogSlugRoute
   '/it/blog/$slug': typeof ItBlogSlugRoute
   '/ru/blog/$slug': typeof RuBlogSlugRoute
+  '/zh/blog/$slug': typeof ZhBlogSlugRoute
   '/de/blog': typeof DeBlogIndexRoute
   '/es/blog': typeof EsBlogIndexRoute
   '/it/blog': typeof ItBlogIndexRoute
   '/ru/blog': typeof RuBlogIndexRoute
+  '/zh/blog': typeof ZhBlogIndexRoute
   '/api/public/cron/generate-articles': typeof ApiPublicCronGenerateArticlesRoute
 }
 export interface FileRoutesById {
@@ -188,20 +219,24 @@ export interface FileRoutesById {
   '/it': typeof ItRouteWithChildren
   '/ru': typeof RuRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/zh': typeof ZhRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
   '/blog/': typeof BlogIndexRoute
   '/de/': typeof DeIndexRoute
   '/es/': typeof EsIndexRoute
   '/it/': typeof ItIndexRoute
   '/ru/': typeof RuIndexRoute
+  '/zh/': typeof ZhIndexRoute
   '/de/blog/$slug': typeof DeBlogSlugRoute
   '/es/blog/$slug': typeof EsBlogSlugRoute
   '/it/blog/$slug': typeof ItBlogSlugRoute
   '/ru/blog/$slug': typeof RuBlogSlugRoute
+  '/zh/blog/$slug': typeof ZhBlogSlugRoute
   '/de/blog/': typeof DeBlogIndexRoute
   '/es/blog/': typeof EsBlogIndexRoute
   '/it/blog/': typeof ItBlogIndexRoute
   '/ru/blog/': typeof RuBlogIndexRoute
+  '/zh/blog/': typeof ZhBlogIndexRoute
   '/api/public/cron/generate-articles': typeof ApiPublicCronGenerateArticlesRoute
 }
 export interface FileRouteTypes {
@@ -213,20 +248,24 @@ export interface FileRouteTypes {
     | '/it'
     | '/ru'
     | '/sitemap.xml'
+    | '/zh'
     | '/blog/$slug'
     | '/blog/'
     | '/de/'
     | '/es/'
     | '/it/'
     | '/ru/'
+    | '/zh/'
     | '/de/blog/$slug'
     | '/es/blog/$slug'
     | '/it/blog/$slug'
     | '/ru/blog/$slug'
+    | '/zh/blog/$slug'
     | '/de/blog/'
     | '/es/blog/'
     | '/it/blog/'
     | '/ru/blog/'
+    | '/zh/blog/'
     | '/api/public/cron/generate-articles'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -238,14 +277,17 @@ export interface FileRouteTypes {
     | '/es'
     | '/it'
     | '/ru'
+    | '/zh'
     | '/de/blog/$slug'
     | '/es/blog/$slug'
     | '/it/blog/$slug'
     | '/ru/blog/$slug'
+    | '/zh/blog/$slug'
     | '/de/blog'
     | '/es/blog'
     | '/it/blog'
     | '/ru/blog'
+    | '/zh/blog'
     | '/api/public/cron/generate-articles'
   id:
     | '__root__'
@@ -255,20 +297,24 @@ export interface FileRouteTypes {
     | '/it'
     | '/ru'
     | '/sitemap.xml'
+    | '/zh'
     | '/blog/$slug'
     | '/blog/'
     | '/de/'
     | '/es/'
     | '/it/'
     | '/ru/'
+    | '/zh/'
     | '/de/blog/$slug'
     | '/es/blog/$slug'
     | '/it/blog/$slug'
     | '/ru/blog/$slug'
+    | '/zh/blog/$slug'
     | '/de/blog/'
     | '/es/blog/'
     | '/it/blog/'
     | '/ru/blog/'
+    | '/zh/blog/'
     | '/api/public/cron/generate-articles'
   fileRoutesById: FileRoutesById
 }
@@ -279,6 +325,7 @@ export interface RootRouteChildren {
   ItRoute: typeof ItRouteWithChildren
   RuRoute: typeof RuRouteWithChildren
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  ZhRoute: typeof ZhRouteWithChildren
   BlogSlugRoute: typeof BlogSlugRoute
   BlogIndexRoute: typeof BlogIndexRoute
   ApiPublicCronGenerateArticlesRoute: typeof ApiPublicCronGenerateArticlesRoute
@@ -286,6 +333,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/zh': {
+      id: '/zh'
+      path: '/zh'
+      fullPath: '/zh'
+      preLoaderRoute: typeof ZhRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
@@ -327,6 +381,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/zh/': {
+      id: '/zh/'
+      path: '/'
+      fullPath: '/zh/'
+      preLoaderRoute: typeof ZhIndexRouteImport
+      parentRoute: typeof ZhRoute
     }
     '/ru/': {
       id: '/ru/'
@@ -370,6 +431,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/zh/blog/': {
+      id: '/zh/blog/'
+      path: '/blog'
+      fullPath: '/zh/blog/'
+      preLoaderRoute: typeof ZhBlogIndexRouteImport
+      parentRoute: typeof ZhRoute
+    }
     '/ru/blog/': {
       id: '/ru/blog/'
       path: '/blog'
@@ -397,6 +465,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/de/blog/'
       preLoaderRoute: typeof DeBlogIndexRouteImport
       parentRoute: typeof DeRoute
+    }
+    '/zh/blog/$slug': {
+      id: '/zh/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/zh/blog/$slug'
+      preLoaderRoute: typeof ZhBlogSlugRouteImport
+      parentRoute: typeof ZhRoute
     }
     '/ru/blog/$slug': {
       id: '/ru/blog/$slug'
@@ -492,6 +567,20 @@ const RuRouteChildren: RuRouteChildren = {
 
 const RuRouteWithChildren = RuRoute._addFileChildren(RuRouteChildren)
 
+interface ZhRouteChildren {
+  ZhIndexRoute: typeof ZhIndexRoute
+  ZhBlogSlugRoute: typeof ZhBlogSlugRoute
+  ZhBlogIndexRoute: typeof ZhBlogIndexRoute
+}
+
+const ZhRouteChildren: ZhRouteChildren = {
+  ZhIndexRoute: ZhIndexRoute,
+  ZhBlogSlugRoute: ZhBlogSlugRoute,
+  ZhBlogIndexRoute: ZhBlogIndexRoute,
+}
+
+const ZhRouteWithChildren = ZhRoute._addFileChildren(ZhRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DeRoute: DeRouteWithChildren,
@@ -499,6 +588,7 @@ const rootRouteChildren: RootRouteChildren = {
   ItRoute: ItRouteWithChildren,
   RuRoute: RuRouteWithChildren,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  ZhRoute: ZhRouteWithChildren,
   BlogSlugRoute: BlogSlugRoute,
   BlogIndexRoute: BlogIndexRoute,
   ApiPublicCronGenerateArticlesRoute: ApiPublicCronGenerateArticlesRoute,

@@ -1,45 +1,45 @@
 import { createFileRoute } from "@tanstack/react-router";
 import LandingPage from "@/components/landing/LandingPage";
 
-export const Route = createFileRoute("/ru/")({
-  component: IndexRu,
+export const Route = createFileRoute("/zh/")({
+  component: IndexZh,
   head: () => ({
     meta: [
-      { title: "Accio Work | AI-платформа для поиска поставщиков и автоматизации бизнеса" },
+      { title: "Accio Work | 面向选品与业务自动化的 AI 工作台" },
       {
         name: "description",
         content:
-          "Accio Work — AI-рабочее пространство: анализ рынков, сравнение поставщиков, генерация контента и автоматизация бизнес-процессов на одной платформе.",
+          "Accio Work —— AI 工作台：市场分析、供应商对比、内容创作与业务流程自动化，一个平台全部搞定。",
       },
       {
         name: "keywords",
         content:
-          "Accio Work, AI поиск поставщиков, анализ рынка, автоматизация бизнеса, ИИ ассистент, сорсинг, оптовые поставщики, аналитика конкурентов, генерация контента",
+          "Accio Work, AI 选品, 供应商搜索, 市场分析, 业务自动化, AI 助手, 电商, 竞品分析, AI 内容",
       },
-      { property: "og:locale", content: "ru_RU" },
+      { property: "og:locale", content: "zh_CN" },
       { property: "og:locale:alternate", content: "en_US" },
-      { property: "og:title", content: "Accio Work | AI-платформа для поиска поставщиков и автоматизации бизнеса" },
+      { property: "og:title", content: "Accio Work | 面向选品与业务自动化的 AI 工作台" },
       {
         property: "og:description",
         content:
-          "Accio Work — AI-рабочее пространство: анализ рынков, сравнение поставщиков, генерация контента и автоматизация бизнес-процессов.",
+          "Accio Work —— AI 工作台：市场分析、供应商对比、内容创作与流程自动化。",
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Accio Work" },
-      { property: "og:url", content: "https://acciowork.pro/ru" },
+      { property: "og:url", content: "https://acciowork.pro/zh" },
       { property: "og:image", content: "https://acciowork.pro/og-image.png" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { property: "og:image:type", content: "image/png" },
-      { property: "og:image:alt", content: "Accio Work — AI-рабочее пространство для сорсинга, аналитики и автоматизации" },
+      { property: "og:image:alt", content: "Accio Work —— 面向选品、分析与自动化的 AI 工作台" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Accio Work | AI-платформа для поиска поставщиков" },
-      { name: "twitter:description", content: "AI-рабочее пространство: сорсинг, аналитика конкурентов, генерация контента и автоматизация." },
+      { name: "twitter:title", content: "Accio Work | 面向选品的 AI 工作台" },
+      { name: "twitter:description", content: "AI 工作台：选品、竞品分析、内容与自动化。" },
       { name: "twitter:image", content: "https://acciowork.pro/og-image.png" },
-      { name: "twitter:image:alt", content: "Accio Work — AI-платформа для бизнеса" },
+      { name: "twitter:image:alt", content: "Accio Work —— 面向业务的 AI 平台" },
     ],
     links: [
-      { rel: "canonical", href: "https://acciowork.pro/ru" },
+      { rel: "canonical", href: "https://acciowork.pro/zh" },
       { rel: "alternate", hrefLang: "en", href: "https://acciowork.pro/" },
       { rel: "alternate", hrefLang: "ru", href: "https://acciowork.pro/ru" },
       { rel: "alternate", hrefLang: "de", href: "https://acciowork.pro/de" },
@@ -55,11 +55,10 @@ export const Route = createFileRoute("/ru/")({
           "@context": "https://schema.org",
           "@type": "WebSite",
           name: "Accio Work",
-          alternateName: "Аксио Ворк",
-          url: "https://acciowork.pro/ru",
-          inLanguage: "ru-RU",
+          url: "https://acciowork.pro/zh",
+          inLanguage: "zh-CN",
           description:
-            "AI-рабочее пространство: анализ рынков, сравнение поставщиков, генерация контента и автоматизация бизнес-процессов.",
+            "AI 工作台：市场分析、供应商对比、内容创作与流程自动化。",
         }),
       },
       {
@@ -80,7 +79,7 @@ export const Route = createFileRoute("/ru/")({
           name: "Accio Work",
           applicationCategory: "BusinessApplication",
           operatingSystem: "Web, macOS, Windows",
-          inLanguage: "ru-RU",
+          inLanguage: "zh-CN",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
         }),
       },
@@ -88,6 +87,6 @@ export const Route = createFileRoute("/ru/")({
   }),
 });
 
-function IndexRu() {
+function IndexZh() {
   return <LandingPage />;
 }

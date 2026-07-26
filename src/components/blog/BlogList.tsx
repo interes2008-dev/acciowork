@@ -1,7 +1,7 @@
 import type { ArticleListItem } from "@/lib/blog.functions";
 import { BlogShell } from "./BlogShell";
 
-const COPY: Record<"en" | "ru" | "de" | "it" | "es", { title: string; lede: string; empty: string; read: string; minutes: string }> = {
+const COPY: Record<"en" | "ru" | "de" | "it" | "es" | "zh", { title: string; lede: string; empty: string; read: string; minutes: string }> = {
   en: {
     title: "The Accio Work journal",
     lede: "Field notes on running a modern business with an AI team you can actually direct.",
@@ -37,12 +37,19 @@ const COPY: Record<"en" | "ru" | "de" | "it" | "es", { title: string; lede: stri
     read: "Leer",
     minutes: "min de lectura",
   },
+  zh: {
+    title: "Accio Work 博客",
+    lede: "关于如何用一个真正听你指挥的 AI 团队经营现代生意的一线笔记。",
+    empty: "每天都会有新文章上线，明天再来看看。",
+    read: "阅读",
+    minutes: "分钟阅读",
+  },
 };
 
-export function BlogList({ lang, articles }: { lang: "en" | "ru" | "de" | "it" | "es"; articles: ArticleListItem[] }) {
+export function BlogList({ lang, articles }: { lang: "en" | "ru" | "de" | "it" | "es" | "zh"; articles: ArticleListItem[] }) {
   const copy = COPY[lang];
   const base =
-    lang === "ru" ? "/ru/blog" : lang === "de" ? "/de/blog" : lang === "it" ? "/it/blog" : lang === "es" ? "/es/blog" : "/blog";
+    lang === "ru" ? "/ru/blog" : lang === "de" ? "/de/blog" : lang === "it" ? "/it/blog" : lang === "es" ? "/es/blog" : lang === "zh" ? "/zh/blog" : "/blog";
 
   return (
     <BlogShell>
@@ -79,7 +86,7 @@ export function BlogList({ lang, articles }: { lang: "en" | "ru" | "de" | "it" |
               <div className="flex flex-1 flex-col gap-3 p-6">
                 <div className="text-xs text-foreground/50">
                   {new Date(a.published_at).toLocaleDateString(
-                    lang === "en" ? "en-US" : lang === "ru" ? "ru-RU" : lang === "it" ? "it-IT" : lang === "es" ? "es-ES" : "de-DE",
+                    lang === "en" ? "en-US" : lang === "ru" ? "ru-RU" : lang === "it" ? "it-IT" : lang === "es" ? "es-ES" : lang === "zh" ? "zh-CN" : "de-DE",
                     {
                     day: "numeric",
                     month: "short",

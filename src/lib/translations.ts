@@ -1,4 +1,4 @@
-export type Lang = "en" | "ru" | "de" | "it" | "es";
+export type Lang = "en" | "ru" | "de" | "it" | "es" | "zh";
 
 export type Testimonial = {
   name: string;
@@ -85,7 +85,7 @@ export type Dict = {
     partneredWith: string;
     rights: string;
   };
-  langNames: { en: string; ru: string; de: string; it: string; es: string };
+  langNames: { en: string; ru: string; de: string; it: string; es: string; zh: string };
 };
 
 const en: Dict = {
@@ -228,7 +228,7 @@ const en: Dict = {
     partneredWith: "Partnered with",
     rights: "All rights reserved.",
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español" },
+  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文" },
 };
 
 const ru: Dict = {
@@ -371,7 +371,7 @@ const ru: Dict = {
     partneredWith: "В партнёрстве с",
     rights: "Все права защищены.",
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español" },
+  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文" },
 };
 
 const de: Dict = {
@@ -514,7 +514,7 @@ const de: Dict = {
     partneredWith: "In Partnerschaft mit",
     rights: "Alle Rechte vorbehalten.",
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español" },
+  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文" },
 };
 
 const it: Dict = {
@@ -657,7 +657,7 @@ const it: Dict = {
     partneredWith: "In partnership con",
     rights: "Tutti i diritti riservati.",
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español" },
+  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文" },
 };
 
 const es: Dict = {
@@ -800,7 +800,150 @@ const es: Dict = {
     partneredWith: "En colaboración con",
     rights: "Todos los derechos reservados.",
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español" },
+  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文" },
 };
 
-export const translations: Record<Lang, Dict> = { en, ru, de, it, es };
+const zh: Dict = {
+  nav: {
+    pricing: "价格",
+    help: "帮助中心",
+    events: "活动",
+    language: "中文",
+    download: "下载 Accio Work",
+    blog: "博客",
+  },
+  hero: {
+    brand: "Work",
+    tagline: "全天候的 AI 智能体业务团队",
+    pills: ["零学习成本", "为业务而生", "企业级安全"],
+    desc:
+      "端到端自动化你的业务：市场研究与分析、供应商采购与谈判、营销与销售、运营与 CRM，带来真实收益。",
+    cta: "下载 macOS 版",
+    ctaBadge: "Apple Silicon",
+    ctaNote: "适用于 macOS 11 及以上版本",
+  },
+  business: {
+    heading: "满足业务的每一个需求",
+    tabs: {
+      launch: {
+        tabLabel: "开店",
+        title: "从灵感到第一单，几分钟搞定",
+        body: "一键搭建完整的在线店铺，商品、详情、设计与 SEO 开箱即用，上线即可开卖。",
+        extraYou: "1 个想法",
+        extraAI: "商品、详情、SEO",
+      },
+      monitor: {
+        tabLabel: "监控竞品",
+        title: "配置一次，自动运行",
+        body: "用定时任务追踪竞品的价格、商品与投放，把每一条洞察都变成可落地的策略。",
+        extraYou: "设一次",
+        extraAI: "价格、商品、投放",
+      },
+      source: {
+        tabLabel: "采购与谈判",
+        title: "以合适的价格找到合适的供应商",
+        body: "发现已验证的供应商、发送询盘、邮件谈判，全部由 AI 代劳，直到拿到最好的报价。",
+        extraYou: "0 次通话",
+        extraAI: "已验证的供应商、询盘",
+      },
+      promote: {
+        tabLabel: "社媒推广",
+        title: "发布、互动、增长，全自动进行",
+        body: "生成有传播力的内容，跨平台排期发布，与用户互动并跟踪效果，7×24 小时不停歇。",
+        extraYou: "发一次",
+        extraAI: "排期、互动、数据",
+      },
+      tools: {
+        tabLabel: "自定义工具",
+        title: "无需写代码的业务工具",
+        body: "只需描述你需要什么——计算器、看板、追踪器或网页——立即生成一款可用工具，并随业务不断进化。",
+        extraYou: "描述一次",
+        extraAI: "计算器、看板、追踪器",
+      },
+      organize: {
+        tabLabel: "整理文件",
+        title: "把杂乱的文档变成清晰的决策",
+        body: "上传报价、发票、报告或任意文件，一切自动整理成清爽的表格与图表，几秒内就能对比与决策。",
+        extraYou: "上传文件",
+        extraAI: "表格、图表、洞察",
+      },
+      analyze: {
+        tabLabel: "分析爆款",
+        title: "一键读懂你的市场",
+        body: "整合 Jungle Scout、TikTok、Reddit、Alibaba.com 等权威数据源，一键获取市场洞察。",
+        extraYou: "1 次点击",
+        extraAI: "趋势、需求、排行",
+      },
+    },
+  },
+  why: {
+    heading: "为什么选择 Accio Work？",
+    aiTitle: "一个通用 AI，或一整支专家团队。",
+    aiBody:
+      "通用智能体处理日常琐事，再加上销售、采购、设计等专家智能体，每个都有自己的专业与记忆。",
+    aiChannel: "#新品上线",
+    connectTitle: "连一次，剩下的都自动化。",
+    connectBody:
+      "Shopify、Gmail、Slack、LinkedIn，以及 50+ 服务，一键接入，无需集成项目，也无需开发者。",
+    dataTitle: "你的数据，你说了算。",
+    dataBody:
+      "沙箱化执行，每一次关键操作都由你亲自审批，数据主权由阿里巴巴的基础设施保障。",
+    platformTitle: "一个平台，覆盖分析、设计与自动化。",
+    platformBody:
+      "采购报告、概念设计、落地页、竞品监控，选一项技能、设个时间，剩下的交给它。",
+    agents: [
+      { name: "Market Scout", msg: "欧盟便携加湿器需求近 30 天上升 38%。" },
+      { name: "Sourcing Expert", msg: "获取 12 家已验证深圳供应商 · MOQ 100+ · BSCI ✓" },
+      { name: "Product Designer", msg: "3 款哑光质感概念方案，随时可以评审。" },
+      { name: "Listing Copywriter", msg: "SEO 标题已拟好，预计点击率 +37%。" },
+    ],
+  },
+  testimonials: {
+    heading1: "深受",
+    highlight: "1000 万+",
+    heading2: "月活用户喜爱",
+    row1: [
+      { name: "Joseph S.", role: "全球采购经理", avatar: "https://i.pravatar.cc/80?img=13", text: "Accio Work 能迅速把零散、不规范的供应商报价整理为可比数据，是**第一个真正理解**全球贸易复杂度的 AI。" },
+      { name: "Mia C.", role: "周末创业者", avatar: "https://i.pravatar.cc/80?img=47", text: "我攒了好几个月的产品灵感，却不知道怎么找货怎么开卖。Accio Work 把它们从零散笔记推到了**真正可以卖的产品**。" },
+      { name: "Luna M.", role: "Dropshipping 卖家", avatar: "https://i.pravatar.cc/80?img=45", text: "Accio Work 会扫描 Reddit、TikTok 和 Amazon,**精准锁定爆款**并直接对接供应商,是抢在潮流之前的利器。" },
+      { name: "Keshia B.", role: "副业玩家", avatar: "https://i.pravatar.cc/80?img=48", text: "我只有晚上能顾店。Accio Work 能在我上班时自动做细分市场分析和**供应商跟进**,简直救命。" },
+      { name: "Jay W.", role: "潮牌主理人", avatar: "https://i.pravatar.cc/80?img=15", text: "凭借专业工艺包生成和供应商自动谈判,Accio Work 让我的生产周期**缩短了几周**,更重要的是设计安全性 100%。" },
+    ],
+    row2: [
+      { name: "Nina K.", role: "户外品牌创始人", avatar: "https://i.pravatar.cc/80?img=49", text: "我以前每周花**10 小时**盯内容外包,现在 Accio Work 把内容到发布全流程自动化,每周只需**10 分钟**。" },
+      { name: "Sara N.", role: "美甲店店长", avatar: "https://i.pravatar.cc/80?img=32", text: "非常好上手。我总算**明白 AI 能怎样帮**我的生意了。" },
+      { name: "Clara E.", role: "采购专员", avatar: "https://i.pravatar.cc/80?img=44", text: "以前找供应商总感觉在追失联的细节,现在靠 Accio Work 的主动跟进,能**更快拿到干净的候选名单**。" },
+      { name: "Andrew P.", role: "婚礼与活动策划", avatar: "https://i.pravatar.cc/80?img=12", text: "这个工具帮我找到了更多元的供应商、拿到了更低的价格,还能把交付时间与活动日期完美对齐。多亏 Accio Work,我的**订单增长了 30% 以上**。" },
+      { name: "Joan W.", role: "供应链顾问", avatar: "https://i.pravatar.cc/80?img=5", text: "与其他 AI 不同,Accio Work 用的是 alibaba.com 的**真实贸易数据**和 Jungle Scout 的市场情报,电商卖家必备。" },
+    ],
+  },
+  faq: {
+    heading: "常见问题",
+    readGuide: "阅读快速上手指南",
+    items: [
+      { q: "Accio Work 与普通 AI 聊天工具有什么不同?", a: "普通聊天工具只会回复文字,而 Accio Work 是面向执行的智能体平台,能读取本地文件、执行命令行、控制浏览器并调用外部 API。它不只告诉你怎么做,而是帮你把工作做完。", linkLabel: "阅读快速上手指南" },
+      { q: "支持哪些大模型?", a: "目前支持 Gemini、GPT-4o、Claude 与 Qwen,可以为不同智能体分配不同模型。所有模型调用都通过我们的网关,不需要你去折腾复杂的 API Key。", linkLabel: "查看智能体能力" },
+      { q: "浏览器自动化能做什么?", a: "Accio Work 通过 Chrome DevTools Protocol 控制真实浏览器,智能体可以搜索网页、抓取内容、填写表单、截图并完成多步骤流程,全程无需你动手。浏览器访问被视为敏感能力,需要你显式授权。", linkLabel: "查看智能体工具" },
+      { q: "可以让智能体按计划自动运行吗?", a: "可以。Automations 功能支持创建类 cron 的定时任务,既可以在聊天中用自然语言描述,也可以在 Automations 页面配置。计划任务在本地运行,离线也能执行,漏跑的任务在重启后会自动补齐。", linkLabel: "查看自动化文档" },
+      { q: "如何把智能体接入 Telegram 或钉钉?", a: "在客户端打开 Channels 页面,选择所需平台并按引导添加 Bot Token。Accio Work 支持 Telegram、Discord、钉钉、飞书与微信。连接后智能体可以在聊天中回复消息或自动接收任务。", linkLabel: "查看支持的渠道" },
+      { q: "Skills 是什么,如何扩展智能体?", a: "Skills 是插件包,可为智能体加上领域能力,例如代码审查、文案写作、SEO 审计等。你可以从市场安装,也可以自建。Accio Work 同时支持 MCP(Model Context Protocol)标准,便于接入外部工具服务。", linkLabel: "查看 Skills 管理" },
+      { q: "支持哪些平台?", a: "Accio Work 支持 macOS(Apple Silicon 与 Intel)和 Windows(x64),是基于 Electron 的原生桌面应用,可完整访问本地系统资源。" },
+      { q: "多个智能体可以协同完成任务吗?", a: "可以。Teams 功能允许你组建带 Team Lead 的智能体小组,TL 会拆解子任务、通过群聊协调工作、编排多智能体流程,适合需要角色分工的复杂项目。", linkLabel: "查看智能体团队文档" },
+    ],
+  },
+  cta: {
+    title: "今天就试试 Accio Work。",
+    subtitle: "用 Accio Work 感受更好的工作方式。",
+    download: "下载 macOS 版",
+    ctaBadge: "Apple Silicon",
+    quickStart: "快速开始",
+    note: "适用于 macOS 11 及以上版本",
+  },
+  footer: {
+    partneredWith: "合作伙伴",
+    rights: "版权所有。",
+  },
+  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文" },
+};
+
+export const translations: Record<Lang, Dict> = { en, ru, de, it, es, zh };
