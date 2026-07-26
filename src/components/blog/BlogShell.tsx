@@ -35,7 +35,7 @@ function LanguageSwitcher() {
     return () => document.removeEventListener("mousedown", onDoc);
   }, [open]);
 
-  const options: Lang[] = ["en", "ru", "de", "it", "es"];
+  const options: Lang[] = ["en", "ru", "de", "it", "es", "zh"];
 
   return (
     <div ref={rootRef} className="relative">
@@ -74,7 +74,9 @@ function LanguageSwitcher() {
                             ? "/it/blog"
                             : code === "es"
                               ? "/es/blog"
-                              : "/blog";
+                              : code === "zh"
+                                ? "/zh/blog"
+                                : "/blog";
                     if (window.location.pathname !== target) {
                       window.location.assign(target);
                     }
@@ -97,9 +99,9 @@ function LanguageSwitcher() {
 
 export function BlogShell({ children }: { children: React.ReactNode }) {
   const { lang } = useI18n();
-  const home = lang === "ru" ? "/ru" : lang === "de" ? "/de" : lang === "it" ? "/it" : lang === "es" ? "/es" : "/";
+  const home = lang === "ru" ? "/ru" : lang === "de" ? "/de" : lang === "it" ? "/it" : lang === "es" ? "/es" : lang === "zh" ? "/zh" : "/";
   const blog =
-    lang === "ru" ? "/ru/blog" : lang === "de" ? "/de/blog" : lang === "it" ? "/it/blog" : lang === "es" ? "/es/blog" : "/blog";
+    lang === "ru" ? "/ru/blog" : lang === "de" ? "/de/blog" : lang === "it" ? "/it/blog" : lang === "es" ? "/es/blog" : lang === "zh" ? "/zh/blog" : "/blog";
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur">

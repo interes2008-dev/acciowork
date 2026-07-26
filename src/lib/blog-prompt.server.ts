@@ -1,6 +1,6 @@
 // Server-only prompt builder + text sanitizer used by the daily generation cron.
 
-export type BlogLang = "en" | "ru" | "de" | "it" | "es";
+export type BlogLang = "en" | "ru" | "de" | "it" | "es" | "zh";
 
 export const LANG_LABEL: Record<BlogLang, string> = {
   en: "English",
@@ -8,6 +8,7 @@ export const LANG_LABEL: Record<BlogLang, string> = {
   de: "German (Deutsch)",
   it: "Italian (Italiano)",
   es: "Spanish (Español)",
+  zh: "Simplified Chinese (简体中文)",
 };
 
 const CAPABILITY_SHEET = `
@@ -135,12 +136,35 @@ Estructura:
 - cover_prompt: una frase en inglés que describa una portada editorial (sin texto ni logotipos en la imagen).
 `;
 
+const STYLE_RULES_ZH = `
+你在为 Accio Work 博客撰写文章。语气：一位为高质量科技媒体（相当于「爱范儿」或「极客公园」级别）撰稿的资深产品与运营作者。冷静、具体、克制，不写营销腔。
+
+严格规则：
+- 绝不使用长破折号（—）或短破折号（–）作为句中停顿。请改用句号、逗号、括号或冒号。词内的普通连字符（如「AI-模型」）可以使用。
+- 不要以陈词滥调开头，例如"在当今飞速发展的世界"、"在人工智能时代"、"想象一个世界"。
+- 禁止使用以下词汇：「深入探讨」、「此外」、「综上所述」、「解锁」、「赋能」（作动词）、「无缝」、「颠覆」、「变革者」、「更上一层楼」、「释放潜能」、「归根到底」、「值得注意的是」。
+- 不要连续排列超过三个项目符号。优先使用完整段落。
+- 不要虚构产品功能。只使用下方能力表中的功能。
+- 句长要有变化。短句与长句穿插，节奏要活。
+- 每一段都要有一个具体场景、数字或真实例子。
+- 结尾：温和、真诚地邀请读者尝试 Accio Work，不要营销式的吆喝。
+
+结构：
+- title：精炼有力，5-10 个中文词，不做 SEO 堆砌。
+- description：一句真诚的话，140-160 个字符。
+- body：1200-1800 字，markdown 格式。使用 H2 划分主要小节，H3 少用。首段在任何小节标题之前。
+- slug：kebab-case，3-6 个英文单词，仅拉丁字母。
+- keywords：4-6 个真实用户会搜索的短语（可用中文或英文）。
+- cover_prompt：一句英文，描述编辑级封面图（图内不含文字与 Logo）。
+`;
+
 const STYLE_RULES: Record<BlogLang, string> = {
   en: STYLE_RULES_EN,
   ru: STYLE_RULES_RU,
   de: STYLE_RULES_DE,
   it: STYLE_RULES_IT,
   es: STYLE_RULES_ES,
+  zh: STYLE_RULES_ZH,
 };
 
 export type TopicSeed = {

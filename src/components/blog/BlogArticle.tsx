@@ -3,23 +3,25 @@ import remarkGfm from "remark-gfm";
 import type { ArticleFull } from "@/lib/blog.functions";
 import { BlogShell } from "./BlogShell";
 
-const BACK: Record<"en" | "ru" | "de" | "it" | "es", string> = {
+const BACK: Record<"en" | "ru" | "de" | "it" | "es" | "zh", string> = {
   en: "← All articles",
   ru: "← Все статьи",
   de: "← Alle Artikel",
   it: "← Tutti gli articoli",
   es: "← Todos los artículos",
+  zh: "← 全部文章",
 };
 
-const MIN: Record<"en" | "ru" | "de" | "it" | "es", string> = {
+const MIN: Record<"en" | "ru" | "de" | "it" | "es" | "zh", string> = {
   en: "min read",
   ru: "мин чтения",
   de: "Min. Lesezeit",
   it: "min di lettura",
   es: "min de lectura",
+  zh: "分钟阅读",
 };
 
-const CTA: Record<"en" | "ru" | "de" | "it" | "es", { title: string; body: string; button: string; note: string }> = {
+const CTA: Record<"en" | "ru" | "de" | "it" | "es" | "zh", { title: string; body: string; button: string; note: string }> = {
   en: {
     title: "Try Accio Work for yourself",
     body: "Everything in this article is one download away. Free trial with bonus credits, macOS and Windows.",
@@ -50,20 +52,26 @@ const CTA: Record<"en" | "ru" | "de" | "it" | "es", { title: string; body: strin
     button: "Descargar Accio Work",
     note: "Funciona en Mac Apple Silicon e Intel, y en Windows 10 o posterior.",
   },
+  zh: {
+    title: "亲自体验 Accio Work",
+    body: "本文提到的一切，下载客户端就能用上。免费试用附赠额度，支持 macOS 和 Windows。",
+    button: "下载 Accio Work",
+    note: "支持 Apple Silicon 与 Intel 的 Mac，以及 Windows 10 及更高版本。",
+  },
 };
 
 export function BlogArticle({
   lang,
   article,
 }: {
-  lang: "en" | "ru" | "de" | "it" | "es";
+  lang: "en" | "ru" | "de" | "it" | "es" | "zh";
   article: ArticleFull;
 }) {
   const base =
-    lang === "ru" ? "/ru/blog" : lang === "de" ? "/de/blog" : lang === "it" ? "/it/blog" : lang === "es" ? "/es/blog" : "/blog";
+    lang === "ru" ? "/ru/blog" : lang === "de" ? "/de/blog" : lang === "it" ? "/it/blog" : lang === "es" ? "/es/blog" : lang === "zh" ? "/zh/blog" : "/blog";
   const cta = CTA[lang];
   const date = new Date(article.published_at).toLocaleDateString(
-    lang === "en" ? "en-US" : lang === "ru" ? "ru-RU" : lang === "it" ? "it-IT" : lang === "es" ? "es-ES" : "de-DE",
+    lang === "en" ? "en-US" : lang === "ru" ? "ru-RU" : lang === "it" ? "it-IT" : lang === "es" ? "es-ES" : lang === "zh" ? "zh-CN" : "de-DE",
     { day: "numeric", month: "long", year: "numeric" },
   );
 
