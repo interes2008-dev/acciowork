@@ -3,25 +3,27 @@ import remarkGfm from "remark-gfm";
 import type { ArticleFull } from "@/lib/blog.functions";
 import { BlogShell } from "./BlogShell";
 
-const BACK: Record<"en" | "ru" | "de" | "it" | "es" | "zh", string> = {
+const BACK: Record<"en" | "ru" | "de" | "it" | "es" | "zh" | "pt", string> = {
   en: "← All articles",
   ru: "← Все статьи",
   de: "← Alle Artikel",
   it: "← Tutti gli articoli",
   es: "← Todos los artículos",
   zh: "← 全部文章",
+  pt: "← Todos os artigos",
 };
 
-const MIN: Record<"en" | "ru" | "de" | "it" | "es" | "zh", string> = {
+const MIN: Record<"en" | "ru" | "de" | "it" | "es" | "zh" | "pt", string> = {
   en: "min read",
   ru: "мин чтения",
   de: "Min. Lesezeit",
   it: "min di lettura",
   es: "min de lectura",
   zh: "分钟阅读",
+  pt: "min de leitura",
 };
 
-const CTA: Record<"en" | "ru" | "de" | "it" | "es" | "zh", { title: string; body: string; button: string; note: string }> = {
+const CTA: Record<"en" | "ru" | "de" | "it" | "es" | "zh" | "pt", { title: string; body: string; button: string; note: string }> = {
   en: {
     title: "Try Accio Work for yourself",
     body: "Everything in this article is one download away. Free trial with bonus credits, macOS and Windows.",
@@ -58,20 +60,26 @@ const CTA: Record<"en" | "ru" | "de" | "it" | "es" | "zh", { title: string; body
     button: "下载 Accio Work",
     note: "支持 Apple Silicon 与 Intel 的 Mac，以及 Windows 10 及更高版本。",
   },
+  pt: {
+    title: "Experimente a Accio Work você mesmo",
+    body: "Tudo o que está neste artigo está a um download de distância. Teste grátis com créditos bônus, para macOS e Windows.",
+    button: "Baixar Accio Work",
+    note: "Roda em Macs Apple Silicon e Intel, e no Windows 10 ou superior.",
+  },
 };
 
 export function BlogArticle({
   lang,
   article,
 }: {
-  lang: "en" | "ru" | "de" | "it" | "es" | "zh";
+  lang: "en" | "ru" | "de" | "it" | "es" | "zh" | "pt";
   article: ArticleFull;
 }) {
   const base =
-    lang === "ru" ? "/ru/blog" : lang === "de" ? "/de/blog" : lang === "it" ? "/it/blog" : lang === "es" ? "/es/blog" : lang === "zh" ? "/zh/blog" : "/blog";
+    lang === "ru" ? "/ru/blog" : lang === "de" ? "/de/blog" : lang === "it" ? "/it/blog" : lang === "es" ? "/es/blog" : lang === "zh" ? "/zh/blog" : lang === "pt" ? "/pt/blog" : "/blog";
   const cta = CTA[lang];
   const date = new Date(article.published_at).toLocaleDateString(
-    lang === "en" ? "en-US" : lang === "ru" ? "ru-RU" : lang === "it" ? "it-IT" : lang === "es" ? "es-ES" : lang === "zh" ? "zh-CN" : "de-DE",
+    lang === "en" ? "en-US" : lang === "ru" ? "ru-RU" : lang === "it" ? "it-IT" : lang === "es" ? "es-ES" : lang === "zh" ? "zh-CN" : lang === "pt" ? "pt-BR" : "de-DE",
     { day: "numeric", month: "long", year: "numeric" },
   );
 

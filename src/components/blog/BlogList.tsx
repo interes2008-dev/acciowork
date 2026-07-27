@@ -1,7 +1,7 @@
 import type { ArticleListItem } from "@/lib/blog.functions";
 import { BlogShell } from "./BlogShell";
 
-const COPY: Record<"en" | "ru" | "de" | "it" | "es" | "zh", { title: string; lede: string; empty: string; read: string; minutes: string }> = {
+const COPY: Record<"en" | "ru" | "de" | "it" | "es" | "zh" | "pt", { title: string; lede: string; empty: string; read: string; minutes: string }> = {
   en: {
     title: "The Accio Work journal",
     lede: "Field notes on running a modern business with an AI team you can actually direct.",
@@ -44,12 +44,19 @@ const COPY: Record<"en" | "ru" | "de" | "it" | "es" | "zh", { title: string; led
     read: "阅读",
     minutes: "分钟阅读",
   },
+  pt: {
+    title: "O journal da Accio Work",
+    lede: "Notas de campo sobre como tocar um negócio moderno com um time de IA que você realmente dirige.",
+    empty: "Todo dia entra um novo artigo por aqui. Volte amanhã.",
+    read: "Ler",
+    minutes: "min de leitura",
+  },
 };
 
-export function BlogList({ lang, articles }: { lang: "en" | "ru" | "de" | "it" | "es" | "zh"; articles: ArticleListItem[] }) {
+export function BlogList({ lang, articles }: { lang: "en" | "ru" | "de" | "it" | "es" | "zh" | "pt"; articles: ArticleListItem[] }) {
   const copy = COPY[lang];
   const base =
-    lang === "ru" ? "/ru/blog" : lang === "de" ? "/de/blog" : lang === "it" ? "/it/blog" : lang === "es" ? "/es/blog" : lang === "zh" ? "/zh/blog" : "/blog";
+    lang === "ru" ? "/ru/blog" : lang === "de" ? "/de/blog" : lang === "it" ? "/it/blog" : lang === "es" ? "/es/blog" : lang === "zh" ? "/zh/blog" : lang === "pt" ? "/pt/blog" : "/blog";
 
   return (
     <BlogShell>
@@ -86,7 +93,7 @@ export function BlogList({ lang, articles }: { lang: "en" | "ru" | "de" | "it" |
               <div className="flex flex-1 flex-col gap-3 p-6">
                 <div className="text-xs text-foreground/50">
                   {new Date(a.published_at).toLocaleDateString(
-                    lang === "en" ? "en-US" : lang === "ru" ? "ru-RU" : lang === "it" ? "it-IT" : lang === "es" ? "es-ES" : lang === "zh" ? "zh-CN" : "de-DE",
+                    lang === "en" ? "en-US" : lang === "ru" ? "ru-RU" : lang === "it" ? "it-IT" : lang === "es" ? "es-ES" : lang === "zh" ? "zh-CN" : lang === "pt" ? "pt-BR" : "de-DE",
                     {
                     day: "numeric",
                     month: "short",
