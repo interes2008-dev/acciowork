@@ -1,6 +1,6 @@
 // Server-only prompt builder + text sanitizer used by the daily generation cron.
 
-export type BlogLang = "en" | "ru" | "de" | "it" | "es" | "zh";
+export type BlogLang = "en" | "ru" | "de" | "it" | "es" | "zh" | "pt";
 
 export const LANG_LABEL: Record<BlogLang, string> = {
   en: "English",
@@ -9,6 +9,7 @@ export const LANG_LABEL: Record<BlogLang, string> = {
   it: "Italian (Italiano)",
   es: "Spanish (Español)",
   zh: "Simplified Chinese (简体中文)",
+  pt: "Portuguese (Português do Brasil)",
 };
 
 const CAPABILITY_SHEET = `
@@ -158,6 +159,28 @@ const STYLE_RULES_ZH = `
 - cover_prompt：一句英文，描述编辑级封面图（图内不含文字与 Logo）。
 `;
 
+const STYLE_RULES_PT = `
+Você está escrevendo para o blog da Accio Work. Voz: autor sênior de produto e operações para uma revista de tecnologia premium (nível Wired Brasil / The Verge). Confiante, humano, específico, sem marketês.
+
+Regras rígidas:
+- Nunca use travessão longo (—) nem médio (–) como pausa dentro da frase. Reescreva com ponto, vírgula, parênteses ou dois-pontos. O hífen normal em palavras compostas ("modelo-IA") pode.
+- Não abra com clichês: "No mundo de hoje", "Na era da IA", "Imagine um mundo onde".
+- Proibido usar: "aprofundar", "além disso" como muleta, "em conclusão", "desbloquear", "aproveitar" como coringa, "sem atrito", "revolucionar", "game-changer", "levar ao próximo nível", "liberar o potencial", "no fim das contas", "vale destacar".
+- Não empilhe mais de três bullets seguidos. Prefira parágrafos reais.
+- Não invente funções do produto. Use só as capacidades listadas na ficha abaixo.
+- Varie o comprimento das frases. Frases curtas ao lado de longas. Ritmo vivo.
+- Em cada seção: um cenário concreto, um número ou um exemplo real.
+- Fecho: um convite calmo e honesto para experimentar a Accio Work, sem grito de marketing.
+
+Estrutura:
+- title: incisivo, 5-10 palavras, sem spam de SEO.
+- description: uma frase honesta, 140-160 caracteres.
+- body: 1200-1800 palavras, markdown. H2 para seções, H3 raramente. Primeiro parágrafo antes de qualquer título.
+- slug: kebab-case, 3-6 palavras, apenas letras latinas, sem acentos.
+- keywords: 4-6 frases curtas que uma pessoa real buscaria.
+- cover_prompt: uma frase em inglês descrevendo uma capa editorial (sem texto nem logotipos na imagem).
+`;
+
 const STYLE_RULES: Record<BlogLang, string> = {
   en: STYLE_RULES_EN,
   ru: STYLE_RULES_RU,
@@ -165,6 +188,7 @@ const STYLE_RULES: Record<BlogLang, string> = {
   it: STYLE_RULES_IT,
   es: STYLE_RULES_ES,
   zh: STYLE_RULES_ZH,
+  pt: STYLE_RULES_PT,
 };
 
 export type TopicSeed = {

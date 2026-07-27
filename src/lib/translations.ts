@@ -1,4 +1,4 @@
-export type Lang = "en" | "ru" | "de" | "it" | "es" | "zh";
+export type Lang = "en" | "ru" | "de" | "it" | "es" | "zh" | "pt";
 
 export type Testimonial = {
   name: string;
@@ -85,7 +85,7 @@ export type Dict = {
     partneredWith: string;
     rights: string;
   };
-  langNames: { en: string; ru: string; de: string; it: string; es: string; zh: string };
+  langNames: { en: string; ru: string; de: string; it: string; es: string; zh: string; pt: string };
 };
 
 const en: Dict = {
@@ -228,7 +228,7 @@ const en: Dict = {
     partneredWith: "Partnered with",
     rights: "All rights reserved.",
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文" },
+  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português" },
 };
 
 const ru: Dict = {
@@ -371,7 +371,7 @@ const ru: Dict = {
     partneredWith: "В партнёрстве с",
     rights: "Все права защищены.",
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文" },
+  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português" },
 };
 
 const de: Dict = {
@@ -514,7 +514,7 @@ const de: Dict = {
     partneredWith: "In Partnerschaft mit",
     rights: "Alle Rechte vorbehalten.",
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文" },
+  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português" },
 };
 
 const it: Dict = {
@@ -657,7 +657,7 @@ const it: Dict = {
     partneredWith: "In partnership con",
     rights: "Tutti i diritti riservati.",
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文" },
+  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português" },
 };
 
 const es: Dict = {
@@ -800,7 +800,7 @@ const es: Dict = {
     partneredWith: "En colaboración con",
     rights: "Todos los derechos reservados.",
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文" },
+  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português" },
 };
 
 const zh: Dict = {
@@ -943,7 +943,151 @@ const zh: Dict = {
     partneredWith: "合作伙伴",
     rights: "版权所有。",
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文" },
+  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português" },
 };
 
-export const translations: Record<Lang, Dict> = { en, ru, de, it, es, zh };
+
+const pt: Dict = {
+  nav: {
+    pricing: "Preços",
+    help: "Central de ajuda",
+    events: "Eventos",
+    language: "Português",
+    download: "Baixar Accio Work",
+    blog: "Blog",
+  },
+  hero: {
+    brand: "Work",
+    tagline: "Seu time de negócios com agentes de IA, 24 horas por dia",
+    pills: ["Sem curva de aprendizado", "Feito para o negócio", "Segurança enterprise"],
+    desc:
+      "Automatize seu negócio de ponta a ponta: pesquisa e análise, sourcing e negociação, marketing e vendas, operações e CRM, com resultados reais.",
+    cta: "Baixar para macOS",
+    ctaBadge: "Apple Silicon",
+    ctaNote: "Para macOS 11 ou versão superior",
+  },
+  business: {
+    heading: "Feito para cada necessidade do seu negócio",
+    tabs: {
+      launch: {
+        tabLabel: "Abrir loja",
+        title: "Da ideia à primeira venda em minutos",
+        body: "Coloque no ar uma loja online completa, com produtos, fichas, design e SEO prontos para vender desde o primeiro momento.",
+        extraYou: "1 ideia",
+        extraAI: "produtos, fichas, SEO",
+      },
+      monitor: {
+        tabLabel: "Monitorar concorrentes",
+        title: "Configure uma vez, roda sozinho",
+        body: "Acompanhe preços, produtos e campanhas dos concorrentes com tarefas agendadas e transforme cada achado em uma estratégia concreta.",
+        extraYou: "configure uma vez",
+        extraAI: "preços, produtos, campanhas",
+      },
+      source: {
+        tabLabel: "Sourcing e negociação",
+        title: "O fornecedor certo no preço certo",
+        body: "Encontre fornecedores verificados, envie cotações e negocie por e-mail: tudo conduzido por você até fechar o melhor acordo.",
+        extraYou: "0 ligações",
+        extraAI: "fornecedores verificados, cotações",
+      },
+      promote: {
+        tabLabel: "Redes sociais",
+        title: "Publique, interaja e cresça no automático",
+        body: "Crie conteúdo com potencial viral, agende posts em todas as plataformas, interaja com a comunidade e meça resultados, dia e noite.",
+        extraYou: "publica uma vez",
+        extraAI: "agenda, engajamento, analytics",
+      },
+      tools: {
+        tabLabel: "Ferramentas sob medida",
+        title: "Ferramentas para seu negócio sem escrever código",
+        body: "Descreva o que precisa: calculadoras, dashboards, trackers ou sites, e receba na hora uma ferramenta que funciona e cresce com você.",
+        extraYou: "descreva uma vez",
+        extraAI: "calculadoras, dashboards, trackers",
+      },
+      organize: {
+        tabLabel: "Organizar arquivos",
+        title: "De documentos caóticos a decisões claras",
+        body: "Suba orçamentos, notas, relatórios ou qualquer arquivo e veja tudo organizado em tabelas e gráficos limpos, prontos para comparar em segundos.",
+        extraYou: "suba arquivos",
+        extraAI: "tabelas, gráficos, insights",
+      },
+      analyze: {
+        tabLabel: "Analisar bestsellers",
+        title: "Entenda seu mercado em um clique",
+        body: "Receba análises de mercado com dados de Jungle Scout, TikTok, Reddit, Alibaba.com e outras fontes verificadas.",
+        extraYou: "1 clique",
+        extraAI: "tendências, demanda, rankings",
+      },
+    },
+  },
+  why: {
+    heading: "Por que escolher a Accio Work?",
+    aiTitle: "Uma IA para tudo. Ou um time de especialistas.",
+    aiBody:
+      "Um agente generalista cuida das tarefas do dia a dia. Some especialistas em vendas, sourcing e design: cada um com sua expertise e memória.",
+    aiChannel: "#lancamento-novo-produto",
+    connectTitle: "Conecte uma vez. Automatize tudo.",
+    connectBody:
+      "Shopify, Gmail, Slack, LinkedIn e mais de 50 serviços: configuração em um clique. Sem projetos de integração nem devs.",
+    dataTitle: "Seus dados. Seu controle.",
+    dataBody:
+      "Execução em sandbox. Você aprova cada ação crítica. Soberania de dados sobre a infraestrutura da Alibaba.",
+    platformTitle: "Uma plataforma. Análise, design, automação.",
+    platformBody:
+      "Relatórios de sourcing, concept design, landing pages, vigilância de concorrentes: escolha uma skill, agende, esqueça.",
+    agents: [
+      { name: "Market Scout", msg: "Demanda UE de umidificadores portáteis ↑ 38% em 30 dias." },
+      { name: "Especialista em Sourcing", msg: "12 fornecedores verificados de Shenzhen · MOQ 100+ · BSCI ✓" },
+      { name: "Product Designer", msg: "3 conceitos em acabamento fosco, prontos para revisão." },
+      { name: "Copywriter de Fichas", msg: "Título SEO redigido, CTR previsto +37%." },
+    ],
+  },
+  testimonials: {
+    heading1: "Amado por",
+    highlight: "mais de 10 milhões",
+    heading2: "de usuários ativos por mês",
+    row1: [
+      { name: "Joseph S.", role: "Global Sourcing Manager", avatar: "https://i.pravatar.cc/80?img=13", text: "Accio Work transforma cotações dispersas e sem padrão em dados comparáveis na hora. É a **primeira IA que entende de verdade** a complexidade do comércio global." },
+      { name: "Mia C.", role: "Fundadora nos fins de semana", avatar: "https://i.pravatar.cc/80?img=47", text: "Eu tinha ideias de produto guardadas há meses, mas nenhuma ideia de onde comprar ou como lançar. Accio Work me levou das anotações a **um produto real para vender**." },
+      { name: "Luna M.", role: "Vendedora dropshipping", avatar: "https://i.pravatar.cc/80?img=45", text: "Accio Work vasculha Reddit, TikTok e Amazon para **identificar os vencedores** e comprar direto do fornecedor. A ferramenta definitiva para se antecipar aos trends virais." },
+      { name: "Keshia B.", role: "Side-hustler", avatar: "https://i.pravatar.cc/80?img=48", text: "Só sobrava a noite para a minha loja. Adoro que a Accio Work automatize a análise de nicho e os **follow-ups com fornecedores** enquanto estou no trabalho principal." },
+      { name: "Jay W.", role: "Fundador de marca streetwear", avatar: "https://i.pravatar.cc/80?img=15", text: "Accio Work me **economiza semanas de produção** com tech packs profissionais e negociação automática. E meus designs ficam 100% seguros." },
+    ],
+    row2: [
+      { name: "Nina K.", role: "Fundadora de marca outdoor", avatar: "https://i.pravatar.cc/80?img=49", text: "Antes eu gastava **10 horas por semana** gerenciando freelancers de conteúdo. Agora Accio Work automatiza tudo, do conteúdo à publicação, em só **10 minutos por semana**." },
+      { name: "Sara N.", role: "Gerente de salão de unhas", avatar: "https://i.pravatar.cc/80?img=32", text: "Muito fácil de usar. Acho que **finalmente entendi como a IA** ajuda o meu negócio." },
+      { name: "Clara E.", role: "Especialista de Compras", avatar: "https://i.pravatar.cc/80?img=44", text: "A busca por fornecedores sempre foi uma caça a detalhes perdidos. Com os follow-ups proativos da Accio Work chego a uma **shortlist limpa muito antes**." },
+      { name: "Andrew P.", role: "Wedding & Event Planner", avatar: "https://i.pravatar.cc/80?img=12", text: "Esta ferramenta me ajudou a encontrar fornecedores bem variados a preços bem melhores e a coordenar entregas certinho com as datas do evento. As **reservas cresceram 30%** graças à Accio Work." },
+      { name: "Joan W.", role: "Consultora Supply Chain", avatar: "https://i.pravatar.cc/80?img=5", text: "Diferente de outras IAs, a Accio Work usa **dados comerciais reais** do alibaba.com e a inteligência de mercado da Jungle Scout. Indispensável para vendedores de e-commerce." },
+    ],
+  },
+  faq: {
+    heading: "FAQ",
+    readGuide: "Ler o guia rápido",
+    items: [
+      { q: "O que diferencia a Accio Work de um chatbot de IA qualquer?", a: "Ferramentas de chat comuns só respondem com texto. Accio Work é uma plataforma de agentes orientada à execução: lê arquivos locais, roda comandos no terminal, controla o navegador e chama APIs externas. Ela não só diz o que fazer, faz o trabalho.", linkLabel: "Ler o guia rápido" },
+      { q: "Quais LLMs são suportados?", a: "Hoje suportamos Gemini, GPT-4o, Claude e Qwen. Você pode atribuir modelos diferentes a agentes diferentes. O acesso aos modelos passa pelo nosso gateway, então esqueça a configuração de chaves de API complicadas.", linkLabel: "Ver capacidades dos agentes" },
+      { q: "O que a automação de navegador pode fazer?", a: "Accio Work controla um navegador real via Chrome DevTools Protocol. Os agentes podem pesquisar na web, extrair páginas, preencher formulários, tirar screenshots e completar fluxos de várias etapas sem as suas mãos. O acesso ao navegador é uma capacidade sensível e exige autorização explícita.", linkLabel: "Ver ferramentas dos agentes" },
+      { q: "Posso agendar a execução automática dos agentes?", a: "Sim. O recurso Automations permite criar tarefas agendadas estilo cron, descritas em linguagem natural no chat ou configuradas na página Automations. As agendas rodam localmente, então funcionam mesmo sem conexão. Execuções perdidas são recuperadas ao reiniciar.", linkLabel: "Ver a documentação de automações" },
+      { q: "Como conecto um agente ao Telegram ou DingTalk?", a: "Abra a página Channels no cliente, escolha a plataforma e siga o guia para adicionar um token de bot. Accio Work suporta Telegram, Discord, DingTalk, Lark (Feishu) e WeChat. Uma vez conectado, o agente responde nos chats ou recebe tarefas automaticamente.", linkLabel: "Ver os canais suportados" },
+      { q: "O que são Skills e como ampliam os agentes?", a: "Skills são pacotes plugin que dão aos agentes capacidades de domínio específicas: revisão de código, copywriting, auditoria de SEO e mais. Você pode instalar do marketplace ou criar as suas. Accio Work também suporta o padrão Model Context Protocol (MCP) para integrar servidores de ferramentas externas.", linkLabel: "Ver a gestão de skills" },
+      { q: "Quais plataformas são suportadas?", a: "Accio Work está disponível para macOS (Apple Silicon e Intel) e Windows (x64). É um app desktop nativo feito com Electron, com acesso completo aos recursos locais do sistema." },
+      { q: "Vários agentes podem colaborar em uma tarefa?", a: "Sim. O recurso Teams permite criar grupos de agentes com um Team Lead e agentes membros. O TL delega subtarefas, coordena o trabalho no chat de grupo e orquestra fluxos multi-agente, ideal para projetos complexos com papéis especializados.", linkLabel: "Ver a documentação de times" },
+    ],
+  },
+  cta: {
+    title: "Experimente a Accio Work hoje.",
+    subtitle: "Viva a experiência de trabalho definitiva com a Accio Work.",
+    download: "Baixar para macOS",
+    ctaBadge: "Apple Silicon",
+    quickStart: "Início rápido",
+    note: "Para macOS 11 ou versão superior",
+  },
+  footer: {
+    partneredWith: "Em parceria com",
+    rights: "Todos os direitos reservados.",
+  },
+  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português" },
+};
+
+export const translations: Record<Lang, Dict> = { en, ru, de, it, es, zh, pt };

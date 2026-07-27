@@ -3,18 +3,18 @@ import { I18nProvider } from "@/lib/i18n";
 import { BlogList } from "@/components/blog/BlogList";
 import { listArticles } from "@/lib/blog.functions";
 
-export const Route = createFileRoute("/zh/blog/")({
-  loader: async () => ({ articles: await listArticles({ data: { lang: "zh", limit: 60 } }) }),
+export const Route = createFileRoute("/pt/blog/")({
+  loader: async () => ({ articles: await listArticles({ data: { lang: "pt", limit: 60 } }) }),
   head: () => ({
     meta: [
-      { title: "Accio Work 博客 —— 关于 AI 驱动生意的实战笔记" },
-      { name: "description", content: "关于如何用一个真正听你指挥的 AI 团队经营现代生意的一线笔记。每天更新。" },
-      { property: "og:title", content: "Accio Work 博客" },
-      { property: "og:locale", content: "zh_CN" },
-      { property: "og:url", content: "https://acciowork.pro/zh/blog" },
+      { title: "Blog Accio Work — ideias práticas de um negócio guiado por IA" },
+      { name: "description", content: "Notas de campo sobre como tocar um negócio moderno com um time de IA que você realmente dirige. Artigos novos todo dia." },
+      { property: "og:title", content: "Blog Accio Work" },
+      { property: "og:locale", content: "pt_BR" },
+      { property: "og:url", content: "https://acciowork.pro/pt/blog" },
     ],
     links: [
-      { rel: "canonical", href: "https://acciowork.pro/zh/blog" },
+      { rel: "canonical", href: "https://acciowork.pro/pt/blog" },
       { rel: "alternate", hrefLang: "en", href: "https://acciowork.pro/blog" },
       { rel: "alternate", hrefLang: "ru", href: "https://acciowork.pro/ru/blog" },
       { rel: "alternate", hrefLang: "de", href: "https://acciowork.pro/de/blog" },
@@ -25,16 +25,16 @@ export const Route = createFileRoute("/zh/blog/")({
       { rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/blog" },
     ],
   }),
-  component: BlogZh,
+  component: BlogPt,
   errorComponent: ({ error }) => <div className="p-10 text-center">{error.message}</div>,
-  notFoundComponent: () => <div className="p-10 text-center">未找到</div>,
+  notFoundComponent: () => <div className="p-10 text-center">Não encontrado</div>,
 });
 
-function BlogZh() {
+function BlogPt() {
   const { articles } = Route.useLoaderData();
   return (
     <I18nProvider>
-      <BlogList lang="zh" articles={articles} />
+      <BlogList lang="pt" articles={articles} />
     </I18nProvider>
   );
 }
