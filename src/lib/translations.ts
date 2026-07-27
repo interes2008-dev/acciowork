@@ -1,4 +1,4 @@
-export type Lang = "en" | "ru" | "de" | "it" | "es" | "zh";
+export type Lang = "en" | "ru" | "de" | "it" | "es" | "zh" | "pt";
 
 export type Testimonial = {
   name: string;

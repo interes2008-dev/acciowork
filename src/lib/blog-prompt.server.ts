@@ -1,6 +1,6 @@
 // Server-only prompt builder + text sanitizer used by the daily generation cron.
 
-export type BlogLang = "en" | "ru" | "de" | "it" | "es" | "zh";
+export type BlogLang = "en" | "ru" | "de" | "it" | "es" | "zh" | "pt";
 
 export const LANG_LABEL: Record<BlogLang, string> = {
   en: "English",
@@ -9,6 +9,7 @@ export const LANG_LABEL: Record<BlogLang, string> = {
   it: "Italian (Italiano)",
   es: "Spanish (Español)",
   zh: "Simplified Chinese (简体中文)",
+  pt: "Portuguese (Português do Brasil)",
 };
 
 const CAPABILITY_SHEET = `
@@ -165,6 +166,7 @@ const STYLE_RULES: Record<BlogLang, string> = {
   it: STYLE_RULES_IT,
   es: STYLE_RULES_ES,
   zh: STYLE_RULES_ZH,
+  pt: STYLE_RULES_PT,
 };
 
 export type TopicSeed = {
