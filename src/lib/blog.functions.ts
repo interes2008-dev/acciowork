@@ -3,7 +3,7 @@ import { createClient } from "@supabase/supabase-js";
 import { z } from "zod";
 import type { Database } from "@/integrations/supabase/types";
 
-const LangSchema = z.enum(["en", "ru", "de", "it", "es", "zh", "pt"]);
+const LangSchema = z.enum(["en", "ru", "de", "it", "es", "zh", "pt", "hi"]);
 
 function publicClient() {
   return createClient<Database>(

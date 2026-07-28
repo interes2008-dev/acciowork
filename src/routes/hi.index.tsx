@@ -1,45 +1,45 @@
 import { createFileRoute } from "@tanstack/react-router";
 import LandingPage from "@/components/landing/LandingPage";
 
-export const Route = createFileRoute("/pt/")({
-  component: IndexPt,
+export const Route = createFileRoute("/hi/")({
+  component: IndexHi,
   head: () => ({
     meta: [
-      { title: "Accio Work | Plataforma de IA para sourcing e automação de negócio" },
+      { title: "Accio Work | सोर्सिंग और बिज़नेस ऑटोमेशन के लिए AI प्लेटफ़ॉर्म" },
       {
         name: "description",
         content:
-          "Accio Work — workspace com IA: análise de mercado, comparação de fornecedores, criação de conteúdo e automação de processos em uma só plataforma.",
+          "Accio Work — AI वर्कस्पेस: मार्केट एनालिसिस, सप्लायर तुलना, कंटेंट निर्माण और बिज़नेस प्रक्रियाओं का ऑटोमेशन — एक ही प्लेटफ़ॉर्म पर।",
       },
       {
         name: "keywords",
         content:
-          "Accio Work, sourcing com IA, buscar fornecedores, análise de mercado, automação de negócio, assistente IA, e-commerce, análise de concorrência, conteúdo com IA",
+          "Accio Work, AI सोर्सिंग, सप्लायर सर्च, मार्केट एनालिसिस, बिज़नेस ऑटोमेशन, AI असिस्टेंट, ई-कॉमर्स, प्रतिस्पर्धी विश्लेषण, AI कंटेंट",
       },
-      { property: "og:locale", content: "pt_BR" },
+      { property: "og:locale", content: "hi_IN" },
       { property: "og:locale:alternate", content: "en_US" },
-      { property: "og:title", content: "Accio Work | Plataforma de IA para sourcing e automação" },
+      { property: "og:title", content: "Accio Work | सोर्सिंग और बिज़नेस ऑटोमेशन के लिए AI प्लेटफ़ॉर्म" },
       {
         property: "og:description",
         content:
-          "Accio Work — workspace com IA: análise de mercado, comparação de fornecedores, criação de conteúdo e automação de processos.",
+          "Accio Work — AI वर्कस्पेस: मार्केट एनालिसिस, सप्लायर तुलना, कंटेंट निर्माण और प्रक्रियाओं का ऑटोमेशन।",
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Accio Work" },
-      { property: "og:url", content: "https://acciowork.pro/pt" },
+      { property: "og:url", content: "https://acciowork.pro/hi" },
       { property: "og:image", content: "https://acciowork.pro/og-image.png" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { property: "og:image:type", content: "image/png" },
-      { property: "og:image:alt", content: "Accio Work — workspace com IA para sourcing, análise e automação" },
+      { property: "og:image:alt", content: "Accio Work — सोर्सिंग, एनालिसिस और ऑटोमेशन के लिए AI वर्कस्पेस" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Accio Work | Plataforma de IA para sourcing" },
-      { name: "twitter:description", content: "Workspace com IA: sourcing, análise de concorrência, conteúdo e automação." },
+      { name: "twitter:title", content: "Accio Work | सोर्सिंग के लिए AI प्लेटफ़ॉर्म" },
+      { name: "twitter:description", content: "AI वर्कस्पेस: सोर्सिंग, प्रतिस्पर्धी विश्लेषण, कंटेंट और ऑटोमेशन।" },
       { name: "twitter:image", content: "https://acciowork.pro/og-image.png" },
-      { name: "twitter:image:alt", content: "Accio Work — plataforma de IA para o negócio" },
+      { name: "twitter:image:alt", content: "Accio Work — बिज़नेस के लिए AI प्लेटफ़ॉर्म" },
     ],
     links: [
-      { rel: "canonical", href: "https://acciowork.pro/pt" },
+      { rel: "canonical", href: "https://acciowork.pro/hi" },
       { rel: "alternate", hrefLang: "en", href: "https://acciowork.pro/" },
       { rel: "alternate", hrefLang: "ru", href: "https://acciowork.pro/ru" },
       { rel: "alternate", hrefLang: "de", href: "https://acciowork.pro/de" },
@@ -57,10 +57,10 @@ export const Route = createFileRoute("/pt/")({
           "@context": "https://schema.org",
           "@type": "WebSite",
           name: "Accio Work",
-          url: "https://acciowork.pro/pt",
-          inLanguage: "pt-BR",
+          url: "https://acciowork.pro/hi",
+          inLanguage: "hi-IN",
           description:
-            "Workspace com IA: análise de mercado, comparação de fornecedores, criação de conteúdo e automação de processos.",
+            "AI वर्कस्पेस: मार्केट एनालिसिस, सप्लायर तुलना, कंटेंट निर्माण और प्रक्रियाओं का ऑटोमेशन।",
         }),
       },
       {
@@ -81,7 +81,7 @@ export const Route = createFileRoute("/pt/")({
           name: "Accio Work",
           applicationCategory: "BusinessApplication",
           operatingSystem: "Web, macOS, Windows",
-          inLanguage: "pt-BR",
+          inLanguage: "hi-IN",
           offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
         }),
       },
@@ -89,6 +89,6 @@ export const Route = createFileRoute("/pt/")({
   }),
 });
 
-function IndexPt() {
+function IndexHi() {
   return <LandingPage />;
 }
