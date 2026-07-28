@@ -228,7 +228,7 @@ const en: Dict = {
     partneredWith: "Partnered with",
     rights: "All rights reserved.",
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português" },
+  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português", hi: "हिन्दी" },
 };
 
 const ru: Dict = {
@@ -371,7 +371,7 @@ const ru: Dict = {
     partneredWith: "В партнёрстве с",
     rights: "Все права защищены.",
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português" },
+  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português", hi: "हिन्दी" },
 };
 
 const de: Dict = {
@@ -514,7 +514,7 @@ const de: Dict = {
     partneredWith: "In Partnerschaft mit",
     rights: "Alle Rechte vorbehalten.",
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português" },
+  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português", hi: "हिन्दी" },
 };
 
 const it: Dict = {
@@ -657,7 +657,7 @@ const it: Dict = {
     partneredWith: "In partnership con",
     rights: "Tutti i diritti riservati.",
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português" },
+  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português", hi: "हिन्दी" },
 };
 
 const es: Dict = {
@@ -800,7 +800,7 @@ const es: Dict = {
     partneredWith: "En colaboración con",
     rights: "Todos los derechos reservados.",
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português" },
+  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português", hi: "हिन्दी" },
 };
 
 const zh: Dict = {
@@ -943,7 +943,7 @@ const zh: Dict = {
     partneredWith: "合作伙伴",
     rights: "版权所有。",
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português" },
+  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português", hi: "हिन्दी" },
 };
 
 
@@ -1087,7 +1087,7 @@ const pt: Dict = {
     partneredWith: "Em parceria com",
     rights: "Todos os direitos reservados.",
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português" },
+  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português", hi: "हिन्दी" },
 };
 
 export const translations: Record<Lang, Dict> = { en, ru, de, it, es, zh, pt };
