@@ -130,15 +130,7 @@ function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-[#E5E7EB] bg-white/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-[1280px] items-center justify-between px-4 sm:px-6">
         <a href="/" className="flex items-center gap-2">
-          <span
-            aria-hidden
-            className="inline-block h-6 w-6"
-            style={{
-              background: "linear-gradient(135deg,#17B26A,#7CE7C2)",
-              clipPath: "polygon(50% 0,100% 100%,0 100%)",
-            }}
-          />
-          <span className="text-[18px] font-extrabold text-[#1a1a2e]">Accio</span>
+          <BrandLogo size={22} />
         </a>
         <nav className="hidden items-center gap-8 text-[14px] font-medium text-[#1a1a2e]/80 md:flex">
           <a href="/#pricing" className="hover:text-[#1a1a2e]">Pricing</a>
@@ -553,15 +545,7 @@ function Footer() {
     <footer className="bg-[#F8F9FB] py-10">
       <div className="mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-6 px-6 sm:flex-row">
         <a href="/" className="flex items-center gap-2">
-          <span
-            aria-hidden
-            className="inline-block h-5 w-5"
-            style={{
-              background: "linear-gradient(135deg,#17B26A,#7CE7C2)",
-              clipPath: "polygon(50% 0,100% 100%,0 100%)",
-            }}
-          />
-          <span className="text-[15px] font-extrabold text-[#1a1a2e]">Accio</span>
+          <BrandLogo size={18} />
         </a>
         <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[13px] text-[#6B7280]">
           <a href="/#pricing" className="hover:text-[#1a1a2e]">Pricing</a>
