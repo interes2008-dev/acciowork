@@ -20,20 +20,22 @@ function detectInitial(): Lang {
     if (path === "/es") return "es";
     if (path === "/zh") return "zh";
     if (path === "/pt") return "pt";
+    if (path === "/hi") return "hi";
     if (path.startsWith("/it/")) return "it";
     if (path.startsWith("/ru/")) return "ru";
     if (path.startsWith("/de/")) return "de";
     if (path.startsWith("/es/")) return "es";
     if (path.startsWith("/zh/")) return "zh";
     if (path.startsWith("/pt/")) return "pt";
+    if (path.startsWith("/hi/")) return "hi";
   } catch {}
   try {
     const param = new URLSearchParams(window.location.search).get("lang");
-    if (param === "ru" || param === "en" || param === "de" || param === "it" || param === "es" || param === "zh" || param === "pt") return param;
+    if (param === "ru" || param === "en" || param === "de" || param === "it" || param === "es" || param === "zh" || param === "pt" || param === "hi") return param;
   } catch {}
   try {
     const saved = window.localStorage.getItem(STORAGE_KEY);
-    if (saved === "ru" || saved === "en" || saved === "de" || saved === "it" || saved === "es" || saved === "zh" || saved === "pt") return saved;
+    if (saved === "ru" || saved === "en" || saved === "de" || saved === "it" || saved === "es" || saved === "zh" || saved === "pt" || saved === "hi") return saved;
   } catch {}
   const nav =
     (typeof navigator !== "undefined" &&
@@ -46,6 +48,7 @@ function detectInitial(): Lang {
   if (low.startsWith("es")) return "es";
   if (low.startsWith("zh")) return "zh";
   if (low.startsWith("pt")) return "pt";
+  if (low.startsWith("hi")) return "hi";
   return "en";
 }
 
