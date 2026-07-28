@@ -35,7 +35,7 @@ function LanguageSwitcher() {
     return () => document.removeEventListener("mousedown", onDoc);
   }, [open]);
 
-  const options: Lang[] = ["en", "ru", "de", "it", "es", "zh", "pt"];
+  const options: Lang[] = ["en", "ru", "de", "it", "es", "zh", "pt", "hi"];
 
   return (
     <div ref={rootRef} className="relative">
@@ -78,7 +78,9 @@ function LanguageSwitcher() {
                                 ? "/zh/blog"
                                 : code === "pt"
                                   ? "/pt/blog"
-                                  : "/blog";
+                                  : code === "hi"
+                                    ? "/hi/blog"
+                                    : "/blog";
                     if (window.location.pathname !== target) {
                       window.location.assign(target);
                     }
@@ -101,9 +103,9 @@ function LanguageSwitcher() {
 
 export function BlogShell({ children }: { children: React.ReactNode }) {
   const { lang } = useI18n();
-  const home = lang === "ru" ? "/ru" : lang === "de" ? "/de" : lang === "it" ? "/it" : lang === "es" ? "/es" : lang === "zh" ? "/zh" : lang === "pt" ? "/pt" : "/";
+  const home = lang === "ru" ? "/ru" : lang === "de" ? "/de" : lang === "it" ? "/it" : lang === "es" ? "/es" : lang === "zh" ? "/zh" : lang === "pt" ? "/pt" : lang === "hi" ? "/hi" : "/";
   const blog =
-    lang === "ru" ? "/ru/blog" : lang === "de" ? "/de/blog" : lang === "it" ? "/it/blog" : lang === "es" ? "/es/blog" : lang === "zh" ? "/zh/blog" : lang === "pt" ? "/pt/blog" : "/blog";
+    lang === "ru" ? "/ru/blog" : lang === "de" ? "/de/blog" : lang === "it" ? "/it/blog" : lang === "es" ? "/es/blog" : lang === "zh" ? "/zh/blog" : lang === "pt" ? "/pt/blog" : lang === "hi" ? "/hi/blog" : "/blog";
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur">

@@ -1,6 +1,6 @@
 // Server-only prompt builder + text sanitizer used by the daily generation cron.
 
-export type BlogLang = "en" | "ru" | "de" | "it" | "es" | "zh" | "pt";
+export type BlogLang = "en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi";
 
 export const LANG_LABEL: Record<BlogLang, string> = {
   en: "English",
@@ -10,6 +10,7 @@ export const LANG_LABEL: Record<BlogLang, string> = {
   es: "Spanish (Español)",
   zh: "Simplified Chinese (简体中文)",
   pt: "Portuguese (Português do Brasil)",
+  hi: "Hindi (हिन्दी)",
 };
 
 const CAPABILITY_SHEET = `
@@ -181,6 +182,28 @@ Estrutura:
 - cover_prompt: uma frase em inglês descrevendo uma capa editorial (sem texto nem logotipos na imagem).
 `;
 
+const STYLE_RULES_HI = `
+तुम Accio Work ब्लॉग के लिए लिख रहे हो। आवाज़: एक अनुभवी प्रोडक्ट और ऑपरेशन लेखक जो एक प्रीमियम टेक मैगज़ीन (The Ken या FactorDaily के स्तर की) के लिए लिखता है। आत्मविश्वासी, इंसानी, ठोस, बिना मार्केटिंग-भाषा के।
+
+सख्त नियम:
+- वाक्य के बीच लंबे डैश (—) या मध्यम डैश (–) का इस्तेमाल कभी मत करो। पूर्ण विराम, अल्पविराम, कोष्ठक या कोलन से लिखो। शब्दों के बीच सामान्य हाइफ़न ("AI-मॉडल") ठीक है।
+- घिसे-पिटे शुरुआत मत लिखो: "आज की तेज़-रफ़्तार दुनिया में", "AI के युग में", "कल्पना कीजिए एक ऐसी दुनिया की"।
+- ये शब्द/वाक्यांश मत लिखो: "गहराई से जानें", "इसके अलावा", "अंत में", "अनलॉक", "लीवरेज", "बिना रुकावट", "क्रांति ला दे", "गेम-चेंजर", "अगले स्तर पर", "क्षमता को उजागर", "अंततः", "यह ध्यान देने योग्य है"।
+- लगातार तीन से ज़्यादा बुलेट पॉइंट मत लगाओ। असली पैराग्राफ को प्राथमिकता दो।
+- प्रोडक्ट फ़ीचर मत गढ़ो। नीचे दी गई क्षमताओं तक ही सीमित रहो।
+- वाक्य की लंबाई बदलते रहो। छोटे और लंबे वाक्य साथ रखो। ज़िंदा लय।
+- हर सेक्शन में एक ठोस परिदृश्य, संख्या या असली उदाहरण हो।
+- समापन: Accio Work आज़माने का शांत, ईमानदार निमंत्रण, कोई मार्केटिंग शोर नहीं।
+
+ढाँचा:
+- title: तेज़, 5-10 शब्द, SEO कचरा नहीं।
+- description: एक ईमानदार वाक्य, 140-160 अक्षर।
+- body: 1200-1800 शब्द, markdown। मुख्य सेक्शन के लिए H2, H3 कम। पहला पैराग्राफ किसी भी शीर्षक से पहले।
+- slug: kebab-case, 3-6 शब्द, केवल लैटिन अक्षर।
+- keywords: 4-6 छोटे वाक्यांश जो असली लोग खोजते हैं।
+- cover_prompt: एक अंग्रेज़ी वाक्य जो एडिटोरियल कवर छवि का वर्णन करे (छवि में कोई टेक्स्ट या लोगो न हो)।
+`;
+
 const STYLE_RULES: Record<BlogLang, string> = {
   en: STYLE_RULES_EN,
   ru: STYLE_RULES_RU,
@@ -189,6 +212,7 @@ const STYLE_RULES: Record<BlogLang, string> = {
   es: STYLE_RULES_ES,
   zh: STYLE_RULES_ZH,
   pt: STYLE_RULES_PT,
+  hi: STYLE_RULES_HI,
 };
 
 export type TopicSeed = {

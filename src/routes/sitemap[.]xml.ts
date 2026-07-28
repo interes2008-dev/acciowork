@@ -23,6 +23,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           { hreflang: "es", href: `${BASE_URL}/es` },
           { hreflang: "zh", href: `${BASE_URL}/zh` },
           { hreflang: "pt", href: `${BASE_URL}/pt` },
+          { hreflang: "hi", href: `${BASE_URL}/hi` },
           { hreflang: "x-default", href: `${BASE_URL}/` },
         ];
         const entries: SitemapEntry[] = [
@@ -33,6 +34,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/es", changefreq: "weekly", priority: "0.9", alternates },
           { path: "/zh", changefreq: "weekly", priority: "0.9", alternates },
           { path: "/pt", changefreq: "weekly", priority: "0.9", alternates },
+          { path: "/hi", changefreq: "weekly", priority: "0.9", alternates },
           { path: "/blog", changefreq: "daily", priority: "0.8" },
           { path: "/ru/blog", changefreq: "daily", priority: "0.8" },
           { path: "/de/blog", changefreq: "daily", priority: "0.8" },
@@ -40,6 +42,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/es/blog", changefreq: "daily", priority: "0.8" },
           { path: "/zh/blog", changefreq: "daily", priority: "0.8" },
           { path: "/pt/blog", changefreq: "daily", priority: "0.8" },
+          { path: "/hi/blog", changefreq: "daily", priority: "0.8" },
         ];
 
         try {
@@ -54,11 +57,13 @@ export const Route = createFileRoute("/sitemap.xml")({
                     ? "/it/blog"
                     : a.lang === "es"
                       ? "/es/blog"
-                      : a.lang === "zh"
-                        ? "/zh/blog"
-                        : a.lang === "pt"
-                          ? "/pt/blog"
-                          : "/blog";
+                        : a.lang === "zh"
+                          ? "/zh/blog"
+                          : a.lang === "pt"
+                            ? "/pt/blog"
+                            : a.lang === "hi"
+                              ? "/hi/blog"
+                              : "/blog";
             entries.push({ path: `${prefix}/${a.slug}`, changefreq: "monthly", priority: "0.7" });
           }
         } catch {
