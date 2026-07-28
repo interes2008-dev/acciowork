@@ -26,6 +26,7 @@ import { Route as HiIndexRouteImport } from './routes/hi.index'
 import { Route as EsIndexRouteImport } from './routes/es.index'
 import { Route as DeIndexRouteImport } from './routes/de.index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as EventsFreeForeverRouteImport } from './routes/events.free-forever'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as ZhBlogIndexRouteImport } from './routes/zh.blog.index'
 import { Route as RuBlogIndexRouteImport } from './routes/ru.blog.index'
@@ -128,6 +129,11 @@ const BlogIndexRoute = BlogIndexRouteImport.update({
   path: '/blog/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EventsFreeForeverRoute = EventsFreeForeverRouteImport.update({
+  id: '/events/free-forever',
+  path: '/events/free-forever',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogSlugRoute = BlogSlugRouteImport.update({
   id: '/blog/$slug',
   path: '/blog/$slug',
@@ -221,6 +227,7 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/zh': typeof ZhRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
+  '/events/free-forever': typeof EventsFreeForeverRoute
   '/blog/': typeof BlogIndexRoute
   '/de/': typeof DeIndexRoute
   '/es/': typeof EsIndexRoute
@@ -249,6 +256,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/events/free-forever': typeof EventsFreeForeverRoute
   '/blog': typeof BlogIndexRoute
   '/de': typeof DeIndexRoute
   '/es': typeof EsIndexRoute
@@ -285,6 +293,7 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/zh': typeof ZhRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
+  '/events/free-forever': typeof EventsFreeForeverRoute
   '/blog/': typeof BlogIndexRoute
   '/de/': typeof DeIndexRoute
   '/es/': typeof EsIndexRoute
@@ -322,6 +331,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/zh'
     | '/blog/$slug'
+    | '/events/free-forever'
     | '/blog/'
     | '/de/'
     | '/es/'
@@ -350,6 +360,7 @@ export interface FileRouteTypes {
     | '/'
     | '/sitemap.xml'
     | '/blog/$slug'
+    | '/events/free-forever'
     | '/blog'
     | '/de'
     | '/es'
@@ -385,6 +396,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/zh'
     | '/blog/$slug'
+    | '/events/free-forever'
     | '/blog/'
     | '/de/'
     | '/es/'
@@ -421,6 +433,7 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   ZhRoute: typeof ZhRouteWithChildren
   BlogSlugRoute: typeof BlogSlugRoute
+  EventsFreeForeverRoute: typeof EventsFreeForeverRoute
   BlogIndexRoute: typeof BlogIndexRoute
   ApiPublicCronGenerateArticlesRoute: typeof ApiPublicCronGenerateArticlesRoute
 }
@@ -544,6 +557,13 @@ declare module '@tanstack/react-router' {
       path: '/blog'
       fullPath: '/blog/'
       preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/events/free-forever': {
+      id: '/events/free-forever'
+      path: '/events/free-forever'
+      fullPath: '/events/free-forever'
+      preLoaderRoute: typeof EventsFreeForeverRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog/$slug': {
@@ -770,9 +790,20 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   ZhRoute: ZhRouteWithChildren,
   BlogSlugRoute: BlogSlugRoute,
+  EventsFreeForeverRoute: EventsFreeForeverRoute,
   BlogIndexRoute: BlogIndexRoute,
   ApiPublicCronGenerateArticlesRoute: ApiPublicCronGenerateArticlesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
