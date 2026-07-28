@@ -4,6 +4,25 @@ import { useEffect, useRef, useState } from "react";
 const REFERRAL_URL =
   "https://www.accio.com/login?sId=KECtp1GttZ42%2FwpJUH5IxQ%3D%3D&ic=IC506004212009&tenant=accio&src=p_referral_IC506004212009&source=invite_center&return_url=https%3A%2F%2Fwww.accio.com%2Fwork%2F";
 
+/* ---------- Brand logo (matches landing page) ---------- */
+function BrandLogo({ size = 26 }: { size?: number }) {
+  return (
+    <div className="flex items-center gap-1.5 font-bold tracking-tight" style={{ fontSize: size }}>
+      <svg width={size * 0.95} height={size} viewBox="0 0 28 28" aria-hidden>
+        <defs>
+          <linearGradient id="accioTriEvt" x1="0" y1="1" x2="1" y2="0">
+            <stop offset="0%" stopColor="#0F172A" />
+            <stop offset="55%" stopColor="#17B26A" />
+            <stop offset="100%" stopColor="#7CE7C2" />
+          </linearGradient>
+        </defs>
+        <path d="M14 3 L26 25 L2 25 Z" fill="url(#accioTriEvt)" />
+      </svg>
+      <span className="text-[#0F172A]">Accio</span>
+    </div>
+  );
+}
+
 export const Route = createFileRoute("/events/free-forever")({
   head: () => ({
     meta: [
@@ -97,7 +116,7 @@ function Counter({ to, suffix = "", duration = 2000 }: { to: number; suffix?: st
   return (
     <span
       ref={ref}
-      className="bg-gradient-to-r from-[#0FA44F] to-[#0CCE6B] bg-clip-text text-transparent"
+      className="bg-gradient-to-r from-[#17B26A] to-[#7CE7C2] bg-clip-text text-transparent"
     >
       {formatted}
       {suffix}
@@ -111,15 +130,7 @@ function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-[#E5E7EB] bg-white/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-[1280px] items-center justify-between px-4 sm:px-6">
         <a href="/" className="flex items-center gap-2">
-          <span
-            aria-hidden
-            className="inline-block h-6 w-6"
-            style={{
-              background: "linear-gradient(135deg,#0FA44F,#0CCE6B)",
-              clipPath: "polygon(50% 0,100% 100%,0 100%)",
-            }}
-          />
-          <span className="text-[18px] font-extrabold text-[#1a1a2e]">Accio</span>
+          <BrandLogo size={22} />
         </a>
         <nav className="hidden items-center gap-8 text-[14px] font-medium text-[#1a1a2e]/80 md:flex">
           <a href="/#pricing" className="hover:text-[#1a1a2e]">Pricing</a>
@@ -130,7 +141,7 @@ function Header() {
             className="flex items-center gap-1 font-semibold text-[#1a1a2e]"
           >
             Events <span>🔥</span>
-            <span className="ml-1 h-1.5 w-1.5 rounded-full bg-gradient-to-r from-[#0FA44F] to-[#0CCE6B]" />
+            <span className="ml-1 h-1.5 w-1.5 rounded-full bg-gradient-to-r from-[#17B26A] to-[#7CE7C2]" />
           </a>
         </nav>
         <div className="flex items-center gap-3 sm:gap-5">
@@ -156,18 +167,18 @@ function Hero() {
       <div
         aria-hidden
         className="pointer-events-none absolute -right-32 -top-32 h-[480px] w-[480px] rounded-full opacity-40 blur-3xl"
-        style={{ background: "radial-gradient(circle,#0CCE6B33,transparent 70%)" }}
+        style={{ background: "radial-gradient(circle,#7CE7C233,transparent 70%)" }}
       />
       <div className="relative mx-auto max-w-[900px] px-6 text-center">
         <Reveal>
-          <span className="inline-flex items-center gap-2 rounded-full bg-[#0FA44F]/10 px-4 py-1.5 text-[13px] font-semibold text-[#0FA44F]">
+          <span className="inline-flex items-center gap-2 rounded-full bg-[#17B26A]/10 px-4 py-1.5 text-[13px] font-semibold text-[#17B26A]">
             Только что • 28 июля 2026
           </span>
         </Reveal>
         <Reveal delay={80}>
           <h1 className="mt-6 text-[40px] font-extrabold leading-[1.05] tracking-tight text-[#1a1a2e] sm:text-[56px] lg:text-[64px]">
             Accio Work стал бесплатным.{" "}
-            <span className="bg-gradient-to-r from-[#0FA44F] to-[#0CCE6B] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#17B26A] to-[#7CE7C2] bg-clip-text text-transparent">
               Навсегда.
             </span>
           </h1>
@@ -362,11 +373,11 @@ function Compare() {
         <Reveal delay={150}>
           <p className="mx-auto mt-12 max-w-[820px] text-center text-[22px] font-extrabold text-[#1a1a2e] sm:text-[28px]">
             Разница по деньгам:{" "}
-            <span className="bg-gradient-to-r from-[#0FA44F] to-[#0CCE6B] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#17B26A] to-[#7CE7C2] bg-clip-text text-transparent">
               в 483 раза
             </span>
             . По времени:{" "}
-            <span className="bg-gradient-to-r from-[#0FA44F] to-[#0CCE6B] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#17B26A] to-[#7CE7C2] bg-clip-text text-transparent">
               в 1 440 раз
             </span>
             .
@@ -391,7 +402,7 @@ function Story() {
             <div className="relative p-8 sm:p-12">
               <span
                 aria-hidden
-                className="absolute left-0 top-6 bottom-6 w-1 rounded-r bg-gradient-to-b from-[#0FA44F] to-[#0CCE6B]"
+                className="absolute left-0 top-6 bottom-6 w-1 rounded-r bg-gradient-to-b from-[#17B26A] to-[#7CE7C2]"
               />
               <h3 className="text-[22px] font-bold text-[#1a1a2e]">
                 Антон, учитель из Новосибирска
@@ -405,7 +416,7 @@ function Story() {
                 <p>Через 48 минут магазин был готов. Лендинг, карточки, Shopify — всё.</p>
                 <p>В понедельник запустил рекламу. Во вторник получил первый заказ.</p>
                 <p className="font-semibold text-[#1a1a2e]">Через 2 недели: $2 400 оборота.</p>
-                <blockquote className="border-l-2 border-[#0FA44F] pl-4 italic text-[#1a1a2e]">
+                <blockquote className="border-l-2 border-[#17B26A] pl-4 italic text-[#1a1a2e]">
                   «Я не дизайнер и не продавец. Я учитель. Accio Work сделал то, на что ушли бы
                   месяцы.»
                 </blockquote>
@@ -474,7 +485,7 @@ function Faq() {
                 >
                   <span>{it.q}</span>
                   <span
-                    className={`ml-4 text-[#0FA44F] transition-transform ${
+                    className={`ml-4 text-[#17B26A] transition-transform ${
                       isOpen ? "rotate-45" : ""
                     }`}
                   >
@@ -516,7 +527,7 @@ function FinalCta() {
             href={REFERRAL_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-10 inline-flex h-12 items-center justify-center rounded-full bg-white px-8 text-[15px] font-bold text-[#0FA44F] transition hover:bg-white/90 sm:h-14 sm:text-[16px]"
+            className="mt-10 inline-flex h-12 items-center justify-center rounded-full bg-white px-8 text-[15px] font-bold text-[#17B26A] transition hover:bg-white/90 sm:h-14 sm:text-[16px]"
           >
             Скачать бесплатно
           </a>
@@ -534,15 +545,7 @@ function Footer() {
     <footer className="bg-[#F8F9FB] py-10">
       <div className="mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-6 px-6 sm:flex-row">
         <a href="/" className="flex items-center gap-2">
-          <span
-            aria-hidden
-            className="inline-block h-5 w-5"
-            style={{
-              background: "linear-gradient(135deg,#0FA44F,#0CCE6B)",
-              clipPath: "polygon(50% 0,100% 100%,0 100%)",
-            }}
-          />
-          <span className="text-[15px] font-extrabold text-[#1a1a2e]">Accio</span>
+          <BrandLogo size={18} />
         </a>
         <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[13px] text-[#6B7280]">
           <a href="/#pricing" className="hover:text-[#1a1a2e]">Pricing</a>
