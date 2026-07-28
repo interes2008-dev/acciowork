@@ -169,7 +169,7 @@ function Navbar() {
             <a href="#pricing" className="hover:text-foreground">{t.nav.pricing}</a>
             <a href={blogHref} className="hover:text-foreground">{t.nav.blog}</a>
             <button className="flex items-center gap-1 hover:text-foreground">{t.nav.help} <ChevronDown className="h-4 w-4 opacity-60" /></button>
-            <a href="/events/free-forever" className="flex items-center gap-1 hover:text-foreground">{t.nav.events} <span>🔥</span></a>
+            <a href={lang === "en" ? "/events/free-forever" : `/${lang}/events/free-forever`} className="flex items-center gap-1 hover:text-foreground">{t.nav.events} <span>🔥</span></a>
           </nav>
         </div>
         <div className="flex items-center gap-5">
