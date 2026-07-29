@@ -58,6 +58,13 @@ const COPY: Record<"en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr",
     read: "पढ़ें",
     minutes: "मिनट पढ़ाई",
   },
+  fr: {
+    title: "Le journal Accio Work",
+    lede: "Notes de terrain sur la conduite d'un business moderne avec une équipe d'IA que vous dirigez vraiment.",
+    empty: "Un nouvel article arrive ici chaque jour. Revenez demain.",
+    read: "Lire",
+    minutes: "min de lecture",
+  },
 };
 
 export function BlogList({ lang, articles }: { lang: "en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr"; articles: ArticleListItem[] }) {

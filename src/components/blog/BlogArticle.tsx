@@ -12,6 +12,7 @@ const BACK: Record<"en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr",
   zh: "← 全部文章",
   pt: "← Todos os artigos",
   hi: "← सभी लेख",
+  fr: "← Tous les articles",
 };
 
 const MIN: Record<"en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr", string> = {
@@ -23,6 +24,7 @@ const MIN: Record<"en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr", 
   zh: "分钟阅读",
   pt: "min de leitura",
   hi: "मिनट पढ़ाई",
+  fr: "min de lecture",
 };
 
 const CTA: Record<"en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr", { title: string; body: string; button: string; note: string }> = {
@@ -73,6 +75,12 @@ const CTA: Record<"en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr", 
     body: "इस लेख में जो कुछ है वह सब एक डाउनलोड की दूरी पर है। बोनस क्रेडिट के साथ मुफ़्त ट्रायल, macOS और Windows के लिए।",
     button: "Accio Work डाउनलोड करें",
     note: "Apple Silicon और Intel Mac पर, तथा Windows 10 या नए पर चलता है।",
+  },
+  fr: {
+    title: "Essayez Accio Work par vous-même",
+    body: "Tout ce que décrit cet article est à un téléchargement d'ici. Essai gratuit avec crédits offerts, macOS et Windows.",
+    button: "Télécharger Accio Work",
+    note: "Fonctionne sur Mac Apple Silicon et Intel, ainsi que sur Windows 10 ou plus récent.",
   },
 };
 
