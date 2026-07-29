@@ -23,7 +23,7 @@ export const Route = createFileRoute("/fr/events/free-forever")({
       { rel: "alternate", hrefLang: "de", href: "https://acciowork.pro/de/events/free-forever" },
       { rel: "alternate", hrefLang: "it", href: "https://acciowork.pro/it/events/free-forever" },
       { rel: "alternate", hrefLang: "es", href: "https://acciowork.pro/es/events/free-forever" },
-      { rel: "alternate", hrefLang: "pt", href: "https://acciowork.pro/fr/events/free-forever" },
+      { rel: "alternate", hrefLang: "pt", href: "https://acciowork.pro/pt/events/free-forever" },
       { rel: "alternate", hrefLang: "zh", href: "https://acciowork.pro/zh/events/free-forever" },
       { rel: "alternate", hrefLang: "hi", href: "https://acciowork.pro/hi/events/free-forever" },
       { rel: "alternate", hrefLang: "fr", href: "https://acciowork.pro/fr/events/free-forever" },

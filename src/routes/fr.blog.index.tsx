@@ -21,7 +21,7 @@ export const Route = createFileRoute("/fr/blog/")({
       { rel: "alternate", hrefLang: "it", href: "https://acciowork.pro/it/blog" },
       { rel: "alternate", hrefLang: "es", href: "https://acciowork.pro/es/blog" },
       { rel: "alternate", hrefLang: "zh", href: "https://acciowork.pro/zh/blog" },
-      { rel: "alternate", hrefLang: "pt", href: "https://acciowork.pro/fr/blog" },
+      { rel: "alternate", hrefLang: "pt", href: "https://acciowork.pro/pt/blog" },
       { rel: "alternate", hrefLang: "hi", href: "https://acciowork.pro/hi/blog" },
       { rel: "alternate", hrefLang: "fr", href: "https://acciowork.pro/fr/blog" },
       { rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/blog" },
