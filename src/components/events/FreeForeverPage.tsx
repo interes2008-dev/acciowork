@@ -709,7 +709,88 @@ const DICTS: Record<Lang, EventDict> = {
     cta: { title: "एक घंटे में बिज़नेस लॉन्च करने को तैयार?", subtitle: "Accio Work मुफ़्त डाउनलोड करें। पहला स्टोर — आज।", button: "मुफ़्त डाउनलोड करें", note: "macOS 11+ • 42 MB • कार्ड नहीं • ट्रायल नहीं" },
     footer: { pricing: "मूल्य", blog: "ब्लॉग", help: "सहायता", privacy: "गोपनीयता", terms: "शर्तें", copyright: "© 2026 Accio। Alibaba इंफ्रास्ट्रक्चर पर।" },
   },
+  fr: {
+    langLabel: "Français",
+    nav: { pricing: "Tarifs", blog: "Blog", help: "Aide", events: "Événements", download: "Télécharger Accio Work" },
+    hero: {
+      badge: "Annoncé le 28 juillet 2026",
+      title1: "Accio Work devient gratuit.",
+      titleAccent: "Pour toujours.",
+      desc: "10 millions de personnes pilotent déjà leur activité avec Accio. Aujourd'hui nous retirons le prix : n'importe qui peut lancer son business, sans essai, sans carte et sans limite de temps.",
+      ctaPrimary: "Télécharger gratuitement",
+      ctaSecondary: "Voir les offres",
+      note: "macOS 11+. Apple Silicon et Intel. 42 Mo.",
+    },
+    stats: { users: "utilisateurs dans le monde", launch: "temps moyen pour lancer une boutique", launchSuffix: " minutes", cheaper: "moins cher que des freelances" },
+    features: {
+      heading: "Ce que contient l'offre gratuite",
+      items: [
+        { icon: "🤖", title: "Agent IA 24h/24", desc: "Un assistant complet : recherche, analyse, automatisation. Aucune limite de tâches." },
+        { icon: "🌐", title: "Automatisation du navigateur", desc: "Il ouvre des sites, clique, extrait des données, remplit des formulaires. Sans code, sans Selenium." },
+        { icon: "🔌", title: "50+ intégrations", desc: "Shopify, Gmail, Telegram, Slack, LinkedIn : connectés en un clic." },
+        { icon: "✍️", title: "Génération de contenu", desc: "Landing pages, fiches produits, textes SEO. Prêts en quelques minutes." },
+        { icon: "📈", title: "Market Scout", desc: "Analyse de niches, tendances et concurrents. Données d'Alibaba.com et Jungle Scout." },
+        { icon: "👥", title: "Experts à la demande", desc: "Sourcing Expert, Product Designer, Listing Copywriter : quelques centimes, quand vous en avez besoin." },
+      ],
+    },
+    compare: {
+      heading: "Le vrai coût du lancement d'une boutique",
+      without: "Sans Accio Work",
+      with: "Avec Accio Work",
+      colSpecialist: "Spécialiste",
+      colCost: "Coût",
+      colTime: "Durée",
+      total: "Total",
+      withoutRows: [
+        ["Analyste marketing", "500–1 500 $", "2 semaines"],
+        ["Responsable sourcing", "800–2 000 $", "3-4 semaines"],
+        ["Designer UI/UX", "400–1 200 $", "1-2 semaines"],
+        ["Rédacteur", "200–600 $", "1 semaine"],
+        ["Développeur", "1 000–3 000 $", "2-4 semaines"],
+      ],
+      withRows: [
+        ["Market Scout", "gratuit", "4 minutes"],
+        ["Sourcing Expert", "~2 $", "12 minutes"],
+        ["Product Designer", "~3 $", "20 minutes"],
+        ["Listing Copywriter", "~1 $", "8 minutes"],
+        ["Générateur de boutique", "gratuit", "10 minutes"],
+      ],
+      withoutTotalCost: "2 900 $ – 8 300 $",
+      withoutTotalTime: "2–3 mois",
+      withTotalCost: "~6 $",
+      withTotalTime: "54 minutes",
+      summary: () => null,
+      summaryMoney: "483× moins cher",
+      summaryTime: "1 440× plus rapide",
+    },
+    story: {
+      heading: "Une histoire qui pourrait être la vôtre",
+      who: "Anton, professeur à Novossibirsk",
+      p: [
+        "Il a repoussé le lancement de sa boutique pendant trois mois. Tout bloquait : le design, les fournisseurs, le SEO.",
+        "Un samedi soir, il écrit dans Accio : « Je veux vendre des miroirs LED connectés. Construis la boutique. »",
+        "48 minutes plus tard, la boutique était en ligne. Landing page, fiches produits, Shopify, tout y était.",
+        "Lundi il lançait les publicités. Mardi arrivait la première commande.",
+      ],
+      highlight: "Deux semaines plus tard : 2 400 $ de chiffre d'affaires.",
+      quote: "« Je ne suis ni designer ni commercial. Je suis professeur. Accio Work a fait en une soirée ce qui m'aurait pris des mois. »",
+      videoCaption: "De l'idée à la boutique en 48 minutes, enregistrement d'écran",
+    },
+    faq: {
+      heading: "Questions fréquentes",
+      items: [
+        { q: "L'offre gratuite est-elle permanente ou promotionnelle ?", a: "Permanente. Pas de date limite, pas d'upgrade forcé. C'est possible grâce à l'infrastructure Alibaba." },
+        { q: "Quelles sont les limites de l'offre gratuite ?", a: "L'agent IA de base et toutes les intégrations sont illimités. Seuls les experts seniors (Sourcing Expert, Product Designer, etc.) sont payants, entre 1 et 3 $ par tâche." },
+        { q: "Faut-il une carte bancaire pour s'inscrire ?", a: "Non. Inscription immédiate, aucune carte demandée." },
+        { q: "Est-ce que ça marche vraiment sans développeur ?", a: "Oui. Tout passe par du texte. Pas de code, pas de Selenium, pas de ligne de commande." },
+        { q: "Comment Accio Work se connecte-t-il à Shopify, Telegram ou Gmail ?", a: "Via OAuth intégré. Un clic et c'est fait. Pas de clé API, pas de documentation à lire." },
+      ],
+    },
+    cta: { title: "Prêt à lancer votre business en une heure ?", subtitle: "Téléchargez Accio Work gratuitement. Première boutique dès aujourd'hui.", button: "Télécharger gratuitement", note: "macOS 11+ • 42 Mo • sans carte • sans essai" },
+    footer: { pricing: "Tarifs", blog: "Blog", help: "Aide", privacy: "Confidentialité", terms: "Conditions", copyright: "© 2026 Accio. Sur l'infrastructure Alibaba." },
+  },
 };
+
 
 /* ---------- Path helpers ---------- */
 const langPrefix = (lang: Lang) => (lang === "en" ? "" : `/${lang}`);
@@ -799,7 +880,7 @@ function BrandLogo({ size = 22 }: { size?: number }) {
 /* ---------- Language switcher ---------- */
 const LANG_NAMES: Record<Lang, string> = {
   en: "English", ru: "Русский", de: "Deutsch", it: "Italiano",
-  es: "Español", pt: "Português", zh: "中文", hi: "हिन्दी",
+  es: "Español", pt: "Português", zh: "中文", hi: "हिन्दी", fr: "Français",
 };
 
 function LangSwitcher({ lang }: { lang: Lang }) {
@@ -1122,7 +1203,7 @@ function Footer({ lang, d }: { lang: Lang; d: EventDict }) {
 /* ---------- Page ---------- */
 const LOCALES: Record<Lang, string> = {
   en: "en-US", ru: "ru-RU", de: "de-DE", it: "it-IT",
-  es: "es-ES", pt: "pt-BR", zh: "zh-CN", hi: "hi-IN",
+  es: "es-ES", pt: "pt-BR", zh: "zh-CN", hi: "hi-IN", fr: "fr-FR",
 };
 
 export function FreeForeverPage({ lang }: { lang: Lang }) {
@@ -1153,6 +1234,7 @@ export const EVENT_SEO: Record<Lang, { title: string; description: string }> = {
   es: { title: "Accio Work es gratis para siempre | Eventos", description: "Accio Work ahora es gratis para siempre. Más de 10 millones de usuarios lanzan tiendas en menos de una hora — sin tarjeta, sin prueba, sin límites." },
   pt: { title: "Accio Work é grátis para sempre | Eventos", description: "Accio Work agora é grátis para sempre. Mais de 10 milhões de usuários lançam lojas em menos de uma hora — sem cartão, sem trial, sem limites." },
   zh: { title: "Accio Work 永久免费 | 活动", description: "Accio Work 现已永久免费。超过 1000 万用户在一小时内上线店铺 —— 无需信用卡、无需试用、无限制。" },
+  fr: { title: "Accio Work est gratuit pour toujours | Événements", description: "Accio Work est désormais gratuit pour toujours. Plus de 10 millions d'utilisateurs lancent une boutique en moins d'une heure, sans carte, sans essai, sans limite." },
   hi: { title: "Accio Work अब हमेशा के लिए मुफ़्त | इवेंट्स", description: "Accio Work अब हमेशा के लिए मुफ़्त है। 1 करोड़+ उपयोगकर्ता एक घंटे से भी कम में स्टोर लॉन्च कर रहे हैं — बिना कार्ड, बिना ट्रायल, बिना सीमा।" },
 };
 
