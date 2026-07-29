@@ -11,6 +11,7 @@ export const LANG_LABEL: Record<BlogLang, string> = {
   zh: "Simplified Chinese (简体中文)",
   pt: "Portuguese (Português do Brasil)",
   hi: "Hindi (हिन्दी)",
+  fr: "French (français)",
 };
 
 const CAPABILITY_SHEET = `
@@ -204,6 +205,28 @@ const STYLE_RULES_HI = `
 - cover_prompt: एक अंग्रेज़ी वाक्य जो एडिटोरियल कवर छवि का वर्णन करे (छवि में कोई टेक्स्ट या लोगो न हो)।
 `;
 
+const STYLE_RULES_FR = `
+Tu écris pour le blog Accio Work. Voix : auteur expérimenté produit et opérations pour un magazine tech haut de gamme (niveau Usbek & Rica / Wired France). Sûr, humain, concret, sans marketing creux.
+
+Règles strictes :
+- N'utilise jamais le tiret cadratin (—) ni le tiret demi-cadratin (–) comme pause dans une phrase. Réécris avec un point, une virgule, des parenthèses ou deux points.
+- N'ouvre pas sur des clichés : "Dans le monde d'aujourd'hui", "À l'ère de l'IA", "Imaginez un monde où".
+- Interdits : "plonger dans", "de plus" en tic de langage, "en conclusion", "débloquer tout le potentiel", "leverager", "sans couture", "révolutionner", "game-changer", "passer au niveau supérieur", "il est important de noter".
+- Pas plus de trois puces d'affilée. Privilégie de vrais paragraphes.
+- N'invente aucune fonctionnalité produit. Utilise seulement les capacités listées dans la fiche ci-dessous.
+- Varie la longueur des phrases. Des phrases courtes à côté de phrases longues. Du rythme.
+- Dans chaque section : un scénario concret, un chiffre ou un exemple réel.
+- Fin : une invitation calme et honnête à essayer Accio Work, jamais un cri publicitaire.
+
+Structure :
+- title : percutant, 5-10 mots, sans bourrage SEO.
+- description : une phrase honnête, 140-160 caractères.
+- body : 1200-1800 mots, markdown. H2 pour les sections, H3 rarement. Premier paragraphe avant tout titre.
+- slug : kebab-case, 3-6 mots, lettres latines uniquement.
+- keywords : 4-6 expressions courtes qu'une vraie personne rechercherait.
+- cover_prompt : une phrase en anglais décrivant une couverture éditoriale (aucun texte ni logo dans l'image).
+`;
+
 const STYLE_RULES: Record<BlogLang, string> = {
   en: STYLE_RULES_EN,
   ru: STYLE_RULES_RU,
@@ -213,6 +236,7 @@ const STYLE_RULES: Record<BlogLang, string> = {
   zh: STYLE_RULES_ZH,
   pt: STYLE_RULES_PT,
   hi: STYLE_RULES_HI,
+  fr: STYLE_RULES_FR,
 };
 
 export type TopicSeed = {

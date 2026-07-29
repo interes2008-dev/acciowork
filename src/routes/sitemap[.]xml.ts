@@ -24,6 +24,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           { hreflang: "zh", href: `${BASE_URL}/zh` },
           { hreflang: "pt", href: `${BASE_URL}/pt` },
           { hreflang: "hi", href: `${BASE_URL}/hi` },
+          { hreflang: "fr", href: `${BASE_URL}/fr` },
           { hreflang: "x-default", href: `${BASE_URL}/` },
         ];
         const entries: SitemapEntry[] = [
@@ -35,6 +36,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/zh", changefreq: "weekly", priority: "0.9", alternates },
           { path: "/pt", changefreq: "weekly", priority: "0.9", alternates },
           { path: "/hi", changefreq: "weekly", priority: "0.9", alternates },
+          { path: "/fr", changefreq: "weekly", priority: "0.9", alternates },
           { path: "/blog", changefreq: "daily", priority: "0.8" },
           { path: "/ru/blog", changefreq: "daily", priority: "0.8" },
           { path: "/de/blog", changefreq: "daily", priority: "0.8" },
@@ -43,6 +45,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/zh/blog", changefreq: "daily", priority: "0.8" },
           { path: "/pt/blog", changefreq: "daily", priority: "0.8" },
           { path: "/hi/blog", changefreq: "daily", priority: "0.8" },
+          { path: "/fr/blog", changefreq: "daily", priority: "0.8" },
         ];
 
         try {
@@ -63,7 +66,9 @@ export const Route = createFileRoute("/sitemap.xml")({
                             ? "/pt/blog"
                             : a.lang === "hi"
                               ? "/hi/blog"
-                              : "/blog";
+                              : a.lang === "fr"
+                                ? "/fr/blog"
+                                : "/blog";
             entries.push({ path: `${prefix}/${a.slug}`, changefreq: "monthly", priority: "0.7" });
           }
         } catch {
