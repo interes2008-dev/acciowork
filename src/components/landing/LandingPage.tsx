@@ -107,7 +107,7 @@ function LanguageSwitcher() {
                   setOpen(false);
                   if (typeof window !== "undefined") {
                     const target =
-                      code === "ru" ? "/ru" : code === "de" ? "/de" : code === "it" ? "/it" : code === "es" ? "/es" : code === "zh" ? "/zh" : code === "pt" ? "/pt" : code === "hi" ? "/hi" : "/";
+                      code === "ru" ? "/ru" : code === "de" ? "/de" : code === "it" ? "/it" : code === "es" ? "/es" : code === "zh" ? "/zh" : code === "pt" ? "/pt" : code === "hi" ? "/hi" : code === "fr" ? "/fr" : "/";
                     if (window.location.pathname !== target) {
                       window.history.pushState({}, "", target);
                     }
@@ -146,7 +146,9 @@ function Navbar() {
                 ? "/pt/blog"
                 : lang === "hi"
                   ? "/hi/blog"
-                  : "/blog",
+                  : code === "fr"
+                    ? "/fr/blog"
+                    : "/blog",
   );
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -158,6 +160,7 @@ function Navbar() {
     else if (p.startsWith("/zh")) setBlogHref("/zh/blog");
     else if (p.startsWith("/pt")) setBlogHref("/pt/blog");
     else if (p.startsWith("/hi")) setBlogHref("/hi/blog");
+    else if (p.startsWith("/fr")) setBlogHref("/fr/blog");
     else setBlogHref("/blog");
   }, [lang]);
   return (
