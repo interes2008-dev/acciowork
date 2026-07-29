@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { FreeForeverPage, EVENT_SEO } from "@/components/events/FreeForeverPage";
 
-const LANG = "de" as const;
-const URL_SELF = "https://acciowork.pro/de/events/free-forever";
+const LANG = "fr" as const;
+const URL_SELF = "https://acciowork.pro/fr/events/free-forever";
 
-export const Route = createFileRoute("/de/events/free-forever")({
+export const Route = createFileRoute("/fr/events/free-forever")({
   head: () => ({
     meta: [
       { title: EVENT_SEO[LANG].title },
@@ -13,7 +13,7 @@ export const Route = createFileRoute("/de/events/free-forever")({
       { property: "og:description", content: EVENT_SEO[LANG].description },
       { property: "og:type", content: "article" },
       { property: "og:url", content: URL_SELF },
-      { property: "og:locale", content: "de" },
+      { property: "og:locale", content: "pt" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [

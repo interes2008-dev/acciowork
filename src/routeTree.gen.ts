@@ -15,6 +15,7 @@ import { Route as RuRouteImport } from './routes/ru'
 import { Route as PtRouteImport } from './routes/pt'
 import { Route as ItRouteImport } from './routes/it'
 import { Route as HiRouteImport } from './routes/hi'
+import { Route as FrRouteImport } from './routes/fr'
 import { Route as EsRouteImport } from './routes/es'
 import { Route as DeRouteImport } from './routes/de'
 import { Route as IndexRouteImport } from './routes/index'
@@ -23,6 +24,7 @@ import { Route as RuIndexRouteImport } from './routes/ru.index'
 import { Route as PtIndexRouteImport } from './routes/pt.index'
 import { Route as ItIndexRouteImport } from './routes/it.index'
 import { Route as HiIndexRouteImport } from './routes/hi.index'
+import { Route as FrIndexRouteImport } from './routes/fr.index'
 import { Route as EsIndexRouteImport } from './routes/es.index'
 import { Route as DeIndexRouteImport } from './routes/de.index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
@@ -33,6 +35,7 @@ import { Route as RuBlogIndexRouteImport } from './routes/ru.blog.index'
 import { Route as PtBlogIndexRouteImport } from './routes/pt.blog.index'
 import { Route as ItBlogIndexRouteImport } from './routes/it.blog.index'
 import { Route as HiBlogIndexRouteImport } from './routes/hi.blog.index'
+import { Route as FrBlogIndexRouteImport } from './routes/fr.blog.index'
 import { Route as EsBlogIndexRouteImport } from './routes/es.blog.index'
 import { Route as DeBlogIndexRouteImport } from './routes/de.blog.index'
 import { Route as ZhEventsFreeForeverRouteImport } from './routes/zh.events.free-forever'
@@ -45,6 +48,8 @@ import { Route as ItEventsFreeForeverRouteImport } from './routes/it.events.free
 import { Route as ItBlogSlugRouteImport } from './routes/it.blog.$slug'
 import { Route as HiEventsFreeForeverRouteImport } from './routes/hi.events.free-forever'
 import { Route as HiBlogSlugRouteImport } from './routes/hi.blog.$slug'
+import { Route as FrEventsFreeForeverRouteImport } from './routes/fr.events.free-forever'
+import { Route as FrBlogSlugRouteImport } from './routes/fr.blog.$slug'
 import { Route as EsEventsFreeForeverRouteImport } from './routes/es.events.free-forever'
 import { Route as EsBlogSlugRouteImport } from './routes/es.blog.$slug'
 import { Route as DeEventsFreeForeverRouteImport } from './routes/de.events.free-forever'
@@ -79,6 +84,11 @@ const ItRoute = ItRouteImport.update({
 const HiRoute = HiRouteImport.update({
   id: '/hi',
   path: '/hi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrRoute = FrRouteImport.update({
+  id: '/fr',
+  path: '/fr',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EsRoute = EsRouteImport.update({
@@ -120,6 +130,11 @@ const HiIndexRoute = HiIndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => HiRoute,
+} as any)
+const FrIndexRoute = FrIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => FrRoute,
 } as any)
 const EsIndexRoute = EsIndexRouteImport.update({
   id: '/',
@@ -170,6 +185,11 @@ const HiBlogIndexRoute = HiBlogIndexRouteImport.update({
   id: '/blog/',
   path: '/blog/',
   getParentRoute: () => HiRoute,
+} as any)
+const FrBlogIndexRoute = FrBlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => FrRoute,
 } as any)
 const EsBlogIndexRoute = EsBlogIndexRouteImport.update({
   id: '/blog/',
@@ -231,6 +251,16 @@ const HiBlogSlugRoute = HiBlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => HiRoute,
 } as any)
+const FrEventsFreeForeverRoute = FrEventsFreeForeverRouteImport.update({
+  id: '/events/free-forever',
+  path: '/events/free-forever',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrBlogSlugRoute = FrBlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => FrRoute,
+} as any)
 const EsEventsFreeForeverRoute = EsEventsFreeForeverRouteImport.update({
   id: '/events/free-forever',
   path: '/events/free-forever',
@@ -262,6 +292,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/de': typeof DeRouteWithChildren
   '/es': typeof EsRouteWithChildren
+  '/fr': typeof FrRouteWithChildren
   '/hi': typeof HiRouteWithChildren
   '/it': typeof ItRouteWithChildren
   '/pt': typeof PtRouteWithChildren
@@ -273,6 +304,7 @@ export interface FileRoutesByFullPath {
   '/blog/': typeof BlogIndexRoute
   '/de/': typeof DeIndexRoute
   '/es/': typeof EsIndexRoute
+  '/fr/': typeof FrIndexRoute
   '/hi/': typeof HiIndexRoute
   '/it/': typeof ItIndexRoute
   '/pt/': typeof PtIndexRoute
@@ -282,6 +314,8 @@ export interface FileRoutesByFullPath {
   '/de/events/free-forever': typeof DeEventsFreeForeverRoute
   '/es/blog/$slug': typeof EsBlogSlugRoute
   '/es/events/free-forever': typeof EsEventsFreeForeverRoute
+  '/fr/blog/$slug': typeof FrBlogSlugRoute
+  '/fr/events/free-forever': typeof FrEventsFreeForeverRoute
   '/hi/blog/$slug': typeof HiBlogSlugRoute
   '/hi/events/free-forever': typeof HiEventsFreeForeverRoute
   '/it/blog/$slug': typeof ItBlogSlugRoute
@@ -294,6 +328,7 @@ export interface FileRoutesByFullPath {
   '/zh/events/free-forever': typeof ZhEventsFreeForeverRoute
   '/de/blog/': typeof DeBlogIndexRoute
   '/es/blog/': typeof EsBlogIndexRoute
+  '/fr/blog/': typeof FrBlogIndexRoute
   '/hi/blog/': typeof HiBlogIndexRoute
   '/it/blog/': typeof ItBlogIndexRoute
   '/pt/blog/': typeof PtBlogIndexRoute
@@ -309,6 +344,7 @@ export interface FileRoutesByTo {
   '/blog': typeof BlogIndexRoute
   '/de': typeof DeIndexRoute
   '/es': typeof EsIndexRoute
+  '/fr': typeof FrIndexRoute
   '/hi': typeof HiIndexRoute
   '/it': typeof ItIndexRoute
   '/pt': typeof PtIndexRoute
@@ -318,6 +354,8 @@ export interface FileRoutesByTo {
   '/de/events/free-forever': typeof DeEventsFreeForeverRoute
   '/es/blog/$slug': typeof EsBlogSlugRoute
   '/es/events/free-forever': typeof EsEventsFreeForeverRoute
+  '/fr/blog/$slug': typeof FrBlogSlugRoute
+  '/fr/events/free-forever': typeof FrEventsFreeForeverRoute
   '/hi/blog/$slug': typeof HiBlogSlugRoute
   '/hi/events/free-forever': typeof HiEventsFreeForeverRoute
   '/it/blog/$slug': typeof ItBlogSlugRoute
@@ -330,6 +368,7 @@ export interface FileRoutesByTo {
   '/zh/events/free-forever': typeof ZhEventsFreeForeverRoute
   '/de/blog': typeof DeBlogIndexRoute
   '/es/blog': typeof EsBlogIndexRoute
+  '/fr/blog': typeof FrBlogIndexRoute
   '/hi/blog': typeof HiBlogIndexRoute
   '/it/blog': typeof ItBlogIndexRoute
   '/pt/blog': typeof PtBlogIndexRoute
@@ -342,6 +381,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/de': typeof DeRouteWithChildren
   '/es': typeof EsRouteWithChildren
+  '/fr': typeof FrRouteWithChildren
   '/hi': typeof HiRouteWithChildren
   '/it': typeof ItRouteWithChildren
   '/pt': typeof PtRouteWithChildren
@@ -353,6 +393,7 @@ export interface FileRoutesById {
   '/blog/': typeof BlogIndexRoute
   '/de/': typeof DeIndexRoute
   '/es/': typeof EsIndexRoute
+  '/fr/': typeof FrIndexRoute
   '/hi/': typeof HiIndexRoute
   '/it/': typeof ItIndexRoute
   '/pt/': typeof PtIndexRoute
@@ -362,6 +403,8 @@ export interface FileRoutesById {
   '/de/events/free-forever': typeof DeEventsFreeForeverRoute
   '/es/blog/$slug': typeof EsBlogSlugRoute
   '/es/events/free-forever': typeof EsEventsFreeForeverRoute
+  '/fr/blog/$slug': typeof FrBlogSlugRoute
+  '/fr/events/free-forever': typeof FrEventsFreeForeverRoute
   '/hi/blog/$slug': typeof HiBlogSlugRoute
   '/hi/events/free-forever': typeof HiEventsFreeForeverRoute
   '/it/blog/$slug': typeof ItBlogSlugRoute
@@ -374,6 +417,7 @@ export interface FileRoutesById {
   '/zh/events/free-forever': typeof ZhEventsFreeForeverRoute
   '/de/blog/': typeof DeBlogIndexRoute
   '/es/blog/': typeof EsBlogIndexRoute
+  '/fr/blog/': typeof FrBlogIndexRoute
   '/hi/blog/': typeof HiBlogIndexRoute
   '/it/blog/': typeof ItBlogIndexRoute
   '/pt/blog/': typeof PtBlogIndexRoute
@@ -387,6 +431,7 @@ export interface FileRouteTypes {
     | '/'
     | '/de'
     | '/es'
+    | '/fr'
     | '/hi'
     | '/it'
     | '/pt'
@@ -398,6 +443,7 @@ export interface FileRouteTypes {
     | '/blog/'
     | '/de/'
     | '/es/'
+    | '/fr/'
     | '/hi/'
     | '/it/'
     | '/pt/'
@@ -407,6 +453,8 @@ export interface FileRouteTypes {
     | '/de/events/free-forever'
     | '/es/blog/$slug'
     | '/es/events/free-forever'
+    | '/fr/blog/$slug'
+    | '/fr/events/free-forever'
     | '/hi/blog/$slug'
     | '/hi/events/free-forever'
     | '/it/blog/$slug'
@@ -419,6 +467,7 @@ export interface FileRouteTypes {
     | '/zh/events/free-forever'
     | '/de/blog/'
     | '/es/blog/'
+    | '/fr/blog/'
     | '/hi/blog/'
     | '/it/blog/'
     | '/pt/blog/'
@@ -434,6 +483,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/de'
     | '/es'
+    | '/fr'
     | '/hi'
     | '/it'
     | '/pt'
@@ -443,6 +493,8 @@ export interface FileRouteTypes {
     | '/de/events/free-forever'
     | '/es/blog/$slug'
     | '/es/events/free-forever'
+    | '/fr/blog/$slug'
+    | '/fr/events/free-forever'
     | '/hi/blog/$slug'
     | '/hi/events/free-forever'
     | '/it/blog/$slug'
@@ -455,6 +507,7 @@ export interface FileRouteTypes {
     | '/zh/events/free-forever'
     | '/de/blog'
     | '/es/blog'
+    | '/fr/blog'
     | '/hi/blog'
     | '/it/blog'
     | '/pt/blog'
@@ -466,6 +519,7 @@ export interface FileRouteTypes {
     | '/'
     | '/de'
     | '/es'
+    | '/fr'
     | '/hi'
     | '/it'
     | '/pt'
@@ -477,6 +531,7 @@ export interface FileRouteTypes {
     | '/blog/'
     | '/de/'
     | '/es/'
+    | '/fr/'
     | '/hi/'
     | '/it/'
     | '/pt/'
@@ -486,6 +541,8 @@ export interface FileRouteTypes {
     | '/de/events/free-forever'
     | '/es/blog/$slug'
     | '/es/events/free-forever'
+    | '/fr/blog/$slug'
+    | '/fr/events/free-forever'
     | '/hi/blog/$slug'
     | '/hi/events/free-forever'
     | '/it/blog/$slug'
@@ -498,6 +555,7 @@ export interface FileRouteTypes {
     | '/zh/events/free-forever'
     | '/de/blog/'
     | '/es/blog/'
+    | '/fr/blog/'
     | '/hi/blog/'
     | '/it/blog/'
     | '/pt/blog/'
@@ -510,6 +568,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   DeRoute: typeof DeRouteWithChildren
   EsRoute: typeof EsRouteWithChildren
+  FrRoute: typeof FrRouteWithChildren
   HiRoute: typeof HiRouteWithChildren
   ItRoute: typeof ItRouteWithChildren
   PtRoute: typeof PtRouteWithChildren
@@ -564,6 +623,13 @@ declare module '@tanstack/react-router' {
       path: '/hi'
       fullPath: '/hi'
       preLoaderRoute: typeof HiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fr': {
+      id: '/fr'
+      path: '/fr'
+      fullPath: '/fr'
+      preLoaderRoute: typeof FrRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/es': {
@@ -621,6 +687,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/hi/'
       preLoaderRoute: typeof HiIndexRouteImport
       parentRoute: typeof HiRoute
+    }
+    '/fr/': {
+      id: '/fr/'
+      path: '/'
+      fullPath: '/fr/'
+      preLoaderRoute: typeof FrIndexRouteImport
+      parentRoute: typeof FrRoute
     }
     '/es/': {
       id: '/es/'
@@ -691,6 +764,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/hi/blog/'
       preLoaderRoute: typeof HiBlogIndexRouteImport
       parentRoute: typeof HiRoute
+    }
+    '/fr/blog/': {
+      id: '/fr/blog/'
+      path: '/blog'
+      fullPath: '/fr/blog/'
+      preLoaderRoute: typeof FrBlogIndexRouteImport
+      parentRoute: typeof FrRoute
     }
     '/es/blog/': {
       id: '/es/blog/'
@@ -776,6 +856,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HiBlogSlugRouteImport
       parentRoute: typeof HiRoute
     }
+    '/fr/events/free-forever': {
+      id: '/fr/events/free-forever'
+      path: '/events/free-forever'
+      fullPath: '/fr/events/free-forever'
+      preLoaderRoute: typeof FrEventsFreeForeverRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/blog/$slug': {
+      id: '/fr/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/fr/blog/$slug'
+      preLoaderRoute: typeof FrBlogSlugRouteImport
+      parentRoute: typeof FrRoute
+    }
     '/es/events/free-forever': {
       id: '/es/events/free-forever'
       path: '/events/free-forever'
@@ -845,6 +939,22 @@ const EsRouteChildren: EsRouteChildren = {
 }
 
 const EsRouteWithChildren = EsRoute._addFileChildren(EsRouteChildren)
+
+interface FrRouteChildren {
+  FrIndexRoute: typeof FrIndexRoute
+  FrBlogSlugRoute: typeof FrBlogSlugRoute
+  FrEventsFreeForeverRoute: typeof FrEventsFreeForeverRoute
+  FrBlogIndexRoute: typeof FrBlogIndexRoute
+}
+
+const FrRouteChildren: FrRouteChildren = {
+  FrIndexRoute: FrIndexRoute,
+  FrBlogSlugRoute: FrBlogSlugRoute,
+  FrEventsFreeForeverRoute: FrEventsFreeForeverRoute,
+  FrBlogIndexRoute: FrBlogIndexRoute,
+}
+
+const FrRouteWithChildren = FrRoute._addFileChildren(FrRouteChildren)
 
 interface HiRouteChildren {
   HiIndexRoute: typeof HiIndexRoute
@@ -930,6 +1040,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DeRoute: DeRouteWithChildren,
   EsRoute: EsRouteWithChildren,
+  FrRoute: FrRouteWithChildren,
   HiRoute: HiRouteWithChildren,
   ItRoute: ItRouteWithChildren,
   PtRoute: PtRouteWithChildren,
