@@ -1,6 +1,6 @@
 // Server-only prompt builder + text sanitizer used by the daily generation cron.
 
-export type BlogLang = "en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi";
+export type BlogLang = "en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr";
 
 export const LANG_LABEL: Record<BlogLang, string> = {
   en: "English",

@@ -3,7 +3,7 @@ import remarkGfm from "remark-gfm";
 import type { ArticleFull } from "@/lib/blog.functions";
 import { BlogShell } from "./BlogShell";
 
-const BACK: Record<"en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi", string> = {
+const BACK: Record<"en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr", string> = {
   en: "← All articles",
   ru: "← Все статьи",
   de: "← Alle Artikel",
@@ -14,7 +14,7 @@ const BACK: Record<"en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi", string
   hi: "← सभी लेख",
 };
 
-const MIN: Record<"en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi", string> = {
+const MIN: Record<"en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr", string> = {
   en: "min read",
   ru: "мин чтения",
   de: "Min. Lesezeit",
@@ -25,7 +25,7 @@ const MIN: Record<"en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi", string>
   hi: "मिनट पढ़ाई",
 };
 
-const CTA: Record<"en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi", { title: string; body: string; button: string; note: string }> = {
+const CTA: Record<"en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr", { title: string; body: string; button: string; note: string }> = {
   en: {
     title: "Try Accio Work for yourself",
     body: "Everything in this article is one download away. Free trial with bonus credits, macOS and Windows.",
@@ -80,7 +80,7 @@ export function BlogArticle({
   lang,
   article,
 }: {
-  lang: "en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi";
+  lang: "en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr";
   article: ArticleFull;
 }) {
   const base =

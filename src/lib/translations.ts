@@ -1,4 +1,4 @@
-export type Lang = "en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi";
+export type Lang = "en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr";
 
 export type Testimonial = {
   name: string;
@@ -85,7 +85,7 @@ export type Dict = {
     partneredWith: string;
     rights: string;
   };
-  langNames: { en: string; ru: string; de: string; it: string; es: string; zh: string; pt: string; hi: string };
+  langNames: { en: string; ru: string; de: string; it: string; es: string; zh: string; pt: string; hi: string; fr: string };
 };
 
 const en: Dict = {
@@ -228,7 +228,7 @@ const en: Dict = {
     partneredWith: "Partnered with",
     rights: "All rights reserved.",
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português", hi: "हिन्दी" },
+  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português", hi: "हिन्दी", fr: "Français" },
 };
 
 const ru: Dict = {
@@ -371,7 +371,7 @@ const ru: Dict = {
     partneredWith: "В партнёрстве с",
     rights: "Все права защищены.",
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português", hi: "हिन्दी" },
+  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português", hi: "हिन्दी", fr: "Français" },
 };
 
 const de: Dict = {
@@ -514,7 +514,7 @@ const de: Dict = {
     partneredWith: "In Partnerschaft mit",
     rights: "Alle Rechte vorbehalten.",
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português", hi: "हिन्दी" },
+  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português", hi: "हिन्दी", fr: "Français" },
 };
 
 const it: Dict = {
@@ -657,7 +657,7 @@ const it: Dict = {
     partneredWith: "In partnership con",
     rights: "Tutti i diritti riservati.",
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português", hi: "हिन्दी" },
+  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português", hi: "हिन्दी", fr: "Français" },
 };
 
 const es: Dict = {
@@ -800,7 +800,7 @@ const es: Dict = {
     partneredWith: "En colaboración con",
     rights: "Todos los derechos reservados.",
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português", hi: "हिन्दी" },
+  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português", hi: "हिन्दी", fr: "Français" },
 };
 
 const zh: Dict = {
@@ -943,7 +943,7 @@ const zh: Dict = {
     partneredWith: "合作伙伴",
     rights: "版权所有。",
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português", hi: "हिन्दी" },
+  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português", hi: "हिन्दी", fr: "Français" },
 };
 
 
@@ -1087,7 +1087,7 @@ const pt: Dict = {
     partneredWith: "Em parceria com",
     rights: "Todos os direitos reservados.",
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português", hi: "हिन्दी" },
+  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português", hi: "हिन्दी", fr: "Français" },
 };
 
 const hi: Dict = {
@@ -1230,7 +1230,7 @@ const hi: Dict = {
     partneredWith: "सहयोगी",
     rights: "सर्वाधिकार सुरक्षित।",
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português", hi: "हिन्दी" },
+  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português", hi: "हिन्दी", fr: "Français" },
 };
 
-export const translations: Record<Lang, Dict> = { en, ru, de, it, es, zh, pt, hi };
+export const translations: Record<Lang, Dict> = { en, ru, de, it, es, zh, pt, hi, fr };

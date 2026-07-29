@@ -1,7 +1,7 @@
 import type { ArticleListItem } from "@/lib/blog.functions";
 import { BlogShell } from "./BlogShell";
 
-const COPY: Record<"en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi", { title: string; lede: string; empty: string; read: string; minutes: string }> = {
+const COPY: Record<"en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr", { title: string; lede: string; empty: string; read: string; minutes: string }> = {
   en: {
     title: "The Accio Work journal",
     lede: "Field notes on running a modern business with an AI team you can actually direct.",
@@ -60,7 +60,7 @@ const COPY: Record<"en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi", { titl
   },
 };
 
-export function BlogList({ lang, articles }: { lang: "en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi"; articles: ArticleListItem[] }) {
+export function BlogList({ lang, articles }: { lang: "en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr"; articles: ArticleListItem[] }) {
   const copy = COPY[lang];
   const base =
     lang === "ru" ? "/ru/blog" : lang === "de" ? "/de/blog" : lang === "it" ? "/it/blog" : lang === "es" ? "/es/blog" : lang === "zh" ? "/zh/blog" : lang === "pt" ? "/pt/blog" : lang === "hi" ? "/hi/blog" : "/blog";

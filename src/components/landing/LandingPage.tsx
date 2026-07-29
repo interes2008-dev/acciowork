@@ -76,7 +76,7 @@ function LanguageSwitcher() {
     return () => document.removeEventListener("mousedown", onDoc);
   }, [open]);
 
-  const options: Lang[] = ["en", "ru", "de", "it", "es", "zh", "pt", "hi"];
+  const options: Lang[] = ["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr"];
 
   return (
     <div ref={rootRef} className="relative">
