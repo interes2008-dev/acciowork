@@ -146,7 +146,7 @@ function Navbar() {
                 ? "/pt/blog"
                 : lang === "hi"
                   ? "/hi/blog"
-                  : code === "fr"
+                  : lang === "fr"
                     ? "/fr/blog"
                     : "/blog",
   );
