@@ -13,7 +13,7 @@ export const Route = createFileRoute("/fr/events/free-forever")({
       { property: "og:description", content: EVENT_SEO[LANG].description },
       { property: "og:type", content: "article" },
       { property: "og:url", content: URL_SELF },
-      { property: "og:locale", content: "pt" },
+      { property: "og:locale", content: "fr" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
