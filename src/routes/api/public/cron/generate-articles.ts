@@ -205,11 +205,15 @@ export const Route = createFileRoute("/api/public/cron/generate-articles")({
           }
         }
 
-        // Mark topic used
-        await supabaseAdmin
-          .from("blog_topics")
-          .update({ used_at: new Date().toISOString() })
-          .eq("id", topic.id);
+        // Mark topic used only if at least one language succeeded,
+        // so a total failure (e.g. AI credit limit) doesn't burn the topic.
+        const anySuccess = results.some((r) => !r.error);
+        if (anySuccess) {
+          await supabaseAdmin
+            .from("blog_topics")
+            .update({ used_at: new Date().toISOString() })
+            .eq("id", topic.id);
+        }
 
         return new Response(JSON.stringify({ topic_id: topic.id, results }), {
           headers: { "Content-Type": "application/json" },

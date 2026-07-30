@@ -1,0 +1,1 @@
+UPDATE public.blog_topics SET used_at = NULL WHERE id = 'f4a7b8a8-0ed6-482e-9fe0-b423ec80403b';
