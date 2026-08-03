@@ -26,6 +26,27 @@ export const Route = createFileRoute("/de/blog/$slug")({
           ]
         : [{ title: "Accio Work Blog" }],
       links: a ? [{ rel: "canonical", href: `https://acciowork.pro/de/blog/${a.slug}` }] : [],
+      scripts: a
+        ? [
+            {
+              type: "application/ld+json",
+              children: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Article",
+                headline: a.title,
+                description: a.description,
+                inLanguage: "de",
+                datePublished: a.published_at,
+                dateModified: a.published_at,
+                ...(a.cover_url ? { image: a.cover_url } : {}),
+                keywords: (a.keywords || []).join(", "),
+                author: { "@type": "Organization", name: "Accio Work" },
+                publisher: { "@type": "Organization", name: "Accio Work" },
+                mainEntityOfPage: { "@type": "WebPage", "@id": `https://acciowork.pro/de/blog/${a.slug}` },
+              }),
+            },
+          ]
+        : [],
     };
   },
   component: ArticleDe,
