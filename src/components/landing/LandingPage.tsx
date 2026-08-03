@@ -235,9 +235,13 @@ function Hero() {
         <h1 className="mx-auto flex items-center justify-center gap-3 text-[44px] font-extrabold tracking-tight text-foreground sm:text-[72px]">
           <Logo size={56} />
           <span>{t.hero.brand}</span>
+          <span className="sr-only"> — {t.hero.tagline}</span>
         </h1>
 
-        <p className="mx-auto mt-10 max-w-3xl text-[22px] font-bold text-foreground sm:text-[28px]">
+        <p
+          aria-hidden="true"
+          className="mx-auto mt-10 max-w-3xl text-[22px] font-bold text-foreground sm:text-[28px]"
+        >
           {t.hero.tagline}
         </p>
 
