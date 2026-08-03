@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { FreeForeverPage, EVENT_SEO } from "@/components/events/FreeForeverPage";
+import { FreeForeverPage, EVENT_SEO, EVENT_FAQ } from "@/components/events/FreeForeverPage";
 
 const LANG = "en" as const;
 const URL_SELF = "https://acciowork.pro/events/free-forever";
@@ -27,6 +27,21 @@ export const Route = createFileRoute("/events/free-forever")({
       { rel: "alternate", hrefLang: "hi", href: "https://acciowork.pro/hi/events/free-forever" },
       { rel: "alternate", hrefLang: "fr", href: "https://acciowork.pro/fr/events/free-forever" },
       { rel: "alternate", hrefLang: "x-default", href: URL_SELF },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          inLanguage: "en",
+          mainEntity: EVENT_FAQ[LANG].map((it) => ({
+            "@type": "Question",
+            name: it.q,
+            acceptedAnswer: { "@type": "Answer", text: it.a },
+          })),
+        }),
+      },
     ],
   }),
   component: () => <FreeForeverPage lang={LANG} />,

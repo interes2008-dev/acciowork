@@ -1239,3 +1239,7 @@ export const EVENT_SEO: Record<Lang, { title: string; description: string }> = {
 };
 
 export { REFERRAL_URL };
+
+export const EVENT_FAQ: Record<Lang, { q: string; a: string }[]> = Object.fromEntries(
+  (Object.keys(DICTS) as Lang[]).map((l) => [l, DICTS[l].faq.items]),
+) as Record<Lang, { q: string; a: string }[]>;

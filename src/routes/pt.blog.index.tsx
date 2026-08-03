@@ -7,7 +7,7 @@ export const Route = createFileRoute("/pt/blog/")({
   loader: async () => ({ articles: await listArticles({ data: { lang: "pt", limit: 60 } }) }),
   head: () => ({
     meta: [
-      { title: "Blog Accio Work — ideias práticas de um negócio guiado por IA" },
+      { title: "Blog Accio Work — negócio guiado por IA" },
       { name: "description", content: "Notas de campo sobre como tocar um negócio moderno com um time de IA que você realmente dirige. Artigos novos todo dia." },
       { property: "og:title", content: "Blog Accio Work" },
       { property: "og:locale", content: "pt_BR" },
