@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ZhRouteImport } from './routes/zh'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as SeoMonitorRouteImport } from './routes/seo-monitor'
 import { Route as RuRouteImport } from './routes/ru'
 import { Route as PtRouteImport } from './routes/pt'
 import { Route as ItRouteImport } from './routes/it'
@@ -54,6 +55,7 @@ import { Route as EsEventsFreeForeverRouteImport } from './routes/es.events.free
 import { Route as EsBlogSlugRouteImport } from './routes/es.blog.$slug'
 import { Route as DeEventsFreeForeverRouteImport } from './routes/de.events.free-forever'
 import { Route as DeBlogSlugRouteImport } from './routes/de.blog.$slug'
+import { Route as ApiPublicCronSeoMonitorRouteImport } from './routes/api/public/cron/seo-monitor'
 import { Route as ApiPublicCronGenerateArticlesRouteImport } from './routes/api/public/cron/generate-articles'
 
 const ZhRoute = ZhRouteImport.update({
@@ -64,6 +66,11 @@ const ZhRoute = ZhRouteImport.update({
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SeoMonitorRoute = SeoMonitorRouteImport.update({
+  id: '/seo-monitor',
+  path: '/seo-monitor',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RuRoute = RuRouteImport.update({
@@ -281,6 +288,11 @@ const DeBlogSlugRoute = DeBlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => DeRoute,
 } as any)
+const ApiPublicCronSeoMonitorRoute = ApiPublicCronSeoMonitorRouteImport.update({
+  id: '/api/public/cron/seo-monitor',
+  path: '/api/public/cron/seo-monitor',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiPublicCronGenerateArticlesRoute =
   ApiPublicCronGenerateArticlesRouteImport.update({
     id: '/api/public/cron/generate-articles',
@@ -297,6 +309,7 @@ export interface FileRoutesByFullPath {
   '/it': typeof ItRouteWithChildren
   '/pt': typeof PtRouteWithChildren
   '/ru': typeof RuRouteWithChildren
+  '/seo-monitor': typeof SeoMonitorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/zh': typeof ZhRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
@@ -335,9 +348,11 @@ export interface FileRoutesByFullPath {
   '/ru/blog/': typeof RuBlogIndexRoute
   '/zh/blog/': typeof ZhBlogIndexRoute
   '/api/public/cron/generate-articles': typeof ApiPublicCronGenerateArticlesRoute
+  '/api/public/cron/seo-monitor': typeof ApiPublicCronSeoMonitorRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/seo-monitor': typeof SeoMonitorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/events/free-forever': typeof EventsFreeForeverRoute
@@ -375,6 +390,7 @@ export interface FileRoutesByTo {
   '/ru/blog': typeof RuBlogIndexRoute
   '/zh/blog': typeof ZhBlogIndexRoute
   '/api/public/cron/generate-articles': typeof ApiPublicCronGenerateArticlesRoute
+  '/api/public/cron/seo-monitor': typeof ApiPublicCronSeoMonitorRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -386,6 +402,7 @@ export interface FileRoutesById {
   '/it': typeof ItRouteWithChildren
   '/pt': typeof PtRouteWithChildren
   '/ru': typeof RuRouteWithChildren
+  '/seo-monitor': typeof SeoMonitorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/zh': typeof ZhRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
@@ -424,6 +441,7 @@ export interface FileRoutesById {
   '/ru/blog/': typeof RuBlogIndexRoute
   '/zh/blog/': typeof ZhBlogIndexRoute
   '/api/public/cron/generate-articles': typeof ApiPublicCronGenerateArticlesRoute
+  '/api/public/cron/seo-monitor': typeof ApiPublicCronSeoMonitorRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -436,6 +454,7 @@ export interface FileRouteTypes {
     | '/it'
     | '/pt'
     | '/ru'
+    | '/seo-monitor'
     | '/sitemap.xml'
     | '/zh'
     | '/blog/$slug'
@@ -474,9 +493,11 @@ export interface FileRouteTypes {
     | '/ru/blog/'
     | '/zh/blog/'
     | '/api/public/cron/generate-articles'
+    | '/api/public/cron/seo-monitor'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/seo-monitor'
     | '/sitemap.xml'
     | '/blog/$slug'
     | '/events/free-forever'
@@ -514,6 +535,7 @@ export interface FileRouteTypes {
     | '/ru/blog'
     | '/zh/blog'
     | '/api/public/cron/generate-articles'
+    | '/api/public/cron/seo-monitor'
   id:
     | '__root__'
     | '/'
@@ -524,6 +546,7 @@ export interface FileRouteTypes {
     | '/it'
     | '/pt'
     | '/ru'
+    | '/seo-monitor'
     | '/sitemap.xml'
     | '/zh'
     | '/blog/$slug'
@@ -562,6 +585,7 @@ export interface FileRouteTypes {
     | '/ru/blog/'
     | '/zh/blog/'
     | '/api/public/cron/generate-articles'
+    | '/api/public/cron/seo-monitor'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -573,12 +597,14 @@ export interface RootRouteChildren {
   ItRoute: typeof ItRouteWithChildren
   PtRoute: typeof PtRouteWithChildren
   RuRoute: typeof RuRouteWithChildren
+  SeoMonitorRoute: typeof SeoMonitorRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   ZhRoute: typeof ZhRouteWithChildren
   BlogSlugRoute: typeof BlogSlugRoute
   EventsFreeForeverRoute: typeof EventsFreeForeverRoute
   BlogIndexRoute: typeof BlogIndexRoute
   ApiPublicCronGenerateArticlesRoute: typeof ApiPublicCronGenerateArticlesRoute
+  ApiPublicCronSeoMonitorRoute: typeof ApiPublicCronSeoMonitorRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -595,6 +621,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/seo-monitor': {
+      id: '/seo-monitor'
+      path: '/seo-monitor'
+      fullPath: '/seo-monitor'
+      preLoaderRoute: typeof SeoMonitorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/ru': {
@@ -898,6 +931,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DeBlogSlugRouteImport
       parentRoute: typeof DeRoute
     }
+    '/api/public/cron/seo-monitor': {
+      id: '/api/public/cron/seo-monitor'
+      path: '/api/public/cron/seo-monitor'
+      fullPath: '/api/public/cron/seo-monitor'
+      preLoaderRoute: typeof ApiPublicCronSeoMonitorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/cron/generate-articles': {
       id: '/api/public/cron/generate-articles'
       path: '/api/public/cron/generate-articles'
@@ -1045,12 +1085,14 @@ const rootRouteChildren: RootRouteChildren = {
   ItRoute: ItRouteWithChildren,
   PtRoute: PtRouteWithChildren,
   RuRoute: RuRouteWithChildren,
+  SeoMonitorRoute: SeoMonitorRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   ZhRoute: ZhRouteWithChildren,
   BlogSlugRoute: BlogSlugRoute,
   EventsFreeForeverRoute: EventsFreeForeverRoute,
   BlogIndexRoute: BlogIndexRoute,
   ApiPublicCronGenerateArticlesRoute: ApiPublicCronGenerateArticlesRoute,
+  ApiPublicCronSeoMonitorRoute: ApiPublicCronSeoMonitorRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
