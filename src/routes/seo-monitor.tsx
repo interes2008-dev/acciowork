@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { getSeoMonitorOverview } from "@/lib/seo-monitor.functions";
+import { getSeoMonitorOverview, type ScanIssue, type ScanRun } from "@/lib/seo-monitor.functions";
 
 export const Route = createFileRoute("/seo-monitor")({
   loader: async () => await getSeoMonitorOverview(),
@@ -44,8 +44,8 @@ function delta(now: number | null, prev: number | null) {
 
 function SeoMonitor() {
   const { runs, latest, issues } = Route.useLoaderData();
-  const critical = issues.filter((i) => i.severity === "critical");
-  const warnings = issues.filter((i) => i.severity !== "critical");
+  const critical = issues.filter((i: ScanIssue) => i.severity === "critical");
+  const warnings = issues.filter((i: ScanIssue) => i.severity !== "critical");
 
   return (
     <main className="mx-auto max-w-6xl px-5 py-12">
@@ -113,7 +113,7 @@ function SeoMonitor() {
                     </tr>
                   </thead>
                   <tbody>
-                    {[...critical, ...warnings].map((i) => (
+                    {[...critical, ...warnings].map((i: ScanIssue) => (
                       <tr key={i.id} className="border-t border-border">
                         <td className="whitespace-nowrap px-4 py-3">
                           <span
@@ -161,7 +161,7 @@ function SeoMonitor() {
                   </tr>
                 </thead>
                 <tbody>
-                  {runs.map((r) => (
+                  {runs.map((r: ScanRun) => (
                     <tr key={r.id} className="border-t border-border">
                       <td className="px-4 py-3 text-foreground">{fmt(r.started_at)}</td>
                       <td className="px-4 py-3 text-muted-foreground">
