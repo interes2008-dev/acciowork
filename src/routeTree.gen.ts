@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ZhRouteImport } from './routes/zh'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as SeoMonitorRouteImport } from './routes/seo-monitor'
 import { Route as RuRouteImport } from './routes/ru'
 import { Route as PtRouteImport } from './routes/pt'
 import { Route as ItRouteImport } from './routes/it'
@@ -65,6 +66,11 @@ const ZhRoute = ZhRouteImport.update({
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SeoMonitorRoute = SeoMonitorRouteImport.update({
+  id: '/seo-monitor',
+  path: '/seo-monitor',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RuRoute = RuRouteImport.update({
@@ -303,6 +309,7 @@ export interface FileRoutesByFullPath {
   '/it': typeof ItRouteWithChildren
   '/pt': typeof PtRouteWithChildren
   '/ru': typeof RuRouteWithChildren
+  '/seo-monitor': typeof SeoMonitorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/zh': typeof ZhRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
@@ -345,6 +352,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/seo-monitor': typeof SeoMonitorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/events/free-forever': typeof EventsFreeForeverRoute
@@ -394,6 +402,7 @@ export interface FileRoutesById {
   '/it': typeof ItRouteWithChildren
   '/pt': typeof PtRouteWithChildren
   '/ru': typeof RuRouteWithChildren
+  '/seo-monitor': typeof SeoMonitorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/zh': typeof ZhRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
@@ -445,6 +454,7 @@ export interface FileRouteTypes {
     | '/it'
     | '/pt'
     | '/ru'
+    | '/seo-monitor'
     | '/sitemap.xml'
     | '/zh'
     | '/blog/$slug'
@@ -487,6 +497,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/seo-monitor'
     | '/sitemap.xml'
     | '/blog/$slug'
     | '/events/free-forever'
@@ -535,6 +546,7 @@ export interface FileRouteTypes {
     | '/it'
     | '/pt'
     | '/ru'
+    | '/seo-monitor'
     | '/sitemap.xml'
     | '/zh'
     | '/blog/$slug'
@@ -585,6 +597,7 @@ export interface RootRouteChildren {
   ItRoute: typeof ItRouteWithChildren
   PtRoute: typeof PtRouteWithChildren
   RuRoute: typeof RuRouteWithChildren
+  SeoMonitorRoute: typeof SeoMonitorRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   ZhRoute: typeof ZhRouteWithChildren
   BlogSlugRoute: typeof BlogSlugRoute
@@ -608,6 +621,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/seo-monitor': {
+      id: '/seo-monitor'
+      path: '/seo-monitor'
+      fullPath: '/seo-monitor'
+      preLoaderRoute: typeof SeoMonitorRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/ru': {
@@ -1065,6 +1085,7 @@ const rootRouteChildren: RootRouteChildren = {
   ItRoute: ItRouteWithChildren,
   PtRoute: PtRouteWithChildren,
   RuRoute: RuRouteWithChildren,
+  SeoMonitorRoute: SeoMonitorRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   ZhRoute: ZhRouteWithChildren,
   BlogSlugRoute: BlogSlugRoute,
