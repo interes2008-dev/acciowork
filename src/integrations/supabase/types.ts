@@ -106,6 +106,137 @@ export type Database = {
         }
         Relationships: []
       }
+      seo_monitor_config: {
+        Row: {
+          alert_email: string | null
+          alerts_enabled: boolean
+          id: number
+          updated_at: string
+        }
+        Insert: {
+          alert_email?: string | null
+          alerts_enabled?: boolean
+          id?: number
+          updated_at?: string
+        }
+        Update: {
+          alert_email?: string | null
+          alerts_enabled?: boolean
+          id?: number
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      seo_scan_issues: {
+        Row: {
+          category: string
+          created_at: string
+          detail: string | null
+          id: string
+          lang: string | null
+          message: string
+          run_id: string
+          severity: string
+          url: string
+        }
+        Insert: {
+          category: string
+          created_at?: string
+          detail?: string | null
+          id?: string
+          lang?: string | null
+          message: string
+          run_id: string
+          severity?: string
+          url: string
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          detail?: string | null
+          id?: string
+          lang?: string | null
+          message?: string
+          run_id?: string
+          severity?: string
+          url?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "seo_scan_issues_run_id_fkey"
+            columns: ["run_id"]
+            isOneToOne: false
+            referencedRelation: "seo_scan_runs"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      seo_scan_runs: {
+        Row: {
+          alert_sent: boolean
+          critical_count: number
+          error_message: string | null
+          finished_at: string | null
+          gsc_clicks: number | null
+          gsc_coverage_state: string | null
+          gsc_ctr: number | null
+          gsc_impressions: number | null
+          gsc_index_state: string | null
+          gsc_position: number | null
+          gsc_prev_clicks: number | null
+          gsc_prev_impressions: number | null
+          gsc_site_url: string | null
+          id: string
+          issues_count: number
+          new_issues_count: number
+          pages_checked: number
+          started_at: string
+          status: string
+        }
+        Insert: {
+          alert_sent?: boolean
+          critical_count?: number
+          error_message?: string | null
+          finished_at?: string | null
+          gsc_clicks?: number | null
+          gsc_coverage_state?: string | null
+          gsc_ctr?: number | null
+          gsc_impressions?: number | null
+          gsc_index_state?: string | null
+          gsc_position?: number | null
+          gsc_prev_clicks?: number | null
+          gsc_prev_impressions?: number | null
+          gsc_site_url?: string | null
+          id?: string
+          issues_count?: number
+          new_issues_count?: number
+          pages_checked?: number
+          started_at?: string
+          status?: string
+        }
+        Update: {
+          alert_sent?: boolean
+          critical_count?: number
+          error_message?: string | null
+          finished_at?: string | null
+          gsc_clicks?: number | null
+          gsc_coverage_state?: string | null
+          gsc_ctr?: number | null
+          gsc_impressions?: number | null
+          gsc_index_state?: string | null
+          gsc_position?: number | null
+          gsc_prev_clicks?: number | null
+          gsc_prev_impressions?: number | null
+          gsc_site_url?: string | null
+          id?: string
+          issues_count?: number
+          new_issues_count?: number
+          pages_checked?: number
+          started_at?: string
+          status?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
