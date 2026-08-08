@@ -1,3 +1,4 @@
+import { BrandLogo as SharedLogo } from "@/components/BrandLogo";
 import { useEffect, useRef, useState } from "react";
 import type { Lang } from "@/lib/translations";
 
@@ -859,23 +860,6 @@ function Counter({ to, suffix = "", duration = 2000, locale }: { to: number; suf
 }
 
 /* ---------- Brand logo ---------- */
-function BrandLogo({ size = 22 }: { size?: number }) {
-  return (
-    <div className="flex items-center gap-1.5 font-bold tracking-tight" style={{ fontSize: size }}>
-      <svg width={size * 0.95} height={size} viewBox="0 0 28 28" aria-hidden>
-        <defs>
-          <linearGradient id="accioTriEvtShared" x1="0" y1="1" x2="1" y2="0">
-            <stop offset="0%" stopColor="#0F172A" />
-            <stop offset="55%" stopColor="#17B26A" />
-            <stop offset="100%" stopColor="#7CE7C2" />
-          </linearGradient>
-        </defs>
-        <path d="M14 3 L26 25 L2 25 Z" fill="url(#accioTriEvtShared)" />
-      </svg>
-      <span className="text-[#0F172A]">Accio</span>
-    </div>
-  );
-}
 
 /* ---------- Language switcher ---------- */
 const LANG_NAMES: Record<Lang, string> = {
@@ -926,7 +910,7 @@ function Header({ lang, d }: { lang: Lang; d: EventDict }) {
     <header className="sticky top-0 z-50 w-full border-b border-[#E5E7EB] bg-white/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-[1280px] items-center justify-between px-4 sm:px-6">
         <a href={homeHref(lang)} className="flex items-center gap-2">
-          <BrandLogo size={22} />
+          <SharedLogo size={22} />
         </a>
         <nav className="hidden items-center gap-8 text-[14px] font-medium text-[#1a1a2e]/80 md:flex">
           <a href={`${homeHref(lang)}#pricing`} className="hover:text-[#1a1a2e]">{d.nav.pricing}</a>
@@ -1186,7 +1170,7 @@ function Footer({ lang, d }: { lang: Lang; d: EventDict }) {
   return (
     <footer className="bg-[#F8F9FB] py-10">
       <div className="mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-6 px-6 sm:flex-row">
-        <a href={homeHref(lang)} className="flex items-center gap-2"><BrandLogo size={18} /></a>
+        <a href={homeHref(lang)} className="flex items-center gap-2"><SharedLogo size={18} /></a>
         <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[13px] text-[#6B7280]">
           <a href={`${homeHref(lang)}#pricing`} className="hover:text-[#1a1a2e]">{d.footer.pricing}</a>
           <a href={blogHref(lang)} className="hover:text-[#1a1a2e]">{d.footer.blog}</a>

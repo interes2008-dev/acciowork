@@ -8,7 +8,7 @@ const LANGS = ["en","ru","de","it","es","zh","pt","hi","fr"] as const;
 function alternates(slug: string) {
   const list = LANGS.map((l) => ({
     rel: "alternate",
-    hrefLang: l,
+    hrefLang: l as string,
     href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/compare/${slug}`,
   }));
   list.push({ rel: "alternate", hrefLang: "x-default", href: `https://acciowork.pro/compare/${slug}` });
