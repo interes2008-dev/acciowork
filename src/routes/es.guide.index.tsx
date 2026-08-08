@@ -11,7 +11,7 @@ export const Route = createFileRoute("/es/guide/")({
     const url = "https://acciowork.pro/es/guide";
     const alternates = LANGS.map((l) => ({
       rel: "alternate",
-      hrefLang: l,
+      hrefLang: l as string,
       href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/guide`,
     }));
     alternates.push({ rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/guide" });
