@@ -1,7 +1,71 @@
 # Accio Work
 
-> AI-powered workspace for market research, supplier discovery, content generation, and business workflow automation.
+> AI-powered desktop and browser workspace for market research, supplier discovery, content generation, and end-to-end business workflow automation. Powered by Alibaba's real supplier and trade data. Free to start, no card required.
 
-## Pages
+## What it is
 
-- [Home](/): Overview of Accio Work — features, testimonials, FAQ, and download.
+Accio Work is an execution-oriented AI agent platform (not a chatbot). A general agent plans your goal and hands work to specialist agents for sourcing, design, copywriting and analysis. It reads local files, controls a real browser, runs scheduled automations and connects to 50+ apps. Available on macOS, Windows and directly in the browser.
+
+## Home (landing, all languages)
+
+- [English](https://acciowork.pro/): overview, how it works, use cases, pricing, FAQ, get started
+- [Русский](https://acciowork.pro/ru)
+- [Deutsch](https://acciowork.pro/de)
+- [Italiano](https://acciowork.pro/it)
+- [Español](https://acciowork.pro/es)
+- [中文](https://acciowork.pro/zh)
+- [Português](https://acciowork.pro/pt)
+- [हिन्दी](https://acciowork.pro/hi)
+- [Français](https://acciowork.pro/fr)
+
+## Key sections on the landing page
+
+- How it works: from idea to done in four steps (describe goal, agents work, you approve, ship the result)
+- Use cases: dropshipping and D2C, supplier sourcing, content and marketing, market research, workflow automation, custom tools
+- Accio Work vs a regular AI chat: executes real tasks, uses real Alibaba trade data, multi-agent teams with memory
+- Pricing: Free (no card), Pro (usage-based credits), Enterprise (custom)
+- FAQ: supported LLMs, browser automation, scheduling, channels (Telegram, Discord, DingTalk, Feishu, WeChat), skills, platforms, agent teams
+
+## Blog (daily articles, all languages)
+
+- [Blog EN](https://acciowork.pro/blog)
+- [Blog RU](https://acciowork.pro/ru/blog)
+- [Blog DE](https://acciowork.pro/de/blog)
+- [Blog IT](https://acciowork.pro/it/blog)
+- [Blog ES](https://acciowork.pro/es/blog)
+- [Blog ZH](https://acciowork.pro/zh/blog)
+- [Blog PT](https://acciowork.pro/pt/blog)
+- [Blog HI](https://acciowork.pro/hi/blog)
+- [Blog FR](https://acciowork.pro/fr/blog)
+
+## Events
+
+- [Free forever announcement](https://acciowork.pro/events/free-forever)
+
+## Comparisons (how Accio Work compares to other AI tools, all languages)
+
+- [Comparisons hub EN](https://acciowork.pro/compare)
+- [Accio Work vs ChatGPT](https://acciowork.pro/compare/chatgpt): sourcing, supplier research and product content vs a general chat assistant
+- [Accio Work vs Manus](https://acciowork.pro/compare/manus): e-commerce tuned agent vs a general autonomous agent
+- [Accio Work vs Genspark](https://acciowork.pro/compare/genspark): the sourcing and selling loop vs AI search
+- Localized hubs: /ru/compare, /de/compare, /it/compare, /es/compare, /zh/compare, /pt/compare, /hi/compare, /fr/compare
+
+## Use cases (what Accio Work does for a specific job, all languages)
+
+- [Use cases hub EN](https://acciowork.pro/for)
+- [Dropshipping](https://acciowork.pro/for/dropshipping): trend to first sale, product research, supplier, listing and ads
+- [Supplier sourcing](https://acciowork.pro/for/sourcing): verified suppliers and drafted inquiries on real Alibaba data
+- [Content and marketing](https://acciowork.pro/for/content): landing pages, product cards, social posts, scheduled
+- [Market research](https://acciowork.pro/for/market-research): competitors, demand and pricing in a short brief
+- [Workflow automation](https://acciowork.pro/for/automation): repeatable multi step tasks on a schedule across apps
+- [Custom tools](https://acciowork.pro/for/custom-tools): small internal tools built from a plain description
+- Localized hubs: /ru/for, /de/for, /it/for, /es/for, /zh/for, /pt/for, /hi/for, /fr/for
+
+## Guides (how to use Accio Work, step by step, all languages)
+
+- [Guides hub EN](https://acciowork.pro/guide)
+- [Getting started](https://acciowork.pro/guide/getting-started): from sign up to your first finished result
+- [Run your first task](https://acciowork.pro/guide/first-task): write a goal the agent can finish start to finish
+- [Connect apps and channels](https://acciowork.pro/guide/connect-apps): Telegram, Discord, DingTalk, Feishu, WeChat and app integrations
+- [Scheduled automations](https://acciowork.pro/guide/automations): turn a repeatable task into one that runs itself
+- Localized hubs: /ru/guide, /de/guide, /it/guide, /es/guide, /zh/guide, /pt/guide, /hi/guide, /fr/guide

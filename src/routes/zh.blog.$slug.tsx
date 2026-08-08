@@ -14,7 +14,7 @@ export const Route = createFileRoute("/zh/blog/$slug")({
     return {
       meta: a
         ? [
-            { title: `${a.title} — Accio Work 博客` },
+            { title: `${a.title} | Accio Work 博客` },
             { name: "description", content: a.description },
             { name: "keywords", content: (a.keywords || []).join(", ") },
             { property: "og:title", content: a.title },

@@ -48,6 +48,31 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/fr/blog", changefreq: "daily", priority: "0.8" },
         ];
 
+        const compareLangs = ["", "/ru", "/de", "/it", "/es", "/zh", "/pt", "/hi", "/fr"];
+        const competitors = ["chatgpt", "manus", "genspark"];
+        for (const l of compareLangs) {
+          entries.push({ path: `${l}/compare`, changefreq: "weekly", priority: "0.7" });
+          for (const cmp of competitors) {
+            entries.push({ path: `${l}/compare/${cmp}`, changefreq: "monthly", priority: "0.7" });
+          }
+        }
+
+        const useCases = ["dropshipping", "sourcing", "content", "market-research", "automation", "custom-tools"];
+        for (const l of compareLangs) {
+          entries.push({ path: `${l}/for`, changefreq: "weekly", priority: "0.7" });
+          for (const uc of useCases) {
+            entries.push({ path: `${l}/for/${uc}`, changefreq: "monthly", priority: "0.7" });
+          }
+        }
+
+        const guides = ["getting-started", "first-task", "connect-apps", "automations"];
+        for (const l of compareLangs) {
+          entries.push({ path: `${l}/guide`, changefreq: "weekly", priority: "0.7" });
+          for (const g of guides) {
+            entries.push({ path: `${l}/guide/${g}`, changefreq: "monthly", priority: "0.7" });
+          }
+        }
+
         try {
           const articles = await listAllPublishedForSitemap();
           for (const a of articles) {

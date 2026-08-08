@@ -14,7 +14,7 @@ export const Route = createFileRoute("/blog/$slug")({
     return {
       meta: a
         ? [
-            { title: `${a.title} — Accio Work Blog` },
+            { title: `${a.title} | Accio Work Blog` },
             { name: "description", content: a.description },
             { name: "keywords", content: (a.keywords || []).join(", ") },
             { property: "og:title", content: a.title },

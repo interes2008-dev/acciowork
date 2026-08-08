@@ -7,6 +7,7 @@ import {
   Globe,
   Headphones,
   Sparkles,
+  X,
 } from "lucide-react";
 import { I18nProvider, useI18n, renderHighlighted } from "@/lib/i18n";
 import type { Lang, TabKey, Testimonial as TestimonialT } from "@/lib/translations";
@@ -163,6 +164,8 @@ function Navbar() {
     else if (p.startsWith("/fr")) setBlogHref("/fr/blog");
     else setBlogHref("/blog");
   }, [lang]);
+  const compareHref = blogHref.replace("/blog", "/compare");
+  const guideHref = blogHref.replace("/blog", "/guide");
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-[1280px] items-center justify-between px-6">
@@ -170,8 +173,10 @@ function Navbar() {
           <a href="#top" className="flex items-center"><Logo size={26} /></a>
           <nav className="hidden items-center gap-8 text-[15px] font-medium text-foreground/80 md:flex">
             <a href="#pricing" className="hover:text-foreground">{t.nav.pricing}</a>
+            <a href={guideHref} className="hover:text-foreground">{t.nav.guide}</a>
             <a href={blogHref} className="hover:text-foreground">{t.nav.blog}</a>
-            <button className="flex items-center gap-1 hover:text-foreground">{t.nav.help} <ChevronDown className="h-4 w-4 opacity-60" /></button>
+            <a href={compareHref} className="hover:text-foreground">{t.nav.compare}</a>
+            <a href="#faq" className="flex items-center gap-1 hover:text-foreground">{t.nav.help}</a>
             <a href={lang === "en" ? "/events/free-forever" : `/${lang}/events/free-forever`} className="flex items-center gap-1 hover:text-foreground">{t.nav.events} <span>🔥</span></a>
           </nav>
         </div>
@@ -235,7 +240,7 @@ function Hero() {
         <h1 className="mx-auto flex items-center justify-center gap-3 text-[44px] font-extrabold tracking-tight text-foreground sm:text-[72px]">
           <Logo size={56} />
           <span>{t.hero.brand}</span>
-          <span className="sr-only"> — {t.hero.tagline}</span>
+          <span className="sr-only">, {t.hero.tagline}</span>
         </h1>
 
         <p
@@ -267,6 +272,10 @@ function Hero() {
             </span>
           </a>
           <p className="mt-3 text-[13px] text-muted-foreground">{t.hero.ctaNote}</p>
+          <p className="mt-1 flex items-center gap-1.5 text-[13px] font-medium text-foreground/70">
+            <Globe className="h-3.5 w-3.5 text-[#17B26A]" />
+            {t.availability}
+          </p>
         </div>
       </div>
 
@@ -505,6 +514,173 @@ function WhyChoose() {
   );
 }
 
+/* ---------- How it works ---------- */
+function HowItWorks() {
+  const { t } = useI18n();
+  return (
+    <section id="how" className="scroll-mt-24 bg-background py-24 sm:py-32">
+      <div className="mx-auto max-w-[1120px] px-6">
+        <h2 className="text-center text-[28px] font-bold tracking-tight text-foreground sm:text-[40px]">
+          {t.steps.heading}
+        </h2>
+        <p className="mx-auto mt-4 max-w-2xl text-center text-[16px] leading-relaxed text-muted-foreground sm:text-[18px]">
+          {t.steps.subheading}
+        </p>
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {t.steps.items.map((s, i) => (
+            <div key={s.title} className="relative rounded-[24px] border border-border/60 bg-white p-7 shadow-card">
+              <div className="grid h-11 w-11 place-items-center rounded-2xl bg-[#DDF7EE] text-[18px] font-extrabold text-[#17B26A]">
+                {i + 1}
+              </div>
+              <h3 className="mt-5 text-[18px] font-bold text-foreground">{s.title}</h3>
+              <p className="mt-2 text-[14.5px] leading-relaxed text-muted-foreground">{s.body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ---------- Use cases ---------- */
+function UseCases() {
+  const { t, lang } = useI18n();
+  const forBase = lang === "en" ? "/for" : `/${lang}/for`;
+  const ucSlugs = ["dropshipping", "sourcing", "content", "market-research", "automation", "custom-tools"];
+  return (
+    <section id="use-cases" className="scroll-mt-24 bg-[#F7F8FA] py-24 sm:py-32">
+      <div className="mx-auto max-w-[1200px] px-6">
+        <h2 className="text-center text-[28px] font-bold tracking-tight text-foreground sm:text-[40px]">
+          {t.useCases.heading}
+        </h2>
+        <p className="mx-auto mt-4 max-w-2xl text-center text-[16px] leading-relaxed text-muted-foreground sm:text-[18px]">
+          {t.useCases.subheading}
+        </p>
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {t.useCases.items.map((u, i) => (
+            <a key={u.title} href={`${forBase}/${ucSlugs[i]}`} className="block rounded-[24px] bg-white p-7 shadow-card transition hover:-translate-y-1 hover:shadow-elegant">
+              <div className="grid h-12 w-12 place-items-center rounded-2xl bg-mint-50 text-[24px]">{u.icon}</div>
+              <h3 className="mt-5 text-[19px] font-bold text-foreground">{u.title}</h3>
+              <p className="mt-2 text-[14.5px] leading-relaxed text-muted-foreground">{u.body}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ---------- Accio vs plain chat ---------- */
+function CompareChat() {
+  const { t } = useI18n();
+  return (
+    <section className="bg-background py-24 sm:py-32">
+      <div className="mx-auto max-w-[960px] px-6">
+        <h2 className="text-center text-[28px] font-bold tracking-tight text-foreground sm:text-[40px]">
+          {t.compareChat.heading}
+        </h2>
+        <p className="mx-auto mt-4 max-w-2xl text-center text-[16px] leading-relaxed text-muted-foreground sm:text-[18px]">
+          {t.compareChat.subheading}
+        </p>
+        <div className="mt-12 overflow-hidden rounded-[28px] border border-border/70 shadow-card">
+          <div className="grid grid-cols-2">
+            <div className="bg-[#F7F8FA] px-5 py-5 text-[14px] font-bold text-foreground/70 sm:px-8 sm:text-[15px]">
+              {t.compareChat.chatLabel}
+            </div>
+            <div className="bg-[#0E1210] px-5 py-5 text-[14px] font-bold text-white sm:px-8 sm:text-[15px]">
+              {t.compareChat.accioLabel}
+            </div>
+          </div>
+          {t.compareChat.rows.map((r, i) => (
+            <div key={i} className={`grid grid-cols-2 ${i % 2 ? "bg-white" : "bg-[#FBFCFD]"}`}>
+              <div className="flex items-start gap-3 border-t border-border/60 px-5 py-5 sm:px-8">
+                <X className="mt-0.5 h-4 w-4 shrink-0 text-[#C0392B]/70" />
+                <span className="text-[14.5px] leading-snug text-muted-foreground">{r.chat}</span>
+              </div>
+              <div className="flex items-start gap-3 border-t border-border/60 bg-[#0E1210]/[0.02] px-5 py-5 sm:px-8">
+                <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#17B26A]" />
+                <span className="text-[14.5px] font-medium leading-snug text-foreground">{r.accio}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ---------- Pricing ---------- */
+function Pricing() {
+  const { t } = useI18n();
+  return (
+    <section id="pricing" className="scroll-mt-24 bg-mint-50 py-24 sm:py-32">
+      <div className="mx-auto max-w-[1160px] px-6">
+        <h2 className="text-center text-[32px] font-extrabold tracking-tight text-foreground sm:text-[48px]">
+          {t.pricing.heading}
+        </h2>
+        <p className="mx-auto mt-4 max-w-2xl text-center text-[16px] leading-relaxed text-muted-foreground sm:text-[18px]">
+          {t.pricing.subheading}
+        </p>
+        <div className="mt-14 grid items-stretch gap-6 lg:grid-cols-3">
+          {t.pricing.plans.map((p) => (
+            <div
+              key={p.name}
+              className={`relative flex flex-col rounded-[28px] p-8 ${
+                p.highlight
+                  ? "bg-[#0E1210] text-white shadow-elegant ring-2 ring-[#17B26A]"
+                  : "border border-border/70 bg-white text-foreground shadow-card"
+              }`}
+            >
+              {p.highlight && (
+                <span className="absolute -top-3 left-8 rounded-full bg-[#17B26A] px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white">
+                  ★
+                </span>
+              )}
+              <h3 className={`text-[20px] font-bold ${p.highlight ? "text-white" : "text-foreground"}`}>{p.name}</h3>
+              <div className="mt-4 flex items-baseline gap-2">
+                <span className="text-[34px] font-extrabold tracking-tight">{p.price}</span>
+                <span className={`text-[13px] ${p.highlight ? "text-white/60" : "text-muted-foreground"}`}>
+                  {p.priceNote}
+                </span>
+              </div>
+              <p className={`mt-3 text-[14.5px] leading-relaxed ${p.highlight ? "text-white/80" : "text-muted-foreground"}`}>
+                {p.tagline}
+              </p>
+              <div className="my-6 h-px w-full bg-current opacity-10" />
+              <p className={`mb-3 text-[12px] font-bold uppercase tracking-wider ${p.highlight ? "text-white/50" : "text-foreground/40"}`}>
+                {t.pricing.perksTitle}
+              </p>
+              <ul className="flex flex-col gap-3">
+                {p.features.map((f) => (
+                  <li key={f} className="flex items-start gap-2.5">
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#17B26A]" />
+                    <span className={`text-[14.5px] leading-snug ${p.highlight ? "text-white/90" : "text-foreground/85"}`}>{f}</span>
+                  </li>
+                ))}
+              </ul>
+              <a
+                href={REFERRAL_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`mt-8 inline-flex h-12 items-center justify-center rounded-full text-[15px] font-semibold transition hover:scale-[1.02] ${
+                  p.highlight
+                    ? "bg-[#17B26A] text-white hover:bg-[#17B26A]/90"
+                    : "bg-[#0F172A] text-white hover:bg-[#0F172A]/90"
+                }`}
+              >
+                {p.cta}
+              </a>
+            </div>
+          ))}
+        </div>
+        <p className="mx-auto mt-8 max-w-2xl text-center text-[13px] leading-relaxed text-muted-foreground">
+          {t.pricing.note}
+        </p>
+      </div>
+    </section>
+  );
+}
+
 /* ---------- Testimonials ---------- */
 function TestimonialCard({ t }: { t: TestimonialT }) {
   return (
@@ -608,7 +784,7 @@ function Faq() {
   const { t } = useI18n();
   const [openIdx, setOpenIdx] = useState<number | null>(0);
   return (
-    <section className="py-24 sm:py-32">
+    <section id="faq" className="scroll-mt-24 py-24 sm:py-32">
       <div className="mx-auto max-w-[880px] px-6">
         <h2 className="text-center text-[44px] font-extrabold tracking-tight text-foreground sm:text-[64px]">
           {t.faq.heading}
@@ -671,10 +847,19 @@ function FinalCta() {
 
 /* ---------- Footer ---------- */
 function Footer() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
+  const base = lang === "en" ? "" : `/${lang}`;
   return (
     <footer className="border-t border-border/70 bg-background py-20">
       <div className="mx-auto flex max-w-[1280px] flex-col items-center gap-8 px-6 text-center">
+        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-[15px] font-medium text-foreground/80">
+          <a href={`${base}/compare`} className="hover:text-foreground">{t.nav.compare}</a>
+          <a href={`${base}/for`} className="hover:text-foreground">{t.nav.useCases}</a>
+          <a href={`${base}/guide`} className="hover:text-foreground">{t.nav.guide}</a>
+          <a href={`${base}/blog`} className="hover:text-foreground">{t.nav.blog}</a>
+          <a href={`${base}/events/free-forever`} className="hover:text-foreground">{t.nav.events}</a>
+          <a href="#faq" className="hover:text-foreground">{t.nav.help}</a>
+        </div>
         <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 text-[16px] text-muted-foreground">
           <span className="font-medium">{t.footer.partneredWith}</span>
           <span className="text-[22px] font-bold text-[#FF6A00]">
@@ -706,8 +891,12 @@ export default function LandingPage() {
         <Navbar />
         <Hero />
         <BusinessNeeds />
+        <HowItWorks />
         <WhyChoose />
+        <UseCases />
+        <CompareChat />
         <Testimonials />
+        <Pricing />
         <Faq />
         <FinalCta />
         <Footer />
