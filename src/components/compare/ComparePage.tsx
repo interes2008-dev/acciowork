@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Check, ArrowRight, ArrowLeft } from "lucide-react";
 import {
+import { BrandLogo } from "@/components/BrandLogo";
   compareChrome,
   comparePages,
   compareOrder,
@@ -26,9 +27,8 @@ function Shell({ lang, children }: { lang: CmpLang; children: ReactNode }) {
     <div className="min-h-screen bg-[#FBFCFD] text-[#0E1210]">
       <header className="border-b border-black/5 bg-white/80 backdrop-blur">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-5 py-4">
-          <a href={homeHref(lang)} className="flex items-center gap-2 font-semibold">
-            <span className="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-[#17B26A] text-white">A</span>
-            Accio Work
+          <a href={homeHref(lang)} className="flex items-center">
+            <BrandLogo size={22} />
           </a>
           <a
             href={REFERRAL_URL}
