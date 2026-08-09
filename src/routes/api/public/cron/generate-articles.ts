@@ -150,7 +150,16 @@ export const Route = createFileRoute("/api/public/cron/generate-articles")({
           .order("used_at", { ascending: false })
           .limit(20);
 
-        let topic: NonNullable<typeof recentTopics>[number] | null = null;
+        type TopicRow = {
+          id: string;
+          seed_title: string;
+          angle: string;
+          keyword: string;
+          audience: string;
+          capability: string;
+          used_at: string | null;
+        };
+        let topic: TopicRow | null = null;
         let missing: BlogLang[] = [];
 
         for (const t of recentTopics ?? []) {
