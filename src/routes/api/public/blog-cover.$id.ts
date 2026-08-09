@@ -22,6 +22,19 @@ export const Route = createFileRoute("/api/public/blog-cover/$id")({
         const raw = (data?.cover_url as string | null) ?? null;
         if (error || !raw) return new Response("Not found", { status: 404 });
 
+        // Reference to another article's cover (shared cover across translations)
+        if (raw.startsWith("ref:")) {
+          const refId = raw.slice(4);
+          if (!/^[0-9a-f-]{36}$/i.test(refId)) return new Response("Not found", { status: 404 });
+          return new Response(null, {
+            status: 302,
+            headers: {
+              Location: `/api/public/blog-cover/${refId}`,
+              "Cache-Control": "public, max-age=86400",
+            },
+          });
+        }
+
         const match = /^data:([^;]+);base64,(.*)$/s.exec(raw);
         if (!match) {
           return new Response(null, { status: 302, headers: { Location: raw } });
