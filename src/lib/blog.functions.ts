@@ -32,6 +32,10 @@ export type ArticleFull = ArticleListItem & {
   topic_id: string | null;
 };
 
+function coverUrl(id: string, hasCover: boolean | null) {
+  return hasCover ? `/api/public/blog-cover/${id}` : null;
+}
+
 export const listArticles = createServerFn({ method: "GET" })
   .inputValidator((input: unknown) =>
     z.object({ lang: LangSchema, limit: z.number().int().min(1).max(200).default(50) }).parse(input),
@@ -40,13 +44,16 @@ export const listArticles = createServerFn({ method: "GET" })
     const supabase = publicClient();
     const { data: rows, error } = await supabase
       .from("blog_articles")
-      .select("id, slug, title, description, cover_url, reading_minutes, published_at, lang")
+      .select("id, slug, title, description, has_cover, reading_minutes, published_at, lang")
       .eq("lang", data.lang)
       .eq("status", "published")
       .order("published_at", { ascending: false })
       .limit(data.limit);
     if (error) throw new Error(error.message);
-    return (rows ?? []) as ArticleListItem[];
+    return ((rows ?? []) as Array<Record<string, unknown>>).map((r) => ({
+      ...(r as unknown as ArticleListItem),
+      cover_url: coverUrl(r.id as string, r.has_cover as boolean | null),
+    }));
   });
 
 export const getArticle = createServerFn({ method: "GET" })
@@ -57,14 +64,18 @@ export const getArticle = createServerFn({ method: "GET" })
     const supabase = publicClient();
     const { data: row, error } = await supabase
       .from("blog_articles")
-      .select("id, slug, title, description, cover_url, reading_minutes, published_at, lang, body_md, keywords, topic_id")
+      .select("id, slug, title, description, has_cover, reading_minutes, published_at, lang, body_md, keywords, topic_id")
       .eq("lang", data.lang)
       .eq("slug", data.slug)
       .eq("status", "published")
       .maybeSingle();
     if (error) throw new Error(error.message);
     if (!row) return null;
-    return row as ArticleFull;
+    const r = row as unknown as Record<string, unknown>;
+    return {
+      ...(r as unknown as ArticleFull),
+      cover_url: coverUrl(r.id as string, r.has_cover as boolean | null),
+    };
   });
 
 export const getArticleAlternates = createServerFn({ method: "GET" })
