@@ -136,15 +136,55 @@ export const Route = createFileRoute("/api/public/cron/generate-articles")({
 
         const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
 
-        // Pick one unused topic (fallback: least recently used)
-        const { data: topicRows, error: topicErr } = await supabaseAdmin
+        const batchLimit = Math.max(1, Math.min(9, Number(url.searchParams.get("limit") ?? 3)));
+        const requestedLangs = (url.searchParams.get("langs") ?? "")
+          .split(",")
+          .map((l) => l.trim())
+          .filter((l): l is BlogLang => (LANGS as string[]).includes(l));
+
+        // 1) Prefer finishing a recently started topic that is missing translations.
+        const { data: recentTopics } = await supabaseAdmin
           .from("blog_topics")
           .select("id, seed_title, angle, keyword, audience, capability, used_at")
-          .order("used_at", { ascending: true, nullsFirst: true })
-          .limit(1);
-        if (topicErr) return new Response(topicErr.message, { status: 500 });
-        const topic = topicRows?.[0];
+          .not("used_at", "is", null)
+          .order("used_at", { ascending: false })
+          .limit(20);
+
+        let topic: NonNullable<typeof recentTopics>[number] | null = null;
+        let missing: BlogLang[] = [];
+
+        for (const t of recentTopics ?? []) {
+          const { data: have } = await supabaseAdmin
+            .from("blog_articles")
+            .select("lang")
+            .eq("topic_id", t.id);
+          const haveLangs = new Set((have ?? []).map((r) => r.lang as string));
+          const gap = LANGS.filter((l) => !haveLangs.has(l));
+          if (gap.length > 0) {
+            topic = t;
+            missing = gap;
+            break;
+          }
+        }
+
+        // 2) Otherwise start a fresh topic.
+        if (!topic) {
+          const { data: freshRows, error: topicErr } = await supabaseAdmin
+            .from("blog_topics")
+            .select("id, seed_title, angle, keyword, audience, capability, used_at")
+            .is("used_at", null)
+            .order("created_at", { ascending: true })
+            .limit(1);
+          if (topicErr) return new Response(topicErr.message, { status: 500 });
+          topic = freshRows?.[0] ?? null;
+          missing = [...LANGS];
+        }
         if (!topic) return new Response("No topics available", { status: 500 });
+
+        const targetLangs = (requestedLangs.length > 0
+          ? missing.filter((l) => requestedLangs.includes(l))
+          : missing
+        ).slice(0, batchLimit);
 
         const seed: TopicSeed = {
           seed_title: topic.seed_title,
@@ -154,13 +194,20 @@ export const Route = createFileRoute("/api/public/cron/generate-articles")({
           capability: topic.capability,
         };
 
-        // Generate a shared cover once (English prompt anyway) to save tokens
-        let sharedCoverPromptSource: string | null = null;
-        let sharedCoverUrl: string | null = null;
+        // Reuse the cover already generated for this topic, if any.
+        const { data: siblingRows } = await supabaseAdmin
+          .from("blog_articles")
+          .select("id, cover_prompt, has_cover")
+          .eq("topic_id", topic.id)
+          .eq("has_cover", true)
+          .limit(1);
+        const sibling = siblingRows?.[0] ?? null;
+        let sharedCoverPromptSource: string | null = sibling?.cover_prompt ?? null;
+        let sharedCoverUrl: string | null = sibling ? `ref:${sibling.id}` : null;
 
         const results: Array<{ lang: BlogLang; slug: string; error?: string }> = [];
 
-        for (const lang of LANGS) {
+        for (const lang of targetLangs) {
           try {
             const { system, user } = buildArticlePrompt(lang, seed);
             const article = await callAI(system, user);
