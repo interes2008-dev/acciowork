@@ -2,8 +2,6 @@ import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 import type { Database } from "@/integrations/supabase/types";
 
-const LangSchema = z.enum(["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr"]);
-
 export type ArticleListItem = {
   id: string;
   slug: string;
@@ -23,7 +21,10 @@ export type ArticleFull = ArticleListItem & {
 
 export const listArticles = createServerFn({ method: "GET" })
   .inputValidator((input: unknown) =>
-    z.object({ lang: LangSchema, limit: z.number().int().min(1).max(200).default(50) }).parse(input),
+    z.object({
+      lang: z.enum(["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr"]),
+      limit: z.number().int().min(1).max(200).default(50),
+    }).parse(input),
   )
   .handler(async ({ data }): Promise<ArticleListItem[]> => {
     const { createClient } = await import("@supabase/supabase-js");
@@ -54,7 +55,10 @@ export const listArticles = createServerFn({ method: "GET" })
 
 export const getArticle = createServerFn({ method: "GET" })
   .inputValidator((input: unknown) =>
-    z.object({ lang: LangSchema, slug: z.string().min(1).max(200) }).parse(input),
+    z.object({
+      lang: z.enum(["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr"]),
+      slug: z.string().min(1).max(200),
+    }).parse(input),
   )
   .handler(async ({ data }): Promise<ArticleFull | null> => {
     const { createClient } = await import("@supabase/supabase-js");

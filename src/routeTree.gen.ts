@@ -120,6 +120,7 @@ import { Route as DeCompareCompetitorRouteImport } from './routes/de.compare.$co
 import { Route as DeBlogSlugRouteImport } from './routes/de.blog.$slug'
 import { Route as ApiPublicCronSeoMonitorRouteImport } from './routes/api/public/cron/seo-monitor'
 import { Route as ApiPublicCronGenerateArticlesRouteImport } from './routes/api/public/cron/generate-articles'
+import { Route as ApiPublicBlogCoverIdRouteImport } from './routes/api/public/blog-cover.$id'
 
 const ZhRoute = ZhRouteImport.update({
   id: '/zh',
@@ -677,6 +678,11 @@ const ApiPublicCronGenerateArticlesRoute =
     path: '/api/public/cron/generate-articles',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ApiPublicBlogCoverIdRoute = ApiPublicBlogCoverIdRouteImport.update({
+  id: '/api/public/blog-cover/$id',
+  path: '/api/public/blog-cover/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -788,6 +794,7 @@ export interface FileRoutesByFullPath {
   '/zh/compare/': typeof ZhCompareIndexRoute
   '/zh/for/': typeof ZhForIndexRoute
   '/zh/guide/': typeof ZhGuideIndexRoute
+  '/api/public/blog-cover/$id': typeof ApiPublicBlogCoverIdRoute
   '/api/public/cron/generate-articles': typeof ApiPublicCronGenerateArticlesRoute
   '/api/public/cron/seo-monitor': typeof ApiPublicCronSeoMonitorRoute
 }
@@ -893,6 +900,7 @@ export interface FileRoutesByTo {
   '/zh/compare': typeof ZhCompareIndexRoute
   '/zh/for': typeof ZhForIndexRoute
   '/zh/guide': typeof ZhGuideIndexRoute
+  '/api/public/blog-cover/$id': typeof ApiPublicBlogCoverIdRoute
   '/api/public/cron/generate-articles': typeof ApiPublicCronGenerateArticlesRoute
   '/api/public/cron/seo-monitor': typeof ApiPublicCronSeoMonitorRoute
 }
@@ -1007,6 +1015,7 @@ export interface FileRoutesById {
   '/zh/compare/': typeof ZhCompareIndexRoute
   '/zh/for/': typeof ZhForIndexRoute
   '/zh/guide/': typeof ZhGuideIndexRoute
+  '/api/public/blog-cover/$id': typeof ApiPublicBlogCoverIdRoute
   '/api/public/cron/generate-articles': typeof ApiPublicCronGenerateArticlesRoute
   '/api/public/cron/seo-monitor': typeof ApiPublicCronSeoMonitorRoute
 }
@@ -1122,6 +1131,7 @@ export interface FileRouteTypes {
     | '/zh/compare/'
     | '/zh/for/'
     | '/zh/guide/'
+    | '/api/public/blog-cover/$id'
     | '/api/public/cron/generate-articles'
     | '/api/public/cron/seo-monitor'
   fileRoutesByTo: FileRoutesByTo
@@ -1227,6 +1237,7 @@ export interface FileRouteTypes {
     | '/zh/compare'
     | '/zh/for'
     | '/zh/guide'
+    | '/api/public/blog-cover/$id'
     | '/api/public/cron/generate-articles'
     | '/api/public/cron/seo-monitor'
   id:
@@ -1340,6 +1351,7 @@ export interface FileRouteTypes {
     | '/zh/compare/'
     | '/zh/for/'
     | '/zh/guide/'
+    | '/api/public/blog-cover/$id'
     | '/api/public/cron/generate-articles'
     | '/api/public/cron/seo-monitor'
   fileRoutesById: FileRoutesById
@@ -1366,6 +1378,7 @@ export interface RootRouteChildren {
   CompareIndexRoute: typeof CompareIndexRoute
   ForIndexRoute: typeof ForIndexRoute
   GuideIndexRoute: typeof GuideIndexRoute
+  ApiPublicBlogCoverIdRoute: typeof ApiPublicBlogCoverIdRoute
   ApiPublicCronGenerateArticlesRoute: typeof ApiPublicCronGenerateArticlesRoute
   ApiPublicCronSeoMonitorRoute: typeof ApiPublicCronSeoMonitorRoute
 }
@@ -2149,6 +2162,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicCronGenerateArticlesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/blog-cover/$id': {
+      id: '/api/public/blog-cover/$id'
+      path: '/api/public/blog-cover/$id'
+      fullPath: '/api/public/blog-cover/$id'
+      preLoaderRoute: typeof ApiPublicBlogCoverIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -2414,19 +2434,10 @@ const rootRouteChildren: RootRouteChildren = {
   CompareIndexRoute: CompareIndexRoute,
   ForIndexRoute: ForIndexRoute,
   GuideIndexRoute: GuideIndexRoute,
+  ApiPublicBlogCoverIdRoute: ApiPublicBlogCoverIdRoute,
   ApiPublicCronGenerateArticlesRoute: ApiPublicCronGenerateArticlesRoute,
   ApiPublicCronSeoMonitorRoute: ApiPublicCronSeoMonitorRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
