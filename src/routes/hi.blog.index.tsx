@@ -7,11 +7,19 @@ export const Route = createFileRoute("/hi/blog/")({
   loader: async () => ({ articles: await listArticles({ data: { lang: "hi", limit: 60 } }) }),
   head: () => ({
     meta: [
-      { title: "Accio Work ब्लॉग — AI से चलने वाला बिज़नेस" },
+      { title: "Accio Work ब्लॉग: AI से चलने वाला बिज़नेस" },
       { name: "description", content: "एक ऐसी AI टीम के साथ आधुनिक बिज़नेस चलाने के फ़ील्ड नोट्स जिसे आप सच में निर्देश दे सकते हैं। हर दिन नए लेख।" },
       { property: "og:title", content: "Accio Work ब्लॉग" },
       { property: "og:locale", content: "hi_IN" },
       { property: "og:url", content: "https://acciowork.pro/hi/blog" },
+      { property: "og:description", content: "एक ऐसी AI टीम के साथ आधुनिक बिज़नेस चलाने के फ़ील्ड नोट्स जिसे आप सच में निर्देश दे सकते हैं। हर दिन नए लेख।" },
+      { property: "og:image", content: "https://acciowork.pro/og/og-hi.png" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Accio Work ब्लॉग: AI से चलने वाला बिज़नेस" },
+      { name: "twitter:description", content: "एक ऐसी AI टीम के साथ आधुनिक बिज़नेस चलाने के फ़ील्ड नोट्स जिसे आप सच में निर्देश दे सकते हैं। हर दिन नए लेख।" },
+      { name: "twitter:image", content: "https://acciowork.pro/og/og-hi.png" },
     ],
     links: [
       { rel: "canonical", href: "https://acciowork.pro/hi/blog" },
@@ -25,6 +33,18 @@ export const Route = createFileRoute("/hi/blog/")({
       { rel: "alternate", hrefLang: "hi", href: "https://acciowork.pro/hi/blog" },
       { rel: "alternate", hrefLang: "fr", href: "https://acciowork.pro/fr/blog" },
       { rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/blog" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Blog",
+          name: "Accio Work ब्लॉग: AI से चलने वाला बिज़नेस",
+          url: "https://acciowork.pro/hi/blog",
+          inLanguage: "hi",
+        }),
+      },
     ],
   }),
   component: BlogHi,

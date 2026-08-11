@@ -166,6 +166,7 @@ function Navbar() {
   }, [lang]);
   const compareHref = blogHref.replace("/blog", "/compare");
   const guideHref = blogHref.replace("/blog", "/guide");
+  const reviewsHref = blogHref.replace("/blog", "/reviews");
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-[1280px] items-center justify-between px-6">
@@ -176,6 +177,7 @@ function Navbar() {
             <a href={guideHref} className="hover:text-foreground">{t.nav.guide}</a>
             <a href={blogHref} className="hover:text-foreground">{t.nav.blog}</a>
             <a href={compareHref} className="hover:text-foreground">{t.nav.compare}</a>
+            <a href={reviewsHref} className="hover:text-foreground">{t.nav.reviews}</a>
             <a href="#faq" className="flex items-center gap-1 hover:text-foreground">{t.nav.help}</a>
             <a href={lang === "en" ? "/events/free-forever" : `/${lang}/events/free-forever`} className="flex items-center gap-1 hover:text-foreground">{t.nav.events} <span>🔥</span></a>
           </nav>
@@ -856,6 +858,7 @@ function Footer() {
           <a href={`${base}/compare`} className="hover:text-foreground">{t.nav.compare}</a>
           <a href={`${base}/for`} className="hover:text-foreground">{t.nav.useCases}</a>
           <a href={`${base}/guide`} className="hover:text-foreground">{t.nav.guide}</a>
+          <a href={`${base}/reviews`} className="hover:text-foreground">{t.nav.reviews}</a>
           <a href={`${base}/blog`} className="hover:text-foreground">{t.nav.blog}</a>
           <a href={`${base}/events/free-forever`} className="hover:text-foreground">{t.nav.events}</a>
           <a href="#faq" className="hover:text-foreground">{t.nav.help}</a>

@@ -9,7 +9,7 @@ export const Route = createFileRoute("/de/")({
       {
         name: "description",
         content:
-          "Accio Work — KI-Arbeitsbereich: Marktanalyse, Lieferantenvergleich, Content-Erstellung und Automatisierung von Geschäftsprozessen auf einer Plattform.",
+          "Accio Work, KI-Arbeitsbereich: Marktanalyse, Lieferantenvergleich, Content-Erstellung und Automatisierung von Geschäftsprozessen auf einer Plattform.",
       },
       {
         name: "keywords",
@@ -22,21 +22,21 @@ export const Route = createFileRoute("/de/")({
       {
         property: "og:description",
         content:
-          "Accio Work — KI-Arbeitsbereich: Marktanalyse, Lieferantenvergleich, Content-Erstellung und Prozessautomatisierung.",
+          "Accio Work, KI-Arbeitsbereich: Marktanalyse, Lieferantenvergleich, Content-Erstellung und Prozessautomatisierung.",
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Accio Work" },
       { property: "og:url", content: "https://acciowork.pro/de" },
-      { property: "og:image", content: "https://acciowork.pro/og-image.png" },
+      { property: "og:image", content: "https://acciowork.pro/og/og-de.png" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { property: "og:image:type", content: "image/png" },
-      { property: "og:image:alt", content: "Accio Work — KI-Arbeitsbereich für Sourcing, Analyse und Automatisierung" },
+      { property: "og:image:alt", content: "Accio Work, KI-Arbeitsbereich für Sourcing, Analyse und Automatisierung" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Accio Work | KI-Plattform für Sourcing" },
       { name: "twitter:description", content: "KI-Arbeitsbereich: Sourcing, Wettbewerbsanalyse, Content-Erstellung und Automatisierung." },
-      { name: "twitter:image", content: "https://acciowork.pro/og-image.png" },
-      { name: "twitter:image:alt", content: "Accio Work — KI-Plattform für Unternehmen" },
+      { name: "twitter:image", content: "https://acciowork.pro/og/og-de.png" },
+      { name: "twitter:image:alt", content: "Accio Work, KI-Plattform für Unternehmen" },
     ],
     links: [
       { rel: "canonical", href: "https://acciowork.pro/de" },

@@ -5,14 +5,14 @@ export const Route = createFileRoute("/seo-monitor")({
   loader: async () => await getSeoMonitorOverview(),
   head: () => ({
     meta: [
-      { title: "SEO-мониторинг — Accio Work" },
+      { title: "SEO-мониторинг: Accio Work" },
       {
         name: "description",
         content:
           "Внутренняя панель ежедневного SEO-мониторинга Accio Work: title, описания, структурированные данные и данные Google Search Console.",
       },
       { name: "robots", content: "noindex, nofollow" },
-      { property: "og:title", content: "SEO-мониторинг — Accio Work" },
+      { property: "og:title", content: "SEO-мониторинг: Accio Work" },
       { property: "og:description", content: "Ежедневные SEO-проверки и алерты." },
       { property: "og:type", content: "website" },
     ],
@@ -22,7 +22,7 @@ export const Route = createFileRoute("/seo-monitor")({
 });
 
 function fmt(d: string | null) {
-  if (!d) return "—";
+  if (!d) return "-";
   return new Date(d).toLocaleString("ru-RU", { dateStyle: "short", timeStyle: "short" });
 }
 
@@ -57,7 +57,7 @@ function SeoMonitor() {
 
       {!latest ? (
         <p className="mt-10 rounded-2xl border border-border bg-card p-6 text-muted-foreground">
-          Проверок пока не было — первая запустится по расписанию.
+          Проверок пока не было, первая запустится по расписанию.
         </p>
       ) : (
         <>
@@ -75,21 +75,21 @@ function SeoMonitor() {
           <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <Stat
               label="Клики (7 дней)"
-              value={latest.gsc_clicks?.toLocaleString("ru-RU") ?? "—"}
+              value={latest.gsc_clicks?.toLocaleString("ru-RU") ?? "-"}
               hint={delta(latest.gsc_clicks, latest.gsc_prev_clicks)}
             />
             <Stat
               label="Показы (7 дней)"
-              value={latest.gsc_impressions?.toLocaleString("ru-RU") ?? "—"}
+              value={latest.gsc_impressions?.toLocaleString("ru-RU") ?? "-"}
               hint={delta(latest.gsc_impressions, latest.gsc_prev_impressions)}
             />
             <Stat
               label="CTR"
-              value={latest.gsc_ctr != null ? `${(latest.gsc_ctr * 100).toFixed(2)}%` : "—"}
+              value={latest.gsc_ctr != null ? `${(latest.gsc_ctr * 100).toFixed(2)}%` : "-"}
             />
             <Stat
               label="Средняя позиция"
-              value={latest.gsc_position != null ? latest.gsc_position.toFixed(1) : "—"}
+              value={latest.gsc_position != null ? latest.gsc_position.toFixed(1) : "-"}
             />
           </div>
 
@@ -99,7 +99,7 @@ function SeoMonitor() {
             </h2>
             {issues.length === 0 ? (
               <p className="mt-3 rounded-2xl border border-border bg-card p-6 text-muted-foreground">
-                Проблем не найдено — все проверки пройдены.
+                Проблем не найдено, все проверки пройдены.
               </p>
             ) : (
               <div className="mt-4 overflow-x-auto rounded-2xl border border-border">
@@ -170,7 +170,7 @@ function SeoMonitor() {
                       <td className="px-4 py-3 text-muted-foreground">{r.pages_checked}</td>
                       <td className="px-4 py-3 text-muted-foreground">{r.issues_count}</td>
                       <td className="px-4 py-3 text-muted-foreground">{r.critical_count}</td>
-                      <td className="px-4 py-3 text-muted-foreground">{r.alert_sent ? "отправлен" : "—"}</td>
+                      <td className="px-4 py-3 text-muted-foreground">{r.alert_sent ? "отправлен" : "-"}</td>
                     </tr>
                   ))}
                 </tbody>

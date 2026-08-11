@@ -9,153 +9,121 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as ZhRouteImport } from './routes/zh'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as SeoMonitorRouteImport } from './routes/seo-monitor'
-import { Route as RuRouteImport } from './routes/ru'
-import { Route as PtRouteImport } from './routes/pt'
-import { Route as ItRouteImport } from './routes/it'
-import { Route as HiRouteImport } from './routes/hi'
-import { Route as FrRouteImport } from './routes/fr'
-import { Route as EsRouteImport } from './routes/es'
-import { Route as DeRouteImport } from './routes/de'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ZhIndexRouteImport } from './routes/zh.index'
-import { Route as RuIndexRouteImport } from './routes/ru.index'
-import { Route as PtIndexRouteImport } from './routes/pt.index'
-import { Route as ItIndexRouteImport } from './routes/it.index'
-import { Route as HiIndexRouteImport } from './routes/hi.index'
-import { Route as GuideIndexRouteImport } from './routes/guide.index'
-import { Route as FrIndexRouteImport } from './routes/fr.index'
-import { Route as ForIndexRouteImport } from './routes/for.index'
-import { Route as EsIndexRouteImport } from './routes/es.index'
-import { Route as DeIndexRouteImport } from './routes/de.index'
-import { Route as CompareIndexRouteImport } from './routes/compare.index'
+import { Route as DeRouteImport } from './routes/de'
+import { Route as EsRouteImport } from './routes/es'
+import { Route as FrRouteImport } from './routes/fr'
+import { Route as HiRouteImport } from './routes/hi'
+import { Route as ItRouteImport } from './routes/it'
+import { Route as PtRouteImport } from './routes/pt'
+import { Route as ReviewsRouteImport } from './routes/reviews'
+import { Route as RuRouteImport } from './routes/ru'
+import { Route as SeoMonitorRouteImport } from './routes/seo-monitor'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as ZhRouteImport } from './routes/zh'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
-import { Route as GuideGuideRouteImport } from './routes/guide.$guide'
-import { Route as ForUseCaseRouteImport } from './routes/for.$useCase'
-import { Route as EventsFreeForeverRouteImport } from './routes/events.free-forever'
-import { Route as CompareCompetitorRouteImport } from './routes/compare.$competitor'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
-import { Route as ZhGuideIndexRouteImport } from './routes/zh.guide.index'
-import { Route as ZhForIndexRouteImport } from './routes/zh.for.index'
-import { Route as ZhCompareIndexRouteImport } from './routes/zh.compare.index'
-import { Route as ZhBlogIndexRouteImport } from './routes/zh.blog.index'
-import { Route as RuGuideIndexRouteImport } from './routes/ru.guide.index'
-import { Route as RuForIndexRouteImport } from './routes/ru.for.index'
-import { Route as RuCompareIndexRouteImport } from './routes/ru.compare.index'
-import { Route as RuBlogIndexRouteImport } from './routes/ru.blog.index'
-import { Route as PtGuideIndexRouteImport } from './routes/pt.guide.index'
-import { Route as PtForIndexRouteImport } from './routes/pt.for.index'
-import { Route as PtCompareIndexRouteImport } from './routes/pt.compare.index'
-import { Route as PtBlogIndexRouteImport } from './routes/pt.blog.index'
-import { Route as ItGuideIndexRouteImport } from './routes/it.guide.index'
-import { Route as ItForIndexRouteImport } from './routes/it.for.index'
-import { Route as ItCompareIndexRouteImport } from './routes/it.compare.index'
-import { Route as ItBlogIndexRouteImport } from './routes/it.blog.index'
-import { Route as HiGuideIndexRouteImport } from './routes/hi.guide.index'
-import { Route as HiForIndexRouteImport } from './routes/hi.for.index'
-import { Route as HiCompareIndexRouteImport } from './routes/hi.compare.index'
-import { Route as HiBlogIndexRouteImport } from './routes/hi.blog.index'
-import { Route as FrGuideIndexRouteImport } from './routes/fr.guide.index'
-import { Route as FrForIndexRouteImport } from './routes/fr.for.index'
-import { Route as FrCompareIndexRouteImport } from './routes/fr.compare.index'
-import { Route as FrBlogIndexRouteImport } from './routes/fr.blog.index'
-import { Route as EsGuideIndexRouteImport } from './routes/es.guide.index'
-import { Route as EsForIndexRouteImport } from './routes/es.for.index'
-import { Route as EsCompareIndexRouteImport } from './routes/es.compare.index'
-import { Route as EsBlogIndexRouteImport } from './routes/es.blog.index'
-import { Route as DeGuideIndexRouteImport } from './routes/de.guide.index'
-import { Route as DeForIndexRouteImport } from './routes/de.for.index'
-import { Route as DeCompareIndexRouteImport } from './routes/de.compare.index'
+import { Route as CompareIndexRouteImport } from './routes/compare.index'
+import { Route as CompareCompetitorRouteImport } from './routes/compare.$competitor'
+import { Route as DeIndexRouteImport } from './routes/de.index'
+import { Route as DeReviewsRouteImport } from './routes/de.reviews'
+import { Route as EsIndexRouteImport } from './routes/es.index'
+import { Route as EsReviewsRouteImport } from './routes/es.reviews'
+import { Route as EventsFreeForeverRouteImport } from './routes/events.free-forever'
+import { Route as ForIndexRouteImport } from './routes/for.index'
+import { Route as ForUseCaseRouteImport } from './routes/for.$useCase'
+import { Route as FrIndexRouteImport } from './routes/fr.index'
+import { Route as FrReviewsRouteImport } from './routes/fr.reviews'
+import { Route as GuideIndexRouteImport } from './routes/guide.index'
+import { Route as GuideGuideRouteImport } from './routes/guide.$guide'
+import { Route as HiIndexRouteImport } from './routes/hi.index'
+import { Route as HiReviewsRouteImport } from './routes/hi.reviews'
+import { Route as ItIndexRouteImport } from './routes/it.index'
+import { Route as ItReviewsRouteImport } from './routes/it.reviews'
+import { Route as PtIndexRouteImport } from './routes/pt.index'
+import { Route as PtReviewsRouteImport } from './routes/pt.reviews'
+import { Route as RuIndexRouteImport } from './routes/ru.index'
+import { Route as RuReviewsRouteImport } from './routes/ru.reviews'
+import { Route as ZhIndexRouteImport } from './routes/zh.index'
+import { Route as ZhReviewsRouteImport } from './routes/zh.reviews'
 import { Route as DeBlogIndexRouteImport } from './routes/de.blog.index'
-import { Route as ZhGuideGuideRouteImport } from './routes/zh.guide.$guide'
-import { Route as ZhForUseCaseRouteImport } from './routes/zh.for.$useCase'
-import { Route as ZhEventsFreeForeverRouteImport } from './routes/zh.events.free-forever'
-import { Route as ZhCompareCompetitorRouteImport } from './routes/zh.compare.$competitor'
-import { Route as ZhBlogSlugRouteImport } from './routes/zh.blog.$slug'
-import { Route as RuGuideGuideRouteImport } from './routes/ru.guide.$guide'
-import { Route as RuForUseCaseRouteImport } from './routes/ru.for.$useCase'
-import { Route as RuEventsFreeForeverRouteImport } from './routes/ru.events.free-forever'
-import { Route as RuCompareCompetitorRouteImport } from './routes/ru.compare.$competitor'
-import { Route as RuBlogSlugRouteImport } from './routes/ru.blog.$slug'
-import { Route as PtGuideGuideRouteImport } from './routes/pt.guide.$guide'
-import { Route as PtForUseCaseRouteImport } from './routes/pt.for.$useCase'
-import { Route as PtEventsFreeForeverRouteImport } from './routes/pt.events.free-forever'
-import { Route as PtCompareCompetitorRouteImport } from './routes/pt.compare.$competitor'
-import { Route as PtBlogSlugRouteImport } from './routes/pt.blog.$slug'
-import { Route as ItGuideGuideRouteImport } from './routes/it.guide.$guide'
-import { Route as ItForUseCaseRouteImport } from './routes/it.for.$useCase'
-import { Route as ItEventsFreeForeverRouteImport } from './routes/it.events.free-forever'
-import { Route as ItCompareCompetitorRouteImport } from './routes/it.compare.$competitor'
-import { Route as ItBlogSlugRouteImport } from './routes/it.blog.$slug'
-import { Route as HiGuideGuideRouteImport } from './routes/hi.guide.$guide'
-import { Route as HiForUseCaseRouteImport } from './routes/hi.for.$useCase'
-import { Route as HiEventsFreeForeverRouteImport } from './routes/hi.events.free-forever'
-import { Route as HiCompareCompetitorRouteImport } from './routes/hi.compare.$competitor'
-import { Route as HiBlogSlugRouteImport } from './routes/hi.blog.$slug'
-import { Route as FrGuideGuideRouteImport } from './routes/fr.guide.$guide'
-import { Route as FrForUseCaseRouteImport } from './routes/fr.for.$useCase'
-import { Route as FrEventsFreeForeverRouteImport } from './routes/fr.events.free-forever'
-import { Route as FrCompareCompetitorRouteImport } from './routes/fr.compare.$competitor'
-import { Route as FrBlogSlugRouteImport } from './routes/fr.blog.$slug'
-import { Route as EsGuideGuideRouteImport } from './routes/es.guide.$guide'
-import { Route as EsForUseCaseRouteImport } from './routes/es.for.$useCase'
-import { Route as EsEventsFreeForeverRouteImport } from './routes/es.events.free-forever'
-import { Route as EsCompareCompetitorRouteImport } from './routes/es.compare.$competitor'
-import { Route as EsBlogSlugRouteImport } from './routes/es.blog.$slug'
-import { Route as DeGuideGuideRouteImport } from './routes/de.guide.$guide'
-import { Route as DeForUseCaseRouteImport } from './routes/de.for.$useCase'
-import { Route as DeEventsFreeForeverRouteImport } from './routes/de.events.free-forever'
-import { Route as DeCompareCompetitorRouteImport } from './routes/de.compare.$competitor'
 import { Route as DeBlogSlugRouteImport } from './routes/de.blog.$slug'
-import { Route as ApiPublicCronSeoMonitorRouteImport } from './routes/api/public/cron/seo-monitor'
+import { Route as DeCompareIndexRouteImport } from './routes/de.compare.index'
+import { Route as DeCompareCompetitorRouteImport } from './routes/de.compare.$competitor'
+import { Route as DeEventsFreeForeverRouteImport } from './routes/de.events.free-forever'
+import { Route as DeForIndexRouteImport } from './routes/de.for.index'
+import { Route as DeForUseCaseRouteImport } from './routes/de.for.$useCase'
+import { Route as DeGuideIndexRouteImport } from './routes/de.guide.index'
+import { Route as DeGuideGuideRouteImport } from './routes/de.guide.$guide'
+import { Route as EsBlogIndexRouteImport } from './routes/es.blog.index'
+import { Route as EsBlogSlugRouteImport } from './routes/es.blog.$slug'
+import { Route as EsCompareIndexRouteImport } from './routes/es.compare.index'
+import { Route as EsCompareCompetitorRouteImport } from './routes/es.compare.$competitor'
+import { Route as EsEventsFreeForeverRouteImport } from './routes/es.events.free-forever'
+import { Route as EsForIndexRouteImport } from './routes/es.for.index'
+import { Route as EsForUseCaseRouteImport } from './routes/es.for.$useCase'
+import { Route as EsGuideIndexRouteImport } from './routes/es.guide.index'
+import { Route as EsGuideGuideRouteImport } from './routes/es.guide.$guide'
+import { Route as FrBlogIndexRouteImport } from './routes/fr.blog.index'
+import { Route as FrBlogSlugRouteImport } from './routes/fr.blog.$slug'
+import { Route as FrCompareIndexRouteImport } from './routes/fr.compare.index'
+import { Route as FrCompareCompetitorRouteImport } from './routes/fr.compare.$competitor'
+import { Route as FrEventsFreeForeverRouteImport } from './routes/fr.events.free-forever'
+import { Route as FrForIndexRouteImport } from './routes/fr.for.index'
+import { Route as FrForUseCaseRouteImport } from './routes/fr.for.$useCase'
+import { Route as FrGuideIndexRouteImport } from './routes/fr.guide.index'
+import { Route as FrGuideGuideRouteImport } from './routes/fr.guide.$guide'
+import { Route as HiBlogIndexRouteImport } from './routes/hi.blog.index'
+import { Route as HiBlogSlugRouteImport } from './routes/hi.blog.$slug'
+import { Route as HiCompareIndexRouteImport } from './routes/hi.compare.index'
+import { Route as HiCompareCompetitorRouteImport } from './routes/hi.compare.$competitor'
+import { Route as HiEventsFreeForeverRouteImport } from './routes/hi.events.free-forever'
+import { Route as HiForIndexRouteImport } from './routes/hi.for.index'
+import { Route as HiForUseCaseRouteImport } from './routes/hi.for.$useCase'
+import { Route as HiGuideIndexRouteImport } from './routes/hi.guide.index'
+import { Route as HiGuideGuideRouteImport } from './routes/hi.guide.$guide'
+import { Route as ItBlogIndexRouteImport } from './routes/it.blog.index'
+import { Route as ItBlogSlugRouteImport } from './routes/it.blog.$slug'
+import { Route as ItCompareIndexRouteImport } from './routes/it.compare.index'
+import { Route as ItCompareCompetitorRouteImport } from './routes/it.compare.$competitor'
+import { Route as ItEventsFreeForeverRouteImport } from './routes/it.events.free-forever'
+import { Route as ItForIndexRouteImport } from './routes/it.for.index'
+import { Route as ItForUseCaseRouteImport } from './routes/it.for.$useCase'
+import { Route as ItGuideIndexRouteImport } from './routes/it.guide.index'
+import { Route as ItGuideGuideRouteImport } from './routes/it.guide.$guide'
+import { Route as PtBlogIndexRouteImport } from './routes/pt.blog.index'
+import { Route as PtBlogSlugRouteImport } from './routes/pt.blog.$slug'
+import { Route as PtCompareIndexRouteImport } from './routes/pt.compare.index'
+import { Route as PtCompareCompetitorRouteImport } from './routes/pt.compare.$competitor'
+import { Route as PtEventsFreeForeverRouteImport } from './routes/pt.events.free-forever'
+import { Route as PtForIndexRouteImport } from './routes/pt.for.index'
+import { Route as PtForUseCaseRouteImport } from './routes/pt.for.$useCase'
+import { Route as PtGuideIndexRouteImport } from './routes/pt.guide.index'
+import { Route as PtGuideGuideRouteImport } from './routes/pt.guide.$guide'
+import { Route as RuBlogIndexRouteImport } from './routes/ru.blog.index'
+import { Route as RuBlogSlugRouteImport } from './routes/ru.blog.$slug'
+import { Route as RuCompareIndexRouteImport } from './routes/ru.compare.index'
+import { Route as RuCompareCompetitorRouteImport } from './routes/ru.compare.$competitor'
+import { Route as RuEventsFreeForeverRouteImport } from './routes/ru.events.free-forever'
+import { Route as RuForIndexRouteImport } from './routes/ru.for.index'
+import { Route as RuForUseCaseRouteImport } from './routes/ru.for.$useCase'
+import { Route as RuGuideIndexRouteImport } from './routes/ru.guide.index'
+import { Route as RuGuideGuideRouteImport } from './routes/ru.guide.$guide'
+import { Route as ZhBlogIndexRouteImport } from './routes/zh.blog.index'
+import { Route as ZhBlogSlugRouteImport } from './routes/zh.blog.$slug'
+import { Route as ZhCompareIndexRouteImport } from './routes/zh.compare.index'
+import { Route as ZhCompareCompetitorRouteImport } from './routes/zh.compare.$competitor'
+import { Route as ZhEventsFreeForeverRouteImport } from './routes/zh.events.free-forever'
+import { Route as ZhForIndexRouteImport } from './routes/zh.for.index'
+import { Route as ZhForUseCaseRouteImport } from './routes/zh.for.$useCase'
+import { Route as ZhGuideIndexRouteImport } from './routes/zh.guide.index'
+import { Route as ZhGuideGuideRouteImport } from './routes/zh.guide.$guide'
 import { Route as ApiPublicCronGenerateArticlesRouteImport } from './routes/api/public/cron/generate-articles'
-import { Route as ApiPublicBlogCoverIdRouteImport } from './routes/api/public/blog-cover.$id'
+import { Route as ApiPublicCronSeoMonitorRouteImport } from './routes/api/public/cron/seo-monitor'
 
-const ZhRoute = ZhRouteImport.update({
-  id: '/zh',
-  path: '/zh',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SeoMonitorRoute = SeoMonitorRouteImport.update({
-  id: '/seo-monitor',
-  path: '/seo-monitor',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const RuRoute = RuRouteImport.update({
-  id: '/ru',
-  path: '/ru',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PtRoute = PtRouteImport.update({
-  id: '/pt',
-  path: '/pt',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ItRoute = ItRouteImport.update({
-  id: '/it',
-  path: '/it',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const HiRoute = HiRouteImport.update({
-  id: '/hi',
-  path: '/hi',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FrRoute = FrRouteImport.update({
-  id: '/fr',
-  path: '/fr',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EsRoute = EsRouteImport.update({
-  id: '/es',
-  path: '/es',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DeRoute = DeRouteImport.update({
@@ -163,64 +131,54 @@ const DeRoute = DeRouteImport.update({
   path: '/de',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const EsRoute = EsRouteImport.update({
+  id: '/es',
+  path: '/es',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ZhIndexRoute = ZhIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => ZhRoute,
-} as any)
-const RuIndexRoute = RuIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => RuRoute,
-} as any)
-const PtIndexRoute = PtIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => PtRoute,
-} as any)
-const ItIndexRoute = ItIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => ItRoute,
-} as any)
-const HiIndexRoute = HiIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => HiRoute,
-} as any)
-const GuideIndexRoute = GuideIndexRouteImport.update({
-  id: '/guide/',
-  path: '/guide/',
+const FrRoute = FrRouteImport.update({
+  id: '/fr',
+  path: '/fr',
   getParentRoute: () => rootRouteImport,
 } as any)
-const FrIndexRoute = FrIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => FrRoute,
-} as any)
-const ForIndexRoute = ForIndexRouteImport.update({
-  id: '/for/',
-  path: '/for/',
+const HiRoute = HiRouteImport.update({
+  id: '/hi',
+  path: '/hi',
   getParentRoute: () => rootRouteImport,
 } as any)
-const EsIndexRoute = EsIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => EsRoute,
+const ItRoute = ItRouteImport.update({
+  id: '/it',
+  path: '/it',
+  getParentRoute: () => rootRouteImport,
 } as any)
-const DeIndexRoute = DeIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => DeRoute,
+const PtRoute = PtRouteImport.update({
+  id: '/pt',
+  path: '/pt',
+  getParentRoute: () => rootRouteImport,
 } as any)
-const CompareIndexRoute = CompareIndexRouteImport.update({
-  id: '/compare/',
-  path: '/compare/',
+const ReviewsRoute = ReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RuRoute = RuRouteImport.update({
+  id: '/ru',
+  path: '/ru',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SeoMonitorRoute = SeoMonitorRouteImport.update({
+  id: '/seo-monitor',
+  path: '/seo-monitor',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ZhRoute = ZhRouteImport.update({
+  id: '/zh',
+  path: '/zh',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
@@ -228,19 +186,14 @@ const BlogIndexRoute = BlogIndexRouteImport.update({
   path: '/blog/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const GuideGuideRoute = GuideGuideRouteImport.update({
-  id: '/guide/$guide',
-  path: '/guide/$guide',
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ForUseCaseRoute = ForUseCaseRouteImport.update({
-  id: '/for/$useCase',
-  path: '/for/$useCase',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EventsFreeForeverRoute = EventsFreeForeverRouteImport.update({
-  id: '/events/free-forever',
-  path: '/events/free-forever',
+const CompareIndexRoute = CompareIndexRouteImport.update({
+  id: '/compare/',
+  path: '/compare/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CompareCompetitorRoute = CompareCompetitorRouteImport.update({
@@ -248,364 +201,114 @@ const CompareCompetitorRoute = CompareCompetitorRouteImport.update({
   path: '/compare/$competitor',
   getParentRoute: () => rootRouteImport,
 } as any)
-const BlogSlugRoute = BlogSlugRouteImport.update({
-  id: '/blog/$slug',
-  path: '/blog/$slug',
+const DeIndexRoute = DeIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => DeRoute,
+} as any)
+const DeReviewsRoute = DeReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
+  getParentRoute: () => DeRoute,
+} as any)
+const EsIndexRoute = EsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => EsRoute,
+} as any)
+const EsReviewsRoute = EsReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
+  getParentRoute: () => EsRoute,
+} as any)
+const EventsFreeForeverRoute = EventsFreeForeverRouteImport.update({
+  id: '/events/free-forever',
+  path: '/events/free-forever',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ZhGuideIndexRoute = ZhGuideIndexRouteImport.update({
-  id: '/guide/',
-  path: '/guide/',
-  getParentRoute: () => ZhRoute,
-} as any)
-const ZhForIndexRoute = ZhForIndexRouteImport.update({
+const ForIndexRoute = ForIndexRouteImport.update({
   id: '/for/',
   path: '/for/',
-  getParentRoute: () => ZhRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
-const ZhCompareIndexRoute = ZhCompareIndexRouteImport.update({
-  id: '/compare/',
-  path: '/compare/',
-  getParentRoute: () => ZhRoute,
+const ForUseCaseRoute = ForUseCaseRouteImport.update({
+  id: '/for/$useCase',
+  path: '/for/$useCase',
+  getParentRoute: () => rootRouteImport,
 } as any)
-const ZhBlogIndexRoute = ZhBlogIndexRouteImport.update({
-  id: '/blog/',
-  path: '/blog/',
-  getParentRoute: () => ZhRoute,
-} as any)
-const RuGuideIndexRoute = RuGuideIndexRouteImport.update({
-  id: '/guide/',
-  path: '/guide/',
-  getParentRoute: () => RuRoute,
-} as any)
-const RuForIndexRoute = RuForIndexRouteImport.update({
-  id: '/for/',
-  path: '/for/',
-  getParentRoute: () => RuRoute,
-} as any)
-const RuCompareIndexRoute = RuCompareIndexRouteImport.update({
-  id: '/compare/',
-  path: '/compare/',
-  getParentRoute: () => RuRoute,
-} as any)
-const RuBlogIndexRoute = RuBlogIndexRouteImport.update({
-  id: '/blog/',
-  path: '/blog/',
-  getParentRoute: () => RuRoute,
-} as any)
-const PtGuideIndexRoute = PtGuideIndexRouteImport.update({
-  id: '/guide/',
-  path: '/guide/',
-  getParentRoute: () => PtRoute,
-} as any)
-const PtForIndexRoute = PtForIndexRouteImport.update({
-  id: '/for/',
-  path: '/for/',
-  getParentRoute: () => PtRoute,
-} as any)
-const PtCompareIndexRoute = PtCompareIndexRouteImport.update({
-  id: '/compare/',
-  path: '/compare/',
-  getParentRoute: () => PtRoute,
-} as any)
-const PtBlogIndexRoute = PtBlogIndexRouteImport.update({
-  id: '/blog/',
-  path: '/blog/',
-  getParentRoute: () => PtRoute,
-} as any)
-const ItGuideIndexRoute = ItGuideIndexRouteImport.update({
-  id: '/guide/',
-  path: '/guide/',
-  getParentRoute: () => ItRoute,
-} as any)
-const ItForIndexRoute = ItForIndexRouteImport.update({
-  id: '/for/',
-  path: '/for/',
-  getParentRoute: () => ItRoute,
-} as any)
-const ItCompareIndexRoute = ItCompareIndexRouteImport.update({
-  id: '/compare/',
-  path: '/compare/',
-  getParentRoute: () => ItRoute,
-} as any)
-const ItBlogIndexRoute = ItBlogIndexRouteImport.update({
-  id: '/blog/',
-  path: '/blog/',
-  getParentRoute: () => ItRoute,
-} as any)
-const HiGuideIndexRoute = HiGuideIndexRouteImport.update({
-  id: '/guide/',
-  path: '/guide/',
-  getParentRoute: () => HiRoute,
-} as any)
-const HiForIndexRoute = HiForIndexRouteImport.update({
-  id: '/for/',
-  path: '/for/',
-  getParentRoute: () => HiRoute,
-} as any)
-const HiCompareIndexRoute = HiCompareIndexRouteImport.update({
-  id: '/compare/',
-  path: '/compare/',
-  getParentRoute: () => HiRoute,
-} as any)
-const HiBlogIndexRoute = HiBlogIndexRouteImport.update({
-  id: '/blog/',
-  path: '/blog/',
-  getParentRoute: () => HiRoute,
-} as any)
-const FrGuideIndexRoute = FrGuideIndexRouteImport.update({
-  id: '/guide/',
-  path: '/guide/',
+const FrIndexRoute = FrIndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => FrRoute,
 } as any)
-const FrForIndexRoute = FrForIndexRouteImport.update({
-  id: '/for/',
-  path: '/for/',
+const FrReviewsRoute = FrReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
   getParentRoute: () => FrRoute,
 } as any)
-const FrCompareIndexRoute = FrCompareIndexRouteImport.update({
-  id: '/compare/',
-  path: '/compare/',
-  getParentRoute: () => FrRoute,
-} as any)
-const FrBlogIndexRoute = FrBlogIndexRouteImport.update({
-  id: '/blog/',
-  path: '/blog/',
-  getParentRoute: () => FrRoute,
-} as any)
-const EsGuideIndexRoute = EsGuideIndexRouteImport.update({
+const GuideIndexRoute = GuideIndexRouteImport.update({
   id: '/guide/',
   path: '/guide/',
-  getParentRoute: () => EsRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
-const EsForIndexRoute = EsForIndexRouteImport.update({
-  id: '/for/',
-  path: '/for/',
-  getParentRoute: () => EsRoute,
+const GuideGuideRoute = GuideGuideRouteImport.update({
+  id: '/guide/$guide',
+  path: '/guide/$guide',
+  getParentRoute: () => rootRouteImport,
 } as any)
-const EsCompareIndexRoute = EsCompareIndexRouteImport.update({
-  id: '/compare/',
-  path: '/compare/',
-  getParentRoute: () => EsRoute,
+const HiIndexRoute = HiIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => HiRoute,
 } as any)
-const EsBlogIndexRoute = EsBlogIndexRouteImport.update({
-  id: '/blog/',
-  path: '/blog/',
-  getParentRoute: () => EsRoute,
+const HiReviewsRoute = HiReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
+  getParentRoute: () => HiRoute,
 } as any)
-const DeGuideIndexRoute = DeGuideIndexRouteImport.update({
-  id: '/guide/',
-  path: '/guide/',
-  getParentRoute: () => DeRoute,
+const ItIndexRoute = ItIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ItRoute,
 } as any)
-const DeForIndexRoute = DeForIndexRouteImport.update({
-  id: '/for/',
-  path: '/for/',
-  getParentRoute: () => DeRoute,
+const ItReviewsRoute = ItReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
+  getParentRoute: () => ItRoute,
 } as any)
-const DeCompareIndexRoute = DeCompareIndexRouteImport.update({
-  id: '/compare/',
-  path: '/compare/',
-  getParentRoute: () => DeRoute,
+const PtIndexRoute = PtIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => PtRoute,
+} as any)
+const PtReviewsRoute = PtReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
+  getParentRoute: () => PtRoute,
+} as any)
+const RuIndexRoute = RuIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => RuRoute,
+} as any)
+const RuReviewsRoute = RuReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
+  getParentRoute: () => RuRoute,
+} as any)
+const ZhIndexRoute = ZhIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ZhRoute,
+} as any)
+const ZhReviewsRoute = ZhReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
+  getParentRoute: () => ZhRoute,
 } as any)
 const DeBlogIndexRoute = DeBlogIndexRouteImport.update({
   id: '/blog/',
   path: '/blog/',
-  getParentRoute: () => DeRoute,
-} as any)
-const ZhGuideGuideRoute = ZhGuideGuideRouteImport.update({
-  id: '/guide/$guide',
-  path: '/guide/$guide',
-  getParentRoute: () => ZhRoute,
-} as any)
-const ZhForUseCaseRoute = ZhForUseCaseRouteImport.update({
-  id: '/for/$useCase',
-  path: '/for/$useCase',
-  getParentRoute: () => ZhRoute,
-} as any)
-const ZhEventsFreeForeverRoute = ZhEventsFreeForeverRouteImport.update({
-  id: '/events/free-forever',
-  path: '/events/free-forever',
-  getParentRoute: () => ZhRoute,
-} as any)
-const ZhCompareCompetitorRoute = ZhCompareCompetitorRouteImport.update({
-  id: '/compare/$competitor',
-  path: '/compare/$competitor',
-  getParentRoute: () => ZhRoute,
-} as any)
-const ZhBlogSlugRoute = ZhBlogSlugRouteImport.update({
-  id: '/blog/$slug',
-  path: '/blog/$slug',
-  getParentRoute: () => ZhRoute,
-} as any)
-const RuGuideGuideRoute = RuGuideGuideRouteImport.update({
-  id: '/guide/$guide',
-  path: '/guide/$guide',
-  getParentRoute: () => RuRoute,
-} as any)
-const RuForUseCaseRoute = RuForUseCaseRouteImport.update({
-  id: '/for/$useCase',
-  path: '/for/$useCase',
-  getParentRoute: () => RuRoute,
-} as any)
-const RuEventsFreeForeverRoute = RuEventsFreeForeverRouteImport.update({
-  id: '/events/free-forever',
-  path: '/events/free-forever',
-  getParentRoute: () => RuRoute,
-} as any)
-const RuCompareCompetitorRoute = RuCompareCompetitorRouteImport.update({
-  id: '/compare/$competitor',
-  path: '/compare/$competitor',
-  getParentRoute: () => RuRoute,
-} as any)
-const RuBlogSlugRoute = RuBlogSlugRouteImport.update({
-  id: '/blog/$slug',
-  path: '/blog/$slug',
-  getParentRoute: () => RuRoute,
-} as any)
-const PtGuideGuideRoute = PtGuideGuideRouteImport.update({
-  id: '/guide/$guide',
-  path: '/guide/$guide',
-  getParentRoute: () => PtRoute,
-} as any)
-const PtForUseCaseRoute = PtForUseCaseRouteImport.update({
-  id: '/for/$useCase',
-  path: '/for/$useCase',
-  getParentRoute: () => PtRoute,
-} as any)
-const PtEventsFreeForeverRoute = PtEventsFreeForeverRouteImport.update({
-  id: '/events/free-forever',
-  path: '/events/free-forever',
-  getParentRoute: () => PtRoute,
-} as any)
-const PtCompareCompetitorRoute = PtCompareCompetitorRouteImport.update({
-  id: '/compare/$competitor',
-  path: '/compare/$competitor',
-  getParentRoute: () => PtRoute,
-} as any)
-const PtBlogSlugRoute = PtBlogSlugRouteImport.update({
-  id: '/blog/$slug',
-  path: '/blog/$slug',
-  getParentRoute: () => PtRoute,
-} as any)
-const ItGuideGuideRoute = ItGuideGuideRouteImport.update({
-  id: '/guide/$guide',
-  path: '/guide/$guide',
-  getParentRoute: () => ItRoute,
-} as any)
-const ItForUseCaseRoute = ItForUseCaseRouteImport.update({
-  id: '/for/$useCase',
-  path: '/for/$useCase',
-  getParentRoute: () => ItRoute,
-} as any)
-const ItEventsFreeForeverRoute = ItEventsFreeForeverRouteImport.update({
-  id: '/events/free-forever',
-  path: '/events/free-forever',
-  getParentRoute: () => ItRoute,
-} as any)
-const ItCompareCompetitorRoute = ItCompareCompetitorRouteImport.update({
-  id: '/compare/$competitor',
-  path: '/compare/$competitor',
-  getParentRoute: () => ItRoute,
-} as any)
-const ItBlogSlugRoute = ItBlogSlugRouteImport.update({
-  id: '/blog/$slug',
-  path: '/blog/$slug',
-  getParentRoute: () => ItRoute,
-} as any)
-const HiGuideGuideRoute = HiGuideGuideRouteImport.update({
-  id: '/guide/$guide',
-  path: '/guide/$guide',
-  getParentRoute: () => HiRoute,
-} as any)
-const HiForUseCaseRoute = HiForUseCaseRouteImport.update({
-  id: '/for/$useCase',
-  path: '/for/$useCase',
-  getParentRoute: () => HiRoute,
-} as any)
-const HiEventsFreeForeverRoute = HiEventsFreeForeverRouteImport.update({
-  id: '/events/free-forever',
-  path: '/events/free-forever',
-  getParentRoute: () => HiRoute,
-} as any)
-const HiCompareCompetitorRoute = HiCompareCompetitorRouteImport.update({
-  id: '/compare/$competitor',
-  path: '/compare/$competitor',
-  getParentRoute: () => HiRoute,
-} as any)
-const HiBlogSlugRoute = HiBlogSlugRouteImport.update({
-  id: '/blog/$slug',
-  path: '/blog/$slug',
-  getParentRoute: () => HiRoute,
-} as any)
-const FrGuideGuideRoute = FrGuideGuideRouteImport.update({
-  id: '/guide/$guide',
-  path: '/guide/$guide',
-  getParentRoute: () => FrRoute,
-} as any)
-const FrForUseCaseRoute = FrForUseCaseRouteImport.update({
-  id: '/for/$useCase',
-  path: '/for/$useCase',
-  getParentRoute: () => FrRoute,
-} as any)
-const FrEventsFreeForeverRoute = FrEventsFreeForeverRouteImport.update({
-  id: '/events/free-forever',
-  path: '/events/free-forever',
-  getParentRoute: () => FrRoute,
-} as any)
-const FrCompareCompetitorRoute = FrCompareCompetitorRouteImport.update({
-  id: '/compare/$competitor',
-  path: '/compare/$competitor',
-  getParentRoute: () => FrRoute,
-} as any)
-const FrBlogSlugRoute = FrBlogSlugRouteImport.update({
-  id: '/blog/$slug',
-  path: '/blog/$slug',
-  getParentRoute: () => FrRoute,
-} as any)
-const EsGuideGuideRoute = EsGuideGuideRouteImport.update({
-  id: '/guide/$guide',
-  path: '/guide/$guide',
-  getParentRoute: () => EsRoute,
-} as any)
-const EsForUseCaseRoute = EsForUseCaseRouteImport.update({
-  id: '/for/$useCase',
-  path: '/for/$useCase',
-  getParentRoute: () => EsRoute,
-} as any)
-const EsEventsFreeForeverRoute = EsEventsFreeForeverRouteImport.update({
-  id: '/events/free-forever',
-  path: '/events/free-forever',
-  getParentRoute: () => EsRoute,
-} as any)
-const EsCompareCompetitorRoute = EsCompareCompetitorRouteImport.update({
-  id: '/compare/$competitor',
-  path: '/compare/$competitor',
-  getParentRoute: () => EsRoute,
-} as any)
-const EsBlogSlugRoute = EsBlogSlugRouteImport.update({
-  id: '/blog/$slug',
-  path: '/blog/$slug',
-  getParentRoute: () => EsRoute,
-} as any)
-const DeGuideGuideRoute = DeGuideGuideRouteImport.update({
-  id: '/guide/$guide',
-  path: '/guide/$guide',
-  getParentRoute: () => DeRoute,
-} as any)
-const DeForUseCaseRoute = DeForUseCaseRouteImport.update({
-  id: '/for/$useCase',
-  path: '/for/$useCase',
-  getParentRoute: () => DeRoute,
-} as any)
-const DeEventsFreeForeverRoute = DeEventsFreeForeverRouteImport.update({
-  id: '/events/free-forever',
-  path: '/events/free-forever',
-  getParentRoute: () => DeRoute,
-} as any)
-const DeCompareCompetitorRoute = DeCompareCompetitorRouteImport.update({
-  id: '/compare/$competitor',
-  path: '/compare/$competitor',
   getParentRoute: () => DeRoute,
 } as any)
 const DeBlogSlugRoute = DeBlogSlugRouteImport.update({
@@ -613,10 +316,355 @@ const DeBlogSlugRoute = DeBlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => DeRoute,
 } as any)
-const ApiPublicCronSeoMonitorRoute = ApiPublicCronSeoMonitorRouteImport.update({
-  id: '/api/public/cron/seo-monitor',
-  path: '/api/public/cron/seo-monitor',
-  getParentRoute: () => rootRouteImport,
+const DeCompareIndexRoute = DeCompareIndexRouteImport.update({
+  id: '/compare/',
+  path: '/compare/',
+  getParentRoute: () => DeRoute,
+} as any)
+const DeCompareCompetitorRoute = DeCompareCompetitorRouteImport.update({
+  id: '/compare/$competitor',
+  path: '/compare/$competitor',
+  getParentRoute: () => DeRoute,
+} as any)
+const DeEventsFreeForeverRoute = DeEventsFreeForeverRouteImport.update({
+  id: '/events/free-forever',
+  path: '/events/free-forever',
+  getParentRoute: () => DeRoute,
+} as any)
+const DeForIndexRoute = DeForIndexRouteImport.update({
+  id: '/for/',
+  path: '/for/',
+  getParentRoute: () => DeRoute,
+} as any)
+const DeForUseCaseRoute = DeForUseCaseRouteImport.update({
+  id: '/for/$useCase',
+  path: '/for/$useCase',
+  getParentRoute: () => DeRoute,
+} as any)
+const DeGuideIndexRoute = DeGuideIndexRouteImport.update({
+  id: '/guide/',
+  path: '/guide/',
+  getParentRoute: () => DeRoute,
+} as any)
+const DeGuideGuideRoute = DeGuideGuideRouteImport.update({
+  id: '/guide/$guide',
+  path: '/guide/$guide',
+  getParentRoute: () => DeRoute,
+} as any)
+const EsBlogIndexRoute = EsBlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => EsRoute,
+} as any)
+const EsBlogSlugRoute = EsBlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => EsRoute,
+} as any)
+const EsCompareIndexRoute = EsCompareIndexRouteImport.update({
+  id: '/compare/',
+  path: '/compare/',
+  getParentRoute: () => EsRoute,
+} as any)
+const EsCompareCompetitorRoute = EsCompareCompetitorRouteImport.update({
+  id: '/compare/$competitor',
+  path: '/compare/$competitor',
+  getParentRoute: () => EsRoute,
+} as any)
+const EsEventsFreeForeverRoute = EsEventsFreeForeverRouteImport.update({
+  id: '/events/free-forever',
+  path: '/events/free-forever',
+  getParentRoute: () => EsRoute,
+} as any)
+const EsForIndexRoute = EsForIndexRouteImport.update({
+  id: '/for/',
+  path: '/for/',
+  getParentRoute: () => EsRoute,
+} as any)
+const EsForUseCaseRoute = EsForUseCaseRouteImport.update({
+  id: '/for/$useCase',
+  path: '/for/$useCase',
+  getParentRoute: () => EsRoute,
+} as any)
+const EsGuideIndexRoute = EsGuideIndexRouteImport.update({
+  id: '/guide/',
+  path: '/guide/',
+  getParentRoute: () => EsRoute,
+} as any)
+const EsGuideGuideRoute = EsGuideGuideRouteImport.update({
+  id: '/guide/$guide',
+  path: '/guide/$guide',
+  getParentRoute: () => EsRoute,
+} as any)
+const FrBlogIndexRoute = FrBlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrBlogSlugRoute = FrBlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrCompareIndexRoute = FrCompareIndexRouteImport.update({
+  id: '/compare/',
+  path: '/compare/',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrCompareCompetitorRoute = FrCompareCompetitorRouteImport.update({
+  id: '/compare/$competitor',
+  path: '/compare/$competitor',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrEventsFreeForeverRoute = FrEventsFreeForeverRouteImport.update({
+  id: '/events/free-forever',
+  path: '/events/free-forever',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrForIndexRoute = FrForIndexRouteImport.update({
+  id: '/for/',
+  path: '/for/',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrForUseCaseRoute = FrForUseCaseRouteImport.update({
+  id: '/for/$useCase',
+  path: '/for/$useCase',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrGuideIndexRoute = FrGuideIndexRouteImport.update({
+  id: '/guide/',
+  path: '/guide/',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrGuideGuideRoute = FrGuideGuideRouteImport.update({
+  id: '/guide/$guide',
+  path: '/guide/$guide',
+  getParentRoute: () => FrRoute,
+} as any)
+const HiBlogIndexRoute = HiBlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => HiRoute,
+} as any)
+const HiBlogSlugRoute = HiBlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => HiRoute,
+} as any)
+const HiCompareIndexRoute = HiCompareIndexRouteImport.update({
+  id: '/compare/',
+  path: '/compare/',
+  getParentRoute: () => HiRoute,
+} as any)
+const HiCompareCompetitorRoute = HiCompareCompetitorRouteImport.update({
+  id: '/compare/$competitor',
+  path: '/compare/$competitor',
+  getParentRoute: () => HiRoute,
+} as any)
+const HiEventsFreeForeverRoute = HiEventsFreeForeverRouteImport.update({
+  id: '/events/free-forever',
+  path: '/events/free-forever',
+  getParentRoute: () => HiRoute,
+} as any)
+const HiForIndexRoute = HiForIndexRouteImport.update({
+  id: '/for/',
+  path: '/for/',
+  getParentRoute: () => HiRoute,
+} as any)
+const HiForUseCaseRoute = HiForUseCaseRouteImport.update({
+  id: '/for/$useCase',
+  path: '/for/$useCase',
+  getParentRoute: () => HiRoute,
+} as any)
+const HiGuideIndexRoute = HiGuideIndexRouteImport.update({
+  id: '/guide/',
+  path: '/guide/',
+  getParentRoute: () => HiRoute,
+} as any)
+const HiGuideGuideRoute = HiGuideGuideRouteImport.update({
+  id: '/guide/$guide',
+  path: '/guide/$guide',
+  getParentRoute: () => HiRoute,
+} as any)
+const ItBlogIndexRoute = ItBlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => ItRoute,
+} as any)
+const ItBlogSlugRoute = ItBlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => ItRoute,
+} as any)
+const ItCompareIndexRoute = ItCompareIndexRouteImport.update({
+  id: '/compare/',
+  path: '/compare/',
+  getParentRoute: () => ItRoute,
+} as any)
+const ItCompareCompetitorRoute = ItCompareCompetitorRouteImport.update({
+  id: '/compare/$competitor',
+  path: '/compare/$competitor',
+  getParentRoute: () => ItRoute,
+} as any)
+const ItEventsFreeForeverRoute = ItEventsFreeForeverRouteImport.update({
+  id: '/events/free-forever',
+  path: '/events/free-forever',
+  getParentRoute: () => ItRoute,
+} as any)
+const ItForIndexRoute = ItForIndexRouteImport.update({
+  id: '/for/',
+  path: '/for/',
+  getParentRoute: () => ItRoute,
+} as any)
+const ItForUseCaseRoute = ItForUseCaseRouteImport.update({
+  id: '/for/$useCase',
+  path: '/for/$useCase',
+  getParentRoute: () => ItRoute,
+} as any)
+const ItGuideIndexRoute = ItGuideIndexRouteImport.update({
+  id: '/guide/',
+  path: '/guide/',
+  getParentRoute: () => ItRoute,
+} as any)
+const ItGuideGuideRoute = ItGuideGuideRouteImport.update({
+  id: '/guide/$guide',
+  path: '/guide/$guide',
+  getParentRoute: () => ItRoute,
+} as any)
+const PtBlogIndexRoute = PtBlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => PtRoute,
+} as any)
+const PtBlogSlugRoute = PtBlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => PtRoute,
+} as any)
+const PtCompareIndexRoute = PtCompareIndexRouteImport.update({
+  id: '/compare/',
+  path: '/compare/',
+  getParentRoute: () => PtRoute,
+} as any)
+const PtCompareCompetitorRoute = PtCompareCompetitorRouteImport.update({
+  id: '/compare/$competitor',
+  path: '/compare/$competitor',
+  getParentRoute: () => PtRoute,
+} as any)
+const PtEventsFreeForeverRoute = PtEventsFreeForeverRouteImport.update({
+  id: '/events/free-forever',
+  path: '/events/free-forever',
+  getParentRoute: () => PtRoute,
+} as any)
+const PtForIndexRoute = PtForIndexRouteImport.update({
+  id: '/for/',
+  path: '/for/',
+  getParentRoute: () => PtRoute,
+} as any)
+const PtForUseCaseRoute = PtForUseCaseRouteImport.update({
+  id: '/for/$useCase',
+  path: '/for/$useCase',
+  getParentRoute: () => PtRoute,
+} as any)
+const PtGuideIndexRoute = PtGuideIndexRouteImport.update({
+  id: '/guide/',
+  path: '/guide/',
+  getParentRoute: () => PtRoute,
+} as any)
+const PtGuideGuideRoute = PtGuideGuideRouteImport.update({
+  id: '/guide/$guide',
+  path: '/guide/$guide',
+  getParentRoute: () => PtRoute,
+} as any)
+const RuBlogIndexRoute = RuBlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => RuRoute,
+} as any)
+const RuBlogSlugRoute = RuBlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => RuRoute,
+} as any)
+const RuCompareIndexRoute = RuCompareIndexRouteImport.update({
+  id: '/compare/',
+  path: '/compare/',
+  getParentRoute: () => RuRoute,
+} as any)
+const RuCompareCompetitorRoute = RuCompareCompetitorRouteImport.update({
+  id: '/compare/$competitor',
+  path: '/compare/$competitor',
+  getParentRoute: () => RuRoute,
+} as any)
+const RuEventsFreeForeverRoute = RuEventsFreeForeverRouteImport.update({
+  id: '/events/free-forever',
+  path: '/events/free-forever',
+  getParentRoute: () => RuRoute,
+} as any)
+const RuForIndexRoute = RuForIndexRouteImport.update({
+  id: '/for/',
+  path: '/for/',
+  getParentRoute: () => RuRoute,
+} as any)
+const RuForUseCaseRoute = RuForUseCaseRouteImport.update({
+  id: '/for/$useCase',
+  path: '/for/$useCase',
+  getParentRoute: () => RuRoute,
+} as any)
+const RuGuideIndexRoute = RuGuideIndexRouteImport.update({
+  id: '/guide/',
+  path: '/guide/',
+  getParentRoute: () => RuRoute,
+} as any)
+const RuGuideGuideRoute = RuGuideGuideRouteImport.update({
+  id: '/guide/$guide',
+  path: '/guide/$guide',
+  getParentRoute: () => RuRoute,
+} as any)
+const ZhBlogIndexRoute = ZhBlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => ZhRoute,
+} as any)
+const ZhBlogSlugRoute = ZhBlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => ZhRoute,
+} as any)
+const ZhCompareIndexRoute = ZhCompareIndexRouteImport.update({
+  id: '/compare/',
+  path: '/compare/',
+  getParentRoute: () => ZhRoute,
+} as any)
+const ZhCompareCompetitorRoute = ZhCompareCompetitorRouteImport.update({
+  id: '/compare/$competitor',
+  path: '/compare/$competitor',
+  getParentRoute: () => ZhRoute,
+} as any)
+const ZhEventsFreeForeverRoute = ZhEventsFreeForeverRouteImport.update({
+  id: '/events/free-forever',
+  path: '/events/free-forever',
+  getParentRoute: () => ZhRoute,
+} as any)
+const ZhForIndexRoute = ZhForIndexRouteImport.update({
+  id: '/for/',
+  path: '/for/',
+  getParentRoute: () => ZhRoute,
+} as any)
+const ZhForUseCaseRoute = ZhForUseCaseRouteImport.update({
+  id: '/for/$useCase',
+  path: '/for/$useCase',
+  getParentRoute: () => ZhRoute,
+} as any)
+const ZhGuideIndexRoute = ZhGuideIndexRouteImport.update({
+  id: '/guide/',
+  path: '/guide/',
+  getParentRoute: () => ZhRoute,
+} as any)
+const ZhGuideGuideRoute = ZhGuideGuideRouteImport.update({
+  id: '/guide/$guide',
+  path: '/guide/$guide',
+  getParentRoute: () => ZhRoute,
 } as any)
 const ApiPublicCronGenerateArticlesRoute =
   ApiPublicCronGenerateArticlesRouteImport.update({
@@ -624,9 +672,9 @@ const ApiPublicCronGenerateArticlesRoute =
     path: '/api/public/cron/generate-articles',
     getParentRoute: () => rootRouteImport,
   } as any)
-const ApiPublicBlogCoverIdRoute = ApiPublicBlogCoverIdRouteImport.update({
-  id: '/api/public/blog-cover/$id',
-  path: '/api/public/blog-cover/$id',
+const ApiPublicCronSeoMonitorRoute = ApiPublicCronSeoMonitorRouteImport.update({
+  id: '/api/public/cron/seo-monitor',
+  path: '/api/public/cron/seo-monitor',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -638,15 +686,24 @@ export interface FileRoutesByFullPath {
   '/hi': typeof HiRouteWithChildren
   '/it': typeof ItRouteWithChildren
   '/pt': typeof PtRouteWithChildren
+  '/reviews': typeof ReviewsRoute
   '/ru': typeof RuRouteWithChildren
   '/seo-monitor': typeof SeoMonitorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/zh': typeof ZhRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$competitor': typeof CompareCompetitorRoute
+  '/de/reviews': typeof DeReviewsRoute
+  '/es/reviews': typeof EsReviewsRoute
   '/events/free-forever': typeof EventsFreeForeverRoute
   '/for/$useCase': typeof ForUseCaseRoute
+  '/fr/reviews': typeof FrReviewsRoute
   '/guide/$guide': typeof GuideGuideRoute
+  '/hi/reviews': typeof HiReviewsRoute
+  '/it/reviews': typeof ItReviewsRoute
+  '/pt/reviews': typeof PtReviewsRoute
+  '/ru/reviews': typeof RuReviewsRoute
+  '/zh/reviews': typeof ZhReviewsRoute
   '/blog/': typeof BlogIndexRoute
   '/compare/': typeof CompareIndexRoute
   '/de/': typeof DeIndexRoute
@@ -731,19 +788,27 @@ export interface FileRoutesByFullPath {
   '/zh/compare/': typeof ZhCompareIndexRoute
   '/zh/for/': typeof ZhForIndexRoute
   '/zh/guide/': typeof ZhGuideIndexRoute
-  '/api/public/blog-cover/$id': typeof ApiPublicBlogCoverIdRoute
   '/api/public/cron/generate-articles': typeof ApiPublicCronGenerateArticlesRoute
   '/api/public/cron/seo-monitor': typeof ApiPublicCronSeoMonitorRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/reviews': typeof ReviewsRoute
   '/seo-monitor': typeof SeoMonitorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$competitor': typeof CompareCompetitorRoute
+  '/de/reviews': typeof DeReviewsRoute
+  '/es/reviews': typeof EsReviewsRoute
   '/events/free-forever': typeof EventsFreeForeverRoute
   '/for/$useCase': typeof ForUseCaseRoute
+  '/fr/reviews': typeof FrReviewsRoute
   '/guide/$guide': typeof GuideGuideRoute
+  '/hi/reviews': typeof HiReviewsRoute
+  '/it/reviews': typeof ItReviewsRoute
+  '/pt/reviews': typeof PtReviewsRoute
+  '/ru/reviews': typeof RuReviewsRoute
+  '/zh/reviews': typeof ZhReviewsRoute
   '/blog': typeof BlogIndexRoute
   '/compare': typeof CompareIndexRoute
   '/de': typeof DeIndexRoute
@@ -828,7 +893,6 @@ export interface FileRoutesByTo {
   '/zh/compare': typeof ZhCompareIndexRoute
   '/zh/for': typeof ZhForIndexRoute
   '/zh/guide': typeof ZhGuideIndexRoute
-  '/api/public/blog-cover/$id': typeof ApiPublicBlogCoverIdRoute
   '/api/public/cron/generate-articles': typeof ApiPublicCronGenerateArticlesRoute
   '/api/public/cron/seo-monitor': typeof ApiPublicCronSeoMonitorRoute
 }
@@ -841,15 +905,24 @@ export interface FileRoutesById {
   '/hi': typeof HiRouteWithChildren
   '/it': typeof ItRouteWithChildren
   '/pt': typeof PtRouteWithChildren
+  '/reviews': typeof ReviewsRoute
   '/ru': typeof RuRouteWithChildren
   '/seo-monitor': typeof SeoMonitorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/zh': typeof ZhRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$competitor': typeof CompareCompetitorRoute
+  '/de/reviews': typeof DeReviewsRoute
+  '/es/reviews': typeof EsReviewsRoute
   '/events/free-forever': typeof EventsFreeForeverRoute
   '/for/$useCase': typeof ForUseCaseRoute
+  '/fr/reviews': typeof FrReviewsRoute
   '/guide/$guide': typeof GuideGuideRoute
+  '/hi/reviews': typeof HiReviewsRoute
+  '/it/reviews': typeof ItReviewsRoute
+  '/pt/reviews': typeof PtReviewsRoute
+  '/ru/reviews': typeof RuReviewsRoute
+  '/zh/reviews': typeof ZhReviewsRoute
   '/blog/': typeof BlogIndexRoute
   '/compare/': typeof CompareIndexRoute
   '/de/': typeof DeIndexRoute
@@ -934,7 +1007,6 @@ export interface FileRoutesById {
   '/zh/compare/': typeof ZhCompareIndexRoute
   '/zh/for/': typeof ZhForIndexRoute
   '/zh/guide/': typeof ZhGuideIndexRoute
-  '/api/public/blog-cover/$id': typeof ApiPublicBlogCoverIdRoute
   '/api/public/cron/generate-articles': typeof ApiPublicCronGenerateArticlesRoute
   '/api/public/cron/seo-monitor': typeof ApiPublicCronSeoMonitorRoute
 }
@@ -948,15 +1020,24 @@ export interface FileRouteTypes {
     | '/hi'
     | '/it'
     | '/pt'
+    | '/reviews'
     | '/ru'
     | '/seo-monitor'
     | '/sitemap.xml'
     | '/zh'
     | '/blog/$slug'
     | '/compare/$competitor'
+    | '/de/reviews'
+    | '/es/reviews'
     | '/events/free-forever'
     | '/for/$useCase'
+    | '/fr/reviews'
     | '/guide/$guide'
+    | '/hi/reviews'
+    | '/it/reviews'
+    | '/pt/reviews'
+    | '/ru/reviews'
+    | '/zh/reviews'
     | '/blog/'
     | '/compare/'
     | '/de/'
@@ -1041,19 +1122,27 @@ export interface FileRouteTypes {
     | '/zh/compare/'
     | '/zh/for/'
     | '/zh/guide/'
-    | '/api/public/blog-cover/$id'
     | '/api/public/cron/generate-articles'
     | '/api/public/cron/seo-monitor'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/reviews'
     | '/seo-monitor'
     | '/sitemap.xml'
     | '/blog/$slug'
     | '/compare/$competitor'
+    | '/de/reviews'
+    | '/es/reviews'
     | '/events/free-forever'
     | '/for/$useCase'
+    | '/fr/reviews'
     | '/guide/$guide'
+    | '/hi/reviews'
+    | '/it/reviews'
+    | '/pt/reviews'
+    | '/ru/reviews'
+    | '/zh/reviews'
     | '/blog'
     | '/compare'
     | '/de'
@@ -1138,7 +1227,6 @@ export interface FileRouteTypes {
     | '/zh/compare'
     | '/zh/for'
     | '/zh/guide'
-    | '/api/public/blog-cover/$id'
     | '/api/public/cron/generate-articles'
     | '/api/public/cron/seo-monitor'
   id:
@@ -1150,15 +1238,24 @@ export interface FileRouteTypes {
     | '/hi'
     | '/it'
     | '/pt'
+    | '/reviews'
     | '/ru'
     | '/seo-monitor'
     | '/sitemap.xml'
     | '/zh'
     | '/blog/$slug'
     | '/compare/$competitor'
+    | '/de/reviews'
+    | '/es/reviews'
     | '/events/free-forever'
     | '/for/$useCase'
+    | '/fr/reviews'
     | '/guide/$guide'
+    | '/hi/reviews'
+    | '/it/reviews'
+    | '/pt/reviews'
+    | '/ru/reviews'
+    | '/zh/reviews'
     | '/blog/'
     | '/compare/'
     | '/de/'
@@ -1243,7 +1340,6 @@ export interface FileRouteTypes {
     | '/zh/compare/'
     | '/zh/for/'
     | '/zh/guide/'
-    | '/api/public/blog-cover/$id'
     | '/api/public/cron/generate-articles'
     | '/api/public/cron/seo-monitor'
   fileRoutesById: FileRoutesById
@@ -1256,6 +1352,7 @@ export interface RootRouteChildren {
   HiRoute: typeof HiRouteWithChildren
   ItRoute: typeof ItRouteWithChildren
   PtRoute: typeof PtRouteWithChildren
+  ReviewsRoute: typeof ReviewsRoute
   RuRoute: typeof RuRouteWithChildren
   SeoMonitorRoute: typeof SeoMonitorRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -1269,74 +1366,17 @@ export interface RootRouteChildren {
   CompareIndexRoute: typeof CompareIndexRoute
   ForIndexRoute: typeof ForIndexRoute
   GuideIndexRoute: typeof GuideIndexRoute
-  ApiPublicBlogCoverIdRoute: typeof ApiPublicBlogCoverIdRoute
   ApiPublicCronGenerateArticlesRoute: typeof ApiPublicCronGenerateArticlesRoute
   ApiPublicCronSeoMonitorRoute: typeof ApiPublicCronSeoMonitorRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/zh': {
-      id: '/zh'
-      path: '/zh'
-      fullPath: '/zh'
-      preLoaderRoute: typeof ZhRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/seo-monitor': {
-      id: '/seo-monitor'
-      path: '/seo-monitor'
-      fullPath: '/seo-monitor'
-      preLoaderRoute: typeof SeoMonitorRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/ru': {
-      id: '/ru'
-      path: '/ru'
-      fullPath: '/ru'
-      preLoaderRoute: typeof RuRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pt': {
-      id: '/pt'
-      path: '/pt'
-      fullPath: '/pt'
-      preLoaderRoute: typeof PtRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/it': {
-      id: '/it'
-      path: '/it'
-      fullPath: '/it'
-      preLoaderRoute: typeof ItRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/hi': {
-      id: '/hi'
-      path: '/hi'
-      fullPath: '/hi'
-      preLoaderRoute: typeof HiRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/fr': {
-      id: '/fr'
-      path: '/fr'
-      fullPath: '/fr'
-      preLoaderRoute: typeof FrRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/es': {
-      id: '/es'
-      path: '/es'
-      fullPath: '/es'
-      preLoaderRoute: typeof EsRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/de': {
@@ -1346,88 +1386,74 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DeRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/es': {
+      id: '/es'
+      path: '/es'
+      fullPath: '/es'
+      preLoaderRoute: typeof EsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/zh/': {
-      id: '/zh/'
-      path: '/'
-      fullPath: '/zh/'
-      preLoaderRoute: typeof ZhIndexRouteImport
-      parentRoute: typeof ZhRoute
-    }
-    '/ru/': {
-      id: '/ru/'
-      path: '/'
-      fullPath: '/ru/'
-      preLoaderRoute: typeof RuIndexRouteImport
-      parentRoute: typeof RuRoute
-    }
-    '/pt/': {
-      id: '/pt/'
-      path: '/'
-      fullPath: '/pt/'
-      preLoaderRoute: typeof PtIndexRouteImport
-      parentRoute: typeof PtRoute
-    }
-    '/it/': {
-      id: '/it/'
-      path: '/'
-      fullPath: '/it/'
-      preLoaderRoute: typeof ItIndexRouteImport
-      parentRoute: typeof ItRoute
-    }
-    '/hi/': {
-      id: '/hi/'
-      path: '/'
-      fullPath: '/hi/'
-      preLoaderRoute: typeof HiIndexRouteImport
-      parentRoute: typeof HiRoute
-    }
-    '/guide/': {
-      id: '/guide/'
-      path: '/guide'
-      fullPath: '/guide/'
-      preLoaderRoute: typeof GuideIndexRouteImport
+    '/fr': {
+      id: '/fr'
+      path: '/fr'
+      fullPath: '/fr'
+      preLoaderRoute: typeof FrRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/fr/': {
-      id: '/fr/'
-      path: '/'
-      fullPath: '/fr/'
-      preLoaderRoute: typeof FrIndexRouteImport
-      parentRoute: typeof FrRoute
-    }
-    '/for/': {
-      id: '/for/'
-      path: '/for'
-      fullPath: '/for/'
-      preLoaderRoute: typeof ForIndexRouteImport
+    '/hi': {
+      id: '/hi'
+      path: '/hi'
+      fullPath: '/hi'
+      preLoaderRoute: typeof HiRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/es/': {
-      id: '/es/'
-      path: '/'
-      fullPath: '/es/'
-      preLoaderRoute: typeof EsIndexRouteImport
-      parentRoute: typeof EsRoute
+    '/it': {
+      id: '/it'
+      path: '/it'
+      fullPath: '/it'
+      preLoaderRoute: typeof ItRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/de/': {
-      id: '/de/'
-      path: '/'
-      fullPath: '/de/'
-      preLoaderRoute: typeof DeIndexRouteImport
-      parentRoute: typeof DeRoute
+    '/pt': {
+      id: '/pt'
+      path: '/pt'
+      fullPath: '/pt'
+      preLoaderRoute: typeof PtRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/compare/': {
-      id: '/compare/'
-      path: '/compare'
-      fullPath: '/compare/'
-      preLoaderRoute: typeof CompareIndexRouteImport
+    '/reviews': {
+      id: '/reviews'
+      path: '/reviews'
+      fullPath: '/reviews'
+      preLoaderRoute: typeof ReviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ru': {
+      id: '/ru'
+      path: '/ru'
+      fullPath: '/ru'
+      preLoaderRoute: typeof RuRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/seo-monitor': {
+      id: '/seo-monitor'
+      path: '/seo-monitor'
+      fullPath: '/seo-monitor'
+      preLoaderRoute: typeof SeoMonitorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/zh': {
+      id: '/zh'
+      path: '/zh'
+      fullPath: '/zh'
+      preLoaderRoute: typeof ZhRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog/': {
@@ -1437,25 +1463,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/guide/$guide': {
-      id: '/guide/$guide'
-      path: '/guide/$guide'
-      fullPath: '/guide/$guide'
-      preLoaderRoute: typeof GuideGuideRouteImport
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/for/$useCase': {
-      id: '/for/$useCase'
-      path: '/for/$useCase'
-      fullPath: '/for/$useCase'
-      preLoaderRoute: typeof ForUseCaseRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/events/free-forever': {
-      id: '/events/free-forever'
-      path: '/events/free-forever'
-      fullPath: '/events/free-forever'
-      preLoaderRoute: typeof EventsFreeForeverRouteImport
+    '/compare/': {
+      id: '/compare/'
+      path: '/compare'
+      fullPath: '/compare/'
+      preLoaderRoute: typeof CompareIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/compare/$competitor': {
@@ -1465,508 +1484,158 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CompareCompetitorRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blog/$slug': {
-      id: '/blog/$slug'
-      path: '/blog/$slug'
-      fullPath: '/blog/$slug'
-      preLoaderRoute: typeof BlogSlugRouteImport
+    '/de/': {
+      id: '/de/'
+      path: '/'
+      fullPath: '/de/'
+      preLoaderRoute: typeof DeIndexRouteImport
+      parentRoute: typeof DeRoute
+    }
+    '/de/reviews': {
+      id: '/de/reviews'
+      path: '/reviews'
+      fullPath: '/de/reviews'
+      preLoaderRoute: typeof DeReviewsRouteImport
+      parentRoute: typeof DeRoute
+    }
+    '/es/': {
+      id: '/es/'
+      path: '/'
+      fullPath: '/es/'
+      preLoaderRoute: typeof EsIndexRouteImport
+      parentRoute: typeof EsRoute
+    }
+    '/es/reviews': {
+      id: '/es/reviews'
+      path: '/reviews'
+      fullPath: '/es/reviews'
+      preLoaderRoute: typeof EsReviewsRouteImport
+      parentRoute: typeof EsRoute
+    }
+    '/events/free-forever': {
+      id: '/events/free-forever'
+      path: '/events/free-forever'
+      fullPath: '/events/free-forever'
+      preLoaderRoute: typeof EventsFreeForeverRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/zh/guide/': {
-      id: '/zh/guide/'
-      path: '/guide'
-      fullPath: '/zh/guide/'
-      preLoaderRoute: typeof ZhGuideIndexRouteImport
-      parentRoute: typeof ZhRoute
-    }
-    '/zh/for/': {
-      id: '/zh/for/'
+    '/for/': {
+      id: '/for/'
       path: '/for'
-      fullPath: '/zh/for/'
-      preLoaderRoute: typeof ZhForIndexRouteImport
-      parentRoute: typeof ZhRoute
+      fullPath: '/for/'
+      preLoaderRoute: typeof ForIndexRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/zh/compare/': {
-      id: '/zh/compare/'
-      path: '/compare'
-      fullPath: '/zh/compare/'
-      preLoaderRoute: typeof ZhCompareIndexRouteImport
-      parentRoute: typeof ZhRoute
+    '/for/$useCase': {
+      id: '/for/$useCase'
+      path: '/for/$useCase'
+      fullPath: '/for/$useCase'
+      preLoaderRoute: typeof ForUseCaseRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/zh/blog/': {
-      id: '/zh/blog/'
-      path: '/blog'
-      fullPath: '/zh/blog/'
-      preLoaderRoute: typeof ZhBlogIndexRouteImport
-      parentRoute: typeof ZhRoute
-    }
-    '/ru/guide/': {
-      id: '/ru/guide/'
-      path: '/guide'
-      fullPath: '/ru/guide/'
-      preLoaderRoute: typeof RuGuideIndexRouteImport
-      parentRoute: typeof RuRoute
-    }
-    '/ru/for/': {
-      id: '/ru/for/'
-      path: '/for'
-      fullPath: '/ru/for/'
-      preLoaderRoute: typeof RuForIndexRouteImport
-      parentRoute: typeof RuRoute
-    }
-    '/ru/compare/': {
-      id: '/ru/compare/'
-      path: '/compare'
-      fullPath: '/ru/compare/'
-      preLoaderRoute: typeof RuCompareIndexRouteImport
-      parentRoute: typeof RuRoute
-    }
-    '/ru/blog/': {
-      id: '/ru/blog/'
-      path: '/blog'
-      fullPath: '/ru/blog/'
-      preLoaderRoute: typeof RuBlogIndexRouteImport
-      parentRoute: typeof RuRoute
-    }
-    '/pt/guide/': {
-      id: '/pt/guide/'
-      path: '/guide'
-      fullPath: '/pt/guide/'
-      preLoaderRoute: typeof PtGuideIndexRouteImport
-      parentRoute: typeof PtRoute
-    }
-    '/pt/for/': {
-      id: '/pt/for/'
-      path: '/for'
-      fullPath: '/pt/for/'
-      preLoaderRoute: typeof PtForIndexRouteImport
-      parentRoute: typeof PtRoute
-    }
-    '/pt/compare/': {
-      id: '/pt/compare/'
-      path: '/compare'
-      fullPath: '/pt/compare/'
-      preLoaderRoute: typeof PtCompareIndexRouteImport
-      parentRoute: typeof PtRoute
-    }
-    '/pt/blog/': {
-      id: '/pt/blog/'
-      path: '/blog'
-      fullPath: '/pt/blog/'
-      preLoaderRoute: typeof PtBlogIndexRouteImport
-      parentRoute: typeof PtRoute
-    }
-    '/it/guide/': {
-      id: '/it/guide/'
-      path: '/guide'
-      fullPath: '/it/guide/'
-      preLoaderRoute: typeof ItGuideIndexRouteImport
-      parentRoute: typeof ItRoute
-    }
-    '/it/for/': {
-      id: '/it/for/'
-      path: '/for'
-      fullPath: '/it/for/'
-      preLoaderRoute: typeof ItForIndexRouteImport
-      parentRoute: typeof ItRoute
-    }
-    '/it/compare/': {
-      id: '/it/compare/'
-      path: '/compare'
-      fullPath: '/it/compare/'
-      preLoaderRoute: typeof ItCompareIndexRouteImport
-      parentRoute: typeof ItRoute
-    }
-    '/it/blog/': {
-      id: '/it/blog/'
-      path: '/blog'
-      fullPath: '/it/blog/'
-      preLoaderRoute: typeof ItBlogIndexRouteImport
-      parentRoute: typeof ItRoute
-    }
-    '/hi/guide/': {
-      id: '/hi/guide/'
-      path: '/guide'
-      fullPath: '/hi/guide/'
-      preLoaderRoute: typeof HiGuideIndexRouteImport
-      parentRoute: typeof HiRoute
-    }
-    '/hi/for/': {
-      id: '/hi/for/'
-      path: '/for'
-      fullPath: '/hi/for/'
-      preLoaderRoute: typeof HiForIndexRouteImport
-      parentRoute: typeof HiRoute
-    }
-    '/hi/compare/': {
-      id: '/hi/compare/'
-      path: '/compare'
-      fullPath: '/hi/compare/'
-      preLoaderRoute: typeof HiCompareIndexRouteImport
-      parentRoute: typeof HiRoute
-    }
-    '/hi/blog/': {
-      id: '/hi/blog/'
-      path: '/blog'
-      fullPath: '/hi/blog/'
-      preLoaderRoute: typeof HiBlogIndexRouteImport
-      parentRoute: typeof HiRoute
-    }
-    '/fr/guide/': {
-      id: '/fr/guide/'
-      path: '/guide'
-      fullPath: '/fr/guide/'
-      preLoaderRoute: typeof FrGuideIndexRouteImport
+    '/fr/': {
+      id: '/fr/'
+      path: '/'
+      fullPath: '/fr/'
+      preLoaderRoute: typeof FrIndexRouteImport
       parentRoute: typeof FrRoute
     }
-    '/fr/for/': {
-      id: '/fr/for/'
-      path: '/for'
-      fullPath: '/fr/for/'
-      preLoaderRoute: typeof FrForIndexRouteImport
+    '/fr/reviews': {
+      id: '/fr/reviews'
+      path: '/reviews'
+      fullPath: '/fr/reviews'
+      preLoaderRoute: typeof FrReviewsRouteImport
       parentRoute: typeof FrRoute
     }
-    '/fr/compare/': {
-      id: '/fr/compare/'
-      path: '/compare'
-      fullPath: '/fr/compare/'
-      preLoaderRoute: typeof FrCompareIndexRouteImport
-      parentRoute: typeof FrRoute
-    }
-    '/fr/blog/': {
-      id: '/fr/blog/'
-      path: '/blog'
-      fullPath: '/fr/blog/'
-      preLoaderRoute: typeof FrBlogIndexRouteImport
-      parentRoute: typeof FrRoute
-    }
-    '/es/guide/': {
-      id: '/es/guide/'
+    '/guide/': {
+      id: '/guide/'
       path: '/guide'
-      fullPath: '/es/guide/'
-      preLoaderRoute: typeof EsGuideIndexRouteImport
-      parentRoute: typeof EsRoute
+      fullPath: '/guide/'
+      preLoaderRoute: typeof GuideIndexRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/es/for/': {
-      id: '/es/for/'
-      path: '/for'
-      fullPath: '/es/for/'
-      preLoaderRoute: typeof EsForIndexRouteImport
-      parentRoute: typeof EsRoute
+    '/guide/$guide': {
+      id: '/guide/$guide'
+      path: '/guide/$guide'
+      fullPath: '/guide/$guide'
+      preLoaderRoute: typeof GuideGuideRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/es/compare/': {
-      id: '/es/compare/'
-      path: '/compare'
-      fullPath: '/es/compare/'
-      preLoaderRoute: typeof EsCompareIndexRouteImport
-      parentRoute: typeof EsRoute
+    '/hi/': {
+      id: '/hi/'
+      path: '/'
+      fullPath: '/hi/'
+      preLoaderRoute: typeof HiIndexRouteImport
+      parentRoute: typeof HiRoute
     }
-    '/es/blog/': {
-      id: '/es/blog/'
-      path: '/blog'
-      fullPath: '/es/blog/'
-      preLoaderRoute: typeof EsBlogIndexRouteImport
-      parentRoute: typeof EsRoute
+    '/hi/reviews': {
+      id: '/hi/reviews'
+      path: '/reviews'
+      fullPath: '/hi/reviews'
+      preLoaderRoute: typeof HiReviewsRouteImport
+      parentRoute: typeof HiRoute
     }
-    '/de/guide/': {
-      id: '/de/guide/'
-      path: '/guide'
-      fullPath: '/de/guide/'
-      preLoaderRoute: typeof DeGuideIndexRouteImport
-      parentRoute: typeof DeRoute
+    '/it/': {
+      id: '/it/'
+      path: '/'
+      fullPath: '/it/'
+      preLoaderRoute: typeof ItIndexRouteImport
+      parentRoute: typeof ItRoute
     }
-    '/de/for/': {
-      id: '/de/for/'
-      path: '/for'
-      fullPath: '/de/for/'
-      preLoaderRoute: typeof DeForIndexRouteImport
-      parentRoute: typeof DeRoute
+    '/it/reviews': {
+      id: '/it/reviews'
+      path: '/reviews'
+      fullPath: '/it/reviews'
+      preLoaderRoute: typeof ItReviewsRouteImport
+      parentRoute: typeof ItRoute
     }
-    '/de/compare/': {
-      id: '/de/compare/'
-      path: '/compare'
-      fullPath: '/de/compare/'
-      preLoaderRoute: typeof DeCompareIndexRouteImport
-      parentRoute: typeof DeRoute
+    '/pt/': {
+      id: '/pt/'
+      path: '/'
+      fullPath: '/pt/'
+      preLoaderRoute: typeof PtIndexRouteImport
+      parentRoute: typeof PtRoute
+    }
+    '/pt/reviews': {
+      id: '/pt/reviews'
+      path: '/reviews'
+      fullPath: '/pt/reviews'
+      preLoaderRoute: typeof PtReviewsRouteImport
+      parentRoute: typeof PtRoute
+    }
+    '/ru/': {
+      id: '/ru/'
+      path: '/'
+      fullPath: '/ru/'
+      preLoaderRoute: typeof RuIndexRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/ru/reviews': {
+      id: '/ru/reviews'
+      path: '/reviews'
+      fullPath: '/ru/reviews'
+      preLoaderRoute: typeof RuReviewsRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/zh/': {
+      id: '/zh/'
+      path: '/'
+      fullPath: '/zh/'
+      preLoaderRoute: typeof ZhIndexRouteImport
+      parentRoute: typeof ZhRoute
+    }
+    '/zh/reviews': {
+      id: '/zh/reviews'
+      path: '/reviews'
+      fullPath: '/zh/reviews'
+      preLoaderRoute: typeof ZhReviewsRouteImport
+      parentRoute: typeof ZhRoute
     }
     '/de/blog/': {
       id: '/de/blog/'
       path: '/blog'
       fullPath: '/de/blog/'
       preLoaderRoute: typeof DeBlogIndexRouteImport
-      parentRoute: typeof DeRoute
-    }
-    '/zh/guide/$guide': {
-      id: '/zh/guide/$guide'
-      path: '/guide/$guide'
-      fullPath: '/zh/guide/$guide'
-      preLoaderRoute: typeof ZhGuideGuideRouteImport
-      parentRoute: typeof ZhRoute
-    }
-    '/zh/for/$useCase': {
-      id: '/zh/for/$useCase'
-      path: '/for/$useCase'
-      fullPath: '/zh/for/$useCase'
-      preLoaderRoute: typeof ZhForUseCaseRouteImport
-      parentRoute: typeof ZhRoute
-    }
-    '/zh/events/free-forever': {
-      id: '/zh/events/free-forever'
-      path: '/events/free-forever'
-      fullPath: '/zh/events/free-forever'
-      preLoaderRoute: typeof ZhEventsFreeForeverRouteImport
-      parentRoute: typeof ZhRoute
-    }
-    '/zh/compare/$competitor': {
-      id: '/zh/compare/$competitor'
-      path: '/compare/$competitor'
-      fullPath: '/zh/compare/$competitor'
-      preLoaderRoute: typeof ZhCompareCompetitorRouteImport
-      parentRoute: typeof ZhRoute
-    }
-    '/zh/blog/$slug': {
-      id: '/zh/blog/$slug'
-      path: '/blog/$slug'
-      fullPath: '/zh/blog/$slug'
-      preLoaderRoute: typeof ZhBlogSlugRouteImport
-      parentRoute: typeof ZhRoute
-    }
-    '/ru/guide/$guide': {
-      id: '/ru/guide/$guide'
-      path: '/guide/$guide'
-      fullPath: '/ru/guide/$guide'
-      preLoaderRoute: typeof RuGuideGuideRouteImport
-      parentRoute: typeof RuRoute
-    }
-    '/ru/for/$useCase': {
-      id: '/ru/for/$useCase'
-      path: '/for/$useCase'
-      fullPath: '/ru/for/$useCase'
-      preLoaderRoute: typeof RuForUseCaseRouteImport
-      parentRoute: typeof RuRoute
-    }
-    '/ru/events/free-forever': {
-      id: '/ru/events/free-forever'
-      path: '/events/free-forever'
-      fullPath: '/ru/events/free-forever'
-      preLoaderRoute: typeof RuEventsFreeForeverRouteImport
-      parentRoute: typeof RuRoute
-    }
-    '/ru/compare/$competitor': {
-      id: '/ru/compare/$competitor'
-      path: '/compare/$competitor'
-      fullPath: '/ru/compare/$competitor'
-      preLoaderRoute: typeof RuCompareCompetitorRouteImport
-      parentRoute: typeof RuRoute
-    }
-    '/ru/blog/$slug': {
-      id: '/ru/blog/$slug'
-      path: '/blog/$slug'
-      fullPath: '/ru/blog/$slug'
-      preLoaderRoute: typeof RuBlogSlugRouteImport
-      parentRoute: typeof RuRoute
-    }
-    '/pt/guide/$guide': {
-      id: '/pt/guide/$guide'
-      path: '/guide/$guide'
-      fullPath: '/pt/guide/$guide'
-      preLoaderRoute: typeof PtGuideGuideRouteImport
-      parentRoute: typeof PtRoute
-    }
-    '/pt/for/$useCase': {
-      id: '/pt/for/$useCase'
-      path: '/for/$useCase'
-      fullPath: '/pt/for/$useCase'
-      preLoaderRoute: typeof PtForUseCaseRouteImport
-      parentRoute: typeof PtRoute
-    }
-    '/pt/events/free-forever': {
-      id: '/pt/events/free-forever'
-      path: '/events/free-forever'
-      fullPath: '/pt/events/free-forever'
-      preLoaderRoute: typeof PtEventsFreeForeverRouteImport
-      parentRoute: typeof PtRoute
-    }
-    '/pt/compare/$competitor': {
-      id: '/pt/compare/$competitor'
-      path: '/compare/$competitor'
-      fullPath: '/pt/compare/$competitor'
-      preLoaderRoute: typeof PtCompareCompetitorRouteImport
-      parentRoute: typeof PtRoute
-    }
-    '/pt/blog/$slug': {
-      id: '/pt/blog/$slug'
-      path: '/blog/$slug'
-      fullPath: '/pt/blog/$slug'
-      preLoaderRoute: typeof PtBlogSlugRouteImport
-      parentRoute: typeof PtRoute
-    }
-    '/it/guide/$guide': {
-      id: '/it/guide/$guide'
-      path: '/guide/$guide'
-      fullPath: '/it/guide/$guide'
-      preLoaderRoute: typeof ItGuideGuideRouteImport
-      parentRoute: typeof ItRoute
-    }
-    '/it/for/$useCase': {
-      id: '/it/for/$useCase'
-      path: '/for/$useCase'
-      fullPath: '/it/for/$useCase'
-      preLoaderRoute: typeof ItForUseCaseRouteImport
-      parentRoute: typeof ItRoute
-    }
-    '/it/events/free-forever': {
-      id: '/it/events/free-forever'
-      path: '/events/free-forever'
-      fullPath: '/it/events/free-forever'
-      preLoaderRoute: typeof ItEventsFreeForeverRouteImport
-      parentRoute: typeof ItRoute
-    }
-    '/it/compare/$competitor': {
-      id: '/it/compare/$competitor'
-      path: '/compare/$competitor'
-      fullPath: '/it/compare/$competitor'
-      preLoaderRoute: typeof ItCompareCompetitorRouteImport
-      parentRoute: typeof ItRoute
-    }
-    '/it/blog/$slug': {
-      id: '/it/blog/$slug'
-      path: '/blog/$slug'
-      fullPath: '/it/blog/$slug'
-      preLoaderRoute: typeof ItBlogSlugRouteImport
-      parentRoute: typeof ItRoute
-    }
-    '/hi/guide/$guide': {
-      id: '/hi/guide/$guide'
-      path: '/guide/$guide'
-      fullPath: '/hi/guide/$guide'
-      preLoaderRoute: typeof HiGuideGuideRouteImport
-      parentRoute: typeof HiRoute
-    }
-    '/hi/for/$useCase': {
-      id: '/hi/for/$useCase'
-      path: '/for/$useCase'
-      fullPath: '/hi/for/$useCase'
-      preLoaderRoute: typeof HiForUseCaseRouteImport
-      parentRoute: typeof HiRoute
-    }
-    '/hi/events/free-forever': {
-      id: '/hi/events/free-forever'
-      path: '/events/free-forever'
-      fullPath: '/hi/events/free-forever'
-      preLoaderRoute: typeof HiEventsFreeForeverRouteImport
-      parentRoute: typeof HiRoute
-    }
-    '/hi/compare/$competitor': {
-      id: '/hi/compare/$competitor'
-      path: '/compare/$competitor'
-      fullPath: '/hi/compare/$competitor'
-      preLoaderRoute: typeof HiCompareCompetitorRouteImport
-      parentRoute: typeof HiRoute
-    }
-    '/hi/blog/$slug': {
-      id: '/hi/blog/$slug'
-      path: '/blog/$slug'
-      fullPath: '/hi/blog/$slug'
-      preLoaderRoute: typeof HiBlogSlugRouteImport
-      parentRoute: typeof HiRoute
-    }
-    '/fr/guide/$guide': {
-      id: '/fr/guide/$guide'
-      path: '/guide/$guide'
-      fullPath: '/fr/guide/$guide'
-      preLoaderRoute: typeof FrGuideGuideRouteImport
-      parentRoute: typeof FrRoute
-    }
-    '/fr/for/$useCase': {
-      id: '/fr/for/$useCase'
-      path: '/for/$useCase'
-      fullPath: '/fr/for/$useCase'
-      preLoaderRoute: typeof FrForUseCaseRouteImport
-      parentRoute: typeof FrRoute
-    }
-    '/fr/events/free-forever': {
-      id: '/fr/events/free-forever'
-      path: '/events/free-forever'
-      fullPath: '/fr/events/free-forever'
-      preLoaderRoute: typeof FrEventsFreeForeverRouteImport
-      parentRoute: typeof FrRoute
-    }
-    '/fr/compare/$competitor': {
-      id: '/fr/compare/$competitor'
-      path: '/compare/$competitor'
-      fullPath: '/fr/compare/$competitor'
-      preLoaderRoute: typeof FrCompareCompetitorRouteImport
-      parentRoute: typeof FrRoute
-    }
-    '/fr/blog/$slug': {
-      id: '/fr/blog/$slug'
-      path: '/blog/$slug'
-      fullPath: '/fr/blog/$slug'
-      preLoaderRoute: typeof FrBlogSlugRouteImport
-      parentRoute: typeof FrRoute
-    }
-    '/es/guide/$guide': {
-      id: '/es/guide/$guide'
-      path: '/guide/$guide'
-      fullPath: '/es/guide/$guide'
-      preLoaderRoute: typeof EsGuideGuideRouteImport
-      parentRoute: typeof EsRoute
-    }
-    '/es/for/$useCase': {
-      id: '/es/for/$useCase'
-      path: '/for/$useCase'
-      fullPath: '/es/for/$useCase'
-      preLoaderRoute: typeof EsForUseCaseRouteImport
-      parentRoute: typeof EsRoute
-    }
-    '/es/events/free-forever': {
-      id: '/es/events/free-forever'
-      path: '/events/free-forever'
-      fullPath: '/es/events/free-forever'
-      preLoaderRoute: typeof EsEventsFreeForeverRouteImport
-      parentRoute: typeof EsRoute
-    }
-    '/es/compare/$competitor': {
-      id: '/es/compare/$competitor'
-      path: '/compare/$competitor'
-      fullPath: '/es/compare/$competitor'
-      preLoaderRoute: typeof EsCompareCompetitorRouteImport
-      parentRoute: typeof EsRoute
-    }
-    '/es/blog/$slug': {
-      id: '/es/blog/$slug'
-      path: '/blog/$slug'
-      fullPath: '/es/blog/$slug'
-      preLoaderRoute: typeof EsBlogSlugRouteImport
-      parentRoute: typeof EsRoute
-    }
-    '/de/guide/$guide': {
-      id: '/de/guide/$guide'
-      path: '/guide/$guide'
-      fullPath: '/de/guide/$guide'
-      preLoaderRoute: typeof DeGuideGuideRouteImport
-      parentRoute: typeof DeRoute
-    }
-    '/de/for/$useCase': {
-      id: '/de/for/$useCase'
-      path: '/for/$useCase'
-      fullPath: '/de/for/$useCase'
-      preLoaderRoute: typeof DeForUseCaseRouteImport
-      parentRoute: typeof DeRoute
-    }
-    '/de/events/free-forever': {
-      id: '/de/events/free-forever'
-      path: '/events/free-forever'
-      fullPath: '/de/events/free-forever'
-      preLoaderRoute: typeof DeEventsFreeForeverRouteImport
-      parentRoute: typeof DeRoute
-    }
-    '/de/compare/$competitor': {
-      id: '/de/compare/$competitor'
-      path: '/compare/$competitor'
-      fullPath: '/de/compare/$competitor'
-      preLoaderRoute: typeof DeCompareCompetitorRouteImport
       parentRoute: typeof DeRoute
     }
     '/de/blog/$slug': {
@@ -1976,12 +1645,495 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DeBlogSlugRouteImport
       parentRoute: typeof DeRoute
     }
-    '/api/public/cron/seo-monitor': {
-      id: '/api/public/cron/seo-monitor'
-      path: '/api/public/cron/seo-monitor'
-      fullPath: '/api/public/cron/seo-monitor'
-      preLoaderRoute: typeof ApiPublicCronSeoMonitorRouteImport
-      parentRoute: typeof rootRouteImport
+    '/de/compare/': {
+      id: '/de/compare/'
+      path: '/compare'
+      fullPath: '/de/compare/'
+      preLoaderRoute: typeof DeCompareIndexRouteImport
+      parentRoute: typeof DeRoute
+    }
+    '/de/compare/$competitor': {
+      id: '/de/compare/$competitor'
+      path: '/compare/$competitor'
+      fullPath: '/de/compare/$competitor'
+      preLoaderRoute: typeof DeCompareCompetitorRouteImport
+      parentRoute: typeof DeRoute
+    }
+    '/de/events/free-forever': {
+      id: '/de/events/free-forever'
+      path: '/events/free-forever'
+      fullPath: '/de/events/free-forever'
+      preLoaderRoute: typeof DeEventsFreeForeverRouteImport
+      parentRoute: typeof DeRoute
+    }
+    '/de/for/': {
+      id: '/de/for/'
+      path: '/for'
+      fullPath: '/de/for/'
+      preLoaderRoute: typeof DeForIndexRouteImport
+      parentRoute: typeof DeRoute
+    }
+    '/de/for/$useCase': {
+      id: '/de/for/$useCase'
+      path: '/for/$useCase'
+      fullPath: '/de/for/$useCase'
+      preLoaderRoute: typeof DeForUseCaseRouteImport
+      parentRoute: typeof DeRoute
+    }
+    '/de/guide/': {
+      id: '/de/guide/'
+      path: '/guide'
+      fullPath: '/de/guide/'
+      preLoaderRoute: typeof DeGuideIndexRouteImport
+      parentRoute: typeof DeRoute
+    }
+    '/de/guide/$guide': {
+      id: '/de/guide/$guide'
+      path: '/guide/$guide'
+      fullPath: '/de/guide/$guide'
+      preLoaderRoute: typeof DeGuideGuideRouteImport
+      parentRoute: typeof DeRoute
+    }
+    '/es/blog/': {
+      id: '/es/blog/'
+      path: '/blog'
+      fullPath: '/es/blog/'
+      preLoaderRoute: typeof EsBlogIndexRouteImport
+      parentRoute: typeof EsRoute
+    }
+    '/es/blog/$slug': {
+      id: '/es/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/es/blog/$slug'
+      preLoaderRoute: typeof EsBlogSlugRouteImport
+      parentRoute: typeof EsRoute
+    }
+    '/es/compare/': {
+      id: '/es/compare/'
+      path: '/compare'
+      fullPath: '/es/compare/'
+      preLoaderRoute: typeof EsCompareIndexRouteImport
+      parentRoute: typeof EsRoute
+    }
+    '/es/compare/$competitor': {
+      id: '/es/compare/$competitor'
+      path: '/compare/$competitor'
+      fullPath: '/es/compare/$competitor'
+      preLoaderRoute: typeof EsCompareCompetitorRouteImport
+      parentRoute: typeof EsRoute
+    }
+    '/es/events/free-forever': {
+      id: '/es/events/free-forever'
+      path: '/events/free-forever'
+      fullPath: '/es/events/free-forever'
+      preLoaderRoute: typeof EsEventsFreeForeverRouteImport
+      parentRoute: typeof EsRoute
+    }
+    '/es/for/': {
+      id: '/es/for/'
+      path: '/for'
+      fullPath: '/es/for/'
+      preLoaderRoute: typeof EsForIndexRouteImport
+      parentRoute: typeof EsRoute
+    }
+    '/es/for/$useCase': {
+      id: '/es/for/$useCase'
+      path: '/for/$useCase'
+      fullPath: '/es/for/$useCase'
+      preLoaderRoute: typeof EsForUseCaseRouteImport
+      parentRoute: typeof EsRoute
+    }
+    '/es/guide/': {
+      id: '/es/guide/'
+      path: '/guide'
+      fullPath: '/es/guide/'
+      preLoaderRoute: typeof EsGuideIndexRouteImport
+      parentRoute: typeof EsRoute
+    }
+    '/es/guide/$guide': {
+      id: '/es/guide/$guide'
+      path: '/guide/$guide'
+      fullPath: '/es/guide/$guide'
+      preLoaderRoute: typeof EsGuideGuideRouteImport
+      parentRoute: typeof EsRoute
+    }
+    '/fr/blog/': {
+      id: '/fr/blog/'
+      path: '/blog'
+      fullPath: '/fr/blog/'
+      preLoaderRoute: typeof FrBlogIndexRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/blog/$slug': {
+      id: '/fr/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/fr/blog/$slug'
+      preLoaderRoute: typeof FrBlogSlugRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/compare/': {
+      id: '/fr/compare/'
+      path: '/compare'
+      fullPath: '/fr/compare/'
+      preLoaderRoute: typeof FrCompareIndexRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/compare/$competitor': {
+      id: '/fr/compare/$competitor'
+      path: '/compare/$competitor'
+      fullPath: '/fr/compare/$competitor'
+      preLoaderRoute: typeof FrCompareCompetitorRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/events/free-forever': {
+      id: '/fr/events/free-forever'
+      path: '/events/free-forever'
+      fullPath: '/fr/events/free-forever'
+      preLoaderRoute: typeof FrEventsFreeForeverRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/for/': {
+      id: '/fr/for/'
+      path: '/for'
+      fullPath: '/fr/for/'
+      preLoaderRoute: typeof FrForIndexRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/for/$useCase': {
+      id: '/fr/for/$useCase'
+      path: '/for/$useCase'
+      fullPath: '/fr/for/$useCase'
+      preLoaderRoute: typeof FrForUseCaseRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/guide/': {
+      id: '/fr/guide/'
+      path: '/guide'
+      fullPath: '/fr/guide/'
+      preLoaderRoute: typeof FrGuideIndexRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/guide/$guide': {
+      id: '/fr/guide/$guide'
+      path: '/guide/$guide'
+      fullPath: '/fr/guide/$guide'
+      preLoaderRoute: typeof FrGuideGuideRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/hi/blog/': {
+      id: '/hi/blog/'
+      path: '/blog'
+      fullPath: '/hi/blog/'
+      preLoaderRoute: typeof HiBlogIndexRouteImport
+      parentRoute: typeof HiRoute
+    }
+    '/hi/blog/$slug': {
+      id: '/hi/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/hi/blog/$slug'
+      preLoaderRoute: typeof HiBlogSlugRouteImport
+      parentRoute: typeof HiRoute
+    }
+    '/hi/compare/': {
+      id: '/hi/compare/'
+      path: '/compare'
+      fullPath: '/hi/compare/'
+      preLoaderRoute: typeof HiCompareIndexRouteImport
+      parentRoute: typeof HiRoute
+    }
+    '/hi/compare/$competitor': {
+      id: '/hi/compare/$competitor'
+      path: '/compare/$competitor'
+      fullPath: '/hi/compare/$competitor'
+      preLoaderRoute: typeof HiCompareCompetitorRouteImport
+      parentRoute: typeof HiRoute
+    }
+    '/hi/events/free-forever': {
+      id: '/hi/events/free-forever'
+      path: '/events/free-forever'
+      fullPath: '/hi/events/free-forever'
+      preLoaderRoute: typeof HiEventsFreeForeverRouteImport
+      parentRoute: typeof HiRoute
+    }
+    '/hi/for/': {
+      id: '/hi/for/'
+      path: '/for'
+      fullPath: '/hi/for/'
+      preLoaderRoute: typeof HiForIndexRouteImport
+      parentRoute: typeof HiRoute
+    }
+    '/hi/for/$useCase': {
+      id: '/hi/for/$useCase'
+      path: '/for/$useCase'
+      fullPath: '/hi/for/$useCase'
+      preLoaderRoute: typeof HiForUseCaseRouteImport
+      parentRoute: typeof HiRoute
+    }
+    '/hi/guide/': {
+      id: '/hi/guide/'
+      path: '/guide'
+      fullPath: '/hi/guide/'
+      preLoaderRoute: typeof HiGuideIndexRouteImport
+      parentRoute: typeof HiRoute
+    }
+    '/hi/guide/$guide': {
+      id: '/hi/guide/$guide'
+      path: '/guide/$guide'
+      fullPath: '/hi/guide/$guide'
+      preLoaderRoute: typeof HiGuideGuideRouteImport
+      parentRoute: typeof HiRoute
+    }
+    '/it/blog/': {
+      id: '/it/blog/'
+      path: '/blog'
+      fullPath: '/it/blog/'
+      preLoaderRoute: typeof ItBlogIndexRouteImport
+      parentRoute: typeof ItRoute
+    }
+    '/it/blog/$slug': {
+      id: '/it/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/it/blog/$slug'
+      preLoaderRoute: typeof ItBlogSlugRouteImport
+      parentRoute: typeof ItRoute
+    }
+    '/it/compare/': {
+      id: '/it/compare/'
+      path: '/compare'
+      fullPath: '/it/compare/'
+      preLoaderRoute: typeof ItCompareIndexRouteImport
+      parentRoute: typeof ItRoute
+    }
+    '/it/compare/$competitor': {
+      id: '/it/compare/$competitor'
+      path: '/compare/$competitor'
+      fullPath: '/it/compare/$competitor'
+      preLoaderRoute: typeof ItCompareCompetitorRouteImport
+      parentRoute: typeof ItRoute
+    }
+    '/it/events/free-forever': {
+      id: '/it/events/free-forever'
+      path: '/events/free-forever'
+      fullPath: '/it/events/free-forever'
+      preLoaderRoute: typeof ItEventsFreeForeverRouteImport
+      parentRoute: typeof ItRoute
+    }
+    '/it/for/': {
+      id: '/it/for/'
+      path: '/for'
+      fullPath: '/it/for/'
+      preLoaderRoute: typeof ItForIndexRouteImport
+      parentRoute: typeof ItRoute
+    }
+    '/it/for/$useCase': {
+      id: '/it/for/$useCase'
+      path: '/for/$useCase'
+      fullPath: '/it/for/$useCase'
+      preLoaderRoute: typeof ItForUseCaseRouteImport
+      parentRoute: typeof ItRoute
+    }
+    '/it/guide/': {
+      id: '/it/guide/'
+      path: '/guide'
+      fullPath: '/it/guide/'
+      preLoaderRoute: typeof ItGuideIndexRouteImport
+      parentRoute: typeof ItRoute
+    }
+    '/it/guide/$guide': {
+      id: '/it/guide/$guide'
+      path: '/guide/$guide'
+      fullPath: '/it/guide/$guide'
+      preLoaderRoute: typeof ItGuideGuideRouteImport
+      parentRoute: typeof ItRoute
+    }
+    '/pt/blog/': {
+      id: '/pt/blog/'
+      path: '/blog'
+      fullPath: '/pt/blog/'
+      preLoaderRoute: typeof PtBlogIndexRouteImport
+      parentRoute: typeof PtRoute
+    }
+    '/pt/blog/$slug': {
+      id: '/pt/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/pt/blog/$slug'
+      preLoaderRoute: typeof PtBlogSlugRouteImport
+      parentRoute: typeof PtRoute
+    }
+    '/pt/compare/': {
+      id: '/pt/compare/'
+      path: '/compare'
+      fullPath: '/pt/compare/'
+      preLoaderRoute: typeof PtCompareIndexRouteImport
+      parentRoute: typeof PtRoute
+    }
+    '/pt/compare/$competitor': {
+      id: '/pt/compare/$competitor'
+      path: '/compare/$competitor'
+      fullPath: '/pt/compare/$competitor'
+      preLoaderRoute: typeof PtCompareCompetitorRouteImport
+      parentRoute: typeof PtRoute
+    }
+    '/pt/events/free-forever': {
+      id: '/pt/events/free-forever'
+      path: '/events/free-forever'
+      fullPath: '/pt/events/free-forever'
+      preLoaderRoute: typeof PtEventsFreeForeverRouteImport
+      parentRoute: typeof PtRoute
+    }
+    '/pt/for/': {
+      id: '/pt/for/'
+      path: '/for'
+      fullPath: '/pt/for/'
+      preLoaderRoute: typeof PtForIndexRouteImport
+      parentRoute: typeof PtRoute
+    }
+    '/pt/for/$useCase': {
+      id: '/pt/for/$useCase'
+      path: '/for/$useCase'
+      fullPath: '/pt/for/$useCase'
+      preLoaderRoute: typeof PtForUseCaseRouteImport
+      parentRoute: typeof PtRoute
+    }
+    '/pt/guide/': {
+      id: '/pt/guide/'
+      path: '/guide'
+      fullPath: '/pt/guide/'
+      preLoaderRoute: typeof PtGuideIndexRouteImport
+      parentRoute: typeof PtRoute
+    }
+    '/pt/guide/$guide': {
+      id: '/pt/guide/$guide'
+      path: '/guide/$guide'
+      fullPath: '/pt/guide/$guide'
+      preLoaderRoute: typeof PtGuideGuideRouteImport
+      parentRoute: typeof PtRoute
+    }
+    '/ru/blog/': {
+      id: '/ru/blog/'
+      path: '/blog'
+      fullPath: '/ru/blog/'
+      preLoaderRoute: typeof RuBlogIndexRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/ru/blog/$slug': {
+      id: '/ru/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/ru/blog/$slug'
+      preLoaderRoute: typeof RuBlogSlugRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/ru/compare/': {
+      id: '/ru/compare/'
+      path: '/compare'
+      fullPath: '/ru/compare/'
+      preLoaderRoute: typeof RuCompareIndexRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/ru/compare/$competitor': {
+      id: '/ru/compare/$competitor'
+      path: '/compare/$competitor'
+      fullPath: '/ru/compare/$competitor'
+      preLoaderRoute: typeof RuCompareCompetitorRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/ru/events/free-forever': {
+      id: '/ru/events/free-forever'
+      path: '/events/free-forever'
+      fullPath: '/ru/events/free-forever'
+      preLoaderRoute: typeof RuEventsFreeForeverRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/ru/for/': {
+      id: '/ru/for/'
+      path: '/for'
+      fullPath: '/ru/for/'
+      preLoaderRoute: typeof RuForIndexRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/ru/for/$useCase': {
+      id: '/ru/for/$useCase'
+      path: '/for/$useCase'
+      fullPath: '/ru/for/$useCase'
+      preLoaderRoute: typeof RuForUseCaseRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/ru/guide/': {
+      id: '/ru/guide/'
+      path: '/guide'
+      fullPath: '/ru/guide/'
+      preLoaderRoute: typeof RuGuideIndexRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/ru/guide/$guide': {
+      id: '/ru/guide/$guide'
+      path: '/guide/$guide'
+      fullPath: '/ru/guide/$guide'
+      preLoaderRoute: typeof RuGuideGuideRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/zh/blog/': {
+      id: '/zh/blog/'
+      path: '/blog'
+      fullPath: '/zh/blog/'
+      preLoaderRoute: typeof ZhBlogIndexRouteImport
+      parentRoute: typeof ZhRoute
+    }
+    '/zh/blog/$slug': {
+      id: '/zh/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/zh/blog/$slug'
+      preLoaderRoute: typeof ZhBlogSlugRouteImport
+      parentRoute: typeof ZhRoute
+    }
+    '/zh/compare/': {
+      id: '/zh/compare/'
+      path: '/compare'
+      fullPath: '/zh/compare/'
+      preLoaderRoute: typeof ZhCompareIndexRouteImport
+      parentRoute: typeof ZhRoute
+    }
+    '/zh/compare/$competitor': {
+      id: '/zh/compare/$competitor'
+      path: '/compare/$competitor'
+      fullPath: '/zh/compare/$competitor'
+      preLoaderRoute: typeof ZhCompareCompetitorRouteImport
+      parentRoute: typeof ZhRoute
+    }
+    '/zh/events/free-forever': {
+      id: '/zh/events/free-forever'
+      path: '/events/free-forever'
+      fullPath: '/zh/events/free-forever'
+      preLoaderRoute: typeof ZhEventsFreeForeverRouteImport
+      parentRoute: typeof ZhRoute
+    }
+    '/zh/for/': {
+      id: '/zh/for/'
+      path: '/for'
+      fullPath: '/zh/for/'
+      preLoaderRoute: typeof ZhForIndexRouteImport
+      parentRoute: typeof ZhRoute
+    }
+    '/zh/for/$useCase': {
+      id: '/zh/for/$useCase'
+      path: '/for/$useCase'
+      fullPath: '/zh/for/$useCase'
+      preLoaderRoute: typeof ZhForUseCaseRouteImport
+      parentRoute: typeof ZhRoute
+    }
+    '/zh/guide/': {
+      id: '/zh/guide/'
+      path: '/guide'
+      fullPath: '/zh/guide/'
+      preLoaderRoute: typeof ZhGuideIndexRouteImport
+      parentRoute: typeof ZhRoute
+    }
+    '/zh/guide/$guide': {
+      id: '/zh/guide/$guide'
+      path: '/guide/$guide'
+      fullPath: '/zh/guide/$guide'
+      preLoaderRoute: typeof ZhGuideGuideRouteImport
+      parentRoute: typeof ZhRoute
     }
     '/api/public/cron/generate-articles': {
       id: '/api/public/cron/generate-articles'
@@ -1990,17 +2142,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicCronGenerateArticlesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/public/blog-cover/$id': {
-      id: '/api/public/blog-cover/$id'
-      path: '/api/public/blog-cover/$id'
-      fullPath: '/api/public/blog-cover/$id'
-      preLoaderRoute: typeof ApiPublicBlogCoverIdRouteImport
+    '/api/public/cron/seo-monitor': {
+      id: '/api/public/cron/seo-monitor'
+      path: '/api/public/cron/seo-monitor'
+      fullPath: '/api/public/cron/seo-monitor'
+      preLoaderRoute: typeof ApiPublicCronSeoMonitorRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
 }
 
 interface DeRouteChildren {
+  DeReviewsRoute: typeof DeReviewsRoute
   DeIndexRoute: typeof DeIndexRoute
   DeBlogSlugRoute: typeof DeBlogSlugRoute
   DeCompareCompetitorRoute: typeof DeCompareCompetitorRoute
@@ -2014,6 +2167,7 @@ interface DeRouteChildren {
 }
 
 const DeRouteChildren: DeRouteChildren = {
+  DeReviewsRoute: DeReviewsRoute,
   DeIndexRoute: DeIndexRoute,
   DeBlogSlugRoute: DeBlogSlugRoute,
   DeCompareCompetitorRoute: DeCompareCompetitorRoute,
@@ -2029,6 +2183,7 @@ const DeRouteChildren: DeRouteChildren = {
 const DeRouteWithChildren = DeRoute._addFileChildren(DeRouteChildren)
 
 interface EsRouteChildren {
+  EsReviewsRoute: typeof EsReviewsRoute
   EsIndexRoute: typeof EsIndexRoute
   EsBlogSlugRoute: typeof EsBlogSlugRoute
   EsCompareCompetitorRoute: typeof EsCompareCompetitorRoute
@@ -2042,6 +2197,7 @@ interface EsRouteChildren {
 }
 
 const EsRouteChildren: EsRouteChildren = {
+  EsReviewsRoute: EsReviewsRoute,
   EsIndexRoute: EsIndexRoute,
   EsBlogSlugRoute: EsBlogSlugRoute,
   EsCompareCompetitorRoute: EsCompareCompetitorRoute,
@@ -2057,6 +2213,7 @@ const EsRouteChildren: EsRouteChildren = {
 const EsRouteWithChildren = EsRoute._addFileChildren(EsRouteChildren)
 
 interface FrRouteChildren {
+  FrReviewsRoute: typeof FrReviewsRoute
   FrIndexRoute: typeof FrIndexRoute
   FrBlogSlugRoute: typeof FrBlogSlugRoute
   FrCompareCompetitorRoute: typeof FrCompareCompetitorRoute
@@ -2070,6 +2227,7 @@ interface FrRouteChildren {
 }
 
 const FrRouteChildren: FrRouteChildren = {
+  FrReviewsRoute: FrReviewsRoute,
   FrIndexRoute: FrIndexRoute,
   FrBlogSlugRoute: FrBlogSlugRoute,
   FrCompareCompetitorRoute: FrCompareCompetitorRoute,
@@ -2085,6 +2243,7 @@ const FrRouteChildren: FrRouteChildren = {
 const FrRouteWithChildren = FrRoute._addFileChildren(FrRouteChildren)
 
 interface HiRouteChildren {
+  HiReviewsRoute: typeof HiReviewsRoute
   HiIndexRoute: typeof HiIndexRoute
   HiBlogSlugRoute: typeof HiBlogSlugRoute
   HiCompareCompetitorRoute: typeof HiCompareCompetitorRoute
@@ -2098,6 +2257,7 @@ interface HiRouteChildren {
 }
 
 const HiRouteChildren: HiRouteChildren = {
+  HiReviewsRoute: HiReviewsRoute,
   HiIndexRoute: HiIndexRoute,
   HiBlogSlugRoute: HiBlogSlugRoute,
   HiCompareCompetitorRoute: HiCompareCompetitorRoute,
@@ -2113,6 +2273,7 @@ const HiRouteChildren: HiRouteChildren = {
 const HiRouteWithChildren = HiRoute._addFileChildren(HiRouteChildren)
 
 interface ItRouteChildren {
+  ItReviewsRoute: typeof ItReviewsRoute
   ItIndexRoute: typeof ItIndexRoute
   ItBlogSlugRoute: typeof ItBlogSlugRoute
   ItCompareCompetitorRoute: typeof ItCompareCompetitorRoute
@@ -2126,6 +2287,7 @@ interface ItRouteChildren {
 }
 
 const ItRouteChildren: ItRouteChildren = {
+  ItReviewsRoute: ItReviewsRoute,
   ItIndexRoute: ItIndexRoute,
   ItBlogSlugRoute: ItBlogSlugRoute,
   ItCompareCompetitorRoute: ItCompareCompetitorRoute,
@@ -2141,6 +2303,7 @@ const ItRouteChildren: ItRouteChildren = {
 const ItRouteWithChildren = ItRoute._addFileChildren(ItRouteChildren)
 
 interface PtRouteChildren {
+  PtReviewsRoute: typeof PtReviewsRoute
   PtIndexRoute: typeof PtIndexRoute
   PtBlogSlugRoute: typeof PtBlogSlugRoute
   PtCompareCompetitorRoute: typeof PtCompareCompetitorRoute
@@ -2154,6 +2317,7 @@ interface PtRouteChildren {
 }
 
 const PtRouteChildren: PtRouteChildren = {
+  PtReviewsRoute: PtReviewsRoute,
   PtIndexRoute: PtIndexRoute,
   PtBlogSlugRoute: PtBlogSlugRoute,
   PtCompareCompetitorRoute: PtCompareCompetitorRoute,
@@ -2169,6 +2333,7 @@ const PtRouteChildren: PtRouteChildren = {
 const PtRouteWithChildren = PtRoute._addFileChildren(PtRouteChildren)
 
 interface RuRouteChildren {
+  RuReviewsRoute: typeof RuReviewsRoute
   RuIndexRoute: typeof RuIndexRoute
   RuBlogSlugRoute: typeof RuBlogSlugRoute
   RuCompareCompetitorRoute: typeof RuCompareCompetitorRoute
@@ -2182,6 +2347,7 @@ interface RuRouteChildren {
 }
 
 const RuRouteChildren: RuRouteChildren = {
+  RuReviewsRoute: RuReviewsRoute,
   RuIndexRoute: RuIndexRoute,
   RuBlogSlugRoute: RuBlogSlugRoute,
   RuCompareCompetitorRoute: RuCompareCompetitorRoute,
@@ -2197,6 +2363,7 @@ const RuRouteChildren: RuRouteChildren = {
 const RuRouteWithChildren = RuRoute._addFileChildren(RuRouteChildren)
 
 interface ZhRouteChildren {
+  ZhReviewsRoute: typeof ZhReviewsRoute
   ZhIndexRoute: typeof ZhIndexRoute
   ZhBlogSlugRoute: typeof ZhBlogSlugRoute
   ZhCompareCompetitorRoute: typeof ZhCompareCompetitorRoute
@@ -2210,6 +2377,7 @@ interface ZhRouteChildren {
 }
 
 const ZhRouteChildren: ZhRouteChildren = {
+  ZhReviewsRoute: ZhReviewsRoute,
   ZhIndexRoute: ZhIndexRoute,
   ZhBlogSlugRoute: ZhBlogSlugRoute,
   ZhCompareCompetitorRoute: ZhCompareCompetitorRoute,
@@ -2232,6 +2400,7 @@ const rootRouteChildren: RootRouteChildren = {
   HiRoute: HiRouteWithChildren,
   ItRoute: ItRouteWithChildren,
   PtRoute: PtRouteWithChildren,
+  ReviewsRoute: ReviewsRoute,
   RuRoute: RuRouteWithChildren,
   SeoMonitorRoute: SeoMonitorRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
@@ -2245,10 +2414,19 @@ const rootRouteChildren: RootRouteChildren = {
   CompareIndexRoute: CompareIndexRoute,
   ForIndexRoute: ForIndexRoute,
   GuideIndexRoute: GuideIndexRoute,
-  ApiPublicBlogCoverIdRoute: ApiPublicBlogCoverIdRoute,
   ApiPublicCronGenerateArticlesRoute: ApiPublicCronGenerateArticlesRoute,
   ApiPublicCronSeoMonitorRoute: ApiPublicCronSeoMonitorRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

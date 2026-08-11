@@ -9,7 +9,7 @@ export const Route = createFileRoute("/ru/")({
       {
         name: "description",
         content:
-          "Accio Work — AI-рабочее пространство: анализ рынков, сравнение поставщиков, генерация контента и автоматизация бизнес-процессов на одной платформе.",
+          "Accio Work, AI-рабочее пространство: анализ рынков, сравнение поставщиков, генерация контента и автоматизация бизнес-процессов на одной платформе.",
       },
       {
         name: "keywords",
@@ -22,21 +22,21 @@ export const Route = createFileRoute("/ru/")({
       {
         property: "og:description",
         content:
-          "Accio Work — AI-рабочее пространство: анализ рынков, сравнение поставщиков, генерация контента и автоматизация бизнес-процессов.",
+          "Accio Work, AI-рабочее пространство: анализ рынков, сравнение поставщиков, генерация контента и автоматизация бизнес-процессов.",
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Accio Work" },
       { property: "og:url", content: "https://acciowork.pro/ru" },
-      { property: "og:image", content: "https://acciowork.pro/og-image.png" },
+      { property: "og:image", content: "https://acciowork.pro/og/og-ru.png" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { property: "og:image:type", content: "image/png" },
-      { property: "og:image:alt", content: "Accio Work — AI-рабочее пространство для сорсинга, аналитики и автоматизации" },
+      { property: "og:image:alt", content: "Accio Work, AI-рабочее пространство для сорсинга, аналитики и автоматизации" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Accio Work | AI-платформа для поиска поставщиков" },
       { name: "twitter:description", content: "AI-рабочее пространство: сорсинг, аналитика конкурентов, генерация контента и автоматизация." },
-      { name: "twitter:image", content: "https://acciowork.pro/og-image.png" },
-      { name: "twitter:image:alt", content: "Accio Work — AI-платформа для бизнеса" },
+      { name: "twitter:image", content: "https://acciowork.pro/og/og-ru.png" },
+      { name: "twitter:image:alt", content: "Accio Work, AI-платформа для бизнеса" },
     ],
     links: [
       { rel: "canonical", href: "https://acciowork.pro/ru" },

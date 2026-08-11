@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 import { Check, ArrowRight, ArrowLeft, Lightbulb } from "lucide-react";
 import { gdChrome, gdPages, gdOrder, type GdLang } from "@/lib/guide-data";
-import { BrandLogo } from "@/components/BrandLogo";
 
 const REFERRAL_URL =
   "https://www.accio.com/login?sId=KECtp1GttZ42%2FwpJUH5IxQ%3D%3D&ic=IC506004212009&tenant=accio&src=p_referral_IC506004212009&source=invite_center&return_url=https%3A%2F%2Fwww.accio.com%2Fwork%2F";
@@ -22,8 +21,18 @@ function Shell({ lang, children }: { lang: GdLang; children: ReactNode }) {
     <div className="min-h-screen bg-[#FBFCFD] text-[#0E1210]">
       <header className="border-b border-black/5 bg-white/80 backdrop-blur">
         <div className="mx-auto flex max-w-4xl items-center justify-between px-5 py-4">
-          <a href={homeHref(lang)} className="flex items-center">
-            <BrandLogo size={22} />
+          <a href={homeHref(lang)} className="flex items-center gap-1.5 font-bold tracking-tight text-[#0E1210]" style={{ fontSize: 22 }}>
+            <svg width={21} height={22} viewBox="0 0 28 28" aria-hidden>
+              <defs>
+                <linearGradient id="accioTri" x1="0" y1="1" x2="1" y2="0">
+                  <stop offset="0%" stopColor="#0F172A" />
+                  <stop offset="55%" stopColor="#17B26A" />
+                  <stop offset="100%" stopColor="#7CE7C2" />
+                </linearGradient>
+              </defs>
+              <path d="M14 3 L26 25 L2 25 Z" fill="url(#accioTri)" />
+            </svg>
+            <span>Accio</span>
           </a>
           <a
             href={REFERRAL_URL}

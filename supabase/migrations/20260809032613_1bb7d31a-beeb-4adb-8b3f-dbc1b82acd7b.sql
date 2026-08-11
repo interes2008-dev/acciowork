@@ -1,2 +1,0 @@
-ALTER TABLE public.blog_articles ADD COLUMN IF NOT EXISTS has_cover boolean GENERATED ALWAYS AS (cover_url IS NOT NULL AND length(cover_url) > 0) STORED;
-CREATE INDEX IF NOT EXISTS blog_articles_lang_status_pub_idx ON public.blog_articles (lang, status, published_at DESC);

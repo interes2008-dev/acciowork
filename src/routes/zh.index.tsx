@@ -9,7 +9,7 @@ export const Route = createFileRoute("/zh/")({
       {
         name: "description",
         content:
-          "Accio Work —— AI 工作台：市场分析、供应商对比、内容创作与业务流程自动化，一个平台全部搞定。",
+          "Accio Work，AI 工作台：市场分析、供应商对比、内容创作与业务流程自动化，一个平台全部搞定。",
       },
       {
         name: "keywords",
@@ -22,21 +22,21 @@ export const Route = createFileRoute("/zh/")({
       {
         property: "og:description",
         content:
-          "Accio Work —— AI 工作台：市场分析、供应商对比、内容创作与流程自动化。",
+          "Accio Work，AI 工作台：市场分析、供应商对比、内容创作与流程自动化。",
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Accio Work" },
       { property: "og:url", content: "https://acciowork.pro/zh" },
-      { property: "og:image", content: "https://acciowork.pro/og-image.png" },
+      { property: "og:image", content: "https://acciowork.pro/og/og-zh.png" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { property: "og:image:type", content: "image/png" },
-      { property: "og:image:alt", content: "Accio Work —— 面向选品、分析与自动化的 AI 工作台" },
+      { property: "og:image:alt", content: "Accio Work，面向选品、分析与自动化的 AI 工作台" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Accio Work | 面向选品的 AI 工作台" },
       { name: "twitter:description", content: "AI 工作台：选品、竞品分析、内容与自动化。" },
-      { name: "twitter:image", content: "https://acciowork.pro/og-image.png" },
-      { name: "twitter:image:alt", content: "Accio Work —— 面向业务的 AI 平台" },
+      { name: "twitter:image", content: "https://acciowork.pro/og/og-zh.png" },
+      { name: "twitter:image:alt", content: "Accio Work，面向业务的 AI 平台" },
     ],
     links: [
       { rel: "canonical", href: "https://acciowork.pro/zh" },

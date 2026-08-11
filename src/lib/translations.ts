@@ -49,6 +49,7 @@ export type Dict = {
     compare: string;
     useCases: string;
     guide: string;
+    reviews: string;
   };
   hero: {
     brand: string;
@@ -139,6 +140,7 @@ const en: Dict = {
     compare: "Compare",
     useCases: "Use cases",
     guide: "Guide",
+    reviews: "Reviews",
   },
   hero: {
     brand: "Work",
@@ -332,6 +334,7 @@ const ru: Dict = {
     compare: "Сравнение",
     useCases: "Сценарии",
     guide: "Гайды",
+    reviews: "Обзоры",
   },
   hero: {
     brand: "Work",
@@ -525,6 +528,7 @@ const de: Dict = {
     compare: "Vergleich",
     useCases: "Anwendungsfälle",
     guide: "Anleitungen",
+    reviews: "Bewertungen",
   },
   hero: {
     brand: "Work",
@@ -718,6 +722,7 @@ const it: Dict = {
     compare: "Confronti",
     useCases: "Casi d'uso",
     guide: "Guide",
+    reviews: "Recensioni",
   },
   hero: {
     brand: "Work",
@@ -911,6 +916,7 @@ const es: Dict = {
     compare: "Comparativas",
     useCases: "Casos de uso",
     guide: "Guías",
+    reviews: "Reseñas",
   },
   hero: {
     brand: "Work",
@@ -1104,6 +1110,7 @@ const zh: Dict = {
     compare: "对比",
     useCases: "使用场景",
     guide: "指南",
+    reviews: "评价",
   },
   hero: {
     brand: "Work",
@@ -1298,6 +1305,7 @@ const pt: Dict = {
     compare: "Comparações",
     useCases: "Casos de uso",
     guide: "Guias",
+    reviews: "Avaliações",
   },
   hero: {
     brand: "Work",
@@ -1491,6 +1499,7 @@ const hi: Dict = {
     compare: "तुलना",
     useCases: "उपयोग",
     guide: "गाइड",
+    reviews: "समीक्षाएं",
   },
   hero: {
     brand: "Work",
@@ -1685,6 +1694,7 @@ const fr: Dict = {
     compare: "Comparatifs",
     useCases: "Cas d'usage",
     guide: "Guides",
+    reviews: "Avis",
   },
   hero: {
     brand: "Work",

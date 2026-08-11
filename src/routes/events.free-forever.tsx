@@ -14,6 +14,12 @@ export const Route = createFileRoute("/events/free-forever")({
       { property: "og:type", content: "article" },
       { property: "og:url", content: URL_SELF },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:image", content: "https://acciowork.pro/og/og-en.png" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { name: "twitter:title", content: EVENT_SEO[LANG].title },
+      { name: "twitter:description", content: EVENT_SEO[LANG].description },
+      { name: "twitter:image", content: "https://acciowork.pro/og/og-en.png" },
     ],
     links: [
       { rel: "canonical", href: URL_SELF },

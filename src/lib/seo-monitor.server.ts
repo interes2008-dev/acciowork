@@ -282,7 +282,7 @@ export async function fetchGsc(): Promise<GscSnapshot | null> {
       category: "indexing",
       severity: "critical",
       message: "Google сообщает о проблеме с индексацией главной",
-      detail: `${indexState}${coverageState ? ` — ${coverageState}` : ""}`,
+      detail: `${indexState}${coverageState ? `, ${coverageState}` : ""}`,
     });
 
   const drop = (now: number, before: number) => before > 20 && now < before * 0.7;

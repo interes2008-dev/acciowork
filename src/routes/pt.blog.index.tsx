@@ -7,11 +7,19 @@ export const Route = createFileRoute("/pt/blog/")({
   loader: async () => ({ articles: await listArticles({ data: { lang: "pt", limit: 60 } }) }),
   head: () => ({
     meta: [
-      { title: "Blog Accio Work — negócio guiado por IA" },
+      { title: "Blog Accio Work: negócio guiado por IA" },
       { name: "description", content: "Notas de campo sobre como tocar um negócio moderno com um time de IA que você realmente dirige. Artigos novos todo dia." },
       { property: "og:title", content: "Blog Accio Work" },
       { property: "og:locale", content: "pt_BR" },
       { property: "og:url", content: "https://acciowork.pro/pt/blog" },
+      { property: "og:description", content: "Notas de campo sobre como tocar um negócio moderno com um time de IA que você realmente dirige. Artigos novos todo dia." },
+      { property: "og:image", content: "https://acciowork.pro/og/og-pt.png" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Blog Accio Work: negócio guiado por IA" },
+      { name: "twitter:description", content: "Notas de campo sobre como tocar um negócio moderno com um time de IA que você realmente dirige. Artigos novos todo dia." },
+      { name: "twitter:image", content: "https://acciowork.pro/og/og-pt.png" },
     ],
     links: [
       { rel: "canonical", href: "https://acciowork.pro/pt/blog" },
@@ -25,6 +33,18 @@ export const Route = createFileRoute("/pt/blog/")({
       { rel: "alternate", hrefLang: "hi", href: "https://acciowork.pro/hi/blog" },
       { rel: "alternate", hrefLang: "fr", href: "https://acciowork.pro/fr/blog" },
       { rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/blog" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Blog",
+          name: "Blog Accio Work: negócio guiado por IA",
+          url: "https://acciowork.pro/pt/blog",
+          inLanguage: "pt",
+        }),
+      },
     ],
   }),
   component: BlogPt,

@@ -69,3 +69,8 @@ Accio Work is an execution-oriented AI agent platform (not a chatbot). A general
 - [Connect apps and channels](https://acciowork.pro/guide/connect-apps): Telegram, Discord, DingTalk, Feishu, WeChat and app integrations
 - [Scheduled automations](https://acciowork.pro/guide/automations): turn a repeatable task into one that runs itself
 - Localized hubs: /ru/guide, /de/guide, /it/guide, /es/guide, /zh/guide, /pt/guide, /hi/guide, /fr/guide
+
+## Reviews and press (what reviewers and press say, all languages)
+
+- [Reviews and press EN](https://acciowork.pro/reviews): paraphrased coverage from Forbes, Digital Commerce 360, AI Business and independent reviews, each linked to the source
+- Localized: /ru/reviews, /de/reviews, /it/reviews, /es/reviews, /zh/reviews, /pt/reviews, /hi/reviews, /fr/reviews

@@ -8,7 +8,7 @@ const LANGS = ["en","ru","de","it","es","zh","pt","hi","fr"] as const;
 function alternates(slug: string) {
   const list = LANGS.map((l) => ({
     rel: "alternate",
-    hrefLang: l as string,
+    hrefLang: l,
     href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/guide/${slug}`,
   }));
   list.push({ rel: "alternate", hrefLang: "x-default", href: `https://acciowork.pro/guide/${slug}` });
@@ -37,13 +37,13 @@ export const Route = createFileRoute("/zh/guide/$guide")({
         { property: "og:type", content: "article" },
         { property: "og:url", content: url },
         { property: "og:site_name", content: "Accio Work" },
-        { property: "og:image", content: "https://acciowork.pro/og-image.png" },
+        { property: "og:image", content: "https://acciowork.pro/og/og-zh.png" },
         { property: "og:image:width", content: "1200" },
         { property: "og:image:height", content: "630" },
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: p.metaTitle },
         { name: "twitter:description", content: p.metaDescription },
-        { name: "twitter:image", content: "https://acciowork.pro/og-image.png" },
+        { name: "twitter:image", content: "https://acciowork.pro/og/og-zh.png" },
       ],
       links: [{ rel: "canonical", href: url }, ...alternates(slug)],
       scripts: [

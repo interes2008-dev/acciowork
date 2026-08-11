@@ -11,7 +11,7 @@ export const Route = createFileRoute("/ru/compare/")({
     const url = "https://acciowork.pro/ru/compare";
     const alternates = LANGS.map((l) => ({
       rel: "alternate",
-      hrefLang: l as string,
+      hrefLang: l,
       href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/compare`,
     }));
     alternates.push({ rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/compare" });
@@ -25,7 +25,7 @@ export const Route = createFileRoute("/ru/compare/")({
         { property: "og:type", content: "website" },
         { property: "og:url", content: url },
         { property: "og:site_name", content: "Accio Work" },
-        { property: "og:image", content: "https://acciowork.pro/og-image.png" },
+        { property: "og:image", content: "https://acciowork.pro/og/og-ru.png" },
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: c.hubMetaTitle },
         { name: "twitter:description", content: c.hubMetaDesc },

@@ -9,7 +9,7 @@ export const Route = createFileRoute("/it/")({
       {
         name: "description",
         content:
-          "Accio Work — spazio di lavoro AI: analisi di mercato, confronto fornitori, creazione contenuti e automazione dei processi in un'unica piattaforma.",
+          "Accio Work, spazio di lavoro AI: analisi di mercato, confronto fornitori, creazione contenuti e automazione dei processi in un'unica piattaforma.",
       },
       {
         name: "keywords",
@@ -22,21 +22,21 @@ export const Route = createFileRoute("/it/")({
       {
         property: "og:description",
         content:
-          "Accio Work — spazio di lavoro AI: analisi di mercato, confronto fornitori, creazione contenuti e automazione processi.",
+          "Accio Work, spazio di lavoro AI: analisi di mercato, confronto fornitori, creazione contenuti e automazione processi.",
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Accio Work" },
       { property: "og:url", content: "https://acciowork.pro/it" },
-      { property: "og:image", content: "https://acciowork.pro/og-image.png" },
+      { property: "og:image", content: "https://acciowork.pro/og/og-it.png" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { property: "og:image:type", content: "image/png" },
-      { property: "og:image:alt", content: "Accio Work — spazio di lavoro AI per sourcing, analisi e automazione" },
+      { property: "og:image:alt", content: "Accio Work, spazio di lavoro AI per sourcing, analisi e automazione" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Accio Work | Piattaforma AI per il sourcing" },
       { name: "twitter:description", content: "Spazio di lavoro AI: sourcing, analisi concorrenti, contenuti e automazione." },
-      { name: "twitter:image", content: "https://acciowork.pro/og-image.png" },
-      { name: "twitter:image:alt", content: "Accio Work — piattaforma AI per il business" },
+      { name: "twitter:image", content: "https://acciowork.pro/og/og-it.png" },
+      { name: "twitter:image:alt", content: "Accio Work, piattaforma AI per il business" },
     ],
     links: [
       { rel: "canonical", href: "https://acciowork.pro/it" },

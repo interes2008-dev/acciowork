@@ -9,7 +9,7 @@ export const Route = createFileRoute("/hi/")({
       {
         name: "description",
         content:
-          "Accio Work — AI वर्कस्पेस: मार्केट एनालिसिस, सप्लायर तुलना, कंटेंट निर्माण और बिज़नेस प्रक्रियाओं का ऑटोमेशन — एक ही प्लेटफ़ॉर्म पर।",
+          "Accio Work, AI वर्कस्पेस: मार्केट एनालिसिस, सप्लायर तुलना, कंटेंट निर्माण और बिज़नेस प्रक्रियाओं का ऑटोमेशन, एक ही प्लेटफ़ॉर्म पर।",
       },
       {
         name: "keywords",
@@ -22,21 +22,21 @@ export const Route = createFileRoute("/hi/")({
       {
         property: "og:description",
         content:
-          "Accio Work — AI वर्कस्पेस: मार्केट एनालिसिस, सप्लायर तुलना, कंटेंट निर्माण और प्रक्रियाओं का ऑटोमेशन।",
+          "Accio Work, AI वर्कस्पेस: मार्केट एनालिसिस, सप्लायर तुलना, कंटेंट निर्माण और प्रक्रियाओं का ऑटोमेशन।",
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Accio Work" },
       { property: "og:url", content: "https://acciowork.pro/hi" },
-      { property: "og:image", content: "https://acciowork.pro/og-image.png" },
+      { property: "og:image", content: "https://acciowork.pro/og/og-hi.png" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { property: "og:image:type", content: "image/png" },
-      { property: "og:image:alt", content: "Accio Work — सोर्सिंग, एनालिसिस और ऑटोमेशन के लिए AI वर्कस्पेस" },
+      { property: "og:image:alt", content: "Accio Work, सोर्सिंग, एनालिसिस और ऑटोमेशन के लिए AI वर्कस्पेस" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Accio Work | सोर्सिंग के लिए AI प्लेटफ़ॉर्म" },
       { name: "twitter:description", content: "AI वर्कस्पेस: सोर्सिंग, प्रतिस्पर्धी विश्लेषण, कंटेंट और ऑटोमेशन।" },
-      { name: "twitter:image", content: "https://acciowork.pro/og-image.png" },
-      { name: "twitter:image:alt", content: "Accio Work — बिज़नेस के लिए AI प्लेटफ़ॉर्म" },
+      { name: "twitter:image", content: "https://acciowork.pro/og/og-hi.png" },
+      { name: "twitter:image:alt", content: "Accio Work, बिज़नेस के लिए AI प्लेटफ़ॉर्म" },
     ],
     links: [
       { rel: "canonical", href: "https://acciowork.pro/hi" },

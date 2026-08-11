@@ -27,7 +27,7 @@ export const Route = createFileRoute("/fr/")({
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Accio Work" },
       { property: "og:url", content: "https://acciowork.pro/fr" },
-      { property: "og:image", content: "https://acciowork.pro/og-image.png" },
+      { property: "og:image", content: "https://acciowork.pro/og/og-fr.png" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { property: "og:image:type", content: "image/png" },
@@ -35,7 +35,7 @@ export const Route = createFileRoute("/fr/")({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Accio Work | Plateforme IA de sourcing" },
       { name: "twitter:description", content: "Espace de travail IA : sourcing, veille concurrentielle, contenu et automatisation." },
-      { name: "twitter:image", content: "https://acciowork.pro/og-image.png" },
+      { name: "twitter:image", content: "https://acciowork.pro/og/og-fr.png" },
       { name: "twitter:image:alt", content: "Accio Work, plateforme IA pour le business" },
     ],
     links: [
