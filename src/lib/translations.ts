@@ -50,6 +50,8 @@ export type Dict = {
     useCases: string;
     guide: string;
     reviews: string;
+    roi: string;
+    quiz: string;
   };
   hero: {
     brand: string;
@@ -141,6 +143,8 @@ const en: Dict = {
     useCases: "Use cases",
     guide: "Guide",
     reviews: "Reviews",
+    roi: "Calculator",
+    quiz: "Fit quiz",
   },
   hero: {
     brand: "Work",
@@ -232,20 +236,8 @@ const en: Dict = {
     heading1: "Loved by",
     highlight: "10+ Million",
     heading2: "monthly active users",
-    row1: [
-      { name: "Joseph S.", role: "Global Sourcing Manager", avatar: "https://i.pravatar.cc/80?img=13", text: "Accio Work quickly transforms scattered non-standard supplier quotes into comparable data. It's the **first AI that truly understands** the complexity of global trade." },
-      { name: "Mia C.", role: "Weekend Founder", avatar: "https://i.pravatar.cc/80?img=47", text: "I had product ideas saved for months, but no clue how to source or launch. Accio Work helped me move from scattered notes to **a real product to sell**." },
-      { name: "Luna M.", role: "Dropshipping seller", avatar: "https://i.pravatar.cc/80?img=45", text: "Accio Work scans Reddit, TikTok, and Amazon to **pinpoint winners** and source directly from suppliers. It's the ultimate tool to outpace competition on viral trends." },
-      { name: "Keshia B.", role: "Side-Hustler", avatar: "https://i.pravatar.cc/80?img=48", text: "I only had nights for my store. I love that Accio Work could automate niche analysis and **supplier follow-ups** while I was at my day job." },
-      { name: "Jay W.", role: "Streetwear Brand Owner", avatar: "https://i.pravatar.cc/80?img=15", text: "Accio Work **cuts my production time by weeks** with professional tech pack generation and supplier auto negotiation. More importantly, I know my designs are 100% secure." },
-    ],
-    row2: [
-      { name: "Nina K.", role: "Outdoor Brand Founder", avatar: "https://i.pravatar.cc/80?img=49", text: "I used to spend **10h/week** managing content freelancers, but Accio Work now automates everything from content to publishing and only takes me **10 min/week**." },
-      { name: "Sara N.", role: "Nail Salon Manager", avatar: "https://i.pravatar.cc/80?img=32", text: "Very easy to use. I think I **finally get how AI can help** my business." },
-      { name: "Clara E.", role: "Procurement Specialist", avatar: "https://i.pravatar.cc/80?img=44", text: "Supplier research always felt like chasing missing details. Now with Accio Work's proactive follow-up, I can get to a **clean shortlist faster**." },
-      { name: "Andrew P.", role: "Wedding & Event Planner", avatar: "https://i.pravatar.cc/80?img=12", text: "This tool helped me find diverse suppliers at much lower prices, while perfectly coordinating delivery with my event dates. My **bookings grow by 30+%** thanks to Accio Work." },
-      { name: "Joan W.", role: "Supply Chain Consultant", avatar: "https://i.pravatar.cc/80?img=5", text: "Unlike other AIs, Accio Work is powered by the **real trade data** from alibaba.com and market intelligence like Jungle Scout. Definitely a must-have for e-commerce sellers." },
-    ],
+    row1: [],
+    row2: [],
   },
   faq: {
     heading: "FAQ",
@@ -335,6 +327,8 @@ const ru: Dict = {
     useCases: "Сценарии",
     guide: "Гайды",
     reviews: "Обзоры",
+    roi: "Калькулятор",
+    quiz: "Тест",
   },
   hero: {
     brand: "Work",
@@ -426,20 +420,8 @@ const ru: Dict = {
     heading1: "Нас любят",
     highlight: "10+ млн",
     heading2: "активных пользователей в месяц",
-    row1: [
-      { name: "Иосиф С.", role: "Менеджер по глобальным закупкам", avatar: "https://i.pravatar.cc/80?img=13", text: "Accio Work быстро превращает разрозненные нестандартные предложения поставщиков в сравнимые данные. Это **первый ИИ, который реально понимает** сложность глобальной торговли." },
-      { name: "Мия К.", role: "Основатель на выходных", avatar: "https://i.pravatar.cc/80?img=47", text: "Идеи товаров лежали месяцами, но я не понимала, где искать и как запускать. Accio Work помог перейти от заметок к **реальному продукту**." },
-      { name: "Луна М.", role: "Дропшиппер", avatar: "https://i.pravatar.cc/80?img=45", text: "Accio Work сканирует Reddit, TikTok и Amazon, чтобы **находить хиты** и закупать напрямую у поставщиков. Незаменим для игры на вирусных трендах." },
-      { name: "Кеша Б.", role: "Совместитель", avatar: "https://i.pravatar.cc/80?img=48", text: "Магазином занималась только по ночам. Обожаю, что Accio Work сам автоматизирует нишевую аналитику и **напоминания поставщикам**, пока я на работе." },
-      { name: "Джей У.", role: "Владелец бренда стритвира", avatar: "https://i.pravatar.cc/80?img=15", text: "Accio Work **экономит недели производства** за счёт профессиональных тех-паков и авто-переговоров с поставщиками. Главное, мои дизайны в полной безопасности." },
-    ],
-    row2: [
-      { name: "Нина К.", role: "Основатель outdoor-бренда", avatar: "https://i.pravatar.cc/80?img=49", text: "Раньше тратила **10 часов в неделю** на управление контент-фрилансерами. Теперь Accio Work автоматизирует всё, от контента до публикаций, и это **10 минут в неделю**." },
-      { name: "Сара Н.", role: "Управляющая nail-салоном", avatar: "https://i.pravatar.cc/80?img=32", text: "Очень просто в использовании. Кажется, я **наконец поняла, как ИИ помогает** бизнесу." },
-      { name: "Клара Э.", role: "Специалист по закупкам", avatar: "https://i.pravatar.cc/80?img=44", text: "Поиск поставщиков всегда сводился к погоне за деталями. С проактивными фоллоу-апами Accio Work я получаю **чистый шортлист быстрее**." },
-      { name: "Эндрю П.", role: "Организатор мероприятий и свадеб", avatar: "https://i.pravatar.cc/80?img=12", text: "Инструмент помог найти разнообразных поставщиков по низкой цене и идеально согласовать сроки с датами мероприятий. Бронирования **выросли на 30+%** благодаря Accio Work." },
-      { name: "Джоан У.", role: "Консультант по цепочке поставок", avatar: "https://i.pravatar.cc/80?img=5", text: "В отличие от других ИИ, Accio Work питается **реальными торговыми данными** с alibaba.com и рыночной аналитикой Jungle Scout. Must-have для e-commerce-продавцов." },
-    ],
+    row1: [],
+    row2: [],
   },
   faq: {
     heading: "FAQ",
@@ -529,6 +511,8 @@ const de: Dict = {
     useCases: "Anwendungsfälle",
     guide: "Anleitungen",
     reviews: "Bewertungen",
+    roi: "Rechner",
+    quiz: "Eignungstest",
   },
   hero: {
     brand: "Work",
@@ -620,20 +604,8 @@ const de: Dict = {
     heading1: "Geliebt von",
     highlight: "10+ Millionen",
     heading2: "monatlich aktiven Nutzern",
-    row1: [
-      { name: "Joseph S.", role: "Global Sourcing Manager", avatar: "https://i.pravatar.cc/80?img=13", text: "Accio Work verwandelt verstreute, uneinheitliche Lieferantenangebote im Handumdrehen in vergleichbare Daten. Es ist die **erste KI, die** die Komplexität des globalen Handels **wirklich versteht**." },
-      { name: "Mia C.", role: "Wochenend-Gründerin", avatar: "https://i.pravatar.cc/80?img=47", text: "Ich hatte monatelang Produktideen gespeichert, aber keine Ahnung vom Sourcing oder Launch. Accio Work hat mich von Notizen zu **einem echten Produkt** gebracht." },
-      { name: "Luna M.", role: "Dropshipping-Verkäuferin", avatar: "https://i.pravatar.cc/80?img=45", text: "Accio Work scannt Reddit, TikTok und Amazon, um **Gewinner zu identifizieren** und direkt von Lieferanten zu beziehen. Das ultimative Tool für virale Trends." },
-      { name: "Keshia B.", role: "Side-Hustlerin", avatar: "https://i.pravatar.cc/80?img=48", text: "Ich hatte nur Abende für meinen Shop. Toll, dass Accio Work Nischenanalysen und **Lieferanten-Follow-ups** automatisiert, während ich im Hauptjob bin." },
-      { name: "Jay W.", role: "Streetwear-Brand-Inhaber", avatar: "https://i.pravatar.cc/80?img=15", text: "Accio Work **spart mir Wochen Produktionszeit** durch professionelle Tech-Packs und Auto-Verhandlung. Und meine Designs sind zu 100% sicher." },
-    ],
-    row2: [
-      { name: "Nina K.", role: "Outdoor-Brand-Gründerin", avatar: "https://i.pravatar.cc/80?img=49", text: "Früher **10 Std./Woche** für Content-Freelancer. Heute automatisiert Accio Work alles von Content bis Publishing, nur **10 Min./Woche**." },
-      { name: "Sara N.", role: "Nagelstudio-Managerin", avatar: "https://i.pravatar.cc/80?img=32", text: "Super einfach zu nutzen. Ich glaube, ich **verstehe endlich, wie KI** meinem Business hilft." },
-      { name: "Clara E.", role: "Einkaufsspezialistin", avatar: "https://i.pravatar.cc/80?img=44", text: "Lieferantenrecherche fühlte sich immer wie eine Detailjagd an. Mit dem proaktiven Follow-up von Accio Work komme ich **schneller zur sauberen Shortlist**." },
-      { name: "Andrew P.", role: "Hochzeits- & Event-Planer", avatar: "https://i.pravatar.cc/80?img=12", text: "Ich habe vielfältige Lieferanten zu viel besseren Preisen gefunden und Lieferungen perfekt mit Event-Terminen koordiniert. **Buchungen +30%** dank Accio Work." },
-      { name: "Joan W.", role: "Supply-Chain-Beraterin", avatar: "https://i.pravatar.cc/80?img=5", text: "Anders als andere KIs nutzt Accio Work **echte Handelsdaten** von alibaba.com und Marktdaten wie Jungle Scout. Ein Muss für E-Commerce-Verkäufer." },
-    ],
+    row1: [],
+    row2: [],
   },
   faq: {
     heading: "FAQ",
@@ -723,6 +695,8 @@ const it: Dict = {
     useCases: "Casi d'uso",
     guide: "Guide",
     reviews: "Recensioni",
+    roi: "Calcolatore",
+    quiz: "Test idoneità",
   },
   hero: {
     brand: "Work",
@@ -814,20 +788,8 @@ const it: Dict = {
     heading1: "Amato da",
     highlight: "oltre 10 milioni",
     heading2: "di utenti attivi al mese",
-    row1: [
-      { name: "Joseph S.", role: "Global Sourcing Manager", avatar: "https://i.pravatar.cc/80?img=13", text: "Accio Work trasforma rapidamente preventivi non standard e sparsi in dati confrontabili. È la **prima AI che capisce davvero** la complessità del commercio globale." },
-      { name: "Mia C.", role: "Fondatrice nel weekend", avatar: "https://i.pravatar.cc/80?img=47", text: "Avevo idee di prodotto salvate da mesi, ma nessuna idea di come procurarle o lanciarle. Accio Work mi ha portato dagli appunti sparsi a **un prodotto vero da vendere**." },
-      { name: "Luna M.", role: "Venditrice in dropshipping", avatar: "https://i.pravatar.cc/80?img=45", text: "Accio Work scandaglia Reddit, TikTok e Amazon per **individuare i vincitori** e comprare direttamente dai fornitori. È lo strumento definitivo per anticipare i trend virali." },
-      { name: "Keshia B.", role: "Side-hustler", avatar: "https://i.pravatar.cc/80?img=48", text: "Avevo solo le sere per il mio negozio. Adoro che Accio Work automatizzi l'analisi di nicchia e i **follow-up ai fornitori** mentre sono al lavoro principale." },
-      { name: "Jay W.", role: "Fondatore brand streetwear", avatar: "https://i.pravatar.cc/80?img=15", text: "Accio Work mi **fa risparmiare settimane di produzione** grazie a tech pack professionali e trattative automatiche con i fornitori. E i miei design restano al 100% al sicuro." },
-    ],
-    row2: [
-      { name: "Nina K.", role: "Fondatrice brand outdoor", avatar: "https://i.pravatar.cc/80?img=49", text: "Prima passavo **10 ore a settimana** a gestire freelancer per i contenuti, ora Accio Work automatizza tutto, dal contenuto alla pubblicazione, in soli **10 minuti a settimana**." },
-      { name: "Sara N.", role: "Manager di un salone nail", avatar: "https://i.pravatar.cc/80?img=32", text: "Facilissimo da usare. Ho **finalmente capito come l'AI può aiutare** la mia attività." },
-      { name: "Clara E.", role: "Specialist Acquisti", avatar: "https://i.pravatar.cc/80?img=44", text: "La ricerca fornitori era sempre una caccia ai dettagli mancanti. Con i follow-up proattivi di Accio Work arrivo a una **shortlist pulita più in fretta**." },
-      { name: "Andrew P.", role: "Wedding & Event Planner", avatar: "https://i.pravatar.cc/80?img=12", text: "Questo strumento mi ha aiutato a trovare fornitori diversi a prezzi molto più bassi, coordinando alla perfezione le consegne con le date degli eventi. Le **prenotazioni sono cresciute del 30+%** grazie ad Accio Work." },
-      { name: "Joan W.", role: "Consulente Supply Chain", avatar: "https://i.pravatar.cc/80?img=5", text: "A differenza di altre AI, Accio Work usa **dati commerciali reali** da alibaba.com e la market intelligence di Jungle Scout. Un must per chi vende in e-commerce." },
-    ],
+    row1: [],
+    row2: [],
   },
   faq: {
     heading: "FAQ",
@@ -917,6 +879,8 @@ const es: Dict = {
     useCases: "Casos de uso",
     guide: "Guías",
     reviews: "Reseñas",
+    roi: "Calculadora",
+    quiz: "Test de idoneidad",
   },
   hero: {
     brand: "Work",
@@ -1008,20 +972,8 @@ const es: Dict = {
     heading1: "Con el cariño de",
     highlight: "más de 10 millones",
     heading2: "de usuarios activos al mes",
-    row1: [
-      { name: "Joseph S.", role: "Global Sourcing Manager", avatar: "https://i.pravatar.cc/80?img=13", text: "Accio Work convierte al instante presupuestos dispersos y sin estándar en datos comparables. Es la **primera IA que entiende de verdad** la complejidad del comercio global." },
-      { name: "Mia C.", role: "Fundadora los fines de semana", avatar: "https://i.pravatar.cc/80?img=47", text: "Tenía ideas de producto guardadas desde hace meses, pero ni idea de dónde comprar ni cómo lanzar. Accio Work me llevó de los apuntes a **un producto real que vender**." },
-      { name: "Luna M.", role: "Vendedora dropshipping", avatar: "https://i.pravatar.cc/80?img=45", text: "Accio Work rastrea Reddit, TikTok y Amazon para **identificar los ganadores** y comprar directo al proveedor. La herramienta definitiva para adelantarse a los trends virales." },
-      { name: "Keshia B.", role: "Side-hustler", avatar: "https://i.pravatar.cc/80?img=48", text: "Solo tenía las noches para mi tienda. Me encanta que Accio Work automatice el análisis de nicho y los **follow-ups a proveedores** mientras estoy en mi trabajo principal." },
-      { name: "Jay W.", role: "Fundador marca streetwear", avatar: "https://i.pravatar.cc/80?img=15", text: "Accio Work me **ahorra semanas de producción** con tech packs profesionales y negociación automática. Y mis diseños quedan 100% a salvo." },
-    ],
-    row2: [
-      { name: "Nina K.", role: "Fundadora marca outdoor", avatar: "https://i.pravatar.cc/80?img=49", text: "Antes pasaba **10 horas a la semana** gestionando freelancers de contenido. Ahora Accio Work automatiza todo, del contenido a la publicación, en solo **10 minutos a la semana**." },
-      { name: "Sara N.", role: "Manager de un salón de uñas", avatar: "https://i.pravatar.cc/80?img=32", text: "Muy fácil de usar. Creo que **por fin entiendo cómo la IA** ayuda a mi negocio." },
-      { name: "Clara E.", role: "Especialista de Compras", avatar: "https://i.pravatar.cc/80?img=44", text: "La búsqueda de proveedores siempre era una caza de detalles perdidos. Con los follow-ups proactivos de Accio Work llego a una **shortlist limpia mucho antes**." },
-      { name: "Andrew P.", role: "Wedding & Event Planner", avatar: "https://i.pravatar.cc/80?img=12", text: "Esta herramienta me ayudó a encontrar proveedores muy variados a precios mucho mejores y a coordinar entregas justo con las fechas del evento. Las **reservas crecieron un 30%** gracias a Accio Work." },
-      { name: "Joan W.", role: "Consultora Supply Chain", avatar: "https://i.pravatar.cc/80?img=5", text: "A diferencia de otras IA, Accio Work usa **datos comerciales reales** de alibaba.com y la inteligencia de mercado de Jungle Scout. Imprescindible para vendedores e-commerce." },
-    ],
+    row1: [],
+    row2: [],
   },
   faq: {
     heading: "FAQ",
@@ -1111,6 +1063,8 @@ const zh: Dict = {
     useCases: "使用场景",
     guide: "指南",
     reviews: "评价",
+    roi: "计算器",
+    quiz: "适配测试",
   },
   hero: {
     brand: "Work",
@@ -1202,20 +1156,8 @@ const zh: Dict = {
     heading1: "深受",
     highlight: "1000 万+",
     heading2: "月活用户喜爱",
-    row1: [
-      { name: "Joseph S.", role: "全球采购经理", avatar: "https://i.pravatar.cc/80?img=13", text: "Accio Work 能迅速把零散、不规范的供应商报价整理为可比数据，是**第一个真正理解**全球贸易复杂度的 AI。" },
-      { name: "Mia C.", role: "周末创业者", avatar: "https://i.pravatar.cc/80?img=47", text: "我攒了好几个月的产品灵感，却不知道怎么找货怎么开卖。Accio Work 把它们从零散笔记推到了**真正可以卖的产品**。" },
-      { name: "Luna M.", role: "Dropshipping 卖家", avatar: "https://i.pravatar.cc/80?img=45", text: "Accio Work 会扫描 Reddit、TikTok 和 Amazon,**精准锁定爆款**并直接对接供应商,是抢在潮流之前的利器。" },
-      { name: "Keshia B.", role: "副业玩家", avatar: "https://i.pravatar.cc/80?img=48", text: "我只有晚上能顾店。Accio Work 能在我上班时自动做细分市场分析和**供应商跟进**,简直救命。" },
-      { name: "Jay W.", role: "潮牌主理人", avatar: "https://i.pravatar.cc/80?img=15", text: "凭借专业工艺包生成和供应商自动谈判,Accio Work 让我的生产周期**缩短了几周**,更重要的是设计安全性 100%。" },
-    ],
-    row2: [
-      { name: "Nina K.", role: "户外品牌创始人", avatar: "https://i.pravatar.cc/80?img=49", text: "我以前每周花**10 小时**盯内容外包,现在 Accio Work 把内容到发布全流程自动化,每周只需**10 分钟**。" },
-      { name: "Sara N.", role: "美甲店店长", avatar: "https://i.pravatar.cc/80?img=32", text: "非常好上手。我总算**明白 AI 能怎样帮**我的生意了。" },
-      { name: "Clara E.", role: "采购专员", avatar: "https://i.pravatar.cc/80?img=44", text: "以前找供应商总感觉在追失联的细节,现在靠 Accio Work 的主动跟进,能**更快拿到干净的候选名单**。" },
-      { name: "Andrew P.", role: "婚礼与活动策划", avatar: "https://i.pravatar.cc/80?img=12", text: "这个工具帮我找到了更多元的供应商、拿到了更低的价格,还能把交付时间与活动日期完美对齐。多亏 Accio Work,我的**订单增长了 30% 以上**。" },
-      { name: "Joan W.", role: "供应链顾问", avatar: "https://i.pravatar.cc/80?img=5", text: "与其他 AI 不同,Accio Work 用的是 alibaba.com 的**真实贸易数据**和 Jungle Scout 的市场情报,电商卖家必备。" },
-    ],
+    row1: [],
+    row2: [],
   },
   faq: {
     heading: "常见问题",
@@ -1306,6 +1248,8 @@ const pt: Dict = {
     useCases: "Casos de uso",
     guide: "Guias",
     reviews: "Avaliações",
+    roi: "Calculadora",
+    quiz: "Teste de perfil",
   },
   hero: {
     brand: "Work",
@@ -1397,20 +1341,8 @@ const pt: Dict = {
     heading1: "Amado por",
     highlight: "mais de 10 milhões",
     heading2: "de usuários ativos por mês",
-    row1: [
-      { name: "Joseph S.", role: "Global Sourcing Manager", avatar: "https://i.pravatar.cc/80?img=13", text: "Accio Work transforma cotações dispersas e sem padrão em dados comparáveis na hora. É a **primeira IA que entende de verdade** a complexidade do comércio global." },
-      { name: "Mia C.", role: "Fundadora nos fins de semana", avatar: "https://i.pravatar.cc/80?img=47", text: "Eu tinha ideias de produto guardadas há meses, mas nenhuma ideia de onde comprar ou como lançar. Accio Work me levou das anotações a **um produto real para vender**." },
-      { name: "Luna M.", role: "Vendedora dropshipping", avatar: "https://i.pravatar.cc/80?img=45", text: "Accio Work vasculha Reddit, TikTok e Amazon para **identificar os vencedores** e comprar direto do fornecedor. A ferramenta definitiva para se antecipar aos trends virais." },
-      { name: "Keshia B.", role: "Side-hustler", avatar: "https://i.pravatar.cc/80?img=48", text: "Só sobrava a noite para a minha loja. Adoro que a Accio Work automatize a análise de nicho e os **follow-ups com fornecedores** enquanto estou no trabalho principal." },
-      { name: "Jay W.", role: "Fundador de marca streetwear", avatar: "https://i.pravatar.cc/80?img=15", text: "Accio Work me **economiza semanas de produção** com tech packs profissionais e negociação automática. E meus designs ficam 100% seguros." },
-    ],
-    row2: [
-      { name: "Nina K.", role: "Fundadora de marca outdoor", avatar: "https://i.pravatar.cc/80?img=49", text: "Antes eu gastava **10 horas por semana** gerenciando freelancers de conteúdo. Agora Accio Work automatiza tudo, do conteúdo à publicação, em só **10 minutos por semana**." },
-      { name: "Sara N.", role: "Gerente de salão de unhas", avatar: "https://i.pravatar.cc/80?img=32", text: "Muito fácil de usar. Acho que **finalmente entendi como a IA** ajuda o meu negócio." },
-      { name: "Clara E.", role: "Especialista de Compras", avatar: "https://i.pravatar.cc/80?img=44", text: "A busca por fornecedores sempre foi uma caça a detalhes perdidos. Com os follow-ups proativos da Accio Work chego a uma **shortlist limpa muito antes**." },
-      { name: "Andrew P.", role: "Wedding & Event Planner", avatar: "https://i.pravatar.cc/80?img=12", text: "Esta ferramenta me ajudou a encontrar fornecedores bem variados a preços bem melhores e a coordenar entregas certinho com as datas do evento. As **reservas cresceram 30%** graças à Accio Work." },
-      { name: "Joan W.", role: "Consultora Supply Chain", avatar: "https://i.pravatar.cc/80?img=5", text: "Diferente de outras IAs, a Accio Work usa **dados comerciais reais** do alibaba.com e a inteligência de mercado da Jungle Scout. Indispensável para vendedores de e-commerce." },
-    ],
+    row1: [],
+    row2: [],
   },
   faq: {
     heading: "FAQ",
@@ -1500,6 +1432,8 @@ const hi: Dict = {
     useCases: "उपयोग",
     guide: "गाइड",
     reviews: "समीक्षाएं",
+    roi: "कैलकुलेटर",
+    quiz: "फिट टेस्ट",
   },
   hero: {
     brand: "Work",
@@ -1591,20 +1525,8 @@ const hi: Dict = {
     heading1: "पसंद किया गया",
     highlight: "1 करोड़ से ज़्यादा",
     heading2: "मासिक सक्रिय उपयोगकर्ताओं द्वारा",
-    row1: [
-      { name: "Joseph S.", role: "Global Sourcing Manager", avatar: "https://i.pravatar.cc/80?img=13", text: "Accio Work बिखरे और बिना मानक वाले कोटेशन को तुरंत तुलनीय डेटा में बदल देता है। यह **पहला AI है जो सच में समझता है** ग्लोबल ट्रेड की जटिलता।" },
-      { name: "Mia C.", role: "Weekend Founder", avatar: "https://i.pravatar.cc/80?img=47", text: "मेरे पास महीनों से प्रोडक्ट आइडिया थे लेकिन ना कहाँ से खरीदें ना कैसे लॉन्च करें का पता। Accio Work ने मुझे नोट्स से **असली बिकने वाले प्रोडक्ट** तक पहुँचाया।" },
-      { name: "Luna M.", role: "Dropshipping Seller", avatar: "https://i.pravatar.cc/80?img=45", text: "Accio Work Reddit, TikTok और Amazon छानकर **विजेता ढूँढता है** और सीधे सप्लायर से खरीदवाता है। वायरल ट्रेंड से आगे रहने का बेहतरीन टूल।" },
-      { name: "Keshia B.", role: "Side-hustler", avatar: "https://i.pravatar.cc/80?img=48", text: "स्टोर के लिए बस रात बचती थी। मुझे पसंद है कि Accio Work नीश एनालिसिस और **सप्लायर फ़ॉलो-अप** मेरे मुख्य काम के दौरान अपने आप कर देता है।" },
-      { name: "Jay W.", role: "Streetwear Brand Founder", avatar: "https://i.pravatar.cc/80?img=15", text: "Accio Work **प्रोडक्शन के हफ़्ते बचा देता है**, प्रोफ़ेशनल टेक पैक और अपने आप बातचीत के साथ। और मेरा डिज़ाइन पूरी तरह सुरक्षित रहता है।" },
-    ],
-    row2: [
-      { name: "Nina K.", role: "Outdoor Brand Founder", avatar: "https://i.pravatar.cc/80?img=49", text: "पहले कंटेंट फ़्रीलांसर मैनेज करने में **हर हफ़्ते 10 घंटे** जाते थे। अब Accio Work कंटेंट से पब्लिशिंग तक सब ऑटोमेट करता है, हफ़्ते के सिर्फ़ **10 मिनट** में।" },
-      { name: "Sara N.", role: "Nail Salon Manager", avatar: "https://i.pravatar.cc/80?img=32", text: "इस्तेमाल में बहुत आसान। लगता है **अब सच में समझ आया** कि AI मेरे बिज़नेस की कैसे मदद करता है।" },
-      { name: "Clara E.", role: "Procurement Specialist", avatar: "https://i.pravatar.cc/80?img=44", text: "सप्लायर की तलाश हमेशा छूटे हुए विवरणों की खोज होती थी। Accio Work के प्रोऐक्टिव फ़ॉलो-अप से **साफ़ शॉर्टलिस्ट बहुत जल्दी** मिल जाती है।" },
-      { name: "Andrew P.", role: "Wedding & Event Planner", avatar: "https://i.pravatar.cc/80?img=12", text: "इस टूल ने बेहतर दामों पर विविध सप्लायर खोजने और डिलीवरी को इवेंट डेट से मिलाने में मदद की। Accio Work की बदौलत **बुकिंग 30% बढ़ीं**।" },
-      { name: "Joan W.", role: "Supply Chain Consultant", avatar: "https://i.pravatar.cc/80?img=5", text: "दूसरे AI से अलग, Accio Work alibaba.com का **असली ट्रेड डेटा** और Jungle Scout की मार्केट इंटेलिजेंस इस्तेमाल करता है। ई-कॉमर्स सेलर के लिए अनिवार्य।" },
-    ],
+    row1: [],
+    row2: [],
   },
   faq: {
     heading: "अक्सर पूछे जाने वाले प्रश्न",
@@ -1695,6 +1617,8 @@ const fr: Dict = {
     useCases: "Cas d'usage",
     guide: "Guides",
     reviews: "Avis",
+    roi: "Calculateur",
+    quiz: "Test",
   },
   hero: {
     brand: "Work",
@@ -1786,20 +1710,8 @@ const fr: Dict = {
     heading1: "Adopté par",
     highlight: "plus de 10 millions",
     heading2: "d'utilisateurs actifs par mois",
-    row1: [
-      { name: "Joseph S.", role: "Global Sourcing Manager", avatar: "https://i.pravatar.cc/80?img=13", text: "Accio Work transforme vite des devis dispersés et non standard en données comparables. C'est la **première IA qui comprend vraiment** la complexité du commerce international." },
-      { name: "Mia C.", role: "Fondatrice le week-end", avatar: "https://i.pravatar.cc/80?img=47", text: "J'avais des idées de produits en réserve depuis des mois, sans savoir comment les sourcer. Accio Work m'a menée de mes notes à **un vrai produit à vendre**." },
-      { name: "Luna M.", role: "Vendeuse en dropshipping", avatar: "https://i.pravatar.cc/80?img=45", text: "Accio Work scanne Reddit, TikTok et Amazon pour **repérer les gagnants** et acheter directement aux fournisseurs. L'outil idéal pour devancer les tendances." },
-      { name: "Keshia B.", role: "Entrepreneuse à côté", avatar: "https://i.pravatar.cc/80?img=48", text: "Je n'avais que mes soirées pour ma boutique. J'adore qu'Accio Work automatise l'analyse de niche et les **relances fournisseurs** pendant que je travaille." },
-      { name: "Jay W.", role: "Fondateur marque streetwear", avatar: "https://i.pravatar.cc/80?img=15", text: "Accio Work me **fait gagner des semaines de production** avec des tech packs pros et des négociations automatiques. Et mes designs restent 100 % protégés." },
-    ],
-    row2: [
-      { name: "Nina K.", role: "Fondatrice marque outdoor", avatar: "https://i.pravatar.cc/80?img=49", text: "Je passais **10 heures par semaine** à gérer des freelances pour le contenu, maintenant Accio Work automatise tout, du contenu à la publication, en **10 minutes par semaine**." },
-      { name: "Sara N.", role: "Gérante d'un salon d'onglerie", avatar: "https://i.pravatar.cc/80?img=32", text: "Très simple à utiliser. J'ai **enfin compris comment l'IA peut aider** mon activité." },
-      { name: "Clara E.", role: "Spécialiste achats", avatar: "https://i.pravatar.cc/80?img=44", text: "La recherche de fournisseurs était une chasse aux détails manquants. Avec les relances proactives d'Accio Work, j'arrive à une **shortlist propre bien plus vite**." },
-      { name: "Andrew P.", role: "Wedding & Event Planner", avatar: "https://i.pravatar.cc/80?img=12", text: "Cet outil m'a aidé à trouver des fournisseurs variés à des prix bien plus bas, avec des livraisons calées sur les dates d'événements. Les **réservations ont grimpé de plus de 30 %**." },
-      { name: "Joan W.", role: "Consultante supply chain", avatar: "https://i.pravatar.cc/80?img=5", text: "Contrairement aux autres IA, Accio Work s'appuie sur des **données commerciales réelles** d'alibaba.com et la market intelligence de Jungle Scout. Indispensable en e-commerce." },
-    ],
+    row1: [],
+    row2: [],
   },
   faq: {
     heading: "FAQ",

@@ -1,7 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
-  Link,
   createRootRouteWithContext,
   useRouter,
   useRouterState,
@@ -12,21 +11,46 @@ import {
 import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
+  const sections = [
+    { href: "/", label: "Home" },
+    { href: "/compare", label: "Compare" },
+    { href: "/for", label: "Use cases" },
+    { href: "/guide", label: "Guides" },
+    { href: "/reviews", label: "Reviews" },
+    { href: "/roi", label: "Calculator" },
+    { href: "/blog", label: "Blog" },
+  ];
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <div className="max-w-md text-center">
+      <div className="max-w-xl text-center">
+        <span className="mb-6 inline-flex items-center gap-1.5 text-[22px] font-bold tracking-tight text-foreground">
+          <svg width={21} height={22} viewBox="0 0 28 28" aria-hidden>
+            <defs>
+              <linearGradient id="nf404" x1="0" y1="1" x2="1" y2="0">
+                <stop offset="0%" stopColor="#0F172A" />
+                <stop offset="55%" stopColor="#17B26A" />
+                <stop offset="100%" stopColor="#7CE7C2" />
+              </linearGradient>
+            </defs>
+            <path d="M14 3 L26 25 L2 25 Z" fill="url(#nf404)" />
+          </svg>
+          Accio
+        </span>
         <h1 className="text-7xl font-bold text-foreground">404</h1>
         <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
+          That page does not exist or has moved. Here is where to go next.
         </p>
-        <div className="mt-6">
-          <Link
-            to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            Go home
-          </Link>
+        <div className="mt-7 flex flex-wrap justify-center gap-3">
+          {sections.map((s) => (
+            <a
+              key={s.href}
+              href={s.href}
+              className="rounded-full border border-black/10 bg-white px-4 py-2 text-sm font-medium text-foreground transition hover:border-[#17B26A]/50 hover:text-[#17B26A]"
+            >
+              {s.label}
+            </a>
+          ))}
         </div>
       </div>
     </div>

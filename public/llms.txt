@@ -74,3 +74,13 @@ Accio Work is an execution-oriented AI agent platform (not a chatbot). A general
 
 - [Reviews and press EN](https://acciowork.pro/reviews): paraphrased coverage from Forbes, Digital Commerce 360, AI Business and independent reviews, each linked to the source
 - Localized: /ru/reviews, /de/reviews, /it/reviews, /es/reviews, /zh/reviews, /pt/reviews, /hi/reviews, /fr/reviews
+
+## Interactive calculator (time and money an AI agent could save, all languages)
+
+- [Time savings calculator EN](https://acciowork.pro/roi): estimate hours a week and money an agent like Accio Work could free up
+- Localized: /ru/roi, /de/roi, /it/roi, /es/roi, /zh/roi, /pt/roi, /hi/roi, /fr/roi
+
+## Fit quiz (honest 2 minute check whether Accio Work suits you, all languages)
+
+- [Is Accio Work right for you EN](https://acciowork.pro/quiz): five questions, honest result including when it is not a fit
+- Localized: /ru/quiz, /de/quiz, /it/quiz, /es/quiz, /zh/quiz, /pt/quiz, /hi/quiz, /fr/quiz

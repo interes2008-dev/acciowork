@@ -10,6 +10,8 @@ import {
   X,
 } from "lucide-react";
 import { I18nProvider, useI18n, renderHighlighted } from "@/lib/i18n";
+import { rvPress, rvChrome } from "@/lib/reviews-data";
+import { roiChrome } from "@/lib/roi-data";
 import type { Lang, TabKey, Testimonial as TestimonialT } from "@/lib/translations";
 
 const REFERRAL_URL =
@@ -167,6 +169,8 @@ function Navbar() {
   const compareHref = blogHref.replace("/blog", "/compare");
   const guideHref = blogHref.replace("/blog", "/guide");
   const reviewsHref = blogHref.replace("/blog", "/reviews");
+  const roiHref = blogHref.replace("/blog", "/roi");
+  const quizHref = blogHref.replace("/blog", "/quiz");
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-[1280px] items-center justify-between px-6">
@@ -178,6 +182,8 @@ function Navbar() {
             <a href={blogHref} className="hover:text-foreground">{t.nav.blog}</a>
             <a href={compareHref} className="hover:text-foreground">{t.nav.compare}</a>
             <a href={reviewsHref} className="hover:text-foreground">{t.nav.reviews}</a>
+            <a href={roiHref} className="hover:text-foreground">{t.nav.roi}</a>
+            <a href={quizHref} className="hover:text-foreground">{t.nav.quiz}</a>
             <a href="#faq" className="flex items-center gap-1 hover:text-foreground">{t.nav.help}</a>
             <a href={lang === "en" ? "/events/free-forever" : `/${lang}/events/free-forever`} className="flex items-center gap-1 hover:text-foreground">{t.nav.events} <span>🔥</span></a>
           </nav>
@@ -720,7 +726,9 @@ function MarqueeRow({ items, direction }: { items: TestimonialT[]; direction: "l
 }
 
 function Testimonials() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
+  const rv = rvChrome[lang as keyof typeof rvChrome] ?? rvChrome.en;
+  const reviewsHref = lang === "en" ? "/reviews" : `/${lang}/reviews`;
   return (
     <section className="relative overflow-hidden bg-mint-50 py-24 sm:py-32">
       <div className="mx-auto max-w-[1280px] px-6 text-center">
@@ -729,12 +737,38 @@ function Testimonials() {
           <br />
           {t.testimonials.heading2}
         </h2>
-      </div>
-      <div className="relative mt-14 space-y-3">
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-[color-mix(in_oklab,var(--mint-50)_100%,transparent)] to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-[color-mix(in_oklab,var(--mint-50)_100%,transparent)] to-transparent" />
-        <MarqueeRow items={t.testimonials.row1} direction="left" />
-        <MarqueeRow items={t.testimonials.row2} direction="right" />
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-[15px] font-semibold text-foreground/45">
+          {rvPress.map((p) => (
+            <span key={p.id}>{p.source}</span>
+          ))}
+        </div>
+        <div className="mt-12 grid gap-5 text-left sm:grid-cols-2 lg:grid-cols-3">
+          {rvPress.map((p) => (
+            <div key={p.id} className="rounded-2xl border border-black/10 bg-white p-6">
+              <div className="mb-2 flex items-center gap-2">
+                <span className="font-semibold text-foreground">{p.source}</span>
+                <span className="rounded-full bg-mint-50 px-2 py-0.5 text-[11px] font-medium text-[#17B26A]">{p.tag}</span>
+              </div>
+              <p className="text-[15px] leading-relaxed text-foreground/75">
+                {p.takeaway[lang as keyof typeof p.takeaway] ?? p.takeaway.en}
+              </p>
+              <a
+                href={p.url}
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-[#17B26A] hover:underline"
+              >
+                {rv.sourceLabel} {p.source}
+              </a>
+            </div>
+          ))}
+        </div>
+        <a
+          href={reviewsHref}
+          className="mt-10 inline-flex items-center gap-2 rounded-full border border-[#17B26A]/40 px-6 py-3 text-sm font-semibold text-[#17B26A] transition hover:bg-[#17B26A] hover:text-white"
+        >
+          {t.nav.reviews}
+        </a>
       </div>
     </section>
   );
@@ -859,6 +893,8 @@ function Footer() {
           <a href={`${base}/for`} className="hover:text-foreground">{t.nav.useCases}</a>
           <a href={`${base}/guide`} className="hover:text-foreground">{t.nav.guide}</a>
           <a href={`${base}/reviews`} className="hover:text-foreground">{t.nav.reviews}</a>
+          <a href={`${base}/roi`} className="hover:text-foreground">{t.nav.roi}</a>
+          <a href={`${base}/quiz`} className="hover:text-foreground">{t.nav.quiz}</a>
           <a href={`${base}/blog`} className="hover:text-foreground">{t.nav.blog}</a>
           <a href={`${base}/events/free-forever`} className="hover:text-foreground">{t.nav.events}</a>
           <a href="#faq" className="hover:text-foreground">{t.nav.help}</a>
@@ -887,6 +923,32 @@ function Footer() {
 }
 
 /* ---------- Page ---------- */
+function CalculatorTeaser() {
+  const { t, lang } = useI18n();
+  const rc = roiChrome[lang as keyof typeof roiChrome] ?? roiChrome.en;
+  const roiHref = lang === "en" ? "/roi" : `/${lang}/roi`;
+  return (
+    <section className="bg-background py-20 sm:py-28">
+      <div className="mx-auto max-w-[1200px] px-6">
+        <div className="overflow-hidden rounded-[32px] bg-gradient-to-br from-[#0E1210] to-[#123A2A] px-8 py-14 text-center sm:px-16">
+          <p className="text-sm font-semibold uppercase tracking-wide text-[#7CE7C2]">{rc.kicker}</p>
+          <h2 className="mx-auto mt-3 max-w-2xl text-[28px] font-bold leading-tight tracking-tight text-white sm:text-[40px]">
+            {rc.h1}
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-[16px] leading-relaxed text-white/70">{rc.intro}</p>
+          <a
+            href={roiHref}
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#17B26A] px-7 py-3.5 font-semibold text-white transition hover:brightness-110"
+          >
+            {t.nav.roi}
+            <span aria-hidden>&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function LandingPage() {
   return (
     <I18nProvider>
@@ -897,6 +959,7 @@ export default function LandingPage() {
         <HowItWorks />
         <WhyChoose />
         <UseCases />
+        <CalculatorTeaser />
         <CompareChat />
         <Testimonials />
         <Pricing />
