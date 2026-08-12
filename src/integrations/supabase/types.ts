@@ -21,6 +21,7 @@ export type Database = {
           cover_url: string | null
           created_at: string
           description: string
+          has_cover: boolean | null
           id: string
           keywords: string[]
           lang: string
@@ -37,6 +38,7 @@ export type Database = {
           cover_url?: string | null
           created_at?: string
           description: string
+          has_cover?: boolean | null
           id?: string
           keywords?: string[]
           lang: string
@@ -53,6 +55,7 @@ export type Database = {
           cover_url?: string | null
           created_at?: string
           description?: string
+          has_cover?: boolean | null
           id?: string
           keywords?: string[]
           lang?: string
