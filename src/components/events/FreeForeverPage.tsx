@@ -922,6 +922,12 @@ function LangSwitcher({ lang }: { lang: Lang }) {
 
 /* ---------- Header ---------- */
 function Header({ lang, d }: { lang: Lang; d: EventDict }) {
+  const [open, setOpen] = useState(false);
+  const links = [
+    { href: `${homeHref(lang)}#pricing`, label: d.nav.pricing },
+    { href: blogHref(lang), label: d.nav.blog },
+    { href: eventsHref(lang), label: d.nav.events, hot: true },
+  ];
   return (
     <header className="sticky top-0 z-50 w-full border-b border-[#E5E7EB] bg-white/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-[1280px] items-center justify-between px-4 sm:px-6">
@@ -946,8 +952,37 @@ function Header({ lang, d }: { lang: Lang; d: EventDict }) {
           >
             {d.nav.download}
           </a>
+          <button
+            type="button"
+            aria-label="Menu"
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-[#1a1a2e]/80 hover:bg-black/5 md:hidden"
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+              {open ? <><line x1="6" y1="6" x2="18" y2="18" /><line x1="18" y1="6" x2="6" y2="18" /></> : <><line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="18" x2="21" y2="18" /></>}
+            </svg>
+          </button>
         </div>
       </div>
+
+      {open && (
+        <nav className="border-t border-[#E5E7EB] bg-white md:hidden">
+          <div className="mx-auto flex max-w-[1280px] flex-col px-4 py-2 sm:px-6">
+            {links.map((l) => (
+              <a
+                key={l.label}
+                href={l.href}
+                onClick={() => setOpen(false)}
+                className="flex items-center gap-1.5 border-b border-[#E5E7EB] py-3 text-[16px] font-medium text-[#1a1a2e]/85 last:border-b-0"
+              >
+                {l.label}
+                {l.hot && <span>🔥</span>}
+              </a>
+            ))}
+          </div>
+        </nav>
+      )}
     </header>
   );
 }

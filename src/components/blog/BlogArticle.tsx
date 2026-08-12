@@ -123,7 +123,7 @@ export function BlogArticle({
 
         {article.cover_url ? (
           <figure className="mt-14 overflow-hidden rounded-2xl border border-border/40 bg-muted/40 shadow-[0_20px_60px_-30px_rgba(0,0,0,0.25)]">
-            <img src={article.cover_url} alt="" className="h-auto w-full" />
+            <img src={article.cover_url} alt={article.title} loading="lazy" className="h-auto w-full" />
           </figure>
         ) : null}
 

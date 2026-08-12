@@ -163,7 +163,7 @@ export const gdPages: Record<GdLang, Record<string, GdPage>> = {
       "name": "How to get started with Accio Work",
       "tagline": "From sign up to your first result in one sitting",
       "metaTitle": "How to get started with Accio Work",
-      "metaDescription": "Accio Work is an AI agent that does real work, not just chat. This guide walks you from creating an account to getting your first finished result, so you know exactly what to expect before you start.",
+      "metaDescription": "Accio Work is an AI agent that does real work, not just chat. This guide walks you from creating an account to getting your first finished result, so you",
       "h1": "How to get started with Accio Work",
       "intro": "Accio Work is an AI agent that does real work, not just chat. This guide walks you from creating an account to getting your first finished result, so you know exactly what to expect before you start.",
       "steps": [
@@ -213,7 +213,7 @@ export const gdPages: Record<GdLang, Record<string, GdPage>> = {
       "name": "How to run your first task in Accio Work",
       "tagline": "Write a goal the agent can actually finish",
       "metaTitle": "How to run your first task in Accio Work",
-      "metaDescription": "The difference between a weak result and a strong one is usually the goal you give. This guide shows how to phrase a first task so the agent runs it start to finish and hands back something you can use.",
+      "metaDescription": "The difference between a weak result and a strong one is usually the goal you give. This guide shows how to phrase a first task so the agent runs it start to",
       "h1": "How to run your first task in Accio Work",
       "intro": "The difference between a weak result and a strong one is usually the goal you give. This guide shows how to phrase a first task so the agent runs it start to finish and hands back something you can use.",
       "steps": [
@@ -259,7 +259,7 @@ export const gdPages: Record<GdLang, Record<string, GdPage>> = {
       "name": "How to connect apps and channels in Accio Work",
       "tagline": "Let the agent work across the tools you already use",
       "metaTitle": "How to connect apps and channels in Accio Work",
-      "metaDescription": "Accio Work is more useful when it can reach your tools. This guide covers connecting apps and messaging channels so the agent can pull data, take action and reach you where you already work.",
+      "metaDescription": "Accio Work is more useful when it can reach your tools. This guide covers connecting apps and messaging channels so the agent can pull data, take action and",
       "h1": "How to connect apps and channels in Accio Work",
       "intro": "Accio Work is more useful when it can reach your tools. This guide covers connecting apps and messaging channels so the agent can pull data, take action and reach you where you already work.",
       "steps": [
@@ -353,7 +353,7 @@ export const gdPages: Record<GdLang, Record<string, GdPage>> = {
       "name": "Как начать работу с Accio Work",
       "tagline": "От регистрации до первого результата за один заход",
       "metaTitle": "Как начать работу с Accio Work",
-      "metaDescription": "Accio Work это AI агент, который делает реальную работу, а не просто общается. Гайд проведёт от создания аккаунта до первого готового результата, чтобы вы точно понимали, чего ждать перед стартом.",
+      "metaDescription": "Accio Work это AI агент, который делает реальную работу, а не просто общается. Гайд проведёт от создания аккаунта до первого готового результата, чтобы вы",
       "h1": "Как начать работу с Accio Work",
       "intro": "Accio Work это AI агент, который делает реальную работу, а не просто общается. Гайд проведёт от создания аккаунта до первого готового результата, чтобы вы точно понимали, чего ждать перед стартом.",
       "steps": [
@@ -403,7 +403,7 @@ export const gdPages: Record<GdLang, Record<string, GdPage>> = {
       "name": "Как выполнить первую задачу в Accio Work",
       "tagline": "Сформулируйте задачу, которую агент реально доведёт до конца",
       "metaTitle": "Как выполнить первую задачу в Accio Work",
-      "metaDescription": "Разница между слабым и сильным результатом обычно в том, какую задачу вы поставили. Гайд показывает, как сформулировать первую задачу, чтобы агент выполнил её от начала до конца и отдал то, чем можно пользоваться.",
+      "metaDescription": "Разница между слабым и сильным результатом обычно в том, какую задачу вы поставили. Гайд показывает, как сформулировать первую задачу, чтобы агент выполнил",
       "h1": "Как выполнить первую задачу в Accio Work",
       "intro": "Разница между слабым и сильным результатом обычно в том, какую задачу вы поставили. Гайд показывает, как сформулировать первую задачу, чтобы агент выполнил её от начала до конца и отдал то, чем можно пользоваться.",
       "steps": [
@@ -449,7 +449,7 @@ export const gdPages: Record<GdLang, Record<string, GdPage>> = {
       "name": "Как подключить приложения и каналы в Accio Work",
       "tagline": "Дайте агенту работать в инструментах, что у вас уже есть",
       "metaTitle": "Как подключить приложения и каналы в Accio Work",
-      "metaDescription": "Accio Work полезнее, когда дотягивается до ваших инструментов. Гайд про подключение приложений и мессенджеров, чтобы агент брал данные, выполнял действия и находил вас там, где вы уже работаете.",
+      "metaDescription": "Accio Work полезнее, когда дотягивается до ваших инструментов. Гайд про подключение приложений и мессенджеров, чтобы агент брал данные, выполнял действия и",
       "h1": "Как подключить приложения и каналы в Accio Work",
       "intro": "Accio Work полезнее, когда дотягивается до ваших инструментов. Гайд про подключение приложений и мессенджеров, чтобы агент брал данные, выполнял действия и находил вас там, где вы уже работаете.",
       "steps": [
@@ -543,7 +543,7 @@ export const gdPages: Record<GdLang, Record<string, GdPage>> = {
       "name": "Erste Schritte mit Accio Work",
       "tagline": "Von der Anmeldung zum ersten Ergebnis in einer Sitzung",
       "metaTitle": "Erste Schritte mit Accio Work",
-      "metaDescription": "Accio Work ist ein AI Agent, der echte Arbeit erledigt, nicht nur chattet. Diese Anleitung führt dich vom Anlegen des Kontos bis zum ersten fertigen Ergebnis, damit du genau weißt, was dich erwartet.",
+      "metaDescription": "Accio Work ist ein AI Agent, der echte Arbeit erledigt, nicht nur chattet. Diese Anleitung führt dich vom Anlegen des Kontos bis zum ersten fertigen",
       "h1": "Erste Schritte mit Accio Work",
       "intro": "Accio Work ist ein AI Agent, der echte Arbeit erledigt, nicht nur chattet. Diese Anleitung führt dich vom Anlegen des Kontos bis zum ersten fertigen Ergebnis, damit du genau weißt, was dich erwartet.",
       "steps": [
@@ -593,7 +593,7 @@ export const gdPages: Record<GdLang, Record<string, GdPage>> = {
       "name": "So führst du deine erste Aufgabe in Accio Work aus",
       "tagline": "Formuliere ein Ziel, das der Agent wirklich abschließt",
       "metaTitle": "So führst du deine erste Aufgabe in Accio Work aus",
-      "metaDescription": "Der Unterschied zwischen schwachem und starkem Ergebnis liegt meist im Ziel, das du vorgibst. Diese Anleitung zeigt, wie du eine erste Aufgabe formulierst, damit der Agent sie ganz ausführt und dir etwas Nutzbares zurückgibt.",
+      "metaDescription": "Der Unterschied zwischen schwachem und starkem Ergebnis liegt meist im Ziel, das du vorgibst. Diese Anleitung zeigt, wie du eine erste Aufgabe formulierst",
       "h1": "So führst du deine erste Aufgabe in Accio Work aus",
       "intro": "Der Unterschied zwischen schwachem und starkem Ergebnis liegt meist im Ziel, das du vorgibst. Diese Anleitung zeigt, wie du eine erste Aufgabe formulierst, damit der Agent sie ganz ausführt und dir etwas Nutzbares zurückgibt.",
       "steps": [
@@ -639,7 +639,7 @@ export const gdPages: Record<GdLang, Record<string, GdPage>> = {
       "name": "Apps und Kanäle in Accio Work verbinden",
       "tagline": "Lass den Agenten über deine bestehenden Tools arbeiten",
       "metaTitle": "Apps und Kanäle in Accio Work verbinden",
-      "metaDescription": "Accio Work ist nützlicher, wenn es deine Tools erreicht. Diese Anleitung behandelt das Verbinden von Apps und Messaging Kanälen, damit der Agent Daten zieht, handelt und dich dort erreicht, wo du arbeitest.",
+      "metaDescription": "Accio Work ist nützlicher, wenn es deine Tools erreicht. Diese Anleitung behandelt das Verbinden von Apps und Messaging Kanälen, damit der Agent Daten zieht",
       "h1": "Apps und Kanäle in Accio Work verbinden",
       "intro": "Accio Work ist nützlicher, wenn es deine Tools erreicht. Diese Anleitung behandelt das Verbinden von Apps und Messaging Kanälen, damit der Agent Daten zieht, handelt und dich dort erreicht, wo du arbeitest.",
       "steps": [
@@ -685,7 +685,7 @@ export const gdPages: Record<GdLang, Record<string, GdPage>> = {
       "name": "Geplante Automatisierungen in Accio Work einrichten",
       "tagline": "Mach aus einer wiederkehrenden Aufgabe eine, die von selbst läuft",
       "metaTitle": "Geplante Automatisierungen in Accio Work einrichten",
-      "metaDescription": "Sobald eine Aufgabe funktioniert, kannst du sie wiederholen lassen. Diese Anleitung zeigt, wie du aus einem einmaligen Lauf eine geplante Automatisierung machst, damit Routinearbeit von selbst passiert.",
+      "metaDescription": "Sobald eine Aufgabe funktioniert, kannst du sie wiederholen lassen. Diese Anleitung zeigt, wie du aus einem einmaligen Lauf eine geplante Automatisierung",
       "h1": "Geplante Automatisierungen in Accio Work einrichten",
       "intro": "Sobald eine Aufgabe funktioniert, kannst du sie wiederholen lassen. Diese Anleitung zeigt, wie du aus einem einmaligen Lauf eine geplante Automatisierung machst, damit Routinearbeit von selbst passiert.",
       "steps": [
@@ -733,7 +733,7 @@ export const gdPages: Record<GdLang, Record<string, GdPage>> = {
       "name": "Come iniziare con Accio Work",
       "tagline": "Dalla registrazione al primo risultato in una sola sessione",
       "metaTitle": "Come iniziare con Accio Work",
-      "metaDescription": "Accio Work è un agente AI che fa lavoro reale, non solo chatta. Questa guida ti porta dalla creazione dell'account al primo risultato finito, così sai cosa aspettarti prima di iniziare.",
+      "metaDescription": "Accio Work è un agente AI che fa lavoro reale, non solo chatta. Questa guida ti porta dalla creazione dell'account al primo risultato finito, così sai cosa",
       "h1": "Come iniziare con Accio Work",
       "intro": "Accio Work è un agente AI che fa lavoro reale, non solo chatta. Questa guida ti porta dalla creazione dell'account al primo risultato finito, così sai cosa aspettarti prima di iniziare.",
       "steps": [
@@ -783,7 +783,7 @@ export const gdPages: Record<GdLang, Record<string, GdPage>> = {
       "name": "Come eseguire la prima attività in Accio Work",
       "tagline": "Scrivi un obiettivo che l'agente porti davvero a termine",
       "metaTitle": "Come eseguire la prima attività in Accio Work",
-      "metaDescription": "La differenza tra un risultato debole e uno forte sta di solito nell'obiettivo che dai. Questa guida mostra come formulare la prima attività così che l'agente la esegua dall'inizio alla fine e restituisca qualcosa di utile.",
+      "metaDescription": "La differenza tra un risultato debole e uno forte sta di solito nell'obiettivo che dai. Questa guida mostra come formulare la prima attività così che",
       "h1": "Come eseguire la prima attività in Accio Work",
       "intro": "La differenza tra un risultato debole e uno forte sta di solito nell'obiettivo che dai. Questa guida mostra come formulare la prima attività così che l'agente la esegua dall'inizio alla fine e restituisca qualcosa di utile.",
       "steps": [
@@ -829,7 +829,7 @@ export const gdPages: Record<GdLang, Record<string, GdPage>> = {
       "name": "Come collegare app e canali in Accio Work",
       "tagline": "Fai lavorare l'agente tra gli strumenti che già usi",
       "metaTitle": "Come collegare app e canali in Accio Work",
-      "metaDescription": "Accio Work è più utile quando raggiunge i tuoi strumenti. Questa guida spiega come collegare app e canali di messaggistica così che l'agente prenda dati, agisca e ti raggiunga dove già lavori.",
+      "metaDescription": "Accio Work è più utile quando raggiunge i tuoi strumenti. Questa guida spiega come collegare app e canali di messaggistica così che l'agente prenda dati",
       "h1": "Come collegare app e canali in Accio Work",
       "intro": "Accio Work è più utile quando raggiunge i tuoi strumenti. Questa guida spiega come collegare app e canali di messaggistica così che l'agente prenda dati, agisca e ti raggiunga dove già lavori.",
       "steps": [
@@ -875,7 +875,7 @@ export const gdPages: Record<GdLang, Record<string, GdPage>> = {
       "name": "Come impostare automazioni pianificate in Accio Work",
       "tagline": "Trasforma un'attività ripetitiva in una che si esegue da sola",
       "metaTitle": "Come impostare automazioni pianificate in Accio Work",
-      "metaDescription": "Quando un'attività funziona, puoi farla ripetere. Questa guida mostra come trasformare un'esecuzione singola in un'automazione pianificata, così la routine avviene da sola.",
+      "metaDescription": "Quando un'attività funziona, puoi farla ripetere. Questa guida mostra come trasformare un'esecuzione singola in un'automazione pianificata, così la routine",
       "h1": "Come impostare automazioni pianificate in Accio Work",
       "intro": "Quando un'attività funziona, puoi farla ripetere. Questa guida mostra come trasformare un'esecuzione singola in un'automazione pianificata, così la routine avviene da sola.",
       "steps": [
@@ -923,7 +923,7 @@ export const gdPages: Record<GdLang, Record<string, GdPage>> = {
       "name": "Cómo empezar con Accio Work",
       "tagline": "Del registro a tu primer resultado de una sentada",
       "metaTitle": "Cómo empezar con Accio Work",
-      "metaDescription": "Accio Work es un agente de IA que hace trabajo real, no solo chatea. Esta guía te lleva de crear una cuenta a tu primer resultado terminado, para que sepas qué esperar antes de empezar.",
+      "metaDescription": "Accio Work es un agente de IA que hace trabajo real, no solo chatea. Esta guía te lleva de crear una cuenta a tu primer resultado terminado, para que sepas",
       "h1": "Cómo empezar con Accio Work",
       "intro": "Accio Work es un agente de IA que hace trabajo real, no solo chatea. Esta guía te lleva de crear una cuenta a tu primer resultado terminado, para que sepas qué esperar antes de empezar.",
       "steps": [
@@ -973,7 +973,7 @@ export const gdPages: Record<GdLang, Record<string, GdPage>> = {
       "name": "Cómo ejecutar tu primera tarea en Accio Work",
       "tagline": "Escribe un objetivo que el agente pueda terminar de verdad",
       "metaTitle": "Cómo ejecutar tu primera tarea en Accio Work",
-      "metaDescription": "La diferencia entre un resultado flojo y uno fuerte suele estar en el objetivo que das. Esta guía muestra cómo plantear una primera tarea para que el agente la ejecute de principio a fin y devuelva algo utilizable.",
+      "metaDescription": "La diferencia entre un resultado flojo y uno fuerte suele estar en el objetivo que das. Esta guía muestra cómo plantear una primera tarea para que el agente",
       "h1": "Cómo ejecutar tu primera tarea en Accio Work",
       "intro": "La diferencia entre un resultado flojo y uno fuerte suele estar en el objetivo que das. Esta guía muestra cómo plantear una primera tarea para que el agente la ejecute de principio a fin y devuelva algo utilizable.",
       "steps": [
@@ -1019,7 +1019,7 @@ export const gdPages: Record<GdLang, Record<string, GdPage>> = {
       "name": "Cómo conectar apps y canales en Accio Work",
       "tagline": "Deja que el agente trabaje entre las herramientas que ya usas",
       "metaTitle": "Cómo conectar apps y canales en Accio Work",
-      "metaDescription": "Accio Work es más útil cuando alcanza tus herramientas. Esta guía cubre conectar apps y canales de mensajería para que el agente tome datos, actúe y te alcance donde ya trabajas.",
+      "metaDescription": "Accio Work es más útil cuando alcanza tus herramientas. Esta guía cubre conectar apps y canales de mensajería para que el agente tome datos, actúe y te",
       "h1": "Cómo conectar apps y canales en Accio Work",
       "intro": "Accio Work es más útil cuando alcanza tus herramientas. Esta guía cubre conectar apps y canales de mensajería para que el agente tome datos, actúe y te alcance donde ya trabajas.",
       "steps": [
@@ -1065,7 +1065,7 @@ export const gdPages: Record<GdLang, Record<string, GdPage>> = {
       "name": "Cómo configurar automatizaciones programadas en Accio Work",
       "tagline": "Convierte una tarea repetitiva en una que se ejecuta sola",
       "metaTitle": "Cómo configurar automatizaciones programadas en Accio Work",
-      "metaDescription": "Cuando una tarea funciona, puedes hacerla repetir. Esta guía muestra cómo convertir una ejecución única en una automatización programada para que lo rutinario ocurra solo.",
+      "metaDescription": "Cuando una tarea funciona, puedes hacerla repetir. Esta guía muestra cómo convertir una ejecución única en una automatización programada para que lo",
       "h1": "Cómo configurar automatizaciones programadas en Accio Work",
       "intro": "Cuando una tarea funciona, puedes hacerla repetir. Esta guía muestra cómo convertir una ejecución única en una automatización programada para que lo rutinario ocurra solo.",
       "steps": [
@@ -1303,7 +1303,7 @@ export const gdPages: Record<GdLang, Record<string, GdPage>> = {
       "name": "Como começar no Accio Work",
       "tagline": "Do cadastro ao primeiro resultado de uma vez",
       "metaTitle": "Como começar no Accio Work",
-      "metaDescription": "O Accio Work é um agente de IA que faz trabalho real, não só conversa. Este guia leva você da criação da conta ao primeiro resultado pronto, para saber o que esperar antes de começar.",
+      "metaDescription": "O Accio Work é um agente de IA que faz trabalho real, não só conversa. Este guia leva você da criação da conta ao primeiro resultado pronto, para saber o que",
       "h1": "Como começar no Accio Work",
       "intro": "O Accio Work é um agente de IA que faz trabalho real, não só conversa. Este guia leva você da criação da conta ao primeiro resultado pronto, para saber o que esperar antes de começar.",
       "steps": [
@@ -1353,7 +1353,7 @@ export const gdPages: Record<GdLang, Record<string, GdPage>> = {
       "name": "Como executar sua primeira tarefa no Accio Work",
       "tagline": "Escreva um objetivo que o agente realmente conclua",
       "metaTitle": "Como executar sua primeira tarefa no Accio Work",
-      "metaDescription": "A diferença entre um resultado fraco e um forte costuma estar no objetivo que você dá. Este guia mostra como formular a primeira tarefa para o agente executá-la do início ao fim e devolver algo utilizável.",
+      "metaDescription": "A diferença entre um resultado fraco e um forte costuma estar no objetivo que você dá. Este guia mostra como formular a primeira tarefa para o agente",
       "h1": "Como executar sua primeira tarefa no Accio Work",
       "intro": "A diferença entre um resultado fraco e um forte costuma estar no objetivo que você dá. Este guia mostra como formular a primeira tarefa para o agente executá-la do início ao fim e devolver algo utilizável.",
       "steps": [
@@ -1399,7 +1399,7 @@ export const gdPages: Record<GdLang, Record<string, GdPage>> = {
       "name": "Como conectar apps e canais no Accio Work",
       "tagline": "Deixe o agente trabalhar entre as ferramentas que você já usa",
       "metaTitle": "Como conectar apps e canais no Accio Work",
-      "metaDescription": "O Accio Work é mais útil quando alcança suas ferramentas. Este guia cobre conectar apps e canais de mensagens para o agente puxar dados, agir e falar com você onde já trabalha.",
+      "metaDescription": "O Accio Work é mais útil quando alcança suas ferramentas. Este guia cobre conectar apps e canais de mensagens para o agente puxar dados, agir e falar com",
       "h1": "Como conectar apps e canais no Accio Work",
       "intro": "O Accio Work é mais útil quando alcança suas ferramentas. Este guia cobre conectar apps e canais de mensagens para o agente puxar dados, agir e falar com você onde já trabalha.",
       "steps": [
@@ -1445,7 +1445,7 @@ export const gdPages: Record<GdLang, Record<string, GdPage>> = {
       "name": "Como configurar automações agendadas no Accio Work",
       "tagline": "Transforme uma tarefa repetitiva em uma que roda sozinha",
       "metaTitle": "Como configurar automações agendadas no Accio Work",
-      "metaDescription": "Quando uma tarefa funciona, você pode fazê-la repetir. Este guia mostra como transformar uma execução única em automação agendada para o trabalho rotineiro acontecer sozinho.",
+      "metaDescription": "Quando uma tarefa funciona, você pode fazê-la repetir. Este guia mostra como transformar uma execução única em automação agendada para o trabalho rotineiro",
       "h1": "Como configurar automações agendadas no Accio Work",
       "intro": "Quando uma tarefa funciona, você pode fazê-la repetir. Este guia mostra como transformar uma execução única em automação agendada para o trabalho rotineiro acontecer sozinho.",
       "steps": [
@@ -1493,7 +1493,7 @@ export const gdPages: Record<GdLang, Record<string, GdPage>> = {
       "name": "Accio Work कैसे शुरू करें",
       "tagline": "साइन अप से पहले नतीजे तक, एक ही बैठक में",
       "metaTitle": "Accio Work कैसे शुरू करें",
-      "metaDescription": "Accio Work एक AI एजेंट है जो सिर्फ बातचीत नहीं, असली काम करता है। यह गाइड आपको अकाउंट बनाने से पहले तैयार नतीजे तक ले जाती है, ताकि शुरू करने से पहले आप ठीक से जानें कि क्या होगा।",
+      "metaDescription": "Accio Work एक AI एजेंट है जो सिर्फ बातचीत नहीं, असली काम करता है। यह गाइड आपको अकाउंट बनाने से पहले तैयार नतीजे तक ले जाती है, ताकि शुरू करने से पहले आप ठीक",
       "h1": "Accio Work कैसे शुरू करें",
       "intro": "Accio Work एक AI एजेंट है जो सिर्फ बातचीत नहीं, असली काम करता है। यह गाइड आपको अकाउंट बनाने से पहले तैयार नतीजे तक ले जाती है, ताकि शुरू करने से पहले आप ठीक से जानें कि क्या होगा।",
       "steps": [
@@ -1589,7 +1589,7 @@ export const gdPages: Record<GdLang, Record<string, GdPage>> = {
       "name": "Accio Work में ऐप्स और चैनल कैसे जोड़ें",
       "tagline": "एजेंट को आपके मौजूदा टूल में काम करने दें",
       "metaTitle": "Accio Work में ऐप्स और चैनल कैसे जोड़ें",
-      "metaDescription": "जब Accio Work आपके टूल तक पहुंच सके, तो यह ज्यादा उपयोगी होता है। यह गाइड ऐप्स और मैसेजिंग चैनल जोड़ने पर है, ताकि एजेंट डेटा ले, काम करे और आपको वहीं मिले जहां आप पहले से काम करते हैं।",
+      "metaDescription": "जब Accio Work आपके टूल तक पहुंच सके, तो यह ज्यादा उपयोगी होता है। यह गाइड ऐप्स और मैसेजिंग चैनल जोड़ने पर है, ताकि एजेंट डेटा ले, काम करे और आपको वहीं मिले",
       "h1": "Accio Work में ऐप्स और चैनल कैसे जोड़ें",
       "intro": "जब Accio Work आपके टूल तक पहुंच सके, तो यह ज्यादा उपयोगी होता है। यह गाइड ऐप्स और मैसेजिंग चैनल जोड़ने पर है, ताकि एजेंट डेटा ले, काम करे और आपको वहीं मिले जहां आप पहले से काम करते हैं।",
       "steps": [
@@ -1683,7 +1683,7 @@ export const gdPages: Record<GdLang, Record<string, GdPage>> = {
       "name": "Comment démarrer avec Accio Work",
       "tagline": "De l'inscription au premier résultat en une seule fois",
       "metaTitle": "Comment démarrer avec Accio Work",
-      "metaDescription": "Accio Work est un agent IA qui fait un vrai travail, pas seulement du chat. Ce guide vous mène de la création du compte au premier résultat terminé, pour savoir à quoi vous attendre avant de commencer.",
+      "metaDescription": "Accio Work est un agent IA qui fait un vrai travail, pas seulement du chat. Ce guide vous mène de la création du compte au premier résultat terminé, pour",
       "h1": "Comment démarrer avec Accio Work",
       "intro": "Accio Work est un agent IA qui fait un vrai travail, pas seulement du chat. Ce guide vous mène de la création du compte au premier résultat terminé, pour savoir à quoi vous attendre avant de commencer.",
       "steps": [
@@ -1733,7 +1733,7 @@ export const gdPages: Record<GdLang, Record<string, GdPage>> = {
       "name": "Comment lancer votre première tâche dans Accio Work",
       "tagline": "Formulez un objectif que l'agent peut vraiment terminer",
       "metaTitle": "Comment lancer votre première tâche dans Accio Work",
-      "metaDescription": "La différence entre un résultat faible et un bon tient souvent à l'objectif que vous donnez. Ce guide montre comment formuler une première tâche pour que l'agent la mène de bout en bout et vous rende quelque chose d'utilisable.",
+      "metaDescription": "La différence entre un résultat faible et un bon tient souvent à l'objectif que vous donnez. Ce guide montre comment formuler une première tâche pour que",
       "h1": "Comment lancer votre première tâche dans Accio Work",
       "intro": "La différence entre un résultat faible et un bon tient souvent à l'objectif que vous donnez. Ce guide montre comment formuler une première tâche pour que l'agent la mène de bout en bout et vous rende quelque chose d'utilisable.",
       "steps": [
@@ -1779,7 +1779,7 @@ export const gdPages: Record<GdLang, Record<string, GdPage>> = {
       "name": "Comment connecter apps et canaux dans Accio Work",
       "tagline": "Laissez l'agent travailler à travers vos outils actuels",
       "metaTitle": "Comment connecter apps et canaux dans Accio Work",
-      "metaDescription": "Accio Work est plus utile quand il atteint vos outils. Ce guide explique comment connecter applis et canaux de messagerie pour que l'agent récupère des données, agisse et vous joigne là où vous travaillez déjà.",
+      "metaDescription": "Accio Work est plus utile quand il atteint vos outils. Ce guide explique comment connecter applis et canaux de messagerie pour que l'agent récupère des",
       "h1": "Comment connecter apps et canaux dans Accio Work",
       "intro": "Accio Work est plus utile quand il atteint vos outils. Ce guide explique comment connecter applis et canaux de messagerie pour que l'agent récupère des données, agisse et vous joigne là où vous travaillez déjà.",
       "steps": [
@@ -1825,7 +1825,7 @@ export const gdPages: Record<GdLang, Record<string, GdPage>> = {
       "name": "Comment configurer des automatisations planifiées dans Accio Work",
       "tagline": "Transformez une tâche répétitive en une tâche qui tourne seule",
       "metaTitle": "Comment configurer des automatisations planifiées dans Accio Work",
-      "metaDescription": "Une fois qu'une tâche fonctionne, vous pouvez la faire se répéter. Ce guide montre comment transformer une exécution unique en automatisation planifiée pour que la routine se fasse seule.",
+      "metaDescription": "Une fois qu'une tâche fonctionne, vous pouvez la faire se répéter. Ce guide montre comment transformer une exécution unique en automatisation planifiée pour",
       "h1": "Comment configurer des automatisations planifiées dans Accio Work",
       "intro": "Une fois qu'une tâche fonctionne, vous pouvez la faire se répéter. Ce guide montre comment transformer une exécution unique en automatisation planifiée pour que la routine se fasse seule.",
       "steps": [

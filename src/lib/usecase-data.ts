@@ -172,7 +172,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work for dropshipping",
       "tagline": "From trend to first sale without switching tools",
       "metaTitle": "Accio Work for dropshipping | AI dropshipping tool",
-      "metaDescription": "Dropshipping lives or dies on speed. Accio Work runs the whole loop, spotting a product, finding a supplier, building the listing and drafting the ads, so you move while the trend is still hot.",
+      "metaDescription": "Dropshipping lives or dies on speed. Accio Work runs the whole loop, spotting a product, finding a supplier, building the listing and drafting the ads, so",
       "h1": "Accio Work for dropshipping",
       "intro": "Dropshipping lives or dies on speed. Accio Work runs the whole loop, spotting a product, finding a supplier, building the listing and drafting the ads, so you move while the trend is still hot.",
       "pain": [
@@ -224,7 +224,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work for supplier sourcing",
       "tagline": "Verified suppliers and sent inquiries, without the back and forth",
       "metaTitle": "Accio Work for supplier sourcing | AI supplier sourcing",
-      "metaDescription": "Sourcing is slow because the work is manual, searching, comparing, emailing, chasing. Accio Work does the legwork, surfacing verified suppliers and drafting the outreach so you spend time deciding, not digging.",
+      "metaDescription": "Sourcing is slow because the work is manual, searching, comparing, emailing, chasing. Accio Work does the legwork, surfacing verified suppliers and drafting",
       "h1": "Accio Work for supplier sourcing",
       "intro": "Sourcing is slow because the work is manual, searching, comparing, emailing, chasing. Accio Work does the legwork, surfacing verified suppliers and drafting the outreach so you spend time deciding, not digging.",
       "pain": [
@@ -276,7 +276,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work for content and marketing",
       "tagline": "Landing pages, product copy and posts, published on schedule",
       "metaTitle": "Accio Work for content and marketing | AI content for e-commerce",
-      "metaDescription": "Marketing content is a treadmill. Accio Work writes the landing page, the product cards and the social posts, then schedules them, so your channels stay alive without you at the keyboard all day.",
+      "metaDescription": "Marketing content is a treadmill. Accio Work writes the landing page, the product cards and the social posts, then schedules them, so your channels stay",
       "h1": "Accio Work for content and marketing",
       "intro": "Marketing content is a treadmill. Accio Work writes the landing page, the product cards and the social posts, then schedules them, so your channels stay alive without you at the keyboard all day.",
       "pain": [
@@ -328,7 +328,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work for market research",
       "tagline": "Competitors, demand and pricing, read for you",
       "metaTitle": "Accio Work for market research | AI market research",
-      "metaDescription": "Good decisions start with a clear read of the market. Accio Work gathers competitor moves, demand signals and pricing, then hands you a summary you can act on instead of a pile of tabs.",
+      "metaDescription": "Good decisions start with a clear read of the market. Accio Work gathers competitor moves, demand signals and pricing, then hands you a summary you can act",
       "h1": "Accio Work for market research",
       "intro": "Good decisions start with a clear read of the market. Accio Work gathers competitor moves, demand signals and pricing, then hands you a summary you can act on instead of a pile of tabs.",
       "pain": [
@@ -380,7 +380,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work for workflow automation",
       "tagline": "Repeatable tasks the agent runs on a schedule",
       "metaTitle": "Accio Work for workflow automation | AI workflow automation",
-      "metaDescription": "The tasks that eat your week are usually the same each time. Accio Work turns them into automations, running on a schedule and across the apps you already use, so the routine work runs itself.",
+      "metaDescription": "The tasks that eat your week are usually the same each time. Accio Work turns them into automations, running on a schedule and across the apps you already",
       "h1": "Accio Work for workflow automation",
       "intro": "The tasks that eat your week are usually the same each time. Accio Work turns them into automations, running on a schedule and across the apps you already use, so the routine work runs itself.",
       "pain": [
@@ -432,7 +432,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work for custom tools",
       "tagline": "Small internal tools, built by describing them",
       "metaTitle": "Accio Work for custom tools | AI custom tools",
-      "metaDescription": "Sometimes the tool you need does not exist yet. Accio Work builds small internal tools from a plain description, so you get the calculator, tracker or dashboard you needed without a developer queue.",
+      "metaDescription": "Sometimes the tool you need does not exist yet. Accio Work builds small internal tools from a plain description, so you get the calculator, tracker or",
       "h1": "Accio Work for custom tools",
       "intro": "Sometimes the tool you need does not exist yet. Accio Work builds small internal tools from a plain description, so you get the calculator, tracker or dashboard you needed without a developer queue.",
       "pain": [
@@ -486,7 +486,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work для дропшиппинга",
       "tagline": "От тренда до первой продажи без прыжков между сервисами",
       "metaTitle": "Accio Work для дропшиппинга | AI инструмент для дропшиппинга",
-      "metaDescription": "В дропшиппинге всё решает скорость. Accio Work проходит весь цикл: находит товар, ищет поставщика, собирает карточку и черновики рекламы, чтобы вы успели, пока тренд ещё горячий.",
+      "metaDescription": "В дропшиппинге всё решает скорость. Accio Work проходит весь цикл: находит товар, ищет поставщика, собирает карточку и черновики рекламы, чтобы вы успели",
       "h1": "Accio Work для дропшиппинга",
       "intro": "В дропшиппинге всё решает скорость. Accio Work проходит весь цикл: находит товар, ищет поставщика, собирает карточку и черновики рекламы, чтобы вы успели, пока тренд ещё горячий.",
       "pain": [
@@ -538,7 +538,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work для поиска поставщиков",
       "tagline": "Проверенные поставщики и отправленные запросы без бесконечной переписки",
       "metaTitle": "Accio Work для поиска поставщиков | AI поиск поставщиков",
-      "metaDescription": "Поиск поставщиков медленный, потому что всё вручную: искать, сравнивать, писать, догонять. Accio Work берёт рутину на себя, показывает проверенных поставщиков и готовит письма, чтобы вы тратили время на решение, а не на раскопки.",
+      "metaDescription": "Поиск поставщиков медленный, потому что всё вручную: искать, сравнивать, писать, догонять. Accio Work берёт рутину на себя, показывает проверенных",
       "h1": "Accio Work для поиска поставщиков",
       "intro": "Поиск поставщиков медленный, потому что всё вручную: искать, сравнивать, писать, догонять. Accio Work берёт рутину на себя, показывает проверенных поставщиков и готовит письма, чтобы вы тратили время на решение, а не на раскопки.",
       "pain": [
@@ -590,7 +590,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work для контента и маркетинга",
       "tagline": "Лендинги, тексты карточек и посты, публикуются по расписанию",
       "metaTitle": "Accio Work для контента и маркетинга | AI контент для e-commerce",
-      "metaDescription": "Контент это бесконечная беговая дорожка. Accio Work пишет лендинг, карточки товаров и посты, а затем ставит их в расписание, чтобы каналы жили без вас за клавиатурой весь день.",
+      "metaDescription": "Контент это бесконечная беговая дорожка. Accio Work пишет лендинг, карточки товаров и посты, а затем ставит их в расписание, чтобы каналы жили без вас за",
       "h1": "Accio Work для контента и маркетинга",
       "intro": "Контент это бесконечная беговая дорожка. Accio Work пишет лендинг, карточки товаров и посты, а затем ставит их в расписание, чтобы каналы жили без вас за клавиатурой весь день.",
       "pain": [
@@ -642,7 +642,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work для анализа рынка",
       "tagline": "Конкуренты, спрос и цены, разобраны за вас",
       "metaTitle": "Accio Work для анализа рынка | AI анализ рынка",
-      "metaDescription": "Хорошие решения начинаются с ясной картины рынка. Accio Work собирает шаги конкурентов, сигналы спроса и цены, а затем отдаёт сводку, с которой можно работать, вместо кучи вкладок.",
+      "metaDescription": "Хорошие решения начинаются с ясной картины рынка. Accio Work собирает шаги конкурентов, сигналы спроса и цены, а затем отдаёт сводку, с которой можно",
       "h1": "Accio Work для анализа рынка",
       "intro": "Хорошие решения начинаются с ясной картины рынка. Accio Work собирает шаги конкурентов, сигналы спроса и цены, а затем отдаёт сводку, с которой можно работать, вместо кучи вкладок.",
       "pain": [
@@ -694,7 +694,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work для автоматизации процессов",
       "tagline": "Повторяющиеся задачи агент запускает по расписанию",
       "metaTitle": "Accio Work для автоматизации процессов | AI автоматизация процессов",
-      "metaDescription": "Задачи, съедающие неделю, обычно одни и те же. Accio Work превращает их в автоматизации, которые работают по расписанию и в приложениях, что у вас уже есть, чтобы рутина шла сама.",
+      "metaDescription": "Задачи, съедающие неделю, обычно одни и те же. Accio Work превращает их в автоматизации, которые работают по расписанию и в приложениях, что у вас уже есть",
       "h1": "Accio Work для автоматизации процессов",
       "intro": "Задачи, съедающие неделю, обычно одни и те же. Accio Work превращает их в автоматизации, которые работают по расписанию и в приложениях, что у вас уже есть, чтобы рутина шла сама.",
       "pain": [
@@ -746,7 +746,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work для кастомных инструментов",
       "tagline": "Небольшие внутренние инструменты, собираются по описанию",
       "metaTitle": "Accio Work для кастомных инструментов | AI кастомные инструменты",
-      "metaDescription": "Иногда нужного инструмента просто нет. Accio Work собирает небольшие внутренние инструменты по обычному описанию, чтобы у вас появился калькулятор, трекер или дашборд без очереди к разработчику.",
+      "metaDescription": "Иногда нужного инструмента просто нет. Accio Work собирает небольшие внутренние инструменты по обычному описанию, чтобы у вас появился калькулятор, трекер",
       "h1": "Accio Work для кастомных инструментов",
       "intro": "Иногда нужного инструмента просто нет. Accio Work собирает небольшие внутренние инструменты по обычному описанию, чтобы у вас появился калькулятор, трекер или дашборд без очереди к разработчику.",
       "pain": [
@@ -800,7 +800,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work fürs Dropshipping",
       "tagline": "Vom Trend zum ersten Verkauf ohne Toolwechsel",
       "metaTitle": "Accio Work fürs Dropshipping | AI Tool fürs Dropshipping",
-      "metaDescription": "Beim Dropshipping entscheidet Tempo. Accio Work durchläuft den ganzen Kreislauf, findet ein Produkt, einen Lieferanten, baut das Listing und entwirft die Ads, damit du handelst, solange der Trend heiß ist.",
+      "metaDescription": "Beim Dropshipping entscheidet Tempo. Accio Work durchläuft den ganzen Kreislauf, findet ein Produkt, einen Lieferanten, baut das Listing und entwirft die",
       "h1": "Accio Work fürs Dropshipping",
       "intro": "Beim Dropshipping entscheidet Tempo. Accio Work durchläuft den ganzen Kreislauf, findet ein Produkt, einen Lieferanten, baut das Listing und entwirft die Ads, damit du handelst, solange der Trend heiß ist.",
       "pain": [
@@ -852,7 +852,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work für die Lieferantensuche",
       "tagline": "Geprüfte Lieferanten und gesendete Anfragen, ohne Hin und Her",
       "metaTitle": "Accio Work für die Lieferantensuche | AI Lieferantensuche",
-      "metaDescription": "Sourcing ist langsam, weil alles manuell ist, suchen, vergleichen, mailen, nachfassen. Accio Work übernimmt die Fleißarbeit, zeigt geprüfte Lieferanten und entwirft die Ansprache, damit du entscheidest statt zu graben.",
+      "metaDescription": "Sourcing ist langsam, weil alles manuell ist, suchen, vergleichen, mailen, nachfassen. Accio Work übernimmt die Fleißarbeit, zeigt geprüfte Lieferanten und",
       "h1": "Accio Work für die Lieferantensuche",
       "intro": "Sourcing ist langsam, weil alles manuell ist, suchen, vergleichen, mailen, nachfassen. Accio Work übernimmt die Fleißarbeit, zeigt geprüfte Lieferanten und entwirft die Ansprache, damit du entscheidest statt zu graben.",
       "pain": [
@@ -904,7 +904,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work für Content und Marketing",
       "tagline": "Landingpages, Produkttexte und Posts, planmäßig veröffentlicht",
       "metaTitle": "Accio Work für Content und Marketing | AI Content für E-Commerce",
-      "metaDescription": "Marketing Content ist ein Laufband. Accio Work schreibt die Landingpage, die Produktkarten und die Social Posts und plant sie ein, damit deine Kanäle leben, ohne dass du den ganzen Tag tippst.",
+      "metaDescription": "Marketing Content ist ein Laufband. Accio Work schreibt die Landingpage, die Produktkarten und die Social Posts und plant sie ein, damit deine Kanäle leben",
       "h1": "Accio Work für Content und Marketing",
       "intro": "Marketing Content ist ein Laufband. Accio Work schreibt die Landingpage, die Produktkarten und die Social Posts und plant sie ein, damit deine Kanäle leben, ohne dass du den ganzen Tag tippst.",
       "pain": [
@@ -956,7 +956,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work für Marktforschung",
       "tagline": "Wettbewerber, Nachfrage und Preise, für dich ausgewertet",
       "metaTitle": "Accio Work für Marktforschung | AI Marktforschung",
-      "metaDescription": "Gute Entscheidungen beginnen mit einem klaren Marktbild. Accio Work sammelt Wettbewerbszüge, Nachfragesignale und Preise und liefert dir eine Zusammenfassung zum Handeln statt eines Stapels Tabs.",
+      "metaDescription": "Gute Entscheidungen beginnen mit einem klaren Marktbild. Accio Work sammelt Wettbewerbszüge, Nachfragesignale und Preise und liefert dir eine Zusammenfassung",
       "h1": "Accio Work für Marktforschung",
       "intro": "Gute Entscheidungen beginnen mit einem klaren Marktbild. Accio Work sammelt Wettbewerbszüge, Nachfragesignale und Preise und liefert dir eine Zusammenfassung zum Handeln statt eines Stapels Tabs.",
       "pain": [
@@ -1008,7 +1008,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work für Workflow Automatisierung",
       "tagline": "Wiederkehrende Aufgaben, die der Agent planmäßig ausführt",
       "metaTitle": "Accio Work für Workflow Automatisierung | AI Workflow Automatisierung",
-      "metaDescription": "Die Aufgaben, die deine Woche fressen, sind meist jedes Mal gleich. Accio Work macht daraus Automatisierungen, die planmäßig und über deine bestehenden Apps laufen, damit die Routine sich selbst erledigt.",
+      "metaDescription": "Die Aufgaben, die deine Woche fressen, sind meist jedes Mal gleich. Accio Work macht daraus Automatisierungen, die planmäßig und über deine bestehenden Apps",
       "h1": "Accio Work für Workflow Automatisierung",
       "intro": "Die Aufgaben, die deine Woche fressen, sind meist jedes Mal gleich. Accio Work macht daraus Automatisierungen, die planmäßig und über deine bestehenden Apps laufen, damit die Routine sich selbst erledigt.",
       "pain": [
@@ -1060,7 +1060,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work für eigene Tools",
       "tagline": "Kleine interne Tools, gebaut per Beschreibung",
       "metaTitle": "Accio Work für eigene Tools | AI eigene Tools",
-      "metaDescription": "Manchmal gibt es das Tool, das du brauchst, noch nicht. Accio Work baut kleine interne Tools aus einer einfachen Beschreibung, damit du den Rechner, Tracker oder das Dashboard bekommst, ohne Entwicklerwarteschlange.",
+      "metaDescription": "Manchmal gibt es das Tool, das du brauchst, noch nicht. Accio Work baut kleine interne Tools aus einer einfachen Beschreibung, damit du den Rechner, Tracker",
       "h1": "Accio Work für eigene Tools",
       "intro": "Manchmal gibt es das Tool, das du brauchst, noch nicht. Accio Work baut kleine interne Tools aus einer einfachen Beschreibung, damit du den Rechner, Tracker oder das Dashboard bekommst, ohne Entwicklerwarteschlange.",
       "pain": [
@@ -1114,7 +1114,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work per il dropshipping",
       "tagline": "Dal trend alla prima vendita senza cambiare strumento",
       "metaTitle": "Accio Work per il dropshipping | strumento AI per il dropshipping",
-      "metaDescription": "Nel dropshipping conta la velocità. Accio Work percorre l'intero ciclo, individua un prodotto, trova un fornitore, costruisce la scheda e abbozza gli annunci, così ti muovi finché il trend è caldo.",
+      "metaDescription": "Nel dropshipping conta la velocità. Accio Work percorre l'intero ciclo, individua un prodotto, trova un fornitore, costruisce la scheda e abbozza gli",
       "h1": "Accio Work per il dropshipping",
       "intro": "Nel dropshipping conta la velocità. Accio Work percorre l'intero ciclo, individua un prodotto, trova un fornitore, costruisce la scheda e abbozza gli annunci, così ti muovi finché il trend è caldo.",
       "pain": [
@@ -1166,7 +1166,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work per il sourcing fornitori",
       "tagline": "Fornitori verificati e richieste inviate, senza tira e molla",
       "metaTitle": "Accio Work per il sourcing fornitori | sourcing fornitori con AI",
-      "metaDescription": "Il sourcing è lento perché è tutto manuale, cercare, confrontare, scrivere, rincorrere. Accio Work fa il lavoro pesante, mostra fornitori verificati e prepara i messaggi, così spendi tempo a decidere, non a scavare.",
+      "metaDescription": "Il sourcing è lento perché è tutto manuale, cercare, confrontare, scrivere, rincorrere. Accio Work fa il lavoro pesante, mostra fornitori verificati e",
       "h1": "Accio Work per il sourcing fornitori",
       "intro": "Il sourcing è lento perché è tutto manuale, cercare, confrontare, scrivere, rincorrere. Accio Work fa il lavoro pesante, mostra fornitori verificati e prepara i messaggi, così spendi tempo a decidere, non a scavare.",
       "pain": [
@@ -1218,7 +1218,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work per contenuti e marketing",
       "tagline": "Landing page, testi prodotto e post, pubblicati su pianificazione",
       "metaTitle": "Accio Work per contenuti e marketing | contenuti AI per e-commerce",
-      "metaDescription": "Il contenuto marketing è un tapis roulant. Accio Work scrive la landing page, le schede prodotto e i post social, poi li pianifica, così i tuoi canali restano vivi senza starci tutto il giorno.",
+      "metaDescription": "Il contenuto marketing è un tapis roulant. Accio Work scrive la landing page, le schede prodotto e i post social, poi li pianifica, così i tuoi canali",
       "h1": "Accio Work per contenuti e marketing",
       "intro": "Il contenuto marketing è un tapis roulant. Accio Work scrive la landing page, le schede prodotto e i post social, poi li pianifica, così i tuoi canali restano vivi senza starci tutto il giorno.",
       "pain": [
@@ -1270,7 +1270,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work per la ricerca di mercato",
       "tagline": "Concorrenti, domanda e prezzi, letti al posto tuo",
       "metaTitle": "Accio Work per la ricerca di mercato | ricerca di mercato con AI",
-      "metaDescription": "Le buone decisioni partono da una lettura chiara del mercato. Accio Work raccoglie le mosse dei concorrenti, i segnali di domanda e i prezzi, poi ti consegna un riassunto su cui agire invece di una pila di schede.",
+      "metaDescription": "Le buone decisioni partono da una lettura chiara del mercato. Accio Work raccoglie le mosse dei concorrenti, i segnali di domanda e i prezzi, poi ti consegna",
       "h1": "Accio Work per la ricerca di mercato",
       "intro": "Le buone decisioni partono da una lettura chiara del mercato. Accio Work raccoglie le mosse dei concorrenti, i segnali di domanda e i prezzi, poi ti consegna un riassunto su cui agire invece di una pila di schede.",
       "pain": [
@@ -1322,7 +1322,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work per l'automazione dei flussi",
       "tagline": "Attività ripetitive eseguite dall'agente su pianificazione",
       "metaTitle": "Accio Work per l'automazione dei flussi | automazione dei flussi con AI",
-      "metaDescription": "I compiti che divorano la settimana sono di solito sempre gli stessi. Accio Work li trasforma in automazioni, che girano su pianificazione e tra le app che già usi, così la routine si fa da sola.",
+      "metaDescription": "I compiti che divorano la settimana sono di solito sempre gli stessi. Accio Work li trasforma in automazioni, che girano su pianificazione e tra le app che",
       "h1": "Accio Work per l'automazione dei flussi",
       "intro": "I compiti che divorano la settimana sono di solito sempre gli stessi. Accio Work li trasforma in automazioni, che girano su pianificazione e tra le app che già usi, così la routine si fa da sola.",
       "pain": [
@@ -1374,7 +1374,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work per strumenti su misura",
       "tagline": "Piccoli strumenti interni, creati descrivendoli",
       "metaTitle": "Accio Work per strumenti su misura | strumenti su misura con AI",
-      "metaDescription": "A volte lo strumento che ti serve non esiste ancora. Accio Work crea piccoli strumenti interni da una semplice descrizione, così ottieni il calcolatore, il tracker o la dashboard senza la coda dallo sviluppatore.",
+      "metaDescription": "A volte lo strumento che ti serve non esiste ancora. Accio Work crea piccoli strumenti interni da una semplice descrizione, così ottieni il calcolatore, il",
       "h1": "Accio Work per strumenti su misura",
       "intro": "A volte lo strumento che ti serve non esiste ancora. Accio Work crea piccoli strumenti interni da una semplice descrizione, così ottieni il calcolatore, il tracker o la dashboard senza la coda dallo sviluppatore.",
       "pain": [
@@ -1428,7 +1428,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work para dropshipping",
       "tagline": "Del tendencia a la primera venta sin cambiar de herramienta",
       "metaTitle": "Accio Work para dropshipping | herramienta de IA para dropshipping",
-      "metaDescription": "En dropshipping todo depende de la velocidad. Accio Work recorre el ciclo completo, detecta un producto, encuentra un proveedor, arma la ficha y redacta los anuncios, para que actúes mientras la tendencia sigue caliente.",
+      "metaDescription": "En dropshipping todo depende de la velocidad. Accio Work recorre el ciclo completo, detecta un producto, encuentra un proveedor, arma la ficha y redacta los",
       "h1": "Accio Work para dropshipping",
       "intro": "En dropshipping todo depende de la velocidad. Accio Work recorre el ciclo completo, detecta un producto, encuentra un proveedor, arma la ficha y redacta los anuncios, para que actúes mientras la tendencia sigue caliente.",
       "pain": [
@@ -1480,7 +1480,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work para sourcing de proveedores",
       "tagline": "Proveedores verificados y consultas enviadas, sin idas y vueltas",
       "metaTitle": "Accio Work para sourcing de proveedores | sourcing de proveedores con IA",
-      "metaDescription": "El sourcing es lento porque todo es manual, buscar, comparar, escribir, perseguir. Accio Work hace el trabajo pesado, muestra proveedores verificados y redacta el contacto, para que dediques tiempo a decidir, no a rebuscar.",
+      "metaDescription": "El sourcing es lento porque todo es manual, buscar, comparar, escribir, perseguir. Accio Work hace el trabajo pesado, muestra proveedores verificados y",
       "h1": "Accio Work para sourcing de proveedores",
       "intro": "El sourcing es lento porque todo es manual, buscar, comparar, escribir, perseguir. Accio Work hace el trabajo pesado, muestra proveedores verificados y redacta el contacto, para que dediques tiempo a decidir, no a rebuscar.",
       "pain": [
@@ -1532,7 +1532,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work para contenido y marketing",
       "tagline": "Landing pages, textos de producto y posts, publicados según agenda",
       "metaTitle": "Accio Work para contenido y marketing | contenido con IA para e-commerce",
-      "metaDescription": "El contenido de marketing es una cinta sin fin. Accio Work escribe la landing page, las fichas de producto y los posts, y luego los programa, para que tus canales sigan vivos sin estar todo el día tecleando.",
+      "metaDescription": "El contenido de marketing es una cinta sin fin. Accio Work escribe la landing page, las fichas de producto y los posts, y luego los programa, para que tus",
       "h1": "Accio Work para contenido y marketing",
       "intro": "El contenido de marketing es una cinta sin fin. Accio Work escribe la landing page, las fichas de producto y los posts, y luego los programa, para que tus canales sigan vivos sin estar todo el día tecleando.",
       "pain": [
@@ -1584,7 +1584,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work para investigación de mercado",
       "tagline": "Competidores, demanda y precios, leídos por ti",
       "metaTitle": "Accio Work para investigación de mercado | investigación de mercado con IA",
-      "metaDescription": "Las buenas decisiones empiezan con una lectura clara del mercado. Accio Work reúne movimientos de la competencia, señales de demanda y precios, y te entrega un resumen accionable en lugar de una pila de pestañas.",
+      "metaDescription": "Las buenas decisiones empiezan con una lectura clara del mercado. Accio Work reúne movimientos de la competencia, señales de demanda y precios, y te entrega",
       "h1": "Accio Work para investigación de mercado",
       "intro": "Las buenas decisiones empiezan con una lectura clara del mercado. Accio Work reúne movimientos de la competencia, señales de demanda y precios, y te entrega un resumen accionable en lugar de una pila de pestañas.",
       "pain": [
@@ -1636,7 +1636,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work para automatización de flujos",
       "tagline": "Tareas repetitivas que el agente ejecuta según agenda",
       "metaTitle": "Accio Work para automatización de flujos | automatización de flujos con IA",
-      "metaDescription": "Las tareas que se comen tu semana suelen ser las mismas. Accio Work las convierte en automatizaciones, que corren según agenda y entre las apps que ya usas, para que lo rutinario se haga solo.",
+      "metaDescription": "Las tareas que se comen tu semana suelen ser las mismas. Accio Work las convierte en automatizaciones, que corren según agenda y entre las apps que ya usas",
       "h1": "Accio Work para automatización de flujos",
       "intro": "Las tareas que se comen tu semana suelen ser las mismas. Accio Work las convierte en automatizaciones, que corren según agenda y entre las apps que ya usas, para que lo rutinario se haga solo.",
       "pain": [
@@ -1688,7 +1688,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work para herramientas a medida",
       "tagline": "Pequeñas herramientas internas, creadas al describirlas",
       "metaTitle": "Accio Work para herramientas a medida | herramientas a medida con IA",
-      "metaDescription": "A veces la herramienta que necesitas aún no existe. Accio Work crea pequeñas herramientas internas a partir de una descripción sencilla, para que tengas la calculadora, el tracker o el panel sin cola de desarrollo.",
+      "metaDescription": "A veces la herramienta que necesitas aún no existe. Accio Work crea pequeñas herramientas internas a partir de una descripción sencilla, para que tengas la",
       "h1": "Accio Work para herramientas a medida",
       "intro": "A veces la herramienta que necesitas aún no existe. Accio Work crea pequeñas herramientas internas a partir de una descripción sencilla, para que tengas la calculadora, el tracker o el panel sin cola de desarrollo.",
       "pain": [
@@ -2056,7 +2056,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work para dropshipping",
       "tagline": "Da tendência à primeira venda sem trocar de ferramenta",
       "metaTitle": "Accio Work para dropshipping | ferramenta de IA para dropshipping",
-      "metaDescription": "No dropshipping tudo depende da velocidade. O Accio Work percorre o ciclo inteiro, encontra um produto, um fornecedor, monta a página e rascunha os anúncios, para você agir enquanto a tendência ainda está quente.",
+      "metaDescription": "No dropshipping tudo depende da velocidade. O Accio Work percorre o ciclo inteiro, encontra um produto, um fornecedor, monta a página e rascunha os anúncios",
       "h1": "Accio Work para dropshipping",
       "intro": "No dropshipping tudo depende da velocidade. O Accio Work percorre o ciclo inteiro, encontra um produto, um fornecedor, monta a página e rascunha os anúncios, para você agir enquanto a tendência ainda está quente.",
       "pain": [
@@ -2108,7 +2108,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work para sourcing de fornecedores",
       "tagline": "Fornecedores verificados e consultas enviadas, sem idas e vindas",
       "metaTitle": "Accio Work para sourcing de fornecedores | sourcing de fornecedores com IA",
-      "metaDescription": "O sourcing é lento porque é tudo manual, buscar, comparar, escrever, cobrar. O Accio Work faz o trabalho pesado, mostra fornecedores verificados e redige o contato, para você gastar tempo decidindo, não garimpando.",
+      "metaDescription": "O sourcing é lento porque é tudo manual, buscar, comparar, escrever, cobrar. O Accio Work faz o trabalho pesado, mostra fornecedores verificados e redige o",
       "h1": "Accio Work para sourcing de fornecedores",
       "intro": "O sourcing é lento porque é tudo manual, buscar, comparar, escrever, cobrar. O Accio Work faz o trabalho pesado, mostra fornecedores verificados e redige o contato, para você gastar tempo decidindo, não garimpando.",
       "pain": [
@@ -2160,7 +2160,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work para conteúdo e marketing",
       "tagline": "Landing pages, textos de produto e posts, publicados no horário",
       "metaTitle": "Accio Work para conteúdo e marketing | conteúdo com IA para e-commerce",
-      "metaDescription": "Conteúdo de marketing é uma esteira. O Accio Work escreve a landing page, as fichas de produto e os posts, e depois agenda tudo, para seus canais seguirem vivos sem você o dia todo no teclado.",
+      "metaDescription": "Conteúdo de marketing é uma esteira. O Accio Work escreve a landing page, as fichas de produto e os posts, e depois agenda tudo, para seus canais seguirem",
       "h1": "Accio Work para conteúdo e marketing",
       "intro": "Conteúdo de marketing é uma esteira. O Accio Work escreve a landing page, as fichas de produto e os posts, e depois agenda tudo, para seus canais seguirem vivos sem você o dia todo no teclado.",
       "pain": [
@@ -2212,7 +2212,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work para pesquisa de mercado",
       "tagline": "Concorrentes, demanda e preços, lidos por você",
       "metaTitle": "Accio Work para pesquisa de mercado | pesquisa de mercado com IA",
-      "metaDescription": "Boas decisões começam com uma leitura clara do mercado. O Accio Work reúne movimentos dos concorrentes, sinais de demanda e preços, e entrega um resumo acionável em vez de uma pilha de abas.",
+      "metaDescription": "Boas decisões começam com uma leitura clara do mercado. O Accio Work reúne movimentos dos concorrentes, sinais de demanda e preços, e entrega um resumo",
       "h1": "Accio Work para pesquisa de mercado",
       "intro": "Boas decisões começam com uma leitura clara do mercado. O Accio Work reúne movimentos dos concorrentes, sinais de demanda e preços, e entrega um resumo acionável em vez de uma pilha de abas.",
       "pain": [
@@ -2264,7 +2264,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work para automação de fluxos",
       "tagline": "Tarefas repetitivas que o agente executa no horário",
       "metaTitle": "Accio Work para automação de fluxos | automação de fluxos com IA",
-      "metaDescription": "As tarefas que devoram sua semana costumam ser as mesmas. O Accio Work as transforma em automações, que rodam no horário e entre os apps que você já usa, para o trabalho rotineiro se resolver sozinho.",
+      "metaDescription": "As tarefas que devoram sua semana costumam ser as mesmas. O Accio Work as transforma em automações, que rodam no horário e entre os apps que você já usa",
       "h1": "Accio Work para automação de fluxos",
       "intro": "As tarefas que devoram sua semana costumam ser as mesmas. O Accio Work as transforma em automações, que rodam no horário e entre os apps que você já usa, para o trabalho rotineiro se resolver sozinho.",
       "pain": [
@@ -2316,7 +2316,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work para ferramentas sob medida",
       "tagline": "Pequenas ferramentas internas, criadas ao descrevê-las",
       "metaTitle": "Accio Work para ferramentas sob medida | ferramentas sob medida com IA",
-      "metaDescription": "Às vezes a ferramenta de que você precisa ainda não existe. O Accio Work cria pequenas ferramentas internas a partir de uma descrição simples, para você ter a calculadora, o tracker ou o painel sem fila de desenvolvimento.",
+      "metaDescription": "Às vezes a ferramenta de que você precisa ainda não existe. O Accio Work cria pequenas ferramentas internas a partir de uma descrição simples, para você ter",
       "h1": "Accio Work para ferramentas sob medida",
       "intro": "Às vezes a ferramenta de que você precisa ainda não existe. O Accio Work cria pequenas ferramentas internas a partir de uma descrição simples, para você ter a calculadora, o tracker ou o painel sem fila de desenvolvimento.",
       "pain": [
@@ -2370,7 +2370,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "ड्रॉपशिपिंग के लिए Accio Work",
       "tagline": "ट्रेंड से पहली बिक्री तक, टूल बदले बिना",
       "metaTitle": "ड्रॉपशिपिंग के लिए Accio Work | ड्रॉपशिपिंग के लिए AI टूल",
-      "metaDescription": "ड्रॉपशिपिंग में सब कुछ रफ्तार पर टिका है। Accio Work पूरा चक्र चलाता है, प्रोडक्ट ढूंढना, सप्लायर खोजना, लिस्टिंग बनाना और विज्ञापन के ड्राफ्ट, ताकि आप ट्रेंड गर्म रहते ही आगे बढ़ें।",
+      "metaDescription": "ड्रॉपशिपिंग में सब कुछ रफ्तार पर टिका है। Accio Work पूरा चक्र चलाता है, प्रोडक्ट ढूंढना, सप्लायर खोजना, लिस्टिंग बनाना और विज्ञापन के ड्राफ्ट, ताकि आप",
       "h1": "ड्रॉपशिपिंग के लिए Accio Work",
       "intro": "ड्रॉपशिपिंग में सब कुछ रफ्तार पर टिका है। Accio Work पूरा चक्र चलाता है, प्रोडक्ट ढूंढना, सप्लायर खोजना, लिस्टिंग बनाना और विज्ञापन के ड्राफ्ट, ताकि आप ट्रेंड गर्म रहते ही आगे बढ़ें।",
       "pain": [
@@ -2422,7 +2422,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "सप्लायर सोर्सिंग के लिए Accio Work",
       "tagline": "जांचे हुए सप्लायर और भेजी गई पूछताछ, बिना बार बार के",
       "metaTitle": "सप्लायर सोर्सिंग के लिए Accio Work | AI सप्लायर सोर्सिंग",
-      "metaDescription": "सोर्सिंग धीमी है क्योंकि सब मैनुअल है, खोजना, तुलना, ईमेल, पीछा करना। Accio Work भागदौड़ खुद करता है, जांचे हुए सप्लायर दिखाता है और संदेश तैयार करता है, ताकि आप खोदने में नहीं, तय करने में समय दें।",
+      "metaDescription": "सोर्सिंग धीमी है क्योंकि सब मैनुअल है, खोजना, तुलना, ईमेल, पीछा करना। Accio Work भागदौड़ खुद करता है, जांचे हुए सप्लायर दिखाता है और संदेश तैयार करता है",
       "h1": "सप्लायर सोर्सिंग के लिए Accio Work",
       "intro": "सोर्सिंग धीमी है क्योंकि सब मैनुअल है, खोजना, तुलना, ईमेल, पीछा करना। Accio Work भागदौड़ खुद करता है, जांचे हुए सप्लायर दिखाता है और संदेश तैयार करता है, ताकि आप खोदने में नहीं, तय करने में समय दें।",
       "pain": [
@@ -2474,7 +2474,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "कंटेंट और मार्केटिंग के लिए Accio Work",
       "tagline": "लैंडिंग पेज, प्रोडक्ट कॉपी और पोस्ट, तय समय पर प्रकाशित",
       "metaTitle": "कंटेंट और मार्केटिंग के लिए Accio Work | ई-कॉमर्स के लिए AI कंटेंट",
-      "metaDescription": "मार्केटिंग कंटेंट एक ट्रेडमिल है। Accio Work लैंडिंग पेज, प्रोडक्ट कार्ड और सोशल पोस्ट लिखता है, फिर उन्हें शेड्यूल करता है, ताकि आपके चैनल दिन भर कीबोर्ड पर बैठे बिना जीवित रहें।",
+      "metaDescription": "मार्केटिंग कंटेंट एक ट्रेडमिल है। Accio Work लैंडिंग पेज, प्रोडक्ट कार्ड और सोशल पोस्ट लिखता है, फिर उन्हें शेड्यूल करता है, ताकि आपके चैनल दिन भर कीबोर्ड पर",
       "h1": "कंटेंट और मार्केटिंग के लिए Accio Work",
       "intro": "मार्केटिंग कंटेंट एक ट्रेडमिल है। Accio Work लैंडिंग पेज, प्रोडक्ट कार्ड और सोशल पोस्ट लिखता है, फिर उन्हें शेड्यूल करता है, ताकि आपके चैनल दिन भर कीबोर्ड पर बैठे बिना जीवित रहें।",
       "pain": [
@@ -2526,7 +2526,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "मार्केट रिसर्च के लिए Accio Work",
       "tagline": "प्रतियोगी, मांग और कीमत, आपके लिए पढ़े गए",
       "metaTitle": "मार्केट रिसर्च के लिए Accio Work | AI मार्केट रिसर्च",
-      "metaDescription": "अच्छे फैसले बाजार की साफ समझ से शुरू होते हैं। Accio Work प्रतियोगियों की चालें, मांग के संकेत और कीमतें जुटाता है, फिर ढेर सारे टैब के बजाय काम लायक सारांश देता है।",
+      "metaDescription": "अच्छे फैसले बाजार की साफ समझ से शुरू होते हैं। Accio Work प्रतियोगियों की चालें, मांग के संकेत और कीमतें जुटाता है, फिर ढेर सारे टैब के बजाय काम लायक सारांश",
       "h1": "मार्केट रिसर्च के लिए Accio Work",
       "intro": "अच्छे फैसले बाजार की साफ समझ से शुरू होते हैं। Accio Work प्रतियोगियों की चालें, मांग के संकेत और कीमतें जुटाता है, फिर ढेर सारे टैब के बजाय काम लायक सारांश देता है।",
       "pain": [
@@ -2578,7 +2578,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "वर्कफ्लो ऑटोमेशन के लिए Accio Work",
       "tagline": "दोहराए जाने वाले काम एजेंट तय समय पर चलाता है",
       "metaTitle": "वर्कफ्लो ऑटोमेशन के लिए Accio Work | AI वर्कफ्लो ऑटोमेशन",
-      "metaDescription": "जो काम आपका हफ्ता खा जाते हैं, वे अक्सर हर बार एक जैसे होते हैं। Accio Work उन्हें ऑटोमेशन में बदलता है, जो तय समय पर और आपके मौजूदा ऐप्स में चलते हैं, ताकि रूटीन खुद चले।",
+      "metaDescription": "जो काम आपका हफ्ता खा जाते हैं, वे अक्सर हर बार एक जैसे होते हैं। Accio Work उन्हें ऑटोमेशन में बदलता है, जो तय समय पर और आपके मौजूदा ऐप्स में चलते हैं, ताकि",
       "h1": "वर्कफ्लो ऑटोमेशन के लिए Accio Work",
       "intro": "जो काम आपका हफ्ता खा जाते हैं, वे अक्सर हर बार एक जैसे होते हैं। Accio Work उन्हें ऑटोमेशन में बदलता है, जो तय समय पर और आपके मौजूदा ऐप्स में चलते हैं, ताकि रूटीन खुद चले।",
       "pain": [
@@ -2630,7 +2630,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "कस्टम टूल्स के लिए Accio Work",
       "tagline": "छोटे आंतरिक टूल, बस बताकर बन जाते हैं",
       "metaTitle": "कस्टम टूल्स के लिए Accio Work | AI कस्टम टूल्स",
-      "metaDescription": "कभी कभी जो टूल आपको चाहिए वह अभी होता ही नहीं। Accio Work एक सादे विवरण से छोटे आंतरिक टूल बनाता है, ताकि आपको डेवलपर की कतार बिना कैलकुलेटर, ट्रैकर या डैशबोर्ड मिल जाए।",
+      "metaDescription": "कभी कभी जो टूल आपको चाहिए वह अभी होता ही नहीं। Accio Work एक सादे विवरण से छोटे आंतरिक टूल बनाता है, ताकि आपको डेवलपर की कतार बिना कैलकुलेटर, ट्रैकर या",
       "h1": "कस्टम टूल्स के लिए Accio Work",
       "intro": "कभी कभी जो टूल आपको चाहिए वह अभी होता ही नहीं। Accio Work एक सादे विवरण से छोटे आंतरिक टूल बनाता है, ताकि आपको डेवलपर की कतार बिना कैलकुलेटर, ट्रैकर या डैशबोर्ड मिल जाए।",
       "pain": [
@@ -2684,7 +2684,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work pour le dropshipping",
       "tagline": "De la tendance à la première vente sans changer d'outil",
       "metaTitle": "Accio Work pour le dropshipping | outil IA pour le dropshipping",
-      "metaDescription": "En dropshipping, tout se joue sur la vitesse. Accio Work parcourt toute la boucle, repère un produit, trouve un fournisseur, monte la fiche et rédige les annonces, pour que vous agissiez pendant que la tendance est chaude.",
+      "metaDescription": "En dropshipping, tout se joue sur la vitesse. Accio Work parcourt toute la boucle, repère un produit, trouve un fournisseur, monte la fiche et rédige les",
       "h1": "Accio Work pour le dropshipping",
       "intro": "En dropshipping, tout se joue sur la vitesse. Accio Work parcourt toute la boucle, repère un produit, trouve un fournisseur, monte la fiche et rédige les annonces, pour que vous agissiez pendant que la tendance est chaude.",
       "pain": [
@@ -2736,7 +2736,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work pour le sourcing fournisseurs",
       "tagline": "Fournisseurs vérifiés et demandes envoyées, sans allers-retours",
       "metaTitle": "Accio Work pour le sourcing fournisseurs | sourcing fournisseurs par IA",
-      "metaDescription": "Le sourcing est lent parce que tout est manuel, chercher, comparer, écrire, relancer. Accio Work fait le gros du travail, fait remonter des fournisseurs vérifiés et rédige la prise de contact, pour que vous passiez du temps à décider, pas à fouiller.",
+      "metaDescription": "Le sourcing est lent parce que tout est manuel, chercher, comparer, écrire, relancer. Accio Work fait le gros du travail, fait remonter des fournisseurs",
       "h1": "Accio Work pour le sourcing fournisseurs",
       "intro": "Le sourcing est lent parce que tout est manuel, chercher, comparer, écrire, relancer. Accio Work fait le gros du travail, fait remonter des fournisseurs vérifiés et rédige la prise de contact, pour que vous passiez du temps à décider, pas à fouiller.",
       "pain": [
@@ -2788,7 +2788,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work pour le contenu et le marketing",
       "tagline": "Pages de destination, textes produit et posts, publiés selon le planning",
       "metaTitle": "Accio Work pour le contenu et le marketing | contenu IA pour l'e-commerce",
-      "metaDescription": "Le contenu marketing est un tapis roulant. Accio Work écrit la page de destination, les fiches produit et les posts sociaux, puis les programme, pour que vos canaux restent vivants sans vous au clavier toute la journée.",
+      "metaDescription": "Le contenu marketing est un tapis roulant. Accio Work écrit la page de destination, les fiches produit et les posts sociaux, puis les programme, pour que vos",
       "h1": "Accio Work pour le contenu et le marketing",
       "intro": "Le contenu marketing est un tapis roulant. Accio Work écrit la page de destination, les fiches produit et les posts sociaux, puis les programme, pour que vos canaux restent vivants sans vous au clavier toute la journée.",
       "pain": [
@@ -2840,7 +2840,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work pour l'étude de marché",
       "tagline": "Concurrents, demande et prix, analysés pour vous",
       "metaTitle": "Accio Work pour l'étude de marché | étude de marché par IA",
-      "metaDescription": "Les bonnes décisions commencent par une lecture claire du marché. Accio Work réunit les mouvements des concurrents, les signaux de demande et les prix, puis vous remet un résumé exploitable plutôt qu'une pile d'onglets.",
+      "metaDescription": "Les bonnes décisions commencent par une lecture claire du marché. Accio Work réunit les mouvements des concurrents, les signaux de demande et les prix, puis",
       "h1": "Accio Work pour l'étude de marché",
       "intro": "Les bonnes décisions commencent par une lecture claire du marché. Accio Work réunit les mouvements des concurrents, les signaux de demande et les prix, puis vous remet un résumé exploitable plutôt qu'une pile d'onglets.",
       "pain": [
@@ -2892,7 +2892,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work pour l'automatisation des flux",
       "tagline": "Des tâches répétitives que l'agent exécute selon un planning",
       "metaTitle": "Accio Work pour l'automatisation des flux | automatisation des flux par IA",
-      "metaDescription": "Les tâches qui dévorent votre semaine sont souvent les mêmes. Accio Work les transforme en automatisations, qui tournent selon un planning et à travers les applis que vous utilisez déjà, pour que la routine se fasse seule.",
+      "metaDescription": "Les tâches qui dévorent votre semaine sont souvent les mêmes. Accio Work les transforme en automatisations, qui tournent selon un planning et à travers les",
       "h1": "Accio Work pour l'automatisation des flux",
       "intro": "Les tâches qui dévorent votre semaine sont souvent les mêmes. Accio Work les transforme en automatisations, qui tournent selon un planning et à travers les applis que vous utilisez déjà, pour que la routine se fasse seule.",
       "pain": [
@@ -2944,7 +2944,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       "name": "Accio Work pour des outils sur mesure",
       "tagline": "De petits outils internes, créés en les décrivant",
       "metaTitle": "Accio Work pour des outils sur mesure | outils sur mesure par IA",
-      "metaDescription": "Parfois l'outil dont vous avez besoin n'existe pas encore. Accio Work crée de petits outils internes à partir d'une simple description, pour que vous ayez le calculateur, le suivi ou le tableau de bord sans file d'attente côté développeur.",
+      "metaDescription": "Parfois l'outil dont vous avez besoin n'existe pas encore. Accio Work crée de petits outils internes à partir d'une simple description, pour que vous ayez le",
       "h1": "Accio Work pour des outils sur mesure",
       "intro": "Parfois l'outil dont vous avez besoin n'existe pas encore. Accio Work crée de petits outils internes à partir d'une simple description, pour que vous ayez le calculateur, le suivi ou le tableau de bord sans file d'attente côté développeur.",
       "pain": [

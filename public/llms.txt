@@ -84,3 +84,8 @@ Accio Work is an execution-oriented AI agent platform (not a chatbot). A general
 
 - [Is Accio Work right for you EN](https://acciowork.pro/quiz): five questions, honest result including when it is not a fit
 - Localized: /ru/quiz, /de/quiz, /it/quiz, /es/quiz, /zh/quiz, /pt/quiz, /hi/quiz, /fr/quiz
+
+## Free supplier kit (email templates + vetting checklist, all languages)
+
+- [Supplier email templates and checklist EN](https://acciowork.pro/templates): copy ready inquiry, negotiation and sample request emails, plus a supplier vetting checklist
+- Localized: /ru/templates, /de/templates, /it/templates, /es/templates, /zh/templates, /pt/templates, /hi/templates, /fr/templates

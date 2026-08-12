@@ -98,7 +98,7 @@ export function BlogList({ lang, articles }: { lang: "en" | "ru" | "de" | "it" |
                 {a.cover_url ? (
                   <img
                     src={a.cover_url}
-                    alt=""
+                    alt={a.title}
                     loading="lazy"
                     className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
                   />

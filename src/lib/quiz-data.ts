@@ -175,7 +175,7 @@ export const qzChrome: Record<QzLang, QzChrome> = {
     "weakNote": "Pas de souci. Un agent généraliste vous conviendra peut-être mieux.",
     "disclaimer": "C'est un guide rapide, pas un verdict. Le vrai test, c'est votre propre essai.",
     "metaTitle": "Accio Work est-il fait pour vous ? | Test de 2 minutes",
-    "metaDesc": "Répondez à cinq questions rapides et obtenez un avis honnête sur l'adéquation d'Accio Work, l'agent IA d'Alibaba, à votre activité, y compris quand ce n'est pas le cas."
+    "metaDesc": "Répondez à cinq questions rapides et obtenez un avis honnête sur l'adéquation d'Accio Work, l'agent IA d'Alibaba, à votre activité, y compris quand ce n'est"
   }
 };
 

@@ -52,6 +52,7 @@ export type Dict = {
     reviews: string;
     roi: string;
     quiz: string;
+    templates: string;
   };
   hero: {
     brand: string;
@@ -145,6 +146,7 @@ const en: Dict = {
     reviews: "Reviews",
     roi: "Calculator",
     quiz: "Fit quiz",
+    templates: "Templates",
   },
   hero: {
     brand: "Work",
@@ -329,6 +331,7 @@ const ru: Dict = {
     reviews: "Обзоры",
     roi: "Калькулятор",
     quiz: "Тест",
+    templates: "Шаблоны",
   },
   hero: {
     brand: "Work",
@@ -513,6 +516,7 @@ const de: Dict = {
     reviews: "Bewertungen",
     roi: "Rechner",
     quiz: "Eignungstest",
+    templates: "Vorlagen",
   },
   hero: {
     brand: "Work",
@@ -697,6 +701,7 @@ const it: Dict = {
     reviews: "Recensioni",
     roi: "Calcolatore",
     quiz: "Test idoneità",
+    templates: "Modelli",
   },
   hero: {
     brand: "Work",
@@ -881,6 +886,7 @@ const es: Dict = {
     reviews: "Reseñas",
     roi: "Calculadora",
     quiz: "Test de idoneidad",
+    templates: "Plantillas",
   },
   hero: {
     brand: "Work",
@@ -1065,6 +1071,7 @@ const zh: Dict = {
     reviews: "评价",
     roi: "计算器",
     quiz: "适配测试",
+    templates: "模板",
   },
   hero: {
     brand: "Work",
@@ -1250,6 +1257,7 @@ const pt: Dict = {
     reviews: "Avaliações",
     roi: "Calculadora",
     quiz: "Teste de perfil",
+    templates: "Modelos",
   },
   hero: {
     brand: "Work",
@@ -1434,6 +1442,7 @@ const hi: Dict = {
     reviews: "समीक्षाएं",
     roi: "कैलकुलेटर",
     quiz: "फिट टेस्ट",
+    templates: "टेम्पलेट",
   },
   hero: {
     brand: "Work",
@@ -1619,6 +1628,7 @@ const fr: Dict = {
     reviews: "Avis",
     roi: "Calculateur",
     quiz: "Test",
+    templates: "Modèles",
   },
   hero: {
     brand: "Work",

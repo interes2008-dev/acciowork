@@ -66,7 +66,7 @@ export const roiChrome: Record<RoiLang, RoiChrome> = {
     "tryLine": "Дайте ему реальную задачу и проверьте сами.",
     "disclaimer": "Это грубая оценка, а не обещание. AI-агент помогает с повторяющейся работой, но не заменяет ваши решения. Результат разный, и Accio Work лучше всего подходит трансграничной торговле.",
     "metaTitle": "Калькулятор экономии времени с AI-агентом | Accio Work",
-    "metaDesc": "Оцените, сколько часов в неделю агент вроде Accio Work может освободить на поиске поставщиков, анализе, контенте и админке, и сколько это стоит. Бесплатно попробовать."
+    "metaDesc": "Оцените, сколько часов в неделю агент вроде Accio Work может освободить на поиске поставщиков, анализе, контенте и админке, и сколько это стоит."
   },
   "de": {
     "kicker": "Interaktiv",
@@ -290,6 +290,6 @@ export const roiChrome: Record<RoiLang, RoiChrome> = {
     "tryLine": "Donnez-lui une vraie tâche et jugez par vous-même.",
     "disclaimer": "C'est une estimation approximative, pas une promesse. Un agent IA aide sur le travail répétitif, il ne remplace pas votre jugement. Les résultats varient et Accio Work convient surtout aux vendeurs transfrontaliers.",
     "metaTitle": "Calculateur de gain de temps avec agent IA | Accio Work",
-    "metaDesc": "Estimez combien d'heures par semaine un agent comme Accio Work peut libérer sur le sourcing, la recherche, le contenu et l'administration, et ce que ça vaut. Essai gratuit."
+    "metaDesc": "Estimez combien d'heures par semaine un agent comme Accio Work peut libérer sur le sourcing, la recherche, le contenu et l'administration, et ce que ça vaut."
   }
 };

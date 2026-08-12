@@ -80,6 +80,18 @@ export const Route = createFileRoute("/")({
           logo: "https://acciowork.pro/favicon.svg",
         }),
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          name: "Accio Work",
+          applicationCategory: "BusinessApplication",
+          operatingSystem: "Web, macOS, Windows",
+          inLanguage: "en-US",
+          offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+        }),
+      },
     ],
   }),
 });

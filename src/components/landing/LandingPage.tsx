@@ -6,6 +6,7 @@ import {
   Check,
   Globe,
   Headphones,
+  Menu,
   Sparkles,
   X,
 } from "lucide-react";
@@ -171,6 +172,21 @@ function Navbar() {
   const reviewsHref = blogHref.replace("/blog", "/reviews");
   const roiHref = blogHref.replace("/blog", "/roi");
   const quizHref = blogHref.replace("/blog", "/quiz");
+  const templatesHref = blogHref.replace("/blog", "/templates");
+  const [menuOpen, setMenuOpen] = useState(false);
+  const eventsHref = lang === "en" ? "/events/free-forever" : `/${lang}/events/free-forever`;
+  const mobileLinks = [
+    { href: "#pricing", label: t.nav.pricing },
+    { href: guideHref, label: t.nav.guide },
+    { href: blogHref, label: t.nav.blog },
+    { href: compareHref, label: t.nav.compare },
+    { href: reviewsHref, label: t.nav.reviews },
+    { href: roiHref, label: t.nav.roi },
+    { href: quizHref, label: t.nav.quiz },
+    { href: templatesHref, label: t.nav.templates },
+    { href: "#faq", label: t.nav.help },
+    { href: eventsHref, label: t.nav.events },
+  ];
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-[1280px] items-center justify-between px-6">
@@ -184,8 +200,9 @@ function Navbar() {
             <a href={reviewsHref} className="hover:text-foreground">{t.nav.reviews}</a>
             <a href={roiHref} className="hover:text-foreground">{t.nav.roi}</a>
             <a href={quizHref} className="hover:text-foreground">{t.nav.quiz}</a>
+            <a href={templatesHref} className="hover:text-foreground">{t.nav.templates}</a>
             <a href="#faq" className="flex items-center gap-1 hover:text-foreground">{t.nav.help}</a>
-            <a href={lang === "en" ? "/events/free-forever" : `/${lang}/events/free-forever`} className="flex items-center gap-1 hover:text-foreground">{t.nav.events} <span>🔥</span></a>
+            <a href={eventsHref} className="flex items-center gap-1 hover:text-foreground">{t.nav.events} <span>🔥</span></a>
           </nav>
         </div>
         <div className="flex items-center gap-5">
@@ -195,12 +212,48 @@ function Navbar() {
             href={REFERRAL_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-11 items-center rounded-full bg-[#0F172A] px-5 text-[14px] font-semibold text-white transition hover:bg-[#0F172A]/90"
+            className="hidden h-11 items-center rounded-full bg-[#0F172A] px-5 text-[14px] font-semibold text-white transition hover:bg-[#0F172A]/90 sm:inline-flex"
           >
             {t.nav.download}
           </a>
+          <button
+            type="button"
+            aria-label="Menu"
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((v) => !v)}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-foreground/80 hover:bg-foreground/5 md:hidden"
+          >
+            {menuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
         </div>
       </div>
+
+      {menuOpen && (
+        <nav className="border-t border-border/60 bg-background/95 backdrop-blur-md md:hidden">
+          <div className="mx-auto flex max-w-[1280px] flex-col px-6 py-3">
+            {mobileLinks.map((l) => (
+              <a
+                key={l.label}
+                href={l.href}
+                onClick={() => setMenuOpen(false)}
+                className="flex items-center gap-1.5 border-b border-border/40 py-3 text-[16px] font-medium text-foreground/85 last:border-b-0 hover:text-foreground"
+              >
+                {l.label}
+                {l.href === eventsHref && <span>🔥</span>}
+              </a>
+            ))}
+            <a
+              href={REFERRAL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMenuOpen(false)}
+              className="mt-3 inline-flex h-12 items-center justify-center rounded-full bg-[#17B26A] px-5 text-[15px] font-semibold text-white"
+            >
+              {t.nav.download}
+            </a>
+          </div>
+        </nav>
+      )}
     </header>
   );
 }
@@ -895,6 +948,7 @@ function Footer() {
           <a href={`${base}/reviews`} className="hover:text-foreground">{t.nav.reviews}</a>
           <a href={`${base}/roi`} className="hover:text-foreground">{t.nav.roi}</a>
           <a href={`${base}/quiz`} className="hover:text-foreground">{t.nav.quiz}</a>
+          <a href={`${base}/templates`} className="hover:text-foreground">{t.nav.templates}</a>
           <a href={`${base}/blog`} className="hover:text-foreground">{t.nav.blog}</a>
           <a href={`${base}/events/free-forever`} className="hover:text-foreground">{t.nav.events}</a>
           <a href="#faq" className="hover:text-foreground">{t.nav.help}</a>

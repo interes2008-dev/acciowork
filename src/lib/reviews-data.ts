@@ -53,7 +53,7 @@ export const rvChrome: Record<RvLang, RvChrome> = {
     "tryLine": "Sieh, was es an einer eigenen Aufgabe leistet.",
     "backHome": "Startseite",
     "metaTitle": "Accio Work Bewertungen und Presse | Was Rezensenten sagen",
-    "metaDesc": "Was Presse und unabhängige Rezensenten über Accio Work sagen, Alibabas KI Agent. Berichte von Forbes, Digital Commerce 360, AI Business und Reviews, jeweils verlinkt."
+    "metaDesc": "Was Presse und unabhängige Rezensenten über Accio Work sagen, Alibabas KI Agent. Berichte von Forbes, Digital Commerce 360, AI Business und Reviews, jeweils"
   },
   "it": {
     "kicker": "Recensioni e stampa",
@@ -85,7 +85,7 @@ export const rvChrome: Record<RvLang, RvChrome> = {
     "tryLine": "Mira qué hace con una de tus tareas.",
     "backHome": "Inicio",
     "metaTitle": "Reseñas y prensa de Accio Work | Qué dicen",
-    "metaDesc": "Qué dicen la prensa y reseñadores independientes sobre Accio Work, el agente de IA de Alibaba. Cobertura de Forbes, Digital Commerce 360, AI Business y reseñas, con enlaces."
+    "metaDesc": "Qué dicen la prensa y reseñadores independientes sobre Accio Work, el agente de IA de Alibaba. Cobertura de Forbes, Digital Commerce 360, AI Business y"
   },
   "zh": {
     "kicker": "评价与报道",
@@ -117,7 +117,7 @@ export const rvChrome: Record<RvLang, RvChrome> = {
     "tryLine": "Veja o que ele faz em uma tarefa sua.",
     "backHome": "Início",
     "metaTitle": "Avaliações e imprensa do Accio Work | O que dizem",
-    "metaDesc": "O que a imprensa e avaliadores independentes dizem sobre o Accio Work, agente de IA da Alibaba. Cobertura da Forbes, Digital Commerce 360, AI Business e avaliações, com links."
+    "metaDesc": "O que a imprensa e avaliadores independentes dizem sobre o Accio Work, agente de IA da Alibaba. Cobertura da Forbes, Digital Commerce 360, AI Business e"
   },
   "hi": {
     "kicker": "समीक्षाएं और प्रेस",
@@ -149,7 +149,7 @@ export const rvChrome: Record<RvLang, RvChrome> = {
     "tryLine": "Voyez ce qu'il fait sur l'une de vos tâches.",
     "backHome": "Accueil",
     "metaTitle": "Avis et presse Accio Work | Ce que disent les testeurs",
-    "metaDesc": "Ce que la presse et des testeurs indépendants disent d'Accio Work, l'agent IA d'Alibaba. Couverture de Forbes, Digital Commerce 360, AI Business et avis, avec liens."
+    "metaDesc": "Ce que la presse et des testeurs indépendants disent d'Accio Work, l'agent IA d'Alibaba. Couverture de Forbes, Digital Commerce 360, AI Business et avis"
   }
 };
 
