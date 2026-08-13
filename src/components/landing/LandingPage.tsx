@@ -972,7 +972,6 @@ function DownloadButton() {
   }, [open]);
 
   const label = os === "win" ? t.cta.downloadWin : t.cta.download;
-  const badge = os === "win" ? "x64" : t.cta.ctaBadge;
   const options = [
     { os: "mac" as const, name: "macOS", variant: "Apple Silicon" },
     { os: "mac" as const, name: "macOS", variant: "Intel" },
@@ -997,9 +996,11 @@ function DownloadButton() {
           aria-haspopup="menu"
           aria-expanded={open}
           aria-label="Choose platform"
-          className="inline-flex items-center gap-1 border-l border-white/15 px-4 text-[13px] font-medium text-white/80 transition hover:bg-white/5"
+          className="inline-flex items-center gap-2 border-l border-white/15 px-4 transition hover:bg-white/5"
         >
-          {badge} <ChevronDown className={`h-4 w-4 transition-transform ${open ? "rotate-180" : ""}`} />
+          <Apple className={`h-4 w-4 ${os === "mac" ? "text-white" : "text-white/40"}`} />
+          <WindowsIcon className={`h-4 w-4 ${os === "win" ? "text-white" : "text-white/40"}`} />
+          <ChevronDown className={`h-4 w-4 text-white/70 transition-transform ${open ? "rotate-180" : ""}`} />
         </button>
       </div>
       {open && (

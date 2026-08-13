@@ -169,7 +169,7 @@ const en: Dict = {
       "Automates your business end-to-end, research & analysis, sourcing & negotiation, marketing & sales, operations & CRM, delivering real profit.",
     cta: "Download for macOS",
     ctaBadge: "Apple Silicon",
-    ctaNote: "For macOS 11 or later",
+    ctaNote: "For macOS 11+ and Windows 10+",
   },
   business: {
     heading: "Built for every business need",
@@ -275,7 +275,7 @@ const en: Dict = {
     downloadWin: "Download for Windows",
     ctaBadge: "Apple Silicon",
     quickStart: "Quick Start",
-    note: "For macOS 11 or later",
+    note: "For macOS 11+ and Windows 10+",
   },
   footer: {
     partneredWith: "Partnered with",
@@ -365,7 +365,7 @@ const ru: Dict = {
       "Автоматизирует ваш бизнес от начала до конца, исследование и аналитика, поиск поставщиков и переговоры, маркетинг и продажи, операции и CRM, и приносит реальную прибыль.",
     cta: "Скачать для macOS",
     ctaBadge: "Apple Silicon",
-    ctaNote: "Для macOS 11 или новее",
+    ctaNote: "Для macOS 11+ и Windows 10+",
   },
   business: {
     heading: "Создано для любой бизнес-задачи",
@@ -471,7 +471,7 @@ const ru: Dict = {
     downloadWin: "Скачать для Windows",
     ctaBadge: "Apple Silicon",
     quickStart: "Быстрый старт",
-    note: "Для macOS 11 или новее",
+    note: "Для macOS 11+ и Windows 10+",
   },
   footer: {
     partneredWith: "В партнёрстве с",
@@ -561,7 +561,7 @@ const de: Dict = {
       "Automatisiert Ihr Business von A bis Z, Recherche & Analyse, Sourcing & Verhandlung, Marketing & Vertrieb, Betrieb & CRM, für echten Gewinn.",
     cta: "Für macOS herunterladen",
     ctaBadge: "Apple Silicon",
-    ctaNote: "Für macOS 11 oder neuer",
+    ctaNote: "Für macOS 11+ und Windows 10+",
   },
   business: {
     heading: "Für jede Business-Anforderung gebaut",
@@ -667,7 +667,7 @@ const de: Dict = {
     downloadWin: "Für Windows herunterladen",
     ctaBadge: "Apple Silicon",
     quickStart: "Schnellstart",
-    note: "Für macOS 11 oder neuer",
+    note: "Für macOS 11+ und Windows 10+",
   },
   footer: {
     partneredWith: "In Partnerschaft mit",
@@ -757,7 +757,7 @@ const it: Dict = {
       "Automatizza il tuo business dall'inizio alla fine: ricerca e analisi, sourcing e negoziazione, marketing e vendite, operazioni e CRM, con un profitto reale.",
     cta: "Scarica per macOS",
     ctaBadge: "Apple Silicon",
-    ctaNote: "Per macOS 11 o versione successiva",
+    ctaNote: "Per macOS 11+ e Windows 10+",
   },
   business: {
     heading: "Costruito per ogni esigenza aziendale",
@@ -863,7 +863,7 @@ const it: Dict = {
     downloadWin: "Scarica per Windows",
     ctaBadge: "Apple Silicon",
     quickStart: "Avvio rapido",
-    note: "Per macOS 11 o versione successiva",
+    note: "Per macOS 11+ e Windows 10+",
   },
   footer: {
     partneredWith: "In partnership con",
@@ -953,7 +953,7 @@ const es: Dict = {
       "Automatiza tu negocio de principio a fin: investigación y análisis, sourcing y negociación, marketing y ventas, operaciones y CRM, con beneficios reales.",
     cta: "Descargar para macOS",
     ctaBadge: "Apple Silicon",
-    ctaNote: "Para macOS 11 o versión superior",
+    ctaNote: "Para macOS 11+ y Windows 10+",
   },
   business: {
     heading: "Hecho para cada necesidad de tu negocio",
@@ -1059,7 +1059,7 @@ const es: Dict = {
     downloadWin: "Descargar para Windows",
     ctaBadge: "Apple Silicon",
     quickStart: "Inicio rápido",
-    note: "Para macOS 11 o versión superior",
+    note: "Para macOS 11+ y Windows 10+",
   },
   footer: {
     partneredWith: "En colaboración con",
@@ -1149,7 +1149,7 @@ const zh: Dict = {
       "端到端自动化你的业务：市场研究与分析、供应商采购与谈判、营销与销售、运营与 CRM，带来真实收益。",
     cta: "下载 macOS 版",
     ctaBadge: "Apple Silicon",
-    ctaNote: "适用于 macOS 11 及以上版本",
+    ctaNote: "适用于 macOS 11+ 和 Windows 10+",
   },
   business: {
     heading: "满足业务的每一个需求",
@@ -1255,7 +1255,7 @@ const zh: Dict = {
     downloadWin: "下载 Windows 版",
     ctaBadge: "Apple Silicon",
     quickStart: "快速开始",
-    note: "适用于 macOS 11 及以上版本",
+    note: "适用于 macOS 11+ 和 Windows 10+",
   },
   footer: {
     partneredWith: "合作伙伴",
@@ -1346,7 +1346,7 @@ const pt: Dict = {
       "Automatize seu negócio de ponta a ponta: pesquisa e análise, sourcing e negociação, marketing e vendas, operações e CRM, com resultados reais.",
     cta: "Baixar para macOS",
     ctaBadge: "Apple Silicon",
-    ctaNote: "Para macOS 11 ou versão superior",
+    ctaNote: "Para macOS 11+ e Windows 10+",
   },
   business: {
     heading: "Feito para cada necessidade do seu negócio",
@@ -1452,7 +1452,7 @@ const pt: Dict = {
     downloadWin: "Baixar para Windows",
     ctaBadge: "Apple Silicon",
     quickStart: "Início rápido",
-    note: "Para macOS 11 ou versão superior",
+    note: "Para macOS 11+ e Windows 10+",
   },
   footer: {
     partneredWith: "Em parceria com",
@@ -1542,7 +1542,7 @@ const hi: Dict = {
       "अपने पूरे बिज़नेस को शुरू से अंत तक ऑटोमेट करें: रिसर्च और एनालिसिस, सोर्सिंग और बातचीत, मार्केटिंग और सेल्स, ऑपरेशन और CRM, असली नतीजों के साथ।",
     cta: "macOS के लिए डाउनलोड करें",
     ctaBadge: "Apple Silicon",
-    ctaNote: "macOS 11 या उससे नए के लिए",
+    ctaNote: "macOS 11+ और Windows 10+ के लिए",
   },
   business: {
     heading: "आपके व्यवसाय की हर ज़रूरत के लिए बना",
@@ -1648,7 +1648,7 @@ const hi: Dict = {
     downloadWin: "Windows के लिए डाउनलोड करें",
     ctaBadge: "Apple Silicon",
     quickStart: "क्विक स्टार्ट",
-    note: "macOS 11 या नए के लिए",
+    note: "macOS 11+ और Windows 10+ के लिए",
   },
   footer: {
     partneredWith: "सहयोगी",
@@ -1739,7 +1739,7 @@ const fr: Dict = {
       "Automatisez votre activité de bout en bout : recherche et analyse, sourcing et négociation, marketing et ventes, opérations et CRM, avec un vrai retour sur investissement.",
     cta: "Télécharger pour macOS",
     ctaBadge: "Apple Silicon",
-    ctaNote: "Pour macOS 11 ou version ultérieure",
+    ctaNote: "Pour macOS 11+ et Windows 10+",
   },
   business: {
     heading: "Conçu pour chaque besoin business",
@@ -1845,7 +1845,7 @@ const fr: Dict = {
     downloadWin: "Télécharger pour Windows",
     ctaBadge: "Apple Silicon",
     quickStart: "Démarrage rapide",
-    note: "Pour macOS 11 ou version ultérieure",
+    note: "Pour macOS 11+ et Windows 10+",
   },
   footer: {
     partneredWith: "En partenariat avec",
