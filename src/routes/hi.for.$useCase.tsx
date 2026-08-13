@@ -6,7 +6,7 @@ const LANG = "hi" as const;
 const LANGS = ["en","ru","de","it","es","zh","pt","hi","fr"] as const;
 
 function alternates(slug: string) {
-  const list = LANGS.map((l) => ({
+  const list: Array<{ rel: string; hrefLang: string; href: string }> = LANGS.map((l) => ({
     rel: "alternate",
     hrefLang: l,
     href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/for/${slug}`,
