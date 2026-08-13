@@ -1,12 +1,4 @@
 import { createServerFn } from "@tanstack/react-start";
-import { createClient } from "@supabase/supabase-js";
-
-function publicClient() {
-  const key = process.env.SUPABASE_PUBLISHABLE_KEY!;
-  return createClient(process.env.SUPABASE_URL!, key, {
-    auth: { persistSession: false, autoRefreshToken: false },
-  });
-}
 
 export type ScanRun = {
   id: string;
@@ -41,7 +33,9 @@ export type ScanIssue = {
 };
 
 export const getSeoMonitorOverview = createServerFn({ method: "GET" }).handler(async () => {
-  const supabase = publicClient();
+  // Internal SEO tables are no longer exposed to anon/authenticated roles;
+  // read them server-side only.
+  const { supabaseAdmin: supabase } = await import("@/integrations/supabase/client.server");
   const { data: runs } = await supabase
     .from("seo_scan_runs")
     .select("*")
