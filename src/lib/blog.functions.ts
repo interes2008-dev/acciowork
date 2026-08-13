@@ -40,13 +40,16 @@ export const listArticles = createServerFn({ method: "GET" })
     const supabase = publicClient();
     const { data: rows, error } = await supabase
       .from("blog_articles")
-      .select("id, slug, title, description, cover_url, reading_minutes, published_at, lang")
+      .select("id, slug, title, description, has_cover, reading_minutes, published_at, lang")
       .eq("lang", data.lang)
       .eq("status", "published")
       .order("published_at", { ascending: false })
       .limit(data.limit);
     if (error) throw new Error(error.message);
-    return (rows ?? []) as ArticleListItem[];
+    return (rows ?? []).map(({ has_cover, ...r }) => ({
+      ...r,
+      cover_url: has_cover ? `/api/public/blog-cover/${r.id}` : null,
+    })) as ArticleListItem[];
   });
 
 export const getArticle = createServerFn({ method: "GET" })
@@ -57,14 +60,18 @@ export const getArticle = createServerFn({ method: "GET" })
     const supabase = publicClient();
     const { data: row, error } = await supabase
       .from("blog_articles")
-      .select("id, slug, title, description, cover_url, reading_minutes, published_at, lang, body_md, keywords, topic_id")
+      .select("id, slug, title, description, has_cover, reading_minutes, published_at, lang, body_md, keywords, topic_id")
       .eq("lang", data.lang)
       .eq("slug", data.slug)
       .eq("status", "published")
       .maybeSingle();
     if (error) throw new Error(error.message);
     if (!row) return null;
-    return row as ArticleFull;
+    const { has_cover, ...rest } = row;
+    return {
+      ...rest,
+      cover_url: has_cover ? `/api/public/blog-cover/${rest.id}` : null,
+    } as ArticleFull;
   });
 
 export const getArticleAlternates = createServerFn({ method: "GET" })
