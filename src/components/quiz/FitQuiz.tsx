@@ -69,7 +69,10 @@ export function FitQuiz({ lang }: { lang: QzLang }) {
     setDone(false);
   }
 
-  const score = answers.reduce((sum, a, i) => sum + (a !== null ? qzQuestions[i].options[a].score : 0), 0);
+  const score = answers.reduce<number>(
+    (sum, a, i) => sum + (a !== null ? qzQuestions[i].options[a].score : 0),
+    0,
+  );
   const tier = score >= 7 ? "strong" : score >= 4 ? "partial" : "weak";
   const result = qzResults[tier];
 
