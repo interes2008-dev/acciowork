@@ -98,6 +98,7 @@ export type Dict = {
     title: string;
     subtitle: string;
     download: string;
+    downloadWin: string;
     ctaBadge: string;
     quickStart: string;
     note: string;
@@ -271,6 +272,7 @@ const en: Dict = {
     title: "Try Accio Work today.",
     subtitle: "Enjoy the ultimate work experience with Accio Work.",
     download: "Download for macOS",
+    downloadWin: "Download for Windows",
     ctaBadge: "Apple Silicon",
     quickStart: "Quick Start",
     note: "For macOS 11 or later",
@@ -466,6 +468,7 @@ const ru: Dict = {
     title: "Попробуйте Accio Work сегодня.",
     subtitle: "Получите максимум от работы вместе с Accio Work.",
     download: "Скачать для macOS",
+    downloadWin: "Скачать для Windows",
     ctaBadge: "Apple Silicon",
     quickStart: "Быстрый старт",
     note: "Для macOS 11 или новее",
@@ -661,6 +664,7 @@ const de: Dict = {
     title: "Testen Sie Accio Work heute.",
     subtitle: "Erleben Sie die ultimative Arbeitsweise mit Accio Work.",
     download: "Für macOS herunterladen",
+    downloadWin: "Für Windows herunterladen",
     ctaBadge: "Apple Silicon",
     quickStart: "Schnellstart",
     note: "Für macOS 11 oder neuer",
@@ -856,6 +860,7 @@ const it: Dict = {
     title: "Prova Accio Work oggi.",
     subtitle: "Vivi l'esperienza di lavoro definitiva con Accio Work.",
     download: "Scarica per macOS",
+    downloadWin: "Scarica per Windows",
     ctaBadge: "Apple Silicon",
     quickStart: "Avvio rapido",
     note: "Per macOS 11 o versione successiva",
@@ -1051,6 +1056,7 @@ const es: Dict = {
     title: "Prueba Accio Work hoy.",
     subtitle: "Vive la experiencia de trabajo definitiva con Accio Work.",
     download: "Descargar para macOS",
+    downloadWin: "Descargar para Windows",
     ctaBadge: "Apple Silicon",
     quickStart: "Inicio rápido",
     note: "Para macOS 11 o versión superior",
@@ -1246,6 +1252,7 @@ const zh: Dict = {
     title: "今天就试试 Accio Work。",
     subtitle: "用 Accio Work 感受更好的工作方式。",
     download: "下载 macOS 版",
+    downloadWin: "下载 Windows 版",
     ctaBadge: "Apple Silicon",
     quickStart: "快速开始",
     note: "适用于 macOS 11 及以上版本",
@@ -1442,6 +1449,7 @@ const pt: Dict = {
     title: "Experimente a Accio Work hoje.",
     subtitle: "Viva a experiência de trabalho definitiva com a Accio Work.",
     download: "Baixar para macOS",
+    downloadWin: "Baixar para Windows",
     ctaBadge: "Apple Silicon",
     quickStart: "Início rápido",
     note: "Para macOS 11 ou versão superior",
@@ -1637,6 +1645,7 @@ const hi: Dict = {
     title: "आज ही Accio Work आज़माएँ।",
     subtitle: "Accio Work के साथ बेहतरीन काम का अनुभव पाएँ।",
     download: "macOS के लिए डाउनलोड करें",
+    downloadWin: "Windows के लिए डाउनलोड करें",
     ctaBadge: "Apple Silicon",
     quickStart: "क्विक स्टार्ट",
     note: "macOS 11 या नए के लिए",
@@ -1833,6 +1842,7 @@ const fr: Dict = {
     title: "Essayez Accio Work dès aujourd'hui.",
     subtitle: "Découvrez l'expérience de travail ultime avec Accio Work.",
     download: "Télécharger pour macOS",
+    downloadWin: "Télécharger pour Windows",
     ctaBadge: "Apple Silicon",
     quickStart: "Démarrage rapide",
     note: "Pour macOS 11 ou version ultérieure",

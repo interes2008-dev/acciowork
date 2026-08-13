@@ -381,18 +381,7 @@ function Hero() {
         </p>
 
         <div className="mt-10 flex flex-col items-center">
-          <a
-            href={REFERRAL_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex items-center gap-3 rounded-full bg-[#0F172A] py-4 pl-6 pr-2 text-[16px] font-semibold text-white shadow-elegant transition hover:scale-[1.02]"
-          >
-            <Apple className="h-5 w-5" />
-            <span>{t.hero.cta}</span>
-            <span className="ml-2 inline-flex items-center gap-1 rounded-full bg-white/10 px-4 py-2 text-[13px] font-medium text-white/90">
-              {t.hero.ctaBadge} <ChevronDown className="h-3.5 w-3.5" />
-            </span>
-          </a>
+          <DownloadButton />
           <p className="mt-3 text-[13px] text-muted-foreground">{t.hero.ctaNote}</p>
           <p className="mt-1 flex items-center gap-1.5 text-[13px] font-medium text-foreground/70">
             <Globe className="h-3.5 w-3.5 text-[#17B26A]" />
@@ -955,6 +944,90 @@ function Faq() {
 }
 
 /* ---------- Final CTA ---------- */
+function WindowsIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden>
+      <path d="M3 5.75 10.4 4.6v6.9H3V5.75Zm0 12.5V12.6h7.4v6.9L3 18.25ZM11.6 4.42 21 3v8.5h-9.4V4.42Zm0 8.18H21V21l-9.4-1.42V12.6Z" />
+    </svg>
+  );
+}
+
+function DownloadButton() {
+  const { t } = useI18n();
+  const [os, setOs] = useState<"mac" | "win">("mac");
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement | null>(null);
+  useEffect(() => {
+    const ua = typeof navigator !== "undefined" ? navigator.userAgent : "";
+    if (/Windows|Win64|Win32/i.test(ua)) setOs("win");
+    else if (/Mac|iPhone|iPad|iPod/i.test(ua)) setOs("mac");
+  }, []);
+  useEffect(() => {
+    if (!open) return;
+    const onDoc = (e: MouseEvent) => {
+      if (!ref.current?.contains(e.target as Node)) setOpen(false);
+    };
+    document.addEventListener("mousedown", onDoc);
+    return () => document.removeEventListener("mousedown", onDoc);
+  }, [open]);
+
+  const label = os === "win" ? t.cta.downloadWin : t.cta.download;
+  const badge = os === "win" ? "x64" : t.cta.ctaBadge;
+  const options = [
+    { os: "mac" as const, name: "macOS", variant: "Apple Silicon" },
+    { os: "mac" as const, name: "macOS", variant: "Intel" },
+    { os: "win" as const, name: "Windows", variant: "x64" },
+  ];
+
+  return (
+    <div ref={ref} className="relative">
+      <div className="inline-flex items-stretch overflow-hidden rounded-full bg-[#0F172A] text-white shadow-elegant">
+        <a
+          href={REFERRAL_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-3 py-4 pl-6 pr-4 text-[16px] font-semibold transition hover:bg-white/5"
+        >
+          {os === "win" ? <WindowsIcon className="h-5 w-5" /> : <Apple className="h-5 w-5" />}
+          {label}
+        </a>
+        <button
+          type="button"
+          onClick={() => setOpen((v) => !v)}
+          aria-haspopup="menu"
+          aria-expanded={open}
+          aria-label="Choose platform"
+          className="inline-flex items-center gap-1 border-l border-white/15 px-4 text-[13px] font-medium text-white/80 transition hover:bg-white/5"
+        >
+          {badge} <ChevronDown className={`h-4 w-4 transition-transform ${open ? "rotate-180" : ""}`} />
+        </button>
+      </div>
+      {open && (
+        <div
+          role="menu"
+          className="absolute left-1/2 top-full z-50 mt-2 w-64 -translate-x-1/2 overflow-hidden rounded-2xl border border-black/10 bg-white p-1.5 text-left shadow-[0_12px_40px_rgba(0,0,0,0.16)]"
+        >
+          {options.map((o, i) => (
+            <a
+              key={i}
+              href={REFERRAL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOs(o.os)}
+              role="menuitem"
+              className="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-[15px] text-[#0E1210]/80 transition hover:bg-[#F3FBF7] hover:text-[#0E1210]"
+            >
+              {o.os === "win" ? <WindowsIcon className="h-4 w-4 text-[#0E1210]/70" /> : <Apple className="h-4 w-4 text-[#0E1210]/70" />}
+              <span className="font-medium">{o.name}</span>
+              <span className="ml-auto text-[13px] text-[#0E1210]/45">{o.variant}</span>
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 function FinalCta() {
   const { t } = useI18n();
   return (
@@ -967,19 +1040,7 @@ function FinalCta() {
           {t.cta.subtitle}
         </p>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <a
-            href={REFERRAL_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 rounded-full bg-foreground px-7 py-4 text-[16px] font-semibold text-background transition-transform hover:-translate-y-0.5"
-          >
-            <Apple className="h-5 w-5" />
-            {t.cta.download}
-            <span className="mx-1 h-5 w-px bg-background/25" />
-            <span className="inline-flex items-center gap-1 text-[14px] font-medium text-background/80">
-              {t.cta.ctaBadge} <ChevronDown className="h-4 w-4" />
-            </span>
-          </a>
+          <DownloadButton />
           <a
             href={REFERRAL_URL}
             target="_blank"

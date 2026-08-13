@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { ArrowRight, ArrowLeft, ExternalLink, Check } from "lucide-react";
 import { rvChrome, rvPress, rvWays, type RvLang } from "@/lib/reviews-data";
+import { LangMenu } from "@/components/common/LangMenu";
 
 const REFERRAL_URL =
   "https://www.accio.com/login?sId=KECtp1GttZ42%2FwpJUH5IxQ%3D%3D&ic=IC506004212009&tenant=accio&src=p_referral_IC506004212009&source=invite_center&return_url=https%3A%2F%2Fwww.accio.com%2Fwork%2F";
@@ -28,7 +29,9 @@ function Shell({ lang, children }: { lang: RvLang; children: ReactNode }) {
             </svg>
             <span>Accio</span>
           </a>
-          <a
+          <div className="flex items-center gap-2 sm:gap-3">
+            <LangMenu lang={lang} />
+            <a
             href={REFERRAL_URL}
             target="_blank"
             rel="noopener noreferrer nofollow"
@@ -36,6 +39,7 @@ function Shell({ lang, children }: { lang: RvLang; children: ReactNode }) {
           >
             {c.ctaPrimary}
           </a>
+          </div>
         </div>
       </header>
       {children}
