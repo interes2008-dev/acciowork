@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import heroPoster from "@/assets/hero-poster.png.asset.json";
 import {
   Apple,
@@ -48,17 +48,18 @@ function useReveal<T extends HTMLElement>() {
 
 /* ---------- Brand ---------- */
 function Logo({ size = 28 }: { size?: number }) {
+  const gid = "logo" + useId().replace(/:/g, "");
   return (
     <div className="flex items-center gap-1.5 font-bold tracking-tight" style={{ fontSize: size }}>
       <svg width={size * 0.95} height={size} viewBox="0 0 28 28" aria-hidden>
         <defs>
-          <linearGradient id="accioTri" x1="0" y1="1" x2="1" y2="0">
+          <linearGradient id={gid} x1="0" y1="1" x2="1" y2="0">
             <stop offset="0%" stopColor="#0F172A" />
             <stop offset="55%" stopColor="#17B26A" />
             <stop offset="100%" stopColor="#7CE7C2" />
           </linearGradient>
         </defs>
-        <path d="M14 3 L26 25 L2 25 Z" fill="url(#accioTri)" />
+        <path d="M14 3 L26 25 L2 25 Z" fill={`url(#${gid})`} />
       </svg>
       <span className="text-foreground">Accio</span>
     </div>
@@ -132,6 +133,56 @@ function LanguageSwitcher() {
   );
 }
 
+/* ---------- Nav dropdown ---------- */
+function NavDropdown({ label, items }: { label: string; items: { href: string; label: string }[] }) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement | null>(null);
+  useEffect(() => {
+    if (!open) return;
+    const onDoc = (e: MouseEvent) => {
+      if (!ref.current?.contains(e.target as Node)) setOpen(false);
+    };
+    document.addEventListener("mousedown", onDoc);
+    return () => document.removeEventListener("mousedown", onDoc);
+  }, [open]);
+  return (
+    <div
+      ref={ref}
+      className="relative"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-haspopup="menu"
+        aria-expanded={open}
+        className="flex items-center gap-1 hover:text-foreground"
+      >
+        {label}
+        <ChevronDown className={`h-4 w-4 opacity-60 transition-transform ${open ? "rotate-180" : ""}`} />
+      </button>
+      {open && (
+        <div
+          role="menu"
+          className="absolute left-1/2 top-full z-50 mt-2 w-52 -translate-x-1/2 overflow-hidden rounded-2xl border border-border/70 bg-white p-1.5 shadow-elegant"
+        >
+          {items.map((it) => (
+            <a
+              key={it.href}
+              href={it.href}
+              role="menuitem"
+              className="block rounded-xl px-3.5 py-2.5 text-[15px] font-medium text-foreground/80 hover:bg-mint-50 hover:text-foreground"
+            >
+              {it.label}
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 /* ---------- Navbar ---------- */
 function Navbar() {
   const { t, lang } = useI18n();
@@ -192,16 +243,26 @@ function Navbar() {
       <div className="mx-auto flex h-20 max-w-[1280px] items-center justify-between px-6">
         <div className="flex items-center gap-10">
           <a href="#top" className="flex items-center"><Logo size={26} /></a>
-          <nav className="hidden items-center gap-8 text-[15px] font-medium text-foreground/80 md:flex">
-            <a href="#pricing" className="hover:text-foreground">{t.nav.pricing}</a>
-            <a href={guideHref} className="hover:text-foreground">{t.nav.guide}</a>
-            <a href={blogHref} className="hover:text-foreground">{t.nav.blog}</a>
+          <nav className="hidden items-center gap-7 text-[15px] font-medium text-foreground/80 md:flex">
             <a href={compareHref} className="hover:text-foreground">{t.nav.compare}</a>
-            <a href={reviewsHref} className="hover:text-foreground">{t.nav.reviews}</a>
-            <a href={roiHref} className="hover:text-foreground">{t.nav.roi}</a>
-            <a href={quizHref} className="hover:text-foreground">{t.nav.quiz}</a>
-            <a href={templatesHref} className="hover:text-foreground">{t.nav.templates}</a>
-            <a href="#faq" className="flex items-center gap-1 hover:text-foreground">{t.nav.help}</a>
+            <a href="#pricing" className="hover:text-foreground">{t.nav.pricing}</a>
+            <NavDropdown
+              label={t.nav.tools}
+              items={[
+                { href: roiHref, label: t.nav.roi },
+                { href: quizHref, label: t.nav.quiz },
+                { href: templatesHref, label: t.nav.templates },
+              ]}
+            />
+            <NavDropdown
+              label={t.nav.resources}
+              items={[
+                { href: guideHref, label: t.nav.guide },
+                { href: blogHref, label: t.nav.blog },
+                { href: reviewsHref, label: t.nav.reviews },
+                { href: "#faq", label: t.nav.help },
+              ]}
+            />
             <a href={eventsHref} className="flex items-center gap-1 hover:text-foreground">{t.nav.events} <span>🔥</span></a>
           </nav>
         </div>
@@ -212,7 +273,7 @@ function Navbar() {
             href={REFERRAL_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden h-11 items-center rounded-full bg-[#0F172A] px-5 text-[14px] font-semibold text-white transition hover:bg-[#0F172A]/90 sm:inline-flex"
+            className="hidden h-11 items-center whitespace-nowrap rounded-full bg-[#0F172A] px-5 text-[14px] font-semibold text-white transition hover:bg-[#0F172A]/90 sm:inline-flex"
           >
             {t.nav.download}
           </a>
@@ -247,7 +308,7 @@ function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMenuOpen(false)}
-              className="mt-3 inline-flex h-12 items-center justify-center rounded-full bg-[#17B26A] px-5 text-[15px] font-semibold text-white"
+              className="mt-3 inline-flex h-12 items-center justify-center whitespace-nowrap rounded-full bg-[#17B26A] px-5 text-[15px] font-semibold text-white"
             >
               {t.nav.download}
             </a>
@@ -935,41 +996,101 @@ function FinalCta() {
 }
 
 /* ---------- Footer ---------- */
+function FooterCol({ heading, links }: { heading: string; links: { href: string; label: string }[] }) {
+  return (
+    <div>
+      <h3 className="mb-3 text-[13px] font-semibold uppercase tracking-wide text-foreground/50">{heading}</h3>
+      <ul className="space-y-2.5">
+        {links.map((l) => (
+          <li key={l.href}>
+            <a href={l.href} className="text-[15px] text-foreground/75 hover:text-foreground">{l.label}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 function Footer() {
   const { t, lang } = useI18n();
   const base = lang === "en" ? "" : `/${lang}`;
+  const langs: Lang[] = ["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr"];
+  const langHome = (l: Lang) => (l === "en" ? "/" : `/${l}`);
   return (
-    <footer className="border-t border-border/70 bg-background py-20">
-      <div className="mx-auto flex max-w-[1280px] flex-col items-center gap-8 px-6 text-center">
-        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-[15px] font-medium text-foreground/80">
-          <a href={`${base}/compare`} className="hover:text-foreground">{t.nav.compare}</a>
-          <a href={`${base}/for`} className="hover:text-foreground">{t.nav.useCases}</a>
-          <a href={`${base}/guide`} className="hover:text-foreground">{t.nav.guide}</a>
-          <a href={`${base}/reviews`} className="hover:text-foreground">{t.nav.reviews}</a>
-          <a href={`${base}/roi`} className="hover:text-foreground">{t.nav.roi}</a>
-          <a href={`${base}/quiz`} className="hover:text-foreground">{t.nav.quiz}</a>
-          <a href={`${base}/templates`} className="hover:text-foreground">{t.nav.templates}</a>
-          <a href={`${base}/blog`} className="hover:text-foreground">{t.nav.blog}</a>
-          <a href={`${base}/events/free-forever`} className="hover:text-foreground">{t.nav.events}</a>
-          <a href="#faq" className="hover:text-foreground">{t.nav.help}</a>
-        </div>
-        <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 text-[16px] text-muted-foreground">
-          <span className="font-medium">{t.footer.partneredWith}</span>
-          <span className="text-[22px] font-bold text-[#FF6A00]">
-            Alibaba<span className="text-foreground">.com</span>
-          </span>
-          <span className="text-[22px] font-bold tracking-tight">
-            <span className="text-foreground">euro</span>
-            <span className="text-[#1F8A55]">pages</span>
-          </span>
-          <span className="inline-flex items-center gap-1 text-[22px] font-bold lowercase text-foreground">
-            wlw <span className="h-2 w-2 rounded-full bg-[#17B26A]" />
-          </span>
+    <footer className="border-t border-border/70 bg-background pt-16 pb-10">
+      <div className="mx-auto max-w-[1280px] px-6">
+        <div className="grid gap-10 md:grid-cols-[1.6fr_2.2fr]">
+          <div className="max-w-xs">
+            <Logo size={22} />
+            <p className="mt-4 text-[15px] leading-relaxed text-foreground/70">{t.footer.tagline}</p>
+            <p className="mt-4 text-[13px] leading-relaxed text-muted-foreground">{t.footer.disclosure}</p>
+          </div>
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
+            <FooterCol
+              heading={t.footer.colProduct}
+              links={[
+                { href: `${base}/compare`, label: t.nav.compare },
+                { href: `${base}/reviews`, label: t.nav.reviews },
+                { href: `${base}/for`, label: t.nav.useCases },
+                { href: "#pricing", label: t.nav.pricing },
+              ]}
+            />
+            <FooterCol
+              heading={t.footer.colTools}
+              links={[
+                { href: `${base}/roi`, label: t.nav.roi },
+                { href: `${base}/quiz`, label: t.nav.quiz },
+                { href: `${base}/templates`, label: t.nav.templates },
+              ]}
+            />
+            <FooterCol
+              heading={t.footer.colResources}
+              links={[
+                { href: `${base}/guide`, label: t.nav.guide },
+                { href: `${base}/blog`, label: t.nav.blog },
+                { href: `${base}/events/free-forever`, label: t.nav.events },
+                { href: "#faq", label: t.nav.help },
+              ]}
+            />
+          </div>
         </div>
 
-        <div className="mt-8 flex items-center gap-3 text-[13px] text-muted-foreground">
-          <Logo size={18} />
-          <span>· © {new Date().getFullYear()} Accio Work. {t.footer.rights}</span>
+        <div className="mt-14 border-t border-border/60 pt-8">
+          <p className="mb-4 text-[15px] font-medium text-muted-foreground">{t.footer.featuredIn}</p>
+          <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
+            {rvPress.map((p, i) => (
+              <a
+                key={p.id}
+                href={p.url}
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className={`font-semibold tracking-tight text-foreground/70 transition hover:text-foreground ${i === 0 ? "text-[22px] font-bold" : "text-[17px]"}`}
+              >
+                {p.source}
+              </a>
+            ))}
+            <a href={`${base}/reviews`} className="text-[14px] font-medium text-[#17B26A] hover:underline">
+              {t.nav.reviews}
+            </a>
+          </div>
+        </div>
+
+        <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2 text-[14px] text-muted-foreground">
+          <span className="font-medium text-foreground/70">{t.footer.otherLanguages}:</span>
+          {langs.map((l) => (
+            <a key={l} href={langHome(l)} className="hover:text-foreground">
+              {t.langNames[l]}
+            </a>
+          ))}
+        </div>
+
+        <p className="mt-8 max-w-3xl text-[13px] leading-relaxed text-muted-foreground/80">{t.footer.about}</p>
+
+        <div className="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-border/60 pt-6 text-[13px] text-muted-foreground">
+          <div className="flex items-center gap-2">
+            <Logo size={16} />
+            <span>· © {new Date().getFullYear()} Accio Work. {t.footer.rights}</span>
+          </div>
         </div>
       </div>
     </footer>

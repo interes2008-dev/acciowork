@@ -30,7 +30,7 @@ function Shell({ lang, children }: { lang: TplLang; children: ReactNode }) {
             <span>Accio</span>
           </a>
           <a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer nofollow"
-            className="rounded-full bg-[#17B26A] px-4 py-2 text-sm font-semibold text-white transition hover:brightness-110">
+            className="whitespace-nowrap rounded-full bg-[#17B26A] px-3 py-2 text-[13px] font-semibold text-white transition hover:brightness-110 sm:px-4 sm:text-sm">
             {c.cta}
           </a>
         </div>

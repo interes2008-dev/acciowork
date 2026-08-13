@@ -9,9 +9,9 @@ export const Route = createFileRoute("/zh/compare/")({
   head: () => {
     const c = compareChrome[LANG];
     const url = "https://acciowork.pro/zh/compare";
-    const alternates: Array<{ rel: string; hrefLang: string; href: string }> = LANGS.map((l) => ({
+    const alternates = LANGS.map((l) => ({
       rel: "alternate",
-      hrefLang: l,
+      hrefLang: l as string,
       href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/compare`,
     }));
     alternates.push({ rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/compare" });

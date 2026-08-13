@@ -38,18 +38,26 @@ export const listArticles = createServerFn({ method: "GET" })
   )
   .handler(async ({ data }): Promise<ArticleListItem[]> => {
     const supabase = publicClient();
-    const { data: rows, error } = await supabase
-      .from("blog_articles")
+    // Never select cover_url in lists: covers are heavy base64 in the column and
+    // pulling them times out Postgres. Select has_cover and serve the image via
+    // /api/public/blog-cover/:id instead.
+    const { data: rows, error } = await (supabase.from("blog_articles") as any)
       .select("id, slug, title, description, has_cover, reading_minutes, published_at, lang")
       .eq("lang", data.lang)
       .eq("status", "published")
       .order("published_at", { ascending: false })
       .limit(data.limit);
     if (error) throw new Error(error.message);
-    return (rows ?? []).map(({ has_cover, ...r }) => ({
-      ...r,
-      cover_url: has_cover ? `/api/public/blog-cover/${r.id}` : null,
-    })) as ArticleListItem[];
+    return ((rows ?? []) as Array<Record<string, unknown>>).map((r) => ({
+      id: r.id as string,
+      slug: r.slug as string,
+      title: r.title as string,
+      description: r.description as string,
+      cover_url: r.has_cover ? `/api/public/blog-cover/${r.id as string}` : null,
+      reading_minutes: r.reading_minutes as number,
+      published_at: r.published_at as string,
+      lang: r.lang as string,
+    }));
   });
 
 export const getArticle = createServerFn({ method: "GET" })
@@ -58,8 +66,7 @@ export const getArticle = createServerFn({ method: "GET" })
   )
   .handler(async ({ data }): Promise<ArticleFull | null> => {
     const supabase = publicClient();
-    const { data: row, error } = await supabase
-      .from("blog_articles")
+    const { data: row, error } = await (supabase.from("blog_articles") as any)
       .select("id, slug, title, description, has_cover, reading_minutes, published_at, lang, body_md, keywords, topic_id")
       .eq("lang", data.lang)
       .eq("slug", data.slug)
@@ -67,11 +74,20 @@ export const getArticle = createServerFn({ method: "GET" })
       .maybeSingle();
     if (error) throw new Error(error.message);
     if (!row) return null;
-    const { has_cover, ...rest } = row;
+    const r = row as Record<string, unknown>;
     return {
-      ...rest,
-      cover_url: has_cover ? `/api/public/blog-cover/${rest.id}` : null,
-    } as ArticleFull;
+      id: r.id as string,
+      slug: r.slug as string,
+      title: r.title as string,
+      description: r.description as string,
+      cover_url: r.has_cover ? `/api/public/blog-cover/${r.id as string}` : null,
+      reading_minutes: r.reading_minutes as number,
+      published_at: r.published_at as string,
+      lang: r.lang as string,
+      body_md: r.body_md as string,
+      keywords: (r.keywords ?? []) as string[],
+      topic_id: (r.topic_id ?? null) as string | null,
+    };
   });
 
 export const getArticleAlternates = createServerFn({ method: "GET" })

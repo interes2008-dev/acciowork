@@ -71,7 +71,7 @@ function Shell({ lang, children }: { lang: RoiLang; children: ReactNode }) {
             <span>Accio</span>
           </a>
           <a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer nofollow"
-            className="rounded-full bg-[#17B26A] px-4 py-2 text-sm font-semibold text-white transition hover:brightness-110">
+            className="whitespace-nowrap rounded-full bg-[#17B26A] px-3 py-2 text-[13px] font-semibold text-white transition hover:brightness-110 sm:px-4 sm:text-sm">
             {c.cta}
           </a>
         </div>
@@ -138,7 +138,7 @@ export function RoiCalculator({ lang }: { lang: RoiLang }) {
                 {c.hourlyToggle}
               </label>
               {showMoney && (
-                <div className="mt-3 flex items-center gap-3">
+                <div className="mt-3 flex flex-wrap items-center gap-3">
                   <span className="text-sm text-black/60">{c.hourlyLabel}</span>
                   <select value={cur} onChange={(e) => setCur(e.target.value)}
                     className="rounded-lg border border-black/15 bg-white px-2 py-1.5 text-sm">

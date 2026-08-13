@@ -30,7 +30,7 @@ function Shell({ lang, children }: { lang: QzLang; children: ReactNode }) {
             <span>Accio</span>
           </a>
           <a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer nofollow"
-            className="rounded-full bg-[#17B26A] px-4 py-2 text-sm font-semibold text-white transition hover:brightness-110">
+            className="whitespace-nowrap rounded-full bg-[#17B26A] px-3 py-2 text-[13px] font-semibold text-white transition hover:brightness-110 sm:px-4 sm:text-sm">
             {c.ctaFit}
           </a>
         </div>
@@ -69,10 +69,7 @@ export function FitQuiz({ lang }: { lang: QzLang }) {
     setDone(false);
   }
 
-  const score = answers.reduce<number>(
-    (sum, a, i) => sum + (a !== null ? qzQuestions[i].options[a].score : 0),
-    0,
-  );
+  const score = answers.reduce<number>((sum, a, i) => sum + (a !== null ? qzQuestions[i].options[a].score : 0), 0);
   const tier = score >= 7 ? "strong" : score >= 4 ? "partial" : "weak";
   const result = qzResults[tier];
 

@@ -9,9 +9,9 @@ export const Route = createFileRoute("/guide/")({
   head: () => {
     const c = gdChrome[LANG];
     const url = "https://acciowork.pro/guide";
-    const alternates: Array<{ rel: string; hrefLang: string; href: string }> = LANGS.map((l) => ({
+    const alternates = LANGS.map((l) => ({
       rel: "alternate",
-      hrefLang: l,
+      hrefLang: l as string,
       href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/guide`,
     }));
     alternates.push({ rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/guide" });

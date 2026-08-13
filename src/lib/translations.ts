@@ -53,6 +53,8 @@ export type Dict = {
     roi: string;
     quiz: string;
     templates: string;
+    tools: string;
+    resources: string;
   };
   hero: {
     brand: string;
@@ -103,6 +105,14 @@ export type Dict = {
   footer: {
     partneredWith: string;
     rights: string;
+    tagline: string;
+    about: string;
+    disclosure: string;
+    colProduct: string;
+    colTools: string;
+    colResources: string;
+    otherLanguages: string;
+    featuredIn: string;
   };
   availability: string;
   steps: {
@@ -147,6 +157,8 @@ const en: Dict = {
     roi: "Calculator",
     quiz: "Fit quiz",
     templates: "Templates",
+    tools: "Tools",
+    resources: "Resources",
   },
   hero: {
     brand: "Work",
@@ -266,6 +278,14 @@ const en: Dict = {
   footer: {
     partneredWith: "Partnered with",
     rights: "All rights reserved.",
+    tagline: "The AI agent that runs your sourcing, research and busywork.",
+    about: "Compare Accio Work with other AI agents, estimate the hours it saves, grab ready supplier templates and read cross border sourcing guides.",
+    disclosure: "Independent resource about Accio Work, a product of Alibaba. Buttons open the official site through a referral link.",
+    colProduct: "Product",
+    colTools: "Tools",
+    colResources: "Resources",
+    otherLanguages: "Other languages",
+    featuredIn: "As featured in",
   },
   availability: "Works on macOS and Windows. Or start right in your browser, no install needed.",
   steps: {
@@ -332,6 +352,8 @@ const ru: Dict = {
     roi: "Калькулятор",
     quiz: "Тест",
     templates: "Шаблоны",
+    tools: "Инструменты",
+    resources: "Ресурсы",
   },
   hero: {
     brand: "Work",
@@ -451,6 +473,14 @@ const ru: Dict = {
   footer: {
     partneredWith: "В партнёрстве с",
     rights: "Все права защищены.",
+    tagline: "AI-агент, который берёт на себя сорсинг, ресёрч и рутину.",
+    about: "Сравнивайте Accio Work с другими AI-агентами, считайте сэкономленные часы, берите готовые шаблоны поставщикам и читайте гайды по трансграничным закупкам.",
+    disclosure: "Независимый ресурс об Accio Work, продукте Alibaba. Кнопки открывают официальный сайт по реферальной ссылке.",
+    colProduct: "Продукт",
+    colTools: "Инструменты",
+    colResources: "Ресурсы",
+    otherLanguages: "Другие языки",
+    featuredIn: "О нас писали",
   },
   availability: "Работает на macOS и Windows. Или запускается прямо в браузере, без установки.",
   steps: {
@@ -517,6 +547,8 @@ const de: Dict = {
     roi: "Rechner",
     quiz: "Eignungstest",
     templates: "Vorlagen",
+    tools: "Tools",
+    resources: "Ressourcen",
   },
   hero: {
     brand: "Work",
@@ -636,6 +668,14 @@ const de: Dict = {
   footer: {
     partneredWith: "In Partnerschaft mit",
     rights: "Alle Rechte vorbehalten.",
+    tagline: "Der AI-Agent, der Sourcing, Recherche und Kleinkram übernimmt.",
+    about: "Vergleiche Accio Work mit anderen AI-Agenten, schätze die gesparten Stunden, hol dir fertige Lieferantenvorlagen und lies Guides zum grenzüberschreitenden Sourcing.",
+    disclosure: "Unabhängige Ressource über Accio Work, ein Produkt von Alibaba. Buttons öffnen die offizielle Seite über einen Empfehlungslink.",
+    colProduct: "Produkt",
+    colTools: "Tools",
+    colResources: "Ressourcen",
+    otherLanguages: "Weitere Sprachen",
+    featuredIn: "Bekannt aus",
   },
   availability: "Läuft auf macOS und Windows. Oder direkt im Browser starten, ohne Installation.",
   steps: {
@@ -702,6 +742,8 @@ const it: Dict = {
     roi: "Calcolatore",
     quiz: "Test idoneità",
     templates: "Modelli",
+    tools: "Strumenti",
+    resources: "Risorse",
   },
   hero: {
     brand: "Work",
@@ -821,6 +863,14 @@ const it: Dict = {
   footer: {
     partneredWith: "In partnership con",
     rights: "Tutti i diritti riservati.",
+    tagline: "L'agente AI che gestisce sourcing, ricerca e lavoro ripetitivo.",
+    about: "Confronta Accio Work con altri agenti AI, stima le ore risparmiate, prendi modelli pronti per i fornitori e leggi le guide sul sourcing transfrontaliero.",
+    disclosure: "Risorsa indipendente su Accio Work, un prodotto di Alibaba. I pulsanti aprono il sito ufficiale tramite un link di referral.",
+    colProduct: "Prodotto",
+    colTools: "Strumenti",
+    colResources: "Risorse",
+    otherLanguages: "Altre lingue",
+    featuredIn: "Ne hanno parlato",
   },
   availability: "Funziona su macOS e Windows. Oppure parti subito nel browser, senza installare nulla.",
   steps: {
@@ -887,6 +937,8 @@ const es: Dict = {
     roi: "Calculadora",
     quiz: "Test de idoneidad",
     templates: "Plantillas",
+    tools: "Herramientas",
+    resources: "Recursos",
   },
   hero: {
     brand: "Work",
@@ -1006,6 +1058,14 @@ const es: Dict = {
   footer: {
     partneredWith: "En colaboración con",
     rights: "Todos los derechos reservados.",
+    tagline: "El agente de IA que lleva tu sourcing, investigación y tareas repetitivas.",
+    about: "Compara Accio Work con otros agentes de IA, estima las horas que ahorra, toma plantillas listas para proveedores y lee guías de sourcing transfronterizo.",
+    disclosure: "Recurso independiente sobre Accio Work, un producto de Alibaba. Los botones abren el sitio oficial mediante un enlace de referido.",
+    colProduct: "Producto",
+    colTools: "Herramientas",
+    colResources: "Recursos",
+    otherLanguages: "Otros idiomas",
+    featuredIn: "Aparecimos en",
   },
   availability: "Funciona en macOS y Windows. O empieza directo en el navegador, sin instalar nada.",
   steps: {
@@ -1072,6 +1132,8 @@ const zh: Dict = {
     roi: "计算器",
     quiz: "适配测试",
     templates: "模板",
+    tools: "工具",
+    resources: "资源",
   },
   hero: {
     brand: "Work",
@@ -1191,6 +1253,14 @@ const zh: Dict = {
   footer: {
     partneredWith: "合作伙伴",
     rights: "版权所有。",
+    tagline: "会替你搞定选品、调研和琐事的 AI 智能体。",
+    about: "把 Accio Work 与其他 AI 智能体对比，估算省下的时间，取用现成的供应商模板，并阅读跨境采购指南。",
+    disclosure: "关于阿里产品 Accio Work 的独立资源。按钮通过推荐链接打开官方网站。",
+    colProduct: "产品",
+    colTools: "工具",
+    colResources: "资源",
+    otherLanguages: "其他语言",
+    featuredIn: "媒体报道",
   },
   availability: "支持 macOS 和 Windows，也可以直接在浏览器里使用，无需安装。",
   steps: {
@@ -1258,6 +1328,8 @@ const pt: Dict = {
     roi: "Calculadora",
     quiz: "Teste de perfil",
     templates: "Modelos",
+    tools: "Ferramentas",
+    resources: "Recursos",
   },
   hero: {
     brand: "Work",
@@ -1377,6 +1449,14 @@ const pt: Dict = {
   footer: {
     partneredWith: "Em parceria com",
     rights: "Todos os direitos reservados.",
+    tagline: "O agente de IA que cuida do seu sourcing, pesquisa e tarefas repetitivas.",
+    about: "Compare o Accio Work com outros agentes de IA, estime as horas economizadas, pegue modelos prontos para fornecedores e leia guias de sourcing transfronteiriço.",
+    disclosure: "Recurso independente sobre o Accio Work, um produto da Alibaba. Os botões abrem o site oficial por um link de indicação.",
+    colProduct: "Produto",
+    colTools: "Ferramentas",
+    colResources: "Recursos",
+    otherLanguages: "Outros idiomas",
+    featuredIn: "Falaram sobre nós",
   },
   availability: "Funciona no macOS e no Windows. Ou comece direto no navegador, sem instalar nada.",
   steps: {
@@ -1443,6 +1523,8 @@ const hi: Dict = {
     roi: "कैलकुलेटर",
     quiz: "फिट टेस्ट",
     templates: "टेम्पलेट",
+    tools: "टूल",
+    resources: "संसाधन",
   },
   hero: {
     brand: "Work",
@@ -1562,6 +1644,14 @@ const hi: Dict = {
   footer: {
     partneredWith: "सहयोगी",
     rights: "सर्वाधिकार सुरक्षित।",
+    tagline: "एआई एजेंट जो आपकी सोर्सिंग, रिसर्च और रोज़मर्रा का काम संभालता है।",
+    about: "Accio Work की तुलना दूसरे AI एजेंट से करें, बचने वाले घंटे आँकें, तैयार सप्लायर टेम्पलेट लें और सीमापार सोर्सिंग गाइड पढ़ें।",
+    disclosure: "Alibaba के उत्पाद Accio Work के बारे में स्वतंत्र संसाधन। बटन रेफ़रल लिंक से आधिकारिक साइट खोलते हैं।",
+    colProduct: "उत्पाद",
+    colTools: "टूल",
+    colResources: "संसाधन",
+    otherLanguages: "अन्य भाषाएं",
+    featuredIn: "मीडिया में",
   },
   availability: "macOS और Windows पर चलता है। या बिना इंस्टॉल किए सीधे ब्राउज़र में शुरू करें।",
   steps: {
@@ -1629,6 +1719,8 @@ const fr: Dict = {
     roi: "Calculateur",
     quiz: "Test",
     templates: "Modèles",
+    tools: "Outils",
+    resources: "Ressources",
   },
   hero: {
     brand: "Work",
@@ -1748,6 +1840,14 @@ const fr: Dict = {
   footer: {
     partneredWith: "En partenariat avec",
     rights: "Tous droits réservés.",
+    tagline: "L'agent IA qui gère votre sourcing, vos recherches et les tâches répétitives.",
+    about: "Comparez Accio Work à d'autres agents IA, estimez les heures gagnées, récupérez des modèles fournisseurs prêts à l'emploi et lisez des guides de sourcing transfrontalier.",
+    disclosure: "Ressource indépendante sur Accio Work, un produit d'Alibaba. Les boutons ouvrent le site officiel via un lien de parrainage.",
+    colProduct: "Produit",
+    colTools: "Outils",
+    colResources: "Ressources",
+    otherLanguages: "Autres langues",
+    featuredIn: "Ils en parlent",
   },
   availability: "Fonctionne sur macOS et Windows. Ou lancez-le directement dans le navigateur, sans installation.",
   steps: {
