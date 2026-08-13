@@ -9,7 +9,7 @@ export const Route = createFileRoute("/fr/roi")({
   head: () => {
     const c = roiChrome[LANG];
     const url = "https://acciowork.pro/fr/roi";
-    const alternates = LANGS.map((l) => ({
+    const alternates: Array<{ rel: string; hrefLang: string; href: string }> = LANGS.map((l) => ({
       rel: "alternate",
       hrefLang: l,
       href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/roi`,

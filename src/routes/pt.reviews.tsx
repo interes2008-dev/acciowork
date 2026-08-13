@@ -9,7 +9,7 @@ export const Route = createFileRoute("/pt/reviews")({
   head: () => {
     const c = rvChrome[LANG];
     const url = "https://acciowork.pro/pt/reviews";
-    const alternates = LANGS.map((l) => ({
+    const alternates: Array<{ rel: string; hrefLang: string; href: string }> = LANGS.map((l) => ({
       rel: "alternate",
       hrefLang: l,
       href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/reviews`,
