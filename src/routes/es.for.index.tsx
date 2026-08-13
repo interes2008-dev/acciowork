@@ -9,7 +9,7 @@ export const Route = createFileRoute("/es/for/")({
   head: () => {
     const c = ucChrome[LANG];
     const url = "https://acciowork.pro/es/for";
-    const alternates = LANGS.map((l) => ({
+    const alternates: Array<{ rel: string; hrefLang: string; href: string }> = LANGS.map((l) => ({
       rel: "alternate",
       hrefLang: l,
       href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/for`,
