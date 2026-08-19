@@ -11,6 +11,7 @@ export const Route = createFileRoute("/zh/blog/$slug")({
   },
   head: ({ loaderData }) => {
     const a = loaderData?.article;
+    const cover = a?.cover_url ? `https://acciowork.pro${a.cover_url}` : null;
     return {
       meta: a
         ? [
@@ -22,7 +23,8 @@ export const Route = createFileRoute("/zh/blog/$slug")({
             { property: "og:type", content: "article" },
             { property: "og:locale", content: "zh_CN" },
             { property: "og:url", content: `https://acciowork.pro/zh/blog/${a.slug}` },
-            ...(a.cover_url ? [{ property: "og:image", content: a.cover_url }] : []),
+            ...(cover ? [{ property: "og:image", content: cover }, { name: "twitter:image", content: cover }] : []),
+            { name: "twitter:card", content: "summary_large_image" },
           ]
         : [{ title: "Accio Work 博客" }],
       links: a ? [{ rel: "canonical", href: `https://acciowork.pro/zh/blog/${a.slug}` }] : [],
@@ -38,7 +40,7 @@ export const Route = createFileRoute("/zh/blog/$slug")({
                 inLanguage: "zh",
                 datePublished: a.published_at,
                 dateModified: a.published_at,
-                ...(a.cover_url ? { image: a.cover_url } : {}),
+                ...(cover ? { image: cover } : {}),
                 keywords: (a.keywords || []).join(", "),
                 author: { "@type": "Organization", name: "Accio Work" },
                 publisher: { "@type": "Organization", name: "Accio Work" },
