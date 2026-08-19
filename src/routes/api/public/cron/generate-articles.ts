@@ -194,7 +194,6 @@ export const Route = createFileRoute("/api/public/cron/generate-articles")({
               keywords: Array.isArray(article.keywords) ? article.keywords.slice(0, 8) : [],
               cover_prompt: sharedCoverPromptSource,
               cover_url: sharedCoverUrl,
-              has_cover: Boolean(sharedCoverUrl),
               body_md: cleanBody,
               reading_minutes: estimateReadingMinutes(cleanBody),
               status: "published",
