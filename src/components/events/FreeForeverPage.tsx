@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import type { Lang } from "@/lib/translations";
+import { CreditsUpdate } from "./CreditsUpdate";
 
 const REFERRAL_URL =
   "https://www.accio.com/login?sId=KECtp1GttZ42%2FwpJUH5IxQ%3D%3D&ic=IC506004212009&tenant=accio&src=p_referral_IC506004212009&source=invite_center&return_url=https%3A%2F%2Fwww.accio.com%2Fwork%2F";
@@ -1249,6 +1250,7 @@ export function FreeForeverPage({ lang }: { lang: Lang }) {
       <main>
         <Hero lang={lang} d={d} />
         <Stats d={d} locale={LOCALES[lang]} />
+        <CreditsUpdate lang={lang} />
         <Features d={d} />
         <Compare d={d} />
         <Story d={d} />
