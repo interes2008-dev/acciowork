@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DeRouteImport } from './routes/de'
+import { Route as DutyRouteImport } from './routes/duty'
 import { Route as EsRouteImport } from './routes/es'
 import { Route as FrRouteImport } from './routes/fr'
 import { Route as HiRouteImport } from './routes/hi'
@@ -29,11 +30,13 @@ import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as CompareIndexRouteImport } from './routes/compare.index'
 import { Route as CompareCompetitorRouteImport } from './routes/compare.$competitor'
 import { Route as DeIndexRouteImport } from './routes/de.index'
+import { Route as DeDutyRouteImport } from './routes/de.duty'
 import { Route as DeQuizRouteImport } from './routes/de.quiz'
 import { Route as DeReviewsRouteImport } from './routes/de.reviews'
 import { Route as DeRoiRouteImport } from './routes/de.roi'
 import { Route as DeTemplatesRouteImport } from './routes/de.templates'
 import { Route as EsIndexRouteImport } from './routes/es.index'
+import { Route as EsDutyRouteImport } from './routes/es.duty'
 import { Route as EsQuizRouteImport } from './routes/es.quiz'
 import { Route as EsReviewsRouteImport } from './routes/es.reviews'
 import { Route as EsRoiRouteImport } from './routes/es.roi'
@@ -42,6 +45,7 @@ import { Route as EventsFreeForeverRouteImport } from './routes/events.free-fore
 import { Route as ForIndexRouteImport } from './routes/for.index'
 import { Route as ForUseCaseRouteImport } from './routes/for.$useCase'
 import { Route as FrIndexRouteImport } from './routes/fr.index'
+import { Route as FrDutyRouteImport } from './routes/fr.duty'
 import { Route as FrQuizRouteImport } from './routes/fr.quiz'
 import { Route as FrReviewsRouteImport } from './routes/fr.reviews'
 import { Route as FrRoiRouteImport } from './routes/fr.roi'
@@ -49,26 +53,31 @@ import { Route as FrTemplatesRouteImport } from './routes/fr.templates'
 import { Route as GuideIndexRouteImport } from './routes/guide.index'
 import { Route as GuideGuideRouteImport } from './routes/guide.$guide'
 import { Route as HiIndexRouteImport } from './routes/hi.index'
+import { Route as HiDutyRouteImport } from './routes/hi.duty'
 import { Route as HiQuizRouteImport } from './routes/hi.quiz'
 import { Route as HiReviewsRouteImport } from './routes/hi.reviews'
 import { Route as HiRoiRouteImport } from './routes/hi.roi'
 import { Route as HiTemplatesRouteImport } from './routes/hi.templates'
 import { Route as ItIndexRouteImport } from './routes/it.index'
+import { Route as ItDutyRouteImport } from './routes/it.duty'
 import { Route as ItQuizRouteImport } from './routes/it.quiz'
 import { Route as ItReviewsRouteImport } from './routes/it.reviews'
 import { Route as ItRoiRouteImport } from './routes/it.roi'
 import { Route as ItTemplatesRouteImport } from './routes/it.templates'
 import { Route as PtIndexRouteImport } from './routes/pt.index'
+import { Route as PtDutyRouteImport } from './routes/pt.duty'
 import { Route as PtQuizRouteImport } from './routes/pt.quiz'
 import { Route as PtReviewsRouteImport } from './routes/pt.reviews'
 import { Route as PtRoiRouteImport } from './routes/pt.roi'
 import { Route as PtTemplatesRouteImport } from './routes/pt.templates'
 import { Route as RuIndexRouteImport } from './routes/ru.index'
+import { Route as RuDutyRouteImport } from './routes/ru.duty'
 import { Route as RuQuizRouteImport } from './routes/ru.quiz'
 import { Route as RuReviewsRouteImport } from './routes/ru.reviews'
 import { Route as RuRoiRouteImport } from './routes/ru.roi'
 import { Route as RuTemplatesRouteImport } from './routes/ru.templates'
 import { Route as ZhIndexRouteImport } from './routes/zh.index'
+import { Route as ZhDutyRouteImport } from './routes/zh.duty'
 import { Route as ZhQuizRouteImport } from './routes/zh.quiz'
 import { Route as ZhReviewsRouteImport } from './routes/zh.reviews'
 import { Route as ZhRoiRouteImport } from './routes/zh.roi'
@@ -157,6 +166,11 @@ const IndexRoute = IndexRouteImport.update({
 const DeRoute = DeRouteImport.update({
   id: '/de',
   path: '/de',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DutyRoute = DutyRouteImport.update({
+  id: '/duty',
+  path: '/duty',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EsRoute = EsRouteImport.update({
@@ -249,6 +263,11 @@ const DeIndexRoute = DeIndexRouteImport.update({
   path: '/',
   getParentRoute: () => DeRoute,
 } as any)
+const DeDutyRoute = DeDutyRouteImport.update({
+  id: '/duty',
+  path: '/duty',
+  getParentRoute: () => DeRoute,
+} as any)
 const DeQuizRoute = DeQuizRouteImport.update({
   id: '/quiz',
   path: '/quiz',
@@ -272,6 +291,11 @@ const DeTemplatesRoute = DeTemplatesRouteImport.update({
 const EsIndexRoute = EsIndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => EsRoute,
+} as any)
+const EsDutyRoute = EsDutyRouteImport.update({
+  id: '/duty',
+  path: '/duty',
   getParentRoute: () => EsRoute,
 } as any)
 const EsQuizRoute = EsQuizRouteImport.update({
@@ -314,6 +338,11 @@ const FrIndexRoute = FrIndexRouteImport.update({
   path: '/',
   getParentRoute: () => FrRoute,
 } as any)
+const FrDutyRoute = FrDutyRouteImport.update({
+  id: '/duty',
+  path: '/duty',
+  getParentRoute: () => FrRoute,
+} as any)
 const FrQuizRoute = FrQuizRouteImport.update({
   id: '/quiz',
   path: '/quiz',
@@ -349,6 +378,11 @@ const HiIndexRoute = HiIndexRouteImport.update({
   path: '/',
   getParentRoute: () => HiRoute,
 } as any)
+const HiDutyRoute = HiDutyRouteImport.update({
+  id: '/duty',
+  path: '/duty',
+  getParentRoute: () => HiRoute,
+} as any)
 const HiQuizRoute = HiQuizRouteImport.update({
   id: '/quiz',
   path: '/quiz',
@@ -372,6 +406,11 @@ const HiTemplatesRoute = HiTemplatesRouteImport.update({
 const ItIndexRoute = ItIndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => ItRoute,
+} as any)
+const ItDutyRoute = ItDutyRouteImport.update({
+  id: '/duty',
+  path: '/duty',
   getParentRoute: () => ItRoute,
 } as any)
 const ItQuizRoute = ItQuizRouteImport.update({
@@ -399,6 +438,11 @@ const PtIndexRoute = PtIndexRouteImport.update({
   path: '/',
   getParentRoute: () => PtRoute,
 } as any)
+const PtDutyRoute = PtDutyRouteImport.update({
+  id: '/duty',
+  path: '/duty',
+  getParentRoute: () => PtRoute,
+} as any)
 const PtQuizRoute = PtQuizRouteImport.update({
   id: '/quiz',
   path: '/quiz',
@@ -424,6 +468,11 @@ const RuIndexRoute = RuIndexRouteImport.update({
   path: '/',
   getParentRoute: () => RuRoute,
 } as any)
+const RuDutyRoute = RuDutyRouteImport.update({
+  id: '/duty',
+  path: '/duty',
+  getParentRoute: () => RuRoute,
+} as any)
 const RuQuizRoute = RuQuizRouteImport.update({
   id: '/quiz',
   path: '/quiz',
@@ -447,6 +496,11 @@ const RuTemplatesRoute = RuTemplatesRouteImport.update({
 const ZhIndexRoute = ZhIndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => ZhRoute,
+} as any)
+const ZhDutyRoute = ZhDutyRouteImport.update({
+  id: '/duty',
+  path: '/duty',
   getParentRoute: () => ZhRoute,
 } as any)
 const ZhQuizRoute = ZhQuizRouteImport.update({
@@ -849,6 +903,7 @@ const ApiPublicCronSeoMonitorRoute = ApiPublicCronSeoMonitorRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/de': typeof DeRouteWithChildren
+  '/duty': typeof DutyRoute
   '/es': typeof EsRouteWithChildren
   '/fr': typeof FrRouteWithChildren
   '/hi': typeof HiRouteWithChildren
@@ -864,37 +919,45 @@ export interface FileRoutesByFullPath {
   '/zh': typeof ZhRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$competitor': typeof CompareCompetitorRoute
+  '/de/duty': typeof DeDutyRoute
   '/de/quiz': typeof DeQuizRoute
   '/de/reviews': typeof DeReviewsRoute
   '/de/roi': typeof DeRoiRoute
   '/de/templates': typeof DeTemplatesRoute
+  '/es/duty': typeof EsDutyRoute
   '/es/quiz': typeof EsQuizRoute
   '/es/reviews': typeof EsReviewsRoute
   '/es/roi': typeof EsRoiRoute
   '/es/templates': typeof EsTemplatesRoute
   '/events/free-forever': typeof EventsFreeForeverRoute
   '/for/$useCase': typeof ForUseCaseRoute
+  '/fr/duty': typeof FrDutyRoute
   '/fr/quiz': typeof FrQuizRoute
   '/fr/reviews': typeof FrReviewsRoute
   '/fr/roi': typeof FrRoiRoute
   '/fr/templates': typeof FrTemplatesRoute
   '/guide/$guide': typeof GuideGuideRoute
+  '/hi/duty': typeof HiDutyRoute
   '/hi/quiz': typeof HiQuizRoute
   '/hi/reviews': typeof HiReviewsRoute
   '/hi/roi': typeof HiRoiRoute
   '/hi/templates': typeof HiTemplatesRoute
+  '/it/duty': typeof ItDutyRoute
   '/it/quiz': typeof ItQuizRoute
   '/it/reviews': typeof ItReviewsRoute
   '/it/roi': typeof ItRoiRoute
   '/it/templates': typeof ItTemplatesRoute
+  '/pt/duty': typeof PtDutyRoute
   '/pt/quiz': typeof PtQuizRoute
   '/pt/reviews': typeof PtReviewsRoute
   '/pt/roi': typeof PtRoiRoute
   '/pt/templates': typeof PtTemplatesRoute
+  '/ru/duty': typeof RuDutyRoute
   '/ru/quiz': typeof RuQuizRoute
   '/ru/reviews': typeof RuReviewsRoute
   '/ru/roi': typeof RuRoiRoute
   '/ru/templates': typeof RuTemplatesRoute
+  '/zh/duty': typeof ZhDutyRoute
   '/zh/quiz': typeof ZhQuizRoute
   '/zh/reviews': typeof ZhReviewsRoute
   '/zh/roi': typeof ZhRoiRoute
@@ -989,6 +1052,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/duty': typeof DutyRoute
   '/quiz': typeof QuizRoute
   '/reviews': typeof ReviewsRoute
   '/roi': typeof RoiRoute
@@ -997,37 +1061,45 @@ export interface FileRoutesByTo {
   '/templates': typeof TemplatesRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$competitor': typeof CompareCompetitorRoute
+  '/de/duty': typeof DeDutyRoute
   '/de/quiz': typeof DeQuizRoute
   '/de/reviews': typeof DeReviewsRoute
   '/de/roi': typeof DeRoiRoute
   '/de/templates': typeof DeTemplatesRoute
+  '/es/duty': typeof EsDutyRoute
   '/es/quiz': typeof EsQuizRoute
   '/es/reviews': typeof EsReviewsRoute
   '/es/roi': typeof EsRoiRoute
   '/es/templates': typeof EsTemplatesRoute
   '/events/free-forever': typeof EventsFreeForeverRoute
   '/for/$useCase': typeof ForUseCaseRoute
+  '/fr/duty': typeof FrDutyRoute
   '/fr/quiz': typeof FrQuizRoute
   '/fr/reviews': typeof FrReviewsRoute
   '/fr/roi': typeof FrRoiRoute
   '/fr/templates': typeof FrTemplatesRoute
   '/guide/$guide': typeof GuideGuideRoute
+  '/hi/duty': typeof HiDutyRoute
   '/hi/quiz': typeof HiQuizRoute
   '/hi/reviews': typeof HiReviewsRoute
   '/hi/roi': typeof HiRoiRoute
   '/hi/templates': typeof HiTemplatesRoute
+  '/it/duty': typeof ItDutyRoute
   '/it/quiz': typeof ItQuizRoute
   '/it/reviews': typeof ItReviewsRoute
   '/it/roi': typeof ItRoiRoute
   '/it/templates': typeof ItTemplatesRoute
+  '/pt/duty': typeof PtDutyRoute
   '/pt/quiz': typeof PtQuizRoute
   '/pt/reviews': typeof PtReviewsRoute
   '/pt/roi': typeof PtRoiRoute
   '/pt/templates': typeof PtTemplatesRoute
+  '/ru/duty': typeof RuDutyRoute
   '/ru/quiz': typeof RuQuizRoute
   '/ru/reviews': typeof RuReviewsRoute
   '/ru/roi': typeof RuRoiRoute
   '/ru/templates': typeof RuTemplatesRoute
+  '/zh/duty': typeof ZhDutyRoute
   '/zh/quiz': typeof ZhQuizRoute
   '/zh/reviews': typeof ZhReviewsRoute
   '/zh/roi': typeof ZhRoiRoute
@@ -1124,6 +1196,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/de': typeof DeRouteWithChildren
+  '/duty': typeof DutyRoute
   '/es': typeof EsRouteWithChildren
   '/fr': typeof FrRouteWithChildren
   '/hi': typeof HiRouteWithChildren
@@ -1139,37 +1212,45 @@ export interface FileRoutesById {
   '/zh': typeof ZhRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$competitor': typeof CompareCompetitorRoute
+  '/de/duty': typeof DeDutyRoute
   '/de/quiz': typeof DeQuizRoute
   '/de/reviews': typeof DeReviewsRoute
   '/de/roi': typeof DeRoiRoute
   '/de/templates': typeof DeTemplatesRoute
+  '/es/duty': typeof EsDutyRoute
   '/es/quiz': typeof EsQuizRoute
   '/es/reviews': typeof EsReviewsRoute
   '/es/roi': typeof EsRoiRoute
   '/es/templates': typeof EsTemplatesRoute
   '/events/free-forever': typeof EventsFreeForeverRoute
   '/for/$useCase': typeof ForUseCaseRoute
+  '/fr/duty': typeof FrDutyRoute
   '/fr/quiz': typeof FrQuizRoute
   '/fr/reviews': typeof FrReviewsRoute
   '/fr/roi': typeof FrRoiRoute
   '/fr/templates': typeof FrTemplatesRoute
   '/guide/$guide': typeof GuideGuideRoute
+  '/hi/duty': typeof HiDutyRoute
   '/hi/quiz': typeof HiQuizRoute
   '/hi/reviews': typeof HiReviewsRoute
   '/hi/roi': typeof HiRoiRoute
   '/hi/templates': typeof HiTemplatesRoute
+  '/it/duty': typeof ItDutyRoute
   '/it/quiz': typeof ItQuizRoute
   '/it/reviews': typeof ItReviewsRoute
   '/it/roi': typeof ItRoiRoute
   '/it/templates': typeof ItTemplatesRoute
+  '/pt/duty': typeof PtDutyRoute
   '/pt/quiz': typeof PtQuizRoute
   '/pt/reviews': typeof PtReviewsRoute
   '/pt/roi': typeof PtRoiRoute
   '/pt/templates': typeof PtTemplatesRoute
+  '/ru/duty': typeof RuDutyRoute
   '/ru/quiz': typeof RuQuizRoute
   '/ru/reviews': typeof RuReviewsRoute
   '/ru/roi': typeof RuRoiRoute
   '/ru/templates': typeof RuTemplatesRoute
+  '/zh/duty': typeof ZhDutyRoute
   '/zh/quiz': typeof ZhQuizRoute
   '/zh/reviews': typeof ZhReviewsRoute
   '/zh/roi': typeof ZhRoiRoute
@@ -1267,6 +1348,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/de'
+    | '/duty'
     | '/es'
     | '/fr'
     | '/hi'
@@ -1282,37 +1364,45 @@ export interface FileRouteTypes {
     | '/zh'
     | '/blog/$slug'
     | '/compare/$competitor'
+    | '/de/duty'
     | '/de/quiz'
     | '/de/reviews'
     | '/de/roi'
     | '/de/templates'
+    | '/es/duty'
     | '/es/quiz'
     | '/es/reviews'
     | '/es/roi'
     | '/es/templates'
     | '/events/free-forever'
     | '/for/$useCase'
+    | '/fr/duty'
     | '/fr/quiz'
     | '/fr/reviews'
     | '/fr/roi'
     | '/fr/templates'
     | '/guide/$guide'
+    | '/hi/duty'
     | '/hi/quiz'
     | '/hi/reviews'
     | '/hi/roi'
     | '/hi/templates'
+    | '/it/duty'
     | '/it/quiz'
     | '/it/reviews'
     | '/it/roi'
     | '/it/templates'
+    | '/pt/duty'
     | '/pt/quiz'
     | '/pt/reviews'
     | '/pt/roi'
     | '/pt/templates'
+    | '/ru/duty'
     | '/ru/quiz'
     | '/ru/reviews'
     | '/ru/roi'
     | '/ru/templates'
+    | '/zh/duty'
     | '/zh/quiz'
     | '/zh/reviews'
     | '/zh/roi'
@@ -1407,6 +1497,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/duty'
     | '/quiz'
     | '/reviews'
     | '/roi'
@@ -1415,37 +1506,45 @@ export interface FileRouteTypes {
     | '/templates'
     | '/blog/$slug'
     | '/compare/$competitor'
+    | '/de/duty'
     | '/de/quiz'
     | '/de/reviews'
     | '/de/roi'
     | '/de/templates'
+    | '/es/duty'
     | '/es/quiz'
     | '/es/reviews'
     | '/es/roi'
     | '/es/templates'
     | '/events/free-forever'
     | '/for/$useCase'
+    | '/fr/duty'
     | '/fr/quiz'
     | '/fr/reviews'
     | '/fr/roi'
     | '/fr/templates'
     | '/guide/$guide'
+    | '/hi/duty'
     | '/hi/quiz'
     | '/hi/reviews'
     | '/hi/roi'
     | '/hi/templates'
+    | '/it/duty'
     | '/it/quiz'
     | '/it/reviews'
     | '/it/roi'
     | '/it/templates'
+    | '/pt/duty'
     | '/pt/quiz'
     | '/pt/reviews'
     | '/pt/roi'
     | '/pt/templates'
+    | '/ru/duty'
     | '/ru/quiz'
     | '/ru/reviews'
     | '/ru/roi'
     | '/ru/templates'
+    | '/zh/duty'
     | '/zh/quiz'
     | '/zh/reviews'
     | '/zh/roi'
@@ -1541,6 +1640,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/de'
+    | '/duty'
     | '/es'
     | '/fr'
     | '/hi'
@@ -1556,37 +1656,45 @@ export interface FileRouteTypes {
     | '/zh'
     | '/blog/$slug'
     | '/compare/$competitor'
+    | '/de/duty'
     | '/de/quiz'
     | '/de/reviews'
     | '/de/roi'
     | '/de/templates'
+    | '/es/duty'
     | '/es/quiz'
     | '/es/reviews'
     | '/es/roi'
     | '/es/templates'
     | '/events/free-forever'
     | '/for/$useCase'
+    | '/fr/duty'
     | '/fr/quiz'
     | '/fr/reviews'
     | '/fr/roi'
     | '/fr/templates'
     | '/guide/$guide'
+    | '/hi/duty'
     | '/hi/quiz'
     | '/hi/reviews'
     | '/hi/roi'
     | '/hi/templates'
+    | '/it/duty'
     | '/it/quiz'
     | '/it/reviews'
     | '/it/roi'
     | '/it/templates'
+    | '/pt/duty'
     | '/pt/quiz'
     | '/pt/reviews'
     | '/pt/roi'
     | '/pt/templates'
+    | '/ru/duty'
     | '/ru/quiz'
     | '/ru/reviews'
     | '/ru/roi'
     | '/ru/templates'
+    | '/zh/duty'
     | '/zh/quiz'
     | '/zh/reviews'
     | '/zh/roi'
@@ -1683,6 +1791,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   DeRoute: typeof DeRouteWithChildren
+  DutyRoute: typeof DutyRoute
   EsRoute: typeof EsRouteWithChildren
   FrRoute: typeof FrRouteWithChildren
   HiRoute: typeof HiRouteWithChildren
@@ -1724,6 +1833,13 @@ declare module '@tanstack/react-router' {
       path: '/de'
       fullPath: '/de'
       preLoaderRoute: typeof DeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/duty': {
+      id: '/duty'
+      path: '/duty'
+      fullPath: '/duty'
+      preLoaderRoute: typeof DutyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/es': {
@@ -1852,6 +1968,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DeIndexRouteImport
       parentRoute: typeof DeRoute
     }
+    '/de/duty': {
+      id: '/de/duty'
+      path: '/duty'
+      fullPath: '/de/duty'
+      preLoaderRoute: typeof DeDutyRouteImport
+      parentRoute: typeof DeRoute
+    }
     '/de/quiz': {
       id: '/de/quiz'
       path: '/quiz'
@@ -1885,6 +2008,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/es/'
       preLoaderRoute: typeof EsIndexRouteImport
+      parentRoute: typeof EsRoute
+    }
+    '/es/duty': {
+      id: '/es/duty'
+      path: '/duty'
+      fullPath: '/es/duty'
+      preLoaderRoute: typeof EsDutyRouteImport
       parentRoute: typeof EsRoute
     }
     '/es/quiz': {
@@ -1943,6 +2073,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FrIndexRouteImport
       parentRoute: typeof FrRoute
     }
+    '/fr/duty': {
+      id: '/fr/duty'
+      path: '/duty'
+      fullPath: '/fr/duty'
+      preLoaderRoute: typeof FrDutyRouteImport
+      parentRoute: typeof FrRoute
+    }
     '/fr/quiz': {
       id: '/fr/quiz'
       path: '/quiz'
@@ -1992,6 +2129,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HiIndexRouteImport
       parentRoute: typeof HiRoute
     }
+    '/hi/duty': {
+      id: '/hi/duty'
+      path: '/duty'
+      fullPath: '/hi/duty'
+      preLoaderRoute: typeof HiDutyRouteImport
+      parentRoute: typeof HiRoute
+    }
     '/hi/quiz': {
       id: '/hi/quiz'
       path: '/quiz'
@@ -2025,6 +2169,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/it/'
       preLoaderRoute: typeof ItIndexRouteImport
+      parentRoute: typeof ItRoute
+    }
+    '/it/duty': {
+      id: '/it/duty'
+      path: '/duty'
+      fullPath: '/it/duty'
+      preLoaderRoute: typeof ItDutyRouteImport
       parentRoute: typeof ItRoute
     }
     '/it/quiz': {
@@ -2062,6 +2213,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PtIndexRouteImport
       parentRoute: typeof PtRoute
     }
+    '/pt/duty': {
+      id: '/pt/duty'
+      path: '/duty'
+      fullPath: '/pt/duty'
+      preLoaderRoute: typeof PtDutyRouteImport
+      parentRoute: typeof PtRoute
+    }
     '/pt/quiz': {
       id: '/pt/quiz'
       path: '/quiz'
@@ -2097,6 +2255,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RuIndexRouteImport
       parentRoute: typeof RuRoute
     }
+    '/ru/duty': {
+      id: '/ru/duty'
+      path: '/duty'
+      fullPath: '/ru/duty'
+      preLoaderRoute: typeof RuDutyRouteImport
+      parentRoute: typeof RuRoute
+    }
     '/ru/quiz': {
       id: '/ru/quiz'
       path: '/quiz'
@@ -2130,6 +2295,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/zh/'
       preLoaderRoute: typeof ZhIndexRouteImport
+      parentRoute: typeof ZhRoute
+    }
+    '/zh/duty': {
+      id: '/zh/duty'
+      path: '/duty'
+      fullPath: '/zh/duty'
+      preLoaderRoute: typeof ZhDutyRouteImport
       parentRoute: typeof ZhRoute
     }
     '/zh/quiz': {
@@ -2689,6 +2861,7 @@ declare module '@tanstack/react-router' {
 }
 
 interface DeRouteChildren {
+  DeDutyRoute: typeof DeDutyRoute
   DeQuizRoute: typeof DeQuizRoute
   DeReviewsRoute: typeof DeReviewsRoute
   DeRoiRoute: typeof DeRoiRoute
@@ -2706,6 +2879,7 @@ interface DeRouteChildren {
 }
 
 const DeRouteChildren: DeRouteChildren = {
+  DeDutyRoute: DeDutyRoute,
   DeQuizRoute: DeQuizRoute,
   DeReviewsRoute: DeReviewsRoute,
   DeRoiRoute: DeRoiRoute,
@@ -2725,6 +2899,7 @@ const DeRouteChildren: DeRouteChildren = {
 const DeRouteWithChildren = DeRoute._addFileChildren(DeRouteChildren)
 
 interface EsRouteChildren {
+  EsDutyRoute: typeof EsDutyRoute
   EsQuizRoute: typeof EsQuizRoute
   EsReviewsRoute: typeof EsReviewsRoute
   EsRoiRoute: typeof EsRoiRoute
@@ -2742,6 +2917,7 @@ interface EsRouteChildren {
 }
 
 const EsRouteChildren: EsRouteChildren = {
+  EsDutyRoute: EsDutyRoute,
   EsQuizRoute: EsQuizRoute,
   EsReviewsRoute: EsReviewsRoute,
   EsRoiRoute: EsRoiRoute,
@@ -2761,6 +2937,7 @@ const EsRouteChildren: EsRouteChildren = {
 const EsRouteWithChildren = EsRoute._addFileChildren(EsRouteChildren)
 
 interface FrRouteChildren {
+  FrDutyRoute: typeof FrDutyRoute
   FrQuizRoute: typeof FrQuizRoute
   FrReviewsRoute: typeof FrReviewsRoute
   FrRoiRoute: typeof FrRoiRoute
@@ -2778,6 +2955,7 @@ interface FrRouteChildren {
 }
 
 const FrRouteChildren: FrRouteChildren = {
+  FrDutyRoute: FrDutyRoute,
   FrQuizRoute: FrQuizRoute,
   FrReviewsRoute: FrReviewsRoute,
   FrRoiRoute: FrRoiRoute,
@@ -2797,6 +2975,7 @@ const FrRouteChildren: FrRouteChildren = {
 const FrRouteWithChildren = FrRoute._addFileChildren(FrRouteChildren)
 
 interface HiRouteChildren {
+  HiDutyRoute: typeof HiDutyRoute
   HiQuizRoute: typeof HiQuizRoute
   HiReviewsRoute: typeof HiReviewsRoute
   HiRoiRoute: typeof HiRoiRoute
@@ -2814,6 +2993,7 @@ interface HiRouteChildren {
 }
 
 const HiRouteChildren: HiRouteChildren = {
+  HiDutyRoute: HiDutyRoute,
   HiQuizRoute: HiQuizRoute,
   HiReviewsRoute: HiReviewsRoute,
   HiRoiRoute: HiRoiRoute,
@@ -2833,6 +3013,7 @@ const HiRouteChildren: HiRouteChildren = {
 const HiRouteWithChildren = HiRoute._addFileChildren(HiRouteChildren)
 
 interface ItRouteChildren {
+  ItDutyRoute: typeof ItDutyRoute
   ItQuizRoute: typeof ItQuizRoute
   ItReviewsRoute: typeof ItReviewsRoute
   ItRoiRoute: typeof ItRoiRoute
@@ -2850,6 +3031,7 @@ interface ItRouteChildren {
 }
 
 const ItRouteChildren: ItRouteChildren = {
+  ItDutyRoute: ItDutyRoute,
   ItQuizRoute: ItQuizRoute,
   ItReviewsRoute: ItReviewsRoute,
   ItRoiRoute: ItRoiRoute,
@@ -2869,6 +3051,7 @@ const ItRouteChildren: ItRouteChildren = {
 const ItRouteWithChildren = ItRoute._addFileChildren(ItRouteChildren)
 
 interface PtRouteChildren {
+  PtDutyRoute: typeof PtDutyRoute
   PtQuizRoute: typeof PtQuizRoute
   PtReviewsRoute: typeof PtReviewsRoute
   PtRoiRoute: typeof PtRoiRoute
@@ -2886,6 +3069,7 @@ interface PtRouteChildren {
 }
 
 const PtRouteChildren: PtRouteChildren = {
+  PtDutyRoute: PtDutyRoute,
   PtQuizRoute: PtQuizRoute,
   PtReviewsRoute: PtReviewsRoute,
   PtRoiRoute: PtRoiRoute,
@@ -2905,6 +3089,7 @@ const PtRouteChildren: PtRouteChildren = {
 const PtRouteWithChildren = PtRoute._addFileChildren(PtRouteChildren)
 
 interface RuRouteChildren {
+  RuDutyRoute: typeof RuDutyRoute
   RuQuizRoute: typeof RuQuizRoute
   RuReviewsRoute: typeof RuReviewsRoute
   RuRoiRoute: typeof RuRoiRoute
@@ -2922,6 +3107,7 @@ interface RuRouteChildren {
 }
 
 const RuRouteChildren: RuRouteChildren = {
+  RuDutyRoute: RuDutyRoute,
   RuQuizRoute: RuQuizRoute,
   RuReviewsRoute: RuReviewsRoute,
   RuRoiRoute: RuRoiRoute,
@@ -2941,6 +3127,7 @@ const RuRouteChildren: RuRouteChildren = {
 const RuRouteWithChildren = RuRoute._addFileChildren(RuRouteChildren)
 
 interface ZhRouteChildren {
+  ZhDutyRoute: typeof ZhDutyRoute
   ZhQuizRoute: typeof ZhQuizRoute
   ZhReviewsRoute: typeof ZhReviewsRoute
   ZhRoiRoute: typeof ZhRoiRoute
@@ -2958,6 +3145,7 @@ interface ZhRouteChildren {
 }
 
 const ZhRouteChildren: ZhRouteChildren = {
+  ZhDutyRoute: ZhDutyRoute,
   ZhQuizRoute: ZhQuizRoute,
   ZhReviewsRoute: ZhReviewsRoute,
   ZhRoiRoute: ZhRoiRoute,
@@ -2979,6 +3167,7 @@ const ZhRouteWithChildren = ZhRoute._addFileChildren(ZhRouteChildren)
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DeRoute: DeRouteWithChildren,
+  DutyRoute: DutyRoute,
   EsRoute: EsRouteWithChildren,
   FrRoute: FrRouteWithChildren,
   HiRoute: HiRouteWithChildren,

@@ -89,3 +89,8 @@ Accio Work is an execution-oriented AI agent platform (not a chatbot). A general
 
 - [Supplier email templates and checklist EN](https://acciowork.pro/templates): copy ready inquiry, negotiation and sample request emails, plus a supplier vetting checklist
 - Localized: /ru/templates, /de/templates, /it/templates, /es/templates, /zh/templates, /pt/templates, /hi/templates, /fr/templates
+
+## Duty and landed cost calculator (after de minimis, 2026, all languages)
+
+- [Duty and landed cost calculator EN](https://acciowork.pro/duty): estimate import duty, VAT and true landed cost per unit after the end of the $800 de minimis exemption
+- Localized: /ru/duty, /de/duty, /it/duty, /es/duty, /zh/duty, /pt/duty, /hi/duty, /fr/duty

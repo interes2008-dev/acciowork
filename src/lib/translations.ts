@@ -55,6 +55,7 @@ export type Dict = {
     templates: string;
     tools: string;
     resources: string;
+    duty: string;
   };
   hero: {
     brand: string;
@@ -160,6 +161,7 @@ const en: Dict = {
     templates: "Templates",
     tools: "Tools",
     resources: "Resources",
+    duty: "Duty calculator",
   },
   hero: {
     brand: "Work",
@@ -356,6 +358,7 @@ const ru: Dict = {
     templates: "Шаблоны",
     tools: "Инструменты",
     resources: "Ресурсы",
+    duty: "Калькулятор пошлин",
   },
   hero: {
     brand: "Work",
@@ -552,6 +555,7 @@ const de: Dict = {
     templates: "Vorlagen",
     tools: "Tools",
     resources: "Ressourcen",
+    duty: "Zollrechner",
   },
   hero: {
     brand: "Work",
@@ -748,6 +752,7 @@ const it: Dict = {
     templates: "Modelli",
     tools: "Strumenti",
     resources: "Risorse",
+    duty: "Calcolo dazi",
   },
   hero: {
     brand: "Work",
@@ -944,6 +949,7 @@ const es: Dict = {
     templates: "Plantillas",
     tools: "Herramientas",
     resources: "Recursos",
+    duty: "Aranceles",
   },
   hero: {
     brand: "Work",
@@ -1140,6 +1146,7 @@ const zh: Dict = {
     templates: "模板",
     tools: "工具",
     resources: "资源",
+    duty: "关税计算器",
   },
   hero: {
     brand: "Work",
@@ -1337,6 +1344,7 @@ const pt: Dict = {
     templates: "Modelos",
     tools: "Ferramentas",
     resources: "Recursos",
+    duty: "Cálculo de impostos",
   },
   hero: {
     brand: "Work",
@@ -1533,6 +1541,7 @@ const hi: Dict = {
     templates: "टेम्पलेट",
     tools: "टूल",
     resources: "संसाधन",
+    duty: "शुल्क कैलकुलेटर",
   },
   hero: {
     brand: "Work",
@@ -1730,6 +1739,7 @@ const fr: Dict = {
     templates: "Modèles",
     tools: "Outils",
     resources: "Ressources",
+    duty: "Calcul des droits",
   },
   hero: {
     brand: "Work",

@@ -224,6 +224,7 @@ function Navbar() {
   const roiHref = blogHref.replace("/blog", "/roi");
   const quizHref = blogHref.replace("/blog", "/quiz");
   const templatesHref = blogHref.replace("/blog", "/templates");
+  const dutyHref = blogHref.replace("/blog", "/duty");
   const [menuOpen, setMenuOpen] = useState(false);
   const eventsHref = lang === "en" ? "/events/free-forever" : `/${lang}/events/free-forever`;
   const mobileLinks = [
@@ -235,6 +236,7 @@ function Navbar() {
     { href: roiHref, label: t.nav.roi },
     { href: quizHref, label: t.nav.quiz },
     { href: templatesHref, label: t.nav.templates },
+    { href: dutyHref, label: t.nav.duty },
     { href: "#faq", label: t.nav.help },
     { href: eventsHref, label: t.nav.events },
   ];
