@@ -56,6 +56,7 @@ export type Dict = {
     tools: string;
     resources: string;
     duty: string;
+    deMinimis: string;
   };
   hero: {
     brand: string;
@@ -162,6 +163,7 @@ const en: Dict = {
     tools: "Tools",
     resources: "Resources",
     duty: "Duty calculator",
+    deMinimis: "De minimis guide",
   },
   hero: {
     brand: "Work",
@@ -359,6 +361,7 @@ const ru: Dict = {
     tools: "Инструменты",
     resources: "Ресурсы",
     duty: "Калькулятор пошлин",
+    deMinimis: "Гайд по de minimis",
   },
   hero: {
     brand: "Work",
@@ -556,6 +559,7 @@ const de: Dict = {
     tools: "Tools",
     resources: "Ressourcen",
     duty: "Zollrechner",
+    deMinimis: "De-minimis-Guide",
   },
   hero: {
     brand: "Work",
@@ -753,6 +757,7 @@ const it: Dict = {
     tools: "Strumenti",
     resources: "Risorse",
     duty: "Calcolo dazi",
+    deMinimis: "Guida de minimis",
   },
   hero: {
     brand: "Work",
@@ -950,6 +955,7 @@ const es: Dict = {
     tools: "Herramientas",
     resources: "Recursos",
     duty: "Aranceles",
+    deMinimis: "Guía de minimis",
   },
   hero: {
     brand: "Work",
@@ -1147,6 +1153,7 @@ const zh: Dict = {
     tools: "工具",
     resources: "资源",
     duty: "关税计算器",
+    deMinimis: "de minimis 指南",
   },
   hero: {
     brand: "Work",
@@ -1345,6 +1352,7 @@ const pt: Dict = {
     tools: "Ferramentas",
     resources: "Recursos",
     duty: "Cálculo de impostos",
+    deMinimis: "Guia de minimis",
   },
   hero: {
     brand: "Work",
@@ -1542,6 +1550,7 @@ const hi: Dict = {
     tools: "टूल",
     resources: "संसाधन",
     duty: "शुल्क कैलकुलेटर",
+    deMinimis: "de minimis गाइड",
   },
   hero: {
     brand: "Work",
@@ -1740,6 +1749,7 @@ const fr: Dict = {
     tools: "Outils",
     resources: "Ressources",
     duty: "Calcul des droits",
+    deMinimis: "Guide de minimis",
   },
   hero: {
     brand: "Work",

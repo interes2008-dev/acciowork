@@ -100,6 +100,10 @@ export const Route = createFileRoute("/sitemap.xml")({
         }
 
         for (const l of compareLangs) {
+          entries.push({ path: `${l}/de-minimis`, changefreq: "monthly", priority: "0.7", alternates: alts("/de-minimis") });
+        }
+
+        for (const l of compareLangs) {
           entries.push({ path: `${l}/events/free-forever`, changefreq: "monthly", priority: "0.6", alternates: alts("/events/free-forever") });
         }
 

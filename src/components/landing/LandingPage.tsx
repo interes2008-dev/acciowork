@@ -225,6 +225,7 @@ function Navbar() {
   const quizHref = blogHref.replace("/blog", "/quiz");
   const templatesHref = blogHref.replace("/blog", "/templates");
   const dutyHref = blogHref.replace("/blog", "/duty");
+  const deMinimisHref = blogHref.replace("/blog", "/de-minimis");
   const [menuOpen, setMenuOpen] = useState(false);
   const eventsHref = lang === "en" ? "/events/free-forever" : `/${lang}/events/free-forever`;
   const mobileLinks = [
@@ -237,6 +238,7 @@ function Navbar() {
     { href: quizHref, label: t.nav.quiz },
     { href: templatesHref, label: t.nav.templates },
     { href: dutyHref, label: t.nav.duty },
+    { href: deMinimisHref, label: t.nav.deMinimis },
     { href: "#faq", label: t.nav.help },
     { href: eventsHref, label: t.nav.events },
   ];
@@ -254,6 +256,7 @@ function Navbar() {
                 { href: roiHref, label: t.nav.roi },
                 { href: quizHref, label: t.nav.quiz },
                 { href: templatesHref, label: t.nav.templates },
+                { href: dutyHref, label: t.nav.duty },
               ]}
             />
             <NavDropdown
@@ -262,6 +265,7 @@ function Navbar() {
                 { href: guideHref, label: t.nav.guide },
                 { href: blogHref, label: t.nav.blog },
                 { href: reviewsHref, label: t.nav.reviews },
+                { href: deMinimisHref, label: t.nav.deMinimis },
                 { href: "#faq", label: t.nav.help },
               ]}
             />
@@ -1105,6 +1109,7 @@ function Footer() {
                 { href: `${base}/roi`, label: t.nav.roi },
                 { href: `${base}/quiz`, label: t.nav.quiz },
                 { href: `${base}/templates`, label: t.nav.templates },
+                { href: `${base}/duty`, label: t.nav.duty },
               ]}
             />
             <FooterCol
@@ -1112,6 +1117,7 @@ function Footer() {
               links={[
                 { href: `${base}/guide`, label: t.nav.guide },
                 { href: `${base}/blog`, label: t.nav.blog },
+                { href: `${base}/de-minimis`, label: t.nav.deMinimis },
                 { href: `${base}/events/free-forever`, label: t.nav.events },
                 { href: "#faq", label: t.nav.help },
               ]}

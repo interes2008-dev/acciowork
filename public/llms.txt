@@ -94,3 +94,8 @@ Accio Work is an execution-oriented AI agent platform (not a chatbot). A general
 
 - [Duty and landed cost calculator EN](https://acciowork.pro/duty): estimate import duty, VAT and true landed cost per unit after the end of the $800 de minimis exemption
 - Localized: /ru/duty, /de/duty, /it/duty, /es/duty, /zh/duty, /pt/duty, /hi/duty, /fr/duty
+
+## How to import after de minimis ended (2026 guide, all languages)
+
+- [Import after de minimis EN](https://acciowork.pro/de-minimis): what changed and three moves (bulk import, switch sourcing origin, reprice) to keep cross border selling profitable
+- Localized: /ru/de-minimis, /de/de-minimis, /it/de-minimis, /es/de-minimis, /zh/de-minimis, /pt/de-minimis, /hi/de-minimis, /fr/de-minimis
