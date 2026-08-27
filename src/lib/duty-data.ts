@@ -36,7 +36,7 @@ export const dutyChrome: Record<DutyLang, DutyChrome> = {
     "dUS": "United States",
     "dEU": "European Union",
     "dUK": "United Kingdom",
-    "metaTitle": "Duty and landed cost calculator after de minimis | Accio Work",
+    "metaTitle": "Landed cost calculator after de minimis | Accio Work",
     "metaDesc": "Free calculator for import duty, VAT and true landed cost per unit after the end of the $800 de minimis exemption. See if per parcel selling still pays."
   },
   "ru": {
@@ -73,7 +73,7 @@ export const dutyChrome: Record<DutyLang, DutyChrome> = {
     "dUS": "США",
     "dEU": "Евросоюз",
     "dUK": "Великобритания",
-    "metaTitle": "Калькулятор пошлин и себестоимости после de minimis | Accio Work",
+    "metaTitle": "Калькулятор пошлин после de minimis | Accio Work",
     "metaDesc": "Бесплатный расчёт импортной пошлины, VAT и реальной себестоимости за единицу после отмены освобождения $800. Узнайте, выгодно ли продавать по одной посылке."
   },
   "de": {
@@ -147,7 +147,7 @@ export const dutyChrome: Record<DutyLang, DutyChrome> = {
     "dUS": "Stati Uniti",
     "dEU": "Unione Europea",
     "dUK": "Regno Unito",
-    "metaTitle": "Calcolatore di dazi e costo a destino dopo de minimis | Accio Work",
+    "metaTitle": "Calcolatore dazi dopo de minimis | Accio Work",
     "metaDesc": "Calcolatore gratuito per dazio, IVA e costo a destino reale per unità dopo la fine dell'esenzione de minimis da 800 dollari."
   },
   "es": {
@@ -184,7 +184,7 @@ export const dutyChrome: Record<DutyLang, DutyChrome> = {
     "dUS": "Estados Unidos",
     "dEU": "Unión Europea",
     "dUK": "Reino Unido",
-    "metaTitle": "Calculadora de aranceles y costo total tras de minimis | Accio Work",
+    "metaTitle": "Calculadora de aranceles tras de minimis | Accio Work",
     "metaDesc": "Calculadora gratis de arancel, IVA y costo total real por unidad tras el fin de la exención de minimis de 800 dólares. ¿Sigue saliendo vender paquete a paquete?"
   },
   "zh": {
@@ -258,7 +258,7 @@ export const dutyChrome: Record<DutyLang, DutyChrome> = {
     "dUS": "Estados Unidos",
     "dEU": "União Europeia",
     "dUK": "Reino Unido",
-    "metaTitle": "Calculadora de impostos e custo total após de minimis | Accio Work",
+    "metaTitle": "Calculadora de impostos após de minimis | Accio Work",
     "metaDesc": "Calculadora grátis de imposto de importação, IVA e custo total real por unidade após o fim da isenção de minimis de 800 dólares."
   },
   "hi": {
@@ -295,7 +295,7 @@ export const dutyChrome: Record<DutyLang, DutyChrome> = {
     "dUS": "संयुक्त राज्य",
     "dEU": "यूरोपीय संघ",
     "dUK": "यूनाइटेड किंगडम",
-    "metaTitle": "de minimis के बाद शुल्क और लैंडेड कॉस्ट कैलकुलेटर | Accio Work",
+    "metaTitle": "de minimis के बाद शुल्क कैलकुलेटर | Accio Work",
     "metaDesc": "800 डॉलर की de minimis छूट खत्म होने के बाद आयात शुल्क, VAT और प्रति यूनिट असली लैंडेड कॉस्ट का मुफ्त कैलकुलेटर। देखें कि एक-एक पार्सल बेचना अब भी फ़ायदेमंद है।"
   },
   "fr": {
@@ -332,7 +332,7 @@ export const dutyChrome: Record<DutyLang, DutyChrome> = {
     "dUS": "États-Unis",
     "dEU": "Union européenne",
     "dUK": "Royaume-Uni",
-    "metaTitle": "Calculateur de droits et coût rendu après de minimis | Accio Work",
+    "metaTitle": "Calculateur de droits après de minimis | Accio Work",
     "metaDesc": "Calculateur gratuit de droits d'import, TVA et coût rendu réel par unité après la fin de l'exemption de minimis de 800 dollars."
   }
 };

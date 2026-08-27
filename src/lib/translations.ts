@@ -57,6 +57,8 @@ export type Dict = {
     resources: string;
     duty: string;
     deMinimis: string;
+    tiktok: string;
+    prompts: string;
   };
   hero: {
     brand: string;
@@ -164,6 +166,8 @@ const en: Dict = {
     resources: "Resources",
     duty: "Duty calculator",
     deMinimis: "De minimis guide",
+    tiktok: "TikTok Shop",
+    prompts: "AI prompt pack",
   },
   hero: {
     brand: "Work",
@@ -362,6 +366,8 @@ const ru: Dict = {
     resources: "Ресурсы",
     duty: "Калькулятор пошлин",
     deMinimis: "Гайд по de minimis",
+    tiktok: "TikTok Shop",
+    prompts: "Пак AI-промптов",
   },
   hero: {
     brand: "Work",
@@ -560,6 +566,8 @@ const de: Dict = {
     resources: "Ressourcen",
     duty: "Zollrechner",
     deMinimis: "De-minimis-Guide",
+    tiktok: "TikTok Shop",
+    prompts: "AI-Prompt-Paket",
   },
   hero: {
     brand: "Work",
@@ -758,6 +766,8 @@ const it: Dict = {
     resources: "Risorse",
     duty: "Calcolo dazi",
     deMinimis: "Guida de minimis",
+    tiktok: "TikTok Shop",
+    prompts: "Prompt AI",
   },
   hero: {
     brand: "Work",
@@ -956,6 +966,8 @@ const es: Dict = {
     resources: "Recursos",
     duty: "Aranceles",
     deMinimis: "Guía de minimis",
+    tiktok: "TikTok Shop",
+    prompts: "Prompts de IA",
   },
   hero: {
     brand: "Work",
@@ -1154,6 +1166,8 @@ const zh: Dict = {
     resources: "资源",
     duty: "关税计算器",
     deMinimis: "de minimis 指南",
+    tiktok: "TikTok Shop",
+    prompts: "AI 提示词包",
   },
   hero: {
     brand: "Work",
@@ -1353,6 +1367,8 @@ const pt: Dict = {
     resources: "Recursos",
     duty: "Cálculo de impostos",
     deMinimis: "Guia de minimis",
+    tiktok: "TikTok Shop",
+    prompts: "Prompts de IA",
   },
   hero: {
     brand: "Work",
@@ -1551,6 +1567,8 @@ const hi: Dict = {
     resources: "संसाधन",
     duty: "शुल्क कैलकुलेटर",
     deMinimis: "de minimis गाइड",
+    tiktok: "TikTok Shop",
+    prompts: "AI प्रॉम्प्ट पैक",
   },
   hero: {
     brand: "Work",
@@ -1750,6 +1768,8 @@ const fr: Dict = {
     resources: "Ressources",
     duty: "Calcul des droits",
     deMinimis: "Guide de minimis",
+    tiktok: "TikTok Shop",
+    prompts: "Prompts IA",
   },
   hero: {
     brand: "Work",

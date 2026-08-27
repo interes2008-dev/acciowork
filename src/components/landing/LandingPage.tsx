@@ -226,6 +226,8 @@ function Navbar() {
   const templatesHref = blogHref.replace("/blog", "/templates");
   const dutyHref = blogHref.replace("/blog", "/duty");
   const deMinimisHref = blogHref.replace("/blog", "/de-minimis");
+  const tiktokHref = blogHref.replace("/blog", "/tiktok-shop");
+  const promptsHref = blogHref.replace("/blog", "/ai-prompts");
   const [menuOpen, setMenuOpen] = useState(false);
   const eventsHref = lang === "en" ? "/events/free-forever" : `/${lang}/events/free-forever`;
   const mobileLinks = [
@@ -238,7 +240,9 @@ function Navbar() {
     { href: quizHref, label: t.nav.quiz },
     { href: templatesHref, label: t.nav.templates },
     { href: dutyHref, label: t.nav.duty },
+    { href: promptsHref, label: t.nav.prompts },
     { href: deMinimisHref, label: t.nav.deMinimis },
+    { href: tiktokHref, label: t.nav.tiktok },
     { href: "#faq", label: t.nav.help },
     { href: eventsHref, label: t.nav.events },
   ];
@@ -257,6 +261,7 @@ function Navbar() {
                 { href: quizHref, label: t.nav.quiz },
                 { href: templatesHref, label: t.nav.templates },
                 { href: dutyHref, label: t.nav.duty },
+                { href: promptsHref, label: t.nav.prompts },
               ]}
             />
             <NavDropdown
@@ -266,6 +271,7 @@ function Navbar() {
                 { href: blogHref, label: t.nav.blog },
                 { href: reviewsHref, label: t.nav.reviews },
                 { href: deMinimisHref, label: t.nav.deMinimis },
+                { href: tiktokHref, label: t.nav.tiktok },
                 { href: "#faq", label: t.nav.help },
               ]}
             />
@@ -1110,6 +1116,7 @@ function Footer() {
                 { href: `${base}/quiz`, label: t.nav.quiz },
                 { href: `${base}/templates`, label: t.nav.templates },
                 { href: `${base}/duty`, label: t.nav.duty },
+                { href: `${base}/ai-prompts`, label: t.nav.prompts },
               ]}
             />
             <FooterCol
@@ -1118,6 +1125,7 @@ function Footer() {
                 { href: `${base}/guide`, label: t.nav.guide },
                 { href: `${base}/blog`, label: t.nav.blog },
                 { href: `${base}/de-minimis`, label: t.nav.deMinimis },
+                { href: `${base}/tiktok-shop`, label: t.nav.tiktok },
                 { href: `${base}/events/free-forever`, label: t.nav.events },
                 { href: "#faq", label: t.nav.help },
               ]}

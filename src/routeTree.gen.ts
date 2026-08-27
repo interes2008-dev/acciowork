@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AiPromptsRouteImport } from './routes/ai-prompts'
 import { Route as DeRouteImport } from './routes/de'
 import { Route as DeMinimisRouteImport } from './routes/de-minimis'
 import { Route as DutyRouteImport } from './routes/duty'
@@ -25,72 +26,89 @@ import { Route as RuRouteImport } from './routes/ru'
 import { Route as SeoMonitorRouteImport } from './routes/seo-monitor'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as TemplatesRouteImport } from './routes/templates'
+import { Route as TiktokShopRouteImport } from './routes/tiktok-shop'
 import { Route as ZhRouteImport } from './routes/zh'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as CompareIndexRouteImport } from './routes/compare.index'
 import { Route as CompareCompetitorRouteImport } from './routes/compare.$competitor'
 import { Route as DeIndexRouteImport } from './routes/de.index'
+import { Route as DeAiPromptsRouteImport } from './routes/de.ai-prompts'
 import { Route as DeDeMinimisRouteImport } from './routes/de.de-minimis'
 import { Route as DeDutyRouteImport } from './routes/de.duty'
 import { Route as DeQuizRouteImport } from './routes/de.quiz'
 import { Route as DeReviewsRouteImport } from './routes/de.reviews'
 import { Route as DeRoiRouteImport } from './routes/de.roi'
 import { Route as DeTemplatesRouteImport } from './routes/de.templates'
+import { Route as DeTiktokShopRouteImport } from './routes/de.tiktok-shop'
 import { Route as EsIndexRouteImport } from './routes/es.index'
+import { Route as EsAiPromptsRouteImport } from './routes/es.ai-prompts'
 import { Route as EsDeMinimisRouteImport } from './routes/es.de-minimis'
 import { Route as EsDutyRouteImport } from './routes/es.duty'
 import { Route as EsQuizRouteImport } from './routes/es.quiz'
 import { Route as EsReviewsRouteImport } from './routes/es.reviews'
 import { Route as EsRoiRouteImport } from './routes/es.roi'
 import { Route as EsTemplatesRouteImport } from './routes/es.templates'
+import { Route as EsTiktokShopRouteImport } from './routes/es.tiktok-shop'
 import { Route as EventsFreeForeverRouteImport } from './routes/events.free-forever'
 import { Route as ForIndexRouteImport } from './routes/for.index'
 import { Route as ForUseCaseRouteImport } from './routes/for.$useCase'
 import { Route as FrIndexRouteImport } from './routes/fr.index'
+import { Route as FrAiPromptsRouteImport } from './routes/fr.ai-prompts'
 import { Route as FrDeMinimisRouteImport } from './routes/fr.de-minimis'
 import { Route as FrDutyRouteImport } from './routes/fr.duty'
 import { Route as FrQuizRouteImport } from './routes/fr.quiz'
 import { Route as FrReviewsRouteImport } from './routes/fr.reviews'
 import { Route as FrRoiRouteImport } from './routes/fr.roi'
 import { Route as FrTemplatesRouteImport } from './routes/fr.templates'
+import { Route as FrTiktokShopRouteImport } from './routes/fr.tiktok-shop'
 import { Route as GuideIndexRouteImport } from './routes/guide.index'
 import { Route as GuideGuideRouteImport } from './routes/guide.$guide'
 import { Route as HiIndexRouteImport } from './routes/hi.index'
+import { Route as HiAiPromptsRouteImport } from './routes/hi.ai-prompts'
 import { Route as HiDeMinimisRouteImport } from './routes/hi.de-minimis'
 import { Route as HiDutyRouteImport } from './routes/hi.duty'
 import { Route as HiQuizRouteImport } from './routes/hi.quiz'
 import { Route as HiReviewsRouteImport } from './routes/hi.reviews'
 import { Route as HiRoiRouteImport } from './routes/hi.roi'
 import { Route as HiTemplatesRouteImport } from './routes/hi.templates'
+import { Route as HiTiktokShopRouteImport } from './routes/hi.tiktok-shop'
 import { Route as ItIndexRouteImport } from './routes/it.index'
+import { Route as ItAiPromptsRouteImport } from './routes/it.ai-prompts'
 import { Route as ItDeMinimisRouteImport } from './routes/it.de-minimis'
 import { Route as ItDutyRouteImport } from './routes/it.duty'
 import { Route as ItQuizRouteImport } from './routes/it.quiz'
 import { Route as ItReviewsRouteImport } from './routes/it.reviews'
 import { Route as ItRoiRouteImport } from './routes/it.roi'
 import { Route as ItTemplatesRouteImport } from './routes/it.templates'
+import { Route as ItTiktokShopRouteImport } from './routes/it.tiktok-shop'
 import { Route as PtIndexRouteImport } from './routes/pt.index'
+import { Route as PtAiPromptsRouteImport } from './routes/pt.ai-prompts'
 import { Route as PtDeMinimisRouteImport } from './routes/pt.de-minimis'
 import { Route as PtDutyRouteImport } from './routes/pt.duty'
 import { Route as PtQuizRouteImport } from './routes/pt.quiz'
 import { Route as PtReviewsRouteImport } from './routes/pt.reviews'
 import { Route as PtRoiRouteImport } from './routes/pt.roi'
 import { Route as PtTemplatesRouteImport } from './routes/pt.templates'
+import { Route as PtTiktokShopRouteImport } from './routes/pt.tiktok-shop'
 import { Route as RuIndexRouteImport } from './routes/ru.index'
+import { Route as RuAiPromptsRouteImport } from './routes/ru.ai-prompts'
 import { Route as RuDeMinimisRouteImport } from './routes/ru.de-minimis'
 import { Route as RuDutyRouteImport } from './routes/ru.duty'
 import { Route as RuQuizRouteImport } from './routes/ru.quiz'
 import { Route as RuReviewsRouteImport } from './routes/ru.reviews'
 import { Route as RuRoiRouteImport } from './routes/ru.roi'
 import { Route as RuTemplatesRouteImport } from './routes/ru.templates'
+import { Route as RuTiktokShopRouteImport } from './routes/ru.tiktok-shop'
 import { Route as ZhIndexRouteImport } from './routes/zh.index'
+import { Route as ZhAiPromptsRouteImport } from './routes/zh.ai-prompts'
 import { Route as ZhDeMinimisRouteImport } from './routes/zh.de-minimis'
 import { Route as ZhDutyRouteImport } from './routes/zh.duty'
 import { Route as ZhQuizRouteImport } from './routes/zh.quiz'
 import { Route as ZhReviewsRouteImport } from './routes/zh.reviews'
 import { Route as ZhRoiRouteImport } from './routes/zh.roi'
 import { Route as ZhTemplatesRouteImport } from './routes/zh.templates'
+import { Route as ZhTiktokShopRouteImport } from './routes/zh.tiktok-shop'
 import { Route as DeBlogIndexRouteImport } from './routes/de.blog.index'
 import { Route as DeBlogSlugRouteImport } from './routes/de.blog.$slug'
 import { Route as DeCompareIndexRouteImport } from './routes/de.compare.index'
@@ -172,6 +190,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AiPromptsRoute = AiPromptsRouteImport.update({
+  id: '/ai-prompts',
+  path: '/ai-prompts',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DeRoute = DeRouteImport.update({
   id: '/de',
   path: '/de',
@@ -247,6 +270,11 @@ const TemplatesRoute = TemplatesRouteImport.update({
   path: '/templates',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TiktokShopRoute = TiktokShopRouteImport.update({
+  id: '/tiktok-shop',
+  path: '/tiktok-shop',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ZhRoute = ZhRouteImport.update({
   id: '/zh',
   path: '/zh',
@@ -275,6 +303,11 @@ const CompareCompetitorRoute = CompareCompetitorRouteImport.update({
 const DeIndexRoute = DeIndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => DeRoute,
+} as any)
+const DeAiPromptsRoute = DeAiPromptsRouteImport.update({
+  id: '/ai-prompts',
+  path: '/ai-prompts',
   getParentRoute: () => DeRoute,
 } as any)
 const DeDeMinimisRoute = DeDeMinimisRouteImport.update({
@@ -307,9 +340,19 @@ const DeTemplatesRoute = DeTemplatesRouteImport.update({
   path: '/templates',
   getParentRoute: () => DeRoute,
 } as any)
+const DeTiktokShopRoute = DeTiktokShopRouteImport.update({
+  id: '/tiktok-shop',
+  path: '/tiktok-shop',
+  getParentRoute: () => DeRoute,
+} as any)
 const EsIndexRoute = EsIndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => EsRoute,
+} as any)
+const EsAiPromptsRoute = EsAiPromptsRouteImport.update({
+  id: '/ai-prompts',
+  path: '/ai-prompts',
   getParentRoute: () => EsRoute,
 } as any)
 const EsDeMinimisRoute = EsDeMinimisRouteImport.update({
@@ -342,6 +385,11 @@ const EsTemplatesRoute = EsTemplatesRouteImport.update({
   path: '/templates',
   getParentRoute: () => EsRoute,
 } as any)
+const EsTiktokShopRoute = EsTiktokShopRouteImport.update({
+  id: '/tiktok-shop',
+  path: '/tiktok-shop',
+  getParentRoute: () => EsRoute,
+} as any)
 const EventsFreeForeverRoute = EventsFreeForeverRouteImport.update({
   id: '/events/free-forever',
   path: '/events/free-forever',
@@ -360,6 +408,11 @@ const ForUseCaseRoute = ForUseCaseRouteImport.update({
 const FrIndexRoute = FrIndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrAiPromptsRoute = FrAiPromptsRouteImport.update({
+  id: '/ai-prompts',
+  path: '/ai-prompts',
   getParentRoute: () => FrRoute,
 } as any)
 const FrDeMinimisRoute = FrDeMinimisRouteImport.update({
@@ -392,6 +445,11 @@ const FrTemplatesRoute = FrTemplatesRouteImport.update({
   path: '/templates',
   getParentRoute: () => FrRoute,
 } as any)
+const FrTiktokShopRoute = FrTiktokShopRouteImport.update({
+  id: '/tiktok-shop',
+  path: '/tiktok-shop',
+  getParentRoute: () => FrRoute,
+} as any)
 const GuideIndexRoute = GuideIndexRouteImport.update({
   id: '/guide/',
   path: '/guide/',
@@ -405,6 +463,11 @@ const GuideGuideRoute = GuideGuideRouteImport.update({
 const HiIndexRoute = HiIndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => HiRoute,
+} as any)
+const HiAiPromptsRoute = HiAiPromptsRouteImport.update({
+  id: '/ai-prompts',
+  path: '/ai-prompts',
   getParentRoute: () => HiRoute,
 } as any)
 const HiDeMinimisRoute = HiDeMinimisRouteImport.update({
@@ -437,9 +500,19 @@ const HiTemplatesRoute = HiTemplatesRouteImport.update({
   path: '/templates',
   getParentRoute: () => HiRoute,
 } as any)
+const HiTiktokShopRoute = HiTiktokShopRouteImport.update({
+  id: '/tiktok-shop',
+  path: '/tiktok-shop',
+  getParentRoute: () => HiRoute,
+} as any)
 const ItIndexRoute = ItIndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => ItRoute,
+} as any)
+const ItAiPromptsRoute = ItAiPromptsRouteImport.update({
+  id: '/ai-prompts',
+  path: '/ai-prompts',
   getParentRoute: () => ItRoute,
 } as any)
 const ItDeMinimisRoute = ItDeMinimisRouteImport.update({
@@ -472,9 +545,19 @@ const ItTemplatesRoute = ItTemplatesRouteImport.update({
   path: '/templates',
   getParentRoute: () => ItRoute,
 } as any)
+const ItTiktokShopRoute = ItTiktokShopRouteImport.update({
+  id: '/tiktok-shop',
+  path: '/tiktok-shop',
+  getParentRoute: () => ItRoute,
+} as any)
 const PtIndexRoute = PtIndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => PtRoute,
+} as any)
+const PtAiPromptsRoute = PtAiPromptsRouteImport.update({
+  id: '/ai-prompts',
+  path: '/ai-prompts',
   getParentRoute: () => PtRoute,
 } as any)
 const PtDeMinimisRoute = PtDeMinimisRouteImport.update({
@@ -507,9 +590,19 @@ const PtTemplatesRoute = PtTemplatesRouteImport.update({
   path: '/templates',
   getParentRoute: () => PtRoute,
 } as any)
+const PtTiktokShopRoute = PtTiktokShopRouteImport.update({
+  id: '/tiktok-shop',
+  path: '/tiktok-shop',
+  getParentRoute: () => PtRoute,
+} as any)
 const RuIndexRoute = RuIndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => RuRoute,
+} as any)
+const RuAiPromptsRoute = RuAiPromptsRouteImport.update({
+  id: '/ai-prompts',
+  path: '/ai-prompts',
   getParentRoute: () => RuRoute,
 } as any)
 const RuDeMinimisRoute = RuDeMinimisRouteImport.update({
@@ -542,9 +635,19 @@ const RuTemplatesRoute = RuTemplatesRouteImport.update({
   path: '/templates',
   getParentRoute: () => RuRoute,
 } as any)
+const RuTiktokShopRoute = RuTiktokShopRouteImport.update({
+  id: '/tiktok-shop',
+  path: '/tiktok-shop',
+  getParentRoute: () => RuRoute,
+} as any)
 const ZhIndexRoute = ZhIndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => ZhRoute,
+} as any)
+const ZhAiPromptsRoute = ZhAiPromptsRouteImport.update({
+  id: '/ai-prompts',
+  path: '/ai-prompts',
   getParentRoute: () => ZhRoute,
 } as any)
 const ZhDeMinimisRoute = ZhDeMinimisRouteImport.update({
@@ -575,6 +678,11 @@ const ZhRoiRoute = ZhRoiRouteImport.update({
 const ZhTemplatesRoute = ZhTemplatesRouteImport.update({
   id: '/templates',
   path: '/templates',
+  getParentRoute: () => ZhRoute,
+} as any)
+const ZhTiktokShopRoute = ZhTiktokShopRouteImport.update({
+  id: '/tiktok-shop',
+  path: '/tiktok-shop',
   getParentRoute: () => ZhRoute,
 } as any)
 const DeBlogIndexRoute = DeBlogIndexRouteImport.update({
@@ -956,6 +1064,7 @@ const ApiPublicCronSeoMonitorRoute = ApiPublicCronSeoMonitorRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/ai-prompts': typeof AiPromptsRoute
   '/de': typeof DeRouteWithChildren
   '/de-minimis': typeof DeMinimisRoute
   '/duty': typeof DutyRoute
@@ -971,60 +1080,77 @@ export interface FileRoutesByFullPath {
   '/seo-monitor': typeof SeoMonitorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/templates': typeof TemplatesRoute
+  '/tiktok-shop': typeof TiktokShopRoute
   '/zh': typeof ZhRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$competitor': typeof CompareCompetitorRoute
+  '/de/ai-prompts': typeof DeAiPromptsRoute
   '/de/de-minimis': typeof DeDeMinimisRoute
   '/de/duty': typeof DeDutyRoute
   '/de/quiz': typeof DeQuizRoute
   '/de/reviews': typeof DeReviewsRoute
   '/de/roi': typeof DeRoiRoute
   '/de/templates': typeof DeTemplatesRoute
+  '/de/tiktok-shop': typeof DeTiktokShopRoute
+  '/es/ai-prompts': typeof EsAiPromptsRoute
   '/es/de-minimis': typeof EsDeMinimisRoute
   '/es/duty': typeof EsDutyRoute
   '/es/quiz': typeof EsQuizRoute
   '/es/reviews': typeof EsReviewsRoute
   '/es/roi': typeof EsRoiRoute
   '/es/templates': typeof EsTemplatesRoute
+  '/es/tiktok-shop': typeof EsTiktokShopRoute
   '/events/free-forever': typeof EventsFreeForeverRoute
   '/for/$useCase': typeof ForUseCaseRoute
+  '/fr/ai-prompts': typeof FrAiPromptsRoute
   '/fr/de-minimis': typeof FrDeMinimisRoute
   '/fr/duty': typeof FrDutyRoute
   '/fr/quiz': typeof FrQuizRoute
   '/fr/reviews': typeof FrReviewsRoute
   '/fr/roi': typeof FrRoiRoute
   '/fr/templates': typeof FrTemplatesRoute
+  '/fr/tiktok-shop': typeof FrTiktokShopRoute
   '/guide/$guide': typeof GuideGuideRoute
+  '/hi/ai-prompts': typeof HiAiPromptsRoute
   '/hi/de-minimis': typeof HiDeMinimisRoute
   '/hi/duty': typeof HiDutyRoute
   '/hi/quiz': typeof HiQuizRoute
   '/hi/reviews': typeof HiReviewsRoute
   '/hi/roi': typeof HiRoiRoute
   '/hi/templates': typeof HiTemplatesRoute
+  '/hi/tiktok-shop': typeof HiTiktokShopRoute
+  '/it/ai-prompts': typeof ItAiPromptsRoute
   '/it/de-minimis': typeof ItDeMinimisRoute
   '/it/duty': typeof ItDutyRoute
   '/it/quiz': typeof ItQuizRoute
   '/it/reviews': typeof ItReviewsRoute
   '/it/roi': typeof ItRoiRoute
   '/it/templates': typeof ItTemplatesRoute
+  '/it/tiktok-shop': typeof ItTiktokShopRoute
+  '/pt/ai-prompts': typeof PtAiPromptsRoute
   '/pt/de-minimis': typeof PtDeMinimisRoute
   '/pt/duty': typeof PtDutyRoute
   '/pt/quiz': typeof PtQuizRoute
   '/pt/reviews': typeof PtReviewsRoute
   '/pt/roi': typeof PtRoiRoute
   '/pt/templates': typeof PtTemplatesRoute
+  '/pt/tiktok-shop': typeof PtTiktokShopRoute
+  '/ru/ai-prompts': typeof RuAiPromptsRoute
   '/ru/de-minimis': typeof RuDeMinimisRoute
   '/ru/duty': typeof RuDutyRoute
   '/ru/quiz': typeof RuQuizRoute
   '/ru/reviews': typeof RuReviewsRoute
   '/ru/roi': typeof RuRoiRoute
   '/ru/templates': typeof RuTemplatesRoute
+  '/ru/tiktok-shop': typeof RuTiktokShopRoute
+  '/zh/ai-prompts': typeof ZhAiPromptsRoute
   '/zh/de-minimis': typeof ZhDeMinimisRoute
   '/zh/duty': typeof ZhDutyRoute
   '/zh/quiz': typeof ZhQuizRoute
   '/zh/reviews': typeof ZhReviewsRoute
   '/zh/roi': typeof ZhRoiRoute
   '/zh/templates': typeof ZhTemplatesRoute
+  '/zh/tiktok-shop': typeof ZhTiktokShopRoute
   '/blog/': typeof BlogIndexRoute
   '/compare/': typeof CompareIndexRoute
   '/de/': typeof DeIndexRoute
@@ -1115,6 +1241,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/ai-prompts': typeof AiPromptsRoute
   '/de-minimis': typeof DeMinimisRoute
   '/duty': typeof DutyRoute
   '/quiz': typeof QuizRoute
@@ -1123,59 +1250,76 @@ export interface FileRoutesByTo {
   '/seo-monitor': typeof SeoMonitorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/templates': typeof TemplatesRoute
+  '/tiktok-shop': typeof TiktokShopRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$competitor': typeof CompareCompetitorRoute
+  '/de/ai-prompts': typeof DeAiPromptsRoute
   '/de/de-minimis': typeof DeDeMinimisRoute
   '/de/duty': typeof DeDutyRoute
   '/de/quiz': typeof DeQuizRoute
   '/de/reviews': typeof DeReviewsRoute
   '/de/roi': typeof DeRoiRoute
   '/de/templates': typeof DeTemplatesRoute
+  '/de/tiktok-shop': typeof DeTiktokShopRoute
+  '/es/ai-prompts': typeof EsAiPromptsRoute
   '/es/de-minimis': typeof EsDeMinimisRoute
   '/es/duty': typeof EsDutyRoute
   '/es/quiz': typeof EsQuizRoute
   '/es/reviews': typeof EsReviewsRoute
   '/es/roi': typeof EsRoiRoute
   '/es/templates': typeof EsTemplatesRoute
+  '/es/tiktok-shop': typeof EsTiktokShopRoute
   '/events/free-forever': typeof EventsFreeForeverRoute
   '/for/$useCase': typeof ForUseCaseRoute
+  '/fr/ai-prompts': typeof FrAiPromptsRoute
   '/fr/de-minimis': typeof FrDeMinimisRoute
   '/fr/duty': typeof FrDutyRoute
   '/fr/quiz': typeof FrQuizRoute
   '/fr/reviews': typeof FrReviewsRoute
   '/fr/roi': typeof FrRoiRoute
   '/fr/templates': typeof FrTemplatesRoute
+  '/fr/tiktok-shop': typeof FrTiktokShopRoute
   '/guide/$guide': typeof GuideGuideRoute
+  '/hi/ai-prompts': typeof HiAiPromptsRoute
   '/hi/de-minimis': typeof HiDeMinimisRoute
   '/hi/duty': typeof HiDutyRoute
   '/hi/quiz': typeof HiQuizRoute
   '/hi/reviews': typeof HiReviewsRoute
   '/hi/roi': typeof HiRoiRoute
   '/hi/templates': typeof HiTemplatesRoute
+  '/hi/tiktok-shop': typeof HiTiktokShopRoute
+  '/it/ai-prompts': typeof ItAiPromptsRoute
   '/it/de-minimis': typeof ItDeMinimisRoute
   '/it/duty': typeof ItDutyRoute
   '/it/quiz': typeof ItQuizRoute
   '/it/reviews': typeof ItReviewsRoute
   '/it/roi': typeof ItRoiRoute
   '/it/templates': typeof ItTemplatesRoute
+  '/it/tiktok-shop': typeof ItTiktokShopRoute
+  '/pt/ai-prompts': typeof PtAiPromptsRoute
   '/pt/de-minimis': typeof PtDeMinimisRoute
   '/pt/duty': typeof PtDutyRoute
   '/pt/quiz': typeof PtQuizRoute
   '/pt/reviews': typeof PtReviewsRoute
   '/pt/roi': typeof PtRoiRoute
   '/pt/templates': typeof PtTemplatesRoute
+  '/pt/tiktok-shop': typeof PtTiktokShopRoute
+  '/ru/ai-prompts': typeof RuAiPromptsRoute
   '/ru/de-minimis': typeof RuDeMinimisRoute
   '/ru/duty': typeof RuDutyRoute
   '/ru/quiz': typeof RuQuizRoute
   '/ru/reviews': typeof RuReviewsRoute
   '/ru/roi': typeof RuRoiRoute
   '/ru/templates': typeof RuTemplatesRoute
+  '/ru/tiktok-shop': typeof RuTiktokShopRoute
+  '/zh/ai-prompts': typeof ZhAiPromptsRoute
   '/zh/de-minimis': typeof ZhDeMinimisRoute
   '/zh/duty': typeof ZhDutyRoute
   '/zh/quiz': typeof ZhQuizRoute
   '/zh/reviews': typeof ZhReviewsRoute
   '/zh/roi': typeof ZhRoiRoute
   '/zh/templates': typeof ZhTemplatesRoute
+  '/zh/tiktok-shop': typeof ZhTiktokShopRoute
   '/blog': typeof BlogIndexRoute
   '/compare': typeof CompareIndexRoute
   '/de': typeof DeIndexRoute
@@ -1267,6 +1411,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/ai-prompts': typeof AiPromptsRoute
   '/de': typeof DeRouteWithChildren
   '/de-minimis': typeof DeMinimisRoute
   '/duty': typeof DutyRoute
@@ -1282,60 +1427,77 @@ export interface FileRoutesById {
   '/seo-monitor': typeof SeoMonitorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/templates': typeof TemplatesRoute
+  '/tiktok-shop': typeof TiktokShopRoute
   '/zh': typeof ZhRouteWithChildren
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$competitor': typeof CompareCompetitorRoute
+  '/de/ai-prompts': typeof DeAiPromptsRoute
   '/de/de-minimis': typeof DeDeMinimisRoute
   '/de/duty': typeof DeDutyRoute
   '/de/quiz': typeof DeQuizRoute
   '/de/reviews': typeof DeReviewsRoute
   '/de/roi': typeof DeRoiRoute
   '/de/templates': typeof DeTemplatesRoute
+  '/de/tiktok-shop': typeof DeTiktokShopRoute
+  '/es/ai-prompts': typeof EsAiPromptsRoute
   '/es/de-minimis': typeof EsDeMinimisRoute
   '/es/duty': typeof EsDutyRoute
   '/es/quiz': typeof EsQuizRoute
   '/es/reviews': typeof EsReviewsRoute
   '/es/roi': typeof EsRoiRoute
   '/es/templates': typeof EsTemplatesRoute
+  '/es/tiktok-shop': typeof EsTiktokShopRoute
   '/events/free-forever': typeof EventsFreeForeverRoute
   '/for/$useCase': typeof ForUseCaseRoute
+  '/fr/ai-prompts': typeof FrAiPromptsRoute
   '/fr/de-minimis': typeof FrDeMinimisRoute
   '/fr/duty': typeof FrDutyRoute
   '/fr/quiz': typeof FrQuizRoute
   '/fr/reviews': typeof FrReviewsRoute
   '/fr/roi': typeof FrRoiRoute
   '/fr/templates': typeof FrTemplatesRoute
+  '/fr/tiktok-shop': typeof FrTiktokShopRoute
   '/guide/$guide': typeof GuideGuideRoute
+  '/hi/ai-prompts': typeof HiAiPromptsRoute
   '/hi/de-minimis': typeof HiDeMinimisRoute
   '/hi/duty': typeof HiDutyRoute
   '/hi/quiz': typeof HiQuizRoute
   '/hi/reviews': typeof HiReviewsRoute
   '/hi/roi': typeof HiRoiRoute
   '/hi/templates': typeof HiTemplatesRoute
+  '/hi/tiktok-shop': typeof HiTiktokShopRoute
+  '/it/ai-prompts': typeof ItAiPromptsRoute
   '/it/de-minimis': typeof ItDeMinimisRoute
   '/it/duty': typeof ItDutyRoute
   '/it/quiz': typeof ItQuizRoute
   '/it/reviews': typeof ItReviewsRoute
   '/it/roi': typeof ItRoiRoute
   '/it/templates': typeof ItTemplatesRoute
+  '/it/tiktok-shop': typeof ItTiktokShopRoute
+  '/pt/ai-prompts': typeof PtAiPromptsRoute
   '/pt/de-minimis': typeof PtDeMinimisRoute
   '/pt/duty': typeof PtDutyRoute
   '/pt/quiz': typeof PtQuizRoute
   '/pt/reviews': typeof PtReviewsRoute
   '/pt/roi': typeof PtRoiRoute
   '/pt/templates': typeof PtTemplatesRoute
+  '/pt/tiktok-shop': typeof PtTiktokShopRoute
+  '/ru/ai-prompts': typeof RuAiPromptsRoute
   '/ru/de-minimis': typeof RuDeMinimisRoute
   '/ru/duty': typeof RuDutyRoute
   '/ru/quiz': typeof RuQuizRoute
   '/ru/reviews': typeof RuReviewsRoute
   '/ru/roi': typeof RuRoiRoute
   '/ru/templates': typeof RuTemplatesRoute
+  '/ru/tiktok-shop': typeof RuTiktokShopRoute
+  '/zh/ai-prompts': typeof ZhAiPromptsRoute
   '/zh/de-minimis': typeof ZhDeMinimisRoute
   '/zh/duty': typeof ZhDutyRoute
   '/zh/quiz': typeof ZhQuizRoute
   '/zh/reviews': typeof ZhReviewsRoute
   '/zh/roi': typeof ZhRoiRoute
   '/zh/templates': typeof ZhTemplatesRoute
+  '/zh/tiktok-shop': typeof ZhTiktokShopRoute
   '/blog/': typeof BlogIndexRoute
   '/compare/': typeof CompareIndexRoute
   '/de/': typeof DeIndexRoute
@@ -1428,6 +1590,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/ai-prompts'
     | '/de'
     | '/de-minimis'
     | '/duty'
@@ -1443,60 +1606,77 @@ export interface FileRouteTypes {
     | '/seo-monitor'
     | '/sitemap.xml'
     | '/templates'
+    | '/tiktok-shop'
     | '/zh'
     | '/blog/$slug'
     | '/compare/$competitor'
+    | '/de/ai-prompts'
     | '/de/de-minimis'
     | '/de/duty'
     | '/de/quiz'
     | '/de/reviews'
     | '/de/roi'
     | '/de/templates'
+    | '/de/tiktok-shop'
+    | '/es/ai-prompts'
     | '/es/de-minimis'
     | '/es/duty'
     | '/es/quiz'
     | '/es/reviews'
     | '/es/roi'
     | '/es/templates'
+    | '/es/tiktok-shop'
     | '/events/free-forever'
     | '/for/$useCase'
+    | '/fr/ai-prompts'
     | '/fr/de-minimis'
     | '/fr/duty'
     | '/fr/quiz'
     | '/fr/reviews'
     | '/fr/roi'
     | '/fr/templates'
+    | '/fr/tiktok-shop'
     | '/guide/$guide'
+    | '/hi/ai-prompts'
     | '/hi/de-minimis'
     | '/hi/duty'
     | '/hi/quiz'
     | '/hi/reviews'
     | '/hi/roi'
     | '/hi/templates'
+    | '/hi/tiktok-shop'
+    | '/it/ai-prompts'
     | '/it/de-minimis'
     | '/it/duty'
     | '/it/quiz'
     | '/it/reviews'
     | '/it/roi'
     | '/it/templates'
+    | '/it/tiktok-shop'
+    | '/pt/ai-prompts'
     | '/pt/de-minimis'
     | '/pt/duty'
     | '/pt/quiz'
     | '/pt/reviews'
     | '/pt/roi'
     | '/pt/templates'
+    | '/pt/tiktok-shop'
+    | '/ru/ai-prompts'
     | '/ru/de-minimis'
     | '/ru/duty'
     | '/ru/quiz'
     | '/ru/reviews'
     | '/ru/roi'
     | '/ru/templates'
+    | '/ru/tiktok-shop'
+    | '/zh/ai-prompts'
     | '/zh/de-minimis'
     | '/zh/duty'
     | '/zh/quiz'
     | '/zh/reviews'
     | '/zh/roi'
     | '/zh/templates'
+    | '/zh/tiktok-shop'
     | '/blog/'
     | '/compare/'
     | '/de/'
@@ -1587,6 +1767,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/ai-prompts'
     | '/de-minimis'
     | '/duty'
     | '/quiz'
@@ -1595,59 +1776,76 @@ export interface FileRouteTypes {
     | '/seo-monitor'
     | '/sitemap.xml'
     | '/templates'
+    | '/tiktok-shop'
     | '/blog/$slug'
     | '/compare/$competitor'
+    | '/de/ai-prompts'
     | '/de/de-minimis'
     | '/de/duty'
     | '/de/quiz'
     | '/de/reviews'
     | '/de/roi'
     | '/de/templates'
+    | '/de/tiktok-shop'
+    | '/es/ai-prompts'
     | '/es/de-minimis'
     | '/es/duty'
     | '/es/quiz'
     | '/es/reviews'
     | '/es/roi'
     | '/es/templates'
+    | '/es/tiktok-shop'
     | '/events/free-forever'
     | '/for/$useCase'
+    | '/fr/ai-prompts'
     | '/fr/de-minimis'
     | '/fr/duty'
     | '/fr/quiz'
     | '/fr/reviews'
     | '/fr/roi'
     | '/fr/templates'
+    | '/fr/tiktok-shop'
     | '/guide/$guide'
+    | '/hi/ai-prompts'
     | '/hi/de-minimis'
     | '/hi/duty'
     | '/hi/quiz'
     | '/hi/reviews'
     | '/hi/roi'
     | '/hi/templates'
+    | '/hi/tiktok-shop'
+    | '/it/ai-prompts'
     | '/it/de-minimis'
     | '/it/duty'
     | '/it/quiz'
     | '/it/reviews'
     | '/it/roi'
     | '/it/templates'
+    | '/it/tiktok-shop'
+    | '/pt/ai-prompts'
     | '/pt/de-minimis'
     | '/pt/duty'
     | '/pt/quiz'
     | '/pt/reviews'
     | '/pt/roi'
     | '/pt/templates'
+    | '/pt/tiktok-shop'
+    | '/ru/ai-prompts'
     | '/ru/de-minimis'
     | '/ru/duty'
     | '/ru/quiz'
     | '/ru/reviews'
     | '/ru/roi'
     | '/ru/templates'
+    | '/ru/tiktok-shop'
+    | '/zh/ai-prompts'
     | '/zh/de-minimis'
     | '/zh/duty'
     | '/zh/quiz'
     | '/zh/reviews'
     | '/zh/roi'
     | '/zh/templates'
+    | '/zh/tiktok-shop'
     | '/blog'
     | '/compare'
     | '/de'
@@ -1738,6 +1936,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/ai-prompts'
     | '/de'
     | '/de-minimis'
     | '/duty'
@@ -1753,60 +1952,77 @@ export interface FileRouteTypes {
     | '/seo-monitor'
     | '/sitemap.xml'
     | '/templates'
+    | '/tiktok-shop'
     | '/zh'
     | '/blog/$slug'
     | '/compare/$competitor'
+    | '/de/ai-prompts'
     | '/de/de-minimis'
     | '/de/duty'
     | '/de/quiz'
     | '/de/reviews'
     | '/de/roi'
     | '/de/templates'
+    | '/de/tiktok-shop'
+    | '/es/ai-prompts'
     | '/es/de-minimis'
     | '/es/duty'
     | '/es/quiz'
     | '/es/reviews'
     | '/es/roi'
     | '/es/templates'
+    | '/es/tiktok-shop'
     | '/events/free-forever'
     | '/for/$useCase'
+    | '/fr/ai-prompts'
     | '/fr/de-minimis'
     | '/fr/duty'
     | '/fr/quiz'
     | '/fr/reviews'
     | '/fr/roi'
     | '/fr/templates'
+    | '/fr/tiktok-shop'
     | '/guide/$guide'
+    | '/hi/ai-prompts'
     | '/hi/de-minimis'
     | '/hi/duty'
     | '/hi/quiz'
     | '/hi/reviews'
     | '/hi/roi'
     | '/hi/templates'
+    | '/hi/tiktok-shop'
+    | '/it/ai-prompts'
     | '/it/de-minimis'
     | '/it/duty'
     | '/it/quiz'
     | '/it/reviews'
     | '/it/roi'
     | '/it/templates'
+    | '/it/tiktok-shop'
+    | '/pt/ai-prompts'
     | '/pt/de-minimis'
     | '/pt/duty'
     | '/pt/quiz'
     | '/pt/reviews'
     | '/pt/roi'
     | '/pt/templates'
+    | '/pt/tiktok-shop'
+    | '/ru/ai-prompts'
     | '/ru/de-minimis'
     | '/ru/duty'
     | '/ru/quiz'
     | '/ru/reviews'
     | '/ru/roi'
     | '/ru/templates'
+    | '/ru/tiktok-shop'
+    | '/zh/ai-prompts'
     | '/zh/de-minimis'
     | '/zh/duty'
     | '/zh/quiz'
     | '/zh/reviews'
     | '/zh/roi'
     | '/zh/templates'
+    | '/zh/tiktok-shop'
     | '/blog/'
     | '/compare/'
     | '/de/'
@@ -1898,6 +2114,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AiPromptsRoute: typeof AiPromptsRoute
   DeRoute: typeof DeRouteWithChildren
   DeMinimisRoute: typeof DeMinimisRoute
   DutyRoute: typeof DutyRoute
@@ -1913,6 +2130,7 @@ export interface RootRouteChildren {
   SeoMonitorRoute: typeof SeoMonitorRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TemplatesRoute: typeof TemplatesRoute
+  TiktokShopRoute: typeof TiktokShopRoute
   ZhRoute: typeof ZhRouteWithChildren
   BlogSlugRoute: typeof BlogSlugRoute
   CompareCompetitorRoute: typeof CompareCompetitorRoute
@@ -1935,6 +2153,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ai-prompts': {
+      id: '/ai-prompts'
+      path: '/ai-prompts'
+      fullPath: '/ai-prompts'
+      preLoaderRoute: typeof AiPromptsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/de': {
@@ -2042,6 +2267,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TemplatesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tiktok-shop': {
+      id: '/tiktok-shop'
+      path: '/tiktok-shop'
+      fullPath: '/tiktok-shop'
+      preLoaderRoute: typeof TiktokShopRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/zh': {
       id: '/zh'
       path: '/zh'
@@ -2082,6 +2314,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/de/'
       preLoaderRoute: typeof DeIndexRouteImport
+      parentRoute: typeof DeRoute
+    }
+    '/de/ai-prompts': {
+      id: '/de/ai-prompts'
+      path: '/ai-prompts'
+      fullPath: '/de/ai-prompts'
+      preLoaderRoute: typeof DeAiPromptsRouteImport
       parentRoute: typeof DeRoute
     }
     '/de/de-minimis': {
@@ -2126,11 +2365,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DeTemplatesRouteImport
       parentRoute: typeof DeRoute
     }
+    '/de/tiktok-shop': {
+      id: '/de/tiktok-shop'
+      path: '/tiktok-shop'
+      fullPath: '/de/tiktok-shop'
+      preLoaderRoute: typeof DeTiktokShopRouteImport
+      parentRoute: typeof DeRoute
+    }
     '/es/': {
       id: '/es/'
       path: '/'
       fullPath: '/es/'
       preLoaderRoute: typeof EsIndexRouteImport
+      parentRoute: typeof EsRoute
+    }
+    '/es/ai-prompts': {
+      id: '/es/ai-prompts'
+      path: '/ai-prompts'
+      fullPath: '/es/ai-prompts'
+      preLoaderRoute: typeof EsAiPromptsRouteImport
       parentRoute: typeof EsRoute
     }
     '/es/de-minimis': {
@@ -2175,6 +2428,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EsTemplatesRouteImport
       parentRoute: typeof EsRoute
     }
+    '/es/tiktok-shop': {
+      id: '/es/tiktok-shop'
+      path: '/tiktok-shop'
+      fullPath: '/es/tiktok-shop'
+      preLoaderRoute: typeof EsTiktokShopRouteImport
+      parentRoute: typeof EsRoute
+    }
     '/events/free-forever': {
       id: '/events/free-forever'
       path: '/events/free-forever'
@@ -2201,6 +2461,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/fr/'
       preLoaderRoute: typeof FrIndexRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/ai-prompts': {
+      id: '/fr/ai-prompts'
+      path: '/ai-prompts'
+      fullPath: '/fr/ai-prompts'
+      preLoaderRoute: typeof FrAiPromptsRouteImport
       parentRoute: typeof FrRoute
     }
     '/fr/de-minimis': {
@@ -2245,6 +2512,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FrTemplatesRouteImport
       parentRoute: typeof FrRoute
     }
+    '/fr/tiktok-shop': {
+      id: '/fr/tiktok-shop'
+      path: '/tiktok-shop'
+      fullPath: '/fr/tiktok-shop'
+      preLoaderRoute: typeof FrTiktokShopRouteImport
+      parentRoute: typeof FrRoute
+    }
     '/guide/': {
       id: '/guide/'
       path: '/guide'
@@ -2264,6 +2538,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/hi/'
       preLoaderRoute: typeof HiIndexRouteImport
+      parentRoute: typeof HiRoute
+    }
+    '/hi/ai-prompts': {
+      id: '/hi/ai-prompts'
+      path: '/ai-prompts'
+      fullPath: '/hi/ai-prompts'
+      preLoaderRoute: typeof HiAiPromptsRouteImport
       parentRoute: typeof HiRoute
     }
     '/hi/de-minimis': {
@@ -2308,11 +2589,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HiTemplatesRouteImport
       parentRoute: typeof HiRoute
     }
+    '/hi/tiktok-shop': {
+      id: '/hi/tiktok-shop'
+      path: '/tiktok-shop'
+      fullPath: '/hi/tiktok-shop'
+      preLoaderRoute: typeof HiTiktokShopRouteImport
+      parentRoute: typeof HiRoute
+    }
     '/it/': {
       id: '/it/'
       path: '/'
       fullPath: '/it/'
       preLoaderRoute: typeof ItIndexRouteImport
+      parentRoute: typeof ItRoute
+    }
+    '/it/ai-prompts': {
+      id: '/it/ai-prompts'
+      path: '/ai-prompts'
+      fullPath: '/it/ai-prompts'
+      preLoaderRoute: typeof ItAiPromptsRouteImport
       parentRoute: typeof ItRoute
     }
     '/it/de-minimis': {
@@ -2357,11 +2652,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ItTemplatesRouteImport
       parentRoute: typeof ItRoute
     }
+    '/it/tiktok-shop': {
+      id: '/it/tiktok-shop'
+      path: '/tiktok-shop'
+      fullPath: '/it/tiktok-shop'
+      preLoaderRoute: typeof ItTiktokShopRouteImport
+      parentRoute: typeof ItRoute
+    }
     '/pt/': {
       id: '/pt/'
       path: '/'
       fullPath: '/pt/'
       preLoaderRoute: typeof PtIndexRouteImport
+      parentRoute: typeof PtRoute
+    }
+    '/pt/ai-prompts': {
+      id: '/pt/ai-prompts'
+      path: '/ai-prompts'
+      fullPath: '/pt/ai-prompts'
+      preLoaderRoute: typeof PtAiPromptsRouteImport
       parentRoute: typeof PtRoute
     }
     '/pt/de-minimis': {
@@ -2406,11 +2715,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PtTemplatesRouteImport
       parentRoute: typeof PtRoute
     }
+    '/pt/tiktok-shop': {
+      id: '/pt/tiktok-shop'
+      path: '/tiktok-shop'
+      fullPath: '/pt/tiktok-shop'
+      preLoaderRoute: typeof PtTiktokShopRouteImport
+      parentRoute: typeof PtRoute
+    }
     '/ru/': {
       id: '/ru/'
       path: '/'
       fullPath: '/ru/'
       preLoaderRoute: typeof RuIndexRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/ru/ai-prompts': {
+      id: '/ru/ai-prompts'
+      path: '/ai-prompts'
+      fullPath: '/ru/ai-prompts'
+      preLoaderRoute: typeof RuAiPromptsRouteImport
       parentRoute: typeof RuRoute
     }
     '/ru/de-minimis': {
@@ -2455,11 +2778,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RuTemplatesRouteImport
       parentRoute: typeof RuRoute
     }
+    '/ru/tiktok-shop': {
+      id: '/ru/tiktok-shop'
+      path: '/tiktok-shop'
+      fullPath: '/ru/tiktok-shop'
+      preLoaderRoute: typeof RuTiktokShopRouteImport
+      parentRoute: typeof RuRoute
+    }
     '/zh/': {
       id: '/zh/'
       path: '/'
       fullPath: '/zh/'
       preLoaderRoute: typeof ZhIndexRouteImport
+      parentRoute: typeof ZhRoute
+    }
+    '/zh/ai-prompts': {
+      id: '/zh/ai-prompts'
+      path: '/ai-prompts'
+      fullPath: '/zh/ai-prompts'
+      preLoaderRoute: typeof ZhAiPromptsRouteImport
       parentRoute: typeof ZhRoute
     }
     '/zh/de-minimis': {
@@ -2502,6 +2839,13 @@ declare module '@tanstack/react-router' {
       path: '/templates'
       fullPath: '/zh/templates'
       preLoaderRoute: typeof ZhTemplatesRouteImport
+      parentRoute: typeof ZhRoute
+    }
+    '/zh/tiktok-shop': {
+      id: '/zh/tiktok-shop'
+      path: '/tiktok-shop'
+      fullPath: '/zh/tiktok-shop'
+      preLoaderRoute: typeof ZhTiktokShopRouteImport
       parentRoute: typeof ZhRoute
     }
     '/de/blog/': {
@@ -3033,12 +3377,14 @@ declare module '@tanstack/react-router' {
 }
 
 interface DeRouteChildren {
+  DeAiPromptsRoute: typeof DeAiPromptsRoute
   DeDeMinimisRoute: typeof DeDeMinimisRoute
   DeDutyRoute: typeof DeDutyRoute
   DeQuizRoute: typeof DeQuizRoute
   DeReviewsRoute: typeof DeReviewsRoute
   DeRoiRoute: typeof DeRoiRoute
   DeTemplatesRoute: typeof DeTemplatesRoute
+  DeTiktokShopRoute: typeof DeTiktokShopRoute
   DeIndexRoute: typeof DeIndexRoute
   DeBlogSlugRoute: typeof DeBlogSlugRoute
   DeCompareCompetitorRoute: typeof DeCompareCompetitorRoute
@@ -3052,12 +3398,14 @@ interface DeRouteChildren {
 }
 
 const DeRouteChildren: DeRouteChildren = {
+  DeAiPromptsRoute: DeAiPromptsRoute,
   DeDeMinimisRoute: DeDeMinimisRoute,
   DeDutyRoute: DeDutyRoute,
   DeQuizRoute: DeQuizRoute,
   DeReviewsRoute: DeReviewsRoute,
   DeRoiRoute: DeRoiRoute,
   DeTemplatesRoute: DeTemplatesRoute,
+  DeTiktokShopRoute: DeTiktokShopRoute,
   DeIndexRoute: DeIndexRoute,
   DeBlogSlugRoute: DeBlogSlugRoute,
   DeCompareCompetitorRoute: DeCompareCompetitorRoute,
@@ -3073,12 +3421,14 @@ const DeRouteChildren: DeRouteChildren = {
 const DeRouteWithChildren = DeRoute._addFileChildren(DeRouteChildren)
 
 interface EsRouteChildren {
+  EsAiPromptsRoute: typeof EsAiPromptsRoute
   EsDeMinimisRoute: typeof EsDeMinimisRoute
   EsDutyRoute: typeof EsDutyRoute
   EsQuizRoute: typeof EsQuizRoute
   EsReviewsRoute: typeof EsReviewsRoute
   EsRoiRoute: typeof EsRoiRoute
   EsTemplatesRoute: typeof EsTemplatesRoute
+  EsTiktokShopRoute: typeof EsTiktokShopRoute
   EsIndexRoute: typeof EsIndexRoute
   EsBlogSlugRoute: typeof EsBlogSlugRoute
   EsCompareCompetitorRoute: typeof EsCompareCompetitorRoute
@@ -3092,12 +3442,14 @@ interface EsRouteChildren {
 }
 
 const EsRouteChildren: EsRouteChildren = {
+  EsAiPromptsRoute: EsAiPromptsRoute,
   EsDeMinimisRoute: EsDeMinimisRoute,
   EsDutyRoute: EsDutyRoute,
   EsQuizRoute: EsQuizRoute,
   EsReviewsRoute: EsReviewsRoute,
   EsRoiRoute: EsRoiRoute,
   EsTemplatesRoute: EsTemplatesRoute,
+  EsTiktokShopRoute: EsTiktokShopRoute,
   EsIndexRoute: EsIndexRoute,
   EsBlogSlugRoute: EsBlogSlugRoute,
   EsCompareCompetitorRoute: EsCompareCompetitorRoute,
@@ -3113,12 +3465,14 @@ const EsRouteChildren: EsRouteChildren = {
 const EsRouteWithChildren = EsRoute._addFileChildren(EsRouteChildren)
 
 interface FrRouteChildren {
+  FrAiPromptsRoute: typeof FrAiPromptsRoute
   FrDeMinimisRoute: typeof FrDeMinimisRoute
   FrDutyRoute: typeof FrDutyRoute
   FrQuizRoute: typeof FrQuizRoute
   FrReviewsRoute: typeof FrReviewsRoute
   FrRoiRoute: typeof FrRoiRoute
   FrTemplatesRoute: typeof FrTemplatesRoute
+  FrTiktokShopRoute: typeof FrTiktokShopRoute
   FrIndexRoute: typeof FrIndexRoute
   FrBlogSlugRoute: typeof FrBlogSlugRoute
   FrCompareCompetitorRoute: typeof FrCompareCompetitorRoute
@@ -3132,12 +3486,14 @@ interface FrRouteChildren {
 }
 
 const FrRouteChildren: FrRouteChildren = {
+  FrAiPromptsRoute: FrAiPromptsRoute,
   FrDeMinimisRoute: FrDeMinimisRoute,
   FrDutyRoute: FrDutyRoute,
   FrQuizRoute: FrQuizRoute,
   FrReviewsRoute: FrReviewsRoute,
   FrRoiRoute: FrRoiRoute,
   FrTemplatesRoute: FrTemplatesRoute,
+  FrTiktokShopRoute: FrTiktokShopRoute,
   FrIndexRoute: FrIndexRoute,
   FrBlogSlugRoute: FrBlogSlugRoute,
   FrCompareCompetitorRoute: FrCompareCompetitorRoute,
@@ -3153,12 +3509,14 @@ const FrRouteChildren: FrRouteChildren = {
 const FrRouteWithChildren = FrRoute._addFileChildren(FrRouteChildren)
 
 interface HiRouteChildren {
+  HiAiPromptsRoute: typeof HiAiPromptsRoute
   HiDeMinimisRoute: typeof HiDeMinimisRoute
   HiDutyRoute: typeof HiDutyRoute
   HiQuizRoute: typeof HiQuizRoute
   HiReviewsRoute: typeof HiReviewsRoute
   HiRoiRoute: typeof HiRoiRoute
   HiTemplatesRoute: typeof HiTemplatesRoute
+  HiTiktokShopRoute: typeof HiTiktokShopRoute
   HiIndexRoute: typeof HiIndexRoute
   HiBlogSlugRoute: typeof HiBlogSlugRoute
   HiCompareCompetitorRoute: typeof HiCompareCompetitorRoute
@@ -3172,12 +3530,14 @@ interface HiRouteChildren {
 }
 
 const HiRouteChildren: HiRouteChildren = {
+  HiAiPromptsRoute: HiAiPromptsRoute,
   HiDeMinimisRoute: HiDeMinimisRoute,
   HiDutyRoute: HiDutyRoute,
   HiQuizRoute: HiQuizRoute,
   HiReviewsRoute: HiReviewsRoute,
   HiRoiRoute: HiRoiRoute,
   HiTemplatesRoute: HiTemplatesRoute,
+  HiTiktokShopRoute: HiTiktokShopRoute,
   HiIndexRoute: HiIndexRoute,
   HiBlogSlugRoute: HiBlogSlugRoute,
   HiCompareCompetitorRoute: HiCompareCompetitorRoute,
@@ -3193,12 +3553,14 @@ const HiRouteChildren: HiRouteChildren = {
 const HiRouteWithChildren = HiRoute._addFileChildren(HiRouteChildren)
 
 interface ItRouteChildren {
+  ItAiPromptsRoute: typeof ItAiPromptsRoute
   ItDeMinimisRoute: typeof ItDeMinimisRoute
   ItDutyRoute: typeof ItDutyRoute
   ItQuizRoute: typeof ItQuizRoute
   ItReviewsRoute: typeof ItReviewsRoute
   ItRoiRoute: typeof ItRoiRoute
   ItTemplatesRoute: typeof ItTemplatesRoute
+  ItTiktokShopRoute: typeof ItTiktokShopRoute
   ItIndexRoute: typeof ItIndexRoute
   ItBlogSlugRoute: typeof ItBlogSlugRoute
   ItCompareCompetitorRoute: typeof ItCompareCompetitorRoute
@@ -3212,12 +3574,14 @@ interface ItRouteChildren {
 }
 
 const ItRouteChildren: ItRouteChildren = {
+  ItAiPromptsRoute: ItAiPromptsRoute,
   ItDeMinimisRoute: ItDeMinimisRoute,
   ItDutyRoute: ItDutyRoute,
   ItQuizRoute: ItQuizRoute,
   ItReviewsRoute: ItReviewsRoute,
   ItRoiRoute: ItRoiRoute,
   ItTemplatesRoute: ItTemplatesRoute,
+  ItTiktokShopRoute: ItTiktokShopRoute,
   ItIndexRoute: ItIndexRoute,
   ItBlogSlugRoute: ItBlogSlugRoute,
   ItCompareCompetitorRoute: ItCompareCompetitorRoute,
@@ -3233,12 +3597,14 @@ const ItRouteChildren: ItRouteChildren = {
 const ItRouteWithChildren = ItRoute._addFileChildren(ItRouteChildren)
 
 interface PtRouteChildren {
+  PtAiPromptsRoute: typeof PtAiPromptsRoute
   PtDeMinimisRoute: typeof PtDeMinimisRoute
   PtDutyRoute: typeof PtDutyRoute
   PtQuizRoute: typeof PtQuizRoute
   PtReviewsRoute: typeof PtReviewsRoute
   PtRoiRoute: typeof PtRoiRoute
   PtTemplatesRoute: typeof PtTemplatesRoute
+  PtTiktokShopRoute: typeof PtTiktokShopRoute
   PtIndexRoute: typeof PtIndexRoute
   PtBlogSlugRoute: typeof PtBlogSlugRoute
   PtCompareCompetitorRoute: typeof PtCompareCompetitorRoute
@@ -3252,12 +3618,14 @@ interface PtRouteChildren {
 }
 
 const PtRouteChildren: PtRouteChildren = {
+  PtAiPromptsRoute: PtAiPromptsRoute,
   PtDeMinimisRoute: PtDeMinimisRoute,
   PtDutyRoute: PtDutyRoute,
   PtQuizRoute: PtQuizRoute,
   PtReviewsRoute: PtReviewsRoute,
   PtRoiRoute: PtRoiRoute,
   PtTemplatesRoute: PtTemplatesRoute,
+  PtTiktokShopRoute: PtTiktokShopRoute,
   PtIndexRoute: PtIndexRoute,
   PtBlogSlugRoute: PtBlogSlugRoute,
   PtCompareCompetitorRoute: PtCompareCompetitorRoute,
@@ -3273,12 +3641,14 @@ const PtRouteChildren: PtRouteChildren = {
 const PtRouteWithChildren = PtRoute._addFileChildren(PtRouteChildren)
 
 interface RuRouteChildren {
+  RuAiPromptsRoute: typeof RuAiPromptsRoute
   RuDeMinimisRoute: typeof RuDeMinimisRoute
   RuDutyRoute: typeof RuDutyRoute
   RuQuizRoute: typeof RuQuizRoute
   RuReviewsRoute: typeof RuReviewsRoute
   RuRoiRoute: typeof RuRoiRoute
   RuTemplatesRoute: typeof RuTemplatesRoute
+  RuTiktokShopRoute: typeof RuTiktokShopRoute
   RuIndexRoute: typeof RuIndexRoute
   RuBlogSlugRoute: typeof RuBlogSlugRoute
   RuCompareCompetitorRoute: typeof RuCompareCompetitorRoute
@@ -3292,12 +3662,14 @@ interface RuRouteChildren {
 }
 
 const RuRouteChildren: RuRouteChildren = {
+  RuAiPromptsRoute: RuAiPromptsRoute,
   RuDeMinimisRoute: RuDeMinimisRoute,
   RuDutyRoute: RuDutyRoute,
   RuQuizRoute: RuQuizRoute,
   RuReviewsRoute: RuReviewsRoute,
   RuRoiRoute: RuRoiRoute,
   RuTemplatesRoute: RuTemplatesRoute,
+  RuTiktokShopRoute: RuTiktokShopRoute,
   RuIndexRoute: RuIndexRoute,
   RuBlogSlugRoute: RuBlogSlugRoute,
   RuCompareCompetitorRoute: RuCompareCompetitorRoute,
@@ -3313,12 +3685,14 @@ const RuRouteChildren: RuRouteChildren = {
 const RuRouteWithChildren = RuRoute._addFileChildren(RuRouteChildren)
 
 interface ZhRouteChildren {
+  ZhAiPromptsRoute: typeof ZhAiPromptsRoute
   ZhDeMinimisRoute: typeof ZhDeMinimisRoute
   ZhDutyRoute: typeof ZhDutyRoute
   ZhQuizRoute: typeof ZhQuizRoute
   ZhReviewsRoute: typeof ZhReviewsRoute
   ZhRoiRoute: typeof ZhRoiRoute
   ZhTemplatesRoute: typeof ZhTemplatesRoute
+  ZhTiktokShopRoute: typeof ZhTiktokShopRoute
   ZhIndexRoute: typeof ZhIndexRoute
   ZhBlogSlugRoute: typeof ZhBlogSlugRoute
   ZhCompareCompetitorRoute: typeof ZhCompareCompetitorRoute
@@ -3332,12 +3706,14 @@ interface ZhRouteChildren {
 }
 
 const ZhRouteChildren: ZhRouteChildren = {
+  ZhAiPromptsRoute: ZhAiPromptsRoute,
   ZhDeMinimisRoute: ZhDeMinimisRoute,
   ZhDutyRoute: ZhDutyRoute,
   ZhQuizRoute: ZhQuizRoute,
   ZhReviewsRoute: ZhReviewsRoute,
   ZhRoiRoute: ZhRoiRoute,
   ZhTemplatesRoute: ZhTemplatesRoute,
+  ZhTiktokShopRoute: ZhTiktokShopRoute,
   ZhIndexRoute: ZhIndexRoute,
   ZhBlogSlugRoute: ZhBlogSlugRoute,
   ZhCompareCompetitorRoute: ZhCompareCompetitorRoute,
@@ -3354,6 +3730,7 @@ const ZhRouteWithChildren = ZhRoute._addFileChildren(ZhRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AiPromptsRoute: AiPromptsRoute,
   DeRoute: DeRouteWithChildren,
   DeMinimisRoute: DeMinimisRoute,
   DutyRoute: DutyRoute,
@@ -3369,6 +3746,7 @@ const rootRouteChildren: RootRouteChildren = {
   SeoMonitorRoute: SeoMonitorRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TemplatesRoute: TemplatesRoute,
+  TiktokShopRoute: TiktokShopRoute,
   ZhRoute: ZhRouteWithChildren,
   BlogSlugRoute: BlogSlugRoute,
   CompareCompetitorRoute: CompareCompetitorRoute,

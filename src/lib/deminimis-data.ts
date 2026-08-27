@@ -24,7 +24,7 @@ export const dmChrome: Record<DmLang, DmChrome> = {
     "ctaNote": "Free plan, no card required",
     "accioLabel": "How Accio Work helps",
     "disclaimer": "General information, not customs or tax advice. Rules and rates change and depend on your product and origin. Confirm specifics with a licensed customs broker.",
-    "metaTitle": "How to import after de minimis ended (2026 guide) | Accio Work",
+    "metaTitle": "How to import after de minimis ended | Accio Work",
     "metaDesc": "The $800 de minimis exemption is gone. Three practical moves to keep cross border selling profitable: bulk import, switch sourcing origin, and reprice."
   },
   "ru": {
@@ -47,7 +47,7 @@ export const dmChrome: Record<DmLang, DmChrome> = {
     "ctaNote": "Бесплатный план, карта не нужна",
     "accioLabel": "Чем помогает Accio Work",
     "disclaimer": "Общая информация, не таможенная и не налоговая консультация. Правила и ставки меняются и зависят от товара и страны происхождения. Уточняйте детали у лицензированного брокера.",
-    "metaTitle": "Как импортировать после отмены de minimis (гайд 2026) | Accio Work",
+    "metaTitle": "Как импортировать после отмены de minimis | Accio Work",
     "metaDesc": "Освобождение $800 отменено. Три рабочих хода, чтобы удержать прибыль: опт на локальный склад, смена страны сорсинга и перепрайсинг."
   },
   "de": {
@@ -70,7 +70,7 @@ export const dmChrome: Record<DmLang, DmChrome> = {
     "ctaNote": "Kostenloser Plan, keine Karte nötig",
     "accioLabel": "So hilft Accio Work",
     "disclaimer": "Allgemeine Information, keine Zoll- oder Steuerberatung. Regeln und Sätze ändern sich und hängen von Produkt und Ursprung ab. Kläre Details mit einem lizenzierten Zollbroker.",
-    "metaTitle": "Importieren nach dem Ende von De minimis (Guide 2026) | Accio Work",
+    "metaTitle": "Importieren nach dem Ende von De minimis | Accio Work",
     "metaDesc": "Die 800-Dollar-De-minimis-Befreiung ist weg. Drei praktische Schritte für profitablen Handel: Mengenimport, Ursprung wechseln und neu bepreisen."
   },
   "it": {
@@ -93,7 +93,7 @@ export const dmChrome: Record<DmLang, DmChrome> = {
     "ctaNote": "Piano gratuito, nessuna carta richiesta",
     "accioLabel": "Come aiuta Accio Work",
     "disclaimer": "Informazione generale, non consulenza doganale o fiscale. Regole e aliquote cambiano e dipendono dal prodotto e dall'origine. Verifica i dettagli con un doganalista autorizzato.",
-    "metaTitle": "Come importare dopo la fine del de minimis (guida 2026) | Accio Work",
+    "metaTitle": "Come importare dopo la fine del de minimis | Accio Work",
     "metaDesc": "L'esenzione de minimis da 800 dollari non c'è più. Tre mosse pratiche per restare redditizi: import in blocco, cambio origine e nuovo prezzo."
   },
   "es": {
@@ -116,7 +116,7 @@ export const dmChrome: Record<DmLang, DmChrome> = {
     "ctaNote": "Plan gratuito, sin tarjeta",
     "accioLabel": "Cómo ayuda Accio Work",
     "disclaimer": "Información general, no asesoría aduanera ni fiscal. Las reglas y tasas cambian y dependen de tu producto y origen. Confirma los detalles con un agente de aduanas autorizado.",
-    "metaTitle": "Cómo importar tras el fin del de minimis (guía 2026) | Accio Work",
+    "metaTitle": "Cómo importar tras el fin del de minimis | Accio Work",
     "metaDesc": "La exención de minimis de 800 dólares se acabó. Tres jugadas prácticas para seguir siendo rentable: importar a granel, cambiar origen y reajustar precios."
   },
   "zh": {
@@ -162,7 +162,7 @@ export const dmChrome: Record<DmLang, DmChrome> = {
     "ctaNote": "Plano gratuito, sem cartão",
     "accioLabel": "Como o Accio Work ajuda",
     "disclaimer": "Informação geral, não é consultoria aduaneira ou fiscal. Regras e alíquotas mudam e dependem do seu produto e origem. Confirme os detalhes com um despachante licenciado.",
-    "metaTitle": "Como importar após o fim do de minimis (guia 2026) | Accio Work",
+    "metaTitle": "Como importar após o fim do de minimis | Accio Work",
     "metaDesc": "A isenção de minimis de 800 dólares acabou. Três jogadas práticas para seguir lucrativo: importar em volume, trocar de origem e reprecificar."
   },
   "hi": {
@@ -208,7 +208,7 @@ export const dmChrome: Record<DmLang, DmChrome> = {
     "ctaNote": "Offre gratuite, sans carte",
     "accioLabel": "Comment Accio Work aide",
     "disclaimer": "Information générale, pas un conseil douanier ou fiscal. Les règles et taux changent et dépendent de votre produit et de son origine. Vérifiez les détails avec un courtier en douane agréé.",
-    "metaTitle": "Comment importer après la fin du de minimis (guide 2026) | Accio Work",
+    "metaTitle": "Importer après la fin du de minimis | Accio Work",
     "metaDesc": "L'exemption de minimis de 800 dollars a disparu. Trois manœuvres concrètes pour rester rentable : import en gros, changement d'origine et nouveau prix."
   }
 };

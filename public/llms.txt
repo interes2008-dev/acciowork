@@ -99,3 +99,13 @@ Accio Work is an execution-oriented AI agent platform (not a chatbot). A general
 
 - [Import after de minimis EN](https://acciowork.pro/de-minimis): what changed and three moves (bulk import, switch sourcing origin, reprice) to keep cross border selling profitable
 - Localized: /ru/de-minimis, /de/de-minimis, /it/de-minimis, /es/de-minimis, /zh/de-minimis, /pt/de-minimis, /hi/de-minimis, /fr/de-minimis
+
+## Source products for TikTok Shop with an AI agent (2026, all languages)
+
+- [TikTok Shop sourcing EN](https://acciowork.pro/tiktok-shop): use an AI sourcing agent to find suppliers, prep listings and handle customs fast enough to ride the trend
+- Localized: /ru/tiktok-shop, /de/tiktok-shop, /it/tiktok-shop, /es/tiktok-shop, /zh/tiktok-shop, /pt/tiktok-shop, /hi/tiktok-shop, /fr/tiktok-shop
+
+## Free AI prompt pack for product and market research (2026, all languages)
+
+- [AI prompts EN](https://acciowork.pro/ai-prompts): copy paste prompts to find products, validate demand, check saturation, price with duties and vet suppliers
+- Localized: /ru/ai-prompts, /de/ai-prompts, /it/ai-prompts, /es/ai-prompts, /zh/ai-prompts, /pt/ai-prompts, /hi/ai-prompts, /fr/ai-prompts
