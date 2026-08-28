@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect, useRef } from "react";
 import type { ReactNode } from "react";
-import { ArrowRight, ArrowLeft, Clock, Sparkles } from "lucide-react";
+import { ArrowRight, ArrowLeft, Clock, Sparkles, Share2, Check } from "lucide-react";
 import { roiChrome, type RoiLang } from "@/lib/roi-data";
 import { LangMenu } from "@/components/common/LangMenu";
 
@@ -8,6 +8,18 @@ const REFERRAL_URL =
   "https://www.accio.com/login?sId=KECtp1GttZ42%2FwpJUH5IxQ%3D%3D&ic=IC506004212009&tenant=accio&src=p_referral_IC506004212009&source=invite_center&return_url=https%3A%2F%2Fwww.accio.com%2Fwork%2F";
 
 const CURRENCIES = ["$", "€", "\u00A3", "\u20BD", "R$", "\u20B9", "\u00A5"];
+
+const SHARE: Record<RoiLang, { share: string; copied: string }> = {
+  en: { share: "Share result", copied: "Link copied" },
+  ru: { share: "Поделиться результатом", copied: "Ссылка скопирована" },
+  de: { share: "Ergebnis teilen", copied: "Link kopiert" },
+  it: { share: "Condividi risultato", copied: "Link copiato" },
+  es: { share: "Compartir resultado", copied: "Enlace copiado" },
+  zh: { share: "分享结果", copied: "链接已复制" },
+  pt: { share: "Compartilhar resultado", copied: "Link copiado" },
+  hi: { share: "परिणाम शेयर करें", copied: "लिंक कॉपी हो गया" },
+  fr: { share: "Partager le résultat", copied: "Lien copié" },
+};
 
 const IMG_ALT: Record<RoiLang, string> = {
   en: "A clock with an upward arrow and coins, saved time and money",
@@ -111,6 +123,48 @@ export function RoiCalculator({ lang }: { lang: RoiLang }) {
   const [showMoney, setShowMoney] = useState(false);
   const [rate, setRate] = useState<number>(25);
   const [cur, setCur] = useState("$");
+  const [shared, setShared] = useState(false);
+  const skipSync = useRef(true);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const q = new URLSearchParams(window.location.search);
+    const h = q.get("h");
+    if (h) {
+      const arr = h.split("-").map((x) => parseFloat(x)).filter((n) => Number.isFinite(n) && n >= 0);
+      if (arr.length) setHours((prev) => prev.map((v, i) => (i < arr.length ? arr[i] : v)));
+    }
+    const o = q.get("o");
+    if (o !== null) { const n = parseInt(o, 10); if (Number.isFinite(n)) setOffload(Math.max(30, n)); }
+    const r = q.get("r");
+    if (r !== null) { const n = parseFloat(r); if (Number.isFinite(n)) setRate(n); }
+    const cu = q.get("cur");
+    if (cu && CURRENCIES.includes(cu)) setCur(cu);
+    if (q.get("m") === "1") setShowMoney(true);
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (skipSync.current) { skipSync.current = false; return; }
+    const q = new URLSearchParams();
+    q.set("h", hours.join("-"));
+    q.set("o", String(offload));
+    if (showMoney) { q.set("m", "1"); q.set("r", String(rate)); q.set("cur", cur); }
+    window.history.replaceState(null, "", `${window.location.pathname}?${q.toString()}`);
+  }, [hours, offload, showMoney, rate, cur]);
+
+  async function onShare() {
+    if (typeof window === "undefined") return;
+    const shareUrl = window.location.href;
+    try {
+      if (navigator.share) { await navigator.share({ title: roiChrome[lang].h1, url: shareUrl }); return; }
+    } catch { /* cancelled */ }
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      setShared(true);
+      setTimeout(() => setShared(false), 1800);
+    } catch { /* blocked */ }
+  }
 
   const total = hours.reduce((a, b) => a + b, 0);
   const freed = useMemo(() => (total * offload) / 100, [total, offload]);
@@ -210,6 +264,11 @@ export function RoiCalculator({ lang }: { lang: RoiLang }) {
             <p className="mt-6 text-[15px] leading-relaxed text-white/85">
               {c.punch.replace("{days}", String(days))}
             </p>
+            <button type="button" onClick={onShare}
+              className="mt-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/20">
+              {shared ? <Check className="h-4 w-4 text-[#7CE7C2]" /> : <Share2 className="h-4 w-4" />}
+              {shared ? SHARE[lang].copied : SHARE[lang].share}
+            </button>
             <a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer nofollow"
               className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#17B26A] px-6 py-3 font-semibold text-white transition hover:brightness-110">
               {c.cta} <ArrowRight className="h-4 w-4" />

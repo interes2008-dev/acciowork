@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import type { ReactNode } from "react";
-import { ArrowRight, ArrowLeft, Check, RotateCcw } from "lucide-react";
+import { ArrowRight, ArrowLeft, Check, RotateCcw, Share2 } from "lucide-react";
 import { qzChrome, qzQuestions, qzResults, type QzLang } from "@/lib/quiz-data";
 import { LangMenu } from "@/components/common/LangMenu";
 
@@ -17,6 +17,18 @@ const IMG_ALT: Record<QzLang, string> = {
   pt: "Um caminho de decisão ramificado com marcas até um alvo",
   hi: "चेकमार्क वाला शाखाओं वाला निर्णय पथ लक्ष्य तक",
   fr: "Un chemin de décision ramifié avec des coches vers une cible",
+};
+
+const SHARE: Record<QzLang, { share: string; copied: string }> = {
+  en: { share: "Share result", copied: "Link copied" },
+  ru: { share: "Поделиться результатом", copied: "Ссылка скопирована" },
+  de: { share: "Ergebnis teilen", copied: "Link kopiert" },
+  it: { share: "Condividi risultato", copied: "Link copiato" },
+  es: { share: "Compartir resultado", copied: "Enlace copiado" },
+  zh: { share: "分享结果", copied: "链接已复制" },
+  pt: { share: "Compartilhar resultado", copied: "Link copiado" },
+  hi: { share: "परिणाम शेयर करें", copied: "लिंक कॉपी हो गया" },
+  fr: { share: "Partager le résultat", copied: "Lien copié" },
 };
 
 function homeHref(lang: QzLang) {
@@ -68,6 +80,45 @@ export function FitQuiz({ lang }: { lang: QzLang }) {
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<(number | null)[]>(Array(qzQuestions.length).fill(null));
   const [done, setDone] = useState(false);
+  const [shared, setShared] = useState(false);
+  const skipSync = useRef(true);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const a = new URLSearchParams(window.location.search).get("a");
+    if (!a) return;
+    const idx = a.split("-").map((x) => parseInt(x, 10));
+    if (idx.length !== qzQuestions.length) return;
+    const ok = idx.every((n, i) => Number.isInteger(n) && qzQuestions[i].options[n] !== undefined);
+    if (!ok) return;
+    setAnswers(idx);
+    setDone(true);
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (skipSync.current) { skipSync.current = false; return; }
+    if (done && answers.every((v) => v !== null)) {
+      const q = new URLSearchParams();
+      q.set("a", answers.join("-"));
+      window.history.replaceState(null, "", `${window.location.pathname}?${q.toString()}`);
+    } else {
+      window.history.replaceState(null, "", window.location.pathname);
+    }
+  }, [done, answers]);
+
+  async function onShare() {
+    if (typeof window === "undefined") return;
+    const shareUrl = window.location.href;
+    try {
+      if (navigator.share) { await navigator.share({ title: qzChrome[lang].h1, url: shareUrl }); return; }
+    } catch { /* cancelled */ }
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      setShared(true);
+      setTimeout(() => setShared(false), 1800);
+    } catch { /* blocked */ }
+  }
 
   const total = qzQuestions.length;
   const answered = answers[step] !== null;
@@ -168,6 +219,10 @@ export function FitQuiz({ lang }: { lang: QzLang }) {
             <div className="mt-6 flex items-center gap-4">
               <button onClick={reset} className="inline-flex items-center gap-1.5 text-sm font-medium text-black/60 hover:text-black/90">
                 <RotateCcw className="h-4 w-4" /> {c.retake}
+              </button>
+              <button onClick={onShare} className="inline-flex items-center gap-1.5 rounded-full border border-black/12 bg-white px-4 py-2 text-sm font-semibold text-[#0E1210] transition hover:border-[#17B26A]/50">
+                {shared ? <Check className="h-4 w-4 text-[#17B26A]" /> : <Share2 className="h-4 w-4" />}
+                {shared ? SHARE[lang].copied : SHARE[lang].share}
               </button>
             </div>
             <p className="mt-8 text-xs leading-relaxed text-black/45">{c.disclaimer}</p>
