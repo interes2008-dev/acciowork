@@ -7,6 +7,18 @@ import { LangMenu } from "@/components/common/LangMenu";
 const REFERRAL_URL =
   "https://www.accio.com/login?sId=KECtp1GttZ42%2FwpJUH5IxQ%3D%3D&ic=IC506004212009&tenant=accio&src=p_referral_IC506004212009&source=invite_center&return_url=https%3A%2F%2Fwww.accio.com%2Fwork%2F";
 
+const IMG_ALT: Record<TplLang, string> = {
+  en: "Stacked message template cards with a copy icon and envelope",
+  ru: "Стопка карточек-шаблонов с иконкой копирования и конвертом",
+  de: "Gestapelte Vorlagenkarten mit Kopier-Symbol und Umschlag",
+  it: "Schede modello impilate con icona copia e busta",
+  es: "Tarjetas de plantilla apiladas con icono de copiar y sobre",
+  zh: "叠放的模板卡片，带复制图标和信封",
+  pt: "Cartões de modelo empilhados com ícone de copiar e envelope",
+  hi: "कॉपी आइकन और लिफ़ाफ़े के साथ टेम्पलेट कार्ड का ढेर",
+  fr: "Des cartes modèles empilées avec une icône copier et une enveloppe",
+};
+
 function homeHref(lang: TplLang) {
   return lang === "en" ? "/" : `/${lang}`;
 }
@@ -117,6 +129,7 @@ export function TemplatesPage({ lang }: { lang: TplLang }) {
         <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-[#17B26A]">{c.kicker}</p>
         <h1 className="text-3xl font-bold tracking-tight sm:text-[38px] sm:leading-tight">{c.h1}</h1>
         <p className="mt-4 max-w-2xl text-lg leading-relaxed text-black/70">{c.intro}</p>
+        <img src="/img/tool-templates.webp" alt={IMG_ALT[lang]} width={800} height={800} loading="eager" className="mx-auto mt-6 w-full max-w-xs" />
 
         {/* Email templates */}
         <h2 className="mt-10 mb-5 text-xl font-semibold">{c.emailTitle}</h2>

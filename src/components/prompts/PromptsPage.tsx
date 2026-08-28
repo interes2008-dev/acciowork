@@ -7,6 +7,18 @@ import { LangMenu } from "@/components/common/LangMenu";
 const REFERRAL_URL =
   "https://www.accio.com/login?sId=KECtp1GttZ42%2FwpJUH5IxQ%3D%3D&ic=IC506004212009&tenant=accio&src=p_referral_IC506004212009&source=invite_center&return_url=https%3A%2F%2Fwww.accio.com%2Fwork%2F";
 
+const IMG_ALT: Record<PrLang, string> = {
+  en: "An AI hub linking idea, search, chart and checklist cards",
+  ru: "AI-центр связывает карточки: идея, поиск, график, чек-лист",
+  de: "Ein AI-Hub verbindet Karten: Idee, Suche, Diagramm, Checkliste",
+  it: "Un hub AI collega schede: idea, ricerca, grafico, checklist",
+  es: "Un hub de IA conecta tarjetas: idea, búsqueda, gráfico, checklist",
+  zh: "AI 中心连接卡片：点子、搜索、图表、清单",
+  pt: "Um hub de IA liga cartões: ideia, busca, gráfico, checklist",
+  hi: "AI हब कार्ड जोड़ता है: आइडिया, खोज, चार्ट, चेकलिस्ट",
+  fr: "Un hub IA relie des cartes : idée, recherche, graphique, liste",
+};
+
 function homeHref(lang: PrLang) {
   return lang === "en" ? "/" : `/${lang}`;
 }
@@ -126,6 +138,8 @@ export function PromptsPage({ lang }: { lang: PrLang }) {
         <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-[#17B26A]">{c.kicker}</p>
         <h1 className="text-3xl font-bold tracking-tight sm:text-[40px] sm:leading-tight">{c.h1}</h1>
         <p className="mt-4 text-lg leading-relaxed text-black/70">{c.intro}</p>
+
+        <img src="/img/landing-prompts.webp" alt={IMG_ALT[lang]} width={640} height={640} loading="eager" className="mx-auto mt-8 w-full max-w-xs" />
 
         <button onClick={onCopyAll}
           className="mt-6 inline-flex items-center gap-2 rounded-full border border-black/12 bg-white px-4 py-2 text-sm font-semibold text-[#0E1210] transition hover:border-[#17B26A]/50">

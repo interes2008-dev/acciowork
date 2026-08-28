@@ -6,6 +6,18 @@ import { LangMenu } from "@/components/common/LangMenu";
 const REFERRAL_URL =
   "https://www.accio.com/login?sId=KECtp1GttZ42%2FwpJUH5IxQ%3D%3D&ic=IC506004212009&tenant=accio&src=p_referral_IC506004212009&source=invite_center&return_url=https%3A%2F%2Fwww.accio.com%2Fwork%2F";
 
+const IMG_ALT: Record<DmLang, string> = {
+  en: "Parcel passing a customs gate with duties added to cost",
+  ru: "Посылка проходит таможню, к стоимости добавляются пошлины",
+  de: "Paket passiert einen Zoll mit aufgeschlagenen Abgaben",
+  it: "Un pacco passa la dogana con dazi aggiunti al costo",
+  es: "Un paquete pasa la aduana con aranceles sumados al costo",
+  zh: "包裹通过海关，关税计入成本",
+  pt: "Um pacote passa pela alfândega com impostos somados ao custo",
+  hi: "पार्सल कस्टम से गुज़रता है, लागत में शुल्क जुड़ते हैं",
+  fr: "Un colis passe la douane avec des droits ajoutés au coût",
+};
+
 function homeHref(lang: DmLang) {
   return lang === "en" ? "/" : `/${lang}`;
 }
@@ -61,6 +73,8 @@ export function DeMinimisPage({ lang }: { lang: DmLang }) {
         <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-[#17B26A]">{c.kicker}</p>
         <h1 className="text-3xl font-bold tracking-tight sm:text-[40px] sm:leading-tight">{c.h1}</h1>
         <p className="mt-4 text-lg leading-relaxed text-black/70">{c.intro}</p>
+
+        <img src="/img/landing-duty.webp" alt={IMG_ALT[lang]} width={640} height={640} loading="eager" className="mx-auto mt-8 w-full max-w-xs" />
 
         {/* What changed */}
         <section className="mt-10">

@@ -9,6 +9,18 @@ const REFERRAL_URL =
 
 const CURRENCIES = ["$", "€", "\u00A3", "\u20BD", "R$", "\u20B9", "\u00A5"];
 
+const IMG_ALT: Record<RoiLang, string> = {
+  en: "A clock with an upward arrow and coins, saved time and money",
+  ru: "Часы со стрелкой вверх и монетами, сэкономленные время и деньги",
+  de: "Eine Uhr mit Aufwärtspfeil und Münzen, gesparte Zeit und Geld",
+  it: "Un orologio con freccia in su e monete, tempo e denaro risparmiati",
+  es: "Un reloj con flecha hacia arriba y monedas, tiempo y dinero ahorrados",
+  zh: "带向上箭头和硬币的时钟，省下的时间与金钱",
+  pt: "Um relógio com seta para cima e moedas, tempo e dinheiro poupados",
+  hi: "ऊपर तीर और सिक्कों वाली घड़ी, बचा समय और पैसा",
+  fr: "Une horloge avec flèche vers le haut et des pièces, temps et argent gagnés",
+};
+
 function homeHref(lang: RoiLang) {
   return lang === "en" ? "/" : `/${lang}`;
 }
@@ -120,6 +132,7 @@ export function RoiCalculator({ lang }: { lang: RoiLang }) {
         </p>
         <h1 className="text-3xl font-bold tracking-tight sm:text-[40px] sm:leading-tight">{c.h1}</h1>
         <p className="mt-4 max-w-2xl text-lg leading-relaxed text-black/70">{c.intro}</p>
+        <img src="/img/tool-roi.webp" alt={IMG_ALT[lang]} width={800} height={800} loading="eager" className="mx-auto mt-6 w-full max-w-xs" />
 
         <div className="mt-8 grid gap-6 lg:grid-cols-2">
           {/* Inputs */}

@@ -79,6 +79,18 @@ function Field({ label, hint, children }: { label: string; hint?: string; childr
 const inputCls =
   "w-full rounded-xl border border-black/12 bg-white px-3.5 py-2.5 text-[15px] text-[#0E1210] focus:border-[#17B26A]/60 focus:outline-none";
 
+const IMG_ALT: Record<DutyLang, string> = {
+  en: "Parcel passing a customs gate with duties added to cost",
+  ru: "Посылка проходит таможню, к стоимости добавляются пошлины",
+  de: "Paket passiert einen Zoll mit aufgeschlagenen Abgaben",
+  it: "Un pacco passa la dogana con dazi aggiunti al costo",
+  es: "Un paquete pasa la aduana con aranceles sumados al costo",
+  zh: "包裹通过海关，关税计入成本",
+  pt: "Um pacote passa pela alfândega com impostos somados ao custo",
+  hi: "पार्सल कस्टम से गुज़रता है, लागत में शुल्क जुड़ते हैं",
+  fr: "Un colis passe la douane avec des droits ajoutés au coût",
+};
+
 export function DutyCalculator({ lang }: { lang: DutyLang }) {
   const c = dutyChrome[lang];
   const [cur, setCur] = useState("$");
@@ -191,6 +203,8 @@ export function DutyCalculator({ lang }: { lang: DutyLang }) {
         <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-[#17B26A]">{c.kicker}</p>
         <h1 className="text-3xl font-bold tracking-tight sm:text-[38px] sm:leading-tight">{c.h1}</h1>
         <p className="mt-4 max-w-2xl text-lg leading-relaxed text-black/70">{c.intro}</p>
+
+        <img src="/img/landing-duty.webp" alt={IMG_ALT[lang]} width={640} height={640} loading="eager" className="mx-auto mt-8 w-full max-w-[260px]" />
 
         <div className="mt-8 grid gap-6 lg:grid-cols-2">
           {/* Inputs */}

@@ -6,6 +6,18 @@ import { LangMenu } from "@/components/common/LangMenu";
 const REFERRAL_URL =
   "https://www.accio.com/login?sId=KECtp1GttZ42%2FwpJUH5IxQ%3D%3D&ic=IC506004212009&tenant=accio&src=p_referral_IC506004212009&source=invite_center&return_url=https%3A%2F%2Fwww.accio.com%2Fwork%2F";
 
+const IMG_ALT: Record<TtLang, string> = {
+  en: "A product trend rising like a wave with a stopwatch for speed",
+  ru: "Тренд товара растёт как волна, рядом секундомер скорости",
+  de: "Ein Produkttrend steigt wie eine Welle, daneben eine Stoppuhr",
+  it: "Un trend di prodotto sale come un'onda, con un cronometro",
+  es: "Una tendencia de producto sube como una ola, con cronómetro",
+  zh: "商品趋势如浪潮上升，旁边是计时秒表",
+  pt: "Uma tendência de produto sobe como onda, com cronômetro",
+  hi: "उत्पाद ट्रेंड लहर की तरह ऊपर, पास में स्टॉपवॉच",
+  fr: "Une tendance produit monte comme une vague, avec un chronomètre",
+};
+
 function homeHref(lang: TtLang) {
   return lang === "en" ? "/" : `/${lang}`;
 }
@@ -68,6 +80,8 @@ export function TikTokPage({ lang }: { lang: TtLang }) {
         </p>
         <h1 className="text-3xl font-bold tracking-tight sm:text-[40px] sm:leading-tight">{c.h1}</h1>
         <p className="mt-4 text-lg leading-relaxed text-black/70">{c.intro}</p>
+
+        <img src="/img/landing-tiktok.webp" alt={IMG_ALT[lang]} width={640} height={640} loading="eager" className="mx-auto mt-8 w-full max-w-xs" />
 
         {/* Pains */}
         <section className="mt-10">
