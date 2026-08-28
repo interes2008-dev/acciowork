@@ -1,6 +1,6 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import type { ReactNode } from "react";
-import { ArrowRight, ArrowLeft, ShieldAlert } from "lucide-react";
+import { ArrowRight, ArrowLeft, ShieldAlert, Share2, Check } from "lucide-react";
 import { dutyChrome, dutyVatDefault, type DutyLang } from "@/lib/duty-data";
 import { LangMenu } from "@/components/common/LangMenu";
 
@@ -9,6 +9,18 @@ const REFERRAL_URL =
 
 const CURRENCIES = ["$", "€", "\u00A3"];
 type Dest = "US" | "EU" | "UK";
+
+const SHARE: Record<DutyLang, { share: string; copied: string }> = {
+  en: { share: "Share result", copied: "Link copied" },
+  ru: { share: "Поделиться результатом", copied: "Ссылка скопирована" },
+  de: { share: "Ergebnis teilen", copied: "Link kopiert" },
+  it: { share: "Condividi risultato", copied: "Link copiato" },
+  es: { share: "Compartir resultado", copied: "Enlace copiado" },
+  zh: { share: "分享结果", copied: "链接已复制" },
+  pt: { share: "Compartilhar resultado", copied: "Link copiado" },
+  hi: { share: "परिणाम शेयर करें", copied: "लिंक कॉपी हो गया" },
+  fr: { share: "Partager le résultat", copied: "Lien copié" },
+};
 
 function homeHref(lang: DutyLang) {
   return lang === "en" ? "/" : `/${lang}`;
@@ -78,9 +90,74 @@ export function DutyCalculator({ lang }: { lang: DutyLang }) {
   const [vat, setVat] = useState<number>(dutyVatDefault.US);
   const [sell, setSell] = useState<number | "">("");
 
+  const [shared, setShared] = useState(false);
+  const skipSync = useRef(true);
+
   function pickDest(d: Dest) {
     setDest(d);
     setVat(dutyVatDefault[d]);
+  }
+
+  // Hydrate inputs from the URL so a shared link reopens the same result.
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const q = new URLSearchParams(window.location.search);
+    const setNum = (k: string, fn: (n: number) => void, int = false) => {
+      const v = q.get(k);
+      if (v === null || v === "") return;
+      const n = int ? parseInt(v, 10) : parseFloat(v);
+      if (!Number.isNaN(n)) fn(n);
+    };
+    const cu = q.get("cur");
+    if (cu && CURRENCIES.includes(cu)) setCur(cu);
+    const dst = q.get("dest");
+    if (dst === "US" || dst === "EU" || dst === "UK") setDest(dst);
+    setNum("p", setCost);
+    setNum("u", setUnits, true);
+    setNum("s", setShip);
+    setNum("d", setDuty, true);
+    setNum("v", setVat, true);
+    setNum("sp", (n) => setSell(n));
+  }, []);
+
+  // Keep the URL in sync so it always reflects the current result.
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (skipSync.current) {
+      skipSync.current = false;
+      return;
+    }
+    const q = new URLSearchParams();
+    q.set("p", String(cost));
+    q.set("u", String(units));
+    q.set("s", String(ship));
+    q.set("d", String(duty));
+    q.set("v", String(vat));
+    q.set("dest", dest);
+    q.set("cur", cur);
+    if (typeof sell === "number" && sell > 0) q.set("sp", String(sell));
+    window.history.replaceState(null, "", `${window.location.pathname}?${q.toString()}`);
+  }, [cost, units, ship, duty, vat, dest, cur, sell]);
+
+  async function onShare() {
+    if (typeof window === "undefined") return;
+    const url = window.location.href;
+    const title = dutyChrome[lang].h1;
+    try {
+      if (navigator.share) {
+        await navigator.share({ title, url });
+        return;
+      }
+    } catch {
+      /* user cancelled or unsupported, fall back to copy */
+    }
+    try {
+      await navigator.clipboard.writeText(url);
+      setShared(true);
+      setTimeout(() => setShared(false), 1800);
+    } catch {
+      /* clipboard blocked */
+    }
   }
 
   const r = useMemo(() => {
@@ -210,6 +287,14 @@ export function DutyCalculator({ lang }: { lang: DutyLang }) {
                   </div>
                 )}
               </dl>
+              <button
+                type="button"
+                onClick={onShare}
+                className="mt-5 inline-flex items-center gap-2 rounded-full border border-black/12 bg-white px-4 py-2 text-sm font-semibold text-[#0E1210] transition hover:border-[#17B26A]/50"
+              >
+                {shared ? <Check className="h-4 w-4 text-[#17B26A]" /> : <Share2 className="h-4 w-4" />}
+                {shared ? SHARE[lang].copied : SHARE[lang].share}
+              </button>
             </div>
 
             <div className={`rounded-3xl border p-5 sm:p-6 ${verdict.cls}`}>

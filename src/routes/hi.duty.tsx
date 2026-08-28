@@ -1,14 +1,21 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { DutyCalculator } from "@/components/duty/DutyCalculator";
 import { dutyChrome } from "@/lib/duty-data";
+import { validateDutySearch, dutyOg } from "@/lib/duty-og";
 
 const LANG = "hi" as const;
 const LANGS = ["en","ru","de","it","es","zh","pt","hi","fr"] as const;
 
 export const Route = createFileRoute("/hi/duty")({
-  head: () => {
+  validateSearch: validateDutySearch,
+  loaderDeps: ({ search }) => search,
+  loader: ({ deps }) => ({ og: dutyOg(deps, LANG) }),
+  head: ({ loaderData }) => {
     const c = dutyChrome[LANG];
     const url = "https://acciowork.pro/hi/duty";
+    const og = loaderData?.og ?? null;
+    const ogTitle = og ? og.title : c.metaTitle;
+    const ogDesc = og ? og.desc : c.metaDesc;
     const alternates = LANGS.map((l) => ({ rel: "alternate", hrefLang: l as string, href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/duty` }));
     alternates.push({ rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/duty" });
     return {
@@ -17,8 +24,8 @@ export const Route = createFileRoute("/hi/duty")({
         { name: "description", content: c.metaDesc },
         { name: "keywords", content: "de minimis calculator, import duty calculator, landed cost, tariff calculator, cross border ecommerce 2026" },
         { property: "og:locale", content: "hi_IN" },
-        { property: "og:title", content: c.metaTitle },
-        { property: "og:description", content: c.metaDesc },
+        { property: "og:title", content: ogTitle },
+        { property: "og:description", content: ogDesc },
         { property: "og:type", content: "website" },
         { property: "og:url", content: url },
         { property: "og:site_name", content: "Accio Work" },
@@ -26,8 +33,8 @@ export const Route = createFileRoute("/hi/duty")({
         { property: "og:image:width", content: "1200" },
         { property: "og:image:height", content: "630" },
         { name: "twitter:card", content: "summary_large_image" },
-        { name: "twitter:title", content: c.metaTitle },
-        { name: "twitter:description", content: c.metaDesc },
+        { name: "twitter:title", content: ogTitle },
+        { name: "twitter:description", content: ogDesc },
         { name: "twitter:image", content: "https://acciowork.pro/og/og-hi.png" },
       ],
       links: [{ rel: "canonical", href: url }, ...alternates],
