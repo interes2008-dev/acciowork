@@ -1256,12 +1256,51 @@ function MobileStickyCta() {
   );
 }
 
+const STATS: Record<string, { heading: string; users: string; suppliers: string; products: string; note: string }> = {
+  en: { heading: "Powered by Accio, by Alibaba", users: "monthly active users", suppliers: "verified suppliers", products: "products", note: "Accio / Alibaba figures" },
+  ru: { heading: "Работает на Accio от Alibaba", users: "активных пользователей в месяц", suppliers: "проверенных поставщиков", products: "товаров", note: "Данные Accio / Alibaba" },
+  de: { heading: "Angetrieben von Accio, von Alibaba", users: "monatlich aktive Nutzer", suppliers: "verifizierte Lieferanten", products: "Produkte", note: "Zahlen von Accio / Alibaba" },
+  it: { heading: "Basato su Accio, di Alibaba", users: "utenti attivi al mese", suppliers: "fornitori verificati", products: "prodotti", note: "Dati Accio / Alibaba" },
+  es: { heading: "Con la tecnología de Accio, de Alibaba", users: "usuarios activos al mes", suppliers: "proveedores verificados", products: "productos", note: "Datos de Accio / Alibaba" },
+  zh: { heading: "由阿里巴巴 Accio 提供支持", users: "月活跃用户", suppliers: "已核验供应商", products: "件商品", note: "数据来自 Accio / Alibaba" },
+  pt: { heading: "Com tecnologia Accio, da Alibaba", users: "usuários ativos por mês", suppliers: "fornecedores verificados", products: "produtos", note: "Dados Accio / Alibaba" },
+  hi: { heading: "Accio द्वारा संचालित, Alibaba से", users: "मासिक सक्रिय उपयोगकर्ता", suppliers: "सत्यापित सप्लायर", products: "उत्पाद", note: "Accio / Alibaba के आंकड़े" },
+  fr: { heading: "Propulsé par Accio, d'Alibaba", users: "utilisateurs actifs par mois", suppliers: "fournisseurs vérifiés", products: "produits", note: "Chiffres Accio / Alibaba" },
+};
+
+function AccioStats() {
+  const { lang } = useI18n();
+  const s = STATS[lang as keyof typeof STATS] ?? STATS.en;
+  const items = [
+    { n: "10M+", l: s.users },
+    { n: "1.5M+", l: s.suppliers },
+    { n: "400M+", l: s.products },
+  ];
+  return (
+    <section className="border-y border-black/5 bg-white py-14 sm:py-16">
+      <div className="mx-auto max-w-[1100px] px-6 text-center">
+        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#17B26A]">{s.heading}</p>
+        <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-3">
+          {items.map((it) => (
+            <div key={it.n} className="flex flex-col items-center">
+              <span className="text-[40px] font-extrabold tracking-tight text-foreground sm:text-[52px]">{it.n}</span>
+              <span className="mt-1 text-[15px] text-muted-foreground">{it.l}</span>
+            </div>
+          ))}
+        </div>
+        <p className="mt-8 text-[12px] text-foreground/35">{s.note}</p>
+      </div>
+    </section>
+  );
+}
+
 export default function LandingPage() {
   return (
     <I18nProvider>
       <main className="min-h-screen bg-background text-foreground antialiased">
         <Navbar />
         <Hero />
+        <AccioStats />
         <BusinessNeeds />
         <HowItWorks />
         <WhyChoose />
