@@ -1268,22 +1268,61 @@ const STATS: Record<string, { heading: string; users: string; suppliers: string;
   fr: { heading: "Propulsé par Accio, d'Alibaba", users: "utilisateurs actifs par mois", suppliers: "fournisseurs vérifiés", products: "produits", note: "Chiffres Accio / Alibaba" },
 };
 
+function CountUp({ value, decimals, suffix, run }: { value: number; decimals: number; suffix: string; run: boolean }) {
+  const [display, setDisplay] = useState(value);
+  const animated = useRef(false);
+  useEffect(() => {
+    if (!run || animated.current) return;
+    animated.current = true;
+    const reduce =
+      typeof window !== "undefined" &&
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) {
+      setDisplay(value);
+      return;
+    }
+    const dur = 1300;
+    const t0 = performance.now();
+    let raf = 0;
+    const tick = (t: number) => {
+      const p = Math.min(1, (t - t0) / dur);
+      const eased = 1 - Math.pow(1 - p, 3);
+      setDisplay(value * eased);
+      if (p < 1) raf = requestAnimationFrame(tick);
+      else setDisplay(value);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [run, value]);
+  const text = display.toLocaleString("en-US", { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
+  return (
+    <span>
+      {text}
+      {suffix}
+    </span>
+  );
+}
+
 function AccioStats() {
   const { lang } = useI18n();
   const s = STATS[lang as keyof typeof STATS] ?? STATS.en;
+  const { ref, shown } = useReveal<HTMLDivElement>();
   const items = [
-    { n: "10M+", l: s.users },
-    { n: "1.5M+", l: s.suppliers },
-    { n: "400M+", l: s.products },
+    { v: 10, d: 0, l: s.users },
+    { v: 1.5, d: 1, l: s.suppliers },
+    { v: 400, d: 0, l: s.products },
   ];
   return (
-    <section className="border-y border-black/5 bg-white py-14 sm:py-16">
+    <section ref={ref} className="border-y border-black/5 bg-white py-14 sm:py-16">
       <div className="mx-auto max-w-[1100px] px-6 text-center">
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#17B26A]">{s.heading}</p>
         <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-3">
           {items.map((it) => (
-            <div key={it.n} className="flex flex-col items-center">
-              <span className="text-[40px] font-extrabold tracking-tight text-foreground sm:text-[52px]">{it.n}</span>
+            <div key={it.l} className="flex flex-col items-center">
+              <span className="text-[40px] font-extrabold tracking-tight text-foreground sm:text-[52px] tabular-nums">
+                <CountUp value={it.v} decimals={it.d} suffix="M+" run={shown} />
+              </span>
               <span className="mt-1 text-[15px] text-muted-foreground">{it.l}</span>
             </div>
           ))}
