@@ -4,6 +4,7 @@ import { renderOg } from "@/lib/og-render";
 import { validateDutySearch, dutyOg } from "@/lib/duty-og";
 import { validateRoiSearch, roiOg } from "@/lib/roi-og";
 import { validateQuizSearch, quizOg } from "@/lib/quiz-og";
+import { validateScSearch, scOg } from "@/lib/scorecard-og";
 
 const LANGS = ["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr"] as const;
 type Lang = (typeof LANGS)[number];
@@ -16,12 +17,14 @@ const FOOT: Record<string, string> = {
   duty: "acciowork.pro/duty",
   roi: "acciowork.pro/roi",
   quiz: "acciowork.pro/quiz",
+  scorecard: "acciowork.pro/supplier-scorecard",
 };
 
 function card(tool: string, lang: Lang, params: Record<string, unknown>) {
   if (tool === "duty") return dutyOg(validateDutySearch(params), lang)?.img ?? null;
   if (tool === "roi") return roiOg(validateRoiSearch(params), lang)?.img ?? null;
   if (tool === "quiz") return quizOg(validateQuizSearch(params), lang)?.img ?? null;
+  if (tool === "scorecard") return scOg(validateScSearch(params), lang)?.img ?? null;
   return null;
 }
 

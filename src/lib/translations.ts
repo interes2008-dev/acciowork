@@ -59,6 +59,7 @@ export type Dict = {
     deMinimis: string;
     tiktok: string;
     prompts: string;
+    scorecard: string;
   };
   hero: {
     brand: string;
@@ -168,6 +169,7 @@ const en: Dict = {
     deMinimis: "De minimis guide",
     tiktok: "TikTok Shop",
     prompts: "AI prompt pack",
+    scorecard: "Supplier scorecard",
   },
   hero: {
     brand: "Work",
@@ -368,6 +370,7 @@ const ru: Dict = {
     deMinimis: "Гайд по de minimis",
     tiktok: "TikTok Shop",
     prompts: "Пак AI-промптов",
+    scorecard: "Скоринг поставщика",
   },
   hero: {
     brand: "Work",
@@ -568,6 +571,7 @@ const de: Dict = {
     deMinimis: "De-minimis-Guide",
     tiktok: "TikTok Shop",
     prompts: "AI-Prompt-Paket",
+    scorecard: "Lieferanten-Scorecard",
   },
   hero: {
     brand: "Work",
@@ -768,6 +772,7 @@ const it: Dict = {
     deMinimis: "Guida de minimis",
     tiktok: "TikTok Shop",
     prompts: "Prompt AI",
+    scorecard: "Scorecard fornitore",
   },
   hero: {
     brand: "Work",
@@ -968,6 +973,7 @@ const es: Dict = {
     deMinimis: "Guía de minimis",
     tiktok: "TikTok Shop",
     prompts: "Prompts de IA",
+    scorecard: "Scorecard proveedor",
   },
   hero: {
     brand: "Work",
@@ -1168,6 +1174,7 @@ const zh: Dict = {
     deMinimis: "de minimis 指南",
     tiktok: "TikTok Shop",
     prompts: "AI 提示词包",
+    scorecard: "供应商评分卡",
   },
   hero: {
     brand: "Work",
@@ -1369,6 +1376,7 @@ const pt: Dict = {
     deMinimis: "Guia de minimis",
     tiktok: "TikTok Shop",
     prompts: "Prompts de IA",
+    scorecard: "Scorecard fornecedor",
   },
   hero: {
     brand: "Work",
@@ -1569,6 +1577,7 @@ const hi: Dict = {
     deMinimis: "de minimis गाइड",
     tiktok: "TikTok Shop",
     prompts: "AI प्रॉम्प्ट पैक",
+    scorecard: "सप्लायर स्कोरकार्ड",
   },
   hero: {
     brand: "Work",
@@ -1770,6 +1779,7 @@ const fr: Dict = {
     deMinimis: "Guide de minimis",
     tiktok: "TikTok Shop",
     prompts: "Prompts IA",
+    scorecard: "Scorecard fournisseur",
   },
   hero: {
     brand: "Work",

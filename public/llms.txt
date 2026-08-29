@@ -109,3 +109,8 @@ Accio Work is an execution-oriented AI agent platform (not a chatbot). A general
 
 - [AI prompts EN](https://acciowork.pro/ai-prompts): copy paste prompts to find products, validate demand, check saturation, price with duties and vet suppliers
 - Localized: /ru/ai-prompts, /de/ai-prompts, /it/ai-prompts, /es/ai-prompts, /zh/ai-prompts, /pt/ai-prompts, /hi/ai-prompts, /fr/ai-prompts
+
+## Free supplier reliability scorecard (interactive, all languages)
+
+- [Supplier scorecard EN](https://acciowork.pro/supplier-scorecard): rate a supplier across six risk factors and get a reliability score with next steps
+- Localized: /ru/supplier-scorecard, /de/supplier-scorecard, /it/supplier-scorecard, /es/supplier-scorecard, /zh/supplier-scorecard, /pt/supplier-scorecard, /hi/supplier-scorecard, /fr/supplier-scorecard

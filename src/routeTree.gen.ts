@@ -25,6 +25,7 @@ import { Route as RoiRouteImport } from './routes/roi'
 import { Route as RuRouteImport } from './routes/ru'
 import { Route as SeoMonitorRouteImport } from './routes/seo-monitor'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as SupplierScorecardRouteImport } from './routes/supplier-scorecard'
 import { Route as TemplatesRouteImport } from './routes/templates'
 import { Route as TiktokShopRouteImport } from './routes/tiktok-shop'
 import { Route as ZhRouteImport } from './routes/zh'
@@ -40,6 +41,7 @@ import { Route as DeDutyRouteImport } from './routes/de.duty'
 import { Route as DeQuizRouteImport } from './routes/de.quiz'
 import { Route as DeReviewsRouteImport } from './routes/de.reviews'
 import { Route as DeRoiRouteImport } from './routes/de.roi'
+import { Route as DeSupplierScorecardRouteImport } from './routes/de.supplier-scorecard'
 import { Route as DeTemplatesRouteImport } from './routes/de.templates'
 import { Route as DeTiktokShopRouteImport } from './routes/de.tiktok-shop'
 import { Route as EsIndexRouteImport } from './routes/es.index'
@@ -49,6 +51,7 @@ import { Route as EsDutyRouteImport } from './routes/es.duty'
 import { Route as EsQuizRouteImport } from './routes/es.quiz'
 import { Route as EsReviewsRouteImport } from './routes/es.reviews'
 import { Route as EsRoiRouteImport } from './routes/es.roi'
+import { Route as EsSupplierScorecardRouteImport } from './routes/es.supplier-scorecard'
 import { Route as EsTemplatesRouteImport } from './routes/es.templates'
 import { Route as EsTiktokShopRouteImport } from './routes/es.tiktok-shop'
 import { Route as EventsFreeForeverRouteImport } from './routes/events.free-forever'
@@ -61,6 +64,7 @@ import { Route as FrDutyRouteImport } from './routes/fr.duty'
 import { Route as FrQuizRouteImport } from './routes/fr.quiz'
 import { Route as FrReviewsRouteImport } from './routes/fr.reviews'
 import { Route as FrRoiRouteImport } from './routes/fr.roi'
+import { Route as FrSupplierScorecardRouteImport } from './routes/fr.supplier-scorecard'
 import { Route as FrTemplatesRouteImport } from './routes/fr.templates'
 import { Route as FrTiktokShopRouteImport } from './routes/fr.tiktok-shop'
 import { Route as GuideIndexRouteImport } from './routes/guide.index'
@@ -72,6 +76,7 @@ import { Route as HiDutyRouteImport } from './routes/hi.duty'
 import { Route as HiQuizRouteImport } from './routes/hi.quiz'
 import { Route as HiReviewsRouteImport } from './routes/hi.reviews'
 import { Route as HiRoiRouteImport } from './routes/hi.roi'
+import { Route as HiSupplierScorecardRouteImport } from './routes/hi.supplier-scorecard'
 import { Route as HiTemplatesRouteImport } from './routes/hi.templates'
 import { Route as HiTiktokShopRouteImport } from './routes/hi.tiktok-shop'
 import { Route as ItIndexRouteImport } from './routes/it.index'
@@ -81,6 +86,7 @@ import { Route as ItDutyRouteImport } from './routes/it.duty'
 import { Route as ItQuizRouteImport } from './routes/it.quiz'
 import { Route as ItReviewsRouteImport } from './routes/it.reviews'
 import { Route as ItRoiRouteImport } from './routes/it.roi'
+import { Route as ItSupplierScorecardRouteImport } from './routes/it.supplier-scorecard'
 import { Route as ItTemplatesRouteImport } from './routes/it.templates'
 import { Route as ItTiktokShopRouteImport } from './routes/it.tiktok-shop'
 import { Route as PtIndexRouteImport } from './routes/pt.index'
@@ -90,6 +96,7 @@ import { Route as PtDutyRouteImport } from './routes/pt.duty'
 import { Route as PtQuizRouteImport } from './routes/pt.quiz'
 import { Route as PtReviewsRouteImport } from './routes/pt.reviews'
 import { Route as PtRoiRouteImport } from './routes/pt.roi'
+import { Route as PtSupplierScorecardRouteImport } from './routes/pt.supplier-scorecard'
 import { Route as PtTemplatesRouteImport } from './routes/pt.templates'
 import { Route as PtTiktokShopRouteImport } from './routes/pt.tiktok-shop'
 import { Route as RuIndexRouteImport } from './routes/ru.index'
@@ -99,6 +106,7 @@ import { Route as RuDutyRouteImport } from './routes/ru.duty'
 import { Route as RuQuizRouteImport } from './routes/ru.quiz'
 import { Route as RuReviewsRouteImport } from './routes/ru.reviews'
 import { Route as RuRoiRouteImport } from './routes/ru.roi'
+import { Route as RuSupplierScorecardRouteImport } from './routes/ru.supplier-scorecard'
 import { Route as RuTemplatesRouteImport } from './routes/ru.templates'
 import { Route as RuTiktokShopRouteImport } from './routes/ru.tiktok-shop'
 import { Route as ZhIndexRouteImport } from './routes/zh.index'
@@ -108,6 +116,7 @@ import { Route as ZhDutyRouteImport } from './routes/zh.duty'
 import { Route as ZhQuizRouteImport } from './routes/zh.quiz'
 import { Route as ZhReviewsRouteImport } from './routes/zh.reviews'
 import { Route as ZhRoiRouteImport } from './routes/zh.roi'
+import { Route as ZhSupplierScorecardRouteImport } from './routes/zh.supplier-scorecard'
 import { Route as ZhTemplatesRouteImport } from './routes/zh.templates'
 import { Route as ZhTiktokShopRouteImport } from './routes/zh.tiktok-shop'
 import { Route as DeBlogIndexRouteImport } from './routes/de.blog.index'
@@ -266,6 +275,11 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SupplierScorecardRoute = SupplierScorecardRouteImport.update({
+  id: '/supplier-scorecard',
+  path: '/supplier-scorecard',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TemplatesRoute = TemplatesRouteImport.update({
   id: '/templates',
   path: '/templates',
@@ -341,6 +355,11 @@ const DeRoiRoute = DeRoiRouteImport.update({
   path: '/roi',
   getParentRoute: () => DeRoute,
 } as any)
+const DeSupplierScorecardRoute = DeSupplierScorecardRouteImport.update({
+  id: '/supplier-scorecard',
+  path: '/supplier-scorecard',
+  getParentRoute: () => DeRoute,
+} as any)
 const DeTemplatesRoute = DeTemplatesRouteImport.update({
   id: '/templates',
   path: '/templates',
@@ -384,6 +403,11 @@ const EsReviewsRoute = EsReviewsRouteImport.update({
 const EsRoiRoute = EsRoiRouteImport.update({
   id: '/roi',
   path: '/roi',
+  getParentRoute: () => EsRoute,
+} as any)
+const EsSupplierScorecardRoute = EsSupplierScorecardRouteImport.update({
+  id: '/supplier-scorecard',
+  path: '/supplier-scorecard',
   getParentRoute: () => EsRoute,
 } as any)
 const EsTemplatesRoute = EsTemplatesRouteImport.update({
@@ -446,6 +470,11 @@ const FrRoiRoute = FrRoiRouteImport.update({
   path: '/roi',
   getParentRoute: () => FrRoute,
 } as any)
+const FrSupplierScorecardRoute = FrSupplierScorecardRouteImport.update({
+  id: '/supplier-scorecard',
+  path: '/supplier-scorecard',
+  getParentRoute: () => FrRoute,
+} as any)
 const FrTemplatesRoute = FrTemplatesRouteImport.update({
   id: '/templates',
   path: '/templates',
@@ -501,6 +530,11 @@ const HiRoiRoute = HiRoiRouteImport.update({
   path: '/roi',
   getParentRoute: () => HiRoute,
 } as any)
+const HiSupplierScorecardRoute = HiSupplierScorecardRouteImport.update({
+  id: '/supplier-scorecard',
+  path: '/supplier-scorecard',
+  getParentRoute: () => HiRoute,
+} as any)
 const HiTemplatesRoute = HiTemplatesRouteImport.update({
   id: '/templates',
   path: '/templates',
@@ -544,6 +578,11 @@ const ItReviewsRoute = ItReviewsRouteImport.update({
 const ItRoiRoute = ItRoiRouteImport.update({
   id: '/roi',
   path: '/roi',
+  getParentRoute: () => ItRoute,
+} as any)
+const ItSupplierScorecardRoute = ItSupplierScorecardRouteImport.update({
+  id: '/supplier-scorecard',
+  path: '/supplier-scorecard',
   getParentRoute: () => ItRoute,
 } as any)
 const ItTemplatesRoute = ItTemplatesRouteImport.update({
@@ -591,6 +630,11 @@ const PtRoiRoute = PtRoiRouteImport.update({
   path: '/roi',
   getParentRoute: () => PtRoute,
 } as any)
+const PtSupplierScorecardRoute = PtSupplierScorecardRouteImport.update({
+  id: '/supplier-scorecard',
+  path: '/supplier-scorecard',
+  getParentRoute: () => PtRoute,
+} as any)
 const PtTemplatesRoute = PtTemplatesRouteImport.update({
   id: '/templates',
   path: '/templates',
@@ -636,6 +680,11 @@ const RuRoiRoute = RuRoiRouteImport.update({
   path: '/roi',
   getParentRoute: () => RuRoute,
 } as any)
+const RuSupplierScorecardRoute = RuSupplierScorecardRouteImport.update({
+  id: '/supplier-scorecard',
+  path: '/supplier-scorecard',
+  getParentRoute: () => RuRoute,
+} as any)
 const RuTemplatesRoute = RuTemplatesRouteImport.update({
   id: '/templates',
   path: '/templates',
@@ -679,6 +728,11 @@ const ZhReviewsRoute = ZhReviewsRouteImport.update({
 const ZhRoiRoute = ZhRoiRouteImport.update({
   id: '/roi',
   path: '/roi',
+  getParentRoute: () => ZhRoute,
+} as any)
+const ZhSupplierScorecardRoute = ZhSupplierScorecardRouteImport.update({
+  id: '/supplier-scorecard',
+  path: '/supplier-scorecard',
   getParentRoute: () => ZhRoute,
 } as any)
 const ZhTemplatesRoute = ZhTemplatesRouteImport.update({
@@ -1085,6 +1139,7 @@ export interface FileRoutesByFullPath {
   '/ru': typeof RuRouteWithChildren
   '/seo-monitor': typeof SeoMonitorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/supplier-scorecard': typeof SupplierScorecardRoute
   '/templates': typeof TemplatesRoute
   '/tiktok-shop': typeof TiktokShopRoute
   '/zh': typeof ZhRouteWithChildren
@@ -1097,6 +1152,7 @@ export interface FileRoutesByFullPath {
   '/de/quiz': typeof DeQuizRoute
   '/de/reviews': typeof DeReviewsRoute
   '/de/roi': typeof DeRoiRoute
+  '/de/supplier-scorecard': typeof DeSupplierScorecardRoute
   '/de/templates': typeof DeTemplatesRoute
   '/de/tiktok-shop': typeof DeTiktokShopRoute
   '/es/ai-prompts': typeof EsAiPromptsRoute
@@ -1105,6 +1161,7 @@ export interface FileRoutesByFullPath {
   '/es/quiz': typeof EsQuizRoute
   '/es/reviews': typeof EsReviewsRoute
   '/es/roi': typeof EsRoiRoute
+  '/es/supplier-scorecard': typeof EsSupplierScorecardRoute
   '/es/templates': typeof EsTemplatesRoute
   '/es/tiktok-shop': typeof EsTiktokShopRoute
   '/events/free-forever': typeof EventsFreeForeverRoute
@@ -1115,6 +1172,7 @@ export interface FileRoutesByFullPath {
   '/fr/quiz': typeof FrQuizRoute
   '/fr/reviews': typeof FrReviewsRoute
   '/fr/roi': typeof FrRoiRoute
+  '/fr/supplier-scorecard': typeof FrSupplierScorecardRoute
   '/fr/templates': typeof FrTemplatesRoute
   '/fr/tiktok-shop': typeof FrTiktokShopRoute
   '/guide/$guide': typeof GuideGuideRoute
@@ -1124,6 +1182,7 @@ export interface FileRoutesByFullPath {
   '/hi/quiz': typeof HiQuizRoute
   '/hi/reviews': typeof HiReviewsRoute
   '/hi/roi': typeof HiRoiRoute
+  '/hi/supplier-scorecard': typeof HiSupplierScorecardRoute
   '/hi/templates': typeof HiTemplatesRoute
   '/hi/tiktok-shop': typeof HiTiktokShopRoute
   '/it/ai-prompts': typeof ItAiPromptsRoute
@@ -1132,6 +1191,7 @@ export interface FileRoutesByFullPath {
   '/it/quiz': typeof ItQuizRoute
   '/it/reviews': typeof ItReviewsRoute
   '/it/roi': typeof ItRoiRoute
+  '/it/supplier-scorecard': typeof ItSupplierScorecardRoute
   '/it/templates': typeof ItTemplatesRoute
   '/it/tiktok-shop': typeof ItTiktokShopRoute
   '/pt/ai-prompts': typeof PtAiPromptsRoute
@@ -1140,6 +1200,7 @@ export interface FileRoutesByFullPath {
   '/pt/quiz': typeof PtQuizRoute
   '/pt/reviews': typeof PtReviewsRoute
   '/pt/roi': typeof PtRoiRoute
+  '/pt/supplier-scorecard': typeof PtSupplierScorecardRoute
   '/pt/templates': typeof PtTemplatesRoute
   '/pt/tiktok-shop': typeof PtTiktokShopRoute
   '/ru/ai-prompts': typeof RuAiPromptsRoute
@@ -1148,6 +1209,7 @@ export interface FileRoutesByFullPath {
   '/ru/quiz': typeof RuQuizRoute
   '/ru/reviews': typeof RuReviewsRoute
   '/ru/roi': typeof RuRoiRoute
+  '/ru/supplier-scorecard': typeof RuSupplierScorecardRoute
   '/ru/templates': typeof RuTemplatesRoute
   '/ru/tiktok-shop': typeof RuTiktokShopRoute
   '/zh/ai-prompts': typeof ZhAiPromptsRoute
@@ -1156,6 +1218,7 @@ export interface FileRoutesByFullPath {
   '/zh/quiz': typeof ZhQuizRoute
   '/zh/reviews': typeof ZhReviewsRoute
   '/zh/roi': typeof ZhRoiRoute
+  '/zh/supplier-scorecard': typeof ZhSupplierScorecardRoute
   '/zh/templates': typeof ZhTemplatesRoute
   '/zh/tiktok-shop': typeof ZhTiktokShopRoute
   '/blog/': typeof BlogIndexRoute
@@ -1256,6 +1319,7 @@ export interface FileRoutesByTo {
   '/roi': typeof RoiRoute
   '/seo-monitor': typeof SeoMonitorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/supplier-scorecard': typeof SupplierScorecardRoute
   '/templates': typeof TemplatesRoute
   '/tiktok-shop': typeof TiktokShopRoute
   '/api/og': typeof ApiOgRoute
@@ -1267,6 +1331,7 @@ export interface FileRoutesByTo {
   '/de/quiz': typeof DeQuizRoute
   '/de/reviews': typeof DeReviewsRoute
   '/de/roi': typeof DeRoiRoute
+  '/de/supplier-scorecard': typeof DeSupplierScorecardRoute
   '/de/templates': typeof DeTemplatesRoute
   '/de/tiktok-shop': typeof DeTiktokShopRoute
   '/es/ai-prompts': typeof EsAiPromptsRoute
@@ -1275,6 +1340,7 @@ export interface FileRoutesByTo {
   '/es/quiz': typeof EsQuizRoute
   '/es/reviews': typeof EsReviewsRoute
   '/es/roi': typeof EsRoiRoute
+  '/es/supplier-scorecard': typeof EsSupplierScorecardRoute
   '/es/templates': typeof EsTemplatesRoute
   '/es/tiktok-shop': typeof EsTiktokShopRoute
   '/events/free-forever': typeof EventsFreeForeverRoute
@@ -1285,6 +1351,7 @@ export interface FileRoutesByTo {
   '/fr/quiz': typeof FrQuizRoute
   '/fr/reviews': typeof FrReviewsRoute
   '/fr/roi': typeof FrRoiRoute
+  '/fr/supplier-scorecard': typeof FrSupplierScorecardRoute
   '/fr/templates': typeof FrTemplatesRoute
   '/fr/tiktok-shop': typeof FrTiktokShopRoute
   '/guide/$guide': typeof GuideGuideRoute
@@ -1294,6 +1361,7 @@ export interface FileRoutesByTo {
   '/hi/quiz': typeof HiQuizRoute
   '/hi/reviews': typeof HiReviewsRoute
   '/hi/roi': typeof HiRoiRoute
+  '/hi/supplier-scorecard': typeof HiSupplierScorecardRoute
   '/hi/templates': typeof HiTemplatesRoute
   '/hi/tiktok-shop': typeof HiTiktokShopRoute
   '/it/ai-prompts': typeof ItAiPromptsRoute
@@ -1302,6 +1370,7 @@ export interface FileRoutesByTo {
   '/it/quiz': typeof ItQuizRoute
   '/it/reviews': typeof ItReviewsRoute
   '/it/roi': typeof ItRoiRoute
+  '/it/supplier-scorecard': typeof ItSupplierScorecardRoute
   '/it/templates': typeof ItTemplatesRoute
   '/it/tiktok-shop': typeof ItTiktokShopRoute
   '/pt/ai-prompts': typeof PtAiPromptsRoute
@@ -1310,6 +1379,7 @@ export interface FileRoutesByTo {
   '/pt/quiz': typeof PtQuizRoute
   '/pt/reviews': typeof PtReviewsRoute
   '/pt/roi': typeof PtRoiRoute
+  '/pt/supplier-scorecard': typeof PtSupplierScorecardRoute
   '/pt/templates': typeof PtTemplatesRoute
   '/pt/tiktok-shop': typeof PtTiktokShopRoute
   '/ru/ai-prompts': typeof RuAiPromptsRoute
@@ -1318,6 +1388,7 @@ export interface FileRoutesByTo {
   '/ru/quiz': typeof RuQuizRoute
   '/ru/reviews': typeof RuReviewsRoute
   '/ru/roi': typeof RuRoiRoute
+  '/ru/supplier-scorecard': typeof RuSupplierScorecardRoute
   '/ru/templates': typeof RuTemplatesRoute
   '/ru/tiktok-shop': typeof RuTiktokShopRoute
   '/zh/ai-prompts': typeof ZhAiPromptsRoute
@@ -1326,6 +1397,7 @@ export interface FileRoutesByTo {
   '/zh/quiz': typeof ZhQuizRoute
   '/zh/reviews': typeof ZhReviewsRoute
   '/zh/roi': typeof ZhRoiRoute
+  '/zh/supplier-scorecard': typeof ZhSupplierScorecardRoute
   '/zh/templates': typeof ZhTemplatesRoute
   '/zh/tiktok-shop': typeof ZhTiktokShopRoute
   '/blog': typeof BlogIndexRoute
@@ -1434,6 +1506,7 @@ export interface FileRoutesById {
   '/ru': typeof RuRouteWithChildren
   '/seo-monitor': typeof SeoMonitorRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/supplier-scorecard': typeof SupplierScorecardRoute
   '/templates': typeof TemplatesRoute
   '/tiktok-shop': typeof TiktokShopRoute
   '/zh': typeof ZhRouteWithChildren
@@ -1446,6 +1519,7 @@ export interface FileRoutesById {
   '/de/quiz': typeof DeQuizRoute
   '/de/reviews': typeof DeReviewsRoute
   '/de/roi': typeof DeRoiRoute
+  '/de/supplier-scorecard': typeof DeSupplierScorecardRoute
   '/de/templates': typeof DeTemplatesRoute
   '/de/tiktok-shop': typeof DeTiktokShopRoute
   '/es/ai-prompts': typeof EsAiPromptsRoute
@@ -1454,6 +1528,7 @@ export interface FileRoutesById {
   '/es/quiz': typeof EsQuizRoute
   '/es/reviews': typeof EsReviewsRoute
   '/es/roi': typeof EsRoiRoute
+  '/es/supplier-scorecard': typeof EsSupplierScorecardRoute
   '/es/templates': typeof EsTemplatesRoute
   '/es/tiktok-shop': typeof EsTiktokShopRoute
   '/events/free-forever': typeof EventsFreeForeverRoute
@@ -1464,6 +1539,7 @@ export interface FileRoutesById {
   '/fr/quiz': typeof FrQuizRoute
   '/fr/reviews': typeof FrReviewsRoute
   '/fr/roi': typeof FrRoiRoute
+  '/fr/supplier-scorecard': typeof FrSupplierScorecardRoute
   '/fr/templates': typeof FrTemplatesRoute
   '/fr/tiktok-shop': typeof FrTiktokShopRoute
   '/guide/$guide': typeof GuideGuideRoute
@@ -1473,6 +1549,7 @@ export interface FileRoutesById {
   '/hi/quiz': typeof HiQuizRoute
   '/hi/reviews': typeof HiReviewsRoute
   '/hi/roi': typeof HiRoiRoute
+  '/hi/supplier-scorecard': typeof HiSupplierScorecardRoute
   '/hi/templates': typeof HiTemplatesRoute
   '/hi/tiktok-shop': typeof HiTiktokShopRoute
   '/it/ai-prompts': typeof ItAiPromptsRoute
@@ -1481,6 +1558,7 @@ export interface FileRoutesById {
   '/it/quiz': typeof ItQuizRoute
   '/it/reviews': typeof ItReviewsRoute
   '/it/roi': typeof ItRoiRoute
+  '/it/supplier-scorecard': typeof ItSupplierScorecardRoute
   '/it/templates': typeof ItTemplatesRoute
   '/it/tiktok-shop': typeof ItTiktokShopRoute
   '/pt/ai-prompts': typeof PtAiPromptsRoute
@@ -1489,6 +1567,7 @@ export interface FileRoutesById {
   '/pt/quiz': typeof PtQuizRoute
   '/pt/reviews': typeof PtReviewsRoute
   '/pt/roi': typeof PtRoiRoute
+  '/pt/supplier-scorecard': typeof PtSupplierScorecardRoute
   '/pt/templates': typeof PtTemplatesRoute
   '/pt/tiktok-shop': typeof PtTiktokShopRoute
   '/ru/ai-prompts': typeof RuAiPromptsRoute
@@ -1497,6 +1576,7 @@ export interface FileRoutesById {
   '/ru/quiz': typeof RuQuizRoute
   '/ru/reviews': typeof RuReviewsRoute
   '/ru/roi': typeof RuRoiRoute
+  '/ru/supplier-scorecard': typeof RuSupplierScorecardRoute
   '/ru/templates': typeof RuTemplatesRoute
   '/ru/tiktok-shop': typeof RuTiktokShopRoute
   '/zh/ai-prompts': typeof ZhAiPromptsRoute
@@ -1505,6 +1585,7 @@ export interface FileRoutesById {
   '/zh/quiz': typeof ZhQuizRoute
   '/zh/reviews': typeof ZhReviewsRoute
   '/zh/roi': typeof ZhRoiRoute
+  '/zh/supplier-scorecard': typeof ZhSupplierScorecardRoute
   '/zh/templates': typeof ZhTemplatesRoute
   '/zh/tiktok-shop': typeof ZhTiktokShopRoute
   '/blog/': typeof BlogIndexRoute
@@ -1614,6 +1695,7 @@ export interface FileRouteTypes {
     | '/ru'
     | '/seo-monitor'
     | '/sitemap.xml'
+    | '/supplier-scorecard'
     | '/templates'
     | '/tiktok-shop'
     | '/zh'
@@ -1626,6 +1708,7 @@ export interface FileRouteTypes {
     | '/de/quiz'
     | '/de/reviews'
     | '/de/roi'
+    | '/de/supplier-scorecard'
     | '/de/templates'
     | '/de/tiktok-shop'
     | '/es/ai-prompts'
@@ -1634,6 +1717,7 @@ export interface FileRouteTypes {
     | '/es/quiz'
     | '/es/reviews'
     | '/es/roi'
+    | '/es/supplier-scorecard'
     | '/es/templates'
     | '/es/tiktok-shop'
     | '/events/free-forever'
@@ -1644,6 +1728,7 @@ export interface FileRouteTypes {
     | '/fr/quiz'
     | '/fr/reviews'
     | '/fr/roi'
+    | '/fr/supplier-scorecard'
     | '/fr/templates'
     | '/fr/tiktok-shop'
     | '/guide/$guide'
@@ -1653,6 +1738,7 @@ export interface FileRouteTypes {
     | '/hi/quiz'
     | '/hi/reviews'
     | '/hi/roi'
+    | '/hi/supplier-scorecard'
     | '/hi/templates'
     | '/hi/tiktok-shop'
     | '/it/ai-prompts'
@@ -1661,6 +1747,7 @@ export interface FileRouteTypes {
     | '/it/quiz'
     | '/it/reviews'
     | '/it/roi'
+    | '/it/supplier-scorecard'
     | '/it/templates'
     | '/it/tiktok-shop'
     | '/pt/ai-prompts'
@@ -1669,6 +1756,7 @@ export interface FileRouteTypes {
     | '/pt/quiz'
     | '/pt/reviews'
     | '/pt/roi'
+    | '/pt/supplier-scorecard'
     | '/pt/templates'
     | '/pt/tiktok-shop'
     | '/ru/ai-prompts'
@@ -1677,6 +1765,7 @@ export interface FileRouteTypes {
     | '/ru/quiz'
     | '/ru/reviews'
     | '/ru/roi'
+    | '/ru/supplier-scorecard'
     | '/ru/templates'
     | '/ru/tiktok-shop'
     | '/zh/ai-prompts'
@@ -1685,6 +1774,7 @@ export interface FileRouteTypes {
     | '/zh/quiz'
     | '/zh/reviews'
     | '/zh/roi'
+    | '/zh/supplier-scorecard'
     | '/zh/templates'
     | '/zh/tiktok-shop'
     | '/blog/'
@@ -1785,6 +1875,7 @@ export interface FileRouteTypes {
     | '/roi'
     | '/seo-monitor'
     | '/sitemap.xml'
+    | '/supplier-scorecard'
     | '/templates'
     | '/tiktok-shop'
     | '/api/og'
@@ -1796,6 +1887,7 @@ export interface FileRouteTypes {
     | '/de/quiz'
     | '/de/reviews'
     | '/de/roi'
+    | '/de/supplier-scorecard'
     | '/de/templates'
     | '/de/tiktok-shop'
     | '/es/ai-prompts'
@@ -1804,6 +1896,7 @@ export interface FileRouteTypes {
     | '/es/quiz'
     | '/es/reviews'
     | '/es/roi'
+    | '/es/supplier-scorecard'
     | '/es/templates'
     | '/es/tiktok-shop'
     | '/events/free-forever'
@@ -1814,6 +1907,7 @@ export interface FileRouteTypes {
     | '/fr/quiz'
     | '/fr/reviews'
     | '/fr/roi'
+    | '/fr/supplier-scorecard'
     | '/fr/templates'
     | '/fr/tiktok-shop'
     | '/guide/$guide'
@@ -1823,6 +1917,7 @@ export interface FileRouteTypes {
     | '/hi/quiz'
     | '/hi/reviews'
     | '/hi/roi'
+    | '/hi/supplier-scorecard'
     | '/hi/templates'
     | '/hi/tiktok-shop'
     | '/it/ai-prompts'
@@ -1831,6 +1926,7 @@ export interface FileRouteTypes {
     | '/it/quiz'
     | '/it/reviews'
     | '/it/roi'
+    | '/it/supplier-scorecard'
     | '/it/templates'
     | '/it/tiktok-shop'
     | '/pt/ai-prompts'
@@ -1839,6 +1935,7 @@ export interface FileRouteTypes {
     | '/pt/quiz'
     | '/pt/reviews'
     | '/pt/roi'
+    | '/pt/supplier-scorecard'
     | '/pt/templates'
     | '/pt/tiktok-shop'
     | '/ru/ai-prompts'
@@ -1847,6 +1944,7 @@ export interface FileRouteTypes {
     | '/ru/quiz'
     | '/ru/reviews'
     | '/ru/roi'
+    | '/ru/supplier-scorecard'
     | '/ru/templates'
     | '/ru/tiktok-shop'
     | '/zh/ai-prompts'
@@ -1855,6 +1953,7 @@ export interface FileRouteTypes {
     | '/zh/quiz'
     | '/zh/reviews'
     | '/zh/roi'
+    | '/zh/supplier-scorecard'
     | '/zh/templates'
     | '/zh/tiktok-shop'
     | '/blog'
@@ -1962,6 +2061,7 @@ export interface FileRouteTypes {
     | '/ru'
     | '/seo-monitor'
     | '/sitemap.xml'
+    | '/supplier-scorecard'
     | '/templates'
     | '/tiktok-shop'
     | '/zh'
@@ -1974,6 +2074,7 @@ export interface FileRouteTypes {
     | '/de/quiz'
     | '/de/reviews'
     | '/de/roi'
+    | '/de/supplier-scorecard'
     | '/de/templates'
     | '/de/tiktok-shop'
     | '/es/ai-prompts'
@@ -1982,6 +2083,7 @@ export interface FileRouteTypes {
     | '/es/quiz'
     | '/es/reviews'
     | '/es/roi'
+    | '/es/supplier-scorecard'
     | '/es/templates'
     | '/es/tiktok-shop'
     | '/events/free-forever'
@@ -1992,6 +2094,7 @@ export interface FileRouteTypes {
     | '/fr/quiz'
     | '/fr/reviews'
     | '/fr/roi'
+    | '/fr/supplier-scorecard'
     | '/fr/templates'
     | '/fr/tiktok-shop'
     | '/guide/$guide'
@@ -2001,6 +2104,7 @@ export interface FileRouteTypes {
     | '/hi/quiz'
     | '/hi/reviews'
     | '/hi/roi'
+    | '/hi/supplier-scorecard'
     | '/hi/templates'
     | '/hi/tiktok-shop'
     | '/it/ai-prompts'
@@ -2009,6 +2113,7 @@ export interface FileRouteTypes {
     | '/it/quiz'
     | '/it/reviews'
     | '/it/roi'
+    | '/it/supplier-scorecard'
     | '/it/templates'
     | '/it/tiktok-shop'
     | '/pt/ai-prompts'
@@ -2017,6 +2122,7 @@ export interface FileRouteTypes {
     | '/pt/quiz'
     | '/pt/reviews'
     | '/pt/roi'
+    | '/pt/supplier-scorecard'
     | '/pt/templates'
     | '/pt/tiktok-shop'
     | '/ru/ai-prompts'
@@ -2025,6 +2131,7 @@ export interface FileRouteTypes {
     | '/ru/quiz'
     | '/ru/reviews'
     | '/ru/roi'
+    | '/ru/supplier-scorecard'
     | '/ru/templates'
     | '/ru/tiktok-shop'
     | '/zh/ai-prompts'
@@ -2033,6 +2140,7 @@ export interface FileRouteTypes {
     | '/zh/quiz'
     | '/zh/reviews'
     | '/zh/roi'
+    | '/zh/supplier-scorecard'
     | '/zh/templates'
     | '/zh/tiktok-shop'
     | '/blog/'
@@ -2141,6 +2249,7 @@ export interface RootRouteChildren {
   RuRoute: typeof RuRouteWithChildren
   SeoMonitorRoute: typeof SeoMonitorRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  SupplierScorecardRoute: typeof SupplierScorecardRoute
   TemplatesRoute: typeof TemplatesRoute
   TiktokShopRoute: typeof TiktokShopRoute
   ZhRoute: typeof ZhRouteWithChildren
@@ -2273,6 +2382,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/supplier-scorecard': {
+      id: '/supplier-scorecard'
+      path: '/supplier-scorecard'
+      fullPath: '/supplier-scorecard'
+      preLoaderRoute: typeof SupplierScorecardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/templates': {
       id: '/templates'
       path: '/templates'
@@ -2378,6 +2494,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DeRoiRouteImport
       parentRoute: typeof DeRoute
     }
+    '/de/supplier-scorecard': {
+      id: '/de/supplier-scorecard'
+      path: '/supplier-scorecard'
+      fullPath: '/de/supplier-scorecard'
+      preLoaderRoute: typeof DeSupplierScorecardRouteImport
+      parentRoute: typeof DeRoute
+    }
     '/de/templates': {
       id: '/de/templates'
       path: '/templates'
@@ -2439,6 +2562,13 @@ declare module '@tanstack/react-router' {
       path: '/roi'
       fullPath: '/es/roi'
       preLoaderRoute: typeof EsRoiRouteImport
+      parentRoute: typeof EsRoute
+    }
+    '/es/supplier-scorecard': {
+      id: '/es/supplier-scorecard'
+      path: '/supplier-scorecard'
+      fullPath: '/es/supplier-scorecard'
+      preLoaderRoute: typeof EsSupplierScorecardRouteImport
       parentRoute: typeof EsRoute
     }
     '/es/templates': {
@@ -2525,6 +2655,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FrRoiRouteImport
       parentRoute: typeof FrRoute
     }
+    '/fr/supplier-scorecard': {
+      id: '/fr/supplier-scorecard'
+      path: '/supplier-scorecard'
+      fullPath: '/fr/supplier-scorecard'
+      preLoaderRoute: typeof FrSupplierScorecardRouteImport
+      parentRoute: typeof FrRoute
+    }
     '/fr/templates': {
       id: '/fr/templates'
       path: '/templates'
@@ -2602,6 +2739,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HiRoiRouteImport
       parentRoute: typeof HiRoute
     }
+    '/hi/supplier-scorecard': {
+      id: '/hi/supplier-scorecard'
+      path: '/supplier-scorecard'
+      fullPath: '/hi/supplier-scorecard'
+      preLoaderRoute: typeof HiSupplierScorecardRouteImport
+      parentRoute: typeof HiRoute
+    }
     '/hi/templates': {
       id: '/hi/templates'
       path: '/templates'
@@ -2663,6 +2807,13 @@ declare module '@tanstack/react-router' {
       path: '/roi'
       fullPath: '/it/roi'
       preLoaderRoute: typeof ItRoiRouteImport
+      parentRoute: typeof ItRoute
+    }
+    '/it/supplier-scorecard': {
+      id: '/it/supplier-scorecard'
+      path: '/supplier-scorecard'
+      fullPath: '/it/supplier-scorecard'
+      preLoaderRoute: typeof ItSupplierScorecardRouteImport
       parentRoute: typeof ItRoute
     }
     '/it/templates': {
@@ -2728,6 +2879,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PtRoiRouteImport
       parentRoute: typeof PtRoute
     }
+    '/pt/supplier-scorecard': {
+      id: '/pt/supplier-scorecard'
+      path: '/supplier-scorecard'
+      fullPath: '/pt/supplier-scorecard'
+      preLoaderRoute: typeof PtSupplierScorecardRouteImport
+      parentRoute: typeof PtRoute
+    }
     '/pt/templates': {
       id: '/pt/templates'
       path: '/templates'
@@ -2791,6 +2949,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RuRoiRouteImport
       parentRoute: typeof RuRoute
     }
+    '/ru/supplier-scorecard': {
+      id: '/ru/supplier-scorecard'
+      path: '/supplier-scorecard'
+      fullPath: '/ru/supplier-scorecard'
+      preLoaderRoute: typeof RuSupplierScorecardRouteImport
+      parentRoute: typeof RuRoute
+    }
     '/ru/templates': {
       id: '/ru/templates'
       path: '/templates'
@@ -2852,6 +3017,13 @@ declare module '@tanstack/react-router' {
       path: '/roi'
       fullPath: '/zh/roi'
       preLoaderRoute: typeof ZhRoiRouteImport
+      parentRoute: typeof ZhRoute
+    }
+    '/zh/supplier-scorecard': {
+      id: '/zh/supplier-scorecard'
+      path: '/supplier-scorecard'
+      fullPath: '/zh/supplier-scorecard'
+      preLoaderRoute: typeof ZhSupplierScorecardRouteImport
       parentRoute: typeof ZhRoute
     }
     '/zh/templates': {
@@ -3403,6 +3575,7 @@ interface DeRouteChildren {
   DeQuizRoute: typeof DeQuizRoute
   DeReviewsRoute: typeof DeReviewsRoute
   DeRoiRoute: typeof DeRoiRoute
+  DeSupplierScorecardRoute: typeof DeSupplierScorecardRoute
   DeTemplatesRoute: typeof DeTemplatesRoute
   DeTiktokShopRoute: typeof DeTiktokShopRoute
   DeIndexRoute: typeof DeIndexRoute
@@ -3424,6 +3597,7 @@ const DeRouteChildren: DeRouteChildren = {
   DeQuizRoute: DeQuizRoute,
   DeReviewsRoute: DeReviewsRoute,
   DeRoiRoute: DeRoiRoute,
+  DeSupplierScorecardRoute: DeSupplierScorecardRoute,
   DeTemplatesRoute: DeTemplatesRoute,
   DeTiktokShopRoute: DeTiktokShopRoute,
   DeIndexRoute: DeIndexRoute,
@@ -3447,6 +3621,7 @@ interface EsRouteChildren {
   EsQuizRoute: typeof EsQuizRoute
   EsReviewsRoute: typeof EsReviewsRoute
   EsRoiRoute: typeof EsRoiRoute
+  EsSupplierScorecardRoute: typeof EsSupplierScorecardRoute
   EsTemplatesRoute: typeof EsTemplatesRoute
   EsTiktokShopRoute: typeof EsTiktokShopRoute
   EsIndexRoute: typeof EsIndexRoute
@@ -3468,6 +3643,7 @@ const EsRouteChildren: EsRouteChildren = {
   EsQuizRoute: EsQuizRoute,
   EsReviewsRoute: EsReviewsRoute,
   EsRoiRoute: EsRoiRoute,
+  EsSupplierScorecardRoute: EsSupplierScorecardRoute,
   EsTemplatesRoute: EsTemplatesRoute,
   EsTiktokShopRoute: EsTiktokShopRoute,
   EsIndexRoute: EsIndexRoute,
@@ -3491,6 +3667,7 @@ interface FrRouteChildren {
   FrQuizRoute: typeof FrQuizRoute
   FrReviewsRoute: typeof FrReviewsRoute
   FrRoiRoute: typeof FrRoiRoute
+  FrSupplierScorecardRoute: typeof FrSupplierScorecardRoute
   FrTemplatesRoute: typeof FrTemplatesRoute
   FrTiktokShopRoute: typeof FrTiktokShopRoute
   FrIndexRoute: typeof FrIndexRoute
@@ -3512,6 +3689,7 @@ const FrRouteChildren: FrRouteChildren = {
   FrQuizRoute: FrQuizRoute,
   FrReviewsRoute: FrReviewsRoute,
   FrRoiRoute: FrRoiRoute,
+  FrSupplierScorecardRoute: FrSupplierScorecardRoute,
   FrTemplatesRoute: FrTemplatesRoute,
   FrTiktokShopRoute: FrTiktokShopRoute,
   FrIndexRoute: FrIndexRoute,
@@ -3535,6 +3713,7 @@ interface HiRouteChildren {
   HiQuizRoute: typeof HiQuizRoute
   HiReviewsRoute: typeof HiReviewsRoute
   HiRoiRoute: typeof HiRoiRoute
+  HiSupplierScorecardRoute: typeof HiSupplierScorecardRoute
   HiTemplatesRoute: typeof HiTemplatesRoute
   HiTiktokShopRoute: typeof HiTiktokShopRoute
   HiIndexRoute: typeof HiIndexRoute
@@ -3556,6 +3735,7 @@ const HiRouteChildren: HiRouteChildren = {
   HiQuizRoute: HiQuizRoute,
   HiReviewsRoute: HiReviewsRoute,
   HiRoiRoute: HiRoiRoute,
+  HiSupplierScorecardRoute: HiSupplierScorecardRoute,
   HiTemplatesRoute: HiTemplatesRoute,
   HiTiktokShopRoute: HiTiktokShopRoute,
   HiIndexRoute: HiIndexRoute,
@@ -3579,6 +3759,7 @@ interface ItRouteChildren {
   ItQuizRoute: typeof ItQuizRoute
   ItReviewsRoute: typeof ItReviewsRoute
   ItRoiRoute: typeof ItRoiRoute
+  ItSupplierScorecardRoute: typeof ItSupplierScorecardRoute
   ItTemplatesRoute: typeof ItTemplatesRoute
   ItTiktokShopRoute: typeof ItTiktokShopRoute
   ItIndexRoute: typeof ItIndexRoute
@@ -3600,6 +3781,7 @@ const ItRouteChildren: ItRouteChildren = {
   ItQuizRoute: ItQuizRoute,
   ItReviewsRoute: ItReviewsRoute,
   ItRoiRoute: ItRoiRoute,
+  ItSupplierScorecardRoute: ItSupplierScorecardRoute,
   ItTemplatesRoute: ItTemplatesRoute,
   ItTiktokShopRoute: ItTiktokShopRoute,
   ItIndexRoute: ItIndexRoute,
@@ -3623,6 +3805,7 @@ interface PtRouteChildren {
   PtQuizRoute: typeof PtQuizRoute
   PtReviewsRoute: typeof PtReviewsRoute
   PtRoiRoute: typeof PtRoiRoute
+  PtSupplierScorecardRoute: typeof PtSupplierScorecardRoute
   PtTemplatesRoute: typeof PtTemplatesRoute
   PtTiktokShopRoute: typeof PtTiktokShopRoute
   PtIndexRoute: typeof PtIndexRoute
@@ -3644,6 +3827,7 @@ const PtRouteChildren: PtRouteChildren = {
   PtQuizRoute: PtQuizRoute,
   PtReviewsRoute: PtReviewsRoute,
   PtRoiRoute: PtRoiRoute,
+  PtSupplierScorecardRoute: PtSupplierScorecardRoute,
   PtTemplatesRoute: PtTemplatesRoute,
   PtTiktokShopRoute: PtTiktokShopRoute,
   PtIndexRoute: PtIndexRoute,
@@ -3667,6 +3851,7 @@ interface RuRouteChildren {
   RuQuizRoute: typeof RuQuizRoute
   RuReviewsRoute: typeof RuReviewsRoute
   RuRoiRoute: typeof RuRoiRoute
+  RuSupplierScorecardRoute: typeof RuSupplierScorecardRoute
   RuTemplatesRoute: typeof RuTemplatesRoute
   RuTiktokShopRoute: typeof RuTiktokShopRoute
   RuIndexRoute: typeof RuIndexRoute
@@ -3688,6 +3873,7 @@ const RuRouteChildren: RuRouteChildren = {
   RuQuizRoute: RuQuizRoute,
   RuReviewsRoute: RuReviewsRoute,
   RuRoiRoute: RuRoiRoute,
+  RuSupplierScorecardRoute: RuSupplierScorecardRoute,
   RuTemplatesRoute: RuTemplatesRoute,
   RuTiktokShopRoute: RuTiktokShopRoute,
   RuIndexRoute: RuIndexRoute,
@@ -3711,6 +3897,7 @@ interface ZhRouteChildren {
   ZhQuizRoute: typeof ZhQuizRoute
   ZhReviewsRoute: typeof ZhReviewsRoute
   ZhRoiRoute: typeof ZhRoiRoute
+  ZhSupplierScorecardRoute: typeof ZhSupplierScorecardRoute
   ZhTemplatesRoute: typeof ZhTemplatesRoute
   ZhTiktokShopRoute: typeof ZhTiktokShopRoute
   ZhIndexRoute: typeof ZhIndexRoute
@@ -3732,6 +3919,7 @@ const ZhRouteChildren: ZhRouteChildren = {
   ZhQuizRoute: ZhQuizRoute,
   ZhReviewsRoute: ZhReviewsRoute,
   ZhRoiRoute: ZhRoiRoute,
+  ZhSupplierScorecardRoute: ZhSupplierScorecardRoute,
   ZhTemplatesRoute: ZhTemplatesRoute,
   ZhTiktokShopRoute: ZhTiktokShopRoute,
   ZhIndexRoute: ZhIndexRoute,
@@ -3765,6 +3953,7 @@ const rootRouteChildren: RootRouteChildren = {
   RuRoute: RuRouteWithChildren,
   SeoMonitorRoute: SeoMonitorRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  SupplierScorecardRoute: SupplierScorecardRoute,
   TemplatesRoute: TemplatesRoute,
   TiktokShopRoute: TiktokShopRoute,
   ZhRoute: ZhRouteWithChildren,

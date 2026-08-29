@@ -228,6 +228,7 @@ function Navbar() {
   const deMinimisHref = blogHref.replace("/blog", "/de-minimis");
   const tiktokHref = blogHref.replace("/blog", "/tiktok-shop");
   const promptsHref = blogHref.replace("/blog", "/ai-prompts");
+  const scorecardHref = blogHref.replace("/blog", "/supplier-scorecard");
   const [menuOpen, setMenuOpen] = useState(false);
   const eventsHref = lang === "en" ? "/events/free-forever" : `/${lang}/events/free-forever`;
   const mobileLinks = [
@@ -241,6 +242,7 @@ function Navbar() {
     { href: templatesHref, label: t.nav.templates },
     { href: dutyHref, label: t.nav.duty },
     { href: promptsHref, label: t.nav.prompts },
+    { href: scorecardHref, label: t.nav.scorecard },
     { href: deMinimisHref, label: t.nav.deMinimis },
     { href: tiktokHref, label: t.nav.tiktok },
     { href: "#faq", label: t.nav.help },
@@ -262,6 +264,7 @@ function Navbar() {
                 { href: templatesHref, label: t.nav.templates },
                 { href: dutyHref, label: t.nav.duty },
                 { href: promptsHref, label: t.nav.prompts },
+                { href: scorecardHref, label: t.nav.scorecard },
               ]}
             />
             <NavDropdown
@@ -366,8 +369,20 @@ function HeroVisual() {
   );
 }
 
+const FEATURED: Record<string, string> = {
+  en: "Accio Work in the press",
+  ru: "Accio Work в прессе",
+  de: "Accio Work in der Presse",
+  it: "Accio Work sulla stampa",
+  es: "Accio Work en la prensa",
+  zh: "媒体报道 Accio Work",
+  pt: "Accio Work na imprensa",
+  hi: "प्रेस में Accio Work",
+  fr: "Accio Work dans la presse",
+};
+
 function Hero() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   return (
     <section id="top" className="relative overflow-hidden bg-hero pb-24 pt-20 sm:pt-28">
       <div className="mx-auto max-w-[1280px] px-6 text-center">
@@ -399,6 +414,17 @@ function Hero() {
             <Globe className="h-3.5 w-3.5 text-[#17B26A]" />
             {t.availability}
           </p>
+        </div>
+
+        <div className="mx-auto mt-12 max-w-3xl border-t border-black/5 pt-6">
+          <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-foreground/40">
+            {FEATURED[lang as keyof typeof FEATURED] ?? FEATURED.en}
+          </p>
+          <div className="mt-3 flex flex-wrap items-center justify-center gap-x-7 gap-y-2 text-[15px] font-semibold text-foreground/45">
+            {rvPress.map((p) => (
+              <span key={p.id}>{p.source}</span>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -1117,6 +1143,7 @@ function Footer() {
                 { href: `${base}/templates`, label: t.nav.templates },
                 { href: `${base}/duty`, label: t.nav.duty },
                 { href: `${base}/ai-prompts`, label: t.nav.prompts },
+                { href: `${base}/supplier-scorecard`, label: t.nav.scorecard },
               ]}
             />
             <FooterCol
@@ -1202,6 +1229,33 @@ function CalculatorTeaser() {
   );
 }
 
+function MobileStickyCta() {
+  const { t } = useI18n();
+  const [show, setShow] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setShow(window.scrollY > 700);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+  return (
+    <div
+      className={`fixed inset-x-0 bottom-0 z-40 border-t border-black/10 bg-white/95 px-4 py-3 backdrop-blur transition-transform duration-300 md:hidden ${
+        show ? "translate-y-0" : "translate-y-full"
+      }`}
+    >
+      <a
+        href={REFERRAL_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex h-12 w-full items-center justify-center rounded-full bg-[#17B26A] text-[15px] font-semibold text-white shadow-elegant"
+      >
+        {t.nav.download}
+      </a>
+    </div>
+  );
+}
+
 export default function LandingPage() {
   return (
     <I18nProvider>
@@ -1219,6 +1273,7 @@ export default function LandingPage() {
         <Faq />
         <FinalCta />
         <Footer />
+        <MobileStickyCta />
       </main>
     </I18nProvider>
   );

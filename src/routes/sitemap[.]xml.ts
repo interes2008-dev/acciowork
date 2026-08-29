@@ -112,6 +112,10 @@ export const Route = createFileRoute("/sitemap.xml")({
         }
 
         for (const l of compareLangs) {
+          entries.push({ path: `${l}/supplier-scorecard`, changefreq: "monthly", priority: "0.7", alternates: alts("/supplier-scorecard") });
+        }
+
+        for (const l of compareLangs) {
           entries.push({ path: `${l}/events/free-forever`, changefreq: "monthly", priority: "0.6", alternates: alts("/events/free-forever") });
         }
 
