@@ -453,7 +453,91 @@ export const comparePages: Record<CmpLang, Record<string, CmpPage>> = {
           "a": "Yes, the free plan lets you test it without a card."
         }
       ]
-    }
+    },
+      "operator": {
+      "slug": "operator",
+      "name": "OpenAI Operator",
+      "tagline": "General web browsing agent",
+      "metaTitle": "Accio Work vs OpenAI Operator: which AI for sourcing?",
+      "metaDescription": "Accio Work vs OpenAI Operator compared for supplier sourcing, market research and listings. See which AI fits your store, free plan to try.",
+      "h1": "Accio Work vs OpenAI Operator",
+      "intro": "Operator browses the web and clicks pages like a person. Accio Work is built for the sourcing and selling loop, with deep Alibaba data behind it. They are different tools, so here is where each one fits.",
+      "competitorCells": [
+            "General web agent that clicks and browses",
+            "Can open Alibaba, but no built in supplier data or vetting",
+            "General web research, not tuned for commerce",
+            "Can draft text, not built for listings",
+            "Automates web clicks, not sourcing workflows",
+            "Bundled with ChatGPT paid tiers"
+      ],
+      "whenAccio": [
+            "Your daily work is sourcing and selling",
+            "You need supplier data and vetting, not just browsing",
+            "You want a commerce agent that runs the whole loop"
+      ],
+      "whenOther": [
+            "You want a general agent for many kinds of web tasks",
+            "You already pay for ChatGPT and want browsing",
+            "Commerce is not your main focus"
+      ],
+      "verdict": "Operator is a capable general browser. For the sourcing loop, Accio Work does more with less setup thanks to its Alibaba integration. Match the tool to the work you do each day.",
+      "faq": [
+            {
+                  "q": "Accio Work or Operator for sellers?",
+                  "a": "Accio Work, since it is built around sourcing and selling, not general browsing."
+            },
+            {
+                  "q": "Does Accio Work browse the web too?",
+                  "a": "Yes, it can research the web and works on live Alibaba data for sourcing."
+            },
+            {
+                  "q": "Can I try it free?",
+                  "a": "Yes, the free plan lets you test it without a card."
+            }
+      ]
+},
+      "devin": {
+      "slug": "devin",
+      "name": "Devin",
+      "tagline": "Autonomous coding agent",
+      "metaTitle": "Accio Work vs Devin: sourcing agent vs coding agent",
+      "metaDescription": "Accio Work vs Devin compared. One sources products and suppliers, the other writes software. See which agent matches your work, free plan to try.",
+      "h1": "Accio Work vs Devin",
+      "intro": "Devin is an autonomous coding agent that writes and ships software. Accio Work is a sourcing and selling agent for cross border e-commerce. They solve different problems, and if you need code, Devin is the right tool.",
+      "competitorCells": [
+            "Autonomous coding agent for software",
+            "Not built for sourcing or suppliers",
+            "Code and technical tasks, not market research",
+            "Writes code, not product listings",
+            "Automates engineering, not commerce",
+            "Developer subscription"
+      ],
+      "whenAccio": [
+            "Your work is sourcing and selling, not coding",
+            "You need supplier data, research and listings",
+            "You want an agent focused on store growth"
+      ],
+      "whenOther": [
+            "You need software or scripts built",
+            "Your bottleneck is engineering, not sourcing",
+            "You have no supplier or product research needs"
+      ],
+      "verdict": "Different tools for different jobs. For building software, Devin. For sourcing and selling, Accio Work. Many sellers never need a coding agent at all.",
+      "faq": [
+            {
+                  "q": "Is this a fair comparison?",
+                  "a": "They serve different goals. This page just helps you pick the right kind of agent for your work."
+            },
+            {
+                  "q": "Which one for an online store?",
+                  "a": "Accio Work, since it centers on sourcing, research and listings rather than code."
+            },
+            {
+                  "q": "Can I try Accio Work free?",
+                  "a": "Yes, the free plan lets you test it without a card."
+            }
+      ]
+}
   },
   "ru": {
     "chatgpt": {
@@ -581,7 +665,91 @@ export const comparePages: Record<CmpLang, Record<string, CmpPage>> = {
           "a": "Да, бесплатный план позволяет проверить без карты."
         }
       ]
-    }
+    },
+      "operator": {
+      "slug": "operator",
+      "name": "OpenAI Operator",
+      "tagline": "Универсальный веб-агент",
+      "metaTitle": "Accio Work против OpenAI Operator: какой AI для закупок?",
+      "metaDescription": "Сравнение Accio Work и OpenAI Operator по поиску поставщиков, анализу рынка и карточкам. Какой AI подходит магазину, есть бесплатный тариф.",
+      "h1": "Accio Work vs OpenAI Operator",
+      "intro": "Operator ходит по сайтам и кликает как человек. Accio Work сделан под цикл закупок и продаж, за ним живые данные Alibaba. Это разные инструменты, ниже видно, где что уместно.",
+      "competitorCells": [
+            "Универсальный веб-агент, кликает и листает",
+            "Может открыть Alibaba, но своей базы поставщиков и проверки нет",
+            "Общий веб-ресёрч, не под коммерцию",
+            "Пишет текст, но не заточен под карточки",
+            "Автоматизирует клики, а не закупочные сценарии",
+            "Входит в платные тарифы ChatGPT"
+      ],
+      "whenAccio": [
+            "Ваша ежедневная работа это закупки и продажи",
+            "Нужны данные поставщиков и проверка, а не просто браузинг",
+            "Нужен коммерческий агент на весь цикл"
+      ],
+      "whenOther": [
+            "Нужен универсальный агент под разные веб-задачи",
+            "Уже платите за ChatGPT и хотите браузинг",
+            "Коммерция не главный фокус"
+      ],
+      "verdict": "Operator это сильный универсальный браузер. Для цикла закупок Accio Work делает больше с меньшей настройкой за счёт интеграции с Alibaba. Выбирайте инструмент под свою ежедневную работу.",
+      "faq": [
+            {
+                  "q": "Accio Work или Operator для продавцов?",
+                  "a": "Accio Work, он построен вокруг закупок и продаж, а не общего браузинга."
+            },
+            {
+                  "q": "Accio Work тоже умеет в веб?",
+                  "a": "Да, он ищет в вебе и работает на живых данных Alibaba для закупок."
+            },
+            {
+                  "q": "Можно попробовать бесплатно?",
+                  "a": "Да, бесплатный тариф позволяет протестировать без карты."
+            }
+      ]
+},
+      "devin": {
+      "slug": "devin",
+      "name": "Devin",
+      "tagline": "Автономный агент для кода",
+      "metaTitle": "Accio Work против Devin: агент закупок или кода",
+      "metaDescription": "Сравнение Accio Work и Devin. Один ищет товары и поставщиков, другой пишет софт. Какой агент под вашу работу, есть бесплатный тариф.",
+      "h1": "Accio Work vs Devin",
+      "intro": "Devin это автономный агент, который пишет и выкатывает код. Accio Work это агент закупок и продаж для трансграничного e-commerce. Они решают разные задачи, и если нужен код, ваш инструмент это Devin.",
+      "competitorCells": [
+            "Автономный агент для разработки ПО",
+            "Не сделан под закупки и поставщиков",
+            "Код и технические задачи, не анализ рынка",
+            "Пишет код, а не карточки товара",
+            "Автоматизирует разработку, а не коммерцию",
+            "Подписка для разработчиков"
+      ],
+      "whenAccio": [
+            "Ваша работа это закупки и продажи, а не код",
+            "Нужны данные поставщиков, ресёрч и карточки",
+            "Нужен агент под рост магазина"
+      ],
+      "whenOther": [
+            "Нужно написать софт или скрипты",
+            "Ваше узкое место это разработка, а не закупки",
+            "Нет задач по поставщикам и товарному ресёрчу"
+      ],
+      "verdict": "Разные инструменты под разные задачи. Для разработки Devin, для закупок и продаж Accio Work. Многим продавцам агент для кода вообще не нужен.",
+      "faq": [
+            {
+                  "q": "Это честное сравнение?",
+                  "a": "У них разные цели. Страница просто помогает выбрать правильный тип агента под вашу работу."
+            },
+            {
+                  "q": "Что выбрать для интернет-магазина?",
+                  "a": "Accio Work, он про закупки, ресёрч и карточки, а не про код."
+            },
+            {
+                  "q": "Accio Work можно попробовать бесплатно?",
+                  "a": "Да, бесплатный тариф позволяет протестировать без карты."
+            }
+      ]
+}
   },
   "de": {
     "chatgpt": {
@@ -709,7 +877,91 @@ export const comparePages: Record<CmpLang, Record<string, CmpPage>> = {
           "a": "Ja, der Gratisplan erlaubt einen Test ohne Karte."
         }
       ]
-    }
+    },
+      "operator": {
+      "slug": "operator",
+      "name": "OpenAI Operator",
+      "tagline": "Allgemeiner Web-Agent",
+      "metaTitle": "Accio Work vs OpenAI Operator: welche KI fürs Sourcing?",
+      "metaDescription": "Accio Work vs OpenAI Operator verglichen für Lieferantensuche, Marktrecherche und Listings. Welche KI passt zu deinem Shop, gratis testbar.",
+      "h1": "Accio Work vs OpenAI Operator",
+      "intro": "Operator surft und klickt wie ein Mensch. Accio Work ist für den Sourcing- und Verkaufsablauf gebaut, mit Live-Alibaba-Daten dahinter. Es sind verschiedene Werkzeuge, hier passt was.",
+      "competitorCells": [
+            "Allgemeiner Web-Agent, klickt und surft",
+            "Kann Alibaba öffnen, aber keine eigenen Lieferantendaten oder Prüfung",
+            "Allgemeine Web-Recherche, nicht auf Handel getrimmt",
+            "Kann Text entwerfen, nicht für Listings gebaut",
+            "Automatisiert Web-Klicks, keine Sourcing-Abläufe",
+            "In ChatGPT-Bezahltarifen enthalten"
+      ],
+      "whenAccio": [
+            "Deine tägliche Arbeit ist Sourcing und Verkauf",
+            "Du brauchst Lieferantendaten und Prüfung, nicht nur Surfen",
+            "Du willst einen Handelsagenten für den ganzen Ablauf"
+      ],
+      "whenOther": [
+            "Du willst einen allgemeinen Agenten für viele Web-Aufgaben",
+            "Du zahlst schon für ChatGPT und willst Browsing",
+            "Handel ist nicht dein Hauptfokus"
+      ],
+      "verdict": "Operator ist ein starker allgemeiner Browser. Für den Sourcing-Ablauf leistet Accio Work dank Alibaba-Integration mehr mit weniger Aufwand. Wähle das Werkzeug nach deiner täglichen Arbeit.",
+      "faq": [
+            {
+                  "q": "Accio Work oder Operator für Verkäufer?",
+                  "a": "Accio Work, da es um Sourcing und Verkauf herum gebaut ist, nicht um allgemeines Surfen."
+            },
+            {
+                  "q": "Surft Accio Work auch im Web?",
+                  "a": "Ja, es recherchiert im Web und arbeitet für Sourcing mit Live-Alibaba-Daten."
+            },
+            {
+                  "q": "Kann ich es gratis testen?",
+                  "a": "Ja, der kostenlose Plan erlaubt einen Test ohne Karte."
+            }
+      ]
+},
+      "devin": {
+      "slug": "devin",
+      "name": "Devin",
+      "tagline": "Autonomer Coding-Agent",
+      "metaTitle": "Accio Work vs Devin: Sourcing-Agent oder Coding-Agent",
+      "metaDescription": "Accio Work vs Devin verglichen. Einer sourct Produkte und Lieferanten, der andere schreibt Software. Welcher Agent passt, gratis testbar.",
+      "h1": "Accio Work vs Devin",
+      "intro": "Devin ist ein autonomer Coding-Agent, der Software schreibt und ausliefert. Accio Work ist ein Sourcing- und Verkaufsagent für grenzüberschreitenden E-Commerce. Sie lösen verschiedene Probleme, und wenn du Code brauchst, ist Devin richtig.",
+      "competitorCells": [
+            "Autonomer Coding-Agent für Software",
+            "Nicht für Sourcing oder Lieferanten gebaut",
+            "Code und technische Aufgaben, keine Marktrecherche",
+            "Schreibt Code, keine Produkt-Listings",
+            "Automatisiert Engineering, keinen Handel",
+            "Entwickler-Abo"
+      ],
+      "whenAccio": [
+            "Deine Arbeit ist Sourcing und Verkauf, nicht Coden",
+            "Du brauchst Lieferantendaten, Recherche und Listings",
+            "Du willst einen Agenten für Shop-Wachstum"
+      ],
+      "whenOther": [
+            "Du musst Software oder Skripte bauen",
+            "Dein Engpass ist Engineering, nicht Sourcing",
+            "Du hast keinen Bedarf an Lieferanten- oder Produktrecherche"
+      ],
+      "verdict": "Verschiedene Werkzeuge für verschiedene Aufgaben. Zum Software-Bauen Devin, für Sourcing und Verkauf Accio Work. Viele Verkäufer brauchen nie einen Coding-Agenten.",
+      "faq": [
+            {
+                  "q": "Ist der Vergleich fair?",
+                  "a": "Sie verfolgen verschiedene Ziele. Diese Seite hilft nur, den richtigen Agententyp für deine Arbeit zu wählen."
+            },
+            {
+                  "q": "Welcher für einen Onlineshop?",
+                  "a": "Accio Work, da es um Sourcing, Recherche und Listings geht, nicht um Code."
+            },
+            {
+                  "q": "Kann ich Accio Work gratis testen?",
+                  "a": "Ja, der kostenlose Plan erlaubt einen Test ohne Karte."
+            }
+      ]
+}
   },
   "it": {
     "chatgpt": {
@@ -837,7 +1089,91 @@ export const comparePages: Record<CmpLang, Record<string, CmpPage>> = {
           "a": "Sì, il piano gratuito consente di provarlo senza carta."
         }
       ]
-    }
+    },
+      "operator": {
+      "slug": "operator",
+      "name": "OpenAI Operator",
+      "tagline": "Agente web generico",
+      "metaTitle": "Accio Work vs OpenAI Operator: quale AI per il sourcing?",
+      "metaDescription": "Accio Work vs OpenAI Operator a confronto per ricerca fornitori, analisi di mercato e listing. Quale AI si adatta al tuo negozio, prova gratis.",
+      "h1": "Accio Work vs OpenAI Operator",
+      "intro": "Operator naviga e clicca come una persona. Accio Work è costruito per il ciclo di sourcing e vendita, con dati Alibaba in tempo reale dietro. Sono strumenti diversi, ecco dove serve ciascuno.",
+      "competitorCells": [
+            "Agente web generico, clicca e naviga",
+            "Può aprire Alibaba, ma senza dati fornitori o verifica propri",
+            "Ricerca web generica, non tarata sul commercio",
+            "Può scrivere testo, non fatto per i listing",
+            "Automatizza clic web, non flussi di sourcing",
+            "Incluso nei piani a pagamento di ChatGPT"
+      ],
+      "whenAccio": [
+            "Il tuo lavoro quotidiano è sourcing e vendita",
+            "Ti servono dati fornitori e verifica, non solo navigazione",
+            "Vuoi un agente commerciale per tutto il ciclo"
+      ],
+      "whenOther": [
+            "Vuoi un agente generico per molte attività web",
+            "Paghi già ChatGPT e vuoi la navigazione",
+            "Il commercio non è il tuo focus principale"
+      ],
+      "verdict": "Operator è un valido browser generico. Per il ciclo di sourcing, Accio Work fa di più con meno grazie all'integrazione con Alibaba. Scegli lo strumento in base al lavoro quotidiano.",
+      "faq": [
+            {
+                  "q": "Accio Work o Operator per chi vende?",
+                  "a": "Accio Work, perché è costruito attorno a sourcing e vendita, non alla navigazione generica."
+            },
+            {
+                  "q": "Accio Work naviga anche il web?",
+                  "a": "Sì, fa ricerca sul web e lavora su dati Alibaba in tempo reale per il sourcing."
+            },
+            {
+                  "q": "Posso provarlo gratis?",
+                  "a": "Sì, il piano gratuito permette di testarlo senza carta."
+            }
+      ]
+},
+      "devin": {
+      "slug": "devin",
+      "name": "Devin",
+      "tagline": "Agente di coding autonomo",
+      "metaTitle": "Accio Work vs Devin: agente sourcing o di coding",
+      "metaDescription": "Accio Work vs Devin a confronto. Uno cerca prodotti e fornitori, l'altro scrive software. Quale agente fa per te, prova gratis.",
+      "h1": "Accio Work vs Devin",
+      "intro": "Devin è un agente di coding autonomo che scrive e rilascia software. Accio Work è un agente di sourcing e vendita per e-commerce transfrontaliero. Risolvono problemi diversi, e se ti serve codice, lo strumento giusto è Devin.",
+      "competitorCells": [
+            "Agente di coding autonomo per software",
+            "Non fatto per sourcing o fornitori",
+            "Codice e attività tecniche, non analisi di mercato",
+            "Scrive codice, non listing di prodotto",
+            "Automatizza l'ingegneria, non il commercio",
+            "Abbonamento per sviluppatori"
+      ],
+      "whenAccio": [
+            "Il tuo lavoro è sourcing e vendita, non coding",
+            "Ti servono dati fornitori, ricerca e listing",
+            "Vuoi un agente per la crescita del negozio"
+      ],
+      "whenOther": [
+            "Devi costruire software o script",
+            "Il tuo collo di bottiglia è l'ingegneria, non il sourcing",
+            "Non hai esigenze di ricerca fornitori o prodotti"
+      ],
+      "verdict": "Strumenti diversi per lavori diversi. Per costruire software Devin, per sourcing e vendita Accio Work. Molti venditori non hanno mai bisogno di un agente di coding.",
+      "faq": [
+            {
+                  "q": "È un confronto equo?",
+                  "a": "Hanno obiettivi diversi. Questa pagina aiuta solo a scegliere il tipo di agente giusto per il tuo lavoro."
+            },
+            {
+                  "q": "Quale per un negozio online?",
+                  "a": "Accio Work, perché ruota su sourcing, ricerca e listing, non sul codice."
+            },
+            {
+                  "q": "Posso provare Accio Work gratis?",
+                  "a": "Sì, il piano gratuito permette di testarlo senza carta."
+            }
+      ]
+}
   },
   "es": {
     "chatgpt": {
@@ -965,7 +1301,91 @@ export const comparePages: Record<CmpLang, Record<string, CmpPage>> = {
           "a": "Sí, el plan gratuito permite probarlo sin tarjeta."
         }
       ]
-    }
+    },
+      "operator": {
+      "slug": "operator",
+      "name": "OpenAI Operator",
+      "tagline": "Agente web general",
+      "metaTitle": "Accio Work vs OpenAI Operator: ¿qué IA para sourcing?",
+      "metaDescription": "Accio Work vs OpenAI Operator comparados para búsqueda de proveedores, análisis de mercado y fichas. Qué IA encaja con tu tienda, prueba gratis.",
+      "h1": "Accio Work vs OpenAI Operator",
+      "intro": "Operator navega y hace clic como una persona. Accio Work está hecho para el ciclo de sourcing y venta, con datos de Alibaba en vivo detrás. Son herramientas distintas, aquí encaja cada una.",
+      "competitorCells": [
+            "Agente web general, hace clic y navega",
+            "Puede abrir Alibaba, pero sin datos de proveedores ni verificación propios",
+            "Investigación web general, no afinada al comercio",
+            "Puede redactar texto, no hecho para fichas",
+            "Automatiza clics web, no flujos de sourcing",
+            "Incluido en planes de pago de ChatGPT"
+      ],
+      "whenAccio": [
+            "Tu trabajo diario es sourcing y venta",
+            "Necesitas datos de proveedores y verificación, no solo navegar",
+            "Quieres un agente de comercio para todo el ciclo"
+      ],
+      "whenOther": [
+            "Quieres un agente general para muchas tareas web",
+            "Ya pagas ChatGPT y quieres navegación",
+            "El comercio no es tu foco principal"
+      ],
+      "verdict": "Operator es un buen navegador general. Para el ciclo de sourcing, Accio Work hace más con menos gracias a su integración con Alibaba. Elige la herramienta según tu trabajo diario.",
+      "faq": [
+            {
+                  "q": "¿Accio Work u Operator para vendedores?",
+                  "a": "Accio Work, porque está construido en torno al sourcing y la venta, no a la navegación general."
+            },
+            {
+                  "q": "¿Accio Work también navega la web?",
+                  "a": "Sí, investiga la web y trabaja con datos de Alibaba en vivo para el sourcing."
+            },
+            {
+                  "q": "¿Puedo probarlo gratis?",
+                  "a": "Sí, el plan gratuito permite probarlo sin tarjeta."
+            }
+      ]
+},
+      "devin": {
+      "slug": "devin",
+      "name": "Devin",
+      "tagline": "Agente de código autónomo",
+      "metaTitle": "Accio Work vs Devin: agente de sourcing o de código",
+      "metaDescription": "Accio Work vs Devin comparados. Uno busca productos y proveedores, el otro escribe software. Qué agente encaja contigo, prueba gratis.",
+      "h1": "Accio Work vs Devin",
+      "intro": "Devin es un agente de código autónomo que escribe y publica software. Accio Work es un agente de sourcing y venta para e-commerce transfronterizo. Resuelven problemas distintos, y si necesitas código, la herramienta correcta es Devin.",
+      "competitorCells": [
+            "Agente de código autónomo para software",
+            "No está hecho para sourcing ni proveedores",
+            "Código y tareas técnicas, no análisis de mercado",
+            "Escribe código, no fichas de producto",
+            "Automatiza ingeniería, no comercio",
+            "Suscripción para desarrolladores"
+      ],
+      "whenAccio": [
+            "Tu trabajo es sourcing y venta, no programar",
+            "Necesitas datos de proveedores, investigación y fichas",
+            "Quieres un agente para el crecimiento de la tienda"
+      ],
+      "whenOther": [
+            "Necesitas construir software o scripts",
+            "Tu cuello de botella es la ingeniería, no el sourcing",
+            "No tienes necesidades de proveedores ni de producto"
+      ],
+      "verdict": "Herramientas distintas para trabajos distintos. Para construir software Devin, para sourcing y venta Accio Work. Muchos vendedores nunca necesitan un agente de código.",
+      "faq": [
+            {
+                  "q": "¿Es una comparación justa?",
+                  "a": "Tienen objetivos distintos. Esta página solo ayuda a elegir el tipo de agente adecuado para tu trabajo."
+            },
+            {
+                  "q": "¿Cuál para una tienda online?",
+                  "a": "Accio Work, porque gira en torno al sourcing, la investigación y las fichas, no al código."
+            },
+            {
+                  "q": "¿Puedo probar Accio Work gratis?",
+                  "a": "Sí, el plan gratuito permite probarlo sin tarjeta."
+            }
+      ]
+}
   },
   "zh": {
     "chatgpt": {
@@ -1093,7 +1513,91 @@ export const comparePages: Record<CmpLang, Record<string, CmpPage>> = {
           "a": "可以，免费方案让你无需绑卡即可试用。"
         }
       ]
-    }
+    },
+      "operator": {
+      "slug": "operator",
+      "name": "OpenAI Operator",
+      "tagline": "通用网页智能体",
+      "metaTitle": "Accio Work 对比 OpenAI Operator：选品用哪个 AI？",
+      "metaDescription": "Accio Work 与 OpenAI Operator 在找供应商、市场调研与商品页方面的对比。哪个 AI 适合你的店铺，可免费试用。",
+      "h1": "Accio Work vs OpenAI Operator",
+      "intro": "Operator 像人一样浏览网页并点击。Accio Work 专为选品到销售的闭环打造，背后是阿里实时数据。两者是不同工具，下面看各自适合什么。",
+      "competitorCells": [
+            "通用网页智能体，会点击与浏览",
+            "能打开阿里，但没有自带供应商数据或核验",
+            "通用网页调研，未针对电商优化",
+            "能起草文字，但非为商品页而生",
+            "自动化网页点击，而非选品流程",
+            "含在 ChatGPT 付费档中"
+      ],
+      "whenAccio": [
+            "你的日常就是选品与销售",
+            "你需要供应商数据与核验，不只是浏览",
+            "你想要贯穿全流程的电商智能体"
+      ],
+      "whenOther": [
+            "你想要能处理各类网页任务的通用智能体",
+            "你已付费 ChatGPT 且想要浏览能力",
+            "电商不是你的主要重心"
+      ],
+      "verdict": "Operator 是不错的通用浏览器。就选品闭环而言，Accio Work 凭借阿里集成用更少配置做到更多。按你每天的工作来选工具。",
+      "faq": [
+            {
+                  "q": "卖家该用 Accio Work 还是 Operator？",
+                  "a": "Accio Work，因为它围绕选品与销售构建，而非通用浏览。"
+            },
+            {
+                  "q": "Accio Work 也能浏览网页吗？",
+                  "a": "能，它可做网页调研，并基于阿里实时数据进行选品。"
+            },
+            {
+                  "q": "可以免费试用吗？",
+                  "a": "可以，免费方案无需绑卡即可试用。"
+            }
+      ]
+},
+      "devin": {
+      "slug": "devin",
+      "name": "Devin",
+      "tagline": "自主编程智能体",
+      "metaTitle": "Accio Work 对比 Devin：选品智能体与编程智能体",
+      "metaDescription": "Accio Work 与 Devin 的对比。一个做选品与供应商，一个写软件。哪个智能体适合你的工作，可免费试用。",
+      "h1": "Accio Work vs Devin",
+      "intro": "Devin 是自主编写并交付软件的编程智能体。Accio Work 是面向跨境电商的选品与销售智能体。二者解决不同问题，若你需要写代码，Devin 才是对的工具。",
+      "competitorCells": [
+            "面向软件的自主编程智能体",
+            "并非为选品或供应商而建",
+            "代码与技术任务，非市场调研",
+            "写代码，而非商品页",
+            "自动化工程，而非电商",
+            "面向开发者的订阅"
+      ],
+      "whenAccio": [
+            "你的工作是选品与销售，而非写代码",
+            "你需要供应商数据、调研与商品页",
+            "你想要助力店铺增长的智能体"
+      ],
+      "whenOther": [
+            "你需要构建软件或脚本",
+            "你的瓶颈在工程，而非选品",
+            "你没有供应商或商品调研需求"
+      ],
+      "verdict": "不同工具做不同的事。造软件用 Devin，选品与销售用 Accio Work。很多卖家根本用不上编程智能体。",
+      "faq": [
+            {
+                  "q": "这样对比公平吗？",
+                  "a": "它们目标不同。本页只帮你为自己的工作挑对智能体类型。"
+            },
+            {
+                  "q": "网店该选哪个？",
+                  "a": "Accio Work，因为它围绕选品、调研与商品页，而非代码。"
+            },
+            {
+                  "q": "Accio Work 能免费试吗？",
+                  "a": "能，免费方案无需绑卡即可试用。"
+            }
+      ]
+}
   },
   "pt": {
     "chatgpt": {
@@ -1221,7 +1725,91 @@ export const comparePages: Record<CmpLang, Record<string, CmpPage>> = {
           "a": "Sim, o plano gratuito permite testar sem cartão."
         }
       ]
-    }
+    },
+      "operator": {
+      "slug": "operator",
+      "name": "OpenAI Operator",
+      "tagline": "Agente web geral",
+      "metaTitle": "Accio Work vs OpenAI Operator: qual IA para sourcing?",
+      "metaDescription": "Accio Work vs OpenAI Operator comparados para busca de fornecedores, pesquisa de mercado e anúncios. Qual IA combina com sua loja, teste grátis.",
+      "h1": "Accio Work vs OpenAI Operator",
+      "intro": "O Operator navega e clica como uma pessoa. O Accio Work é feito para o ciclo de sourcing e venda, com dados ao vivo da Alibaba por trás. São ferramentas diferentes, veja onde cada uma encaixa.",
+      "competitorCells": [
+            "Agente web geral, clica e navega",
+            "Pode abrir a Alibaba, mas sem dados de fornecedores ou verificação próprios",
+            "Pesquisa web geral, não ajustada ao comércio",
+            "Redige texto, não feito para anúncios",
+            "Automatiza cliques web, não fluxos de sourcing",
+            "Incluído nos planos pagos do ChatGPT"
+      ],
+      "whenAccio": [
+            "Seu trabalho diário é sourcing e venda",
+            "Você precisa de dados de fornecedores e verificação, não só navegar",
+            "Você quer um agente de comércio para todo o ciclo"
+      ],
+      "whenOther": [
+            "Você quer um agente geral para várias tarefas web",
+            "Você já paga ChatGPT e quer navegação",
+            "Comércio não é seu foco principal"
+      ],
+      "verdict": "O Operator é um bom navegador geral. Para o ciclo de sourcing, o Accio Work faz mais com menos graças à integração com a Alibaba. Escolha a ferramenta conforme o trabalho do dia a dia.",
+      "faq": [
+            {
+                  "q": "Accio Work ou Operator para quem vende?",
+                  "a": "Accio Work, porque é construído em torno de sourcing e venda, não de navegação geral."
+            },
+            {
+                  "q": "O Accio Work também navega na web?",
+                  "a": "Sim, ele pesquisa a web e trabalha com dados ao vivo da Alibaba para sourcing."
+            },
+            {
+                  "q": "Posso testar de graça?",
+                  "a": "Sim, o plano gratuito permite testar sem cartão."
+            }
+      ]
+},
+      "devin": {
+      "slug": "devin",
+      "name": "Devin",
+      "tagline": "Agente de código autônomo",
+      "metaTitle": "Accio Work vs Devin: agente de sourcing ou de código",
+      "metaDescription": "Accio Work vs Devin comparados. Um busca produtos e fornecedores, o outro escreve software. Qual agente combina com você, teste grátis.",
+      "h1": "Accio Work vs Devin",
+      "intro": "O Devin é um agente de código autônomo que escreve e publica software. O Accio Work é um agente de sourcing e venda para e-commerce transfronteiriço. Resolvem problemas diferentes, e se você precisa de código, a ferramenta certa é o Devin.",
+      "competitorCells": [
+            "Agente de código autônomo para software",
+            "Não feito para sourcing ou fornecedores",
+            "Código e tarefas técnicas, não pesquisa de mercado",
+            "Escreve código, não anúncios de produto",
+            "Automatiza engenharia, não comércio",
+            "Assinatura para desenvolvedores"
+      ],
+      "whenAccio": [
+            "Seu trabalho é sourcing e venda, não programar",
+            "Você precisa de dados de fornecedores, pesquisa e anúncios",
+            "Você quer um agente para o crescimento da loja"
+      ],
+      "whenOther": [
+            "Você precisa construir software ou scripts",
+            "Seu gargalo é engenharia, não sourcing",
+            "Você não tem necessidades de fornecedores ou de produto"
+      ],
+      "verdict": "Ferramentas diferentes para trabalhos diferentes. Para construir software Devin, para sourcing e venda Accio Work. Muitos vendedores nunca precisam de um agente de código.",
+      "faq": [
+            {
+                  "q": "É uma comparação justa?",
+                  "a": "Eles têm objetivos diferentes. Esta página só ajuda a escolher o tipo de agente certo para o seu trabalho."
+            },
+            {
+                  "q": "Qual para uma loja online?",
+                  "a": "Accio Work, porque gira em torno de sourcing, pesquisa e anúncios, não de código."
+            },
+            {
+                  "q": "Posso testar o Accio Work grátis?",
+                  "a": "Sim, o plano gratuito permite testar sem cartão."
+            }
+      ]
+}
   },
   "hi": {
     "chatgpt": {
@@ -1349,7 +1937,91 @@ export const comparePages: Record<CmpLang, Record<string, CmpPage>> = {
           "a": "हां, मुफ्त प्लान बिना कार्ड आज़माने देता है।"
         }
       ]
-    }
+    },
+      "operator": {
+      "slug": "operator",
+      "name": "OpenAI Operator",
+      "tagline": "सामान्य वेब एजेंट",
+      "metaTitle": "Accio Work बनाम OpenAI Operator: सोर्सिंग के लिए कौन सा AI?",
+      "metaDescription": "सप्लायर खोज, बाज़ार रिसर्च और लिस्टिंग के लिए Accio Work बनाम OpenAI Operator की तुलना। आपकी दुकान के लिए कौन सा AI, मुफ्त ट्रायल।",
+      "h1": "Accio Work vs OpenAI Operator",
+      "intro": "Operator इंसान की तरह वेब ब्राउज़ करता और क्लिक करता है। Accio Work सोर्सिंग और बिक्री के चक्र के लिए बना है, पीछे अलीबाबा का लाइव डेटा। ये अलग टूल हैं, नीचे देखें किसके लिए क्या ठीक है।",
+      "competitorCells": [
+            "सामान्य वेब एजेंट, क्लिक और ब्राउज़ करता है",
+            "अलीबाबा खोल सकता है, पर अपना सप्लायर डेटा या जाँच नहीं",
+            "सामान्य वेब रिसर्च, कॉमर्स के लिए ट्यून नहीं",
+            "टेक्स्ट लिख सकता है, लिस्टिंग के लिए नहीं",
+            "वेब क्लिक ऑटोमेट करता है, सोर्सिंग फ्लो नहीं",
+            "ChatGPT के पेड प्लान में शामिल"
+      ],
+      "whenAccio": [
+            "आपका रोज़ का काम सोर्सिंग और बिक्री है",
+            "आपको सप्लायर डेटा और जाँच चाहिए, केवल ब्राउज़िंग नहीं",
+            "आपको पूरे चक्र के लिए कॉमर्स एजेंट चाहिए"
+      ],
+      "whenOther": [
+            "आपको कई तरह के वेब कामों के लिए सामान्य एजेंट चाहिए",
+            "आप पहले से ChatGPT का भुगतान करते हैं और ब्राउज़िंग चाहते हैं",
+            "कॉमर्स आपका मुख्य फोकस नहीं"
+      ],
+      "verdict": "Operator एक सक्षम सामान्य ब्राउज़र है। सोर्सिंग चक्र के लिए Accio Work अलीबाबा इंटीग्रेशन से कम सेटअप में ज्यादा करता है। अपने रोज़ के काम के हिसाब से टूल चुनें।",
+      "faq": [
+            {
+                  "q": "विक्रेताओं के लिए Accio Work या Operator?",
+                  "a": "Accio Work, क्योंकि यह सोर्सिंग और बिक्री के इर्द-गिर्द बना है, सामान्य ब्राउज़िंग के नहीं।"
+            },
+            {
+                  "q": "क्या Accio Work भी वेब ब्राउज़ करता है?",
+                  "a": "हाँ, यह वेब रिसर्च करता है और सोर्सिंग के लिए अलीबाबा के लाइव डेटा पर काम करता है।"
+            },
+            {
+                  "q": "क्या मुफ्त आज़मा सकता हूँ?",
+                  "a": "हाँ, मुफ्त प्लान बिना कार्ड आज़माने देता है।"
+            }
+      ]
+},
+      "devin": {
+      "slug": "devin",
+      "name": "Devin",
+      "tagline": "स्वायत्त कोडिंग एजेंट",
+      "metaTitle": "Accio Work बनाम Devin: सोर्सिंग एजेंट या कोडिंग एजेंट",
+      "metaDescription": "Accio Work बनाम Devin की तुलना। एक उत्पाद और सप्लायर खोजता है, दूसरा सॉफ्टवेयर लिखता है। कौन सा एजेंट आपके काम का, मुफ्त ट्रायल।",
+      "h1": "Accio Work vs Devin",
+      "intro": "Devin एक स्वायत्त कोडिंग एजेंट है जो सॉफ्टवेयर लिखता और डिलीवर करता है। Accio Work सीमा-पार ई-कॉमर्स के लिए सोर्सिंग और बिक्री एजेंट है। ये अलग समस्याएँ हल करते हैं, और अगर कोड चाहिए तो सही टूल Devin है।",
+      "competitorCells": [
+            "सॉफ्टवेयर के लिए स्वायत्त कोडिंग एजेंट",
+            "सोर्सिंग या सप्लायर के लिए नहीं बना",
+            "कोड और तकनीकी काम, बाज़ार रिसर्च नहीं",
+            "कोड लिखता है, प्रोडक्ट लिस्टिंग नहीं",
+            "इंजीनियरिंग ऑटोमेट करता है, कॉमर्स नहीं",
+            "डेवलपर सब्सक्रिप्शन"
+      ],
+      "whenAccio": [
+            "आपका काम सोर्सिंग और बिक्री है, कोडिंग नहीं",
+            "आपको सप्लायर डेटा, रिसर्च और लिस्टिंग चाहिए",
+            "आपको दुकान की ग्रोथ के लिए एजेंट चाहिए"
+      ],
+      "whenOther": [
+            "आपको सॉफ्टवेयर या स्क्रिप्ट बनानी है",
+            "आपकी अड़चन इंजीनियरिंग है, सोर्सिंग नहीं",
+            "आपको सप्लायर या प्रोडक्ट रिसर्च की जरूरत नहीं"
+      ],
+      "verdict": "अलग कामों के लिए अलग टूल। सॉफ्टवेयर बनाने के लिए Devin, सोर्सिंग और बिक्री के लिए Accio Work। कई विक्रेताओं को कोडिंग एजेंट की जरूरत ही नहीं पड़ती।",
+      "faq": [
+            {
+                  "q": "क्या यह तुलना उचित है?",
+                  "a": "इनके लक्ष्य अलग हैं। यह पेज बस आपके काम के लिए सही एजेंट-प्रकार चुनने में मदद करता है।"
+            },
+            {
+                  "q": "ऑनलाइन स्टोर के लिए कौन सा?",
+                  "a": "Accio Work, क्योंकि यह सोर्सिंग, रिसर्च और लिस्टिंग पर केंद्रित है, कोड पर नहीं।"
+            },
+            {
+                  "q": "क्या Accio Work मुफ्त आज़मा सकता हूँ?",
+                  "a": "हाँ, मुफ्त प्लान बिना कार्ड आज़माने देता है।"
+            }
+      ]
+}
   },
   "fr": {
     "chatgpt": {
@@ -1477,8 +2149,92 @@ export const comparePages: Record<CmpLang, Record<string, CmpPage>> = {
           "a": "Oui, l'offre gratuite permet de tester sans carte."
         }
       ]
-    }
+    },
+      "operator": {
+      "slug": "operator",
+      "name": "OpenAI Operator",
+      "tagline": "Agent web généraliste",
+      "metaTitle": "Accio Work vs OpenAI Operator : quelle IA pour le sourcing ?",
+      "metaDescription": "Accio Work vs OpenAI Operator comparés pour la recherche de fournisseurs, l'étude de marché et les fiches. Quelle IA pour votre boutique, essai gratuit.",
+      "h1": "Accio Work vs OpenAI Operator",
+      "intro": "Operator navigue et clique comme une personne. Accio Work est conçu pour le cycle de sourcing et de vente, avec des données Alibaba en direct derrière. Ce sont des outils différents, voici où chacun convient.",
+      "competitorCells": [
+            "Agent web généraliste, clique et navigue",
+            "Peut ouvrir Alibaba, mais sans données fournisseurs ni vérification propres",
+            "Recherche web générale, non calibrée pour le commerce",
+            "Peut rédiger du texte, pas fait pour les fiches",
+            "Automatise des clics web, pas des flux de sourcing",
+            "Inclus dans les offres payantes de ChatGPT"
+      ],
+      "whenAccio": [
+            "Votre travail quotidien est le sourcing et la vente",
+            "Vous voulez des données fournisseurs et une vérification, pas juste naviguer",
+            "Vous voulez un agent commerce pour tout le cycle"
+      ],
+      "whenOther": [
+            "Vous voulez un agent généraliste pour de nombreuses tâches web",
+            "Vous payez déjà ChatGPT et voulez la navigation",
+            "Le commerce n'est pas votre priorité"
+      ],
+      "verdict": "Operator est un bon navigateur généraliste. Pour le cycle de sourcing, Accio Work en fait plus avec moins grâce à son intégration Alibaba. Choisissez l'outil selon votre travail quotidien.",
+      "faq": [
+            {
+                  "q": "Accio Work ou Operator pour les vendeurs ?",
+                  "a": "Accio Work, car il est construit autour du sourcing et de la vente, pas de la navigation générale."
+            },
+            {
+                  "q": "Accio Work navigue-t-il aussi sur le web ?",
+                  "a": "Oui, il fait de la recherche web et travaille sur des données Alibaba en direct pour le sourcing."
+            },
+            {
+                  "q": "Puis-je l'essayer gratuitement ?",
+                  "a": "Oui, l'offre gratuite permet de le tester sans carte."
+            }
+      ]
+},
+      "devin": {
+      "slug": "devin",
+      "name": "Devin",
+      "tagline": "Agent de code autonome",
+      "metaTitle": "Accio Work vs Devin : agent de sourcing ou de code",
+      "metaDescription": "Accio Work vs Devin comparés. L'un source produits et fournisseurs, l'autre écrit du logiciel. Quel agent pour vous, essai gratuit.",
+      "h1": "Accio Work vs Devin",
+      "intro": "Devin est un agent de code autonome qui écrit et livre du logiciel. Accio Work est un agent de sourcing et de vente pour l'e-commerce transfrontalier. Ils résolvent des problèmes différents, et si vous avez besoin de code, le bon outil est Devin.",
+      "competitorCells": [
+            "Agent de code autonome pour le logiciel",
+            "Pas conçu pour le sourcing ni les fournisseurs",
+            "Code et tâches techniques, pas d'étude de marché",
+            "Écrit du code, pas des fiches produit",
+            "Automatise l'ingénierie, pas le commerce",
+            "Abonnement développeur"
+      ],
+      "whenAccio": [
+            "Votre travail est le sourcing et la vente, pas le code",
+            "Vous voulez des données fournisseurs, de la recherche et des fiches",
+            "Vous voulez un agent axé sur la croissance de la boutique"
+      ],
+      "whenOther": [
+            "Vous devez construire du logiciel ou des scripts",
+            "Votre goulot est l'ingénierie, pas le sourcing",
+            "Vous n'avez pas de besoins fournisseurs ou produit"
+      ],
+      "verdict": "Des outils différents pour des travaux différents. Pour construire du logiciel Devin, pour le sourcing et la vente Accio Work. Beaucoup de vendeurs n'ont jamais besoin d'un agent de code.",
+      "faq": [
+            {
+                  "q": "Est-ce une comparaison juste ?",
+                  "a": "Ils visent des objectifs différents. Cette page aide juste à choisir le bon type d'agent pour votre travail."
+            },
+            {
+                  "q": "Lequel pour une boutique en ligne ?",
+                  "a": "Accio Work, car il tourne autour du sourcing, de la recherche et des fiches, pas du code."
+            },
+            {
+                  "q": "Puis-je essayer Accio Work gratuitement ?",
+                  "a": "Oui, l'offre gratuite permet de le tester sans carte."
+            }
+      ]
+}
   }
 };
 
-export const compareOrder: string[] = ["chatgpt", "manus", "genspark"];
+export const compareOrder: string[] = ["chatgpt", "manus", "genspark", "operator", "devin"];

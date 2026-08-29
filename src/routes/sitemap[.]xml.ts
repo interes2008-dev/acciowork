@@ -55,7 +55,7 @@ export const Route = createFileRoute("/sitemap.xml")({
         ];
 
         const compareLangs = ["", "/ru", "/de", "/it", "/es", "/zh", "/pt", "/hi", "/fr"];
-        const competitors = ["chatgpt", "manus", "genspark"];
+        const competitors = ["chatgpt", "manus", "genspark", "operator", "devin"];
         for (const l of compareLangs) {
           entries.push({ path: `${l}/compare`, changefreq: "weekly", priority: "0.7", alternates: alts("/compare") });
           for (const cmp of competitors) {

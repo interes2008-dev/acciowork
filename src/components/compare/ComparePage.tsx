@@ -202,6 +202,18 @@ export function ComparePage({ lang, competitor }: { lang: CmpLang; competitor: s
   );
 }
 
+const HUB_IMG_ALT: Record<CmpLang, string> = {
+  en: "Three abstract AI agent tiles with the best-fit one highlighted, lines leading to a target",
+  ru: "Три абстрактные плитки AI-агентов, подходящая подсвечена, линии ведут к цели",
+  de: "Drei abstrakte KI-Agenten-Kacheln, die passende hervorgehoben, Linien führen zum Ziel",
+  it: "Tre riquadri astratti di agenti AI, quello giusto evidenziato, linee verso un obiettivo",
+  es: "Tres fichas abstractas de agentes de IA, la adecuada resaltada, líneas hacia un objetivo",
+  zh: "三个抽象的 AI 智能体卡片，最合适的一个被高亮，线条指向目标",
+  pt: "Três blocos abstratos de agentes de IA, o ideal destacado, linhas até um alvo",
+  hi: "तीन अमूर्त AI एजेंट टाइलें, सबसे उपयुक्त हाइलाइट, रेखाएँ लक्ष्य तक",
+  fr: "Trois tuiles abstraites d'agents IA, la bonne mise en avant, des lignes vers une cible",
+};
+
 export function CompareHub({ lang }: { lang: CmpLang }) {
   const c = compareChrome[lang];
   return (
@@ -212,6 +224,7 @@ export function CompareHub({ lang }: { lang: CmpLang }) {
         </a>
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">{c.hubTitle}</h1>
         <p className="mt-4 max-w-3xl text-lg leading-relaxed text-black/70">{c.hubIntro}</p>
+        <img src="/img/compare.webp" alt={HUB_IMG_ALT[lang]} width={1200} height={800} loading="eager" className="mx-auto mt-8 w-full max-w-2xl" />
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {compareOrder.map((slug) => {
             const p = comparePages[lang]?.[slug];
