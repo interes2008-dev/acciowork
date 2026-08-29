@@ -28,6 +28,7 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as TemplatesRouteImport } from './routes/templates'
 import { Route as TiktokShopRouteImport } from './routes/tiktok-shop'
 import { Route as ZhRouteImport } from './routes/zh'
+import { Route as ApiOgRouteImport } from './routes/api/og'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as CompareIndexRouteImport } from './routes/compare.index'
@@ -278,6 +279,11 @@ const TiktokShopRoute = TiktokShopRouteImport.update({
 const ZhRoute = ZhRouteImport.update({
   id: '/zh',
   path: '/zh',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiOgRoute = ApiOgRouteImport.update({
+  id: '/api/og',
+  path: '/api/og',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
@@ -1082,6 +1088,7 @@ export interface FileRoutesByFullPath {
   '/templates': typeof TemplatesRoute
   '/tiktok-shop': typeof TiktokShopRoute
   '/zh': typeof ZhRouteWithChildren
+  '/api/og': typeof ApiOgRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$competitor': typeof CompareCompetitorRoute
   '/de/ai-prompts': typeof DeAiPromptsRoute
@@ -1251,6 +1258,7 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/templates': typeof TemplatesRoute
   '/tiktok-shop': typeof TiktokShopRoute
+  '/api/og': typeof ApiOgRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$competitor': typeof CompareCompetitorRoute
   '/de/ai-prompts': typeof DeAiPromptsRoute
@@ -1429,6 +1437,7 @@ export interface FileRoutesById {
   '/templates': typeof TemplatesRoute
   '/tiktok-shop': typeof TiktokShopRoute
   '/zh': typeof ZhRouteWithChildren
+  '/api/og': typeof ApiOgRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$competitor': typeof CompareCompetitorRoute
   '/de/ai-prompts': typeof DeAiPromptsRoute
@@ -1608,6 +1617,7 @@ export interface FileRouteTypes {
     | '/templates'
     | '/tiktok-shop'
     | '/zh'
+    | '/api/og'
     | '/blog/$slug'
     | '/compare/$competitor'
     | '/de/ai-prompts'
@@ -1777,6 +1787,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/templates'
     | '/tiktok-shop'
+    | '/api/og'
     | '/blog/$slug'
     | '/compare/$competitor'
     | '/de/ai-prompts'
@@ -1954,6 +1965,7 @@ export interface FileRouteTypes {
     | '/templates'
     | '/tiktok-shop'
     | '/zh'
+    | '/api/og'
     | '/blog/$slug'
     | '/compare/$competitor'
     | '/de/ai-prompts'
@@ -2132,6 +2144,7 @@ export interface RootRouteChildren {
   TemplatesRoute: typeof TemplatesRoute
   TiktokShopRoute: typeof TiktokShopRoute
   ZhRoute: typeof ZhRouteWithChildren
+  ApiOgRoute: typeof ApiOgRoute
   BlogSlugRoute: typeof BlogSlugRoute
   CompareCompetitorRoute: typeof CompareCompetitorRoute
   EventsFreeForeverRoute: typeof EventsFreeForeverRoute
@@ -2279,6 +2292,13 @@ declare module '@tanstack/react-router' {
       path: '/zh'
       fullPath: '/zh'
       preLoaderRoute: typeof ZhRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/og': {
+      id: '/api/og'
+      path: '/api/og'
+      fullPath: '/api/og'
+      preLoaderRoute: typeof ApiOgRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog/': {
@@ -3748,6 +3768,7 @@ const rootRouteChildren: RootRouteChildren = {
   TemplatesRoute: TemplatesRoute,
   TiktokShopRoute: TiktokShopRoute,
   ZhRoute: ZhRouteWithChildren,
+  ApiOgRoute: ApiOgRoute,
   BlogSlugRoute: BlogSlugRoute,
   CompareCompetitorRoute: CompareCompetitorRoute,
   EventsFreeForeverRoute: EventsFreeForeverRoute,

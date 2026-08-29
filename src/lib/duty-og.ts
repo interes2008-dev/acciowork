@@ -35,9 +35,15 @@ export function validateDutySearch(search: Record<string, unknown>): DutySearch 
   };
 }
 
+export interface OgResult {
+  title: string;
+  desc: string;
+  img: { label: string; big: string; sub: string };
+}
+
 // Builds a personalized OG title/description from a shared result, or null when
 // there are no meaningful inputs (a plain visit keeps the static meta).
-export function dutyOg(search: DutySearch, lang: DutyLang): { title: string; desc: string } | null {
+export function dutyOg(search: DutySearch, lang: DutyLang): OgResult | null {
   if (search.p === undefined) return null;
   const c = dutyChrome[lang];
   const cost = Math.max(0, search.p);
@@ -57,9 +63,31 @@ export function dutyOg(search: DutySearch, lang: DutyLang): { title: string; des
 
   const title = `${c.landedUnit}: ${money(landedUnit)}`;
   let desc = `${c.landedUnit}: ${money(landedUnit)}. ${c.metaDesc}`;
+  let sub = `${c.dutyAmount}: ${money(dutyAmt)}`;
   if (typeof search.sp === "number" && search.sp > 0) {
     const marginPct = ((search.sp - landedUnit) / search.sp) * 100;
     desc = `${c.marginPct}: ${marginPct.toFixed(1)}% · ${c.landedUnit}: ${money(landedUnit)}`;
+    sub = `${c.marginPct}: ${marginPct.toFixed(1)}%`;
   }
-  return { title, desc };
+  return { title, desc, img: { label: c.landedUnit, big: money(landedUnit), sub } };
+}
+
+// Serializes the current inputs into the dynamic OG image endpoint URL.
+export function dutyOgImageUrl(search: DutySearch, lang: DutyLang): string | null {
+  if (search.p === undefined) return null;
+  const q = new URLSearchParams();
+  q.set("t", "duty");
+  q.set("l", lang);
+  const put = (k: string, v: number | string | undefined) => {
+    if (v !== undefined && v !== "") q.set(k, String(v));
+  };
+  put("p", search.p);
+  put("u", search.u);
+  put("s", search.s);
+  put("d", search.d);
+  put("v", search.v);
+  put("sp", search.sp);
+  put("dest", search.dest);
+  put("cur", search.cur);
+  return `https://acciowork.pro/api/og?${q.toString()}`;
 }

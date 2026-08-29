@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { FitQuiz } from "@/components/quiz/FitQuiz";
 import { qzChrome } from "@/lib/quiz-data";
-import { validateQuizSearch, quizOg } from "@/lib/quiz-og";
+import { validateQuizSearch, quizOg, quizOgImageUrl } from "@/lib/quiz-og";
 
 const LANG = "zh" as const;
 const LANGS = ["en","ru","de","it","es","zh","pt","hi","fr"] as const;
@@ -9,13 +9,14 @@ const LANGS = ["en","ru","de","it","es","zh","pt","hi","fr"] as const;
 export const Route = createFileRoute("/zh/quiz")({
   validateSearch: validateQuizSearch,
   loaderDeps: ({ search }) => search,
-  loader: ({ deps }) => ({ og: quizOg(deps, LANG) }),
+  loader: ({ deps }) => ({ og: quizOg(deps, LANG), ogImage: quizOgImageUrl(deps, LANG) }),
   head: ({ loaderData }) => {
     const c = qzChrome[LANG];
     const url = "https://acciowork.pro/zh/quiz";
     const og = loaderData?.og ?? null;
     const ogTitle = og ? og.title : c.metaTitle;
     const ogDesc = og ? og.desc : c.metaDesc;
+    const ogImg = loaderData?.ogImage ?? "https://acciowork.pro/og/og-zh.png";
     const alternates = LANGS.map((l) => ({ rel: "alternate", hrefLang: l as string, href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/quiz` }));
     alternates.push({ rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/quiz" });
     return {
@@ -29,13 +30,13 @@ export const Route = createFileRoute("/zh/quiz")({
         { property: "og:type", content: "website" },
         { property: "og:url", content: url },
         { property: "og:site_name", content: "Accio Work" },
-        { property: "og:image", content: "https://acciowork.pro/og/og-zh.png" },
+        { property: "og:image", content: ogImg },
         { property: "og:image:width", content: "1200" },
         { property: "og:image:height", content: "630" },
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: ogTitle },
         { name: "twitter:description", content: ogDesc },
-        { name: "twitter:image", content: "https://acciowork.pro/og/og-zh.png" },
+        { name: "twitter:image", content: ogImg },
       ],
       links: [{ rel: "canonical", href: url }, ...alternates],
       scripts: [
