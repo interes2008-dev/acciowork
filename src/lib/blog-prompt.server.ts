@@ -247,24 +247,39 @@ export type TopicSeed = {
   capability: string;
 };
 
+const PRACTICAL_BRIEF = `
+Editorial mission: this blog exists to help entrepreneurs and small teams solve a real, painful, everyday work problem with AI agents. Every article must be usable, not inspirational.
+
+Content requirements on top of the style rules:
+- Open by naming the reader's actual pain in the first two sentences, in their words, with a concrete situation (a number, a time cost, a lost deal).
+- Explain briefly why the usual workarounds fail.
+- Then give a practical walkthrough the reader could follow today: what to set up in Accio Work, in what order, what instructions to give the agent, what to check. Be specific about roles, schedules, connectors, skills and channels where relevant.
+- Include one realistic worked example with plausible numbers (time saved per week, tasks per day, cost per task). Label estimates as estimates. Never invent customer names, testimonials, ratings or research statistics.
+- Include a short "What to watch out for" part: mistakes, quality gates, where a human must stay in the loop.
+- Include a final "FAQ" H2 with 3 to 5 real questions a reader would type into a search engine, each answered in 2 to 4 sentences.
+- Put the target keyword in the title if it reads naturally, in the first paragraph, and in at least one H2.
+- No fluff sections. If a paragraph does not help the reader do something or decide something, cut it.
+`.trim();
+
 export function buildArticlePrompt(lang: BlogLang, topic: TopicSeed): {
   system: string;
   user: string;
 } {
-  const system = `${STYLE_RULES[lang]}\n\nCapability sheet you must stay grounded in:\n${CAPABILITY_SHEET}\n\nReturn ONLY valid JSON matching this TypeScript type, no prose around it:\n{"title": string, "description": string, "slug": string, "keywords": string[], "body_md": string, "cover_prompt": string}\n\nAll writing (title, description, body) must be in ${LANG_LABEL[lang]}. The slug and cover_prompt stay in English/latin.`;
+  const system = `${STYLE_RULES[lang]}\n\n${PRACTICAL_BRIEF}\n\nCapability sheet you must stay grounded in:\n${CAPABILITY_SHEET}\n\nReturn ONLY valid JSON matching this TypeScript type, no prose around it:\n{"title": string, "description": string, "slug": string, "keywords": string[], "body_md": string, "cover_prompt": string}\n\nAll writing (title, description, body) must be in ${LANG_LABEL[lang]}. The slug and cover_prompt stay in English/latin.`;
 
-  const user = `Write an in-depth blog article in ${LANG_LABEL[lang]}.
+  const user = `Write a practical, in-depth blog article in ${LANG_LABEL[lang]}.
 
 Seed topic: ${topic.seed_title}
-Angle: ${topic.angle}
+Reader pain and angle: ${topic.angle}
 Target keyword (weave in naturally, do not stuff): ${topic.keyword}
 Primary reader: ${topic.audience}
 Accio Work capability at the centre: ${topic.capability}
 
-Goal of the article: help this reader see that a real, current problem in their day-to-day work already has a working answer inside Accio Work, and leave them curious enough to download the desktop client and try it themselves. Keep the pitch honest and specific, not salesy.`;
+Goal of the article: a business owner who searched for "${topic.keyword}" lands here, recognises their own problem in the first paragraph, gets a concrete working method they can set up in Accio Work the same day, and finishes with enough trust to download the desktop client and try it. Solve the problem first. Sell second, quietly.`;
 
   return { system, user };
 }
+
 
 // Post-processing: replace em/en dashes used as sentence breaks with a period + space
 // (preserves numeric ranges like "2020-2024" and compound words with a normal hyphen).
