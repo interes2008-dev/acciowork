@@ -47,7 +47,7 @@ export function LangMenu({ lang }: { lang: L }) {
         aria-haspopup="menu"
         aria-expanded={open}
         aria-label="Language"
-        className="flex items-center gap-1.5 rounded-full px-2.5 py-1.5 text-sm font-medium text-[#0E1210]/70 transition hover:text-[#0E1210]"
+        className="flex items-center gap-1.5 rounded-full px-2.5 py-1.5 text-sm font-medium text-[#e8eef9]/70 transition hover:text-[#e8eef9]"
       >
         <Globe className="h-4 w-4" />
         <span className="hidden sm:inline">{NAMES[lang]}</span>
@@ -56,7 +56,7 @@ export function LangMenu({ lang }: { lang: L }) {
       {open && (
         <div
           role="menu"
-          className="absolute right-0 top-full z-50 mt-2 w-44 overflow-hidden rounded-2xl border border-black/10 bg-white p-1.5 shadow-[0_8px_30px_rgba(0,0,0,0.12)]"
+          className="absolute right-0 top-full z-50 mt-2 w-44 overflow-hidden rounded-2xl border border-white/12 bg-white/[0.03] p-1.5 shadow-[0_8px_30px_rgba(0,0,0,0.12)]"
         >
           {LANGS.map((l) => (
             <a
@@ -64,11 +64,11 @@ export function LangMenu({ lang }: { lang: L }) {
               href={hrefFor(l)}
               role="menuitem"
               className={`flex items-center justify-between rounded-xl px-3 py-2 text-[15px] transition ${
-                l === lang ? "bg-[#F3FBF7] font-semibold text-[#0E1210]" : "text-[#0E1210]/75 hover:bg-[#F3FBF7]"
+                l === lang ? "bg-white/[0.05] font-semibold text-[#e8eef9]" : "text-[#e8eef9]/75 hover:bg-white/[0.05]"
               }`}
             >
               {NAMES[l]}
-              {l === lang && <Check className="h-4 w-4 text-[#17B26A]" />}
+              {l === lang && <Check className="h-4 w-4 text-[#34d399]" />}
             </a>
           ))}
         </div>

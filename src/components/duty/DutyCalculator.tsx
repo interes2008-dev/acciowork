@@ -29,16 +29,16 @@ function homeHref(lang: DutyLang) {
 function Shell({ lang, children }: { lang: DutyLang; children: ReactNode }) {
   const c = dutyChrome[lang];
   return (
-    <div className="min-h-screen bg-[#FBFCFD] text-[#0E1210]">
-      <header className="border-b border-black/5 bg-white/80 backdrop-blur">
+    <div className="min-h-screen bg-[#070b14] text-[#e8eef9]">
+      <header className="border-b border-white/10 bg-[#0a1120]/80 backdrop-blur">
         <div className="mx-auto flex max-w-4xl items-center justify-between px-5 py-4">
-          <a href={homeHref(lang)} className="flex items-center gap-1.5 font-bold tracking-tight text-[#0E1210]" style={{ fontSize: 22 }}>
+          <a href={homeHref(lang)} className="flex items-center gap-1.5 font-bold tracking-tight text-[#e8eef9]" style={{ fontSize: 22 }}>
             <svg width={21} height={22} viewBox="0 0 28 28" aria-hidden>
               <defs>
                 <linearGradient id="accioTri" x1="0" y1="1" x2="1" y2="0">
                   <stop offset="0%" stopColor="#0F172A" />
-                  <stop offset="55%" stopColor="#17B26A" />
-                  <stop offset="100%" stopColor="#7CE7C2" />
+                  <stop offset="55%" stopColor="#34d399" />
+                  <stop offset="100%" stopColor="#5eead4" />
                 </linearGradient>
               </defs>
               <path d="M14 3 L26 25 L2 25 Z" fill="url(#accioTri)" />
@@ -48,16 +48,16 @@ function Shell({ lang, children }: { lang: DutyLang; children: ReactNode }) {
           <div className="flex items-center gap-2 sm:gap-3">
             <LangMenu lang={lang} />
             <a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer nofollow"
-              className="whitespace-nowrap rounded-full bg-[#17B26A] px-3 py-2 text-[13px] font-semibold text-white transition hover:brightness-110 sm:px-4 sm:text-sm">
+              className="whitespace-nowrap rounded-full bg-[#34d399] px-3 py-2 text-[13px] font-semibold text-white transition hover:brightness-110 sm:px-4 sm:text-sm">
               {c.cta}
             </a>
           </div>
         </div>
       </header>
       {children}
-      <footer className="border-t border-black/5 bg-white">
-        <div className="mx-auto max-w-4xl px-5 py-8 text-sm text-black/60">
-          <a href={homeHref(lang)} className="inline-flex items-center gap-1.5 hover:text-black/80">
+      <footer className="border-t border-white/10 bg-[#0a1120]">
+        <div className="mx-auto max-w-4xl px-5 py-8 text-sm text-white/68">
+          <a href={homeHref(lang)} className="inline-flex items-center gap-1.5 hover:text-white/85">
             <ArrowLeft className="h-4 w-4" />
           </a>
         </div>
@@ -69,15 +69,15 @@ function Shell({ lang, children }: { lang: DutyLang; children: ReactNode }) {
 function Field({ label, hint, children }: { label: string; hint?: string; children: ReactNode }) {
   return (
     <label className="block">
-      <span className="mb-1.5 block text-sm font-medium text-black/70">{label}</span>
+      <span className="mb-1.5 block text-sm font-medium text-white/75">{label}</span>
       {children}
-      {hint && <span className="mt-1 block text-xs leading-relaxed text-black/45">{hint}</span>}
+      {hint && <span className="mt-1 block text-xs leading-relaxed text-white/52">{hint}</span>}
     </label>
   );
 }
 
 const inputCls =
-  "w-full rounded-xl border border-black/12 bg-white px-3.5 py-2.5 text-[15px] text-[#0E1210] focus:border-[#17B26A]/60 focus:outline-none";
+  "w-full rounded-xl border border-white/15 bg-white/[0.06] px-3.5 py-2.5 text-[15px] text-[#e8eef9] focus:border-[#34d399]/60 focus:outline-none";
 
 const IMG_ALT: Record<DutyLang, string> = {
   en: "Parcel passing a customs gate with duties added to cost",
@@ -191,30 +191,30 @@ export function DutyCalculator({ lang }: { lang: DutyLang }) {
     `${cur}${n.toLocaleString(undefined, { maximumFractionDigits: 2, minimumFractionDigits: 2 })}`;
 
   const verdict = {
-    healthy: { t: c.vHealthyT, b: c.vHealthyB, cls: "border-[#17B26A]/30 bg-[#F3FBF7]" },
-    tight: { t: c.vTightT, b: c.vTightB, cls: "border-amber-300/50 bg-amber-50" },
-    under: { t: c.vUnderT, b: c.vUnderB, cls: "border-red-300/50 bg-red-50" },
-    none: { t: c.vNoneT, b: c.vNoneB, cls: "border-black/10 bg-white" },
+    healthy: { t: c.vHealthyT, b: c.vHealthyB, cls: "border-[#34d399]/30 bg-white/[0.05]" },
+    tight: { t: c.vTightT, b: c.vTightB, cls: "border-amber-400/40 bg-amber-500/10" },
+    under: { t: c.vUnderT, b: c.vUnderB, cls: "border-red-400/40 bg-red-500/10" },
+    none: { t: c.vNoneT, b: c.vNoneB, cls: "border-white/12 bg-white" },
   }[r.tier];
 
   return (
     <Shell lang={lang}>
       <main className="mx-auto max-w-4xl px-5 py-10 sm:py-14">
-        <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-[#17B26A]">{c.kicker}</p>
+        <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-[#34d399]">{c.kicker}</p>
         <h1 className="text-3xl font-bold tracking-tight sm:text-[38px] sm:leading-tight">{c.h1}</h1>
-        <p className="mt-4 max-w-2xl text-lg leading-relaxed text-black/70">{c.intro}</p>
+        <p className="mt-4 max-w-2xl text-lg leading-relaxed text-white/75">{c.intro}</p>
 
         <img src="/img/landing-duty.webp" alt={IMG_ALT[lang]} width={640} height={640} loading="eager" className="mx-auto mt-8 w-full max-w-[260px]" />
 
         <div className="mt-8 grid gap-6 lg:grid-cols-2">
           {/* Inputs */}
-          <div className="rounded-3xl border border-black/10 bg-white p-6 sm:p-7">
+          <div className="rounded-3xl border border-white/12 bg-white/[0.03] p-6 sm:p-7">
             <div className="space-y-5">
               <div className="grid grid-cols-2 gap-4">
                 <Field label={c.productCost}>
                   <div className="flex items-center gap-2">
                     <select value={cur} onChange={(e) => setCur(e.target.value)}
-                      className="rounded-xl border border-black/12 bg-white px-2 py-2.5 text-[15px] focus:outline-none">
+                      className="rounded-xl border border-white/15 bg-white/[0.06] px-2 py-2.5 text-[15px] focus:outline-none">
                       {CURRENCIES.map((s) => <option key={s} value={s}>{s}</option>)}
                     </select>
                     <input type="number" min={0} value={cost}
@@ -237,7 +237,7 @@ export function DutyCalculator({ lang }: { lang: DutyLang }) {
                   {(["US", "EU", "UK"] as Dest[]).map((d) => (
                     <button key={d} onClick={() => pickDest(d)}
                       className={`flex-1 rounded-xl border px-3 py-2.5 text-sm font-medium transition ${
-                        dest === d ? "border-[#17B26A] bg-[#F3FBF7] text-[#0E1210]" : "border-black/12 text-black/70 hover:border-[#17B26A]/40"
+                        dest === d ? "border-[#34d399] bg-white/[0.05] text-[#e8eef9]" : "border-white/15 text-white/75 hover:border-[#34d399]/40"
                       }`}>
                       {d === "US" ? c.dUS : d === "EU" ? c.dEU : c.dUK}
                     </button>
@@ -248,18 +248,18 @@ export function DutyCalculator({ lang }: { lang: DutyLang }) {
               <Field label={`${c.dutyRate}: ${duty}%`} hint={c.dutyHint}>
                 <input type="range" min={0} max={150} step={1} value={duty}
                   onChange={(e) => setDuty(parseInt(e.target.value))}
-                  className="w-full accent-[#17B26A]" />
+                  className="w-full accent-[#34d399]" />
               </Field>
 
               <Field label={`${c.importTax}: ${vat}%`} hint={c.importHint}>
                 <input type="range" min={0} max={30} step={1} value={vat}
                   onChange={(e) => setVat(parseInt(e.target.value))}
-                  className="w-full accent-[#17B26A]" />
+                  className="w-full accent-[#34d399]" />
               </Field>
 
               <Field label={c.sellPrice}>
                 <div className="flex items-center gap-2">
-                  <span className="text-black/50">{cur}</span>
+                  <span className="text-white/58">{cur}</span>
                   <input type="number" min={0} value={sell}
                     onChange={(e) => setSell(e.target.value === "" ? "" : parseFloat(e.target.value) || 0)}
                     className={inputCls} />
@@ -270,33 +270,33 @@ export function DutyCalculator({ lang }: { lang: DutyLang }) {
 
           {/* Results */}
           <div className="flex flex-col gap-4">
-            <div className="rounded-3xl border border-black/10 bg-white p-6 sm:p-7">
+            <div className="rounded-3xl border border-white/12 bg-white/[0.03] p-6 sm:p-7">
               <dl className="space-y-3 text-[15px]">
                 <div className="flex items-baseline justify-between">
-                  <dt className="text-black/60">{c.dutyAmount}</dt>
+                  <dt className="text-white/68">{c.dutyAmount}</dt>
                   <dd className="font-semibold">{money(r.dutyAmt)}</dd>
                 </div>
                 <div className="flex items-baseline justify-between">
-                  <dt className="text-black/60">{c.importAmount}</dt>
+                  <dt className="text-white/68">{c.importAmount}</dt>
                   <dd className="font-semibold">{money(r.vatAmt)}</dd>
                 </div>
-                <div className="flex items-baseline justify-between border-t border-black/5 pt-3">
-                  <dt className="text-black/60">{c.landedTotal}</dt>
+                <div className="flex items-baseline justify-between border-t border-white/10 pt-3">
+                  <dt className="text-white/68">{c.landedTotal}</dt>
                   <dd className="font-semibold">{money(r.landedTotal)}</dd>
                 </div>
                 <div className="flex items-baseline justify-between">
-                  <dt className="font-medium text-[#0E1210]">{c.landedUnit}</dt>
-                  <dd className="text-2xl font-bold text-[#17B26A]">{money(r.landedUnit)}</dd>
+                  <dt className="font-medium text-[#e8eef9]">{c.landedUnit}</dt>
+                  <dd className="text-2xl font-bold text-[#34d399]">{money(r.landedUnit)}</dd>
                 </div>
                 {r.hasSell && (
-                  <div className="mt-2 grid grid-cols-2 gap-3 border-t border-black/5 pt-3">
+                  <div className="mt-2 grid grid-cols-2 gap-3 border-t border-white/10 pt-3">
                     <div>
-                      <dt className="text-xs text-black/50">{c.marginUnit}</dt>
-                      <dd className={`text-lg font-bold ${r.marginUnit >= 0 ? "text-[#0E1210]" : "text-red-600"}`}>{money(r.marginUnit)}</dd>
+                      <dt className="text-xs text-white/58">{c.marginUnit}</dt>
+                      <dd className={`text-lg font-bold ${r.marginUnit >= 0 ? "text-[#e8eef9]" : "text-red-600"}`}>{money(r.marginUnit)}</dd>
                     </div>
                     <div>
-                      <dt className="text-xs text-black/50">{c.marginPct}</dt>
-                      <dd className={`text-lg font-bold ${r.marginPct >= 0 ? "text-[#0E1210]" : "text-red-600"}`}>{r.marginPct.toFixed(1)}%</dd>
+                      <dt className="text-xs text-white/58">{c.marginPct}</dt>
+                      <dd className={`text-lg font-bold ${r.marginPct >= 0 ? "text-[#e8eef9]" : "text-red-600"}`}>{r.marginPct.toFixed(1)}%</dd>
                     </div>
                   </div>
                 )}
@@ -304,32 +304,32 @@ export function DutyCalculator({ lang }: { lang: DutyLang }) {
               <button
                 type="button"
                 onClick={onShare}
-                className="mt-5 inline-flex items-center gap-2 rounded-full border border-black/12 bg-white px-4 py-2 text-sm font-semibold text-[#0E1210] transition hover:border-[#17B26A]/50"
+                className="mt-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-4 py-2 text-sm font-semibold text-[#e8eef9] transition hover:border-[#34d399]/50"
               >
-                {shared ? <Check className="h-4 w-4 text-[#17B26A]" /> : <Share2 className="h-4 w-4" />}
+                {shared ? <Check className="h-4 w-4 text-[#34d399]" /> : <Share2 className="h-4 w-4" />}
                 {shared ? SHARE[lang].copied : SHARE[lang].share}
               </button>
             </div>
 
             <div className={`rounded-3xl border p-5 sm:p-6 ${verdict.cls}`}>
               <h2 className="text-lg font-semibold">{verdict.t}</h2>
-              <p className="mt-1.5 text-[15px] leading-relaxed text-black/70">{verdict.b}</p>
+              <p className="mt-1.5 text-[15px] leading-relaxed text-white/75">{verdict.b}</p>
             </div>
           </div>
         </div>
 
         {/* CTA */}
-        <div className="mt-8 rounded-3xl bg-gradient-to-br from-[#0E1210] to-[#123A2A] p-7 text-center sm:p-9">
+        <div className="mt-8 rounded-3xl bg-gradient-to-br from-[#0a1120] to-[#0f2e26] p-7 text-center sm:p-9">
           <p className="mx-auto max-w-2xl text-[16px] leading-relaxed text-white/85">{c.ctaLine}</p>
           <a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer nofollow"
-            className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#17B26A] px-7 py-3.5 font-semibold text-white transition hover:brightness-110">
+            className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#34d399] px-7 py-3.5 font-semibold text-white transition hover:brightness-110">
             {c.cta} <ArrowRight className="h-4 w-4" />
           </a>
           <p className="mt-2 text-xs text-white/50">{c.ctaNote}</p>
         </div>
 
-        <div className="mt-6 flex items-start gap-2 text-xs leading-relaxed text-black/45">
-          <ShieldAlert className="mt-0.5 h-4 w-4 shrink-0 text-black/35" />
+        <div className="mt-6 flex items-start gap-2 text-xs leading-relaxed text-white/52">
+          <ShieldAlert className="mt-0.5 h-4 w-4 shrink-0 text-white/45" />
           <p>{c.disclaimer}</p>
         </div>
       </main>

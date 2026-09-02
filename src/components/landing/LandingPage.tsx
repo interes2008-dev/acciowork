@@ -55,8 +55,8 @@ function Logo({ size = 28 }: { size?: number }) {
         <defs>
           <linearGradient id={gid} x1="0" y1="1" x2="1" y2="0">
             <stop offset="0%" stopColor="#0F172A" />
-            <stop offset="55%" stopColor="#17B26A" />
-            <stop offset="100%" stopColor="#7CE7C2" />
+            <stop offset="55%" stopColor="#34d399" />
+            <stop offset="100%" stopColor="#5eead4" />
           </linearGradient>
         </defs>
         <path d="M14 3 L26 25 L2 25 Z" fill={`url(#${gid})`} />
@@ -100,7 +100,7 @@ function LanguageSwitcher() {
       {open && (
         <ul
           role="listbox"
-          className="absolute right-0 top-full z-50 mt-2 w-40 overflow-hidden rounded-2xl border border-border/70 bg-white p-1.5 shadow-elegant"
+          className="absolute right-0 top-full z-50 mt-2 w-40 overflow-hidden rounded-2xl border border-border/70 bg-white/[0.03] p-1.5 shadow-elegant"
         >
           {options.map((code) => (
             <li key={code}>
@@ -123,7 +123,7 @@ function LanguageSwitcher() {
                 }`}
               >
                 <span>{t.langNames[code]}</span>
-                {lang === code && <Check className="h-4 w-4 text-[#17B26A]" />}
+                {lang === code && <Check className="h-4 w-4 text-[#34d399]" />}
               </button>
             </li>
           ))}
@@ -165,7 +165,7 @@ function NavDropdown({ label, items }: { label: string; items: { href: string; l
       {open && (
         <div
           role="menu"
-          className="absolute left-1/2 top-full z-50 mt-2 w-52 -translate-x-1/2 overflow-hidden rounded-2xl border border-border/70 bg-white p-1.5 shadow-elegant"
+          className="absolute left-1/2 top-full z-50 mt-2 w-52 -translate-x-1/2 overflow-hidden rounded-2xl border border-border/70 bg-white/[0.03] p-1.5 shadow-elegant"
         >
           {items.map((it) => (
             <a
@@ -288,7 +288,7 @@ function Navbar() {
             href={REFERRAL_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden h-11 items-center whitespace-nowrap rounded-full bg-[#0F172A] px-5 text-[14px] font-semibold text-white transition hover:bg-[#0F172A]/90 sm:inline-flex"
+            className="hidden h-11 items-center whitespace-nowrap rounded-full bg-[#34d399] px-5 text-[14px] font-semibold text-white transition hover:brightness-110 sm:inline-flex"
           >
             {t.nav.download}
           </a>
@@ -323,7 +323,7 @@ function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMenuOpen(false)}
-              className="mt-3 inline-flex h-12 items-center justify-center whitespace-nowrap rounded-full bg-[#17B26A] px-5 text-[15px] font-semibold text-white"
+              className="mt-3 inline-flex h-12 items-center justify-center whitespace-nowrap rounded-full bg-[#34d399] px-5 text-[15px] font-semibold text-white"
             >
               {t.nav.download}
             </a>
@@ -337,8 +337,8 @@ function Navbar() {
 /* ---------- Hero ---------- */
 function TrustPill({ children }: { children: React.ReactNode }) {
   return (
-    <span className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-white px-4 py-2 text-[14px] font-medium text-foreground shadow-card">
-      <Sparkles className="h-3.5 w-3.5 text-[#17B26A]" />
+    <span className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-white/[0.06] px-4 py-2 text-[14px] font-medium text-foreground shadow-card">
+      <Sparkles className="h-3.5 w-3.5 text-[#34d399]" />
       {children}
     </span>
   );
@@ -348,7 +348,7 @@ function HeroVisual() {
   return (
     <div className="relative mx-auto mt-16 max-w-[1180px] px-2 sm:px-4">
       <div className="overflow-hidden rounded-[28px] bg-white shadow-elegant ring-1 ring-border/70">
-        <div className="flex items-center gap-2 border-b border-border/60 bg-white px-5 py-3.5">
+        <div className="flex items-center gap-2 border-b border-border/60 bg-white/[0.06] px-5 py-3.5">
           <span className="h-3 w-3 rounded-full bg-[#FF5F57]" />
           <span className="h-3 w-3 rounded-full bg-[#FEBC2E]" />
           <span className="h-3 w-3 rounded-full bg-[#28C840]" />
@@ -411,12 +411,12 @@ function Hero() {
           <DownloadButton />
           <p className="mt-3 text-[13px] text-muted-foreground">{t.hero.ctaNote}</p>
           <p className="mt-1 flex items-center gap-1.5 text-[13px] font-medium text-foreground/70">
-            <Globe className="h-3.5 w-3.5 text-[#17B26A]" />
+            <Globe className="h-3.5 w-3.5 text-[#34d399]" />
             {t.availability}
           </p>
         </div>
 
-        <div className="mx-auto mt-12 max-w-3xl border-t border-black/5 pt-6">
+        <div className="mx-auto mt-12 max-w-3xl border-t border-white/10 pt-6">
           <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-foreground/40">
             {FEATURED[lang as keyof typeof FEATURED] ?? FEATURED.en}
           </p>
@@ -458,7 +458,7 @@ function BusinessNeeds() {
   const content = t.business.tabs[active];
 
   return (
-    <section className="bg-[#F7F8FA] py-24 sm:py-32">
+    <section className="bg-white/[0.03] py-24 sm:py-32">
       <div className="mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-8">
         <h2 className="text-center text-[28px] font-bold tracking-tight text-foreground sm:text-[36px]" style={{ lineHeight: "40px" }}>
           {t.business.heading}
@@ -471,7 +471,7 @@ function BusinessNeeds() {
               onClick={() => setActive(k)}
               className={`rounded-full px-6 py-3 text-[14px] font-medium transition ${
                 k === active
-                  ? "bg-[#DDF7EE] text-[#17B26A]"
+                  ? "bg-[#34d399]/15 text-[#34d399]"
                   : "border border-border/70 bg-white text-foreground/60 hover:text-foreground"
               }`}
             >
@@ -483,7 +483,7 @@ function BusinessNeeds() {
         <div
           ref={ref}
           key={active}
-          className={`relative mx-auto mt-12 grid w-full max-w-[1320px] gap-10 overflow-hidden rounded-[32px] bg-white p-8 md:grid-cols-2 md:p-12 md:min-h-[507px] ${
+          className={`relative mx-auto mt-12 grid w-full max-w-[1320px] gap-10 overflow-hidden rounded-[32px] bg-white/[0.03] p-8 md:grid-cols-2 md:p-12 md:min-h-[507px] ${
             shown ? "animate-fade-up" : "opacity-0"
           }`}
         >
@@ -494,14 +494,14 @@ function BusinessNeeds() {
             <p className="mt-6 max-w-md text-[18px] text-muted-foreground" style={{ lineHeight: "29px" }}>
               {content.body}
             </p>
-            <div className="mt-8 grid max-w-md grid-cols-[1fr_auto_1fr] items-center gap-x-4 rounded-2xl bg-[#EAF7F0] px-6 py-5">
+            <div className="mt-8 grid max-w-md grid-cols-[1fr_auto_1fr] items-center gap-x-4 rounded-2xl bg-[#34d399]/10 px-6 py-5">
               <div className="flex flex-col gap-1">
-                <span className="text-[12px] font-bold uppercase tracking-wider text-[#17B26A]">You</span>
+                <span className="text-[12px] font-bold uppercase tracking-wider text-[#34d399]">You</span>
                 <span className="text-[17px] font-semibold text-foreground">{content.extraYou}</span>
               </div>
-              <span className="text-[#17B26A]">→</span>
+              <span className="text-[#34d399]">→</span>
               <div className="flex flex-col gap-1">
-                <span className="text-[12px] font-bold uppercase tracking-wider text-[#17B26A]">AI</span>
+                <span className="text-[12px] font-bold uppercase tracking-wider text-[#34d399]">AI</span>
                 <span className="text-[17px] font-semibold text-foreground">{content.extraAI}</span>
               </div>
             </div>
@@ -520,7 +520,7 @@ function AgentsMockup() {
   const { t } = useI18n();
   const tints = ["#FFD8B4", "#FFC8B8", "#FFE5A8", "#F8C8C8"];
   return (
-    <div className="mt-8 rounded-2xl bg-white p-4 shadow-card">
+    <div className="mt-8 rounded-2xl bg-white/[0.03] p-4 shadow-card">
       <div className="flex items-center justify-between border-b border-border/50 pb-3">
         <div className="flex items-center gap-1.5">
           <span className="h-2.5 w-2.5 rounded-full bg-[#FF5F57]" />
@@ -540,7 +540,7 @@ function AgentsMockup() {
             </div>
             <div className="min-w-0 flex-1">
               <div className="text-[13px] font-bold text-foreground">{a.name}</div>
-              <div className="mt-1 rounded-lg bg-[#F5F6F8] px-3 py-2 text-[12.5px] leading-snug text-foreground/80">
+              <div className="mt-1 rounded-lg bg-white/[0.04] px-3 py-2 text-[12.5px] leading-snug text-foreground/80">
                 {a.msg}
               </div>
             </div>
@@ -578,9 +578,9 @@ function ConnectorsRow() {
 function PlatformMockup() {
   return (
     <div className="pointer-events-none relative mt-6 h-[220px] md:absolute md:right-6 md:top-8 md:h-[240px] md:w-[520px]">
-      <div className="absolute left-2 top-2 w-[220px] rotate-[-4deg] rounded-2xl bg-white p-4 shadow-elegant">
+      <div className="absolute left-2 top-2 w-[220px] rotate-[-4deg] rounded-2xl bg-white/[0.03] p-4 shadow-elegant">
         <div className="flex items-center gap-2 text-[12px] font-semibold text-foreground/80">
-          <span className="grid h-5 w-5 place-items-center rounded bg-[#DCE7FA] text-[10px] text-[#3B82F6]">📊</span>
+          <span className="grid h-5 w-5 place-items-center rounded bg-[#3B82F6]/20 text-[10px] text-[#3B82F6]">📊</span>
           Sourcing
         </div>
         <div className="mt-3 text-[26px] font-extrabold text-foreground">
@@ -590,7 +590,7 @@ function PlatformMockup() {
           <path d="M0 30 L30 22 L60 26 L90 14 L120 18 L150 8 L180 12" />
         </svg>
       </div>
-      <div className="absolute left-[180px] top-0 w-[240px] rounded-2xl bg-white p-4 shadow-elegant">
+      <div className="absolute left-[180px] top-0 w-[240px] rounded-2xl bg-white/[0.03] p-4 shadow-elegant">
         <div className="flex items-center justify-between text-[12px] font-semibold text-foreground/80">
           <span className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-[#8B5CF6]" />
@@ -600,19 +600,19 @@ function PlatformMockup() {
         </div>
         <div className="mt-1 text-[11px] text-muted-foreground">12 variations generated</div>
         <div className="mt-3 grid grid-cols-2 gap-2">
-          <div className="grid h-14 place-items-center rounded-lg bg-[#F1F3F6]">
+          <div className="grid h-14 place-items-center rounded-lg bg-white/[0.04]">
             <div className="h-6 w-6 rounded-full bg-gradient-to-br from-[#8B5CF6] to-[#EC4899]" />
           </div>
-          <div className="grid h-14 place-items-center rounded-lg bg-[#F1F3F6] text-foreground/40">→</div>
+          <div className="grid h-14 place-items-center rounded-lg bg-white/[0.04] text-foreground/40">→</div>
         </div>
       </div>
-      <div className="absolute right-0 top-10 w-[240px] rotate-[3deg] rounded-2xl bg-white p-4 shadow-elegant">
+      <div className="absolute right-0 top-10 w-[240px] rotate-[3deg] rounded-2xl bg-white/[0.03] p-4 shadow-elegant">
         <div className="flex items-center gap-2 text-[12px] font-semibold text-foreground/80">
-          <span className="font-mono text-[#17B26A]">&lt; / &gt;</span>
+          <span className="font-mono text-[#34d399]">&lt; / &gt;</span>
           HTML
-          <span className="ml-auto rounded bg-[#DDF7EE] px-1.5 py-0.5 text-[9px] font-bold text-[#17B26A]">live preview</span>
+          <span className="ml-auto rounded bg-[#34d399]/15 px-1.5 py-0.5 text-[9px] font-bold text-[#34d399]">live preview</span>
         </div>
-        <div className="mt-2 rounded-lg border border-border/60 bg-[#F7F8FA] px-2 py-1 text-[10px] text-muted-foreground">store.accio.com</div>
+        <div className="mt-2 rounded-lg border border-border/60 bg-white/[0.03] px-2 py-1 text-[10px] text-muted-foreground">store.accio.com</div>
         <div className="mt-2 h-16 rounded-lg bg-gradient-to-br from-[#E8F7EE] to-[#DDF0FF]" />
       </div>
     </div>
@@ -622,7 +622,7 @@ function PlatformMockup() {
 function WhyChoose() {
   const { t } = useI18n();
   return (
-    <section className="bg-[#F7F8FA] pb-24 sm:pb-32">
+    <section className="bg-white/[0.03] pb-24 sm:pb-32">
       <div className="mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-8">
         <h2 className="text-center text-[28px] font-bold tracking-tight text-foreground sm:text-[36px]" style={{ lineHeight: "1.15" }}>
           {t.why.heading}
@@ -635,7 +635,7 @@ function WhyChoose() {
             <AgentsMockup />
           </div>
 
-          <div className="min-w-0 overflow-hidden rounded-[28px] bg-[#0E1210] p-6 text-white sm:p-8 md:p-10">
+          <div className="min-w-0 overflow-hidden rounded-[28px] bg-[#0a1120] p-6 text-white sm:p-8 md:p-10">
             <h3 className="text-[22px] font-bold leading-tight sm:text-[24px]">{t.why.connectTitle}</h3>
             <p className="mt-4 text-[15px] leading-relaxed text-white/90">{t.why.connectBody}</p>
             <ConnectorsRow />
@@ -677,8 +677,8 @@ function HowItWorks() {
         </p>
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {t.steps.items.map((s, i) => (
-            <div key={s.title} className="relative rounded-[24px] border border-border/60 bg-white p-7 shadow-card">
-              <div className="grid h-11 w-11 place-items-center rounded-2xl bg-[#DDF7EE] text-[18px] font-extrabold text-[#17B26A]">
+            <div key={s.title} className="relative rounded-[24px] border border-border/60 bg-white/[0.03] p-7 shadow-card">
+              <div className="grid h-11 w-11 place-items-center rounded-2xl bg-[#34d399]/15 text-[18px] font-extrabold text-[#34d399]">
                 {i + 1}
               </div>
               <h3 className="mt-5 text-[18px] font-bold text-foreground">{s.title}</h3>
@@ -697,7 +697,7 @@ function UseCases() {
   const forBase = lang === "en" ? "/for" : `/${lang}/for`;
   const ucSlugs = ["dropshipping", "sourcing", "content", "market-research", "automation", "custom-tools"];
   return (
-    <section id="use-cases" className="scroll-mt-24 bg-[#F7F8FA] py-24 sm:py-32">
+    <section id="use-cases" className="scroll-mt-24 bg-white/[0.03] py-24 sm:py-32">
       <div className="mx-auto max-w-[1200px] px-6">
         <h2 className="text-center text-[28px] font-bold tracking-tight text-foreground sm:text-[40px]">
           {t.useCases.heading}
@@ -707,7 +707,7 @@ function UseCases() {
         </p>
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {t.useCases.items.map((u, i) => (
-            <a key={u.title} href={`${forBase}/${ucSlugs[i]}`} className="block rounded-[24px] bg-white p-7 shadow-card transition hover:-translate-y-1 hover:shadow-elegant">
+            <a key={u.title} href={`${forBase}/${ucSlugs[i]}`} className="block rounded-[24px] bg-white/[0.03] p-7 shadow-card transition hover:-translate-y-1 hover:shadow-elegant">
               <div className="grid h-12 w-12 place-items-center rounded-2xl bg-mint-50 text-[24px]">{u.icon}</div>
               <h3 className="mt-5 text-[19px] font-bold text-foreground">{u.title}</h3>
               <p className="mt-2 text-[14.5px] leading-relaxed text-muted-foreground">{u.body}</p>
@@ -733,21 +733,21 @@ function CompareChat() {
         </p>
         <div className="mt-12 overflow-hidden rounded-[28px] border border-border/70 shadow-card">
           <div className="grid grid-cols-2">
-            <div className="bg-[#F7F8FA] px-5 py-5 text-[14px] font-bold text-foreground/70 sm:px-8 sm:text-[15px]">
+            <div className="bg-white/[0.03] px-5 py-5 text-[14px] font-bold text-foreground/70 sm:px-8 sm:text-[15px]">
               {t.compareChat.chatLabel}
             </div>
-            <div className="bg-[#0E1210] px-5 py-5 text-[14px] font-bold text-white sm:px-8 sm:text-[15px]">
+            <div className="bg-[#0a1120] px-5 py-5 text-[14px] font-bold text-white sm:px-8 sm:text-[15px]">
               {t.compareChat.accioLabel}
             </div>
           </div>
           {t.compareChat.rows.map((r, i) => (
-            <div key={i} className={`grid grid-cols-2 ${i % 2 ? "bg-white" : "bg-[#FBFCFD]"}`}>
+            <div key={i} className={`grid grid-cols-2 ${i % 2 ? "bg-white" : "bg-[#070b14]"}`}>
               <div className="flex items-start gap-3 border-t border-border/60 px-5 py-5 sm:px-8">
                 <X className="mt-0.5 h-4 w-4 shrink-0 text-[#C0392B]/70" />
                 <span className="text-[14.5px] leading-snug text-muted-foreground">{r.chat}</span>
               </div>
-              <div className="flex items-start gap-3 border-t border-border/60 bg-[#0E1210]/[0.02] px-5 py-5 sm:px-8">
-                <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#17B26A]" />
+              <div className="flex items-start gap-3 border-t border-border/60 bg-[#0a1120]/[0.02] px-5 py-5 sm:px-8">
+                <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#34d399]" />
                 <span className="text-[14.5px] font-medium leading-snug text-foreground">{r.accio}</span>
               </div>
             </div>
@@ -776,12 +776,12 @@ function Pricing() {
               key={p.name}
               className={`relative flex flex-col rounded-[28px] p-8 ${
                 p.highlight
-                  ? "bg-[#0E1210] text-white shadow-elegant ring-2 ring-[#17B26A]"
+                  ? "bg-[#0a1120] text-white shadow-elegant ring-2 ring-[#34d399]"
                   : "border border-border/70 bg-white text-foreground shadow-card"
               }`}
             >
               {p.highlight && (
-                <span className="absolute -top-3 left-8 rounded-full bg-[#17B26A] px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white">
+                <span className="absolute -top-3 left-8 rounded-full bg-[#34d399] px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white">
                   ★
                 </span>
               )}
@@ -802,7 +802,7 @@ function Pricing() {
               <ul className="flex flex-col gap-3">
                 {p.features.map((f) => (
                   <li key={f} className="flex items-start gap-2.5">
-                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#17B26A]" />
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#34d399]" />
                     <span className={`text-[14.5px] leading-snug ${p.highlight ? "text-white/90" : "text-foreground/85"}`}>{f}</span>
                   </li>
                 ))}
@@ -813,8 +813,8 @@ function Pricing() {
                 rel="noopener noreferrer"
                 className={`mt-8 inline-flex h-12 items-center justify-center rounded-full text-[15px] font-semibold transition hover:scale-[1.02] ${
                   p.highlight
-                    ? "bg-[#17B26A] text-white hover:bg-[#17B26A]/90"
-                    : "bg-[#0F172A] text-white hover:bg-[#0F172A]/90"
+                    ? "bg-[#34d399] text-white hover:brightness-110"
+                    : "bg-[#34d399] text-white hover:brightness-110"
                 }`}
               >
                 {p.cta}
@@ -833,7 +833,7 @@ function Pricing() {
 /* ---------- Testimonials ---------- */
 function TestimonialCard({ t }: { t: TestimonialT }) {
   return (
-    <article className="mx-3 w-[360px] shrink-0 rounded-[24px] bg-white p-6 shadow-card">
+    <article className="mx-3 w-[360px] shrink-0 rounded-[24px] bg-white/[0.03] p-6 shadow-card">
       <header className="flex items-center gap-3">
         <img
           src={t.avatar}
@@ -874,7 +874,7 @@ function Testimonials() {
     <section className="relative overflow-hidden bg-mint-50 py-24 sm:py-32">
       <div className="mx-auto max-w-[1280px] px-6 text-center">
         <h2 className="text-[36px] font-extrabold tracking-tight text-foreground sm:text-[50px]">
-          {t.testimonials.heading1} <span className="text-[#17B26A]">{t.testimonials.highlight}</span>
+          {t.testimonials.heading1} <span className="text-[#34d399]">{t.testimonials.highlight}</span>
           <br />
           {t.testimonials.heading2}
         </h2>
@@ -885,10 +885,10 @@ function Testimonials() {
         </div>
         <div className="mt-12 grid gap-5 text-left sm:grid-cols-2 lg:grid-cols-3">
           {rvPress.map((p) => (
-            <div key={p.id} className="rounded-2xl border border-black/10 bg-white p-6">
+            <div key={p.id} className="rounded-2xl border border-white/12 bg-white/[0.03] p-6">
               <div className="mb-2 flex items-center gap-2">
                 <span className="font-semibold text-foreground">{p.source}</span>
-                <span className="rounded-full bg-mint-50 px-2 py-0.5 text-[11px] font-medium text-[#17B26A]">{p.tag}</span>
+                <span className="rounded-full bg-mint-50 px-2 py-0.5 text-[11px] font-medium text-[#34d399]">{p.tag}</span>
               </div>
               <p className="text-[15px] leading-relaxed text-foreground/75">
                 {p.takeaway[lang as keyof typeof p.takeaway] ?? p.takeaway.en}
@@ -897,7 +897,7 @@ function Testimonials() {
                 href={p.url}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-[#17B26A] hover:underline"
+                className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-[#34d399] hover:underline"
               >
                 {rv.sourceLabel} {p.source}
               </a>
@@ -906,7 +906,7 @@ function Testimonials() {
         </div>
         <a
           href={reviewsHref}
-          className="mt-10 inline-flex items-center gap-2 rounded-full border border-[#17B26A]/40 px-6 py-3 text-sm font-semibold text-[#17B26A] transition hover:bg-[#17B26A] hover:text-white"
+          className="mt-10 inline-flex items-center gap-2 rounded-full border border-[#34d399]/40 px-6 py-3 text-sm font-semibold text-[#34d399] transition hover:bg-[#34d399] hover:text-white"
         >
           {t.nav.reviews}
         </a>
@@ -935,7 +935,7 @@ function FaqRow({
       >
         <span className="text-[17px] font-bold text-foreground sm:text-[18px]">{item.q}</span>
         <ChevronDown
-          className={`h-5 w-5 shrink-0 text-[#17B26A] transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+          className={`h-5 w-5 shrink-0 text-[#34d399] transition-transform duration-300 ${open ? "rotate-180" : ""}`}
         />
       </button>
       {open && (
@@ -946,7 +946,7 @@ function FaqRow({
               href={REFERRAL_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-1.5 text-[15px] font-semibold text-[#17B26A] hover:underline"
+              className="mt-4 inline-flex items-center gap-1.5 text-[15px] font-semibold text-[#34d399] hover:underline"
             >
               {item.linkLabel} <span aria-hidden>→</span>
             </a>
@@ -1018,7 +1018,7 @@ function DownloadButton() {
 
   return (
     <div ref={ref} className="relative">
-      <div className="inline-flex items-stretch overflow-hidden rounded-full bg-[#0F172A] text-white shadow-elegant">
+      <div className="inline-flex items-stretch overflow-hidden rounded-full bg-[#34d399] text-white shadow-elegant">
         <a
           href={REFERRAL_URL}
           target="_blank"
@@ -1044,7 +1044,7 @@ function DownloadButton() {
       {open && (
         <div
           role="menu"
-          className="absolute left-1/2 top-full z-50 mt-2 w-64 -translate-x-1/2 overflow-hidden rounded-2xl border border-black/10 bg-white p-1.5 text-left shadow-[0_12px_40px_rgba(0,0,0,0.16)]"
+          className="absolute left-1/2 top-full z-50 mt-2 w-64 -translate-x-1/2 overflow-hidden rounded-2xl border border-white/12 bg-white/[0.03] p-1.5 text-left shadow-[0_12px_40px_rgba(0,0,0,0.16)]"
         >
           {options.map((o, i) => (
             <a
@@ -1054,11 +1054,11 @@ function DownloadButton() {
               rel="noopener noreferrer"
               onClick={() => setOs(o.os)}
               role="menuitem"
-              className="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-[15px] text-[#0E1210]/80 transition hover:bg-[#F3FBF7] hover:text-[#0E1210]"
+              className="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-[15px] text-[#e8eef9]/80 transition hover:bg-white/[0.05] hover:text-[#e8eef9]"
             >
-              {o.os === "win" ? <WindowsIcon className="h-4 w-4 text-[#0E1210]/70" /> : <Apple className="h-4 w-4 text-[#0E1210]/70" />}
+              {o.os === "win" ? <WindowsIcon className="h-4 w-4 text-[#e8eef9]/70" /> : <Apple className="h-4 w-4 text-[#e8eef9]/70" />}
               <span className="font-medium">{o.name}</span>
-              <span className="ml-auto text-[13px] text-[#0E1210]/45">{o.variant}</span>
+              <span className="ml-auto text-[13px] text-[#e8eef9]/45">{o.variant}</span>
             </a>
           ))}
         </div>
@@ -1174,7 +1174,7 @@ function Footer() {
                 {p.source}
               </a>
             ))}
-            <a href={`${base}/reviews`} className="text-[14px] font-medium text-[#17B26A] hover:underline">
+            <a href={`${base}/reviews`} className="text-[14px] font-medium text-[#34d399] hover:underline">
               {t.nav.reviews}
             </a>
           </div>
@@ -1210,15 +1210,15 @@ function CalculatorTeaser() {
   return (
     <section className="bg-background py-20 sm:py-28">
       <div className="mx-auto max-w-[1200px] px-6">
-        <div className="overflow-hidden rounded-[32px] bg-gradient-to-br from-[#0E1210] to-[#123A2A] px-8 py-14 text-center sm:px-16">
-          <p className="text-sm font-semibold uppercase tracking-wide text-[#7CE7C2]">{rc.kicker}</p>
+        <div className="overflow-hidden rounded-[32px] bg-gradient-to-br from-[#0a1120] to-[#0f2e26] px-8 py-14 text-center sm:px-16">
+          <p className="text-sm font-semibold uppercase tracking-wide text-[#5eead4]">{rc.kicker}</p>
           <h2 className="mx-auto mt-3 max-w-2xl text-[28px] font-bold leading-tight tracking-tight text-white sm:text-[40px]">
             {rc.h1}
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-[16px] leading-relaxed text-white/70">{rc.intro}</p>
           <a
             href={roiHref}
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#17B26A] px-7 py-3.5 font-semibold text-white transition hover:brightness-110"
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#34d399] px-7 py-3.5 font-semibold text-white transition hover:brightness-110"
           >
             {t.nav.roi}
             <span aria-hidden>&rarr;</span>
@@ -1240,7 +1240,7 @@ function MobileStickyCta() {
   }, []);
   return (
     <div
-      className={`fixed inset-x-0 bottom-0 z-40 border-t border-black/10 bg-white/95 px-4 py-3 backdrop-blur transition-transform duration-300 md:hidden ${
+      className={`fixed inset-x-0 bottom-0 z-40 border-t border-white/12 bg-[#0a1120]/95 px-4 py-3 backdrop-blur transition-transform duration-300 md:hidden ${
         show ? "translate-y-0" : "translate-y-full"
       }`}
     >
@@ -1248,7 +1248,7 @@ function MobileStickyCta() {
         href={REFERRAL_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex h-12 w-full items-center justify-center rounded-full bg-[#17B26A] text-[15px] font-semibold text-white shadow-elegant"
+        className="flex h-12 w-full items-center justify-center rounded-full bg-[#34d399] text-[15px] font-semibold text-white shadow-elegant"
       >
         {t.nav.download}
       </a>
@@ -1314,9 +1314,9 @@ function AccioStats() {
     { v: 400, d: 0, l: s.products },
   ];
   return (
-    <section ref={ref} className="border-y border-black/5 bg-white py-14 sm:py-16">
+    <section ref={ref} className="border-y border-white/10 bg-white py-14 sm:py-16">
       <div className="mx-auto max-w-[1100px] px-6 text-center">
-        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#17B26A]">{s.heading}</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#34d399]">{s.heading}</p>
         <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-3">
           {items.map((it) => (
             <div key={it.l} className="flex flex-col items-center">
