@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { Check, ArrowRight, ArrowLeft, Minus } from "lucide-react";
 import { ucChrome, ucPages, ucOrder, type UcLang } from "@/lib/usecase-data";
 import { LangMenu } from "@/components/common/LangMenu";
+import { ThemeToggle } from "@/components/common/ThemeToggle";
 
 const REFERRAL_URL =
   "https://www.accio.com/login?sId=KECtp1GttZ42%2FwpJUH5IxQ%3D%3D&ic=IC506004212009&tenant=accio&src=p_referral_IC506004212009&source=invite_center&return_url=https%3A%2F%2Fwww.accio.com%2Fwork%2F";
@@ -36,6 +37,7 @@ function Shell({ lang, children }: { lang: UcLang; children: ReactNode }) {
             <span>Accio</span>
           </a>
           <div className="flex items-center gap-2 sm:gap-3">
+            <ThemeToggle />
             <LangMenu lang={lang} />
             <a
             href={REFERRAL_URL}

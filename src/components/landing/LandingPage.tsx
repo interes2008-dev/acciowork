@@ -5,11 +5,11 @@ import {
   ChevronDown,
   Check,
   Globe,
-  Headphones,
   Menu,
   Sparkles,
   X,
 } from "lucide-react";
+import { ThemeToggle } from "@/components/common/ThemeToggle";
 import { I18nProvider, useI18n, renderHighlighted } from "@/lib/i18n";
 import { rvPress, rvChrome } from "@/lib/reviews-data";
 import { roiChrome } from "@/lib/roi-data";
@@ -282,7 +282,7 @@ function Navbar() {
           </nav>
         </div>
         <div className="flex items-center gap-5">
-          <Headphones className="hidden h-5 w-5 text-foreground/70 md:block" />
+          <ThemeToggle className="hidden md:grid" />
           <LanguageSwitcher />
           <a
             href={REFERRAL_URL}
@@ -629,7 +629,7 @@ function WhyChoose() {
         </h2>
 
         <div className="mt-12 grid grid-cols-[minmax(0,1fr)] gap-6 md:grid-cols-3 md:grid-rows-2">
-          <div className="min-w-0 overflow-hidden rounded-[28px] bg-gradient-to-br from-[#F1F3F6] to-[#E7EBF0] p-6 sm:p-8 md:row-span-2 md:p-10">
+          <div className="min-w-0 overflow-hidden rounded-[28px] bg-gradient-to-br from-white/[0.06] to-white/[0.02] p-6 sm:p-8 md:row-span-2 md:p-10">
             <h3 className="text-[22px] font-bold leading-tight text-foreground sm:text-[24px]">{t.why.aiTitle}</h3>
             <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">{t.why.aiBody}</p>
             <AgentsMockup />

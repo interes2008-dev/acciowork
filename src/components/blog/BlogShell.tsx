@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { ThemeToggle } from "@/components/common/ThemeToggle";
 import { Check, ChevronDown, Globe } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import type { Lang } from "@/lib/translations";
@@ -116,6 +117,7 @@ export function BlogShell({ children }: { children: React.ReactNode }) {
           <nav className="flex items-center gap-6 text-sm text-foreground/80">
             <a href={home} className="hover:text-foreground">Home</a>
             <a href={blog} className="hover:text-foreground">Blog</a>
+            <ThemeToggle />
             <LanguageSwitcher />
           </nav>
         </div>

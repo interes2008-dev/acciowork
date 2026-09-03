@@ -8,8 +8,6 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 
-import { useState, useEffect } from "react";
-import { Sun, Moon } from "lucide-react";
 import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
@@ -134,33 +132,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   errorComponent: ErrorComponent,
 });
 
-function ThemeToggle() {
-  const [light, setLight] = useState(false);
-  useEffect(() => {
-    setLight(document.documentElement.classList.contains("light"));
-  }, []);
-  const toggle = () => {
-    const el = document.documentElement;
-    const next = !el.classList.contains("light");
-    el.classList.toggle("light", next);
-    try {
-      localStorage.setItem("accio-theme", next ? "light" : "dark");
-    } catch {
-      /* ignore */
-    }
-    setLight(next);
-  };
-  return (
-    <button
-      onClick={toggle}
-      aria-label="Toggle light and dark theme"
-      className="fixed bottom-4 right-4 z-[60] flex h-11 w-11 items-center justify-center rounded-full border border-border bg-card text-foreground shadow-elegant transition hover:brightness-110"
-    >
-      {light ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
-    </button>
-  );
-}
-
 function RootShell({ children }: { children: React.ReactNode }) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const seg = pathname.split("/")[1];
@@ -173,7 +144,6 @@ function RootShell({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         {children}
-        <ThemeToggle />
         <noscript>
           <div>
             <img

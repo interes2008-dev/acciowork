@@ -251,33 +251,13 @@ export function buildArticlePrompt(lang: BlogLang, topic: TopicSeed): {
   system: string;
   user: string;
 } {
-  const seo = `
-SEO targeting (highest priority, overrides any style preference that conflicts):
-- This article targets ONE specific search query, not a broad theme. Target query in English: "${topic.keyword}". First translate it into the exact phrase a native ${LANG_LABEL[lang]} speaker would type into Google for the same intent, then use that local phrase everywhere below.
-- title: must be the H1 of the page and must contain the local target phrase, ideally in the first 4 words. 45-60 characters. Natural human phrasing, no brand name, no colon-stuffing, no keyword repetition. It must NOT be a generic umbrella title such as "AI for small business": it has to name the specific problem, task or question of the query.
-- description: 140-158 characters, contains the local target phrase once, states the concrete outcome the reader gets, reads like a sentence, not a keyword list.
-- slug: kebab-case latin transliteration of the local target phrase, 3-6 words, no filler words, and specific enough that two different queries can never produce the same slug.
-- body_md: the opening paragraph must answer the query directly within the first 2 sentences and contain the local target phrase once. The first H2 must be a close variant of the query (often the question form). Later H2s must cover the sub-questions a searcher of this query also has. Never repeat the exact phrase more than 4 times in the whole article.
-- keywords: the local target phrase first, then 3-5 real long-tail variants of the SAME query (question forms, "how to", comparison, price/time variants). No generic terms like "AI", "business", "automation" on their own.
-- Include one short FAQ section (H2) with 3 question-style H3s taken from what people actually also ask about this query, each answered in 2-4 sentences.
-`;
+  const system = `${STYLE_RULES[lang]}\n\nCapability sheet you must stay grounded in:\n${CAPABILITY_SHEET}\n\nReturn ONLY valid JSON matching this TypeScript type, no prose around it:\n{"title": string, "description": string, "slug": string, "keywords": string[], "body_md": string, "cover_prompt": string}\n\nAll writing (title, description, body) must be in ${LANG_LABEL[lang]}. The slug and cover_prompt stay in English/latin.`;
 
-  const system = `${STYLE_RULES[lang]}
-${seo}
-
-Capability sheet you must stay grounded in:
-${CAPABILITY_SHEET}
-
-Return ONLY valid JSON matching this TypeScript type, no prose around it:
-{"title": string, "description": string, "slug": string, "keywords": string[], "body_md": string, "cover_prompt": string}
-
-All writing (title, description, body) must be in ${LANG_LABEL[lang]}. The slug and cover_prompt stay in English/latin.`;
   const user = `Write an in-depth blog article in ${LANG_LABEL[lang]}.
 
 Seed topic: ${topic.seed_title}
 Angle: ${topic.angle}
 Target keyword (weave in naturally, do not stuff): ${topic.keyword}
-Exact search query this page must rank for: "${topic.keyword}" (translate it into the natural ${LANG_LABEL[lang]} phrasing and use that in title, description, slug, opening paragraph and first H2)
 Primary reader: ${topic.audience}
 Accio Work capability at the centre: ${topic.capability}
 
