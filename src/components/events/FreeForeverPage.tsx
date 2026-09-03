@@ -853,7 +853,7 @@ function Counter({ to, suffix = "", duration = 2000, locale }: { to: number; suf
       ? `${(val / 1_000_000).toFixed(val >= to ? 0 : 1)}M`
       : val.toLocaleString(locale);
   return (
-    <span ref={ref} className="bg-gradient-to-r from-[#17B26A] to-[#7CE7C2] bg-clip-text text-transparent">
+    <span ref={ref} className="bg-gradient-to-r from-[#34d399] to-[#5eead4] bg-clip-text text-transparent">
       {formatted}{suffix}
     </span>
   );
@@ -867,8 +867,8 @@ function BrandLogo({ size = 22 }: { size?: number }) {
         <defs>
           <linearGradient id="accioTriEvtShared" x1="0" y1="1" x2="1" y2="0">
             <stop offset="0%" stopColor="#0F172A" />
-            <stop offset="55%" stopColor="#17B26A" />
-            <stop offset="100%" stopColor="#7CE7C2" />
+            <stop offset="55%" stopColor="#34d399" />
+            <stop offset="100%" stopColor="#5eead4" />
           </linearGradient>
         </defs>
         <path d="M14 3 L26 25 L2 25 Z" fill="url(#accioTriEvtShared)" />
@@ -905,7 +905,7 @@ function LangSwitcher({ lang }: { lang: Lang }) {
         {LANG_NAMES[lang]} <span className="opacity-60">▾</span>
       </button>
       {open && (
-        <div className="absolute right-0 top-full z-50 mt-2 w-40 overflow-hidden rounded-xl border border-[#E5E7EB] bg-white shadow-lg">
+        <div className="absolute right-0 top-full z-50 mt-2 w-40 overflow-hidden rounded-xl border border-[#E5E7EB] bg-card shadow-lg">
           {langs.map((l) => (
             <a
               key={l}
@@ -930,7 +930,7 @@ function Header({ lang, d }: { lang: Lang; d: EventDict }) {
     { href: eventsHref(lang), label: d.nav.events, hot: true },
   ];
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-[#E5E7EB] bg-white/95 backdrop-blur">
+    <header className="sticky top-0 z-50 w-full border-b border-[#E5E7EB] bg-background/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-[1280px] items-center justify-between px-4 sm:px-6">
         <a href={homeHref(lang)} className="flex items-center gap-2">
           <BrandLogo size={22} />
@@ -940,7 +940,7 @@ function Header({ lang, d }: { lang: Lang; d: EventDict }) {
           <a href={blogHref(lang)} className="hover:text-[#1a1a2e]">{d.nav.blog}</a>
           <a href={eventsHref(lang)} className="flex items-center gap-1 font-semibold text-[#1a1a2e]">
             {d.nav.events} <span>🔥</span>
-            <span className="ml-1 h-1.5 w-1.5 rounded-full bg-gradient-to-r from-[#17B26A] to-[#7CE7C2]" />
+            <span className="ml-1 h-1.5 w-1.5 rounded-full bg-gradient-to-r from-[#34d399] to-[#5eead4]" />
           </a>
         </nav>
         <div className="flex items-center gap-3 sm:gap-5">
@@ -968,7 +968,7 @@ function Header({ lang, d }: { lang: Lang; d: EventDict }) {
       </div>
 
       {open && (
-        <nav className="border-t border-[#E5E7EB] bg-white md:hidden">
+        <nav className="border-t border-[#E5E7EB] bg-card md:hidden">
           <div className="mx-auto flex max-w-[1280px] flex-col px-4 py-2 sm:px-6">
             {links.map((l) => (
               <a
@@ -991,16 +991,16 @@ function Header({ lang, d }: { lang: Lang; d: EventDict }) {
 /* ---------- Sections ---------- */
 function Hero({ lang, d }: { lang: Lang; d: EventDict }) {
   return (
-    <section className="relative overflow-hidden bg-white pb-20 pt-20 sm:pb-28 sm:pt-28">
-      <div aria-hidden className="pointer-events-none absolute -right-32 -top-32 h-[480px] w-[480px] rounded-full opacity-40 blur-3xl" style={{ background: "radial-gradient(circle,#7CE7C233,transparent 70%)" }} />
+    <section className="relative overflow-hidden bg-card pb-20 pt-20 sm:pb-28 sm:pt-28">
+      <div aria-hidden className="pointer-events-none absolute -right-32 -top-32 h-[480px] w-[480px] rounded-full opacity-40 blur-3xl" style={{ background: "radial-gradient(circle,#5eead433,transparent 70%)" }} />
       <div className="relative mx-auto max-w-[900px] px-6 text-center">
         <Reveal>
-          <span className="inline-flex items-center gap-2 rounded-full bg-[#17B26A]/10 px-4 py-1.5 text-[13px] font-semibold text-[#17B26A]">{d.hero.badge}</span>
+          <span className="inline-flex items-center gap-2 rounded-full bg-[#34d399]/10 px-4 py-1.5 text-[13px] font-semibold text-[#34d399]">{d.hero.badge}</span>
         </Reveal>
         <Reveal delay={80}>
           <h1 className="mt-6 text-[40px] font-extrabold leading-[1.05] tracking-tight text-[#1a1a2e] sm:text-[56px] lg:text-[64px]">
             {d.hero.title1}{" "}
-            <span className="bg-gradient-to-r from-[#17B26A] to-[#7CE7C2] bg-clip-text text-transparent">{d.hero.titleAccent}</span>
+            <span className="bg-gradient-to-r from-[#34d399] to-[#5eead4] bg-clip-text text-transparent">{d.hero.titleAccent}</span>
           </h1>
         </Reveal>
         <Reveal delay={140}>
@@ -1033,7 +1033,7 @@ function Stats({ d, locale }: { d: EventDict; locale: string }) {
       <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-6 px-6 md:grid-cols-3">
         {items.map((it, i) => (
           <Reveal key={it.label} delay={i * 100}>
-            <div className="rounded-2xl bg-white p-10 text-center shadow-[0_2px_12px_rgba(0,0,0,0.04)]">
+            <div className="rounded-2xl bg-card p-10 text-center shadow-[0_2px_12px_rgba(0,0,0,0.04)]">
               <div className="text-[56px] font-extrabold leading-none tracking-tight sm:text-[64px]">
                 <Counter to={it.value} suffix={it.suffix} locale={locale} />
               </div>
@@ -1048,7 +1048,7 @@ function Stats({ d, locale }: { d: EventDict; locale: string }) {
 
 function Features({ d }: { d: EventDict }) {
   return (
-    <section className="bg-white py-20 sm:py-28">
+    <section className="bg-card py-20 sm:py-28">
       <div className="mx-auto max-w-[1200px] px-6">
         <Reveal>
           <h2 className="text-center text-[32px] font-extrabold tracking-tight text-[#1a1a2e] sm:text-[44px]">{d.features.heading}</h2>
@@ -1090,7 +1090,7 @@ function CompareTable({ title, bg, rows, totalCost, totalTime, d }: { title: str
                 <td className="px-4 py-3">{r[2]}</td>
               </tr>
             ))}
-            <tr className="bg-white font-bold text-[#1a1a2e]">
+            <tr className="bg-card font-bold text-[#1a1a2e]">
               <td className="px-4 py-4">{d.compare.total}</td>
               <td className="px-4 py-4">{totalCost}</td>
               <td className="px-4 py-4">{totalTime}</td>
@@ -1114,10 +1114,10 @@ function Compare({ d }: { d: EventDict }) {
             <CompareTable title={d.compare.without} bg="bg-[#FEF2F2]" rows={d.compare.withoutRows} totalCost={d.compare.withoutTotalCost} totalTime={d.compare.withoutTotalTime} d={d} />
           </Reveal>
           <div className="pointer-events-none absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 lg:block">
-            <span className="flex h-12 w-12 items-center justify-center rounded-full border border-[#E5E7EB] bg-white text-[14px] font-bold text-[#6B7280] shadow-sm">vs</span>
+            <span className="flex h-12 w-12 items-center justify-center rounded-full border border-[#E5E7EB] bg-card text-[14px] font-bold text-[#6B7280] shadow-sm">vs</span>
           </div>
           <div className="flex items-center justify-center lg:hidden">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#E5E7EB] bg-white text-[13px] font-bold text-[#6B7280]">vs</span>
+            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#E5E7EB] bg-card text-[13px] font-bold text-[#6B7280]">vs</span>
           </div>
           <Reveal delay={100}>
             <CompareTable title={d.compare.with} bg="bg-[#ECFDF5]" rows={d.compare.withRows} totalCost={d.compare.withTotalCost} totalTime={d.compare.withTotalTime} d={d} />
@@ -1125,9 +1125,9 @@ function Compare({ d }: { d: EventDict }) {
         </div>
         <Reveal delay={150}>
           <p className="mx-auto mt-12 max-w-[820px] text-center text-[22px] font-extrabold text-[#1a1a2e] sm:text-[28px]">
-            <span className="bg-gradient-to-r from-[#17B26A] to-[#7CE7C2] bg-clip-text text-transparent">{d.compare.summaryMoney}</span>
+            <span className="bg-gradient-to-r from-[#34d399] to-[#5eead4] bg-clip-text text-transparent">{d.compare.summaryMoney}</span>
             {" · "}
-            <span className="bg-gradient-to-r from-[#17B26A] to-[#7CE7C2] bg-clip-text text-transparent">{d.compare.summaryTime}</span>
+            <span className="bg-gradient-to-r from-[#34d399] to-[#5eead4] bg-clip-text text-transparent">{d.compare.summaryTime}</span>
           </p>
         </Reveal>
       </div>
@@ -1137,7 +1137,7 @@ function Compare({ d }: { d: EventDict }) {
 
 function Story({ d }: { d: EventDict }) {
   return (
-    <section className="bg-white py-20 sm:py-28">
+    <section className="bg-card py-20 sm:py-28">
       <div className="mx-auto max-w-[1200px] px-6">
         <Reveal>
           <h2 className="text-center text-[32px] font-extrabold tracking-tight text-[#1a1a2e] sm:text-[44px]">{d.story.heading}</h2>
@@ -1145,17 +1145,17 @@ function Story({ d }: { d: EventDict }) {
         <Reveal delay={100}>
           <div className="mt-14 grid grid-cols-1 gap-0 overflow-hidden rounded-2xl bg-[#F8F9FB] shadow-[0_2px_12px_rgba(0,0,0,0.04)] lg:grid-cols-[1.3fr_1fr]">
             <div className="relative p-8 sm:p-12">
-              <span aria-hidden className="absolute left-0 top-6 bottom-6 w-1 rounded-r bg-gradient-to-b from-[#17B26A] to-[#7CE7C2]" />
+              <span aria-hidden className="absolute left-0 top-6 bottom-6 w-1 rounded-r bg-gradient-to-b from-[#34d399] to-[#5eead4]" />
               <h3 className="text-[22px] font-bold text-[#1a1a2e]">{d.story.who}</h3>
               <div className="mt-5 space-y-4 text-[16px] leading-relaxed text-[#374151]">
                 {d.story.p.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
                 <p className="font-semibold text-[#1a1a2e]">{d.story.highlight}</p>
-                <blockquote className="border-l-2 border-[#17B26A] pl-4 italic text-[#1a1a2e]">{d.story.quote}</blockquote>
+                <blockquote className="border-l-2 border-[#34d399] pl-4 italic text-[#1a1a2e]">{d.story.quote}</blockquote>
               </div>
             </div>
             <div className="flex min-h-[280px] items-center justify-center bg-[#EEF1F5] p-8">
               <div className="flex flex-col items-center gap-3 text-center">
-                <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white shadow">
+                <span className="flex h-16 w-16 items-center justify-center rounded-full bg-card shadow">
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="#1a1a2e"><path d="M8 5v14l11-7z" /></svg>
                 </span>
                 <p className="text-[14px] font-medium text-[#6B7280]">{d.story.videoCaption}</p>
@@ -1176,14 +1176,14 @@ function Faq({ d }: { d: EventDict }) {
         <Reveal>
           <h2 className="text-center text-[32px] font-extrabold tracking-tight text-[#1a1a2e] sm:text-[44px]">{d.faq.heading}</h2>
         </Reveal>
-        <div className="mt-12 divide-y divide-[#E5E7EB] overflow-hidden rounded-2xl bg-white shadow-[0_2px_12px_rgba(0,0,0,0.04)]">
+        <div className="mt-12 divide-y divide-[#E5E7EB] overflow-hidden rounded-2xl bg-card shadow-[0_2px_12px_rgba(0,0,0,0.04)]">
           {d.faq.items.map((it, i) => {
             const isOpen = open === i;
             return (
               <div key={it.q}>
                 <button onClick={() => setOpen(isOpen ? null : i)} className="flex w-full items-center justify-between px-6 py-5 text-left text-[16px] font-semibold text-[#1a1a2e] transition hover:bg-[#F8F9FB] sm:px-8 sm:text-[17px]">
                   <span>{it.q}</span>
-                  <span className={`ml-4 text-[#17B26A] transition-transform ${isOpen ? "rotate-45" : ""}`}>+</span>
+                  <span className={`ml-4 text-[#34d399] transition-transform ${isOpen ? "rotate-45" : ""}`}>+</span>
                 </button>
                 <div className={`grid overflow-hidden px-6 text-[15px] leading-relaxed text-[#6B7280] transition-all duration-300 sm:px-8 ${isOpen ? "grid-rows-[1fr] pb-6" : "grid-rows-[0fr]"}`}>
                   <div className="overflow-hidden">{it.a}</div>
@@ -1208,7 +1208,7 @@ function FinalCta({ d }: { d: EventDict }) {
           <p className="mx-auto mt-5 max-w-[600px] text-[16px] text-white/80 sm:text-[18px]">{d.cta.subtitle}</p>
         </Reveal>
         <Reveal delay={160}>
-          <a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer" className="mt-10 inline-flex h-12 items-center justify-center rounded-full bg-white px-8 text-[15px] font-bold text-[#17B26A] transition hover:bg-white/90 sm:h-14 sm:text-[16px]">
+          <a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer" className="mt-10 inline-flex h-12 items-center justify-center rounded-full bg-secondary px-8 text-[15px] font-bold text-[#34d399] transition hover:bg-white/90 sm:h-14 sm:text-[16px]">
             {d.cta.button}
           </a>
           <p className="mt-5 text-[13px] text-white/60">{d.cta.note}</p>
@@ -1245,7 +1245,7 @@ const LOCALES: Record<Lang, string> = {
 export function FreeForeverPage({ lang }: { lang: Lang }) {
   const d = DICTS[lang];
   return (
-    <div className="min-h-screen bg-white font-sans text-[#1a1a2e] antialiased">
+    <div className="min-h-screen bg-card font-sans text-[#1a1a2e] antialiased">
       <Header lang={lang} d={d} />
       <main>
         <Hero lang={lang} d={d} />

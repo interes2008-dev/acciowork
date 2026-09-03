@@ -26,10 +26,10 @@ function homeHref(lang: TplLang) {
 function Shell({ lang, children }: { lang: TplLang; children: ReactNode }) {
   const c = tplChrome[lang];
   return (
-    <div className="min-h-screen bg-[#070b14] text-[#e8eef9]">
-      <header className="border-b border-white/10 bg-[#0a1120]/80 backdrop-blur">
+    <div className="min-h-screen bg-background text-foreground">
+      <header className="border-b border-border bg-background/80 backdrop-blur">
         <div className="mx-auto flex max-w-3xl items-center justify-between px-5 py-4">
-          <a href={homeHref(lang)} className="flex items-center gap-1.5 font-bold tracking-tight text-[#e8eef9]" style={{ fontSize: 22 }}>
+          <a href={homeHref(lang)} className="flex items-center gap-1.5 font-bold tracking-tight text-foreground" style={{ fontSize: 22 }}>
             <svg width={21} height={22} viewBox="0 0 28 28" aria-hidden>
               <defs>
                 <linearGradient id="accioTri" x1="0" y1="1" x2="1" y2="0">
@@ -52,9 +52,9 @@ function Shell({ lang, children }: { lang: TplLang; children: ReactNode }) {
         </div>
       </header>
       {children}
-      <footer className="border-t border-white/10 bg-[#0a1120]">
-        <div className="mx-auto max-w-3xl px-5 py-8 text-sm text-white/68">
-          <a href={homeHref(lang)} className="inline-flex items-center gap-1.5 hover:text-white/85">
+      <footer className="border-t border-border bg-card">
+        <div className="mx-auto max-w-3xl px-5 py-8 text-sm text-foreground/68">
+          <a href={homeHref(lang)} className="inline-flex items-center gap-1.5 hover:text-foreground/85">
             <ArrowLeft className="h-4 w-4" />
           </a>
         </div>
@@ -85,28 +85,28 @@ function TemplateCard({ lang, idx }: { lang: TplLang; idx: number }) {
   }
 
   return (
-    <div className="rounded-2xl border border-white/12 bg-white/[0.03] p-5 sm:p-6">
+    <div className="rounded-2xl border border-border bg-card p-5 sm:p-6">
       <div className="mb-1 flex items-start justify-between gap-3">
         <h3 className="text-lg font-semibold">{tpl.name[lang]}</h3>
         <button
           onClick={copy}
           className={`inline-flex shrink-0 items-center gap-1.5 rounded-full px-3.5 py-1.5 text-sm font-semibold transition ${
-            copied ? "bg-[#34d399] text-white" : "border border-[#34d399]/40 text-[#34d399] hover:bg-white/[0.05]"
+            copied ? "bg-[#34d399] text-white" : "border border-[#34d399]/40 text-[#34d399] hover:bg-muted"
           }`}
         >
           {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
           {copied ? c.copied : c.copy}
         </button>
       </div>
-      <p className="mb-3 text-sm text-white/58">
-        <span className="font-medium text-white/68">{c.whenLabel}:</span> {tpl.when[lang]}
+      <p className="mb-3 text-sm text-foreground/58">
+        <span className="font-medium text-foreground/68">{c.whenLabel}:</span> {tpl.when[lang]}
       </p>
       <textarea
         value={text}
         onChange={(e) => setText(e.target.value)}
         rows={text.split("\n").length + 1}
         spellCheck={false}
-        className="w-full resize-y rounded-xl border border-white/12 bg-[#070b14] p-4 font-mono text-[13.5px] leading-relaxed text-white/85 focus:border-[#34d399]/50 focus:outline-none"
+        className="w-full resize-y rounded-xl border border-border bg-background p-4 font-mono text-[13.5px] leading-relaxed text-foreground/85 focus:border-[#34d399]/50 focus:outline-none"
       />
     </div>
   );
@@ -120,15 +120,15 @@ export function TemplatesPage({ lang }: { lang: TplLang }) {
   return (
     <Shell lang={lang}>
       <main className="mx-auto max-w-3xl px-5 py-10 sm:py-14">
-        <nav className="mb-6 text-xs text-white/58">
+        <nav className="mb-6 text-xs text-foreground/58">
           <a href={homeHref(lang)} className="hover:underline">Accio Work</a>
           <span className="mx-1.5">/</span>
-          <span className="text-white/75">{c.kicker}</span>
+          <span className="text-foreground/75">{c.kicker}</span>
         </nav>
 
         <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-[#34d399]">{c.kicker}</p>
         <h1 className="text-3xl font-bold tracking-tight sm:text-[38px] sm:leading-tight">{c.h1}</h1>
-        <p className="mt-4 max-w-2xl text-lg leading-relaxed text-white/75">{c.intro}</p>
+        <p className="mt-4 max-w-2xl text-lg leading-relaxed text-foreground/75">{c.intro}</p>
         <img src="/img/tool-templates.webp" alt={IMG_ALT[lang]} width={800} height={800} loading="eager" className="mx-auto mt-6 w-full max-w-xs" />
 
         {/* Email templates */}
@@ -147,21 +147,21 @@ export function TemplatesPage({ lang }: { lang: TplLang }) {
               {doneCount}/{tplChecklist.length} {c.checklistDone}
             </span>
           </div>
-          <div className="overflow-hidden rounded-2xl border border-white/12 bg-white">
+          <div className="overflow-hidden rounded-2xl border border-border bg-card">
             {tplChecklist.map((item, i) => {
               const on = checked[i];
               return (
                 <button
                   key={i}
                   onClick={() => setChecked((a) => a.map((v, j) => (j === i ? !v : v)))}
-                  className={`flex w-full items-center gap-3 border-b border-white/10 px-5 py-3.5 text-left text-[15px] transition last:border-b-0 ${
-                    on ? "bg-white/[0.05]" : "hover:bg-black/[0.02]"
+                  className={`flex w-full items-center gap-3 border-b border-border px-5 py-3.5 text-left text-[15px] transition last:border-b-0 ${
+                    on ? "bg-muted" : "hover:bg-black/[0.02]"
                   }`}
                 >
                   <span className={`grid h-5 w-5 shrink-0 place-items-center rounded-md border ${on ? "border-[#34d399] bg-[#34d399] text-white" : "border-black/25"}`}>
                     {on && <Check className="h-3.5 w-3.5" />}
                   </span>
-                  <span className={on ? "text-white/58 line-through" : "text-white/85"}>{item[lang]}</span>
+                  <span className={on ? "text-foreground/58 line-through" : "text-foreground/85"}>{item[lang]}</span>
                 </button>
               );
             })}
@@ -178,7 +178,7 @@ export function TemplatesPage({ lang }: { lang: TplLang }) {
           <p className="mt-2 text-xs text-white/50">{c.ctaNote}</p>
         </div>
 
-        <p className="mt-8 text-xs leading-relaxed text-white/52">{c.disclaimer}</p>
+        <p className="mt-8 text-xs leading-relaxed text-foreground/52">{c.disclaimer}</p>
       </main>
     </Shell>
   );

@@ -63,7 +63,7 @@ function Slider({
   return (
     <div>
       <div className="mb-1.5 flex items-baseline justify-between">
-        <span className="text-sm font-medium text-white/85">{label}</span>
+        <span className="text-sm font-medium text-foreground/85">{label}</span>
         <span className="text-sm font-bold text-[#34d399]">{value} {unit}</span>
       </div>
       <input
@@ -79,10 +79,10 @@ function Slider({
 function Shell({ lang, children }: { lang: RoiLang; children: ReactNode }) {
   const c = roiChrome[lang];
   return (
-    <div className="min-h-screen bg-[#070b14] text-[#e8eef9]">
-      <header className="border-b border-white/10 bg-[#0a1120]/80 backdrop-blur">
+    <div className="min-h-screen bg-background text-foreground">
+      <header className="border-b border-border bg-background/80 backdrop-blur">
         <div className="mx-auto flex max-w-4xl items-center justify-between px-5 py-4">
-          <a href={homeHref(lang)} className="flex items-center gap-1.5 font-bold tracking-tight text-[#e8eef9]" style={{ fontSize: 22 }}>
+          <a href={homeHref(lang)} className="flex items-center gap-1.5 font-bold tracking-tight text-foreground" style={{ fontSize: 22 }}>
             <svg width={21} height={22} viewBox="0 0 28 28" aria-hidden>
               <defs>
                 <linearGradient id="accioTri" x1="0" y1="1" x2="1" y2="0">
@@ -105,9 +105,9 @@ function Shell({ lang, children }: { lang: RoiLang; children: ReactNode }) {
         </div>
       </header>
       {children}
-      <footer className="border-t border-white/10 bg-[#0a1120]">
-        <div className="mx-auto max-w-4xl px-5 py-8 text-sm text-white/68">
-          <a href={homeHref(lang)} className="inline-flex items-center gap-1.5 hover:text-white/85">
+      <footer className="border-t border-border bg-card">
+        <div className="mx-auto max-w-4xl px-5 py-8 text-sm text-foreground/68">
+          <a href={homeHref(lang)} className="inline-flex items-center gap-1.5 hover:text-foreground/85">
             <ArrowLeft className="h-4 w-4" /> {homeHref(lang) === "/" ? "Home" : ""}
           </a>
         </div>
@@ -185,39 +185,39 @@ export function RoiCalculator({ lang }: { lang: RoiLang }) {
           <Sparkles className="h-4 w-4" /> {c.kicker}
         </p>
         <h1 className="text-3xl font-bold tracking-tight sm:text-[40px] sm:leading-tight">{c.h1}</h1>
-        <p className="mt-4 max-w-2xl text-lg leading-relaxed text-white/75">{c.intro}</p>
+        <p className="mt-4 max-w-2xl text-lg leading-relaxed text-foreground/75">{c.intro}</p>
         <img src="/img/tool-roi.webp" alt={IMG_ALT[lang]} width={800} height={800} loading="eager" className="mx-auto mt-6 w-full max-w-xs" />
 
         <div className="mt-8 grid gap-6 lg:grid-cols-2">
           {/* Inputs */}
-          <div className="rounded-3xl border border-white/12 bg-white/[0.03] p-6 sm:p-7">
+          <div className="rounded-3xl border border-border bg-card p-6 sm:p-7">
             <div className="space-y-5">
               {c.tasks.map((t, i) => (
                 <Slider key={i} label={t} value={hours[i]} max={40} unit={c.hoursUnit}
                   onChange={(n) => setHours((h) => h.map((v, j) => (j === i ? n : v)))} />
               ))}
             </div>
-            <div className="mt-6 border-t border-white/12 pt-5">
+            <div className="mt-6 border-t border-border pt-5">
               <Slider label={c.offload} value={offload} max={80} unit="%"
                 onChange={(n) => setOffload(Math.max(30, n))} />
-              <p className="mt-1.5 text-xs text-white/52">{c.offloadHint}</p>
+              <p className="mt-1.5 text-xs text-foreground/52">{c.offloadHint}</p>
             </div>
-            <div className="mt-5 border-t border-white/12 pt-5">
-              <label className="flex cursor-pointer items-center gap-2 text-sm font-medium text-white/75">
+            <div className="mt-5 border-t border-border pt-5">
+              <label className="flex cursor-pointer items-center gap-2 text-sm font-medium text-foreground/75">
                 <input type="checkbox" checked={showMoney} onChange={(e) => setShowMoney(e.target.checked)}
                   className="h-4 w-4 rounded accent-[#34d399]" style={{ accentColor: "#34d399" }} />
                 {c.hourlyToggle}
               </label>
               {showMoney && (
                 <div className="mt-3 flex flex-wrap items-center gap-3">
-                  <span className="text-sm text-white/68">{c.hourlyLabel}</span>
+                  <span className="text-sm text-foreground/68">{c.hourlyLabel}</span>
                   <select value={cur} onChange={(e) => setCur(e.target.value)}
-                    className="rounded-lg border border-white/15 bg-white/[0.06] px-2 py-1.5 text-sm">
+                    className="rounded-lg border border-border bg-secondary px-2 py-1.5 text-sm">
                     {CURRENCIES.map((s) => <option key={s} value={s}>{s}</option>)}
                   </select>
                   <input type="number" min={0} value={rate} onChange={(e) => setRate(Number(e.target.value))}
-                    className="w-24 rounded-lg border border-white/15 bg-white/[0.06] px-3 py-1.5 text-sm" />
-                  <span className="text-sm text-white/52">{c.perHour}</span>
+                    className="w-24 rounded-lg border border-border bg-secondary px-3 py-1.5 text-sm" />
+                  <span className="text-sm text-foreground/52">{c.perHour}</span>
                 </div>
               )}
             </div>
@@ -249,7 +249,7 @@ export function RoiCalculator({ lang }: { lang: RoiLang }) {
             </div>
 
             {showMoney && rate > 0 && (
-              <div className="mt-6 flex gap-6 border-t border-white/10 pt-5">
+              <div className="mt-6 flex gap-6 border-t border-white/15 pt-5">
                 <div>
                   <div className="text-2xl font-bold tabular-nums">{cur}{fmt(moneyMonth)}</div>
                   <div className="text-xs text-white/60">{c.moneyMonth}</div>
@@ -277,7 +277,7 @@ export function RoiCalculator({ lang }: { lang: RoiLang }) {
           </div>
         </div>
 
-        <p className="mt-8 max-w-3xl text-xs leading-relaxed text-white/52">{c.disclaimer}</p>
+        <p className="mt-8 max-w-3xl text-xs leading-relaxed text-foreground/52">{c.disclaimer}</p>
       </main>
     </Shell>
   );

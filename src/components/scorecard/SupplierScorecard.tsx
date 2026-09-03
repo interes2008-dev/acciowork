@@ -50,10 +50,10 @@ async function copyText(text: string) {
 function Shell({ lang, children }: { lang: ScLang; children: ReactNode }) {
   const c = scChrome[lang];
   return (
-    <div className="min-h-screen bg-[#070b14] text-[#e8eef9]">
-      <header className="border-b border-white/10 bg-[#0a1120]/80 backdrop-blur">
+    <div className="min-h-screen bg-background text-foreground">
+      <header className="border-b border-border bg-background/80 backdrop-blur">
         <div className="mx-auto flex max-w-3xl items-center justify-between px-5 py-4">
-          <a href={homeHref(lang)} className="flex items-center gap-1.5 font-bold tracking-tight text-[#e8eef9]" style={{ fontSize: 22 }}>
+          <a href={homeHref(lang)} className="flex items-center gap-1.5 font-bold tracking-tight text-foreground" style={{ fontSize: 22 }}>
             <svg width={21} height={22} viewBox="0 0 28 28" aria-hidden>
               <defs>
                 <linearGradient id="accioTri" x1="0" y1="1" x2="1" y2="0">
@@ -76,9 +76,9 @@ function Shell({ lang, children }: { lang: ScLang; children: ReactNode }) {
         </div>
       </header>
       {children}
-      <footer className="border-t border-white/10 bg-[#0a1120]">
-        <div className="mx-auto max-w-3xl px-5 py-8 text-sm text-white/68">
-          <a href={homeHref(lang)} className="inline-flex items-center gap-1.5 hover:text-white/85">
+      <footer className="border-t border-border bg-card">
+        <div className="mx-auto max-w-3xl px-5 py-8 text-sm text-foreground/68">
+          <a href={homeHref(lang)} className="inline-flex items-center gap-1.5 hover:text-foreground/85">
             <ArrowLeft className="h-4 w-4" />
           </a>
         </div>
@@ -126,7 +126,7 @@ export function SupplierScorecard({ lang }: { lang: ScLang }) {
   const verdict = scVerdicts[tier];
   const tierStyle =
     tier === "strong"
-      ? { cls: "border-[#34d399]/30 bg-white/[0.05]", ring: "#34d399", Icon: ShieldCheck }
+      ? { cls: "border-[#34d399]/30 bg-muted", ring: "#34d399", Icon: ShieldCheck }
       : tier === "caution"
         ? { cls: "border-amber-400/40 bg-amber-500/10", ring: "#d97706", Icon: ShieldQuestion }
         : { cls: "border-red-400/40 bg-red-500/10", ring: "#dc2626", Icon: ShieldAlert };
@@ -155,14 +155,14 @@ export function SupplierScorecard({ lang }: { lang: ScLang }) {
       <main className="mx-auto max-w-3xl px-5 py-10 sm:py-14">
         <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-[#34d399]">{c.kicker}</p>
         <h1 className="text-3xl font-bold tracking-tight sm:text-[40px] sm:leading-tight">{c.h1}</h1>
-        <p className="mt-4 text-lg leading-relaxed text-white/75">{c.intro}</p>
+        <p className="mt-4 text-lg leading-relaxed text-foreground/75">{c.intro}</p>
 
         <img src="/img/feature-sourcing.webp" alt={IMG_ALT[lang]} width={400} height={400} loading="eager" className="mx-auto mt-8 w-full max-w-[220px]" />
 
         {/* Criteria */}
         <div className="mt-8 space-y-4">
           {scCriteria.map((crit, i) => (
-            <div key={i} className="rounded-3xl border border-white/12 bg-white/[0.03] p-5 sm:p-6">
+            <div key={i} className="rounded-3xl border border-border bg-card p-5 sm:p-6">
               <div className="flex items-baseline gap-2">
                 <span className="text-sm font-bold text-[#34d399]">{i + 1}</span>
                 <h2 className="text-[16px] font-semibold">{crit.q[lang]}</h2>
@@ -176,7 +176,7 @@ export function SupplierScorecard({ lang }: { lang: ScLang }) {
                       type="button"
                       onClick={() => setAnswers((prev) => prev.map((v, k) => (k === i ? oi : v)))}
                       className={`rounded-2xl border px-3 py-2.5 text-left text-[13px] font-medium leading-snug transition ${
-                        active ? "border-[#34d399] bg-white/[0.05] text-[#e8eef9]" : "border-white/12 bg-white/[0.06] text-white/75 hover:border-[#34d399]/40"
+                        active ? "border-[#34d399] bg-muted text-foreground" : "border-border bg-secondary text-foreground/75 hover:border-[#34d399]/40"
                       }`}
                     >
                       {opt.l[lang]}
@@ -199,18 +199,18 @@ export function SupplierScorecard({ lang }: { lang: ScLang }) {
                 {pct}%
               </div>
               <div>
-                <p className="text-[13px] font-semibold uppercase tracking-wide text-white/52">{c.scoreLabel}</p>
+                <p className="text-[13px] font-semibold uppercase tracking-wide text-foreground/52">{c.scoreLabel}</p>
                 <h2 className="mt-0.5 flex items-center gap-2 text-xl font-bold">
                   <tierStyle.Icon className="h-5 w-5" style={{ color: tierStyle.ring }} />
                   {verdict.title[lang]}
                 </h2>
               </div>
             </div>
-            <p className="mt-4 text-[15px] leading-relaxed text-white/80">{verdict.body[lang]}</p>
-            <p className="mt-5 text-[13px] font-semibold uppercase tracking-wide text-white/52">{c.recommendations}</p>
+            <p className="mt-4 text-[15px] leading-relaxed text-foreground/80">{verdict.body[lang]}</p>
+            <p className="mt-5 text-[13px] font-semibold uppercase tracking-wide text-foreground/52">{c.recommendations}</p>
             <ul className="mt-2 space-y-1.5">
               {verdict.tips[lang].map((tip, ti) => (
-                <li key={ti} className="flex items-start gap-2 text-[15px] leading-relaxed text-white/80">
+                <li key={ti} className="flex items-start gap-2 text-[15px] leading-relaxed text-foreground/80">
                   <Check className="mt-1 h-4 w-4 shrink-0 text-[#34d399]" />
                   <span>{tip}</span>
                 </li>
@@ -219,14 +219,14 @@ export function SupplierScorecard({ lang }: { lang: ScLang }) {
             <button
               type="button"
               onClick={onShare}
-              className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-4 py-2 text-sm font-semibold text-[#e8eef9] transition hover:border-[#34d399]/50"
+              className="mt-6 inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-4 py-2 text-sm font-semibold text-foreground transition hover:border-[#34d399]/50"
             >
               {shared ? <Check className="h-4 w-4 text-[#34d399]" /> : <Share2 className="h-4 w-4" />}
               {shared ? c.copied : c.share}
             </button>
           </div>
         ) : (
-          <p className="mt-8 rounded-2xl border border-dashed border-white/15 bg-white/[0.06] px-5 py-4 text-center text-[14px] text-white/62">
+          <p className="mt-8 rounded-2xl border border-dashed border-border bg-secondary px-5 py-4 text-center text-[14px] text-foreground/62">
             {answeredCount} / {scCriteria.length}
           </p>
         )}
@@ -242,8 +242,8 @@ export function SupplierScorecard({ lang }: { lang: ScLang }) {
           <p className="mt-2 text-xs text-white/50">{c.ctaNote}</p>
         </section>
 
-        <div className="mt-6 flex items-start gap-2 text-xs leading-relaxed text-white/52">
-          <Info className="mt-0.5 h-4 w-4 shrink-0 text-white/45" />
+        <div className="mt-6 flex items-start gap-2 text-xs leading-relaxed text-foreground/52">
+          <Info className="mt-0.5 h-4 w-4 shrink-0 text-foreground/45" />
           <p>{c.note}</p>
         </div>
       </main>

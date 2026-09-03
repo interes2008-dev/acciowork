@@ -50,10 +50,10 @@ async function copyText(text: string) {
 function Shell({ lang, children }: { lang: PrLang; children: ReactNode }) {
   const c = prChrome[lang];
   return (
-    <div className="min-h-screen bg-[#070b14] text-[#e8eef9]">
-      <header className="border-b border-white/10 bg-[#0a1120]/80 backdrop-blur">
+    <div className="min-h-screen bg-background text-foreground">
+      <header className="border-b border-border bg-background/80 backdrop-blur">
         <div className="mx-auto flex max-w-3xl items-center justify-between px-5 py-4">
-          <a href={homeHref(lang)} className="flex items-center gap-1.5 font-bold tracking-tight text-[#e8eef9]" style={{ fontSize: 22 }}>
+          <a href={homeHref(lang)} className="flex items-center gap-1.5 font-bold tracking-tight text-foreground" style={{ fontSize: 22 }}>
             <svg width={21} height={22} viewBox="0 0 28 28" aria-hidden>
               <defs>
                 <linearGradient id="accioTri" x1="0" y1="1" x2="1" y2="0">
@@ -76,9 +76,9 @@ function Shell({ lang, children }: { lang: PrLang; children: ReactNode }) {
         </div>
       </header>
       {children}
-      <footer className="border-t border-white/10 bg-[#0a1120]">
-        <div className="mx-auto max-w-3xl px-5 py-8 text-sm text-white/68">
-          <a href={homeHref(lang)} className="inline-flex items-center gap-1.5 hover:text-white/85">
+      <footer className="border-t border-border bg-card">
+        <div className="mx-auto max-w-3xl px-5 py-8 text-sm text-foreground/68">
+          <a href={homeHref(lang)} className="inline-flex items-center gap-1.5 hover:text-foreground/85">
             <ArrowLeft className="h-4 w-4" />
           </a>
         </div>
@@ -99,12 +99,12 @@ function PromptCard({ lang, index }: { lang: PrLang; index: number }) {
     }
   };
   return (
-    <article className="rounded-3xl border border-white/12 bg-white/[0.03] p-6 sm:p-7">
+    <article className="rounded-3xl border border-border bg-card p-6 sm:p-7">
       <div className="flex items-baseline gap-3">
         <span className="text-lg font-bold text-[#34d399]">{index + 1}</span>
         <h3 className="text-lg font-bold tracking-tight">{p.title[lang]}</h3>
       </div>
-      <p className="mt-1 text-[14px] leading-relaxed text-white/62">{p.desc[lang]}</p>
+      <p className="mt-1 text-[14px] leading-relaxed text-foreground/62">{p.desc[lang]}</p>
       <div className="mt-4 rounded-2xl bg-[#0E1210] p-4">
         <p className="whitespace-pre-wrap text-[14px] leading-relaxed text-white/90">{p.body[lang]}</p>
         <button onClick={onCopy}
@@ -113,9 +113,9 @@ function PromptCard({ lang, index }: { lang: PrLang; index: number }) {
           {copied ? c.copied : c.copy}
         </button>
       </div>
-      <p className="mt-3 flex items-start gap-1.5 text-[13px] leading-relaxed text-white/62">
+      <p className="mt-3 flex items-start gap-1.5 text-[13px] leading-relaxed text-foreground/62">
         <Lightbulb className="mt-0.5 h-4 w-4 shrink-0 text-amber-500" />
-        <span><span className="font-semibold text-white/75">{c.tipLabel}:</span> {p.tip[lang]}</span>
+        <span><span className="font-semibold text-foreground/75">{c.tipLabel}:</span> {p.tip[lang]}</span>
       </p>
     </article>
   );
@@ -137,12 +137,12 @@ export function PromptsPage({ lang }: { lang: PrLang }) {
       <main className="mx-auto max-w-3xl px-5 py-10 sm:py-14">
         <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-[#34d399]">{c.kicker}</p>
         <h1 className="text-3xl font-bold tracking-tight sm:text-[40px] sm:leading-tight">{c.h1}</h1>
-        <p className="mt-4 text-lg leading-relaxed text-white/75">{c.intro}</p>
+        <p className="mt-4 text-lg leading-relaxed text-foreground/75">{c.intro}</p>
 
         <img src="/img/landing-prompts.webp" alt={IMG_ALT[lang]} width={640} height={640} loading="eager" className="mx-auto mt-8 w-full max-w-xs" />
 
         <button onClick={onCopyAll}
-          className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-4 py-2 text-sm font-semibold text-[#e8eef9] transition hover:border-[#34d399]/50">
+          className="mt-6 inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-4 py-2 text-sm font-semibold text-foreground transition hover:border-[#34d399]/50">
           {allCopied ? <Check className="h-4 w-4 text-[#34d399]" /> : <Copy className="h-4 w-4" />}
           {allCopied ? c.copied : c.copyAll}
         </button>
@@ -164,8 +164,8 @@ export function PromptsPage({ lang }: { lang: PrLang }) {
           <p className="mt-2 text-xs text-white/50">{c.ctaNote}</p>
         </section>
 
-        <div className="mt-6 flex items-start gap-2 text-xs leading-relaxed text-white/52">
-          <Info className="mt-0.5 h-4 w-4 shrink-0 text-white/45" />
+        <div className="mt-6 flex items-start gap-2 text-xs leading-relaxed text-foreground/52">
+          <Info className="mt-0.5 h-4 w-4 shrink-0 text-foreground/45" />
           <p>{c.note}</p>
         </div>
       </main>

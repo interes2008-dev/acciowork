@@ -108,6 +108,38 @@
   --sidebar-ring: oklch(0.704 0.04 256.788);
 }
 
+
+.light {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.19 0.03 250);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.19 0.03 250);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.19 0.03 250);
+  --primary: oklch(0.16 0.02 250);
+  --primary-foreground: oklch(0.99 0 0);
+  --primary-glow: oklch(0.82 0.16 165);
+  --accent-emerald: oklch(0.72 0.16 165);
+  --mint-50: oklch(0.975 0.025 165);
+  --mint-100: oklch(0.94 0.06 165);
+  --mint-200: oklch(0.88 0.1 165);
+  --secondary: oklch(0.975 0.005 250);
+  --secondary-foreground: oklch(0.19 0.03 250);
+  --muted: oklch(0.97 0.005 250);
+  --muted-foreground: oklch(0.55 0.02 250);
+  --accent: oklch(0.94 0.06 165);
+  --accent-foreground: oklch(0.32 0.1 165);
+  --border: oklch(0.93 0.005 250);
+  --input: oklch(0.93 0.005 250);
+  --ring: oklch(0.72 0.16 165);
+  --gradient-hero: radial-gradient(60% 50% at 50% 0%, oklch(0.94 0.08 165 / 0.55) 0%, transparent 70%), linear-gradient(180deg, oklch(1 0 0) 0%, oklch(0.985 0.015 165) 100%);
+  --gradient-emerald: linear-gradient(135deg, oklch(0.78 0.16 165) 0%, oklch(0.86 0.13 162) 100%);
+  --gradient-mint-soft: linear-gradient(180deg, oklch(0.99 0.01 165) 0%, oklch(0.96 0.04 165) 100%);
+  --shadow-card: 0 1px 2px oklch(0.2 0.03 250 / 0.04), 0 8px 24px -8px oklch(0.2 0.03 250 / 0.08);
+  --shadow-card-hover: 0 4px 12px oklch(0.2 0.03 250 / 0.06), 0 20px 40px -12px oklch(0.2 0.03 250 / 0.12);
+  --shadow-elegant: 0 30px 80px -24px oklch(0.2 0.03 250 / 0.18);
+}
+
 .dark {
   --background: oklch(0.129 0.042 264.695);
   --foreground: oklch(0.984 0.003 247.858);
@@ -219,7 +251,7 @@
 .article-prose {
   font-size: 1.05rem;
   line-height: 1.72;
-  color: oklch(0.28 0.02 250);
+  color: color-mix(in srgb, var(--foreground) 86%, transparent);
   font-feature-settings: "kern", "liga", "onum";
   hanging-punctuation: first last;
   text-rendering: optimizeLegibility;
@@ -240,7 +272,7 @@
   line-height: 0.88;
   padding: 0.28rem 0.7rem 0 0;
   margin-right: 0.05em;
-  color: oklch(0.16 0.02 250);
+  color: var(--foreground);
 }
 
 .article-prose h2 {
@@ -249,7 +281,7 @@
   font-size: 2rem;
   line-height: 1.15;
   letter-spacing: -0.02em;
-  color: oklch(0.14 0.02 250);
+  color: var(--foreground);
   margin-top: 2.6em;
   margin-bottom: 0.6em;
 }
@@ -258,7 +290,7 @@
   display: block;
   width: 2.5rem;
   height: 2px;
-  background: oklch(0.72 0.16 165);
+  background: var(--ring);
   margin-bottom: 1rem;
 }
 
@@ -268,7 +300,7 @@
   font-size: 1.4rem;
   line-height: 1.25;
   letter-spacing: -0.015em;
-  color: oklch(0.16 0.02 250);
+  color: var(--foreground);
   margin-top: 2em;
   margin-bottom: 0.5em;
 }
@@ -278,13 +310,13 @@
   font-size: 0.82rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: oklch(0.42 0.09 165);
+  color: var(--ring);
   margin-top: 2em;
   margin-bottom: 0.4em;
 }
 
 .article-prose a {
-  color: oklch(0.35 0.11 165);
+  color: var(--ring);
   text-decoration: none;
   background-image: linear-gradient(oklch(0.72 0.16 165 / 0.35), oklch(0.72 0.16 165 / 0.35));
   background-position: 0 92%;
@@ -294,18 +326,18 @@
 }
 .article-prose a:hover { background-size: 100% 100%; }
 
-.article-prose strong { color: oklch(0.14 0.02 250); font-weight: 600; }
+.article-prose strong { color: var(--foreground); font-weight: 600; }
 .article-prose em { font-style: italic; }
 
 .article-prose blockquote {
   margin: 2.2em 0;
   padding: 0.2em 0 0.2em 1.6em;
-  border-left: 3px solid oklch(0.72 0.16 165);
+  border-left: 3px solid var(--ring);
   font-family: "Fraunces", "Georgia", serif;
   font-style: italic;
   font-size: 1.45rem;
   line-height: 1.5;
-  color: oklch(0.18 0.02 250);
+  color: var(--foreground);
   letter-spacing: -0.01em;
 }
 .article-prose blockquote p { margin: 0; }
@@ -327,10 +359,10 @@
   top: 0.78em;
   width: 0.6em;
   height: 2px;
-  background: oklch(0.72 0.16 165);
+  background: var(--ring);
 }
 .article-prose ol { list-style: decimal; }
-.article-prose ol > li::marker { color: oklch(0.42 0.09 165); font-weight: 600; }
+.article-prose ol > li::marker { color: var(--ring); font-weight: 600; }
 .article-prose ol > li { margin-top: 0.55em; padding-left: 0.3em; }
 
 .article-prose hr {
@@ -343,7 +375,7 @@
 .article-prose hr::before {
   content: "· · ·";
   letter-spacing: 0.6em;
-  color: oklch(0.55 0.05 165);
+  color: var(--muted-foreground);
   font-size: 1.1rem;
 }
 
@@ -356,10 +388,10 @@
 .article-prose code {
   font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 0.88em;
-  background: oklch(0.96 0.01 165);
+  background: var(--muted);
   padding: 0.15em 0.4em;
   border-radius: 0.35em;
-  color: oklch(0.22 0.06 165);
+  color: var(--foreground);
 }
 .article-prose pre {
   background: oklch(0.16 0.02 250);
@@ -386,12 +418,12 @@
 .article-prose th, .article-prose td {
   padding: 0.75em 1em;
   text-align: left;
-  border-bottom: 1px solid oklch(0.9 0.01 250);
+  border-bottom: 1px solid var(--border);
 }
 .article-prose th {
   font-weight: 600;
-  color: oklch(0.14 0.02 250);
-  border-bottom: 2px solid oklch(0.16 0.02 250);
+  color: var(--foreground);
+  border-bottom: 2px solid var(--border);
 }
 
 @media (max-width: 640px) {

@@ -8,6 +8,8 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 
+import { useState, useEffect } from "react";
+import { Sun, Moon } from "lucide-react";
 import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
@@ -28,8 +30,8 @@ function NotFoundComponent() {
             <defs>
               <linearGradient id="nf404" x1="0" y1="1" x2="1" y2="0">
                 <stop offset="0%" stopColor="#0F172A" />
-                <stop offset="55%" stopColor="#17B26A" />
-                <stop offset="100%" stopColor="#7CE7C2" />
+                <stop offset="55%" stopColor="#34d399" />
+                <stop offset="100%" stopColor="#5eead4" />
               </linearGradient>
             </defs>
             <path d="M14 3 L26 25 L2 25 Z" fill="url(#nf404)" />
@@ -46,7 +48,7 @@ function NotFoundComponent() {
             <a
               key={s.href}
               href={s.href}
-              className="rounded-full border border-black/10 bg-white px-4 py-2 text-sm font-medium text-foreground transition hover:border-[#17B26A]/50 hover:text-[#17B26A]"
+              className="rounded-full border border-border bg-secondary px-4 py-2 text-sm font-medium text-foreground transition hover:border-[#34d399]/50 hover:text-[#34d399]"
             >
               {s.label}
             </a>
@@ -119,6 +121,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     scripts: [
       {
+        children: `(function(){try{var t=localStorage.getItem('accio-theme');if(t==='light'){document.documentElement.classList.add('light');}}catch(e){}})();`,
+      },
+      {
         children: `(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=110831748', 'ym');ym(110831748, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});`,
       },
     ],
@@ -128,6 +133,33 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
+
+function ThemeToggle() {
+  const [light, setLight] = useState(false);
+  useEffect(() => {
+    setLight(document.documentElement.classList.contains("light"));
+  }, []);
+  const toggle = () => {
+    const el = document.documentElement;
+    const next = !el.classList.contains("light");
+    el.classList.toggle("light", next);
+    try {
+      localStorage.setItem("accio-theme", next ? "light" : "dark");
+    } catch {
+      /* ignore */
+    }
+    setLight(next);
+  };
+  return (
+    <button
+      onClick={toggle}
+      aria-label="Toggle light and dark theme"
+      className="fixed bottom-4 right-4 z-[60] flex h-11 w-11 items-center justify-center rounded-full border border-border bg-card text-foreground shadow-elegant transition hover:brightness-110"
+    >
+      {light ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
+    </button>
+  );
+}
 
 function RootShell({ children }: { children: React.ReactNode }) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
@@ -141,6 +173,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         {children}
+        <ThemeToggle />
         <noscript>
           <div>
             <img

@@ -47,7 +47,7 @@ export function LangMenu({ lang }: { lang: L }) {
         aria-haspopup="menu"
         aria-expanded={open}
         aria-label="Language"
-        className="flex items-center gap-1.5 rounded-full px-2.5 py-1.5 text-sm font-medium text-[#e8eef9]/70 transition hover:text-[#e8eef9]"
+        className="flex items-center gap-1.5 rounded-full px-2.5 py-1.5 text-sm font-medium text-foreground/70 transition hover:text-foreground"
       >
         <Globe className="h-4 w-4" />
         <span className="hidden sm:inline">{NAMES[lang]}</span>
@@ -56,7 +56,7 @@ export function LangMenu({ lang }: { lang: L }) {
       {open && (
         <div
           role="menu"
-          className="absolute right-0 top-full z-50 mt-2 w-44 overflow-hidden rounded-2xl border border-white/12 bg-white/[0.03] p-1.5 shadow-[0_8px_30px_rgba(0,0,0,0.12)]"
+          className="absolute right-0 top-full z-50 mt-2 w-44 overflow-hidden rounded-2xl border border-border bg-card p-1.5 shadow-[0_8px_30px_rgba(0,0,0,0.12)]"
         >
           {LANGS.map((l) => (
             <a
@@ -64,7 +64,7 @@ export function LangMenu({ lang }: { lang: L }) {
               href={hrefFor(l)}
               role="menuitem"
               className={`flex items-center justify-between rounded-xl px-3 py-2 text-[15px] transition ${
-                l === lang ? "bg-white/[0.05] font-semibold text-[#e8eef9]" : "text-[#e8eef9]/75 hover:bg-white/[0.05]"
+                l === lang ? "bg-muted font-semibold text-foreground" : "text-foreground/75 hover:bg-muted"
               }`}
             >
               {NAMES[l]}

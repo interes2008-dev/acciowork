@@ -28,10 +28,10 @@ function langHref(lang: TtLang, path: string) {
 function Shell({ lang, children }: { lang: TtLang; children: ReactNode }) {
   const c = ttChrome[lang];
   return (
-    <div className="min-h-screen bg-[#070b14] text-[#e8eef9]">
-      <header className="border-b border-white/10 bg-[#0a1120]/80 backdrop-blur">
+    <div className="min-h-screen bg-background text-foreground">
+      <header className="border-b border-border bg-background/80 backdrop-blur">
         <div className="mx-auto flex max-w-3xl items-center justify-between px-5 py-4">
-          <a href={homeHref(lang)} className="flex items-center gap-1.5 font-bold tracking-tight text-[#e8eef9]" style={{ fontSize: 22 }}>
+          <a href={homeHref(lang)} className="flex items-center gap-1.5 font-bold tracking-tight text-foreground" style={{ fontSize: 22 }}>
             <svg width={21} height={22} viewBox="0 0 28 28" aria-hidden>
               <defs>
                 <linearGradient id="accioTri" x1="0" y1="1" x2="1" y2="0">
@@ -54,9 +54,9 @@ function Shell({ lang, children }: { lang: TtLang; children: ReactNode }) {
         </div>
       </header>
       {children}
-      <footer className="border-t border-white/10 bg-[#0a1120]">
-        <div className="mx-auto max-w-3xl px-5 py-8 text-sm text-white/68">
-          <a href={homeHref(lang)} className="inline-flex items-center gap-1.5 hover:text-white/85">
+      <footer className="border-t border-border bg-card">
+        <div className="mx-auto max-w-3xl px-5 py-8 text-sm text-foreground/68">
+          <a href={homeHref(lang)} className="inline-flex items-center gap-1.5 hover:text-foreground/85">
             <ArrowLeft className="h-4 w-4" />
           </a>
         </div>
@@ -79,7 +79,7 @@ export function TikTokPage({ lang }: { lang: TtLang }) {
           <Zap className="h-4 w-4" /> {c.kicker}
         </p>
         <h1 className="text-3xl font-bold tracking-tight sm:text-[40px] sm:leading-tight">{c.h1}</h1>
-        <p className="mt-4 text-lg leading-relaxed text-white/75">{c.intro}</p>
+        <p className="mt-4 text-lg leading-relaxed text-foreground/75">{c.intro}</p>
 
         <img src="/img/landing-tiktok.webp" alt={IMG_ALT[lang]} width={640} height={640} loading="eager" className="mx-auto mt-8 w-full max-w-xs" />
 
@@ -88,7 +88,7 @@ export function TikTokPage({ lang }: { lang: TtLang }) {
           <h2 className="text-xl font-bold tracking-tight">{c.painTitle}</h2>
           <ul className="mt-4 space-y-3">
             {c.pains.map((line, i) => (
-              <li key={i} className="flex gap-3 rounded-2xl border border-black/8 bg-white/[0.03] p-4 text-[15px] leading-relaxed text-white/80">
+              <li key={i} className="flex gap-3 rounded-2xl border border-black/8 bg-card p-4 text-[15px] leading-relaxed text-foreground/80">
                 <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#0E1210] text-[11px] font-bold text-white">{i + 1}</span>
                 {line}
               </li>
@@ -99,14 +99,14 @@ export function TikTokPage({ lang }: { lang: TtLang }) {
         {/* Flow */}
         <section className="mt-12">
           <h2 className="text-2xl font-bold tracking-tight">{c.flowTitle}</h2>
-          <p className="mt-2 text-[15px] leading-relaxed text-white/68">{c.flowSub}</p>
+          <p className="mt-2 text-[15px] leading-relaxed text-foreground/68">{c.flowSub}</p>
           <div className="mt-6 space-y-4">
             {ttFlow.map((s, i) => (
-              <article key={i} className="flex gap-4 rounded-3xl border border-white/12 bg-white/[0.03] p-5 sm:p-6">
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/[0.05] text-lg font-bold text-[#34d399]">{i + 1}</div>
+              <article key={i} className="flex gap-4 rounded-3xl border border-border bg-card p-5 sm:p-6">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-muted text-lg font-bold text-[#34d399]">{i + 1}</div>
                 <div>
                   <h3 className="text-lg font-bold tracking-tight">{s.title[lang]}</h3>
-                  <p className="mt-1 text-[15px] leading-relaxed text-white/75">{s.body[lang]}</p>
+                  <p className="mt-1 text-[15px] leading-relaxed text-foreground/75">{s.body[lang]}</p>
                 </div>
               </article>
             ))}
@@ -119,7 +119,7 @@ export function TikTokPage({ lang }: { lang: TtLang }) {
           <div className="mt-4 grid gap-3 sm:grid-cols-3">
             {cross.map((t, i) => (
               <a key={i} href={t.href}
-                className="flex items-center gap-3 rounded-2xl border border-white/12 bg-white/[0.03] p-4 text-[14px] font-medium text-white/85 transition hover:border-[#34d399]/40 hover:text-white">
+                className="flex items-center gap-3 rounded-2xl border border-border bg-card p-4 text-[14px] font-medium text-foreground/85 transition hover:border-[#34d399]/40 hover:text-white">
                 <t.icon className="h-5 w-5 shrink-0 text-[#34d399]" />
                 {t.label}
               </a>
@@ -139,8 +139,8 @@ export function TikTokPage({ lang }: { lang: TtLang }) {
         </section>
 
         {/* Honest note */}
-        <div className="mt-6 flex items-start gap-2 text-xs leading-relaxed text-white/52">
-          <Info className="mt-0.5 h-4 w-4 shrink-0 text-white/45" />
+        <div className="mt-6 flex items-start gap-2 text-xs leading-relaxed text-foreground/52">
+          <Info className="mt-0.5 h-4 w-4 shrink-0 text-foreground/45" />
           <p>{c.note}</p>
         </div>
       </main>

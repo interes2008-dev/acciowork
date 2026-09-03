@@ -10,8 +10,8 @@ function Logo({ size = 28 }: { size?: number }) {
         <defs>
           <linearGradient id="accioTriBlog" x1="0" y1="1" x2="1" y2="0">
             <stop offset="0%" stopColor="#0F172A" />
-            <stop offset="55%" stopColor="#17B26A" />
-            <stop offset="100%" stopColor="#7CE7C2" />
+            <stop offset="55%" stopColor="#34d399" />
+            <stop offset="100%" stopColor="#5eead4" />
           </linearGradient>
         </defs>
         <path d="M14 3 L26 25 L2 25 Z" fill="url(#accioTriBlog)" />
@@ -54,7 +54,7 @@ function LanguageSwitcher() {
       {open && (
         <ul
           role="listbox"
-          className="absolute right-0 top-full z-50 mt-2 w-40 overflow-hidden rounded-2xl border border-border/70 bg-white p-1.5 shadow-elegant"
+          className="absolute right-0 top-full z-50 mt-2 w-40 overflow-hidden rounded-2xl border border-border/70 bg-popover p-1.5 shadow-elegant"
         >
           {options.map((code) => (
             <li key={code}>
@@ -93,7 +93,7 @@ function LanguageSwitcher() {
                 }`}
               >
                 <span>{t.langNames[code]}</span>
-                {lang === code && <Check className="h-4 w-4 text-[#17B26A]" />}
+                {lang === code && <Check className="h-4 w-4 text-[#34d399]" />}
               </button>
             </li>
           ))}

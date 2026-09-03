@@ -232,7 +232,7 @@ export function CreditsUpdate({ lang }: { lang: Lang }) {
   return (
     <section className="bg-[#F0FFF4] px-5 py-20 md:px-8 md:py-28">
       <div className="mx-auto max-w-[1100px]">
-        <span className="inline-block rounded-full bg-white px-3 py-1 text-xs font-semibold tracking-wide text-[#0FA44F] shadow-sm">
+        <span className="inline-block rounded-full bg-secondary px-3 py-1 text-xs font-semibold tracking-wide text-[#0FA44F] shadow-sm">
           {d.badge}
         </span>
         <h2 className="mt-5 text-[32px] font-bold leading-[1.15] tracking-tight md:text-[44px]">
@@ -245,7 +245,7 @@ export function CreditsUpdate({ lang }: { lang: Lang }) {
         </div>
 
         <div className="mt-10 grid gap-5 md:grid-cols-2">
-          <div className="rounded-[28px] bg-white p-7 shadow-sm md:p-9">
+          <div className="rounded-[28px] bg-card p-7 shadow-sm md:p-9">
             <h3 className="text-[24px] font-bold md:text-[28px]">{d.headline}</h3>
             <p className="mt-3 text-[16px] leading-relaxed text-[#1a1a2e]/70">{d.sub}</p>
 
@@ -275,7 +275,7 @@ export function CreditsUpdate({ lang }: { lang: Lang }) {
 
           <div className="grid gap-4 sm:grid-cols-2">
             {d.bullets.map((b) => (
-              <div key={b.title} className="rounded-[24px] bg-white p-6 shadow-sm">
+              <div key={b.title} className="rounded-[24px] bg-card p-6 shadow-sm">
                 <div className="text-2xl">{b.icon}</div>
                 <h4 className="mt-3 text-[16px] font-semibold">{b.title}</h4>
                 <p className="mt-2 text-[14px] leading-relaxed text-[#1a1a2e]/65">{b.desc}</p>

@@ -347,7 +347,7 @@ function TrustPill({ children }: { children: React.ReactNode }) {
 function HeroVisual() {
   return (
     <div className="relative mx-auto mt-16 max-w-[1180px] px-2 sm:px-4">
-      <div className="overflow-hidden rounded-[28px] bg-white shadow-elegant ring-1 ring-border/70">
+      <div className="overflow-hidden rounded-[28px] bg-card shadow-elegant ring-1 ring-border/70">
         <div className="flex items-center gap-2 border-b border-border/60 bg-white/[0.06] px-5 py-3.5">
           <span className="h-3 w-3 rounded-full bg-[#FF5F57]" />
           <span className="h-3 w-3 rounded-full bg-[#FEBC2E]" />
@@ -472,7 +472,7 @@ function BusinessNeeds() {
               className={`rounded-full px-6 py-3 text-[14px] font-medium transition ${
                 k === active
                   ? "bg-[#34d399]/15 text-[#34d399]"
-                  : "border border-border/70 bg-white text-foreground/60 hover:text-foreground"
+                  : "border border-border/70 bg-secondary text-foreground/70 hover:text-foreground"
               }`}
             >
               {t.business.tabs[k].tabLabel}
@@ -741,7 +741,7 @@ function CompareChat() {
             </div>
           </div>
           {t.compareChat.rows.map((r, i) => (
-            <div key={i} className={`grid grid-cols-2 ${i % 2 ? "bg-white" : "bg-[#070b14]"}`}>
+            <div key={i} className={`grid grid-cols-2 ${i % 2 ? "bg-white/[0.03]" : ""}`}>
               <div className="flex items-start gap-3 border-t border-border/60 px-5 py-5 sm:px-8">
                 <X className="mt-0.5 h-4 w-4 shrink-0 text-[#C0392B]/70" />
                 <span className="text-[14.5px] leading-snug text-muted-foreground">{r.chat}</span>
@@ -777,7 +777,7 @@ function Pricing() {
               className={`relative flex flex-col rounded-[28px] p-8 ${
                 p.highlight
                   ? "bg-[#0a1120] text-white shadow-elegant ring-2 ring-[#34d399]"
-                  : "border border-border/70 bg-white text-foreground shadow-card"
+                  : "border border-border/70 bg-card text-foreground shadow-card"
               }`}
             >
               {p.highlight && (
@@ -1314,7 +1314,7 @@ function AccioStats() {
     { v: 400, d: 0, l: s.products },
   ];
   return (
-    <section ref={ref} className="border-y border-white/10 bg-white py-14 sm:py-16">
+    <section ref={ref} className="border-y border-border bg-card py-14 sm:py-16">
       <div className="mx-auto max-w-[1100px] px-6 text-center">
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#34d399]">{s.heading}</p>
         <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-3">
@@ -1327,7 +1327,7 @@ function AccioStats() {
             </div>
           ))}
         </div>
-        <p className="mt-8 text-[12px] text-foreground/35">{s.note}</p>
+        <p className="mt-8 text-[12px] text-foreground/45">{s.note}</p>
       </div>
     </section>
   );
