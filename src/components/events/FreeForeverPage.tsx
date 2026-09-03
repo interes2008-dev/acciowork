@@ -53,6 +53,7 @@ type EventDict = {
     highlight: string;
     quote: string;
     videoCaption: string;
+    steps: string[];
   };
   faq: {
     heading: string;
@@ -125,17 +126,13 @@ const DICTS: Record<Lang, EventDict> = {
       summaryTime: "1,440× faster",
     },
     story: {
-      heading: "A story that could be yours",
-      who: "Anton, a teacher from Novosibirsk",
-      p: [
-        "For three months he kept delaying his store launch. Everything got in the way: design, suppliers, SEO.",
-        "On Saturday night he typed into Accio: \"I want to sell smart LED mirrors. Build me a store.\"",
-        "48 minutes later the store was live. Landing page, product cards, Shopify, all of it.",
-        "Monday he launched ads. Tuesday he got his first order.",
-      ],
-      highlight: "Two weeks later: $2,400 in revenue.",
-      quote: "\"I'm not a designer or a salesperson. I'm a teacher. Accio Work did what would have taken me months.\"",
-      videoCaption: "48 minutes from idea to store, screen recording",
+      heading: "How this could look for you",
+      who: "Friday night: you have the idea, not the time",
+      p: ["Launching a store keeps slipping: design, suppliers, SEO, product cards. Sound familiar?", "You just describe the task: what you sell and which market you target.", "Accio Work helps assemble the basics: it finds suppliers on live Alibaba data, drafts your product cards and landing page, and flags duties and compliance.", "From there you refine it, launch ads and handle orders yourself. The setup grind that used to eat weeks fits into one evening."],
+      highlight: "Less setup grind. More time for the actual business.",
+      quote: "You do not need to be a designer or a developer to get online.",
+      videoCaption: "Illustrative scenario, not a guarantee. Real timelines and sales depend on your product, market and effort.",
+      steps: ["Describe the task", "The store basics come together", "Refine and launch"],
     },
     faq: {
       heading: "Frequently asked questions",
@@ -205,17 +202,13 @@ const DICTS: Record<Lang, EventDict> = {
       summaryTime: "в 1 440 раз",
     },
     story: {
-      heading: "История, которая станет вашей",
-      who: "Антон, учитель из Новосибирска",
-      p: [
-        "Три месяца откладывал запуск магазина. Мешало всё: дизайн, поставщики, SEO.",
-        "В субботу вечером написал в Accio: «Хочу продавать умные LED-зеркала. Сделай магазин.»",
-        "Через 48 минут магазин был готов. Лендинг, карточки, Shopify, всё.",
-        "В понедельник запустил рекламу. Во вторник получил первый заказ.",
-      ],
-      highlight: "Через 2 недели: $2 400 оборота.",
-      quote: "«Я не дизайнер и не продавец. Я учитель. Accio Work сделал то, на что ушли бы месяцы.»",
-      videoCaption: "48 минут от идеи до магазина, запись экрана",
+      heading: "Как это может выглядеть у вас",
+      who: "Вечер пятницы: идея есть, времени нет",
+      p: ["Запуск магазина всё время откладывается: дизайн, поставщики, SEO, карточки. Знакомо?", "Вы просто описываете задачу: что продаёте и на каком рынке.", "Accio Work помогает собрать основу: ищет поставщиков на живых данных Alibaba, готовит карточки и лендинг, подсказывает по пошлинам и комплаенсу.", "Дальше вы правите под себя, запускаете рекламу и ведёте заказы. Рутина старта, которая съедала недели, укладывается в один вечер."],
+      highlight: "Меньше рутины на старте. Больше времени на сам бизнес.",
+      quote: "Не нужно быть дизайнером или разработчиком, чтобы выйти в онлайн.",
+      videoCaption: "Иллюстративный сценарий, не гарантия. Реальные сроки и продажи зависят от товара, рынка и ваших усилий.",
+      steps: ["Опишите задачу", "Собирается основа магазина", "Правьте и запускайте"],
     },
     faq: {
       heading: "Частые вопросы",
@@ -285,17 +278,13 @@ const DICTS: Record<Lang, EventDict> = {
       summaryTime: "1.440× schneller",
     },
     story: {
-      heading: "Eine Geschichte, die deine werden kann",
-      who: "Anton, Lehrer aus Nowosibirsk",
-      p: [
-        "Drei Monate lang schob er den Shop-Start auf. Alles kam dazwischen: Design, Lieferanten, SEO.",
-        "Am Samstagabend tippte er in Accio: „Ich will smarte LED-Spiegel verkaufen. Bau mir einen Shop.\"",
-        "48 Minuten später war der Shop online. Landingpage, Produktkarten, Shopify, alles.",
-        "Montag startete er die Anzeigen. Dienstag kam die erste Bestellung.",
-      ],
-      highlight: "Zwei Wochen später: 2.400 $ Umsatz.",
-      quote: "„Ich bin kein Designer und kein Verkäufer. Ich bin Lehrer. Accio Work hat gemacht, wofür ich Monate gebraucht hätte.\"",
-      videoCaption: "48 Minuten von der Idee zum Shop, Bildschirmaufnahme",
+      heading: "So könnte es bei dir aussehen",
+      who: "Freitagabend: die Idee ist da, die Zeit fehlt",
+      p: ["Der Store-Start verschiebt sich ständig: Design, Lieferanten, SEO, Produktkarten. Kommt dir das bekannt vor?", "Du beschreibst einfach die Aufgabe: was du verkaufst und welchen Markt du anpeilst.", "Accio Work hilft, die Basis zusammenzustellen: findet Lieferanten auf Live-Alibaba-Daten, erstellt Produktkarten und Landingpage und weist auf Zoll und Compliance hin.", "Danach passt du alles an, schaltest Ads und bearbeitest Bestellungen selbst. Die Startroutine, die früher Wochen fraß, passt in einen Abend."],
+      highlight: "Weniger Startaufwand. Mehr Zeit fürs eigentliche Geschäft.",
+      quote: "Du musst kein Designer und kein Entwickler sein, um online zu gehen.",
+      videoCaption: "Illustratives Szenario, keine Garantie. Echte Zeiten und Umsätze hängen von Produkt, Markt und Einsatz ab.",
+      steps: ["Aufgabe beschreiben", "Die Store-Basis entsteht", "Anpassen und starten"],
     },
     faq: {
       heading: "Häufige Fragen",
@@ -365,17 +354,13 @@ const DICTS: Record<Lang, EventDict> = {
       summaryTime: "1.440× più veloce",
     },
     story: {
-      heading: "Una storia che può essere la tua",
-      who: "Anton, insegnante di Novosibirsk",
-      p: [
-        "Per tre mesi ha rimandato il lancio del suo store. Tutto gli si metteva contro: design, fornitori, SEO.",
-        "Sabato sera ha scritto ad Accio: «Voglio vendere specchi LED smart. Costruiscimi lo store.»",
-        "48 minuti dopo lo store era online. Landing, schede, Shopify, tutto.",
-        "Lunedì ha lanciato gli annunci. Martedì è arrivato il primo ordine.",
-      ],
-      highlight: "Due settimane dopo: $2.400 di fatturato.",
-      quote: "«Non sono un designer né un venditore. Sono un insegnante. Accio Work ha fatto in un'ora ciò che mi avrebbe preso mesi.»",
-      videoCaption: "48 minuti dall'idea allo store, registrazione schermo",
+      heading: "Come potrebbe essere per te",
+      who: "Venerdì sera: hai l'idea, non il tempo",
+      p: ["Il lancio del negozio slitta sempre: design, fornitori, SEO, schede prodotto. Ti suona familiare?", "Tu descrivi semplicemente il compito: cosa vendi e su quale mercato.", "Accio Work aiuta a mettere insieme le basi: trova fornitori su dati Alibaba in tempo reale, prepara schede prodotto e landing e segnala dazi e compliance.", "Poi rifinisci tu, lanci le ads e gestisci gli ordini. La routine di avvio che divorava settimane sta in una sera."],
+      highlight: "Meno lavoro di avvio. Più tempo per il business vero.",
+      quote: "Non serve essere designer o sviluppatore per andare online.",
+      videoCaption: "Scenario illustrativo, non una garanzia. Tempi e vendite reali dipendono da prodotto, mercato e impegno.",
+      steps: ["Descrivi il compito", "Le basi del negozio prendono forma", "Rifinisci e lancia"],
     },
     faq: {
       heading: "Domande frequenti",
@@ -445,17 +430,13 @@ const DICTS: Record<Lang, EventDict> = {
       summaryTime: "1.440× más rápido",
     },
     story: {
-      heading: "Una historia que puede ser la tuya",
-      who: "Antón, profesor de Novosibirsk",
-      p: [
-        "Durante tres meses fue posponiendo el lanzamiento de su tienda. Todo se interponía: diseño, proveedores, SEO.",
-        "El sábado por la noche escribió en Accio: «Quiero vender espejos LED inteligentes. Créame la tienda.»",
-        "48 minutos después la tienda estaba lista. Landing, fichas, Shopify, todo.",
-        "El lunes lanzó anuncios. El martes recibió su primer pedido.",
-      ],
-      highlight: "Dos semanas después: $2.400 de facturación.",
-      quote: "«No soy diseñador ni vendedor. Soy profesor. Accio Work hizo en horas lo que a mí me habría llevado meses.»",
-      videoCaption: "48 minutos de la idea a la tienda, grabación de pantalla",
+      heading: "Cómo podría verse en tu caso",
+      who: "Viernes por la noche: tienes la idea, no el tiempo",
+      p: ["El lanzamiento de la tienda se aplaza siempre: diseño, proveedores, SEO, fichas. ¿Te suena?", "Tú solo describes la tarea: qué vendes y a qué mercado apuntas.", "Accio Work ayuda a montar lo básico: encuentra proveedores con datos de Alibaba en vivo, prepara fichas y landing y avisa de aranceles y compliance.", "Luego ajustas tú, lanzas anuncios y gestionas los pedidos. La rutina de arranque que se comía semanas cabe en una tarde."],
+      highlight: "Menos trabajo de arranque. Más tiempo para el negocio real.",
+      quote: "No hace falta ser diseñador ni programador para salir online.",
+      videoCaption: "Escenario ilustrativo, no una garantía. Los plazos y ventas reales dependen de tu producto, mercado y esfuerzo.",
+      steps: ["Describe la tarea", "Se arma la base de la tienda", "Ajusta y lanza"],
     },
     faq: {
       heading: "Preguntas frecuentes",
@@ -525,17 +506,13 @@ const DICTS: Record<Lang, EventDict> = {
       summaryTime: "1.440× mais rápido",
     },
     story: {
-      heading: "Uma história que pode ser a sua",
-      who: "Anton, professor de Novosibirsk",
-      p: [
-        "Por três meses, adiou o lançamento da loja. Tudo atrapalhava: design, fornecedores, SEO.",
-        "No sábado à noite, escreveu no Accio: «Quero vender espelhos LED inteligentes. Monte a loja.»",
-        "48 minutos depois a loja estava no ar. Landing, fichas, Shopify, tudo.",
-        "Segunda-feira lançou anúncios. Terça-feira recebeu o primeiro pedido.",
-      ],
-      highlight: "Duas semanas depois: US$ 2.400 de faturamento.",
-      quote: "«Não sou designer nem vendedor. Sou professor. O Accio Work fez em horas o que eu levaria meses.»",
-      videoCaption: "48 minutos da ideia à loja, gravação de tela",
+      heading: "在你身上可能是这样",
+      who: "周五晚上：有想法，没时间",
+      p: ["开店总是一拖再拖：设计、供应商、SEO、商品页。是不是很熟悉？", "你只需描述任务：卖什么、面向哪个市场。", "Accio Work 帮你搭好底子：基于阿里实时数据找供应商，起草商品页和落地页，并提示关税与合规。", "之后你自己微调、投广告、处理订单。过去吃掉几周的开店琐事，一个晚上就能搞定。"],
+      highlight: "开店琐事更少，做真正的生意的时间更多。",
+      quote: "不必是设计师或开发者，也能上线开店。",
+      videoCaption: "这是示意场景，并非保证。真实周期与销量取决于你的产品、市场和投入。",
+      steps: ["描述任务", "店铺底子成形", "微调并上线"],
     },
     faq: {
       heading: "Perguntas frequentes",
@@ -605,17 +582,13 @@ const DICTS: Record<Lang, EventDict> = {
       summaryTime: "快 1,440 倍",
     },
     story: {
-      heading: "这个故事可能就是你的",
-      who: "安东,新西伯利亚的一位教师",
-      p: [
-        "他把开店拖了三个月。什么都碍事:设计、供应商、SEO。",
-        "周六晚上,他在 Accio 里输入:「我想卖智能 LED 镜。帮我把店做出来。」",
-        "48 分钟后,店就上线了。落地页、商品卡、Shopify ， 全都齐了。",
-        "周一投广告。周二收到第一单。",
-      ],
-      highlight: "两周后:2,400 美元流水。",
-      quote: "「我不是设计师,也不是销售,我是老师。Accio Work 几小时做完了我要花几个月的事。」",
-      videoCaption: "48 分钟从想法到店铺 ， 屏幕录像",
+      heading: "Como isso poderia ser para você",
+      who: "Sexta à noite: você tem a ideia, não o tempo",
+      p: ["O lançamento da loja vive adiando: design, fornecedores, SEO, anúncios de produto. Soa familiar?", "Você só descreve a tarefa: o que vende e para qual mercado.", "O Accio Work ajuda a montar a base: encontra fornecedores em dados ao vivo da Alibaba, prepara anúncios e landing e sinaliza impostos e compliance.", "Depois você ajusta, sobe anúncios e cuida dos pedidos. A rotina de arranque que comia semanas cabe em uma noite."],
+      highlight: "Menos trabalho de arranque. Mais tempo para o negócio de verdade.",
+      quote: "Você não precisa ser designer nem programador para entrar online.",
+      videoCaption: "Cenário ilustrativo, não uma garantia. Prazos e vendas reais dependem do seu produto, mercado e esforço.",
+      steps: ["Descreva a tarefa", "A base da loja toma forma", "Ajuste e lance"],
     },
     faq: {
       heading: "常见问题",
@@ -685,17 +658,13 @@ const DICTS: Record<Lang, EventDict> = {
       summaryTime: "1,440× तेज़",
     },
     story: {
-      heading: "एक कहानी जो आपकी हो सकती है",
-      who: "एंटन, नोवोसिबिर्स्क के शिक्षक",
-      p: [
-        "तीन महीने तक स्टोर लॉन्च टालते रहे। हर चीज़ रास्ते में आती थी: डिज़ाइन, सप्लायर, SEO।",
-        "शनिवार रात Accio में लिखा: «स्मार्ट LED शीशे बेचना है। स्टोर बना दो।»",
-        "48 मिनट बाद स्टोर लाइव था। लैंडिंग, कार्ड, Shopify, सब कुछ।",
-        "सोमवार को विज्ञापन चलाए। मंगलवार को पहला ऑर्डर।",
-      ],
-      highlight: "दो हफ़्ते बाद: $2,400 का रेवेन्यू।",
-      quote: "«मैं न डिज़ाइनर हूँ, न सेल्समैन। मैं शिक्षक हूँ। Accio Work ने वो कर दिया जिसमें मुझे महीनों लगते।»",
-      videoCaption: "48 मिनट में आइडिया से स्टोर तक, स्क्रीन रिकॉर्डिंग",
+      heading: "आपके लिए यह ऐसा दिख सकता है",
+      who: "शुक्रवार रात: आइडिया है, समय नहीं",
+      p: ["स्टोर लॉन्च टलता ही रहता है: डिज़ाइन, सप्लायर, SEO, प्रोडक्ट कार्ड। जाना-पहचाना लगता है?", "आप बस काम बताते हैं: क्या बेचते हैं और किस बाज़ार में।", "Accio Work आधार तैयार करने में मदद करता है: अलीबाबा के लाइव डेटा पर सप्लायर ढूँढता है, प्रोडक्ट कार्ड और लैंडिंग बनाता है, शुल्क और कंप्लायंस पर सचेत करता है।", "फिर आप खुद ठीक करते हैं, विज्ञापन चलाते हैं और ऑर्डर संभालते हैं। शुरुआत की जो रूटीन हफ्ते खा जाती थी, एक शाम में सिमट जाती है।"],
+      highlight: "शुरुआत की मेहनत कम। असली बिज़नेस के लिए समय ज़्यादा।",
+      quote: "ऑनलाइन आने के लिए डिज़ाइनर या डेवलपर होना ज़रूरी नहीं।",
+      videoCaption: "यह उदाहरण-स्वरूप परिदृश्य है, गारंटी नहीं। असली समय और बिक्री आपके उत्पाद, बाज़ार और मेहनत पर निर्भर हैं।",
+      steps: ["काम बताएं", "स्टोर का आधार बनता है", "ठीक करें और लॉन्च करें"],
     },
     faq: {
       heading: "अक्सर पूछे जाने वाले प्रश्न",
@@ -765,17 +734,13 @@ const DICTS: Record<Lang, EventDict> = {
       summaryTime: "1 440× plus rapide",
     },
     story: {
-      heading: "Une histoire qui pourrait être la vôtre",
-      who: "Anton, professeur à Novossibirsk",
-      p: [
-        "Il a repoussé le lancement de sa boutique pendant trois mois. Tout bloquait : le design, les fournisseurs, le SEO.",
-        "Un samedi soir, il écrit dans Accio : « Je veux vendre des miroirs LED connectés. Construis la boutique. »",
-        "48 minutes plus tard, la boutique était en ligne. Landing page, fiches produits, Shopify, tout y était.",
-        "Lundi il lançait les publicités. Mardi arrivait la première commande.",
-      ],
-      highlight: "Deux semaines plus tard : 2 400 $ de chiffre d'affaires.",
-      quote: "« Je ne suis ni designer ni commercial. Je suis professeur. Accio Work a fait en une soirée ce qui m'aurait pris des mois. »",
-      videoCaption: "De l'idée à la boutique en 48 minutes, enregistrement d'écran",
+      heading: "À quoi cela pourrait ressembler pour vous",
+      who: "Vendredi soir : vous avez l'idée, pas le temps",
+      p: ["Le lancement de la boutique est sans cesse repoussé : design, fournisseurs, SEO, fiches produit. Ça vous parle ?", "Vous décrivez simplement la tâche : ce que vous vendez et sur quel marché.", "Accio Work aide à monter la base : il trouve des fournisseurs sur données Alibaba en direct, rédige fiches et landing et signale droits et conformité.", "Ensuite vous affinez, lancez les pubs et gérez les commandes. La routine de démarrage qui dévorait des semaines tient en une soirée."],
+      highlight: "Moins de corvées de démarrage. Plus de temps pour le vrai business.",
+      quote: "Pas besoin d'être designer ou développeur pour se lancer en ligne.",
+      videoCaption: "Scénario illustratif, pas une garantie. Les délais et ventes réels dépendent de votre produit, marché et efforts.",
+      steps: ["Décrivez la tâche", "La base de la boutique se met en place", "Affinez et lancez"],
     },
     faq: {
       heading: "Questions fréquentes",
@@ -873,7 +838,7 @@ function BrandLogo({ size = 22 }: { size?: number }) {
         </defs>
         <path d="M14 3 L26 25 L2 25 Z" fill="url(#accioTriEvtShared)" />
       </svg>
-      <span className="text-[#0F172A]">Accio</span>
+      <span className="text-foreground">Accio</span>
     </div>
   );
 }
@@ -900,17 +865,17 @@ function LangSwitcher({ lang }: { lang: Lang }) {
     <div ref={rootRef} className="relative">
       <button
         onClick={() => setOpen((v) => !v)}
-        className="hidden items-center gap-1 text-[14px] text-[#1a1a2e]/70 hover:text-[#1a1a2e] md:inline-flex"
+        className="hidden items-center gap-1 text-[14px] text-foreground/70 hover:text-foreground md:inline-flex"
       >
         {LANG_NAMES[lang]} <span className="opacity-60">▾</span>
       </button>
       {open && (
-        <div className="absolute right-0 top-full z-50 mt-2 w-40 overflow-hidden rounded-xl border border-[#E5E7EB] bg-card shadow-lg">
+        <div className="absolute right-0 top-full z-50 mt-2 w-40 overflow-hidden rounded-xl border border-border bg-card shadow-lg">
           {langs.map((l) => (
             <a
               key={l}
               href={eventsHref(l)}
-              className={`block px-4 py-2 text-[14px] ${l === lang ? "bg-[#F8F9FB] font-semibold text-[#1a1a2e]" : "text-[#1a1a2e]/80 hover:bg-[#F8F9FB]"}`}
+              className={`block px-4 py-2 text-[14px] ${l === lang ? "bg-muted font-semibold text-foreground" : "text-foreground/80 hover:bg-muted"}`}
             >
               {LANG_NAMES[l]}
             </a>
@@ -930,15 +895,15 @@ function Header({ lang, d }: { lang: Lang; d: EventDict }) {
     { href: eventsHref(lang), label: d.nav.events, hot: true },
   ];
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-[#E5E7EB] bg-background/95 backdrop-blur">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-[1280px] items-center justify-between px-4 sm:px-6">
         <a href={homeHref(lang)} className="flex items-center gap-2">
           <BrandLogo size={22} />
         </a>
-        <nav className="hidden items-center gap-8 text-[14px] font-medium text-[#1a1a2e]/80 md:flex">
-          <a href={`${homeHref(lang)}#pricing`} className="hover:text-[#1a1a2e]">{d.nav.pricing}</a>
-          <a href={blogHref(lang)} className="hover:text-[#1a1a2e]">{d.nav.blog}</a>
-          <a href={eventsHref(lang)} className="flex items-center gap-1 font-semibold text-[#1a1a2e]">
+        <nav className="hidden items-center gap-8 text-[14px] font-medium text-foreground/80 md:flex">
+          <a href={`${homeHref(lang)}#pricing`} className="hover:text-foreground">{d.nav.pricing}</a>
+          <a href={blogHref(lang)} className="hover:text-foreground">{d.nav.blog}</a>
+          <a href={eventsHref(lang)} className="flex items-center gap-1 font-semibold text-foreground">
             {d.nav.events} <span>🔥</span>
             <span className="ml-1 h-1.5 w-1.5 rounded-full bg-gradient-to-r from-[#34d399] to-[#5eead4]" />
           </a>
@@ -949,7 +914,7 @@ function Header({ lang, d }: { lang: Lang; d: EventDict }) {
             href={REFERRAL_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-10 items-center rounded-full bg-[#16213E] px-4 text-[13px] font-semibold text-white transition hover:bg-[#0F172A] sm:h-11 sm:px-5 sm:text-[14px]"
+            className="inline-flex h-10 items-center rounded-full bg-[#34d399] px-4 text-[13px] font-semibold text-[#04120d] transition hover:brightness-110 sm:h-11 sm:px-5 sm:text-[14px]"
           >
             {d.nav.download}
           </a>
@@ -958,7 +923,7 @@ function Header({ lang, d }: { lang: Lang; d: EventDict }) {
             aria-label="Menu"
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-[#1a1a2e]/80 hover:bg-black/5 md:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-foreground/80 hover:bg-foreground/5 md:hidden"
           >
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
               {open ? <><line x1="6" y1="6" x2="18" y2="18" /><line x1="18" y1="6" x2="6" y2="18" /></> : <><line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="18" x2="21" y2="18" /></>}
@@ -968,14 +933,14 @@ function Header({ lang, d }: { lang: Lang; d: EventDict }) {
       </div>
 
       {open && (
-        <nav className="border-t border-[#E5E7EB] bg-card md:hidden">
+        <nav className="border-t border-border bg-card md:hidden">
           <div className="mx-auto flex max-w-[1280px] flex-col px-4 py-2 sm:px-6">
             {links.map((l) => (
               <a
                 key={l.label}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="flex items-center gap-1.5 border-b border-[#E5E7EB] py-3 text-[16px] font-medium text-[#1a1a2e]/85 last:border-b-0"
+                className="flex items-center gap-1.5 border-b border-border py-3 text-[16px] font-medium text-foreground/85 last:border-b-0"
               >
                 {l.label}
                 {l.hot && <span>🔥</span>}
@@ -998,7 +963,7 @@ function Hero({ lang, d }: { lang: Lang; d: EventDict }) {
           <span className="inline-flex items-center gap-2 rounded-full bg-[#34d399]/10 px-4 py-1.5 text-[13px] font-semibold text-[#34d399]">{d.hero.badge}</span>
         </Reveal>
         <Reveal delay={80}>
-          <h1 className="mt-6 text-[40px] font-extrabold leading-[1.05] tracking-tight text-[#1a1a2e] sm:text-[56px] lg:text-[64px]">
+          <h1 className="mt-6 text-[40px] font-extrabold leading-[1.05] tracking-tight text-foreground sm:text-[56px] lg:text-[64px]">
             {d.hero.title1}{" "}
             <span className="bg-gradient-to-r from-[#34d399] to-[#5eead4] bg-clip-text text-transparent">{d.hero.titleAccent}</span>
           </h1>
@@ -1008,10 +973,10 @@ function Hero({ lang, d }: { lang: Lang; d: EventDict }) {
         </Reveal>
         <Reveal delay={200}>
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center justify-center rounded-full bg-[#16213E] px-7 text-[15px] font-bold text-white transition hover:bg-[#0F172A]">
+            <a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center justify-center rounded-full bg-[#34d399] px-7 text-[15px] font-bold text-[#04120d] transition hover:brightness-110">
               {d.hero.ctaPrimary}
             </a>
-            <a href={`${homeHref(lang)}#pricing`} className="inline-flex h-12 items-center justify-center rounded-full border border-[#16213E] px-7 text-[15px] font-semibold text-[#16213E] transition hover:bg-[#16213E]/5">
+            <a href={`${homeHref(lang)}#pricing`} className="inline-flex h-12 items-center justify-center rounded-full border border-border px-7 text-[15px] font-semibold text-foreground transition hover:bg-foreground/5">
               {d.hero.ctaSecondary}
             </a>
           </div>
@@ -1029,7 +994,7 @@ function Stats({ d, locale }: { d: EventDict; locale: string }) {
     { value: 483, suffix: "×", label: d.stats.cheaper },
   ];
   return (
-    <section className="bg-[#F8F9FB] py-20 sm:py-28">
+    <section className="bg-background py-20 sm:py-28">
       <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-6 px-6 md:grid-cols-3">
         {items.map((it, i) => (
           <Reveal key={it.label} delay={i * 100}>
@@ -1051,14 +1016,14 @@ function Features({ d }: { d: EventDict }) {
     <section className="bg-card py-20 sm:py-28">
       <div className="mx-auto max-w-[1200px] px-6">
         <Reveal>
-          <h2 className="text-center text-[32px] font-extrabold tracking-tight text-[#1a1a2e] sm:text-[44px]">{d.features.heading}</h2>
+          <h2 className="text-center text-[32px] font-extrabold tracking-tight text-foreground sm:text-[44px]">{d.features.heading}</h2>
         </Reveal>
         <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {d.features.items.map((f, i) => (
             <Reveal key={f.title} delay={i * 60}>
-              <div className="h-full rounded-2xl bg-[#F8F9FB] p-8 shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition hover:-translate-y-1 hover:shadow-[0_8px_28px_rgba(0,0,0,0.06)]">
+              <div className="h-full rounded-2xl bg-muted p-8 shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition hover:-translate-y-1 hover:shadow-[0_8px_28px_rgba(0,0,0,0.06)]">
                 <div className="text-[32px]">{f.icon}</div>
-                <h3 className="mt-4 text-[18px] font-semibold text-[#1a1a2e]">{f.title}</h3>
+                <h3 className="mt-4 text-[18px] font-semibold text-foreground">{f.title}</h3>
                 <p className="mt-2 text-[15px] leading-relaxed text-[#6B7280]">{f.desc}</p>
               </div>
             </Reveal>
@@ -1072,7 +1037,7 @@ function Features({ d }: { d: EventDict }) {
 function CompareTable({ title, bg, rows, totalCost, totalTime, d }: { title: string; bg: string; rows: [string, string, string][]; totalCost: string; totalTime: string; d: EventDict }) {
   return (
     <div className={`rounded-2xl p-6 sm:p-8 ${bg}`}>
-      <h3 className="text-[20px] font-bold text-[#1a1a2e]">{title}</h3>
+      <h3 className="text-[20px] font-bold text-foreground">{title}</h3>
       <div className="mt-6 overflow-hidden rounded-xl bg-white/70">
         <table className="w-full text-left text-[14px]">
           <thead className="text-[12px] uppercase tracking-wide text-[#6B7280]">
@@ -1082,15 +1047,15 @@ function CompareTable({ title, bg, rows, totalCost, totalTime, d }: { title: str
               <th className="px-4 py-3 font-semibold">{d.compare.colTime}</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-[#E5E7EB]">
+          <tbody className="divide-y divide-border">
             {rows.map((r) => (
-              <tr key={r[0]} className="text-[#1a1a2e]">
+              <tr key={r[0]} className="text-foreground">
                 <td className="px-4 py-3">{r[0]}</td>
                 <td className="px-4 py-3">{r[1]}</td>
                 <td className="px-4 py-3">{r[2]}</td>
               </tr>
             ))}
-            <tr className="bg-card font-bold text-[#1a1a2e]">
+            <tr className="bg-card font-bold text-foreground">
               <td className="px-4 py-4">{d.compare.total}</td>
               <td className="px-4 py-4">{totalCost}</td>
               <td className="px-4 py-4">{totalTime}</td>
@@ -1104,27 +1069,27 @@ function CompareTable({ title, bg, rows, totalCost, totalTime, d }: { title: str
 
 function Compare({ d }: { d: EventDict }) {
   return (
-    <section className="bg-[#F8F9FB] py-20 sm:py-28">
+    <section className="bg-background py-20 sm:py-28">
       <div className="mx-auto max-w-[1200px] px-6">
         <Reveal>
-          <h2 className="text-center text-[32px] font-extrabold tracking-tight text-[#1a1a2e] sm:text-[44px]">{d.compare.heading}</h2>
+          <h2 className="text-center text-[32px] font-extrabold tracking-tight text-foreground sm:text-[44px]">{d.compare.heading}</h2>
         </Reveal>
         <div className="relative mt-14 grid grid-cols-1 gap-6 lg:grid-cols-2">
           <Reveal>
-            <CompareTable title={d.compare.without} bg="bg-[#FEF2F2]" rows={d.compare.withoutRows} totalCost={d.compare.withoutTotalCost} totalTime={d.compare.withoutTotalTime} d={d} />
+            <CompareTable title={d.compare.without} bg="bg-red-500/10" rows={d.compare.withoutRows} totalCost={d.compare.withoutTotalCost} totalTime={d.compare.withoutTotalTime} d={d} />
           </Reveal>
           <div className="pointer-events-none absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 lg:block">
-            <span className="flex h-12 w-12 items-center justify-center rounded-full border border-[#E5E7EB] bg-card text-[14px] font-bold text-[#6B7280] shadow-sm">vs</span>
+            <span className="flex h-12 w-12 items-center justify-center rounded-full border border-border bg-card text-[14px] font-bold text-[#6B7280] shadow-sm">vs</span>
           </div>
           <div className="flex items-center justify-center lg:hidden">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[#E5E7EB] bg-card text-[13px] font-bold text-[#6B7280]">vs</span>
+            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card text-[13px] font-bold text-[#6B7280]">vs</span>
           </div>
           <Reveal delay={100}>
-            <CompareTable title={d.compare.with} bg="bg-[#ECFDF5]" rows={d.compare.withRows} totalCost={d.compare.withTotalCost} totalTime={d.compare.withTotalTime} d={d} />
+            <CompareTable title={d.compare.with} bg="bg-[#34d399]/10" rows={d.compare.withRows} totalCost={d.compare.withTotalCost} totalTime={d.compare.withTotalTime} d={d} />
           </Reveal>
         </div>
         <Reveal delay={150}>
-          <p className="mx-auto mt-12 max-w-[820px] text-center text-[22px] font-extrabold text-[#1a1a2e] sm:text-[28px]">
+          <p className="mx-auto mt-12 max-w-[820px] text-center text-[22px] font-extrabold text-foreground sm:text-[28px]">
             <span className="bg-gradient-to-r from-[#34d399] to-[#5eead4] bg-clip-text text-transparent">{d.compare.summaryMoney}</span>
             {" · "}
             <span className="bg-gradient-to-r from-[#34d399] to-[#5eead4] bg-clip-text text-transparent">{d.compare.summaryTime}</span>
@@ -1140,26 +1105,27 @@ function Story({ d }: { d: EventDict }) {
     <section className="bg-card py-20 sm:py-28">
       <div className="mx-auto max-w-[1200px] px-6">
         <Reveal>
-          <h2 className="text-center text-[32px] font-extrabold tracking-tight text-[#1a1a2e] sm:text-[44px]">{d.story.heading}</h2>
+          <h2 className="text-center text-[32px] font-extrabold tracking-tight text-foreground sm:text-[44px]">{d.story.heading}</h2>
         </Reveal>
         <Reveal delay={100}>
-          <div className="mt-14 grid grid-cols-1 gap-0 overflow-hidden rounded-2xl bg-[#F8F9FB] shadow-[0_2px_12px_rgba(0,0,0,0.04)] lg:grid-cols-[1.3fr_1fr]">
+          <div className="mt-14 grid grid-cols-1 gap-0 overflow-hidden rounded-2xl bg-muted shadow-[0_2px_12px_rgba(0,0,0,0.04)] lg:grid-cols-[1.3fr_1fr]">
             <div className="relative p-8 sm:p-12">
               <span aria-hidden className="absolute left-0 top-6 bottom-6 w-1 rounded-r bg-gradient-to-b from-[#34d399] to-[#5eead4]" />
-              <h3 className="text-[22px] font-bold text-[#1a1a2e]">{d.story.who}</h3>
-              <div className="mt-5 space-y-4 text-[16px] leading-relaxed text-[#374151]">
+              <h3 className="text-[22px] font-bold text-foreground">{d.story.who}</h3>
+              <div className="mt-5 space-y-4 text-[16px] leading-relaxed text-foreground/72">
                 {d.story.p.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
-                <p className="font-semibold text-[#1a1a2e]">{d.story.highlight}</p>
-                <blockquote className="border-l-2 border-[#34d399] pl-4 italic text-[#1a1a2e]">{d.story.quote}</blockquote>
+                <p className="font-semibold text-foreground">{d.story.highlight}</p>
+                <blockquote className="border-l-2 border-[#34d399] pl-4 italic text-foreground">{d.story.quote}</blockquote>
               </div>
             </div>
-            <div className="flex min-h-[280px] items-center justify-center bg-[#EEF1F5] p-8">
-              <div className="flex flex-col items-center gap-3 text-center">
-                <span className="flex h-16 w-16 items-center justify-center rounded-full bg-card shadow">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="#1a1a2e"><path d="M8 5v14l11-7z" /></svg>
-                </span>
-                <p className="text-[14px] font-medium text-[#6B7280]">{d.story.videoCaption}</p>
-              </div>
+            <div className="flex min-h-[280px] flex-col justify-center gap-5 bg-muted p-8 sm:p-12">
+              {d.story.steps.map((s, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#34d399] text-[14px] font-bold text-[#04120d]">{i + 1}</span>
+                  <span className="pt-1 text-[15px] font-medium text-foreground">{s}</span>
+                </div>
+              ))}
+              <p className="mt-2 text-[12px] leading-relaxed text-foreground/50">{d.story.videoCaption}</p>
             </div>
           </div>
         </Reveal>
@@ -1171,17 +1137,17 @@ function Story({ d }: { d: EventDict }) {
 function Faq({ d }: { d: EventDict }) {
   const [open, setOpen] = useState<number | null>(0);
   return (
-    <section className="bg-[#F8F9FB] py-20 sm:py-28">
+    <section className="bg-background py-20 sm:py-28">
       <div className="mx-auto max-w-[820px] px-6">
         <Reveal>
-          <h2 className="text-center text-[32px] font-extrabold tracking-tight text-[#1a1a2e] sm:text-[44px]">{d.faq.heading}</h2>
+          <h2 className="text-center text-[32px] font-extrabold tracking-tight text-foreground sm:text-[44px]">{d.faq.heading}</h2>
         </Reveal>
-        <div className="mt-12 divide-y divide-[#E5E7EB] overflow-hidden rounded-2xl bg-card shadow-[0_2px_12px_rgba(0,0,0,0.04)]">
+        <div className="mt-12 divide-y divide-border overflow-hidden rounded-2xl bg-card shadow-[0_2px_12px_rgba(0,0,0,0.04)]">
           {d.faq.items.map((it, i) => {
             const isOpen = open === i;
             return (
               <div key={it.q}>
-                <button onClick={() => setOpen(isOpen ? null : i)} className="flex w-full items-center justify-between px-6 py-5 text-left text-[16px] font-semibold text-[#1a1a2e] transition hover:bg-[#F8F9FB] sm:px-8 sm:text-[17px]">
+                <button onClick={() => setOpen(isOpen ? null : i)} className="flex w-full items-center justify-between px-6 py-5 text-left text-[16px] font-semibold text-foreground transition hover:bg-muted sm:px-8 sm:text-[17px]">
                   <span>{it.q}</span>
                   <span className={`ml-4 text-[#34d399] transition-transform ${isOpen ? "rotate-45" : ""}`}>+</span>
                 </button>
@@ -1220,15 +1186,15 @@ function FinalCta({ d }: { d: EventDict }) {
 
 function Footer({ lang, d }: { lang: Lang; d: EventDict }) {
   return (
-    <footer className="bg-[#F8F9FB] py-10">
+    <footer className="bg-background py-10">
       <div className="mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-6 px-6 sm:flex-row">
         <a href={homeHref(lang)} className="flex items-center gap-2"><BrandLogo size={18} /></a>
         <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[13px] text-[#6B7280]">
-          <a href={`${homeHref(lang)}#pricing`} className="hover:text-[#1a1a2e]">{d.footer.pricing}</a>
-          <a href={blogHref(lang)} className="hover:text-[#1a1a2e]">{d.footer.blog}</a>
-          <a href="#" className="hover:text-[#1a1a2e]">{d.footer.help}</a>
-          <a href="#" className="hover:text-[#1a1a2e]">{d.footer.privacy}</a>
-          <a href="#" className="hover:text-[#1a1a2e]">{d.footer.terms}</a>
+          <a href={`${homeHref(lang)}#pricing`} className="hover:text-foreground">{d.footer.pricing}</a>
+          <a href={blogHref(lang)} className="hover:text-foreground">{d.footer.blog}</a>
+          <a href="#" className="hover:text-foreground">{d.footer.help}</a>
+          <a href="#" className="hover:text-foreground">{d.footer.privacy}</a>
+          <a href="#" className="hover:text-foreground">{d.footer.terms}</a>
         </nav>
         <p className="text-[12px] text-[#6B7280]">{d.footer.copyright}</p>
       </div>
@@ -1245,7 +1211,7 @@ const LOCALES: Record<Lang, string> = {
 export function FreeForeverPage({ lang }: { lang: Lang }) {
   const d = DICTS[lang];
   return (
-    <div className="min-h-screen bg-card font-sans text-[#1a1a2e] antialiased">
+    <div className="min-h-screen bg-card font-sans text-foreground antialiased">
       <Header lang={lang} d={d} />
       <main>
         <Hero lang={lang} d={d} />

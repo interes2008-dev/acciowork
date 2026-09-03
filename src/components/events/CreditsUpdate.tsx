@@ -230,15 +230,15 @@ const D: Record<Lang, Dict> = {
 export function CreditsUpdate({ lang }: { lang: Lang }) {
   const d = D[lang];
   return (
-    <section className="bg-[#F0FFF4] px-5 py-20 md:px-8 md:py-28">
+    <section className="bg-background px-5 py-20 md:px-8 md:py-28">
       <div className="mx-auto max-w-[1100px]">
-        <span className="inline-block rounded-full bg-secondary px-3 py-1 text-xs font-semibold tracking-wide text-[#0FA44F] shadow-sm">
+        <span className="inline-block rounded-full bg-secondary px-3 py-1 text-xs font-semibold tracking-wide text-[#34d399] shadow-sm">
           {d.badge}
         </span>
         <h2 className="mt-5 text-[32px] font-bold leading-[1.15] tracking-tight md:text-[44px]">
-          {d.title} <span className="text-[#0FA44F]">{d.titleAccent}</span>
+          {d.title} <span className="text-[#34d399]">{d.titleAccent}</span>
         </h2>
-        <div className="mt-4 max-w-[720px] space-y-1 text-[17px] leading-relaxed text-[#1a1a2e]/70 md:text-[18px]">
+        <div className="mt-4 max-w-[720px] space-y-1 text-[17px] leading-relaxed text-foreground/70 md:text-[18px]">
           {d.lead.map((l) => (
             <p key={l}>{l}</p>
           ))}
@@ -247,28 +247,28 @@ export function CreditsUpdate({ lang }: { lang: Lang }) {
         <div className="mt-10 grid gap-5 md:grid-cols-2">
           <div className="rounded-[28px] bg-card p-7 shadow-sm md:p-9">
             <h3 className="text-[24px] font-bold md:text-[28px]">{d.headline}</h3>
-            <p className="mt-3 text-[16px] leading-relaxed text-[#1a1a2e]/70">{d.sub}</p>
+            <p className="mt-3 text-[16px] leading-relaxed text-foreground/70">{d.sub}</p>
 
             <div className="mt-7 space-y-5">
               <div>
-                <div className="flex items-center justify-between text-sm font-medium text-[#1a1a2e]/60">
+                <div className="flex items-center justify-between text-sm font-medium text-foreground/60">
                   <span>{d.beforeLabel}</span>
                   <span>100%</span>
                 </div>
-                <div className="mt-2 h-2.5 w-full overflow-hidden rounded-full bg-[#1a1a2e]/10">
+                <div className="mt-2 h-2.5 w-full overflow-hidden rounded-full bg-foreground/10">
                   <div className="h-full w-full rounded-full bg-[#e5484d]" />
                 </div>
-                <p className="mt-2 text-xs text-[#1a1a2e]/50">{d.beforeNote}</p>
+                <p className="mt-2 text-xs text-foreground/50">{d.beforeNote}</p>
               </div>
               <div>
-                <div className="flex items-center justify-between text-sm font-medium text-[#1a1a2e]/60">
+                <div className="flex items-center justify-between text-sm font-medium text-foreground/60">
                   <span>{d.afterLabel}</span>
                   <span>+50%</span>
                 </div>
-                <div className="mt-2 h-2.5 w-full overflow-hidden rounded-full bg-[#1a1a2e]/10">
-                  <div className="h-full w-[66%] rounded-full bg-[#0FA44F]" />
+                <div className="mt-2 h-2.5 w-full overflow-hidden rounded-full bg-foreground/10">
+                  <div className="h-full w-[66%] rounded-full bg-[#34d399]" />
                 </div>
-                <p className="mt-2 text-xs text-[#1a1a2e]/50">{d.afterNote}</p>
+                <p className="mt-2 text-xs text-foreground/50">{d.afterNote}</p>
               </div>
             </div>
           </div>
@@ -278,7 +278,7 @@ export function CreditsUpdate({ lang }: { lang: Lang }) {
               <div key={b.title} className="rounded-[24px] bg-card p-6 shadow-sm">
                 <div className="text-2xl">{b.icon}</div>
                 <h4 className="mt-3 text-[16px] font-semibold">{b.title}</h4>
-                <p className="mt-2 text-[14px] leading-relaxed text-[#1a1a2e]/65">{b.desc}</p>
+                <p className="mt-2 text-[14px] leading-relaxed text-foreground/65">{b.desc}</p>
               </div>
             ))}
           </div>
@@ -289,11 +289,11 @@ export function CreditsUpdate({ lang }: { lang: Lang }) {
             href={REFERRAL_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-[#1a1a2e] px-7 py-3.5 text-[15px] font-semibold text-white transition hover:bg-[#0FA44F]"
+            className="rounded-full bg-[#34d399] px-7 py-3.5 text-[15px] font-semibold text-[#04120d] transition hover:brightness-110"
           >
             {d.cta}
           </a>
-          <p className="text-[14px] text-[#1a1a2e]/60">{d.note}</p>
+          <p className="text-[14px] text-foreground/60">{d.note}</p>
         </div>
       </div>
     </section>

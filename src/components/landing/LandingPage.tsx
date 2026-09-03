@@ -100,7 +100,7 @@ function LanguageSwitcher() {
       {open && (
         <ul
           role="listbox"
-          className="absolute right-0 top-full z-50 mt-2 w-40 overflow-hidden rounded-2xl border border-border/70 bg-white/[0.03] p-1.5 shadow-elegant"
+          className="absolute right-0 top-full z-50 mt-2 w-40 overflow-hidden rounded-2xl border border-border/70 bg-popover p-1.5 shadow-elegant"
         >
           {options.map((code) => (
             <li key={code}>
@@ -137,6 +137,17 @@ function LanguageSwitcher() {
 function NavDropdown({ label, items }: { label: string; items: { href: string; label: string }[] }) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const cancelClose = () => {
+    if (closeTimer.current) {
+      clearTimeout(closeTimer.current);
+      closeTimer.current = null;
+    }
+  };
+  const scheduleClose = () => {
+    cancelClose();
+    closeTimer.current = setTimeout(() => setOpen(false), 180);
+  };
   useEffect(() => {
     if (!open) return;
     const onDoc = (e: MouseEvent) => {
@@ -145,12 +156,16 @@ function NavDropdown({ label, items }: { label: string; items: { href: string; l
     document.addEventListener("mousedown", onDoc);
     return () => document.removeEventListener("mousedown", onDoc);
   }, [open]);
+  useEffect(() => () => cancelClose(), []);
   return (
     <div
       ref={ref}
       className="relative"
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
+      onMouseEnter={() => {
+        cancelClose();
+        setOpen(true);
+      }}
+      onMouseLeave={scheduleClose}
     >
       <button
         type="button"
@@ -163,20 +178,19 @@ function NavDropdown({ label, items }: { label: string; items: { href: string; l
         <ChevronDown className={`h-4 w-4 opacity-60 transition-transform ${open ? "rotate-180" : ""}`} />
       </button>
       {open && (
-        <div
-          role="menu"
-          className="absolute left-1/2 top-full z-50 mt-2 w-52 -translate-x-1/2 overflow-hidden rounded-2xl border border-border/70 bg-white/[0.03] p-1.5 shadow-elegant"
-        >
-          {items.map((it) => (
-            <a
-              key={it.href}
-              href={it.href}
-              role="menuitem"
-              className="block rounded-xl px-3.5 py-2.5 text-[15px] font-medium text-foreground/80 hover:bg-mint-50 hover:text-foreground"
-            >
-              {it.label}
-            </a>
-          ))}
+        <div role="menu" className="absolute left-1/2 top-full z-50 w-52 -translate-x-1/2 pt-2">
+          <div className="overflow-hidden rounded-2xl border border-border/70 bg-popover p-1.5 shadow-elegant">
+            {items.map((it) => (
+              <a
+                key={it.href}
+                href={it.href}
+                role="menuitem"
+                className="block rounded-xl px-3.5 py-2.5 text-[15px] font-medium text-foreground/80 hover:bg-mint-50 hover:text-foreground"
+              >
+                {it.label}
+              </a>
+            ))}
+          </div>
         </div>
       )}
     </div>
@@ -1044,7 +1058,7 @@ function DownloadButton() {
       {open && (
         <div
           role="menu"
-          className="absolute left-1/2 top-full z-50 mt-2 w-64 -translate-x-1/2 overflow-hidden rounded-2xl border border-white/12 bg-white/[0.03] p-1.5 text-left shadow-[0_12px_40px_rgba(0,0,0,0.16)]"
+          className="absolute left-1/2 top-full z-50 mt-2 w-64 -translate-x-1/2 overflow-hidden rounded-2xl border border-border/70 bg-popover p-1.5 text-left shadow-elegant"
         >
           {options.map((o, i) => (
             <a
