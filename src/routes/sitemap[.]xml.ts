@@ -6,6 +6,7 @@ const BASE_URL = "https://acciowork.pro";
 
 interface SitemapEntry {
   path: string;
+  lastmod?: string;
   changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
   priority?: string;
   alternates?: { hreflang: string; href: string }[];
@@ -140,7 +141,7 @@ export const Route = createFileRoute("/sitemap.xml")({
                               : a.lang === "fr"
                                 ? "/fr/blog"
                                 : "/blog";
-            entries.push({ path: `${prefix}/${a.slug}`, changefreq: "monthly", priority: "0.7" });
+            entries.push({ path: `${prefix}/${a.slug}`, lastmod: a.published_at, changefreq: "monthly", priority: "0.7" });
           }
         } catch {
           // sitemap should still render even if the DB read fails
@@ -154,6 +155,7 @@ export const Route = createFileRoute("/sitemap.xml")({
               (a) =>
                 `    <xhtml:link rel="alternate" hreflang="${a.hreflang}" href="${a.href}" />`,
             ),
+            e.lastmod ? `    <lastmod>${new Date(e.lastmod).toISOString()}</lastmod>` : null,
             e.changefreq ? `    <changefreq>${e.changefreq}</changefreq>` : null,
             e.priority ? `    <priority>${e.priority}</priority>` : null,
             `  </url>`,
