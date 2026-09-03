@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { fetchAlerts, type AlertItem } from "@/lib/alerts";
+import { ThemeToggle } from "@/components/common/ThemeToggle";
 import type { Lang } from "@/lib/translations";
 import { CreditsUpdate } from "./CreditsUpdate";
 
@@ -996,6 +997,7 @@ function Header({ lang, d }: { lang: Lang; d: EventDict }) {
           </a>
         </nav>
         <div className="flex items-center gap-3 sm:gap-5">
+          <ThemeToggle />
           <LangSwitcher lang={lang} />
           <a
             href={REFERRAL_URL}
@@ -1056,7 +1058,7 @@ function Hero({ lang, d }: { lang: Lang; d: EventDict }) {
           </h1>
         </Reveal>
         <Reveal delay={140}>
-          <p className="mx-auto mt-6 max-w-[600px] text-[18px] leading-relaxed text-[#6B7280] sm:text-[20px]">{d.hero.desc}</p>
+          <p className="mx-auto mt-6 max-w-[600px] text-[18px] leading-relaxed text-foreground/55 sm:text-[20px]">{d.hero.desc}</p>
         </Reveal>
         <Reveal delay={200}>
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -1067,7 +1069,7 @@ function Hero({ lang, d }: { lang: Lang; d: EventDict }) {
               {d.hero.ctaSecondary}
             </a>
           </div>
-          <p className="mt-5 text-[13px] text-[#6B7280]">{d.hero.note}</p>
+          <p className="mt-5 text-[13px] text-foreground/55">{d.hero.note}</p>
         </Reveal>
       </div>
     </section>
@@ -1089,7 +1091,7 @@ function Stats({ d, locale }: { d: EventDict; locale: string }) {
               <div className="text-[56px] font-extrabold leading-none tracking-tight sm:text-[64px]">
                 <Counter to={it.value} suffix={it.suffix} locale={locale} />
               </div>
-              <p className="mt-4 text-[15px] text-[#6B7280]">{it.label}</p>
+              <p className="mt-4 text-[15px] text-foreground/55">{it.label}</p>
             </div>
           </Reveal>
         ))}
@@ -1111,7 +1113,7 @@ function Features({ d }: { d: EventDict }) {
               <div className="h-full rounded-2xl bg-muted p-8 shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition hover:-translate-y-1 hover:shadow-[0_8px_28px_rgba(0,0,0,0.06)]">
                 <div className="text-[32px]">{f.icon}</div>
                 <h3 className="mt-4 text-[18px] font-semibold text-foreground">{f.title}</h3>
-                <p className="mt-2 text-[15px] leading-relaxed text-[#6B7280]">{f.desc}</p>
+                <p className="mt-2 text-[15px] leading-relaxed text-foreground/55">{f.desc}</p>
               </div>
             </Reveal>
           ))}
@@ -1125,9 +1127,9 @@ function CompareTable({ title, bg, rows, totalCost, totalTime, d }: { title: str
   return (
     <div className={`rounded-2xl p-6 sm:p-8 ${bg}`}>
       <h3 className="text-[20px] font-bold text-foreground">{title}</h3>
-      <div className="mt-6 overflow-hidden rounded-xl bg-white/70">
+      <div className="mt-6 overflow-hidden rounded-xl bg-card">
         <table className="w-full text-left text-[14px]">
-          <thead className="text-[12px] uppercase tracking-wide text-[#6B7280]">
+          <thead className="text-[12px] uppercase tracking-wide text-foreground/55">
             <tr>
               <th className="px-4 py-3 font-semibold">{d.compare.colSpecialist}</th>
               <th className="px-4 py-3 font-semibold">{d.compare.colCost}</th>
@@ -1142,7 +1144,7 @@ function CompareTable({ title, bg, rows, totalCost, totalTime, d }: { title: str
                 <td className="px-4 py-3">{r[2]}</td>
               </tr>
             ))}
-            <tr className="bg-card font-bold text-foreground">
+            <tr className="bg-foreground/5 font-bold text-foreground">
               <td className="px-4 py-4">{d.compare.total}</td>
               <td className="px-4 py-4">{totalCost}</td>
               <td className="px-4 py-4">{totalTime}</td>
@@ -1166,10 +1168,10 @@ function Compare({ d }: { d: EventDict }) {
             <CompareTable title={d.compare.without} bg="bg-red-500/10" rows={d.compare.withoutRows} totalCost={d.compare.withoutTotalCost} totalTime={d.compare.withoutTotalTime} d={d} />
           </Reveal>
           <div className="pointer-events-none absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 lg:block">
-            <span className="flex h-12 w-12 items-center justify-center rounded-full border border-border bg-card text-[14px] font-bold text-[#6B7280] shadow-sm">vs</span>
+            <span className="flex h-12 w-12 items-center justify-center rounded-full border border-border bg-card text-[14px] font-bold text-foreground/55 shadow-sm">vs</span>
           </div>
           <div className="flex items-center justify-center lg:hidden">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card text-[13px] font-bold text-[#6B7280]">vs</span>
+            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card text-[13px] font-bold text-foreground/55">vs</span>
           </div>
           <Reveal delay={100}>
             <CompareTable title={d.compare.with} bg="bg-[#34d399]/10" rows={d.compare.withRows} totalCost={d.compare.withTotalCost} totalTime={d.compare.withTotalTime} d={d} />
@@ -1292,7 +1294,7 @@ function Faq({ d }: { d: EventDict }) {
                   <span>{it.q}</span>
                   <span className={`ml-4 text-[#34d399] transition-transform ${isOpen ? "rotate-45" : ""}`}>+</span>
                 </button>
-                <div className={`grid overflow-hidden px-6 text-[15px] leading-relaxed text-[#6B7280] transition-all duration-300 sm:px-8 ${isOpen ? "grid-rows-[1fr] pb-6" : "grid-rows-[0fr]"}`}>
+                <div className={`grid overflow-hidden px-6 text-[15px] leading-relaxed text-foreground/55 transition-all duration-300 sm:px-8 ${isOpen ? "grid-rows-[1fr] pb-6" : "grid-rows-[0fr]"}`}>
                   <div className="overflow-hidden">{it.a}</div>
                 </div>
               </div>
@@ -1315,7 +1317,7 @@ function FinalCta({ d }: { d: EventDict }) {
           <p className="mx-auto mt-5 max-w-[600px] text-[16px] text-white/80 sm:text-[18px]">{d.cta.subtitle}</p>
         </Reveal>
         <Reveal delay={160}>
-          <a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer" className="mt-10 inline-flex h-12 items-center justify-center rounded-full bg-secondary px-8 text-[15px] font-bold text-[#34d399] transition hover:bg-white/90 sm:h-14 sm:text-[16px]">
+          <a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer" className="mt-10 inline-flex h-12 items-center justify-center rounded-full bg-secondary px-8 text-[15px] font-bold text-[#34d399] transition hover:bg-foreground/10 sm:h-14 sm:text-[16px]">
             {d.cta.button}
           </a>
           <p className="mt-5 text-[13px] text-white/60">{d.cta.note}</p>
@@ -1330,14 +1332,14 @@ function Footer({ lang, d }: { lang: Lang; d: EventDict }) {
     <footer className="bg-background py-10">
       <div className="mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-6 px-6 sm:flex-row">
         <a href={homeHref(lang)} className="flex items-center gap-2"><BrandLogo size={18} /></a>
-        <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[13px] text-[#6B7280]">
+        <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[13px] text-foreground/55">
           <a href={`${homeHref(lang)}#pricing`} className="hover:text-foreground">{d.footer.pricing}</a>
           <a href={blogHref(lang)} className="hover:text-foreground">{d.footer.blog}</a>
           <a href="#" className="hover:text-foreground">{d.footer.help}</a>
           <a href="#" className="hover:text-foreground">{d.footer.privacy}</a>
           <a href="#" className="hover:text-foreground">{d.footer.terms}</a>
         </nav>
-        <p className="text-[12px] text-[#6B7280]">{d.footer.copyright}</p>
+        <p className="text-[12px] text-foreground/55">{d.footer.copyright}</p>
       </div>
     </footer>
   );

@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AiAgentTasksRouteImport } from './routes/ai-agent-tasks'
 import { Route as AiPromptsRouteImport } from './routes/ai-prompts'
 import { Route as DeRouteImport } from './routes/de'
 import { Route as DeMinimisRouteImport } from './routes/de-minimis'
@@ -35,6 +36,7 @@ import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as CompareIndexRouteImport } from './routes/compare.index'
 import { Route as CompareCompetitorRouteImport } from './routes/compare.$competitor'
 import { Route as DeIndexRouteImport } from './routes/de.index'
+import { Route as DeAiAgentTasksRouteImport } from './routes/de.ai-agent-tasks'
 import { Route as DeAiPromptsRouteImport } from './routes/de.ai-prompts'
 import { Route as DeDeMinimisRouteImport } from './routes/de.de-minimis'
 import { Route as DeDutyRouteImport } from './routes/de.duty'
@@ -45,6 +47,7 @@ import { Route as DeSupplierScorecardRouteImport } from './routes/de.supplier-sc
 import { Route as DeTemplatesRouteImport } from './routes/de.templates'
 import { Route as DeTiktokShopRouteImport } from './routes/de.tiktok-shop'
 import { Route as EsIndexRouteImport } from './routes/es.index'
+import { Route as EsAiAgentTasksRouteImport } from './routes/es.ai-agent-tasks'
 import { Route as EsAiPromptsRouteImport } from './routes/es.ai-prompts'
 import { Route as EsDeMinimisRouteImport } from './routes/es.de-minimis'
 import { Route as EsDutyRouteImport } from './routes/es.duty'
@@ -58,6 +61,7 @@ import { Route as EventsFreeForeverRouteImport } from './routes/events.free-fore
 import { Route as ForIndexRouteImport } from './routes/for.index'
 import { Route as ForUseCaseRouteImport } from './routes/for.$useCase'
 import { Route as FrIndexRouteImport } from './routes/fr.index'
+import { Route as FrAiAgentTasksRouteImport } from './routes/fr.ai-agent-tasks'
 import { Route as FrAiPromptsRouteImport } from './routes/fr.ai-prompts'
 import { Route as FrDeMinimisRouteImport } from './routes/fr.de-minimis'
 import { Route as FrDutyRouteImport } from './routes/fr.duty'
@@ -70,6 +74,7 @@ import { Route as FrTiktokShopRouteImport } from './routes/fr.tiktok-shop'
 import { Route as GuideIndexRouteImport } from './routes/guide.index'
 import { Route as GuideGuideRouteImport } from './routes/guide.$guide'
 import { Route as HiIndexRouteImport } from './routes/hi.index'
+import { Route as HiAiAgentTasksRouteImport } from './routes/hi.ai-agent-tasks'
 import { Route as HiAiPromptsRouteImport } from './routes/hi.ai-prompts'
 import { Route as HiDeMinimisRouteImport } from './routes/hi.de-minimis'
 import { Route as HiDutyRouteImport } from './routes/hi.duty'
@@ -80,6 +85,7 @@ import { Route as HiSupplierScorecardRouteImport } from './routes/hi.supplier-sc
 import { Route as HiTemplatesRouteImport } from './routes/hi.templates'
 import { Route as HiTiktokShopRouteImport } from './routes/hi.tiktok-shop'
 import { Route as ItIndexRouteImport } from './routes/it.index'
+import { Route as ItAiAgentTasksRouteImport } from './routes/it.ai-agent-tasks'
 import { Route as ItAiPromptsRouteImport } from './routes/it.ai-prompts'
 import { Route as ItDeMinimisRouteImport } from './routes/it.de-minimis'
 import { Route as ItDutyRouteImport } from './routes/it.duty'
@@ -90,6 +96,7 @@ import { Route as ItSupplierScorecardRouteImport } from './routes/it.supplier-sc
 import { Route as ItTemplatesRouteImport } from './routes/it.templates'
 import { Route as ItTiktokShopRouteImport } from './routes/it.tiktok-shop'
 import { Route as PtIndexRouteImport } from './routes/pt.index'
+import { Route as PtAiAgentTasksRouteImport } from './routes/pt.ai-agent-tasks'
 import { Route as PtAiPromptsRouteImport } from './routes/pt.ai-prompts'
 import { Route as PtDeMinimisRouteImport } from './routes/pt.de-minimis'
 import { Route as PtDutyRouteImport } from './routes/pt.duty'
@@ -100,6 +107,7 @@ import { Route as PtSupplierScorecardRouteImport } from './routes/pt.supplier-sc
 import { Route as PtTemplatesRouteImport } from './routes/pt.templates'
 import { Route as PtTiktokShopRouteImport } from './routes/pt.tiktok-shop'
 import { Route as RuIndexRouteImport } from './routes/ru.index'
+import { Route as RuAiAgentTasksRouteImport } from './routes/ru.ai-agent-tasks'
 import { Route as RuAiPromptsRouteImport } from './routes/ru.ai-prompts'
 import { Route as RuDeMinimisRouteImport } from './routes/ru.de-minimis'
 import { Route as RuDutyRouteImport } from './routes/ru.duty'
@@ -110,6 +118,7 @@ import { Route as RuSupplierScorecardRouteImport } from './routes/ru.supplier-sc
 import { Route as RuTemplatesRouteImport } from './routes/ru.templates'
 import { Route as RuTiktokShopRouteImport } from './routes/ru.tiktok-shop'
 import { Route as ZhIndexRouteImport } from './routes/zh.index'
+import { Route as ZhAiAgentTasksRouteImport } from './routes/zh.ai-agent-tasks'
 import { Route as ZhAiPromptsRouteImport } from './routes/zh.ai-prompts'
 import { Route as ZhDeMinimisRouteImport } from './routes/zh.de-minimis'
 import { Route as ZhDutyRouteImport } from './routes/zh.duty'
@@ -198,6 +207,11 @@ import { Route as ApiPublicCronSeoMonitorRouteImport } from './routes/api/public
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AiAgentTasksRoute = AiAgentTasksRouteImport.update({
+  id: '/ai-agent-tasks',
+  path: '/ai-agent-tasks',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AiPromptsRoute = AiPromptsRouteImport.update({
@@ -325,6 +339,11 @@ const DeIndexRoute = DeIndexRouteImport.update({
   path: '/',
   getParentRoute: () => DeRoute,
 } as any)
+const DeAiAgentTasksRoute = DeAiAgentTasksRouteImport.update({
+  id: '/ai-agent-tasks',
+  path: '/ai-agent-tasks',
+  getParentRoute: () => DeRoute,
+} as any)
 const DeAiPromptsRoute = DeAiPromptsRouteImport.update({
   id: '/ai-prompts',
   path: '/ai-prompts',
@@ -373,6 +392,11 @@ const DeTiktokShopRoute = DeTiktokShopRouteImport.update({
 const EsIndexRoute = EsIndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => EsRoute,
+} as any)
+const EsAiAgentTasksRoute = EsAiAgentTasksRouteImport.update({
+  id: '/ai-agent-tasks',
+  path: '/ai-agent-tasks',
   getParentRoute: () => EsRoute,
 } as any)
 const EsAiPromptsRoute = EsAiPromptsRouteImport.update({
@@ -440,6 +464,11 @@ const FrIndexRoute = FrIndexRouteImport.update({
   path: '/',
   getParentRoute: () => FrRoute,
 } as any)
+const FrAiAgentTasksRoute = FrAiAgentTasksRouteImport.update({
+  id: '/ai-agent-tasks',
+  path: '/ai-agent-tasks',
+  getParentRoute: () => FrRoute,
+} as any)
 const FrAiPromptsRoute = FrAiPromptsRouteImport.update({
   id: '/ai-prompts',
   path: '/ai-prompts',
@@ -500,6 +529,11 @@ const HiIndexRoute = HiIndexRouteImport.update({
   path: '/',
   getParentRoute: () => HiRoute,
 } as any)
+const HiAiAgentTasksRoute = HiAiAgentTasksRouteImport.update({
+  id: '/ai-agent-tasks',
+  path: '/ai-agent-tasks',
+  getParentRoute: () => HiRoute,
+} as any)
 const HiAiPromptsRoute = HiAiPromptsRouteImport.update({
   id: '/ai-prompts',
   path: '/ai-prompts',
@@ -548,6 +582,11 @@ const HiTiktokShopRoute = HiTiktokShopRouteImport.update({
 const ItIndexRoute = ItIndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => ItRoute,
+} as any)
+const ItAiAgentTasksRoute = ItAiAgentTasksRouteImport.update({
+  id: '/ai-agent-tasks',
+  path: '/ai-agent-tasks',
   getParentRoute: () => ItRoute,
 } as any)
 const ItAiPromptsRoute = ItAiPromptsRouteImport.update({
@@ -600,6 +639,11 @@ const PtIndexRoute = PtIndexRouteImport.update({
   path: '/',
   getParentRoute: () => PtRoute,
 } as any)
+const PtAiAgentTasksRoute = PtAiAgentTasksRouteImport.update({
+  id: '/ai-agent-tasks',
+  path: '/ai-agent-tasks',
+  getParentRoute: () => PtRoute,
+} as any)
 const PtAiPromptsRoute = PtAiPromptsRouteImport.update({
   id: '/ai-prompts',
   path: '/ai-prompts',
@@ -650,6 +694,11 @@ const RuIndexRoute = RuIndexRouteImport.update({
   path: '/',
   getParentRoute: () => RuRoute,
 } as any)
+const RuAiAgentTasksRoute = RuAiAgentTasksRouteImport.update({
+  id: '/ai-agent-tasks',
+  path: '/ai-agent-tasks',
+  getParentRoute: () => RuRoute,
+} as any)
 const RuAiPromptsRoute = RuAiPromptsRouteImport.update({
   id: '/ai-prompts',
   path: '/ai-prompts',
@@ -698,6 +747,11 @@ const RuTiktokShopRoute = RuTiktokShopRouteImport.update({
 const ZhIndexRoute = ZhIndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => ZhRoute,
+} as any)
+const ZhAiAgentTasksRoute = ZhAiAgentTasksRouteImport.update({
+  id: '/ai-agent-tasks',
+  path: '/ai-agent-tasks',
   getParentRoute: () => ZhRoute,
 } as any)
 const ZhAiPromptsRoute = ZhAiPromptsRouteImport.update({
@@ -1124,6 +1178,7 @@ const ApiPublicCronSeoMonitorRoute = ApiPublicCronSeoMonitorRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/ai-agent-tasks': typeof AiAgentTasksRoute
   '/ai-prompts': typeof AiPromptsRoute
   '/de': typeof DeRouteWithChildren
   '/de-minimis': typeof DeMinimisRoute
@@ -1146,6 +1201,7 @@ export interface FileRoutesByFullPath {
   '/api/og': typeof ApiOgRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$competitor': typeof CompareCompetitorRoute
+  '/de/ai-agent-tasks': typeof DeAiAgentTasksRoute
   '/de/ai-prompts': typeof DeAiPromptsRoute
   '/de/de-minimis': typeof DeDeMinimisRoute
   '/de/duty': typeof DeDutyRoute
@@ -1155,6 +1211,7 @@ export interface FileRoutesByFullPath {
   '/de/supplier-scorecard': typeof DeSupplierScorecardRoute
   '/de/templates': typeof DeTemplatesRoute
   '/de/tiktok-shop': typeof DeTiktokShopRoute
+  '/es/ai-agent-tasks': typeof EsAiAgentTasksRoute
   '/es/ai-prompts': typeof EsAiPromptsRoute
   '/es/de-minimis': typeof EsDeMinimisRoute
   '/es/duty': typeof EsDutyRoute
@@ -1166,6 +1223,7 @@ export interface FileRoutesByFullPath {
   '/es/tiktok-shop': typeof EsTiktokShopRoute
   '/events/free-forever': typeof EventsFreeForeverRoute
   '/for/$useCase': typeof ForUseCaseRoute
+  '/fr/ai-agent-tasks': typeof FrAiAgentTasksRoute
   '/fr/ai-prompts': typeof FrAiPromptsRoute
   '/fr/de-minimis': typeof FrDeMinimisRoute
   '/fr/duty': typeof FrDutyRoute
@@ -1176,6 +1234,7 @@ export interface FileRoutesByFullPath {
   '/fr/templates': typeof FrTemplatesRoute
   '/fr/tiktok-shop': typeof FrTiktokShopRoute
   '/guide/$guide': typeof GuideGuideRoute
+  '/hi/ai-agent-tasks': typeof HiAiAgentTasksRoute
   '/hi/ai-prompts': typeof HiAiPromptsRoute
   '/hi/de-minimis': typeof HiDeMinimisRoute
   '/hi/duty': typeof HiDutyRoute
@@ -1185,6 +1244,7 @@ export interface FileRoutesByFullPath {
   '/hi/supplier-scorecard': typeof HiSupplierScorecardRoute
   '/hi/templates': typeof HiTemplatesRoute
   '/hi/tiktok-shop': typeof HiTiktokShopRoute
+  '/it/ai-agent-tasks': typeof ItAiAgentTasksRoute
   '/it/ai-prompts': typeof ItAiPromptsRoute
   '/it/de-minimis': typeof ItDeMinimisRoute
   '/it/duty': typeof ItDutyRoute
@@ -1194,6 +1254,7 @@ export interface FileRoutesByFullPath {
   '/it/supplier-scorecard': typeof ItSupplierScorecardRoute
   '/it/templates': typeof ItTemplatesRoute
   '/it/tiktok-shop': typeof ItTiktokShopRoute
+  '/pt/ai-agent-tasks': typeof PtAiAgentTasksRoute
   '/pt/ai-prompts': typeof PtAiPromptsRoute
   '/pt/de-minimis': typeof PtDeMinimisRoute
   '/pt/duty': typeof PtDutyRoute
@@ -1203,6 +1264,7 @@ export interface FileRoutesByFullPath {
   '/pt/supplier-scorecard': typeof PtSupplierScorecardRoute
   '/pt/templates': typeof PtTemplatesRoute
   '/pt/tiktok-shop': typeof PtTiktokShopRoute
+  '/ru/ai-agent-tasks': typeof RuAiAgentTasksRoute
   '/ru/ai-prompts': typeof RuAiPromptsRoute
   '/ru/de-minimis': typeof RuDeMinimisRoute
   '/ru/duty': typeof RuDutyRoute
@@ -1212,6 +1274,7 @@ export interface FileRoutesByFullPath {
   '/ru/supplier-scorecard': typeof RuSupplierScorecardRoute
   '/ru/templates': typeof RuTemplatesRoute
   '/ru/tiktok-shop': typeof RuTiktokShopRoute
+  '/zh/ai-agent-tasks': typeof ZhAiAgentTasksRoute
   '/zh/ai-prompts': typeof ZhAiPromptsRoute
   '/zh/de-minimis': typeof ZhDeMinimisRoute
   '/zh/duty': typeof ZhDutyRoute
@@ -1311,6 +1374,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/ai-agent-tasks': typeof AiAgentTasksRoute
   '/ai-prompts': typeof AiPromptsRoute
   '/de-minimis': typeof DeMinimisRoute
   '/duty': typeof DutyRoute
@@ -1325,6 +1389,7 @@ export interface FileRoutesByTo {
   '/api/og': typeof ApiOgRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$competitor': typeof CompareCompetitorRoute
+  '/de/ai-agent-tasks': typeof DeAiAgentTasksRoute
   '/de/ai-prompts': typeof DeAiPromptsRoute
   '/de/de-minimis': typeof DeDeMinimisRoute
   '/de/duty': typeof DeDutyRoute
@@ -1334,6 +1399,7 @@ export interface FileRoutesByTo {
   '/de/supplier-scorecard': typeof DeSupplierScorecardRoute
   '/de/templates': typeof DeTemplatesRoute
   '/de/tiktok-shop': typeof DeTiktokShopRoute
+  '/es/ai-agent-tasks': typeof EsAiAgentTasksRoute
   '/es/ai-prompts': typeof EsAiPromptsRoute
   '/es/de-minimis': typeof EsDeMinimisRoute
   '/es/duty': typeof EsDutyRoute
@@ -1345,6 +1411,7 @@ export interface FileRoutesByTo {
   '/es/tiktok-shop': typeof EsTiktokShopRoute
   '/events/free-forever': typeof EventsFreeForeverRoute
   '/for/$useCase': typeof ForUseCaseRoute
+  '/fr/ai-agent-tasks': typeof FrAiAgentTasksRoute
   '/fr/ai-prompts': typeof FrAiPromptsRoute
   '/fr/de-minimis': typeof FrDeMinimisRoute
   '/fr/duty': typeof FrDutyRoute
@@ -1355,6 +1422,7 @@ export interface FileRoutesByTo {
   '/fr/templates': typeof FrTemplatesRoute
   '/fr/tiktok-shop': typeof FrTiktokShopRoute
   '/guide/$guide': typeof GuideGuideRoute
+  '/hi/ai-agent-tasks': typeof HiAiAgentTasksRoute
   '/hi/ai-prompts': typeof HiAiPromptsRoute
   '/hi/de-minimis': typeof HiDeMinimisRoute
   '/hi/duty': typeof HiDutyRoute
@@ -1364,6 +1432,7 @@ export interface FileRoutesByTo {
   '/hi/supplier-scorecard': typeof HiSupplierScorecardRoute
   '/hi/templates': typeof HiTemplatesRoute
   '/hi/tiktok-shop': typeof HiTiktokShopRoute
+  '/it/ai-agent-tasks': typeof ItAiAgentTasksRoute
   '/it/ai-prompts': typeof ItAiPromptsRoute
   '/it/de-minimis': typeof ItDeMinimisRoute
   '/it/duty': typeof ItDutyRoute
@@ -1373,6 +1442,7 @@ export interface FileRoutesByTo {
   '/it/supplier-scorecard': typeof ItSupplierScorecardRoute
   '/it/templates': typeof ItTemplatesRoute
   '/it/tiktok-shop': typeof ItTiktokShopRoute
+  '/pt/ai-agent-tasks': typeof PtAiAgentTasksRoute
   '/pt/ai-prompts': typeof PtAiPromptsRoute
   '/pt/de-minimis': typeof PtDeMinimisRoute
   '/pt/duty': typeof PtDutyRoute
@@ -1382,6 +1452,7 @@ export interface FileRoutesByTo {
   '/pt/supplier-scorecard': typeof PtSupplierScorecardRoute
   '/pt/templates': typeof PtTemplatesRoute
   '/pt/tiktok-shop': typeof PtTiktokShopRoute
+  '/ru/ai-agent-tasks': typeof RuAiAgentTasksRoute
   '/ru/ai-prompts': typeof RuAiPromptsRoute
   '/ru/de-minimis': typeof RuDeMinimisRoute
   '/ru/duty': typeof RuDutyRoute
@@ -1391,6 +1462,7 @@ export interface FileRoutesByTo {
   '/ru/supplier-scorecard': typeof RuSupplierScorecardRoute
   '/ru/templates': typeof RuTemplatesRoute
   '/ru/tiktok-shop': typeof RuTiktokShopRoute
+  '/zh/ai-agent-tasks': typeof ZhAiAgentTasksRoute
   '/zh/ai-prompts': typeof ZhAiPromptsRoute
   '/zh/de-minimis': typeof ZhDeMinimisRoute
   '/zh/duty': typeof ZhDutyRoute
@@ -1491,6 +1563,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/ai-agent-tasks': typeof AiAgentTasksRoute
   '/ai-prompts': typeof AiPromptsRoute
   '/de': typeof DeRouteWithChildren
   '/de-minimis': typeof DeMinimisRoute
@@ -1513,6 +1586,7 @@ export interface FileRoutesById {
   '/api/og': typeof ApiOgRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$competitor': typeof CompareCompetitorRoute
+  '/de/ai-agent-tasks': typeof DeAiAgentTasksRoute
   '/de/ai-prompts': typeof DeAiPromptsRoute
   '/de/de-minimis': typeof DeDeMinimisRoute
   '/de/duty': typeof DeDutyRoute
@@ -1522,6 +1596,7 @@ export interface FileRoutesById {
   '/de/supplier-scorecard': typeof DeSupplierScorecardRoute
   '/de/templates': typeof DeTemplatesRoute
   '/de/tiktok-shop': typeof DeTiktokShopRoute
+  '/es/ai-agent-tasks': typeof EsAiAgentTasksRoute
   '/es/ai-prompts': typeof EsAiPromptsRoute
   '/es/de-minimis': typeof EsDeMinimisRoute
   '/es/duty': typeof EsDutyRoute
@@ -1533,6 +1608,7 @@ export interface FileRoutesById {
   '/es/tiktok-shop': typeof EsTiktokShopRoute
   '/events/free-forever': typeof EventsFreeForeverRoute
   '/for/$useCase': typeof ForUseCaseRoute
+  '/fr/ai-agent-tasks': typeof FrAiAgentTasksRoute
   '/fr/ai-prompts': typeof FrAiPromptsRoute
   '/fr/de-minimis': typeof FrDeMinimisRoute
   '/fr/duty': typeof FrDutyRoute
@@ -1543,6 +1619,7 @@ export interface FileRoutesById {
   '/fr/templates': typeof FrTemplatesRoute
   '/fr/tiktok-shop': typeof FrTiktokShopRoute
   '/guide/$guide': typeof GuideGuideRoute
+  '/hi/ai-agent-tasks': typeof HiAiAgentTasksRoute
   '/hi/ai-prompts': typeof HiAiPromptsRoute
   '/hi/de-minimis': typeof HiDeMinimisRoute
   '/hi/duty': typeof HiDutyRoute
@@ -1552,6 +1629,7 @@ export interface FileRoutesById {
   '/hi/supplier-scorecard': typeof HiSupplierScorecardRoute
   '/hi/templates': typeof HiTemplatesRoute
   '/hi/tiktok-shop': typeof HiTiktokShopRoute
+  '/it/ai-agent-tasks': typeof ItAiAgentTasksRoute
   '/it/ai-prompts': typeof ItAiPromptsRoute
   '/it/de-minimis': typeof ItDeMinimisRoute
   '/it/duty': typeof ItDutyRoute
@@ -1561,6 +1639,7 @@ export interface FileRoutesById {
   '/it/supplier-scorecard': typeof ItSupplierScorecardRoute
   '/it/templates': typeof ItTemplatesRoute
   '/it/tiktok-shop': typeof ItTiktokShopRoute
+  '/pt/ai-agent-tasks': typeof PtAiAgentTasksRoute
   '/pt/ai-prompts': typeof PtAiPromptsRoute
   '/pt/de-minimis': typeof PtDeMinimisRoute
   '/pt/duty': typeof PtDutyRoute
@@ -1570,6 +1649,7 @@ export interface FileRoutesById {
   '/pt/supplier-scorecard': typeof PtSupplierScorecardRoute
   '/pt/templates': typeof PtTemplatesRoute
   '/pt/tiktok-shop': typeof PtTiktokShopRoute
+  '/ru/ai-agent-tasks': typeof RuAiAgentTasksRoute
   '/ru/ai-prompts': typeof RuAiPromptsRoute
   '/ru/de-minimis': typeof RuDeMinimisRoute
   '/ru/duty': typeof RuDutyRoute
@@ -1579,6 +1659,7 @@ export interface FileRoutesById {
   '/ru/supplier-scorecard': typeof RuSupplierScorecardRoute
   '/ru/templates': typeof RuTemplatesRoute
   '/ru/tiktok-shop': typeof RuTiktokShopRoute
+  '/zh/ai-agent-tasks': typeof ZhAiAgentTasksRoute
   '/zh/ai-prompts': typeof ZhAiPromptsRoute
   '/zh/de-minimis': typeof ZhDeMinimisRoute
   '/zh/duty': typeof ZhDutyRoute
@@ -1680,6 +1761,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/ai-agent-tasks'
     | '/ai-prompts'
     | '/de'
     | '/de-minimis'
@@ -1702,6 +1784,7 @@ export interface FileRouteTypes {
     | '/api/og'
     | '/blog/$slug'
     | '/compare/$competitor'
+    | '/de/ai-agent-tasks'
     | '/de/ai-prompts'
     | '/de/de-minimis'
     | '/de/duty'
@@ -1711,6 +1794,7 @@ export interface FileRouteTypes {
     | '/de/supplier-scorecard'
     | '/de/templates'
     | '/de/tiktok-shop'
+    | '/es/ai-agent-tasks'
     | '/es/ai-prompts'
     | '/es/de-minimis'
     | '/es/duty'
@@ -1722,6 +1806,7 @@ export interface FileRouteTypes {
     | '/es/tiktok-shop'
     | '/events/free-forever'
     | '/for/$useCase'
+    | '/fr/ai-agent-tasks'
     | '/fr/ai-prompts'
     | '/fr/de-minimis'
     | '/fr/duty'
@@ -1732,6 +1817,7 @@ export interface FileRouteTypes {
     | '/fr/templates'
     | '/fr/tiktok-shop'
     | '/guide/$guide'
+    | '/hi/ai-agent-tasks'
     | '/hi/ai-prompts'
     | '/hi/de-minimis'
     | '/hi/duty'
@@ -1741,6 +1827,7 @@ export interface FileRouteTypes {
     | '/hi/supplier-scorecard'
     | '/hi/templates'
     | '/hi/tiktok-shop'
+    | '/it/ai-agent-tasks'
     | '/it/ai-prompts'
     | '/it/de-minimis'
     | '/it/duty'
@@ -1750,6 +1837,7 @@ export interface FileRouteTypes {
     | '/it/supplier-scorecard'
     | '/it/templates'
     | '/it/tiktok-shop'
+    | '/pt/ai-agent-tasks'
     | '/pt/ai-prompts'
     | '/pt/de-minimis'
     | '/pt/duty'
@@ -1759,6 +1847,7 @@ export interface FileRouteTypes {
     | '/pt/supplier-scorecard'
     | '/pt/templates'
     | '/pt/tiktok-shop'
+    | '/ru/ai-agent-tasks'
     | '/ru/ai-prompts'
     | '/ru/de-minimis'
     | '/ru/duty'
@@ -1768,6 +1857,7 @@ export interface FileRouteTypes {
     | '/ru/supplier-scorecard'
     | '/ru/templates'
     | '/ru/tiktok-shop'
+    | '/zh/ai-agent-tasks'
     | '/zh/ai-prompts'
     | '/zh/de-minimis'
     | '/zh/duty'
@@ -1867,6 +1957,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/ai-agent-tasks'
     | '/ai-prompts'
     | '/de-minimis'
     | '/duty'
@@ -1881,6 +1972,7 @@ export interface FileRouteTypes {
     | '/api/og'
     | '/blog/$slug'
     | '/compare/$competitor'
+    | '/de/ai-agent-tasks'
     | '/de/ai-prompts'
     | '/de/de-minimis'
     | '/de/duty'
@@ -1890,6 +1982,7 @@ export interface FileRouteTypes {
     | '/de/supplier-scorecard'
     | '/de/templates'
     | '/de/tiktok-shop'
+    | '/es/ai-agent-tasks'
     | '/es/ai-prompts'
     | '/es/de-minimis'
     | '/es/duty'
@@ -1901,6 +1994,7 @@ export interface FileRouteTypes {
     | '/es/tiktok-shop'
     | '/events/free-forever'
     | '/for/$useCase'
+    | '/fr/ai-agent-tasks'
     | '/fr/ai-prompts'
     | '/fr/de-minimis'
     | '/fr/duty'
@@ -1911,6 +2005,7 @@ export interface FileRouteTypes {
     | '/fr/templates'
     | '/fr/tiktok-shop'
     | '/guide/$guide'
+    | '/hi/ai-agent-tasks'
     | '/hi/ai-prompts'
     | '/hi/de-minimis'
     | '/hi/duty'
@@ -1920,6 +2015,7 @@ export interface FileRouteTypes {
     | '/hi/supplier-scorecard'
     | '/hi/templates'
     | '/hi/tiktok-shop'
+    | '/it/ai-agent-tasks'
     | '/it/ai-prompts'
     | '/it/de-minimis'
     | '/it/duty'
@@ -1929,6 +2025,7 @@ export interface FileRouteTypes {
     | '/it/supplier-scorecard'
     | '/it/templates'
     | '/it/tiktok-shop'
+    | '/pt/ai-agent-tasks'
     | '/pt/ai-prompts'
     | '/pt/de-minimis'
     | '/pt/duty'
@@ -1938,6 +2035,7 @@ export interface FileRouteTypes {
     | '/pt/supplier-scorecard'
     | '/pt/templates'
     | '/pt/tiktok-shop'
+    | '/ru/ai-agent-tasks'
     | '/ru/ai-prompts'
     | '/ru/de-minimis'
     | '/ru/duty'
@@ -1947,6 +2045,7 @@ export interface FileRouteTypes {
     | '/ru/supplier-scorecard'
     | '/ru/templates'
     | '/ru/tiktok-shop'
+    | '/zh/ai-agent-tasks'
     | '/zh/ai-prompts'
     | '/zh/de-minimis'
     | '/zh/duty'
@@ -2046,6 +2145,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/ai-agent-tasks'
     | '/ai-prompts'
     | '/de'
     | '/de-minimis'
@@ -2068,6 +2168,7 @@ export interface FileRouteTypes {
     | '/api/og'
     | '/blog/$slug'
     | '/compare/$competitor'
+    | '/de/ai-agent-tasks'
     | '/de/ai-prompts'
     | '/de/de-minimis'
     | '/de/duty'
@@ -2077,6 +2178,7 @@ export interface FileRouteTypes {
     | '/de/supplier-scorecard'
     | '/de/templates'
     | '/de/tiktok-shop'
+    | '/es/ai-agent-tasks'
     | '/es/ai-prompts'
     | '/es/de-minimis'
     | '/es/duty'
@@ -2088,6 +2190,7 @@ export interface FileRouteTypes {
     | '/es/tiktok-shop'
     | '/events/free-forever'
     | '/for/$useCase'
+    | '/fr/ai-agent-tasks'
     | '/fr/ai-prompts'
     | '/fr/de-minimis'
     | '/fr/duty'
@@ -2098,6 +2201,7 @@ export interface FileRouteTypes {
     | '/fr/templates'
     | '/fr/tiktok-shop'
     | '/guide/$guide'
+    | '/hi/ai-agent-tasks'
     | '/hi/ai-prompts'
     | '/hi/de-minimis'
     | '/hi/duty'
@@ -2107,6 +2211,7 @@ export interface FileRouteTypes {
     | '/hi/supplier-scorecard'
     | '/hi/templates'
     | '/hi/tiktok-shop'
+    | '/it/ai-agent-tasks'
     | '/it/ai-prompts'
     | '/it/de-minimis'
     | '/it/duty'
@@ -2116,6 +2221,7 @@ export interface FileRouteTypes {
     | '/it/supplier-scorecard'
     | '/it/templates'
     | '/it/tiktok-shop'
+    | '/pt/ai-agent-tasks'
     | '/pt/ai-prompts'
     | '/pt/de-minimis'
     | '/pt/duty'
@@ -2125,6 +2231,7 @@ export interface FileRouteTypes {
     | '/pt/supplier-scorecard'
     | '/pt/templates'
     | '/pt/tiktok-shop'
+    | '/ru/ai-agent-tasks'
     | '/ru/ai-prompts'
     | '/ru/de-minimis'
     | '/ru/duty'
@@ -2134,6 +2241,7 @@ export interface FileRouteTypes {
     | '/ru/supplier-scorecard'
     | '/ru/templates'
     | '/ru/tiktok-shop'
+    | '/zh/ai-agent-tasks'
     | '/zh/ai-prompts'
     | '/zh/de-minimis'
     | '/zh/duty'
@@ -2234,6 +2342,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AiAgentTasksRoute: typeof AiAgentTasksRoute
   AiPromptsRoute: typeof AiPromptsRoute
   DeRoute: typeof DeRouteWithChildren
   DeMinimisRoute: typeof DeMinimisRoute
@@ -2275,6 +2384,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ai-agent-tasks': {
+      id: '/ai-agent-tasks'
+      path: '/ai-agent-tasks'
+      fullPath: '/ai-agent-tasks'
+      preLoaderRoute: typeof AiAgentTasksRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/ai-prompts': {
@@ -2452,6 +2568,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DeIndexRouteImport
       parentRoute: typeof DeRoute
     }
+    '/de/ai-agent-tasks': {
+      id: '/de/ai-agent-tasks'
+      path: '/ai-agent-tasks'
+      fullPath: '/de/ai-agent-tasks'
+      preLoaderRoute: typeof DeAiAgentTasksRouteImport
+      parentRoute: typeof DeRoute
+    }
     '/de/ai-prompts': {
       id: '/de/ai-prompts'
       path: '/ai-prompts'
@@ -2520,6 +2643,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/es/'
       preLoaderRoute: typeof EsIndexRouteImport
+      parentRoute: typeof EsRoute
+    }
+    '/es/ai-agent-tasks': {
+      id: '/es/ai-agent-tasks'
+      path: '/ai-agent-tasks'
+      fullPath: '/es/ai-agent-tasks'
+      preLoaderRoute: typeof EsAiAgentTasksRouteImport
       parentRoute: typeof EsRoute
     }
     '/es/ai-prompts': {
@@ -2613,6 +2743,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FrIndexRouteImport
       parentRoute: typeof FrRoute
     }
+    '/fr/ai-agent-tasks': {
+      id: '/fr/ai-agent-tasks'
+      path: '/ai-agent-tasks'
+      fullPath: '/fr/ai-agent-tasks'
+      preLoaderRoute: typeof FrAiAgentTasksRouteImport
+      parentRoute: typeof FrRoute
+    }
     '/fr/ai-prompts': {
       id: '/fr/ai-prompts'
       path: '/ai-prompts'
@@ -2697,6 +2834,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HiIndexRouteImport
       parentRoute: typeof HiRoute
     }
+    '/hi/ai-agent-tasks': {
+      id: '/hi/ai-agent-tasks'
+      path: '/ai-agent-tasks'
+      fullPath: '/hi/ai-agent-tasks'
+      preLoaderRoute: typeof HiAiAgentTasksRouteImport
+      parentRoute: typeof HiRoute
+    }
     '/hi/ai-prompts': {
       id: '/hi/ai-prompts'
       path: '/ai-prompts'
@@ -2765,6 +2909,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/it/'
       preLoaderRoute: typeof ItIndexRouteImport
+      parentRoute: typeof ItRoute
+    }
+    '/it/ai-agent-tasks': {
+      id: '/it/ai-agent-tasks'
+      path: '/ai-agent-tasks'
+      fullPath: '/it/ai-agent-tasks'
+      preLoaderRoute: typeof ItAiAgentTasksRouteImport
       parentRoute: typeof ItRoute
     }
     '/it/ai-prompts': {
@@ -2837,6 +2988,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PtIndexRouteImport
       parentRoute: typeof PtRoute
     }
+    '/pt/ai-agent-tasks': {
+      id: '/pt/ai-agent-tasks'
+      path: '/ai-agent-tasks'
+      fullPath: '/pt/ai-agent-tasks'
+      preLoaderRoute: typeof PtAiAgentTasksRouteImport
+      parentRoute: typeof PtRoute
+    }
     '/pt/ai-prompts': {
       id: '/pt/ai-prompts'
       path: '/ai-prompts'
@@ -2907,6 +3065,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RuIndexRouteImport
       parentRoute: typeof RuRoute
     }
+    '/ru/ai-agent-tasks': {
+      id: '/ru/ai-agent-tasks'
+      path: '/ai-agent-tasks'
+      fullPath: '/ru/ai-agent-tasks'
+      preLoaderRoute: typeof RuAiAgentTasksRouteImport
+      parentRoute: typeof RuRoute
+    }
     '/ru/ai-prompts': {
       id: '/ru/ai-prompts'
       path: '/ai-prompts'
@@ -2975,6 +3140,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/zh/'
       preLoaderRoute: typeof ZhIndexRouteImport
+      parentRoute: typeof ZhRoute
+    }
+    '/zh/ai-agent-tasks': {
+      id: '/zh/ai-agent-tasks'
+      path: '/ai-agent-tasks'
+      fullPath: '/zh/ai-agent-tasks'
+      preLoaderRoute: typeof ZhAiAgentTasksRouteImport
       parentRoute: typeof ZhRoute
     }
     '/zh/ai-prompts': {
@@ -3569,6 +3741,7 @@ declare module '@tanstack/react-router' {
 }
 
 interface DeRouteChildren {
+  DeAiAgentTasksRoute: typeof DeAiAgentTasksRoute
   DeAiPromptsRoute: typeof DeAiPromptsRoute
   DeDeMinimisRoute: typeof DeDeMinimisRoute
   DeDutyRoute: typeof DeDutyRoute
@@ -3591,6 +3764,7 @@ interface DeRouteChildren {
 }
 
 const DeRouteChildren: DeRouteChildren = {
+  DeAiAgentTasksRoute: DeAiAgentTasksRoute,
   DeAiPromptsRoute: DeAiPromptsRoute,
   DeDeMinimisRoute: DeDeMinimisRoute,
   DeDutyRoute: DeDutyRoute,
@@ -3615,6 +3789,7 @@ const DeRouteChildren: DeRouteChildren = {
 const DeRouteWithChildren = DeRoute._addFileChildren(DeRouteChildren)
 
 interface EsRouteChildren {
+  EsAiAgentTasksRoute: typeof EsAiAgentTasksRoute
   EsAiPromptsRoute: typeof EsAiPromptsRoute
   EsDeMinimisRoute: typeof EsDeMinimisRoute
   EsDutyRoute: typeof EsDutyRoute
@@ -3637,6 +3812,7 @@ interface EsRouteChildren {
 }
 
 const EsRouteChildren: EsRouteChildren = {
+  EsAiAgentTasksRoute: EsAiAgentTasksRoute,
   EsAiPromptsRoute: EsAiPromptsRoute,
   EsDeMinimisRoute: EsDeMinimisRoute,
   EsDutyRoute: EsDutyRoute,
@@ -3661,6 +3837,7 @@ const EsRouteChildren: EsRouteChildren = {
 const EsRouteWithChildren = EsRoute._addFileChildren(EsRouteChildren)
 
 interface FrRouteChildren {
+  FrAiAgentTasksRoute: typeof FrAiAgentTasksRoute
   FrAiPromptsRoute: typeof FrAiPromptsRoute
   FrDeMinimisRoute: typeof FrDeMinimisRoute
   FrDutyRoute: typeof FrDutyRoute
@@ -3683,6 +3860,7 @@ interface FrRouteChildren {
 }
 
 const FrRouteChildren: FrRouteChildren = {
+  FrAiAgentTasksRoute: FrAiAgentTasksRoute,
   FrAiPromptsRoute: FrAiPromptsRoute,
   FrDeMinimisRoute: FrDeMinimisRoute,
   FrDutyRoute: FrDutyRoute,
@@ -3707,6 +3885,7 @@ const FrRouteChildren: FrRouteChildren = {
 const FrRouteWithChildren = FrRoute._addFileChildren(FrRouteChildren)
 
 interface HiRouteChildren {
+  HiAiAgentTasksRoute: typeof HiAiAgentTasksRoute
   HiAiPromptsRoute: typeof HiAiPromptsRoute
   HiDeMinimisRoute: typeof HiDeMinimisRoute
   HiDutyRoute: typeof HiDutyRoute
@@ -3729,6 +3908,7 @@ interface HiRouteChildren {
 }
 
 const HiRouteChildren: HiRouteChildren = {
+  HiAiAgentTasksRoute: HiAiAgentTasksRoute,
   HiAiPromptsRoute: HiAiPromptsRoute,
   HiDeMinimisRoute: HiDeMinimisRoute,
   HiDutyRoute: HiDutyRoute,
@@ -3753,6 +3933,7 @@ const HiRouteChildren: HiRouteChildren = {
 const HiRouteWithChildren = HiRoute._addFileChildren(HiRouteChildren)
 
 interface ItRouteChildren {
+  ItAiAgentTasksRoute: typeof ItAiAgentTasksRoute
   ItAiPromptsRoute: typeof ItAiPromptsRoute
   ItDeMinimisRoute: typeof ItDeMinimisRoute
   ItDutyRoute: typeof ItDutyRoute
@@ -3775,6 +3956,7 @@ interface ItRouteChildren {
 }
 
 const ItRouteChildren: ItRouteChildren = {
+  ItAiAgentTasksRoute: ItAiAgentTasksRoute,
   ItAiPromptsRoute: ItAiPromptsRoute,
   ItDeMinimisRoute: ItDeMinimisRoute,
   ItDutyRoute: ItDutyRoute,
@@ -3799,6 +3981,7 @@ const ItRouteChildren: ItRouteChildren = {
 const ItRouteWithChildren = ItRoute._addFileChildren(ItRouteChildren)
 
 interface PtRouteChildren {
+  PtAiAgentTasksRoute: typeof PtAiAgentTasksRoute
   PtAiPromptsRoute: typeof PtAiPromptsRoute
   PtDeMinimisRoute: typeof PtDeMinimisRoute
   PtDutyRoute: typeof PtDutyRoute
@@ -3821,6 +4004,7 @@ interface PtRouteChildren {
 }
 
 const PtRouteChildren: PtRouteChildren = {
+  PtAiAgentTasksRoute: PtAiAgentTasksRoute,
   PtAiPromptsRoute: PtAiPromptsRoute,
   PtDeMinimisRoute: PtDeMinimisRoute,
   PtDutyRoute: PtDutyRoute,
@@ -3845,6 +4029,7 @@ const PtRouteChildren: PtRouteChildren = {
 const PtRouteWithChildren = PtRoute._addFileChildren(PtRouteChildren)
 
 interface RuRouteChildren {
+  RuAiAgentTasksRoute: typeof RuAiAgentTasksRoute
   RuAiPromptsRoute: typeof RuAiPromptsRoute
   RuDeMinimisRoute: typeof RuDeMinimisRoute
   RuDutyRoute: typeof RuDutyRoute
@@ -3867,6 +4052,7 @@ interface RuRouteChildren {
 }
 
 const RuRouteChildren: RuRouteChildren = {
+  RuAiAgentTasksRoute: RuAiAgentTasksRoute,
   RuAiPromptsRoute: RuAiPromptsRoute,
   RuDeMinimisRoute: RuDeMinimisRoute,
   RuDutyRoute: RuDutyRoute,
@@ -3891,6 +4077,7 @@ const RuRouteChildren: RuRouteChildren = {
 const RuRouteWithChildren = RuRoute._addFileChildren(RuRouteChildren)
 
 interface ZhRouteChildren {
+  ZhAiAgentTasksRoute: typeof ZhAiAgentTasksRoute
   ZhAiPromptsRoute: typeof ZhAiPromptsRoute
   ZhDeMinimisRoute: typeof ZhDeMinimisRoute
   ZhDutyRoute: typeof ZhDutyRoute
@@ -3913,6 +4100,7 @@ interface ZhRouteChildren {
 }
 
 const ZhRouteChildren: ZhRouteChildren = {
+  ZhAiAgentTasksRoute: ZhAiAgentTasksRoute,
   ZhAiPromptsRoute: ZhAiPromptsRoute,
   ZhDeMinimisRoute: ZhDeMinimisRoute,
   ZhDutyRoute: ZhDutyRoute,
@@ -3938,6 +4126,7 @@ const ZhRouteWithChildren = ZhRoute._addFileChildren(ZhRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AiAgentTasksRoute: AiAgentTasksRoute,
   AiPromptsRoute: AiPromptsRoute,
   DeRoute: DeRouteWithChildren,
   DeMinimisRoute: DeMinimisRoute,

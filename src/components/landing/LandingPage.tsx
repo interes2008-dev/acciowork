@@ -243,6 +243,7 @@ function Navbar() {
   const tiktokHref = blogHref.replace("/blog", "/tiktok-shop");
   const promptsHref = blogHref.replace("/blog", "/ai-prompts");
   const scorecardHref = blogHref.replace("/blog", "/supplier-scorecard");
+  const checklistHref = blogHref.replace("/blog", "/ai-agent-tasks");
   const [menuOpen, setMenuOpen] = useState(false);
   const eventsHref = lang === "en" ? "/events/free-forever" : `/${lang}/events/free-forever`;
   const mobileLinks = [
@@ -257,6 +258,7 @@ function Navbar() {
     { href: dutyHref, label: t.nav.duty },
     { href: promptsHref, label: t.nav.prompts },
     { href: scorecardHref, label: t.nav.scorecard },
+    { href: checklistHref, label: t.nav.checklist },
     { href: deMinimisHref, label: t.nav.deMinimis },
     { href: tiktokHref, label: t.nav.tiktok },
     { href: "#faq", label: t.nav.help },
@@ -279,6 +281,7 @@ function Navbar() {
                 { href: dutyHref, label: t.nav.duty },
                 { href: promptsHref, label: t.nav.prompts },
                 { href: scorecardHref, label: t.nav.scorecard },
+                { href: checklistHref, label: t.nav.checklist },
               ]}
             />
             <NavDropdown
@@ -1158,6 +1161,7 @@ function Footer() {
                 { href: `${base}/duty`, label: t.nav.duty },
                 { href: `${base}/ai-prompts`, label: t.nav.prompts },
                 { href: `${base}/supplier-scorecard`, label: t.nav.scorecard },
+                { href: `${base}/ai-agent-tasks`, label: t.nav.checklist },
               ]}
             />
             <FooterCol

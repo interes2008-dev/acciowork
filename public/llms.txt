@@ -114,3 +114,8 @@ Accio Work is an execution-oriented AI agent platform (not a chatbot). A general
 
 - [Supplier scorecard EN](https://acciowork.pro/supplier-scorecard): rate a supplier across six risk factors and get a reliability score with next steps
 - Localized: /ru/supplier-scorecard, /de/supplier-scorecard, /it/supplier-scorecard, /es/supplier-scorecard, /zh/supplier-scorecard, /pt/supplier-scorecard, /hi/supplier-scorecard, /fr/supplier-scorecard
+
+## Free 40-task AI agent delegation checklist (interactive, all languages)
+
+- [40 AI agent tasks EN](https://acciowork.pro/ai-agent-tasks): tick the work you would delegate and see the hours an AI agent could reclaim each month
+- Localized: /ru/ai-agent-tasks, /de/ai-agent-tasks, /it/ai-agent-tasks, /es/ai-agent-tasks, /zh/ai-agent-tasks, /pt/ai-agent-tasks, /hi/ai-agent-tasks, /fr/ai-agent-tasks

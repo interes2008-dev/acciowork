@@ -39,6 +39,7 @@ export const Route = createFileRoute("/")({
       { property: "og:image:height", content: "630" },
       { property: "og:image:type", content: "image/png" },
       { property: "og:image:alt", content: "Accio Work AI workspace for sourcing, research and automation" },
+      { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: "https://acciowork.pro/og/og-en.png" },
       { name: "twitter:image:alt", content: "Accio Work AI workspace for sourcing, research and automation" },
       { name: "twitter:title", content: "Accio Work | AI-Powered Work Opportunities" },

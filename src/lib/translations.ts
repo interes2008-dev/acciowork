@@ -60,6 +60,7 @@ export type Dict = {
     tiktok: string;
     prompts: string;
     scorecard: string;
+    checklist: string;
   };
   hero: {
     brand: string;
@@ -170,6 +171,7 @@ const en: Dict = {
     tiktok: "TikTok Shop",
     prompts: "AI prompt pack",
     scorecard: "Supplier scorecard",
+    checklist: "40 AI tasks",
   },
   hero: {
     brand: "Work",
@@ -371,6 +373,7 @@ const ru: Dict = {
     tiktok: "TikTok Shop",
     prompts: "Пак AI-промптов",
     scorecard: "Скоринг поставщика",
+    checklist: "40 задач для AI",
   },
   hero: {
     brand: "Work",
@@ -572,6 +575,7 @@ const de: Dict = {
     tiktok: "TikTok Shop",
     prompts: "AI-Prompt-Paket",
     scorecard: "Lieferanten-Scorecard",
+    checklist: "40 AI-Aufgaben",
   },
   hero: {
     brand: "Work",
@@ -773,6 +777,7 @@ const it: Dict = {
     tiktok: "TikTok Shop",
     prompts: "Prompt AI",
     scorecard: "Scorecard fornitore",
+    checklist: "40 attività AI",
   },
   hero: {
     brand: "Work",
@@ -974,6 +979,7 @@ const es: Dict = {
     tiktok: "TikTok Shop",
     prompts: "Prompts de IA",
     scorecard: "Scorecard proveedor",
+    checklist: "40 tareas de IA",
   },
   hero: {
     brand: "Work",
@@ -1175,6 +1181,7 @@ const zh: Dict = {
     tiktok: "TikTok Shop",
     prompts: "AI 提示词包",
     scorecard: "供应商评分卡",
+    checklist: "40 项 AI 任务",
   },
   hero: {
     brand: "Work",
@@ -1377,6 +1384,7 @@ const pt: Dict = {
     tiktok: "TikTok Shop",
     prompts: "Prompts de IA",
     scorecard: "Scorecard fornecedor",
+    checklist: "40 tarefas de IA",
   },
   hero: {
     brand: "Work",
@@ -1578,6 +1586,7 @@ const hi: Dict = {
     tiktok: "TikTok Shop",
     prompts: "AI प्रॉम्प्ट पैक",
     scorecard: "सप्लायर स्कोरकार्ड",
+    checklist: "40 AI काम",
   },
   hero: {
     brand: "Work",
@@ -1780,6 +1789,7 @@ const fr: Dict = {
     tiktok: "TikTok Shop",
     prompts: "Prompts IA",
     scorecard: "Scorecard fournisseur",
+    checklist: "40 tâches IA",
   },
   hero: {
     brand: "Work",
