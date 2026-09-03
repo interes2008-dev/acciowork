@@ -1,54 +1,109 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 import { I18nProvider } from "@/lib/i18n";
 import { BlogArticle } from "@/components/blog/BlogArticle";
-import { getArticle } from "@/lib/blog.functions";
+import { getArticleBundle } from "@/lib/blog.functions";
+
+const SITE = "https://acciowork.pro";
+const LANG = "pt" as const;
+const PREFIX = "/pt/blog";
+const LANG_PREFIX: Record<string, string> = {
+  en: "",
+  ru: "/ru",
+  de: "/de",
+  it: "/it",
+  es: "/es",
+  zh: "/zh",
+  pt: "/pt",
+  hi: "/hi",
+  fr: "/fr",
+};
 
 export const Route = createFileRoute("/pt/blog/$slug")({
   loader: async ({ params }) => {
-    const article = await getArticle({ data: { lang: "pt", slug: params.slug } });
-    if (!article) throw notFound();
-    return { article };
+    const bundle = await getArticleBundle({ data: { lang: LANG, slug: params.slug } });
+    if (!bundle) throw notFound();
+    return bundle;
   },
   head: ({ loaderData }) => {
     const a = loaderData?.article;
-    const cover = a?.cover_url ? `https://acciowork.pro${a.cover_url}` : null;
+    if (!a) {
+      return { meta: [{ title: "Blog Accio Work" }, { name: "robots", content: "noindex" }] };
+    }
+    const url = `${SITE}${PREFIX}/${a.slug}`;
+    // The article title is written to target one search query, so keep it intact
+    // and only append the brand when it still fits inside the SERP title limit.
+    const pageTitle = a.title.length <= 45 ? `${a.title} | Blog Accio Work` : a.title;
+    const cover = a.cover_url ? `${SITE}${a.cover_url}` : `${SITE}/og/og-pt.png`;
+    const alts = (loaderData?.alternates ?? []).filter((x) => LANG_PREFIX[x.lang] !== undefined);
+    const altLinks = alts.map((x) => ({
+      rel: "alternate",
+      hrefLang: x.lang,
+      href: `${SITE}${LANG_PREFIX[x.lang]}/blog/${x.slug}`,
+    }));
+    const en = alts.find((x) => x.lang === "en");
+    if (en) altLinks.push({ rel: "alternate", hrefLang: "x-default", href: `${SITE}/blog/${en.slug}` });
     return {
-      meta: a
-        ? [
-            { title: `${a.title} | Blog Accio Work` },
-            { name: "description", content: a.description },
-            { name: "keywords", content: (a.keywords || []).join(", ") },
-            { property: "og:title", content: a.title },
-            { property: "og:description", content: a.description },
-            { property: "og:type", content: "article" },
-            { property: "og:locale", content: "pt_BR" },
-            { property: "og:url", content: `https://acciowork.pro/pt/blog/${a.slug}` },
-            ...(cover ? [{ property: "og:image", content: cover }, { name: "twitter:image", content: cover }] : []),
-            { name: "twitter:card", content: "summary_large_image" },
-          ]
-        : [{ title: "Blog Accio Work" }],
-      links: a ? [{ rel: "canonical", href: `https://acciowork.pro/pt/blog/${a.slug}` }] : [],
-      scripts: a
-        ? [
-            {
-              type: "application/ld+json",
-              children: JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "Article",
-                headline: a.title,
-                description: a.description,
-                inLanguage: "pt",
-                datePublished: a.published_at,
-                dateModified: a.published_at,
-                ...(cover ? { image: cover } : {}),
-                keywords: (a.keywords || []).join(", "),
-                author: { "@type": "Organization", name: "Accio Work" },
-                publisher: { "@type": "Organization", name: "Accio Work" },
-                mainEntityOfPage: { "@type": "WebPage", "@id": `https://acciowork.pro/pt/blog/${a.slug}` },
-              }),
+      meta: [
+        { title: pageTitle },
+        { name: "description", content: a.description },
+        { name: "keywords", content: (a.keywords || []).join(", ") },
+        { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
+        { name: "author", content: "Accio Work" },
+        { property: "og:site_name", content: "Accio Work" },
+        { property: "og:title", content: a.title },
+        { property: "og:description", content: a.description },
+        { property: "og:type", content: "article" },
+        { property: "og:locale", content: "pt_BR" },
+        { property: "og:url", content: url },
+        { property: "og:image", content: cover },
+        { property: "article:published_time", content: a.published_at },
+        { property: "article:modified_time", content: a.published_at },
+        { property: "article:section", content: "AI for business" },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: a.title },
+        { name: "twitter:description", content: a.description },
+        { name: "twitter:image", content: cover },
+      ],
+      links: [{ rel: "canonical", href: url }, ...altLinks],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            headline: a.title.slice(0, 110),
+            description: a.description,
+            inLanguage: "pt-BR",
+            datePublished: a.published_at,
+            dateModified: a.published_at,
+            image: [cover],
+            keywords: (a.keywords || []).join(", "),
+            wordCount: a.body_md ? a.body_md.split(/\s+/).length : undefined,
+            timeRequired: `PT${a.reading_minutes}M`,
+            author: { "@type": "Organization", name: "Accio Work", url: SITE },
+            publisher: {
+              "@type": "Organization",
+              name: "Accio Work",
+              url: SITE,
+              logo: { "@type": "ImageObject", url: `${SITE}/favicon.svg` },
             },
-          ]
-        : [],
+            isPartOf: { "@type": "Blog", name: "Blog Accio Work", url: `${SITE}${PREFIX}` },
+            mainEntityOfPage: { "@type": "WebPage", "@id": url },
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Accio Work", item: `${SITE}/pt` },
+              { "@type": "ListItem", position: 2, name: "Blog Accio Work", item: `${SITE}${PREFIX}` },
+              { "@type": "ListItem", position: 3, name: a.title, item: url },
+            ],
+          }),
+        },
+      ],
     };
   },
   component: ArticlePt,
@@ -57,10 +112,10 @@ export const Route = createFileRoute("/pt/blog/$slug")({
 });
 
 function ArticlePt() {
-  const { article } = Route.useLoaderData();
+  const { article, related } = Route.useLoaderData();
   return (
     <I18nProvider>
-      <BlogArticle lang="pt" article={article} />
+      <BlogArticle lang={LANG} article={article} related={related} />
     </I18nProvider>
   );
 }
