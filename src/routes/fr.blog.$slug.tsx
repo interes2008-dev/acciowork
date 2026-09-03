@@ -30,6 +30,9 @@ export const Route = createFileRoute("/fr/blog/$slug")({
       return { meta: [{ title: "Blog Accio Work" }, { name: "robots", content: "noindex" }] };
     }
     const url = `${SITE}${PREFIX}/${a.slug}`;
+    // The article title is written to target one search query, so keep it intact
+    // and only append the brand when it still fits inside the SERP title limit.
+    const pageTitle = a.title.length <= 45 ? `${a.title} | Blog Accio Work` : a.title;
     const cover = a.cover_url ? `${SITE}${a.cover_url}` : `${SITE}/og/og-fr.png`;
     const alts = (loaderData?.alternates ?? []).filter((x) => LANG_PREFIX[x.lang] !== undefined);
     const altLinks = alts.map((x) => ({
@@ -41,7 +44,7 @@ export const Route = createFileRoute("/fr/blog/$slug")({
     if (en) altLinks.push({ rel: "alternate", hrefLang: "x-default", href: `${SITE}/blog/${en.slug}` });
     return {
       meta: [
-        { title: `${a.title} | Blog Accio Work` },
+        { title: pageTitle },
         { name: "description", content: a.description },
         { name: "keywords", content: (a.keywords || []).join(", ") },
         { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },

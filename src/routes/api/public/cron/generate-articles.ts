@@ -166,9 +166,22 @@ export const Route = createFileRoute("/api/public/cron/generate-articles")({
             const article = await callAI(system, user);
 
             const cleanBody = sanitizeAiText(article.body_md ?? "");
-            const cleanTitle = sanitizeAiText(article.title ?? seed.seed_title);
-            const cleanDesc = sanitizeAiText(article.description ?? "");
+            let cleanTitle = sanitizeAiText(article.title ?? seed.seed_title);
+            let cleanDesc = sanitizeAiText(article.description ?? "");
 
+            // Keep the H1/<title> inside a length Google will not truncate,
+            // and never let a meta description run past the snippet limit.
+            cleanTitle = cleanTitle.replace(/\s*\|\s*Accio Work\s*$/i, "").trim();
+            if (cleanTitle.length > 70) {
+              const cut = cleanTitle.slice(0, 70);
+              cleanTitle = cut.slice(0, Math.max(cut.lastIndexOf(" "), 40)).trim();
+            }
+            if (cleanDesc.length > 160) {
+              const cut = cleanDesc.slice(0, 158);
+              cleanDesc = `${cut.slice(0, Math.max(cut.lastIndexOf(" "), 120)).trim()}.`;
+            }
+
+            // Slug follows the targeted query, not the free-form title.
             let slug = slugify(article.slug || cleanTitle);
             if (!slug) slug = `${slugify(seed.keyword)}-${Date.now().toString(36)}`;
             // Ensure uniqueness per language
