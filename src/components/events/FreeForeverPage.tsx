@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { fetchAlerts, type AlertItem } from "@/lib/alerts";
 import type { Lang } from "@/lib/translations";
 import { CreditsUpdate } from "./CreditsUpdate";
 
@@ -45,6 +46,11 @@ type EventDict = {
     summary: (a: string, b: string) => React.ReactNode;
     summaryMoney: string;
     summaryTime: string;
+  };
+  alerts: {
+    heading: string;
+    sub: string;
+    items: { tag: string; title: string; body: string; cta: string }[];
   };
   story: {
     heading: string;
@@ -125,6 +131,15 @@ const DICTS: Record<Lang, EventDict> = {
       summaryMoney: "483× cheaper",
       summaryTime: "1,440× faster",
     },
+    alerts: {
+      heading: "What is shifting in the market right now",
+      sub: "Real changes hitting cross-border sellers this year. What happened, and what to do about it.",
+      items: [
+        { tag: "Customs · 2026", title: "The de minimis threshold is gone", body: "The duty-free exemption for cheap parcels into the US has ended, and the EU is adding fees on low-value goods. Every parcel is costed differently now, which changes your real landed price.", cta: "Recalculate landed cost" },
+        { tag: "Channels · 2026", title: "TikTok Shop is booming, windows close fast", body: "Marketplace volume is climbing hard, but winning products saturate within days. Whoever finds and launches faster keeps the margin.", cta: "How to enter TikTok Shop" },
+        { tag: "Suppliers · 2026", title: "Reliable suppliers are pain number one", body: "Most sellers name finding reliable suppliers as their biggest challenge. One bad batch eats your margin and your timeline.", cta: "Score a supplier" },
+      ],
+    },
     story: {
       heading: "How this could look for you",
       who: "Friday night: you have the idea, not the time",
@@ -200,6 +215,15 @@ const DICTS: Record<Lang, EventDict> = {
       summary: () => null,
       summaryMoney: "в 483 раза",
       summaryTime: "в 1 440 раз",
+    },
+    alerts: {
+      heading: "Что меняется на рынке прямо сейчас",
+      sub: "Реальные сдвиги, которые бьют по трансграничным продавцам в этом году. Что случилось и что с этим делать.",
+      items: [
+        { tag: "Таможня · 2026", title: "Порог de minimis отменён", body: "Освобождение от пошлин для дешёвых посылок в США закрыто, а ЕС добавляет сборы на товары низкой стоимости. Каждая посылка теперь считается иначе, и это меняет вашу реальную себестоимость.", cta: "Пересчитать себестоимость" },
+        { tag: "Каналы · 2026", title: "TikTok Shop растёт, окна закрываются быстро", body: "Оборот площадки резко растёт, но выигрышные товары насыщаются за считанные дни. Кто быстрее находит и запускает, тот и снимает маржу.", cta: "Как выходить в TikTok Shop" },
+        { tag: "Поставщики · 2026", title: "Надёжный поставщик, боль номер один", body: "Большинство продавцов называют поиск надёжных поставщиков главной трудностью. Одной плохой партии хватает, чтобы съесть маржу и сорвать сроки.", cta: "Оценить поставщика" },
+      ],
     },
     story: {
       heading: "Как это может выглядеть у вас",
@@ -277,6 +301,15 @@ const DICTS: Record<Lang, EventDict> = {
       summaryMoney: "483× günstiger",
       summaryTime: "1.440× schneller",
     },
+    alerts: {
+      heading: "Was sich gerade am Markt verschiebt",
+      sub: "Echte Veränderungen, die grenzüberschreitende Verkäufer dieses Jahr treffen. Was passiert ist und was zu tun ist.",
+      items: [
+        { tag: "Zoll · 2026", title: "Die de-minimis-Grenze ist weg", body: "Die Zollfreiheit für billige Pakete in die USA ist beendet, und die EU erhebt Gebühren auf geringwertige Waren. Jedes Paket wird jetzt anders kalkuliert, das ändert deinen echten Landepreis.", cta: "Landepreis neu berechnen" },
+        { tag: "Kanäle · 2026", title: "TikTok Shop boomt, Fenster schließen schnell", body: "Das Marktplatzvolumen steigt stark, aber Gewinnerprodukte sind in Tagen gesättigt. Wer schneller findet und startet, behält die Marge.", cta: "So startest du bei TikTok Shop" },
+        { tag: "Lieferanten · 2026", title: "Zuverlässige Lieferanten sind Schmerz Nummer eins", body: "Die meisten Verkäufer nennen zuverlässige Lieferanten als größte Hürde. Eine schlechte Charge frisst Marge und Zeitplan.", cta: "Lieferant bewerten" },
+      ],
+    },
     story: {
       heading: "So könnte es bei dir aussehen",
       who: "Freitagabend: die Idee ist da, die Zeit fehlt",
@@ -352,6 +385,15 @@ const DICTS: Record<Lang, EventDict> = {
       summary: () => null,
       summaryMoney: "483× più economico",
       summaryTime: "1.440× più veloce",
+    },
+    alerts: {
+      heading: "Cosa sta cambiando sul mercato ora",
+      sub: "Cambiamenti reali che colpiscono i venditori cross-border quest'anno. Cosa è successo e cosa fare.",
+      items: [
+        { tag: "Dogana · 2026", title: "La soglia de minimis non c'è più", body: "L'esenzione dai dazi per i pacchi economici verso gli USA è finita e la UE aggiunge oneri sui beni di basso valore. Ogni pacco ora si calcola diversamente, e questo cambia il tuo costo reale a destino.", cta: "Ricalcola il costo a destino" },
+        { tag: "Canali · 2026", title: "TikTok Shop cresce, le finestre si chiudono in fretta", body: "Il volume del marketplace sale forte, ma i prodotti vincenti si saturano in giorni. Chi trova e lancia più in fretta tiene il margine.", cta: "Come entrare in TikTok Shop" },
+        { tag: "Fornitori · 2026", title: "Fornitori affidabili, dolore numero uno", body: "La maggior parte dei venditori indica i fornitori affidabili come sfida principale. Un lotto sbagliato divora margine e tempi.", cta: "Valuta un fornitore" },
+      ],
     },
     story: {
       heading: "Come potrebbe essere per te",
@@ -429,6 +471,15 @@ const DICTS: Record<Lang, EventDict> = {
       summaryMoney: "483× más barato",
       summaryTime: "1.440× más rápido",
     },
+    alerts: {
+      heading: "Qué está cambiando en el mercado ahora",
+      sub: "Cambios reales que golpean a los vendedores cross-border este año. Qué pasó y qué hacer.",
+      items: [
+        { tag: "Aduana · 2026", title: "El umbral de minimis desapareció", body: "La exención de aranceles para paquetes baratos hacia EE. UU. terminó, y la UE suma cargos a los bienes de bajo valor. Cada paquete se calcula distinto ahora, y eso cambia tu costo real a destino.", cta: "Recalcular el costo total" },
+        { tag: "Canales · 2026", title: "TikTok Shop crece, las ventanas se cierran rápido", body: "El volumen del marketplace sube fuerte, pero los productos ganadores se saturan en días. Quien encuentra y lanza más rápido se queda el margen.", cta: "Cómo entrar a TikTok Shop" },
+        { tag: "Proveedores · 2026", title: "Proveedores fiables, el dolor número uno", body: "La mayoría de vendedores señala a los proveedores fiables como su mayor reto. Un lote malo se come tu margen y tus plazos.", cta: "Evaluar un proveedor" },
+      ],
+    },
     story: {
       heading: "Cómo podría verse en tu caso",
       who: "Viernes por la noche: tienes la idea, no el tiempo",
@@ -504,6 +555,15 @@ const DICTS: Record<Lang, EventDict> = {
       summary: () => null,
       summaryMoney: "483× mais barato",
       summaryTime: "1.440× mais rápido",
+    },
+    alerts: {
+      heading: "当下市场正在发生的变化",
+      sub: "今年真实冲击跨境卖家的变化。发生了什么，以及该怎么做。",
+      items: [
+        { tag: "关税 · 2026", title: "de minimis 门槛已取消", body: "美国对低价包裹的免税已结束，欧盟对低值商品加征费用。现在每个包裹的核算方式不同，这会改变你的真实到岸成本。", cta: "重新计算到岸成本" },
+        { tag: "渠道 · 2026", title: "TikTok Shop 爆发，窗口关得很快", body: "平台成交额猛涨，但爆款几天就饱和。谁更快找到并上线，谁就吃到利润。", cta: "如何进入 TikTok Shop" },
+        { tag: "供应商 · 2026", title: "可靠供应商是头号痛点", body: "多数卖家把找到可靠供应商列为最大难题。一批货出问题，就吃掉你的利润和交期。", cta: "给供应商打分" },
+      ],
     },
     story: {
       heading: "在你身上可能是这样",
@@ -581,6 +641,15 @@ const DICTS: Record<Lang, EventDict> = {
       summaryMoney: "便宜 483 倍",
       summaryTime: "快 1,440 倍",
     },
+    alerts: {
+      heading: "O que está mudando no mercado agora",
+      sub: "Mudanças reais que atingem vendedores cross-border neste ano. O que aconteceu e o que fazer.",
+      items: [
+        { tag: "Alfândega · 2026", title: "O limite de minimis acabou", body: "A isenção de impostos para pacotes baratos aos EUA terminou, e a UE está somando taxas a bens de baixo valor. Cada pacote é calculado de forma diferente agora, e isso muda seu custo real a destino.", cta: "Recalcular o custo a destino" },
+        { tag: "Canais · 2026", title: "TikTok Shop bombando, as janelas fecham rápido", body: "O volume do marketplace sobe forte, mas produtos campeões saturam em dias. Quem acha e lança mais rápido fica com a margem.", cta: "Como entrar no TikTok Shop" },
+        { tag: "Fornecedores · 2026", title: "Fornecedor confiável é a dor número um", body: "A maioria dos vendedores aponta fornecedores confiáveis como o maior desafio. Um lote ruim consome sua margem e seu prazo.", cta: "Avaliar um fornecedor" },
+      ],
+    },
     story: {
       heading: "Como isso poderia ser para você",
       who: "Sexta à noite: você tem a ideia, não o tempo",
@@ -657,6 +726,15 @@ const DICTS: Record<Lang, EventDict> = {
       summaryMoney: "483× सस्ता",
       summaryTime: "1,440× तेज़",
     },
+    alerts: {
+      heading: "बाज़ार में अभी क्या बदल रहा है",
+      sub: "इस साल क्रॉस-बॉर्डर विक्रेताओं पर असर डालने वाले असली बदलाव। क्या हुआ और क्या करें।",
+      items: [
+        { tag: "कस्टम · 2026", title: "de minimis सीमा खत्म", body: "अमेरिका में सस्ते पार्सल पर शुल्क-छूट समाप्त, और EU कम-मूल्य वस्तुओं पर शुल्क जोड़ रहा है। अब हर पार्सल की गणना अलग होती है, जिससे आपकी असली लैंडेड कीमत बदल जाती है।", cta: "लैंडेड कॉस्ट फिर से जोड़ें" },
+        { tag: "चैनल · 2026", title: "TikTok Shop उछाल पर, मौके जल्दी बंद", body: "मार्केटप्लेस वॉल्यूम तेज़ी से बढ़ रहा है, पर विनिंग प्रोडक्ट दिनों में संतृप्त हो जाते हैं। जो तेज़ ढूँढता और लॉन्च करता है, मार्जिन वही रखता है।", cta: "TikTok Shop में कैसे उतरें" },
+        { tag: "सप्लायर · 2026", title: "भरोसेमंद सप्लायर, पहला दर्द", body: "ज़्यादातर विक्रेता भरोसेमंद सप्लायर को सबसे बड़ी चुनौती बताते हैं। एक खराब बैच आपका मार्जिन और समय दोनों खा जाता है।", cta: "सप्लायर परखें" },
+      ],
+    },
     story: {
       heading: "आपके लिए यह ऐसा दिख सकता है",
       who: "शुक्रवार रात: आइडिया है, समय नहीं",
@@ -732,6 +810,15 @@ const DICTS: Record<Lang, EventDict> = {
       summary: () => null,
       summaryMoney: "483× moins cher",
       summaryTime: "1 440× plus rapide",
+    },
+    alerts: {
+      heading: "Ce qui bouge sur le marché en ce moment",
+      sub: "Des changements réels qui frappent les vendeurs cross-border cette année. Ce qui s'est passé et quoi faire.",
+      items: [
+        { tag: "Douane · 2026", title: "Le seuil de minimis a disparu", body: "L'exonération de droits pour les petits colis vers les USA est terminée, et l'UE ajoute des frais sur les biens de faible valeur. Chaque colis se calcule différemment désormais, ce qui change votre coût rendu réel.", cta: "Recalculer le coût rendu" },
+        { tag: "Canaux · 2026", title: "TikTok Shop explose, les fenêtres se ferment vite", body: "Le volume de la marketplace grimpe fort, mais les produits gagnants saturent en quelques jours. Qui trouve et lance plus vite garde la marge.", cta: "Comment se lancer sur TikTok Shop" },
+        { tag: "Fournisseurs · 2026", title: "Un fournisseur fiable, la douleur numéro un", body: "La plupart des vendeurs citent les fournisseurs fiables comme leur plus grand défi. Un mauvais lot dévore votre marge et vos délais.", cta: "Évaluer un fournisseur" },
+      ],
     },
     story: {
       heading: "À quoi cela pourrait ressembler pour vous",
@@ -1100,6 +1187,60 @@ function Compare({ d }: { d: EventDict }) {
   );
 }
 
+function MarketAlerts({ d, lang }: { d: EventDict; lang: Lang }) {
+  const base = lang === "en" ? "" : `/${lang}`;
+  const meta = [
+    { img: "/img/landing-duty.webp", href: `${base}/duty` },
+    { img: "/img/landing-tiktok.webp", href: `${base}/tiktok-shop` },
+    { img: "/img/feature-sourcing.webp", href: `${base}/supplier-scorecard` },
+  ];
+  const fallback: AlertItem[] = d.alerts.items.map((it, i) => ({
+    tag: it.tag,
+    title: it.title,
+    body: it.body,
+    cta: it.cta,
+    img: meta[i]?.img ?? "/img/landing-duty.webp",
+    href: meta[i]?.href ?? `${base}/`,
+  }));
+  const [items, setItems] = useState<AlertItem[]>(fallback);
+  useEffect(() => {
+    let alive = true;
+    fetchAlerts(lang).then((rows) => {
+      if (alive && rows && rows.length) setItems(rows);
+    });
+    return () => {
+      alive = false;
+    };
+  }, [lang]);
+  return (
+    <section className="bg-background py-20 sm:py-28">
+      <div className="mx-auto max-w-[1200px] px-6">
+        <h2 className="text-center text-[32px] font-extrabold tracking-tight text-foreground sm:text-[44px]">{d.alerts.heading}</h2>
+        <p className="mx-auto mt-4 max-w-[680px] text-center text-[17px] leading-relaxed text-foreground/70">{d.alerts.sub}</p>
+        <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
+          {items.map((it, i) => (
+            <a
+              key={i}
+              href={it.href}
+              className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-muted transition hover:-translate-y-1 hover:border-[#34d399]/50"
+            >
+              <img src={it.img} alt="" width={400} height={220} loading="lazy" className="h-40 w-full object-cover" />
+              <div className="flex flex-1 flex-col p-6">
+                <span className="text-[12px] font-semibold uppercase tracking-wide text-[#34d399]">{it.tag}</span>
+                <h3 className="mt-2 text-[18px] font-bold text-foreground">{it.title}</h3>
+                <p className="mt-2 flex-1 text-[14px] leading-relaxed text-foreground/70">{it.body}</p>
+                <span className="mt-4 inline-flex items-center gap-1 text-[14px] font-semibold text-[#34d399]">
+                  {it.cta} <span aria-hidden>{"\u2192"}</span>
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Story({ d }: { d: EventDict }) {
   return (
     <section className="bg-card py-20 sm:py-28">
@@ -1216,6 +1357,7 @@ export function FreeForeverPage({ lang }: { lang: Lang }) {
       <main>
         <Hero lang={lang} d={d} />
         <Stats d={d} locale={LOCALES[lang]} />
+        <MarketAlerts d={d} lang={lang} />
         <CreditsUpdate lang={lang} />
         <Features d={d} />
         <Compare d={d} />
