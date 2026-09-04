@@ -1226,7 +1226,7 @@ function MarketAlerts({ d, lang }: { d: EventDict; lang: Lang }) {
               href={it.href}
               className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-muted transition hover:-translate-y-1 hover:border-[#34d399]/50"
             >
-              <img src={it.img} alt="" width={400} height={220} loading="lazy" className="h-40 w-full object-cover" />
+              <img src={it.img} alt={`${it.tag}: ${it.title}`} width={400} height={220} loading="lazy" className="h-40 w-full object-cover" />
               <div className="flex flex-1 flex-col p-6">
                 <span className="text-[12px] font-semibold uppercase tracking-wide text-[#34d399]">{it.tag}</span>
                 <h3 className="mt-2 text-[18px] font-bold text-foreground">{it.title}</h3>
