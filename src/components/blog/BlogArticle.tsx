@@ -84,12 +84,26 @@ const CTA: Record<"en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr", 
   },
 };
 
+const KEEP_READING: Record<string, string> = {
+  en: "Keep reading",
+  ru: "Читайте также",
+  de: "Weiterlesen",
+  it: "Continua a leggere",
+  es: "Sigue leyendo",
+  zh: "继续阅读",
+  pt: "Continue lendo",
+  hi: "आगे पढ़ें",
+  fr: "Poursuivez la lecture",
+};
+
 export function BlogArticle({
   lang,
   article,
+  related = [],
 }: {
   lang: "en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr";
   article: ArticleFull;
+  related?: Array<{ slug: string; title: string; reading_minutes: number }>;
 }) {
   const base =
     lang === "ru" ? "/ru/blog" : lang === "de" ? "/de/blog" : lang === "it" ? "/it/blog" : lang === "es" ? "/es/blog" : lang === "zh" ? "/zh/blog" : lang === "pt" ? "/pt/blog" : lang === "hi" ? "/hi/blog" : lang === "fr" ? "/fr/blog" : "/blog";
@@ -150,6 +164,29 @@ export function BlogArticle({
           </a>
           <p className="mt-3 text-xs text-foreground/60">{cta.note}</p>
         </aside>
+
+        {related.length > 0 ? (
+          <nav className="mt-16" aria-label={KEEP_READING[lang]}>
+            <h2 className="font-serif-display text-2xl font-semibold tracking-tight text-foreground">
+              {KEEP_READING[lang]}
+            </h2>
+            <ul className="mt-6 grid gap-4 sm:grid-cols-2">
+              {related.map((r) => (
+                <li key={r.slug}>
+                  <a
+                    href={`${base}/${r.slug}`}
+                    className="block h-full rounded-2xl border border-border/50 p-5 transition hover:border-emerald-700/40 hover:bg-emerald-50/40"
+                  >
+                    <span className="block text-base font-medium leading-snug text-foreground">{r.title}</span>
+                    <span className="mt-2 block text-xs text-foreground/55">
+                      {r.reading_minutes} {MIN[lang]}
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        ) : null}
       </article>
     </BlogShell>
   );
