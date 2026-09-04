@@ -116,3 +116,59 @@ export const listAllPublishedForSitemap = createServerFn({ method: "GET" }).hand
     return (rows ?? []) as Array<{ lang: string; slug: string; published_at: string }>;
   },
 );
+export type ArticleBundle = {
+  article: ArticleFull;
+  alternates: Array<{ lang: string; slug: string }>;
+  related: Array<{ slug: string; title: string; reading_minutes: number }>;
+};
+
+export const getArticleBundle = createServerFn({ method: "GET" })
+  .inputValidator((input: unknown) =>
+    z.object({ lang: LangSchema, slug: z.string().min(1).max(200) }).parse(input),
+  )
+  .handler(async ({ data }): Promise<ArticleBundle | null> => {
+    const supabase = publicClient();
+    const { data: row, error } = await (supabase.from("blog_articles") as any)
+      .select("id, slug, title, description, has_cover, reading_minutes, published_at, lang, body_md, keywords, topic_id")
+      .eq("lang", data.lang)
+      .eq("slug", data.slug)
+      .eq("status", "published")
+      .maybeSingle();
+    if (error) throw new Error(error.message);
+    if (!row) return null;
+    const r = row as Record<string, unknown>;
+    const article: ArticleFull = {
+      id: r.id as string,
+      slug: r.slug as string,
+      title: r.title as string,
+      description: r.description as string,
+      cover_url: r.has_cover ? `/api/public/blog-cover/${r.id as string}` : null,
+      reading_minutes: r.reading_minutes as number,
+      published_at: r.published_at as string,
+      lang: r.lang as string,
+      body_md: r.body_md as string,
+      keywords: (r.keywords ?? []) as string[],
+      topic_id: (r.topic_id ?? null) as string | null,
+    };
+
+    let alternates: Array<{ lang: string; slug: string }> = [];
+    if (article.topic_id) {
+      const { data: alt } = await supabase
+        .from("blog_articles")
+        .select("lang, slug")
+        .eq("topic_id", article.topic_id)
+        .eq("status", "published");
+      alternates = ((alt ?? []) as Array<{ lang: string; slug: string }>).filter(Boolean);
+    }
+
+    const { data: rel } = await (supabase.from("blog_articles") as any)
+      .select("slug, title, reading_minutes")
+      .eq("lang", data.lang)
+      .eq("status", "published")
+      .neq("slug", article.slug)
+      .order("published_at", { ascending: false })
+      .limit(4);
+    const related = ((rel ?? []) as Array<{ slug: string; title: string; reading_minutes: number }>);
+
+    return { article, alternates, related };
+  });
