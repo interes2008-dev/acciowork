@@ -6,6 +6,7 @@ const BASE_URL = "https://acciowork.pro";
 
 interface SitemapEntry {
   path: string;
+  lastmod?: string;
   changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
   priority?: string;
   alternates?: { hreflang: string; href: string }[];
@@ -154,6 +155,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           [
             `  <url>`,
             `    <loc>${BASE_URL}${e.path}</loc>`,
+            ...(e.lastmod ? [`    <lastmod>${e.lastmod}</lastmod>`] : []),
             ...(e.alternates ?? []).map(
               (a) =>
                 `    <xhtml:link rel="alternate" hreflang="${a.hreflang}" href="${a.href}" />`,
