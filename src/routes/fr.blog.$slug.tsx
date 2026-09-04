@@ -3,6 +3,8 @@ import { I18nProvider } from "@/lib/i18n";
 import { BlogArticle } from "@/components/blog/BlogArticle";
 import { getArticleBundle } from "@/lib/blog.functions";
 
+const BASE_LANG_PATH = "/fr";
+
 const LANG_PATH: Record<string, string> = {
   en: "",
   ru: "/ru",
@@ -96,7 +98,7 @@ export const Route = createFileRoute("/fr/blog/$slug")({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Accio Work", item: `https://acciowork.pro/fr` || "https://acciowork.pro" },
+              { "@type": "ListItem", position: 1, name: "Accio Work", item: "https://acciowork.pro" + BASE_LANG_PATH },
               { "@type": "ListItem", position: 2, name: "Blog Accio Work", item: `https://acciowork.pro/fr/blog` },
               { "@type": "ListItem", position: 3, name: a.title, item: url },
             ],
