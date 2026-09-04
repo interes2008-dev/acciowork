@@ -257,7 +257,16 @@ export function buildArticlePrompt(lang: BlogLang, topic: TopicSeed): {
 
 Seed topic: ${topic.seed_title}
 Angle: ${topic.angle}
-Target keyword (weave in naturally, do not stuff): ${topic.keyword}
+Target search query (this article targets THIS one query, nothing broader): ${topic.keyword}
+
+SEO targeting rules (these override style preferences when they conflict):
+- Translate the target query into the natural phrasing a native ${LANG_LABEL[lang]} speaker would type into Google. Use that exact phrasing.
+- title (= the H1): 45-60 characters, opens with the query phrasing, no brand name, no ": The Ultimate Guide" style filler.
+- description: 140-158 characters, contains the query phrasing once and one concrete outcome.
+- slug: latin transliteration of the query phrasing, 3-8 words, no filler words.
+- The first sentence of the body answers the query directly; the first H2 also contains the query phrasing.
+- keywords: the target query first, then 3-5 long-tail variations of the SAME query. No unrelated umbrella terms like "AI for small business".
+- Include a FAQ section near the end with 3 questions people also ask around this query, each answered in 2-4 sentences.
 Primary reader: ${topic.audience}
 Accio Work capability at the centre: ${topic.capability}
 

@@ -144,7 +144,7 @@ export const Route = createFileRoute("/sitemap.xml")({
                               : a.lang === "fr"
                                 ? "/fr/blog"
                                 : "/blog";
-            entries.push({ path: `${prefix}/${a.slug}`, changefreq: "monthly", priority: "0.7" });
+            entries.push({ path: `${prefix}/${a.slug}`, lastmod: a.published_at, changefreq: "monthly", priority: "0.7" });
           }
         } catch {
           // sitemap should still render even if the DB read fails
