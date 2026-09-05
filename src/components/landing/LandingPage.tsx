@@ -1,4 +1,13 @@
 import { useEffect, useId, useRef, useState } from "react";
+import type { MouseEvent } from "react";
+
+/** Tracks cursor position into --mx/--my so .card-spotlight can glow under the pointer. */
+function trackSpotlight(e: MouseEvent<HTMLElement>) {
+  const el = e.currentTarget;
+  const r = el.getBoundingClientRect();
+  el.style.setProperty("--mx", `${e.clientX - r.left}px`);
+  el.style.setProperty("--my", `${e.clientY - r.top}px`);
+}
 import heroPoster from "@/assets/hero-poster.png.asset.json";
 import {
   Apple,
@@ -694,7 +703,7 @@ function HowItWorks() {
         </p>
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {t.steps.items.map((s, i) => (
-            <div key={s.title} className="relative rounded-[24px] border border-border/60 bg-white/[0.03] p-7 shadow-card">
+            <div key={s.title} onMouseMove={trackSpotlight} className="card-spotlight rounded-[24px] border border-border/60 bg-white/[0.03] p-7 shadow-card hover:-translate-y-1 hover:shadow-elegant">
               <div className="grid h-11 w-11 place-items-center rounded-2xl bg-[#34d399]/15 text-[18px] font-extrabold text-[#34d399]">
                 {i + 1}
               </div>
@@ -724,7 +733,7 @@ function UseCases() {
         </p>
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {t.useCases.items.map((u, i) => (
-            <a key={u.title} href={`${forBase}/${ucSlugs[i]}`} className="block rounded-[24px] bg-white/[0.03] p-7 shadow-card transition hover:-translate-y-1 hover:shadow-elegant">
+            <a key={u.title} href={`${forBase}/${ucSlugs[i]}`} onMouseMove={trackSpotlight} className="card-spotlight block rounded-[24px] border border-border/60 bg-white/[0.03] p-7 shadow-card hover:-translate-y-1 hover:shadow-elegant">
               <div className="grid h-12 w-12 place-items-center rounded-2xl bg-mint-50 text-[24px]">{u.icon}</div>
               <h3 className="mt-5 text-[19px] font-bold text-foreground">{u.title}</h3>
               <p className="mt-2 text-[14.5px] leading-relaxed text-muted-foreground">{u.body}</p>
