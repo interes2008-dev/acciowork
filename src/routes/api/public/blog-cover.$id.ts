@@ -44,6 +44,22 @@ export const Route = createFileRoute("/api/public/blog-cover/$id")({
           return new Response(null, { status: 302, headers: { Location: val } });
         }
 
+        // Storage object: "storage:<bucket>/<path>" — stream via admin client.
+        if (val.startsWith("storage:")) {
+          const rest = val.slice("storage:".length);
+          const slash = rest.indexOf("/");
+          const bucket = rest.slice(0, slash);
+          const path = rest.slice(slash + 1);
+          const { data: file, error } = await adminClient().storage.from(bucket).download(path);
+          if (error || !file) return new Response("Not found", { status: 404 });
+          return new Response(file, {
+            headers: {
+              "Content-Type": file.type || "image/jpeg",
+              "Cache-Control": "public, max-age=31536000, immutable",
+            },
+          });
+        }
+
         // data:<mime>;base64,<payload>
         const m = val.match(/^data:([^;]+);base64,(.*)$/s);
         if (!m) return new Response("Unsupported cover format", { status: 415 });
