@@ -1,4 +1,13 @@
 import { useEffect, useId, useRef, useState } from "react";
+import type { MouseEvent } from "react";
+
+/** Tracks cursor position into --mx/--my so .card-spotlight can glow under the pointer. */
+function trackSpotlight(e: MouseEvent<HTMLElement>) {
+  const el = e.currentTarget;
+  const r = el.getBoundingClientRect();
+  el.style.setProperty("--mx", `${e.clientX - r.left}px`);
+  el.style.setProperty("--my", `${e.clientY - r.top}px`);
+}
 import heroPoster from "@/assets/hero-poster.png.asset.json";
 import {
   Apple,
