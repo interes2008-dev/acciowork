@@ -1,8 +1,8 @@
 import { useEffect, useId, useRef, useState } from "react";
-import type { MouseEvent } from "react";
+import type { MouseEvent as ReactMouseEvent } from "react";
 
 /** Tracks cursor position into --mx/--my so .card-spotlight can glow under the pointer. */
-function trackSpotlight(e: MouseEvent<HTMLElement>) {
+function trackSpotlight(e: ReactMouseEvent<HTMLElement>) {
   const el = e.currentTarget;
   const r = el.getBoundingClientRect();
   el.style.setProperty("--mx", `${e.clientX - r.left}px`);
