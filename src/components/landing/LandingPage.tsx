@@ -490,7 +490,7 @@ function BusinessNeeds() {
           {t.business.heading}
         </h2>
 
-        <div className="mt-10 flex flex-wrap justify-center gap-3">
+        <div className="mt-10 flex flex-nowrap justify-center gap-3 overflow-x-auto" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
           {TAB_KEYS.map((k) => (
             <button
               key={k}
