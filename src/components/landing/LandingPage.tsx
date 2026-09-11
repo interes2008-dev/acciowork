@@ -486,7 +486,7 @@ function BusinessNeeds() {
   return (
     <section className="bg-white/[0.03] py-24 sm:py-32">
       <div className="mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center text-[28px] font-bold tracking-tight text-foreground sm:text-[36px]" style={{ lineHeight: "40px" }}>
+        <h2 className="text-center text-[28px] font-bold tracking-tight text-foreground sm:text-[40px]">
           {t.business.heading}
         </h2>
 
@@ -650,7 +650,7 @@ function WhyChoose() {
   return (
     <section className="bg-white/[0.03] pb-24 sm:pb-32">
       <div className="mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-8">
-        <h2 className="text-center text-[28px] font-bold tracking-tight text-foreground sm:text-[36px]" style={{ lineHeight: "1.15" }}>
+        <h2 className="text-center text-[28px] font-bold tracking-tight text-foreground sm:text-[40px]">
           {t.why.heading}
         </h2>
 
@@ -790,7 +790,7 @@ function Pricing() {
   return (
     <section id="pricing" className="scroll-mt-24 bg-mint-50 py-24 sm:py-32">
       <div className="mx-auto max-w-[1160px] px-6">
-        <h2 className="text-center text-[32px] font-extrabold tracking-tight text-foreground sm:text-[48px]">
+        <h2 className="text-center text-[28px] font-bold tracking-tight text-foreground sm:text-[40px]">
           {t.pricing.heading}
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-center text-[16px] leading-relaxed text-muted-foreground sm:text-[18px]">
@@ -899,7 +899,7 @@ function Testimonials() {
   return (
     <section className="relative overflow-hidden bg-mint-50 py-24 sm:py-32">
       <div className="mx-auto max-w-[1280px] px-6 text-center">
-        <h2 className="text-[36px] font-extrabold tracking-tight text-foreground sm:text-[50px]">
+        <h2 className="text-[28px] font-bold tracking-tight text-foreground sm:text-[40px]">
           {t.testimonials.heading1} <span className="text-[#34d399]">{t.testimonials.highlight}</span>
           <br />
           {t.testimonials.heading2}
@@ -989,7 +989,7 @@ function Faq() {
   return (
     <section id="faq" className="scroll-mt-24 py-24 sm:py-32">
       <div className="mx-auto max-w-[880px] px-6">
-        <h2 className="text-center text-[44px] font-extrabold tracking-tight text-foreground sm:text-[64px]">
+        <h2 className="text-center text-[28px] font-bold tracking-tight text-foreground sm:text-[40px]">
           {t.faq.heading}
         </h2>
         <div className="mt-12 flex flex-col gap-4">
