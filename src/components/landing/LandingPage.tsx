@@ -1098,7 +1098,7 @@ function FinalCta() {
   return (
     <section className="relative overflow-hidden bg-hero py-28 sm:py-36">
       <div className="mx-auto max-w-[1100px] px-6 text-center">
-        <h2 className="text-[44px] font-extrabold tracking-tight text-foreground sm:text-[72px]">
+        <h2 className="text-[32px] font-extrabold tracking-tight text-foreground sm:text-[48px]">
           {t.cta.title}
         </h2>
         <p className="mx-auto mt-6 max-w-xl text-[18px] leading-relaxed text-muted-foreground sm:text-[20px]">
