@@ -1098,7 +1098,7 @@ function FinalCta() {
   return (
     <section className="relative overflow-hidden bg-hero py-28 sm:py-36">
       <div className="mx-auto max-w-[1100px] px-6 text-center">
-        <h2 className="text-[32px] font-extrabold tracking-tight text-foreground sm:text-[48px]">
+        <h2 className="text-[28px] font-bold tracking-tight text-foreground sm:text-[40px]">
           {t.cta.title}
         </h2>
         <p className="mx-auto mt-6 max-w-xl text-[18px] leading-relaxed text-muted-foreground sm:text-[20px]">
@@ -1239,7 +1239,7 @@ function CalculatorTeaser() {
       <div className="mx-auto max-w-[1200px] px-6">
         <div className="overflow-hidden rounded-[32px] bg-gradient-to-br from-[#0a1120] to-[#0f2e26] px-8 py-14 text-center sm:px-16">
           <p className="text-sm font-semibold uppercase tracking-wide text-[#5eead4]">{rc.kicker}</p>
-          <h2 className="mx-auto mt-3 max-w-2xl text-[28px] font-bold leading-tight tracking-tight text-white sm:whitespace-nowrap sm:text-[34px]">
+          <h2 className="mx-auto mt-3 text-[28px] font-bold tracking-tight text-white sm:text-[40px]">
             {rc.h1}
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-[16px] leading-relaxed text-white/70">{rc.intro}</p>
