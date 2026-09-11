@@ -1239,7 +1239,7 @@ function CalculatorTeaser() {
       <div className="mx-auto max-w-[1200px] px-6">
         <div className="overflow-hidden rounded-[32px] bg-gradient-to-br from-[#0a1120] to-[#0f2e26] px-8 py-14 text-center sm:px-16">
           <p className="text-sm font-semibold uppercase tracking-wide text-[#5eead4]">{rc.kicker}</p>
-          <h2 className="mx-auto mt-3 max-w-2xl text-[28px] font-bold leading-tight tracking-tight text-white sm:text-[40px]">
+          <h2 className="mx-auto mt-3 max-w-2xl text-[28px] font-bold leading-tight tracking-tight text-white sm:whitespace-nowrap sm:text-[34px]">
             {rc.h1}
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-[16px] leading-relaxed text-white/70">{rc.intro}</p>
