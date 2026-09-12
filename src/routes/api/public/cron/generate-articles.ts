@@ -136,15 +136,32 @@ export const Route = createFileRoute("/api/public/cron/generate-articles")({
 
         const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
 
-        // Pick one unused topic (fallback: least recently used)
+        // Candidate topics: unused first, then least recently used
         const { data: topicRows, error: topicErr } = await supabaseAdmin
           .from("blog_topics")
           .select("id, seed_title, angle, keyword, audience, capability, used_at")
           .order("used_at", { ascending: true, nullsFirst: true })
-          .limit(1);
+          .limit(60);
         if (topicErr) return new Response(topicErr.message, { status: 500 });
-        const topic = topicRows?.[0];
-        if (!topic) return new Response("No topics available", { status: 500 });
+        if (!topicRows?.length) return new Response("No topics available", { status: 500 });
+
+        // Existing (topic_id, lang) pairs so we only fill gaps, never duplicate
+        const { data: artRows, error: artErr } = await supabaseAdmin
+          .from("blog_articles")
+          .select("topic_id, lang")
+          .in("topic_id", topicRows.map((t) => t.id));
+        if (artErr) return new Response(artErr.message, { status: 500 });
+        const covered = new Set((artRows ?? []).map((r) => `${r.topic_id}:${r.lang}`));
+
+        // Prefer a topic with missing languages; else first unused; else least recently used
+        const withGaps = topicRows.find((t) => LANGS.some((l) => !covered.has(`${t.id}:${l}`)));
+        const topic = withGaps ?? topicRows[0];
+        const missingLangs = LANGS.filter((l) => !covered.has(`${topic.id}:${l}`));
+        if (!missingLangs.length) {
+          return new Response(JSON.stringify({ topic_id: topic.id, results: [], note: "topic fully covered" }), {
+            headers: { "Content-Type": "application/json" },
+          });
+        }
 
         const seed: TopicSeed = {
           seed_title: topic.seed_title,
