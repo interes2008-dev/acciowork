@@ -177,7 +177,7 @@ export const Route = createFileRoute("/api/public/cron/generate-articles")({
 
         const results: Array<{ lang: BlogLang; slug: string; error?: string }> = [];
 
-        for (const lang of LANGS) {
+        for (const lang of missingLangs) {
           try {
             const { system, user } = buildArticlePrompt(lang, seed);
             const article = await callAI(system, user);
