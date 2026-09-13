@@ -3,6 +3,12 @@ import { fetchAlerts, type AlertItem } from "@/lib/alerts";
 import { ThemeToggle } from "@/components/common/ThemeToggle";
 import type { Lang } from "@/lib/translations";
 import { CreditsUpdate } from "./CreditsUpdate";
+import aiAgentImage from "@/assets/event-feature-ai-agent.png";
+import browserImage from "@/assets/event-feature-browser.png";
+import integrationsImage from "@/assets/event-feature-integrations.png";
+import contentImage from "@/assets/event-feature-content.png";
+import marketImage from "@/assets/event-feature-market.png";
+import specialistsImage from "@/assets/event-feature-specialists.png";
 
 const REFERRAL_URL =
   "https://www.accio.com/login?sId=KECtp1GttZ42%2FwpJUH5IxQ%3D%3D&ic=IC506004212009&tenant=accio&src=p_referral_IC506004212009&source=invite_center&return_url=https%3A%2F%2Fwww.accio.com%2Fwork%2F";
@@ -1101,6 +1107,15 @@ function Stats({ d, locale }: { d: EventDict; locale: string }) {
 }
 
 function Features({ d }: { d: EventDict }) {
+  const featureImages = [
+    aiAgentImage,
+    browserImage,
+    integrationsImage,
+    contentImage,
+    marketImage,
+    specialistsImage,
+  ];
+
   return (
     <section className="bg-card py-20 sm:py-28">
       <div className="mx-auto max-w-[1200px] px-6">
@@ -1110,10 +1125,22 @@ function Features({ d }: { d: EventDict }) {
         <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {d.features.items.map((f, i) => (
             <Reveal key={f.title} delay={i * 60}>
-              <div className="h-full rounded-2xl bg-muted p-8 shadow-[0_2px_12px_rgba(0,0,0,0.04)] transition hover:-translate-y-1 hover:shadow-[0_8px_28px_rgba(0,0,0,0.06)]">
-                <div className="text-[32px]">{f.icon}</div>
-                <h3 className="mt-4 text-[18px] font-semibold text-foreground">{f.title}</h3>
+              <div className="group h-full overflow-hidden rounded-2xl border border-border/70 bg-muted shadow-card transition duration-300 hover:-translate-y-1 hover:border-primary/35 hover:shadow-elegant">
+                <div className="relative grid h-44 place-items-center overflow-hidden border-b border-border/60 bg-background/45 sm:h-48">
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_55%,color-mix(in_oklab,var(--primary)_16%,transparent),transparent_64%)] opacity-70 transition-opacity duration-500 group-hover:opacity-100" />
+                  <img
+                    src={featureImages[i]}
+                    alt={f.title}
+                    loading="lazy"
+                    width={768}
+                    height={768}
+                    className="relative h-[88%] w-[88%] object-contain drop-shadow-[0_18px_28px_rgba(0,0,0,0.35)] transition-transform duration-500 ease-out group-hover:scale-[1.06]"
+                  />
+                </div>
+                <div className="p-8">
+                  <h3 className="text-[18px] font-semibold text-foreground">{f.title}</h3>
                 <p className="mt-2 text-[15px] leading-relaxed text-foreground/55">{f.desc}</p>
+                </div>
               </div>
             </Reveal>
           ))}
