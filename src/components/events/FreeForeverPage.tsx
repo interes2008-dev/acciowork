@@ -3,6 +3,7 @@ import { fetchAlerts, type AlertItem } from "@/lib/alerts";
 import { ThemeToggle } from "@/components/common/ThemeToggle";
 import type { Lang } from "@/lib/translations";
 import { CreditsUpdate } from "./CreditsUpdate";
+import { EcomWorkspace } from "./EcomWorkspace";
 import aiAgentImage from "@/assets/event-feature-ai-agent.png";
 import browserImage from "@/assets/event-feature-browser.png";
 import integrationsImage from "@/assets/event-feature-integrations.png";
@@ -1388,6 +1389,7 @@ export function FreeForeverPage({ lang }: { lang: Lang }) {
         <Stats d={d} locale={LOCALES[lang]} />
         <MarketAlerts d={d} lang={lang} />
         <CreditsUpdate lang={lang} />
+        <EcomWorkspace lang={lang} />
         <Features d={d} />
         <Compare d={d} />
         <Story d={d} />
