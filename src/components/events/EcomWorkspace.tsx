@@ -1,6 +1,52 @@
 import type { Lang } from "@/lib/translations";
 import { REFERRAL_URL } from "./FreeForeverPage";
 
+const PLATFORM_BRANDS = ["shopify", "amazon", "tiktok", "ebay", "walmart", "dsers", "hubspot", "analytics"] as const;
+type PlatformBrand = (typeof PLATFORM_BRANDS)[number];
+
+function PlatformIcon({ brand }: { brand: PlatformBrand }) {
+  if (brand === "ebay") {
+    return (
+      <span aria-hidden className="integration-ebay-logo">
+        <span>e</span><span>b</span><span>a</span><span>y</span>
+      </span>
+    );
+  }
+
+  const paths: Record<Exclude<PlatformBrand, "ebay">, React.ReactNode> = {
+    shopify: (
+      <>
+        <path d="M7.2 7.8h9.6l1.1 11.4H6.1L7.2 7.8Z" />
+        <path d="M9.2 8V6.5a2.8 2.8 0 0 1 5.6 0V8" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <path d="M13.8 11.1c-.6-.3-1.2-.5-1.8-.5-1 0-1.6.5-1.6 1.2 0 1.8 3.4 1.3 3.4 3.7 0 1.3-1.1 2.2-2.7 2.2-.8 0-1.6-.2-2.2-.7" fill="none" stroke="var(--platform-icon-contrast)" strokeWidth="1.25" strokeLinecap="round" />
+      </>
+    ),
+    amazon: <path d="M4 15.1c4.7 3.4 10.3 3.7 15.3.6M16.6 14.4l2.9.2-.8 2.7M9 7.4c1-1.1 4.5-1.5 5.5.1.8 1.2.3 6.3.7 7.3M14.7 10.4c-3-.4-5.9.2-5.9 2.5 0 2.1 2.6 2.7 5.9.2" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" />,
+    tiktok: <path d="M13.5 3v11.1a4.1 4.1 0 1 1-3.2-4V7.3c1.1-.2 2.1 0 3.2.4V3Zm0 0c.5 2.7 2 4.2 4.7 4.7" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />,
+    walmart: (
+      <g fill="currentColor">
+        <rect x="11" y="2.5" width="2" height="6" rx="1" />
+        <rect x="11" y="15.5" width="2" height="6" rx="1" />
+        <rect x="2.5" y="11" width="6" height="2" rx="1" />
+        <rect x="15.5" y="11" width="6" height="2" rx="1" />
+        <rect x="5.2" y="5.2" width="2" height="6" rx="1" transform="rotate(-45 6.2 8.2)" />
+        <rect x="16.8" y="12.8" width="2" height="6" rx="1" transform="rotate(-45 17.8 15.8)" />
+      </g>
+    ),
+    dsers: <path d="M5 4h6.6c4.8 0 7.4 3 7.4 8s-2.6 8-7.4 8H5V4Zm4 3.3v9.4h2.3c2.4 0 3.7-1.6 3.7-4.7s-1.3-4.7-3.7-4.7H9Z" />,
+    hubspot: (
+      <>
+        <path d="m7.1 5.3 7 5.3m1.7-4.9v4.1m1.8 3.6 3.1 1.6M8 16.1l-3 2" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+        <circle cx="15.8" cy="12.1" r="3.3" fill="none" stroke="currentColor" strokeWidth="2" />
+        <circle cx="5.7" cy="4.4" r="1.8" /><circle cx="15.8" cy="3.6" r="1.8" /><circle cx="21" cy="16" r="1.8" /><circle cx="3.5" cy="19" r="1.8" />
+      </>
+    ),
+    analytics: <path d="M4 19V11m5 8V6m5 13v-5m5 5V3" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />,
+  };
+
+  return <svg aria-hidden viewBox="0 0 24 24" className="h-9 w-9">{paths[brand]}</svg>;
+}
+
 type Dict = {
   badge: string;
   title: string;
@@ -215,15 +261,21 @@ export function EcomWorkspace({ lang }: { lang: Lang }) {
           <div className="rounded-[28px] bg-card p-7 shadow-sm md:p-9">
             <h3 className="text-[22px] font-bold leading-snug md:text-[24px]">{d.integrationsTitle}</h3>
             <p className="mt-3 text-[15px] leading-relaxed text-foreground/70">{d.integrationsDesc}</p>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              {d.platforms.map((p) => (
-                <span
-                  key={p}
-                  className="rounded-full border border-foreground/10 bg-background/60 px-4 py-2 text-[13px] font-medium text-foreground/80 shadow-sm"
-                >
-                  {p}
-                </span>
-              ))}
+            <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4 md:grid-cols-2 xl:grid-cols-4">
+              {d.platforms.map((platform, index) => {
+                const brand = PLATFORM_BRANDS[index];
+                if (!brand) return null;
+                return (
+                  <div key={brand} className={`integration-tile brand-${brand}`}>
+                    <div className="integration-icon-shell">
+                      <PlatformIcon brand={brand} />
+                    </div>
+                    <span className="max-w-full text-center text-[12px] font-semibold leading-tight text-foreground/85 sm:text-[13px]">
+                      {platform}
+                    </span>
+                  </div>
+                );
+              })}
             </div>
           </div>
 
