@@ -10,7 +10,6 @@ function trackSpotlight(e: ReactMouseEvent<HTMLElement>) {
 }
 import heroPoster from "@/assets/hero-poster.png.asset.json";
 import {
-  Apple,
   ChevronDown,
   Check,
   Globe,
@@ -1010,9 +1009,37 @@ function Faq() {
 /* ---------- Final CTA ---------- */
 function WindowsIcon({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden>
-      <path d="M3 5.75 10.4 4.6v6.9H3V5.75Zm0 12.5V12.6h7.4v6.9L3 18.25ZM11.6 4.42 21 3v8.5h-9.4V4.42Zm0 8.18H21V21l-9.4-1.42V12.6Z" />
+    <svg viewBox="0 0 24 24" className={className} aria-hidden>
+      <path className="windows-pane windows-pane-red" d="M3 5.75 10.4 4.6v6.9H3V5.75Z" />
+      <path className="windows-pane windows-pane-green" d="M3 18.25V12.6h7.4v6.9L3 18.25Z" />
+      <path className="windows-pane windows-pane-blue" d="M11.6 4.42 21 3v8.5h-9.4V4.42Z" />
+      <path className="windows-pane windows-pane-yellow" d="M11.6 12.6H21V21l-9.4-1.42V12.6Z" />
     </svg>
+  );
+}
+
+function AppleIcon({ className }: { className?: string }) {
+  const gradientId = useId().replaceAll(":", "");
+  return (
+    <svg viewBox="0 0 24 24" className={className} aria-hidden>
+      <defs>
+        <linearGradient id={gradientId} x1="4" y1="3" x2="20" y2="21" gradientUnits="userSpaceOnUse">
+          <stop className="apple-stop-cyan" />
+          <stop offset="0.48" className="apple-stop-green" />
+          <stop offset="1" className="apple-stop-gold" />
+        </linearGradient>
+      </defs>
+      <path fill={`url(#${gradientId})`} d="M12.2 6.35c-.07-1.57.58-2.72 1.98-3.62.27 1.54-.34 2.82-1.98 3.62Zm6.42 8.76c-.45 1.05-.99 2.02-1.72 2.93-.98 1.25-1.8 2.12-3.18 2.12-1.21 0-1.61-.75-3.03-.75-1.47 0-1.92.72-3.06.75-1.32.05-2.33-1.14-3.32-2.4C2.26 15.15 2.05 12.1 3.3 10.16a4.8 4.8 0 0 1 4.08-2.34c1.28 0 2.48.83 3.25.83.75 0 2.16-1.03 3.65-.88a4.46 4.46 0 0 1 3.48 1.88c-3.12 1.86-2.4 5.96.86 7.46Z" />
+    </svg>
+  );
+}
+
+function PlatformIconBadge({ platform, size = "large" }: { platform: "mac" | "win"; size?: "large" | "small" }) {
+  const iconClass = size === "large" ? "h-5 w-5" : "h-4 w-4";
+  return (
+    <span className={`download-platform-icon download-platform-icon-${size}`}>
+      {platform === "win" ? <WindowsIcon className={iconClass} /> : <AppleIcon className={iconClass} />}
+    </span>
   );
 }
 
@@ -1051,7 +1078,7 @@ function DownloadButton() {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-3 py-4 pl-6 pr-4 text-[16px] font-semibold transition hover:bg-white/5"
         >
-          {os === "win" ? <WindowsIcon className="h-5 w-5" /> : <Apple className="h-5 w-5" />}
+          <PlatformIconBadge platform={os} />
           {label}
         </a>
         <button
@@ -1062,8 +1089,8 @@ function DownloadButton() {
           aria-label="Choose platform"
           className="inline-flex items-center gap-2 border-l border-white/15 px-4 transition hover:bg-white/5"
         >
-          <Apple className={`h-4 w-4 ${os === "mac" ? "text-white" : "text-white/40"}`} />
-          <WindowsIcon className={`h-4 w-4 ${os === "win" ? "text-white" : "text-white/40"}`} />
+          <span className={os === "mac" ? "opacity-100" : "opacity-45"}><PlatformIconBadge platform="mac" size="small" /></span>
+          <span className={os === "win" ? "opacity-100" : "opacity-45"}><PlatformIconBadge platform="win" size="small" /></span>
           <ChevronDown className={`h-4 w-4 text-white/70 transition-transform ${open ? "rotate-180" : ""}`} />
         </button>
       </div>
@@ -1082,7 +1109,7 @@ function DownloadButton() {
               role="menuitem"
               className="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-[15px] text-[#e8eef9]/80 transition hover:bg-white/[0.05] hover:text-[#e8eef9]"
             >
-              {o.os === "win" ? <WindowsIcon className="h-4 w-4 text-[#e8eef9]/70" /> : <Apple className="h-4 w-4 text-[#e8eef9]/70" />}
+              <PlatformIconBadge platform={o.os} size="small" />
               <span className="font-medium">{o.name}</span>
               <span className="ml-auto text-[13px] text-[#e8eef9]/45">{o.variant}</span>
             </a>
