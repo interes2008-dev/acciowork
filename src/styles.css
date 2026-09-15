@@ -238,6 +238,26 @@
 .animate-marquee-left { animation: marquee-left 60s linear infinite; }
 .animate-marquee-right { animation: marquee-right 60s linear infinite; }
 
+/* Colorful platform marks for the primary download controls. */
+.download-platform-icon {
+  display: inline-grid;
+  flex: none;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, white 36%, transparent);
+  background: color-mix(in srgb, var(--background) 82%, transparent);
+  box-shadow: inset 0 1px 0 color-mix(in srgb, white 18%, transparent), 0 5px 14px color-mix(in srgb, var(--background) 34%, transparent);
+}
+.download-platform-icon-large { width: 2rem; height: 2rem; border-radius: 0.65rem; }
+.download-platform-icon-small { width: 1.55rem; height: 1.55rem; border-radius: 0.48rem; }
+.apple-stop-cyan { stop-color: #22d3ee; }
+.apple-stop-green { stop-color: #34d399; }
+.apple-stop-gold { stop-color: #fbbf24; }
+.windows-pane { filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2)); }
+.windows-pane-red { fill: #f35325; }
+.windows-pane-green { fill: #81bc06; }
+.windows-pane-blue { fill: #05a6f0; }
+.windows-pane-yellow { fill: #ffba08; }
+
 /* Premium service marks used in the e-commerce integrations bento. */
 .brand-shopify { --platform-brand: #95bf47; --platform-glow: rgba(149, 191, 71, 0.22); --platform-icon-contrast: #ffffff; }
 .brand-amazon { --platform-brand: #ff9900; --platform-glow: rgba(255, 153, 0, 0.22); }
