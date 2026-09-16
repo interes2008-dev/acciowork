@@ -55,7 +55,7 @@ function useReveal<T extends HTMLElement>() {
 }
 
 /* ---------- Brand ---------- */
-function Logo({ size = 28 }: { size?: number }) {
+function Logo({ size = 28, showText = true }: { size?: number; showText?: boolean }) {
   const gid = "logo" + useId().replace(/:/g, "");
   return (
     <div className="flex items-center gap-1.5 font-bold tracking-tight" style={{ fontSize: size }}>
@@ -69,7 +69,7 @@ function Logo({ size = 28 }: { size?: number }) {
         </defs>
         <path d="M14 3 L26 25 L2 25 Z" fill={`url(#${gid})`} />
       </svg>
-      <span className="text-foreground">Accio</span>
+      {showText && <span className="text-foreground">Accio</span>}
     </div>
   );
 }
@@ -411,10 +411,16 @@ function Hero() {
   return (
     <section id="top" className="relative overflow-hidden bg-hero pb-24 pt-20 sm:pt-28">
       <div className="mx-auto max-w-[1280px] px-6 text-center">
-        <h1 className="mx-auto flex items-center justify-center gap-3 text-[44px] font-extrabold tracking-tight text-foreground sm:text-[72px]">
-          <Logo size={56} />
-          <span>{t.hero.brand}</span>
-          <span className="sr-only">, {t.hero.tagline}</span>
+        <h1 className="mx-auto flex items-center justify-center gap-3 text-[44px] font-extrabold tracking-tight sm:text-[72px]">
+          <span className="sr-only">
+            Accio {t.hero.brand}, {t.hero.tagline}
+          </span>
+          <span aria-hidden>
+            <Logo size={56} showText={false} />
+          </span>
+          <span className="text-gradient-shimmer" aria-hidden>
+            Accio {t.hero.brand}
+          </span>
         </h1>
 
         <p
