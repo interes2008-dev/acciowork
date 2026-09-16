@@ -209,6 +209,26 @@
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
   }
+  .text-gradient-shimmer {
+    background: linear-gradient(
+      90deg,
+      oklch(0.72 0.18 155),
+      oklch(0.78 0.14 195),
+      oklch(0.72 0.18 260),
+      oklch(0.75 0.16 320),
+      oklch(0.72 0.18 155)
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 0 18px oklch(0.65 0.14 170 / 0.35));
+    animation: gradient-shimmer 5s linear infinite;
+  }
+}
+
+@keyframes gradient-shimmer {
+  to { background-position: 200% center; }
 }
 
 @keyframes float-slow {
