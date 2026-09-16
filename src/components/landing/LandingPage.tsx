@@ -9,6 +9,13 @@ function trackSpotlight(e: ReactMouseEvent<HTMLElement>) {
   el.style.setProperty("--my", `${e.clientY - r.top}px`);
 }
 import heroPoster from "@/assets/hero-poster.png.asset.json";
+import agentWorkflowImage from "@/assets/accio-story/accio-agent-workflow.webp.asset.json";
+import autoRepliesImage from "@/assets/accio-story/accio-auto-replies.webp.asset.json";
+import designImage from "@/assets/accio-story/accio-design.webp.asset.json";
+import globalProductsImage from "@/assets/accio-story/accio-global-products.webp.asset.json";
+import marketInsightsImage from "@/assets/accio-story/accio-market-insights.webp.asset.json";
+import verifiedSuppliersImage from "@/assets/accio-story/accio-verified-suppliers.webp.asset.json";
+import voiceSearchImage from "@/assets/accio-story/accio-voice-search.webp.asset.json";
 import {
   ChevronDown,
   Check,
@@ -722,6 +729,146 @@ function HowItWorks() {
   );
 }
 
+/* ---------- Accio agent story ---------- */
+type AgentStoryCopy = {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  workflow: string;
+  chapters: Array<{ title: string; body: string; points: string[] }>;
+  statsTitle: string;
+  stats: Array<{ value: string; label: string }>;
+  proof: string;
+  ctaTitle: string;
+  ctaBody: string;
+  ctaLabel: string;
+  alts: string[];
+};
+
+const AGENT_STORY_COPY: Record<Lang, AgentStoryCopy> = {
+  ru: {
+    eyebrow: "Accio: ИИ-агент Alibaba",
+    title: "От идеи до проверенного поставщика — одним запросом",
+    intro: "Accio объединяет дизайн, анализ трендов, глобальный поиск товаров и связь с поставщиками в одном сквозном рабочем процессе.",
+    workflow: "Дизайн → Тренды → Товары → Поставщики → Связь",
+    chapters: [
+      { title: "Создавайте и ставьте задачи естественно", body: "Загрузите изображение, опишите идею голосом или текстом — агент превратит запрос в дизайн и последовательность действий.", points: ["Идеи и первоначальные дизайны", "Голосовой и визуальный поиск", "Несколько задач в одном запросе"] },
+      { title: "Проверяйте спрос до инвестиций", body: "ИИ анализирует данные рынка, выделяет перспективные категории и сокращает недели ручного исследования до нескольких секунд.", points: ["Тренды и спрос в реальном времени", "Рекомендации товаров", "Перекрёстная проверка данных"] },
+      { title: "Находите товары и связывайтесь напрямую", body: "Ищите на Alibaba.com, 1688, Taobao и AliExpress, сравнивайте предложения и отправляйте запросы проверенным производителям.", points: ["Глобальный поиск товаров", "Проверенные поставщики", "Автоответы и мгновенная связь"] },
+    ],
+    statsTitle: "Глобальная B2B-экосистема в одном агенте",
+    stats: [{ value: "1,5M+", label: "проверенных поставщиков" }, { value: "7 600+", label: "категорий товаров" }, { value: "400M+", label: "товаров для поиска" }],
+    proof: "Более 3 миллионов бизнес-пользователей доверяют Accio поиск товаров и поставщиков.",
+    ctaTitle: "Скачайте Accio сегодня",
+    ctaBody: "Превращайте идеи в реальные бизнес-возможности — быстрее и без переключения между инструментами.",
+    ctaLabel: "Скачать Accio",
+    alts: ["Accio создаёт дизайн товара по загруженному изображению", "AI-агент Accio выполняет поиск поставщиков и готовит запрос", "Голосовой поиск товаров в Accio", "Accio анализирует рыночные данные и рекомендует товары", "Глобальный каталог товаров Alibaba, 1688 и AliExpress в Accio", "Accio находит проверенных производителей", "Accio автоматически обрабатывает ответы поставщиков"],
+  },
+  en: {
+    eyebrow: "Accio: Alibaba's AI agent", title: "From idea to verified supplier in one prompt", intro: "Accio brings design, trend analysis, global product search and supplier communication into one end-to-end workflow.", workflow: "Design → Trends → Products → Suppliers → Contact",
+    chapters: [
+      { title: "Create and delegate naturally", body: "Upload an image or describe an idea by voice or text. The agent turns it into a design and an actionable workflow.", points: ["Product ideas and first designs", "Voice and visual search", "Multiple tasks in one prompt"] },
+      { title: "Validate demand before investing", body: "AI reads market data, highlights promising categories and reduces weeks of manual research to seconds.", points: ["Real-time trends and demand", "Product recommendations", "AI cross-checking"] },
+      { title: "Find products and connect directly", body: "Search Alibaba.com, 1688, Taobao and AliExpress, compare offers and contact verified manufacturers.", points: ["Global product search", "Verified suppliers", "Automated replies and contact"] },
+    ], statsTitle: "A global B2B ecosystem in one agent", stats: [{ value: "1.5M+", label: "verified suppliers" }, { value: "7,600+", label: "product categories" }, { value: "400M+", label: "searchable products" }], proof: "More than 3 million business users trust Accio for product and supplier discovery.", ctaTitle: "Download Accio today", ctaBody: "Turn ideas into real business opportunities, faster and without switching tools.", ctaLabel: "Download Accio", alts: ["Accio creates a product design from an uploaded image", "Accio AI agent searches suppliers and prepares an inquiry", "Voice product search in Accio", "Accio analyses market data and recommends products", "Global Alibaba, 1688 and AliExpress product catalogue in Accio", "Accio finds verified manufacturers", "Accio automatically processes supplier replies"],
+  },
+  de: { eyebrow: "Accio: Alibabas KI-Agent", title: "Von der Idee zum geprüften Lieferanten mit einer Anfrage", intro: "Accio vereint Design, Trendanalyse, globale Produktsuche und Lieferantenkontakt in einem durchgängigen Ablauf.", workflow: "Design → Trends → Produkte → Lieferanten → Kontakt", chapters: [{ title: "Natürlich erstellen und delegieren", body: "Bild hochladen oder Idee per Sprache oder Text beschreiben. Der Agent erstellt Design und Aufgabenablauf.", points: ["Produktideen und Entwürfe", "Sprach- und Bildsuche", "Mehrere Aufgaben pro Anfrage"] }, { title: "Nachfrage vor der Investition prüfen", body: "KI analysiert Marktdaten, erkennt Chancen und verkürzt wochenlange Recherche auf Sekunden.", points: ["Trends und Nachfrage", "Produktempfehlungen", "KI-Datenprüfung"] }, { title: "Produkte finden und direkt kontaktieren", body: "Auf Alibaba.com, 1688, Taobao und AliExpress suchen, Angebote vergleichen und Hersteller kontaktieren.", points: ["Globale Produktsuche", "Geprüfte Lieferanten", "Automatisierte Antworten"] }], statsTitle: "Ein globales B2B-Ökosystem in einem Agenten", stats: [{ value: "1,5M+", label: "geprüfte Lieferanten" }, { value: "7.600+", label: "Produktkategorien" }, { value: "400M+", label: "durchsuchbare Produkte" }], proof: "Mehr als 3 Millionen Geschäftskunden vertrauen Accio.", ctaTitle: "Accio heute herunterladen", ctaBody: "Ideen schneller und ohne Toolwechsel in echte Geschäftschancen verwandeln.", ctaLabel: "Accio herunterladen", alts: ["Accio erstellt ein Produktdesign aus einem Bild", "Accio Agent sucht Lieferanten und bereitet Anfragen vor", "Sprachsuche in Accio", "Accio analysiert Marktdaten", "Globaler Produktkatalog in Accio", "Accio findet geprüfte Hersteller", "Accio verarbeitet Lieferantenantworten automatisch"] },
+  it: { eyebrow: "Accio: l'agente AI di Alibaba", title: "Dall'idea al fornitore verificato con un solo prompt", intro: "Accio riunisce design, analisi delle tendenze, ricerca globale e contatto con i fornitori in un unico flusso.", workflow: "Design → Tendenze → Prodotti → Fornitori → Contatto", chapters: [{ title: "Crea e delega naturalmente", body: "Carica un'immagine o descrivi un'idea con voce o testo: l'agente crea design e attività.", points: ["Idee e primi design", "Ricerca vocale e visiva", "Più attività in un prompt"] }, { title: "Valida la domanda prima di investire", body: "L'AI analizza il mercato, individua opportunità e riduce settimane di ricerca a pochi secondi.", points: ["Tendenze e domanda", "Prodotti consigliati", "Verifica incrociata AI"] }, { title: "Trova prodotti e contatta direttamente", body: "Cerca su Alibaba.com, 1688, Taobao e AliExpress, confronta e contatta produttori verificati.", points: ["Ricerca globale", "Fornitori verificati", "Risposte automatiche"] }], statsTitle: "Un ecosistema B2B globale in un agente", stats: [{ value: "1,5M+", label: "fornitori verificati" }, { value: "7.600+", label: "categorie" }, { value: "400M+", label: "prodotti" }], proof: "Oltre 3 milioni di utenti business si affidano ad Accio.", ctaTitle: "Scarica Accio oggi", ctaBody: "Trasforma le idee in opportunità reali, più velocemente e senza cambiare strumenti.", ctaLabel: "Scarica Accio", alts: ["Accio crea un design da un'immagine", "L'agente Accio cerca fornitori", "Ricerca vocale in Accio", "Analisi di mercato Accio", "Catalogo globale in Accio", "Fornitori verificati in Accio", "Risposte automatiche ai fornitori"] },
+  es: { eyebrow: "Accio: el agente de IA de Alibaba", title: "De la idea al proveedor verificado con una consulta", intro: "Accio une diseño, tendencias, búsqueda global y contacto con proveedores en un solo flujo de trabajo.", workflow: "Diseño → Tendencias → Productos → Proveedores → Contacto", chapters: [{ title: "Crea y delega de forma natural", body: "Sube una imagen o describe una idea por voz o texto. El agente crea el diseño y las tareas.", points: ["Ideas y primeros diseños", "Búsqueda por voz e imagen", "Varias tareas en una consulta"] }, { title: "Valida la demanda antes de invertir", body: "La IA analiza el mercado, detecta oportunidades y reduce semanas de investigación a segundos.", points: ["Tendencias y demanda", "Recomendaciones", "Verificación cruzada con IA"] }, { title: "Encuentra productos y contacta directamente", body: "Busca en Alibaba.com, 1688, Taobao y AliExpress, compara y contacta fabricantes verificados.", points: ["Búsqueda global", "Proveedores verificados", "Respuestas automáticas"] }], statsTitle: "Un ecosistema B2B global en un agente", stats: [{ value: "1,5M+", label: "proveedores verificados" }, { value: "7.600+", label: "categorías" }, { value: "400M+", label: "productos" }], proof: "Más de 3 millones de usuarios empresariales confían en Accio.", ctaTitle: "Descarga Accio hoy", ctaBody: "Convierte ideas en oportunidades reales, más rápido y sin cambiar de herramienta.", ctaLabel: "Descargar Accio", alts: ["Accio crea un diseño desde una imagen", "El agente Accio busca proveedores", "Búsqueda por voz en Accio", "Análisis de mercado en Accio", "Catálogo global en Accio", "Fabricantes verificados en Accio", "Respuestas automáticas a proveedores"] },
+  zh: { eyebrow: "Accio：阿里巴巴 AI 智能体", title: "一个指令，从创意直达认证供应商", intro: "Accio 将设计、趋势分析、全球商品搜索和供应商沟通整合为一个端到端工作流。", workflow: "设计 → 趋势 → 商品 → 供应商 → 沟通", chapters: [{ title: "自然表达，智能执行", body: "上传图片，或用语音和文字描述创意，智能体会生成设计并执行多项任务。", points: ["产品创意与初步设计", "语音和图片搜索", "一个指令处理多项任务"] }, { title: "投资前验证需求", body: "AI 分析市场数据、发现潜力品类，将数周研究缩短到几秒。", points: ["实时趋势与需求", "商品推荐", "AI 交叉验证"] }, { title: "全球找货，直接联系", body: "搜索 Alibaba.com、1688、淘宝和 AliExpress，对比商品并联系认证制造商。", points: ["全球商品搜索", "认证供应商", "自动回复与沟通"] }], statsTitle: "一个智能体，连接全球 B2B 生态", stats: [{ value: "150万+", label: "认证供应商" }, { value: "7,600+", label: "商品类目" }, { value: "4亿+", label: "可搜索商品" }], proof: "全球超过 300 万企业用户信赖 Accio。", ctaTitle: "立即下载 Accio", ctaBody: "无需切换工具，更快把创意变成真实商机。", ctaLabel: "下载 Accio", alts: ["Accio 根据图片创建设计", "Accio 智能体搜索供应商", "Accio 语音搜索", "Accio 市场分析", "Accio 全球商品目录", "Accio 认证制造商", "Accio 自动处理供应商回复"] },
+  pt: { eyebrow: "Accio: o agente de IA da Alibaba", title: "Da ideia ao fornecedor verificado com um comando", intro: "Accio reúne design, tendências, busca global e contato com fornecedores em um único fluxo.", workflow: "Design → Tendências → Produtos → Fornecedores → Contato", chapters: [{ title: "Crie e delegue naturalmente", body: "Envie uma imagem ou descreva uma ideia por voz ou texto. O agente cria o design e as tarefas.", points: ["Ideias e primeiros designs", "Busca por voz e imagem", "Várias tarefas em um comando"] }, { title: "Valide a demanda antes de investir", body: "A IA analisa o mercado, identifica oportunidades e reduz semanas de pesquisa a segundos.", points: ["Tendências e demanda", "Recomendações", "Verificação cruzada por IA"] }, { title: "Encontre produtos e fale diretamente", body: "Pesquise no Alibaba.com, 1688, Taobao e AliExpress, compare e contate fabricantes verificados.", points: ["Busca global", "Fornecedores verificados", "Respostas automáticas"] }], statsTitle: "Um ecossistema B2B global em um agente", stats: [{ value: "1,5M+", label: "fornecedores verificados" }, { value: "7.600+", label: "categorias" }, { value: "400M+", label: "produtos" }], proof: "Mais de 3 milhões de usuários empresariais confiam na Accio.", ctaTitle: "Baixe a Accio hoje", ctaBody: "Transforme ideias em oportunidades reais, mais rápido e sem trocar de ferramenta.", ctaLabel: "Baixar Accio", alts: ["Accio cria um design a partir de uma imagem", "Agente Accio busca fornecedores", "Busca por voz na Accio", "Análise de mercado na Accio", "Catálogo global na Accio", "Fabricantes verificados na Accio", "Respostas automáticas a fornecedores"] },
+  hi: { eyebrow: "Accio: Alibaba का AI एजेंट", title: "एक प्रॉम्प्ट में आइडिया से सत्यापित सप्लायर तक", intro: "Accio डिज़ाइन, ट्रेंड विश्लेषण, वैश्विक उत्पाद खोज और सप्लायर संपर्क को एक वर्कफ़्लो में जोड़ता है।", workflow: "डिज़ाइन → ट्रेंड → उत्पाद → सप्लायर → संपर्क", chapters: [{ title: "स्वाभाविक रूप से बनाएँ और काम सौंपें", body: "इमेज अपलोड करें या आवाज़ और टेक्स्ट में आइडिया बताएँ। एजेंट डिज़ाइन और कार्य तैयार करता है।", points: ["उत्पाद आइडिया और डिज़ाइन", "वॉइस और विज़ुअल खोज", "एक प्रॉम्प्ट में कई काम"] }, { title: "निवेश से पहले माँग जाँचें", body: "AI बाज़ार डेटा पढ़ता है, अवसर पहचानता है और हफ्तों की रिसर्च सेकंडों में करता है।", points: ["रीयल-टाइम ट्रेंड", "उत्पाद सुझाव", "AI क्रॉस-चेक"] }, { title: "उत्पाद खोजें और सीधे जुड़ें", body: "Alibaba.com, 1688, Taobao और AliExpress पर खोजें, तुलना करें और सत्यापित निर्माताओं से जुड़ें।", points: ["वैश्विक उत्पाद खोज", "सत्यापित सप्लायर", "स्वचालित उत्तर"] }], statsTitle: "एक एजेंट में वैश्विक B2B इकोसिस्टम", stats: [{ value: "1.5M+", label: "सत्यापित सप्लायर" }, { value: "7,600+", label: "उत्पाद श्रेणियाँ" }, { value: "400M+", label: "खोज योग्य उत्पाद" }], proof: "30 लाख से अधिक व्यवसायिक उपयोगकर्ता Accio पर भरोसा करते हैं।", ctaTitle: "आज ही Accio डाउनलोड करें", ctaBody: "बिना टूल बदले आइडिया को तेज़ी से वास्तविक अवसरों में बदलें।", ctaLabel: "Accio डाउनलोड करें", alts: ["Accio इमेज से उत्पाद डिज़ाइन बनाता है", "Accio एजेंट सप्लायर खोजता है", "Accio में वॉइस खोज", "Accio बाज़ार विश्लेषण", "Accio वैश्विक उत्पाद कैटलॉग", "Accio सत्यापित निर्माता", "Accio स्वचालित सप्लायर उत्तर"] },
+  fr: { eyebrow: "Accio : l'agent IA d'Alibaba", title: "De l'idée au fournisseur vérifié en une seule demande", intro: "Accio réunit design, analyse des tendances, recherche mondiale et contact fournisseurs dans un seul flux.", workflow: "Design → Tendances → Produits → Fournisseurs → Contact", chapters: [{ title: "Créez et déléguez naturellement", body: "Importez une image ou décrivez une idée par la voix ou le texte. L'agent crée le design et les tâches.", points: ["Idées et premiers designs", "Recherche vocale et visuelle", "Plusieurs tâches par demande"] }, { title: "Validez la demande avant d'investir", body: "L'IA analyse le marché, détecte les opportunités et réduit des semaines de recherche à quelques secondes.", points: ["Tendances et demande", "Recommandations", "Vérification croisée par IA"] }, { title: "Trouvez et contactez directement", body: "Recherchez sur Alibaba.com, 1688, Taobao et AliExpress, comparez et contactez des fabricants vérifiés.", points: ["Recherche mondiale", "Fournisseurs vérifiés", "Réponses automatisées"] }], statsTitle: "Un écosystème B2B mondial dans un agent", stats: [{ value: "1,5M+", label: "fournisseurs vérifiés" }, { value: "7 600+", label: "catégories" }, { value: "400M+", label: "produits" }], proof: "Plus de 3 millions d'utilisateurs professionnels font confiance à Accio.", ctaTitle: "Téléchargez Accio aujourd'hui", ctaBody: "Transformez vos idées en opportunités réelles, plus vite et sans changer d'outil.", ctaLabel: "Télécharger Accio", alts: ["Accio crée un design depuis une image", "L'agent Accio recherche des fournisseurs", "Recherche vocale dans Accio", "Analyse de marché Accio", "Catalogue mondial dans Accio", "Fabricants vérifiés dans Accio", "Réponses fournisseurs automatisées"] },
+};
+
+const AGENT_STORY_IMAGES = [
+  designImage.url,
+  agentWorkflowImage.url,
+  voiceSearchImage.url,
+  marketInsightsImage.url,
+  globalProductsImage.url,
+  verifiedSuppliersImage.url,
+  autoRepliesImage.url,
+];
+
+function AgentStoryImage({ src, alt, featured = false }: { src: string; alt: string; featured?: boolean }) {
+  return (
+    <figure className={`group relative shrink-0 overflow-hidden rounded-[24px] border border-border/70 bg-card shadow-card ${featured ? "w-[76vw] max-w-[330px] lg:w-[310px]" : "w-[70vw] max-w-[292px] lg:w-[270px]"}`}>
+      <img src={src} alt={alt} width={768} height={1365} loading="lazy" decoding="async" className="h-auto w-full transition-transform duration-700 ease-out group-hover:scale-[1.018]" />
+      <span className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-foreground/10" aria-hidden />
+    </figure>
+  );
+}
+
+function AgentStory() {
+  const { lang } = useI18n();
+  const copy = AGENT_STORY_COPY[lang];
+  const imageGroups = [[0, 1, 2], [3, 4], [5, 6]];
+  return (
+    <section className="overflow-hidden border-y border-border/60 bg-card py-24 sm:py-32">
+      <div className="mx-auto max-w-[1240px] px-5 sm:px-6">
+        <header className="mx-auto max-w-4xl text-center">
+          <p className="text-[13px] font-bold uppercase tracking-[0.14em] text-primary">{copy.eyebrow}</p>
+          <h2 className="mt-4 text-[28px] font-bold tracking-tight text-foreground sm:text-[40px]">{copy.title}</h2>
+          <p className="mx-auto mt-5 max-w-3xl text-[17px] leading-relaxed text-muted-foreground sm:text-[19px]">{copy.intro}</p>
+          <div className="mx-auto mt-7 inline-flex max-w-full overflow-x-auto rounded-full border border-primary/25 bg-primary/10 px-5 py-2.5 text-[13px] font-semibold text-primary sm:text-[15px]">
+            <span className="whitespace-nowrap">{copy.workflow}</span>
+          </div>
+        </header>
+
+        <div className="mt-20 space-y-24 sm:space-y-32">
+          {copy.chapters.map((chapter, chapterIndex) => (
+            <article key={chapter.title} className="grid items-center gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+              <div className={chapterIndex % 2 === 1 ? "lg:order-2" : ""}>
+                <span className="text-[12px] font-bold uppercase tracking-[0.14em] text-primary">0{chapterIndex + 1}</span>
+                <h3 className="mt-3 text-[26px] font-bold leading-tight text-foreground sm:text-[32px]">{chapter.title}</h3>
+                <p className="mt-5 text-[16px] leading-relaxed text-muted-foreground sm:text-[18px]">{chapter.body}</p>
+                <ul className="mt-7 space-y-3">
+                  {chapter.points.map((point) => (
+                    <li key={point} className="flex items-start gap-3 text-[15px] font-medium text-foreground/85">
+                      <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-primary/15 text-primary"><Check className="h-3.5 w-3.5" /></span>
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className={`-mx-5 flex snap-x snap-mandatory items-center gap-4 overflow-x-auto px-5 pb-5 sm:-mx-6 sm:px-6 lg:mx-0 lg:overflow-visible lg:px-0 ${chapterIndex % 2 === 1 ? "lg:order-1 lg:justify-end" : ""}`}>
+                {imageGroups[chapterIndex].map((imageIndex, groupIndex) => (
+                  <div key={AGENT_STORY_IMAGES[imageIndex]} className={`snap-center ${groupIndex > 0 ? "lg:-ml-20" : ""} ${groupIndex % 2 ? "lg:translate-y-8" : ""}`} style={{ zIndex: imageGroups[chapterIndex].length - groupIndex }}>
+                    <AgentStoryImage src={AGENT_STORY_IMAGES[imageIndex]} alt={copy.alts[imageIndex]} featured={groupIndex === 0} />
+                  </div>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div className="mt-24 border-t border-border/60 pt-14 sm:mt-32 sm:pt-16">
+          <p className="text-center text-[14px] font-semibold text-foreground/70">{copy.statsTitle}</p>
+          <div className="mt-8 grid gap-8 text-center sm:grid-cols-3">
+            {copy.stats.map((stat) => (
+              <div key={stat.value}>
+                <strong className="block text-[34px] font-extrabold tracking-tight text-primary sm:text-[42px]">{stat.value}</strong>
+                <span className="mt-1 block text-[14px] text-muted-foreground">{stat.label}</span>
+              </div>
+            ))}
+          </div>
+          <p className="mx-auto mt-9 max-w-2xl text-center text-[14px] leading-relaxed text-muted-foreground">{copy.proof}</p>
+        </div>
+
+        <div className="mx-auto mt-16 max-w-4xl text-center">
+          <h3 className="text-[26px] font-bold text-foreground sm:text-[32px]">{copy.ctaTitle}</h3>
+          <p className="mx-auto mt-4 max-w-2xl text-[16px] leading-relaxed text-muted-foreground">{copy.ctaBody}</p>
+          <a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-[16px] font-semibold text-primary-foreground shadow-elegant transition hover:-translate-y-0.5 hover:brightness-110">
+            <Sparkles className="h-4 w-4" />
+            {copy.ctaLabel}
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ---------- Use cases ---------- */
 function UseCases() {
   const { t, lang } = useI18n();
@@ -1402,6 +1549,7 @@ export default function LandingPage() {
         <AccioStats />
         <BusinessNeeds />
         <HowItWorks />
+        <AgentStory />
         <WhyChoose />
         <UseCases />
         <CalculatorTeaser />

@@ -343,6 +343,7 @@
 .integration-ebay-logo span:nth-child(4) { color: #86b817; }
 
 @media (prefers-reduced-motion: reduce) {
+  .text-gradient-shimmer { animation: none; }
   .integration-tile,
   .integration-tile::before,
   .integration-icon-shell { transition: none; }
