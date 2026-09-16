@@ -55,7 +55,7 @@ function useReveal<T extends HTMLElement>() {
 }
 
 /* ---------- Brand ---------- */
-function Logo({ size = 28 }: { size?: number }) {
+function Logo({ size = 28, showText = true }: { size?: number; showText?: boolean }) {
   const gid = "logo" + useId().replace(/:/g, "");
   return (
     <div className="flex items-center gap-1.5 font-bold tracking-tight" style={{ fontSize: size }}>
@@ -69,7 +69,7 @@ function Logo({ size = 28 }: { size?: number }) {
         </defs>
         <path d="M14 3 L26 25 L2 25 Z" fill={`url(#${gid})`} />
       </svg>
-      <span className="text-foreground">Accio</span>
+      {showText && <span className="text-foreground">Accio</span>}
     </div>
   );
 }
