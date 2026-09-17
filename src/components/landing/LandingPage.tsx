@@ -1543,7 +1543,7 @@ function AccioStats() {
 export default function LandingPage() {
   return (
     <I18nProvider>
-      <main className="min-h-screen bg-background text-foreground antialiased">
+      <main className="min-h-screen overflow-x-clip bg-background text-foreground antialiased">
         <Navbar />
         <Hero />
         <AccioStats />
