@@ -818,8 +818,8 @@ function AgentStory() {
 
         <div className="mt-20 space-y-24 sm:space-y-32">
           {copy.chapters.map((chapter, chapterIndex) => (
-            <article key={chapter.title} className="grid items-center gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-              <div className={chapterIndex % 2 === 1 ? "lg:order-2" : ""}>
+            <article key={chapter.title} className="grid min-w-0 items-center gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+              <div className={`min-w-0 ${chapterIndex % 2 === 1 ? "lg:order-2" : ""}`}>
                 <span className="text-[12px] font-bold uppercase tracking-[0.14em] text-primary">0{chapterIndex + 1}</span>
                 <h3 className="mt-3 text-[26px] font-bold leading-tight text-foreground sm:text-[32px]">{chapter.title}</h3>
                 <p className="mt-5 text-[16px] leading-relaxed text-muted-foreground sm:text-[18px]">{chapter.body}</p>
@@ -832,7 +832,7 @@ function AgentStory() {
                   ))}
                 </ul>
               </div>
-              <div className={`-mx-5 flex snap-x snap-mandatory items-center gap-4 overflow-x-auto px-5 pb-5 sm:-mx-6 sm:px-6 lg:mx-0 lg:overflow-visible lg:px-0 ${chapterIndex % 2 === 1 ? "lg:order-1 lg:justify-end" : ""}`}>
+              <div className={`flex min-w-0 max-w-full snap-x snap-mandatory items-center gap-4 overflow-x-auto pb-5 lg:overflow-visible ${chapterIndex % 2 === 1 ? "lg:order-1 lg:justify-end" : ""}`}>
                 {imageGroups[chapterIndex].map((imageIndex, groupIndex) => (
                   <div key={AGENT_STORY_IMAGES[imageIndex]} className={`snap-center ${groupIndex > 0 ? "lg:-ml-20" : ""} ${groupIndex % 2 ? "lg:translate-y-8" : ""}`} style={{ zIndex: imageGroups[chapterIndex].length - groupIndex }}>
                     <AgentStoryImage src={AGENT_STORY_IMAGES[imageIndex]} alt={copy.alts[imageIndex]} featured={groupIndex === 0} />
