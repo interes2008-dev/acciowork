@@ -16,6 +16,13 @@ import globalProductsImage from "@/assets/accio-story/accio-global-products.webp
 import marketInsightsImage from "@/assets/accio-story/accio-market-insights.webp.asset.json";
 import verifiedSuppliersImage from "@/assets/accio-story/accio-verified-suppliers.webp.asset.json";
 import voiceSearchImage from "@/assets/accio-story/accio-voice-search.webp.asset.json";
+import agentWorkflowImageEn from "@/assets/accio-story/accio-agent-workflow-en.png.asset.json";
+import autoRepliesImageEn from "@/assets/accio-story/accio-auto-replies-en.png.asset.json";
+import designImageEn from "@/assets/accio-story/accio-design-en.png.asset.json";
+import globalProductsImageEn from "@/assets/accio-story/accio-global-products-en.png.asset.json";
+import marketInsightsImageEn from "@/assets/accio-story/accio-market-insights-en.png.asset.json";
+import verifiedSuppliersImageEn from "@/assets/accio-story/accio-verified-suppliers-en.png.asset.json";
+import voiceSearchImageEn from "@/assets/accio-story/accio-voice-search-en.png.asset.json";
 import {
   ChevronDown,
   Check,
@@ -781,7 +788,7 @@ const AGENT_STORY_COPY: Record<Lang, AgentStoryCopy> = {
   fr: { eyebrow: "Accio : l'agent IA d'Alibaba", title: "De l'idée au fournisseur vérifié en une seule demande", intro: "Accio réunit design, analyse des tendances, recherche mondiale et contact fournisseurs dans un seul flux.", workflow: "Design → Tendances → Produits → Fournisseurs → Contact", chapters: [{ title: "Créez et déléguez naturellement", body: "Importez une image ou décrivez une idée par la voix ou le texte. L'agent crée le design et les tâches.", points: ["Idées et premiers designs", "Recherche vocale et visuelle", "Plusieurs tâches par demande"] }, { title: "Validez la demande avant d'investir", body: "L'IA analyse le marché, détecte les opportunités et réduit des semaines de recherche à quelques secondes.", points: ["Tendances et demande", "Recommandations", "Vérification croisée par IA"] }, { title: "Trouvez et contactez directement", body: "Recherchez sur Alibaba.com, 1688, Taobao et AliExpress, comparez et contactez des fabricants vérifiés.", points: ["Recherche mondiale", "Fournisseurs vérifiés", "Réponses automatisées"] }], statsTitle: "Un écosystème B2B mondial dans un agent", stats: [{ value: "1,5M+", label: "fournisseurs vérifiés" }, { value: "7 600+", label: "catégories" }, { value: "400M+", label: "produits" }], proof: "Plus de 3 millions d'utilisateurs professionnels font confiance à Accio.", ctaTitle: "Téléchargez Accio aujourd'hui", ctaBody: "Transformez vos idées en opportunités réelles, plus vite et sans changer d'outil.", ctaLabel: "Télécharger Accio", alts: ["Accio crée un design depuis une image", "L'agent Accio recherche des fournisseurs", "Recherche vocale dans Accio", "Analyse de marché Accio", "Catalogue mondial dans Accio", "Fabricants vérifiés dans Accio", "Réponses fournisseurs automatisées"] },
 };
 
-const AGENT_STORY_IMAGES = [
+const AGENT_STORY_IMAGES_RU = [
   designImage.url,
   agentWorkflowImage.url,
   voiceSearchImage.url,
@@ -789,6 +796,16 @@ const AGENT_STORY_IMAGES = [
   globalProductsImage.url,
   verifiedSuppliersImage.url,
   autoRepliesImage.url,
+];
+
+const AGENT_STORY_IMAGES_EN = [
+  designImageEn.url,
+  agentWorkflowImageEn.url,
+  voiceSearchImageEn.url,
+  marketInsightsImageEn.url,
+  globalProductsImageEn.url,
+  verifiedSuppliersImageEn.url,
+  autoRepliesImageEn.url,
 ];
 
 function AgentStoryImage({ src, alt, featured = false }: { src: string; alt: string; featured?: boolean }) {
@@ -803,6 +820,7 @@ function AgentStoryImage({ src, alt, featured = false }: { src: string; alt: str
 function AgentStory() {
   const { lang } = useI18n();
   const copy = AGENT_STORY_COPY[lang];
+  const storyImages = lang === "ru" ? AGENT_STORY_IMAGES_RU : AGENT_STORY_IMAGES_EN;
   const imageGroups = [[0, 1, 2], [3, 4], [5, 6]];
   return (
     <section className="overflow-hidden border-y border-border/60 bg-card py-24 sm:py-32">
@@ -834,8 +852,8 @@ function AgentStory() {
               </div>
               <div className={`flex min-w-0 max-w-full snap-x snap-mandatory items-center gap-4 overflow-x-auto pb-5 lg:overflow-visible ${chapterIndex % 2 === 1 ? "lg:order-1 lg:justify-end" : ""}`}>
                 {imageGroups[chapterIndex].map((imageIndex, groupIndex) => (
-                  <div key={AGENT_STORY_IMAGES[imageIndex]} className={`snap-center ${groupIndex > 0 ? "lg:-ml-20" : ""} ${groupIndex % 2 ? "lg:translate-y-8" : ""}`} style={{ zIndex: imageGroups[chapterIndex].length - groupIndex }}>
-                    <AgentStoryImage src={AGENT_STORY_IMAGES[imageIndex]} alt={copy.alts[imageIndex]} featured={groupIndex === 0} />
+                  <div key={storyImages[imageIndex]} className={`snap-center ${groupIndex > 0 ? "lg:-ml-20" : ""} ${groupIndex % 2 ? "lg:translate-y-8" : ""}`} style={{ zIndex: imageGroups[chapterIndex].length - groupIndex }}>
+                    <AgentStoryImage src={storyImages[imageIndex]} alt={copy.alts[imageIndex]} featured={groupIndex === 0} />
                   </div>
                 ))}
               </div>
