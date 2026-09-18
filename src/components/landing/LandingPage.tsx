@@ -810,7 +810,7 @@ const AGENT_STORY_IMAGES_EN = [
 
 function AgentStoryImage({ src, alt, featured = false }: { src: string; alt: string; featured?: boolean }) {
   return (
-    <figure className={`group relative shrink-0 overflow-hidden rounded-[24px] border border-border/70 bg-card shadow-card ${featured ? "w-[76vw] max-w-[330px] lg:w-[310px]" : "w-[70vw] max-w-[292px] lg:w-[270px]"}`}>
+    <figure className={`group relative shrink-0 overflow-hidden rounded-[24px] border border-border/70 bg-card shadow-card ${featured ? "w-[82vw] max-w-[350px] xl:w-[270px]" : "w-[78vw] max-w-[330px] xl:w-[230px]"}`}>
       <img src={src} alt={alt} width={768} height={1365} loading="lazy" decoding="async" className="h-auto w-full transition-transform duration-700 ease-out group-hover:scale-[1.018]" />
       <span className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-foreground/10" aria-hidden />
     </figure>
@@ -836,8 +836,8 @@ function AgentStory() {
 
         <div className="mt-20 space-y-24 sm:space-y-32">
           {copy.chapters.map((chapter, chapterIndex) => (
-            <article key={chapter.title} className="grid min-w-0 items-center gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-              <div className={`min-w-0 ${chapterIndex % 2 === 1 ? "lg:order-2" : ""}`}>
+            <article key={chapter.title} className="grid min-w-0 items-center gap-10 xl:grid-cols-[0.68fr_1.32fr] xl:gap-16">
+              <div className={`min-w-0 ${chapterIndex % 2 === 1 ? "xl:order-2" : ""}`}>
                 <span className="text-[12px] font-bold uppercase tracking-[0.14em] text-primary">0{chapterIndex + 1}</span>
                 <h3 className="mt-3 text-[26px] font-bold leading-tight text-foreground sm:text-[32px]">{chapter.title}</h3>
                 <p className="mt-5 text-[16px] leading-relaxed text-muted-foreground sm:text-[18px]">{chapter.body}</p>
@@ -850,9 +850,9 @@ function AgentStory() {
                   ))}
                 </ul>
               </div>
-              <div className={`flex min-w-0 max-w-full snap-x snap-mandatory items-center gap-4 overflow-x-auto pb-5 lg:overflow-visible ${chapterIndex % 2 === 1 ? "lg:order-1 lg:justify-end" : ""}`}>
+              <div className={`flex min-w-0 max-w-full snap-x snap-mandatory items-start gap-4 overflow-x-auto pb-5 xl:overflow-visible ${chapterIndex % 2 === 1 ? "xl:order-1 xl:justify-end" : ""}`}>
                 {imageGroups[chapterIndex].map((imageIndex, groupIndex) => (
-                  <div key={storyImages[imageIndex]} className={`snap-center ${groupIndex > 0 ? "lg:-ml-20" : ""} ${groupIndex % 2 ? "lg:translate-y-8" : ""}`} style={{ zIndex: imageGroups[chapterIndex].length - groupIndex }}>
+                  <div key={storyImages[imageIndex]} className={`snap-center ${groupIndex % 2 ? "xl:translate-y-8" : ""}`}>
                     <AgentStoryImage src={storyImages[imageIndex]} alt={copy.alts[imageIndex]} featured={groupIndex === 0} />
                   </div>
                 ))}
