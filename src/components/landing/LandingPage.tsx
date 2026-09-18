@@ -23,6 +23,13 @@ import globalProductsImageEn from "@/assets/accio-story/accio-global-products-en
 import marketInsightsImageEn from "@/assets/accio-story/accio-market-insights-en.png.asset.json";
 import verifiedSuppliersImageEn from "@/assets/accio-story/accio-verified-suppliers-en.png.asset.json";
 import voiceSearchImageEn from "@/assets/accio-story/accio-voice-search-en.png.asset.json";
+import agentWorkflowImageZh from "@/assets/accio-story/accio-agent-workflow-zh.png.asset.json";
+import autoRepliesImageZh from "@/assets/accio-story/accio-auto-replies-zh.png.asset.json";
+import designImageZh from "@/assets/accio-story/accio-design-zh.png.asset.json";
+import globalProductsImageZh from "@/assets/accio-story/accio-global-products-zh.png.asset.json";
+import marketInsightsImageZh from "@/assets/accio-story/accio-market-insights-zh.png.asset.json";
+import verifiedSuppliersImageZh from "@/assets/accio-story/accio-verified-suppliers-zh.png.asset.json";
+import voiceSearchImageZh from "@/assets/accio-story/accio-voice-search-zh.png.asset.json";
 import {
   ChevronDown,
   Check,
@@ -808,6 +815,16 @@ const AGENT_STORY_IMAGES_EN = [
   autoRepliesImageEn.url,
 ];
 
+const AGENT_STORY_IMAGES_ZH = [
+  designImageZh.url,
+  agentWorkflowImageZh.url,
+  voiceSearchImageZh.url,
+  marketInsightsImageZh.url,
+  globalProductsImageZh.url,
+  verifiedSuppliersImageZh.url,
+  autoRepliesImageZh.url,
+];
+
 function AgentStoryImage({ src, alt, featured = false }: { src: string; alt: string; featured?: boolean }) {
   return (
     <figure className={`group relative shrink-0 overflow-hidden rounded-[24px] border border-border/70 bg-card shadow-card ${featured ? "w-[82vw] max-w-[350px] xl:w-[270px]" : "w-[78vw] max-w-[330px] xl:w-[230px]"}`}>
@@ -820,7 +837,7 @@ function AgentStoryImage({ src, alt, featured = false }: { src: string; alt: str
 function AgentStory() {
   const { lang } = useI18n();
   const copy = AGENT_STORY_COPY[lang];
-  const storyImages = lang === "ru" ? AGENT_STORY_IMAGES_RU : AGENT_STORY_IMAGES_EN;
+  const storyImages = lang === "ru" ? AGENT_STORY_IMAGES_RU : lang === "zh" ? AGENT_STORY_IMAGES_ZH : AGENT_STORY_IMAGES_EN;
   const imageGroups = [[0, 1, 2], [3, 4], [5, 6]];
   return (
     <section className="overflow-hidden border-y border-border/60 bg-card py-24 sm:py-32">
