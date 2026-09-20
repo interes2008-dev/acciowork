@@ -15,6 +15,7 @@ const LANG_PATH: Record<string, string> = {
   pt: "/pt",
   hi: "/hi",
   fr: "/fr",
+  ar: "/ar",
 };
 
 export const Route = createFileRoute("/fr/blog/$slug")({
@@ -44,14 +45,21 @@ export const Route = createFileRoute("/fr/blog/$slug")({
       }));
     const en = alternates.find((x) => x.lang === "en");
     if (en) {
-      altLinks.push({ rel: "alternate", hreflang: "x-default", href: `https://acciowork.pro/blog/${en.slug}` });
+      altLinks.push({
+        rel: "alternate",
+        hreflang: "x-default",
+        href: `https://acciowork.pro/blog/${en.slug}`,
+      });
     }
     return {
       meta: [
         { title: a.title.length <= 45 ? `${a.title} | Blog Accio Work` : a.title },
         { name: "description", content: a.description },
         { name: "keywords", content: (a.keywords || []).join(", ") },
-        { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
+        {
+          name: "robots",
+          content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+        },
         { name: "author", content: "Accio Work" },
         { property: "og:site_name", content: "Accio Work" },
         { property: "og:title", content: a.title },
@@ -60,7 +68,12 @@ export const Route = createFileRoute("/fr/blog/$slug")({
         { property: "og:locale", content: "fr_FR" },
         { property: "og:url", content: url },
         { property: "article:published_time", content: a.published_at },
-        ...(cover ? [{ property: "og:image", content: cover }, { name: "twitter:image", content: cover }] : []),
+        ...(cover
+          ? [
+              { property: "og:image", content: cover },
+              { name: "twitter:image", content: cover },
+            ]
+          : []),
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: a.title },
         { name: "twitter:description", content: a.description },
@@ -88,7 +101,11 @@ export const Route = createFileRoute("/fr/blog/$slug")({
               url: "https://acciowork.pro",
               logo: { "@type": "ImageObject", url: "https://acciowork.pro/favicon.svg" },
             },
-            isPartOf: { "@type": "Blog", name: "Blog Accio Work", url: `https://acciowork.pro/fr/blog` },
+            isPartOf: {
+              "@type": "Blog",
+              name: "Blog Accio Work",
+              url: `https://acciowork.pro/fr/blog`,
+            },
             mainEntityOfPage: { "@type": "WebPage", "@id": url },
           }),
         },
@@ -98,8 +115,18 @@ export const Route = createFileRoute("/fr/blog/$slug")({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Accio Work", item: "https://acciowork.pro" + BASE_LANG_PATH },
-              { "@type": "ListItem", position: 2, name: "Blog Accio Work", item: `https://acciowork.pro/fr/blog` },
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Accio Work",
+                item: "https://acciowork.pro" + BASE_LANG_PATH,
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Blog Accio Work",
+                item: `https://acciowork.pro/fr/blog`,
+              },
               { "@type": "ListItem", position: 3, name: a.title, item: url },
             ],
           }),

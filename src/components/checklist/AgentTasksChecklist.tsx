@@ -42,7 +42,11 @@ function Shell({ lang, children }: { lang: ChLang; children: ReactNode }) {
     <div className="min-h-screen bg-background text-foreground">
       <header className="border-b border-border bg-background/80 backdrop-blur">
         <div className="mx-auto flex max-w-3xl items-center justify-between px-5 py-4">
-          <a href={homeHref(lang)} className="flex items-center gap-1.5 font-bold tracking-tight" style={{ fontSize: 22 }}>
+          <a
+            href={homeHref(lang)}
+            className="flex items-center gap-1.5 font-bold tracking-tight"
+            style={{ fontSize: 22 }}
+          >
             <svg width={21} height={22} viewBox="0 0 28 28" aria-hidden>
               <defs>
                 <linearGradient id="accioTri" x1="0" y1="1" x2="1" y2="0">
@@ -58,8 +62,12 @@ function Shell({ lang, children }: { lang: ChLang; children: ReactNode }) {
           <div className="flex items-center gap-2 sm:gap-3">
             <ThemeToggle />
             <LangMenu lang={lang} />
-            <a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer nofollow"
-              className="whitespace-nowrap rounded-full bg-[#34d399] px-3 py-2 text-[13px] font-semibold text-[#04120d] transition hover:brightness-110 sm:px-4 sm:text-sm">
+            <a
+              href={REFERRAL_URL}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="whitespace-nowrap rounded-full bg-[#34d399] px-3 py-2 text-[13px] font-semibold text-[#04120d] transition hover:brightness-110 sm:px-4 sm:text-sm"
+            >
               {c.cta}
             </a>
           </div>
@@ -68,7 +76,10 @@ function Shell({ lang, children }: { lang: ChLang; children: ReactNode }) {
       {children}
       <footer className="border-t border-border bg-card">
         <div className="mx-auto max-w-3xl px-5 py-8 text-sm text-foreground/60">
-          <a href={homeHref(lang)} className="inline-flex items-center gap-1.5 hover:text-foreground/90">
+          <a
+            href={homeHref(lang)}
+            className="inline-flex items-center gap-1.5 hover:text-foreground/90"
+          >
             <ArrowLeft className="h-4 w-4" />
           </a>
         </div>
@@ -87,7 +98,10 @@ export function AgentTasksChecklist({ lang }: { lang: ChLang }) {
     if (typeof window === "undefined") return;
     const t = new URLSearchParams(window.location.search).get("tk");
     if (!t) return;
-    const idx = t.split("-").map((x) => parseInt(x, 10)).filter((n) => Number.isInteger(n) && n >= 0 && n < chTasks.length);
+    const idx = t
+      .split("-")
+      .map((x) => parseInt(x, 10))
+      .filter((n) => Number.isInteger(n) && n >= 0 && n < chTasks.length);
     if (idx.length) setChecked(chTasks.map((_, i) => idx.includes(i)));
   }, []);
 
@@ -107,7 +121,10 @@ export function AgentTasksChecklist({ lang }: { lang: ChLang }) {
     }
   }, [checked]);
 
-  const reclaim = useMemo(() => chTasks.reduce((s, t, i) => s + (checked[i] ? t.h : 0), 0), [checked]);
+  const reclaim = useMemo(
+    () => chTasks.reduce((s, t, i) => s + (checked[i] ? t.h : 0), 0),
+    [checked],
+  );
   const count = checked.filter(Boolean).length;
   const days = Math.round((reclaim * 12) / 8);
   const grouped = useMemo(
@@ -135,42 +152,61 @@ export function AgentTasksChecklist({ lang }: { lang: ChLang }) {
   return (
     <Shell lang={lang}>
       <main className="mx-auto max-w-3xl px-5 py-10 sm:py-14">
-        <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-[#34d399]">{c.kicker}</p>
-        <h1 className="text-3xl font-bold tracking-tight sm:text-[40px] sm:leading-tight">{c.h1}</h1>
+        <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-[#34d399]">
+          {c.kicker}
+        </p>
+        <h1 className="text-3xl font-bold tracking-tight sm:text-[40px] sm:leading-tight">
+          {c.h1}
+        </h1>
         <p className="mt-4 text-lg leading-relaxed text-foreground/70">{c.intro}</p>
 
         {/* Result counter */}
         <div className="sticky top-3 z-20 mt-8 rounded-3xl border border-[#34d399]/25 bg-card/95 p-5 shadow-elegant backdrop-blur sm:p-6">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
-              <p className="text-[13px] font-semibold uppercase tracking-wide text-foreground/50">{c.reclaimLabel}</p>
+              <p className="text-[13px] font-semibold uppercase tracking-wide text-foreground/50">
+                {c.reclaimLabel}
+              </p>
               <p className="mt-0.5 text-4xl font-extrabold tracking-tight text-[#34d399] sm:text-5xl tabular-nums">
                 {reclaim % 1 === 0 ? reclaim : reclaim.toFixed(1)}
-                <span className="ml-1 text-2xl">h</span>
+                <span className="ms-1 text-2xl">h</span>
               </p>
             </div>
-            <div className="text-right">
+            <div className="text-end">
               <p className="text-[13px] text-foreground/50">{c.daysLabel}</p>
-              <p className="text-lg font-bold tabular-nums">{days} {c.daysUnit}</p>
+              <p className="text-lg font-bold tabular-nums">
+                {days} {c.daysUnit}
+              </p>
             </div>
           </div>
           <div className="mt-4 h-2 overflow-hidden rounded-full bg-foreground/10">
-            <div className="h-full rounded-full bg-[#34d399] transition-all" style={{ width: `${(count / chTasks.length) * 100}%` }} />
+            <div
+              className="h-full rounded-full bg-[#34d399] transition-all"
+              style={{ width: `${(count / chTasks.length) * 100}%` }}
+            />
           </div>
           <div className="mt-3 flex items-center justify-between gap-3">
-            <span className="text-[13px] text-foreground/50">{count} / {chTasks.length}</span>
+            <span className="text-[13px] text-foreground/50">
+              {count} / {chTasks.length}
+            </span>
             <button
               type="button"
               onClick={onShare}
               className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-4 py-1.5 text-[13px] font-semibold transition hover:border-[#34d399]/50"
             >
-              {shared ? <Check className="h-4 w-4 text-[#34d399]" /> : <Share2 className="h-4 w-4" />}
+              {shared ? (
+                <Check className="h-4 w-4 text-[#34d399]" />
+              ) : (
+                <Share2 className="h-4 w-4" />
+              )}
               {shared ? c.copied : c.share}
             </button>
           </div>
         </div>
 
-        <p className="mt-8 text-[13px] font-medium uppercase tracking-wide text-foreground/40">{c.catsIntro}</p>
+        <p className="mt-8 text-[13px] font-medium uppercase tracking-wide text-foreground/40">
+          {c.catsIntro}
+        </p>
 
         {/* Categories */}
         <div className="mt-4 space-y-8">
@@ -185,18 +221,25 @@ export function AgentTasksChecklist({ lang }: { lang: ChLang }) {
                       key={i}
                       type="button"
                       onClick={() => setChecked((prev) => prev.map((v, k) => (k === i ? !v : v)))}
-                      className="flex w-full items-center gap-3 px-4 py-3 text-left transition hover:bg-foreground/[0.03]"
+                      className="flex w-full items-center gap-3 px-4 py-3 text-start transition hover:bg-foreground/[0.03]"
                     >
                       <span
                         className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-md border transition ${
-                          on ? "border-[#34d399] bg-[#34d399] text-[#04120d]" : "border-foreground/25"
+                          on
+                            ? "border-[#34d399] bg-[#34d399] text-[#04120d]"
+                            : "border-foreground/25"
                         }`}
                       >
                         {on ? <Check className="h-3.5 w-3.5" strokeWidth={3} /> : null}
                       </span>
-                      <span className={`flex-1 text-[15px] ${on ? "text-foreground" : "text-foreground/75"}`}>{t.name[lang]}</span>
+                      <span
+                        className={`flex-1 text-[15px] ${on ? "text-foreground" : "text-foreground/75"}`}
+                      >
+                        {t.name[lang]}
+                      </span>
                       <span className="shrink-0 text-[12px] font-medium text-foreground/45 tabular-nums">
-                        {"\u2248"}{t.h % 1 === 0 ? t.h : t.h.toFixed(1)}h
+                        {"\u2248"}
+                        {t.h % 1 === 0 ? t.h : t.h.toFixed(1)}h
                       </span>
                     </button>
                   );
@@ -208,10 +251,16 @@ export function AgentTasksChecklist({ lang }: { lang: ChLang }) {
 
         {/* CTA */}
         <section className="mt-12 rounded-3xl bg-gradient-to-br from-[#0a1120] to-[#0f2e26] p-7 text-center sm:p-9">
-          <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-[#5eead4]">{c.accioLabel}</p>
+          <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-[#5eead4]">
+            {c.accioLabel}
+          </p>
           <p className="mx-auto max-w-2xl text-[16px] leading-relaxed text-white/85">{c.ctaLine}</p>
-          <a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer nofollow"
-            className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#34d399] px-7 py-3.5 font-semibold text-[#04120d] transition hover:brightness-110">
+          <a
+            href={REFERRAL_URL}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#34d399] px-7 py-3.5 font-semibold text-[#04120d] transition hover:brightness-110"
+          >
             {c.cta} <ArrowRight className="h-4 w-4" />
           </a>
           <p className="mt-2 text-xs text-white/50">{c.ctaNote}</p>

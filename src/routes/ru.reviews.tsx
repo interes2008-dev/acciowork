@@ -3,7 +3,7 @@ import { ReviewsPage } from "@/components/reviews/ReviewsPage";
 import { rvChrome, rvPress } from "@/lib/reviews-data";
 
 const LANG = "ru" as const;
-const LANGS = ["en","ru","de","it","es","zh","pt","hi","fr"] as const;
+const LANGS = ["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr", "ar"] as const;
 
 export const Route = createFileRoute("/ru/reviews")({
   head: () => {
@@ -14,12 +14,20 @@ export const Route = createFileRoute("/ru/reviews")({
       hrefLang: l as string,
       href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/reviews`,
     }));
-    alternates.push({ rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/reviews" });
+    alternates.push({
+      rel: "alternate",
+      hrefLang: "x-default",
+      href: "https://acciowork.pro/reviews",
+    });
     return {
       meta: [
         { title: c.metaTitle },
         { name: "description", content: c.metaDesc },
-        { name: "keywords", content: "Accio Work reviews, Accio Work press, Alibaba AI agent reviews, Accio Work coverage" },
+        {
+          name: "keywords",
+          content:
+            "Accio Work reviews, Accio Work press, Alibaba AI agent reviews, Accio Work coverage",
+        },
         { property: "og:locale", content: "ru_RU" },
         { property: "og:title", content: c.metaTitle },
         { property: "og:description", content: c.metaDesc },
@@ -53,7 +61,12 @@ export const Route = createFileRoute("/ru/reviews")({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Accio Work", item: "https://acciowork.pro/ru/" },
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Accio Work",
+                item: "https://acciowork.pro/ru/",
+              },
               { "@type": "ListItem", position: 2, name: c.kicker, item: url },
             ],
           }),

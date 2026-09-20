@@ -4,7 +4,7 @@ import { qzChrome } from "@/lib/quiz-data";
 import { validateQuizSearch, quizOg, quizOgImageUrl } from "@/lib/quiz-og";
 
 const LANG = "fr" as const;
-const LANGS = ["en","ru","de","it","es","zh","pt","hi","fr"] as const;
+const LANGS = ["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr", "ar"] as const;
 
 export const Route = createFileRoute("/fr/quiz")({
   validateSearch: validateQuizSearch,
@@ -17,13 +17,24 @@ export const Route = createFileRoute("/fr/quiz")({
     const ogTitle = og ? og.title : c.metaTitle;
     const ogDesc = og ? og.desc : c.metaDesc;
     const ogImg = loaderData?.ogImage ?? "https://acciowork.pro/og/og-fr.png";
-    const alternates = LANGS.map((l) => ({ rel: "alternate", hrefLang: l as string, href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/quiz` }));
-    alternates.push({ rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/quiz" });
+    const alternates = LANGS.map((l) => ({
+      rel: "alternate",
+      hrefLang: l as string,
+      href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/quiz`,
+    }));
+    alternates.push({
+      rel: "alternate",
+      hrefLang: "x-default",
+      href: "https://acciowork.pro/quiz",
+    });
     return {
       meta: [
         { title: c.metaTitle },
         { name: "description", content: c.metaDesc },
-        { name: "keywords", content: "AI agent fit quiz, is Accio Work right for me, sourcing automation quiz" },
+        {
+          name: "keywords",
+          content: "AI agent fit quiz, is Accio Work right for me, sourcing automation quiz",
+        },
         { property: "og:locale", content: "fr_FR" },
         { property: "og:title", content: ogTitle },
         { property: "og:description", content: ogDesc },
@@ -40,7 +51,22 @@ export const Route = createFileRoute("/fr/quiz")({
       ],
       links: [{ rel: "canonical", href: url }, ...alternates],
       scripts: [
-        { type: "application/ld+json", children: JSON.stringify({ "@context":"https://schema.org","@type":"BreadcrumbList", itemListElement:[{"@type":"ListItem",position:1,name:"Accio Work",item:"https://acciowork.pro/fr/"},{"@type":"ListItem",position:2,name:c.h1,item:url}] }) },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Accio Work",
+                item: "https://acciowork.pro/fr/",
+              },
+              { "@type": "ListItem", position: 2, name: c.h1, item: url },
+            ],
+          }),
+        },
       ],
     };
   },

@@ -17,6 +17,7 @@ Accio Work is an execution-oriented AI agent platform (not a chatbot). A general
 - [Português](https://acciowork.pro/pt)
 - [हिन्दी](https://acciowork.pro/hi)
 - [Français](https://acciowork.pro/fr)
+- [العربية](https://acciowork.pro/ar)
 
 ## Key sections on the landing page
 
@@ -37,6 +38,7 @@ Accio Work is an execution-oriented AI agent platform (not a chatbot). A general
 - [Blog PT](https://acciowork.pro/pt/blog)
 - [Blog HI](https://acciowork.pro/hi/blog)
 - [Blog FR](https://acciowork.pro/fr/blog)
+- [Blog AR](https://acciowork.pro/ar/blog)
 
 ## Events
 
@@ -48,7 +50,7 @@ Accio Work is an execution-oriented AI agent platform (not a chatbot). A general
 - [Accio Work vs ChatGPT](https://acciowork.pro/compare/chatgpt): sourcing, supplier research and product content vs a general chat assistant
 - [Accio Work vs Manus](https://acciowork.pro/compare/manus): e-commerce tuned agent vs a general autonomous agent
 - [Accio Work vs Genspark](https://acciowork.pro/compare/genspark): the sourcing and selling loop vs AI search
-- Localized hubs: /ru/compare, /de/compare, /it/compare, /es/compare, /zh/compare, /pt/compare, /hi/compare, /fr/compare
+- Localized hubs: /ru/compare, /de/compare, /it/compare, /es/compare, /zh/compare, /pt/compare, /hi/compare, /fr/compare, /ar/compare
 
 ## Use cases (what Accio Work does for a specific job, all languages)
 
@@ -59,7 +61,7 @@ Accio Work is an execution-oriented AI agent platform (not a chatbot). A general
 - [Market research](https://acciowork.pro/for/market-research): competitors, demand and pricing in a short brief
 - [Workflow automation](https://acciowork.pro/for/automation): repeatable multi step tasks on a schedule across apps
 - [Custom tools](https://acciowork.pro/for/custom-tools): small internal tools built from a plain description
-- Localized hubs: /ru/for, /de/for, /it/for, /es/for, /zh/for, /pt/for, /hi/for, /fr/for
+- Localized hubs: /ru/for, /de/for, /it/for, /es/for, /zh/for, /pt/for, /hi/for, /fr/for, /ar/for
 
 ## Guides (how to use Accio Work, step by step, all languages)
 
@@ -68,54 +70,54 @@ Accio Work is an execution-oriented AI agent platform (not a chatbot). A general
 - [Run your first task](https://acciowork.pro/guide/first-task): write a goal the agent can finish start to finish
 - [Connect apps and channels](https://acciowork.pro/guide/connect-apps): Telegram, Discord, DingTalk, Feishu, WeChat and app integrations
 - [Scheduled automations](https://acciowork.pro/guide/automations): turn a repeatable task into one that runs itself
-- Localized hubs: /ru/guide, /de/guide, /it/guide, /es/guide, /zh/guide, /pt/guide, /hi/guide, /fr/guide
+- Localized hubs: /ru/guide, /de/guide, /it/guide, /es/guide, /zh/guide, /pt/guide, /hi/guide, /fr/guide, /ar/guide
 
 ## Reviews and press (what reviewers and press say, all languages)
 
 - [Reviews and press EN](https://acciowork.pro/reviews): paraphrased coverage from Forbes, Digital Commerce 360, AI Business and independent reviews, each linked to the source
-- Localized: /ru/reviews, /de/reviews, /it/reviews, /es/reviews, /zh/reviews, /pt/reviews, /hi/reviews, /fr/reviews
+- Localized: /ru/reviews, /de/reviews, /it/reviews, /es/reviews, /zh/reviews, /pt/reviews, /hi/reviews, /fr/reviews, /ar/reviews
 
 ## Interactive calculator (time and money an AI agent could save, all languages)
 
 - [Time savings calculator EN](https://acciowork.pro/roi): estimate hours a week and money an agent like Accio Work could free up
-- Localized: /ru/roi, /de/roi, /it/roi, /es/roi, /zh/roi, /pt/roi, /hi/roi, /fr/roi
+- Localized: /ru/roi, /de/roi, /it/roi, /es/roi, /zh/roi, /pt/roi, /hi/roi, /fr/roi, /ar/roi
 
 ## Fit quiz (honest 2 minute check whether Accio Work suits you, all languages)
 
 - [Is Accio Work right for you EN](https://acciowork.pro/quiz): five questions, honest result including when it is not a fit
-- Localized: /ru/quiz, /de/quiz, /it/quiz, /es/quiz, /zh/quiz, /pt/quiz, /hi/quiz, /fr/quiz
+- Localized: /ru/quiz, /de/quiz, /it/quiz, /es/quiz, /zh/quiz, /pt/quiz, /hi/quiz, /fr/quiz, /ar/quiz
 
 ## Free supplier kit (email templates + vetting checklist, all languages)
 
 - [Supplier email templates and checklist EN](https://acciowork.pro/templates): copy ready inquiry, negotiation and sample request emails, plus a supplier vetting checklist
-- Localized: /ru/templates, /de/templates, /it/templates, /es/templates, /zh/templates, /pt/templates, /hi/templates, /fr/templates
+- Localized: /ru/templates, /de/templates, /it/templates, /es/templates, /zh/templates, /pt/templates, /hi/templates, /fr/templates, /ar/templates
 
 ## Duty and landed cost calculator (after de minimis, 2026, all languages)
 
 - [Duty and landed cost calculator EN](https://acciowork.pro/duty): estimate import duty, VAT and true landed cost per unit after the end of the $800 de minimis exemption
-- Localized: /ru/duty, /de/duty, /it/duty, /es/duty, /zh/duty, /pt/duty, /hi/duty, /fr/duty
+- Localized: /ru/duty, /de/duty, /it/duty, /es/duty, /zh/duty, /pt/duty, /hi/duty, /fr/duty, /ar/duty
 
 ## How to import after de minimis ended (2026 guide, all languages)
 
 - [Import after de minimis EN](https://acciowork.pro/de-minimis): what changed and three moves (bulk import, switch sourcing origin, reprice) to keep cross border selling profitable
-- Localized: /ru/de-minimis, /de/de-minimis, /it/de-minimis, /es/de-minimis, /zh/de-minimis, /pt/de-minimis, /hi/de-minimis, /fr/de-minimis
+- Localized: /ru/de-minimis, /de/de-minimis, /it/de-minimis, /es/de-minimis, /zh/de-minimis, /pt/de-minimis, /hi/de-minimis, /fr/de-minimis, /ar/de-minimis
 
 ## Source products for TikTok Shop with an AI agent (2026, all languages)
 
 - [TikTok Shop sourcing EN](https://acciowork.pro/tiktok-shop): use an AI sourcing agent to find suppliers, prep listings and handle customs fast enough to ride the trend
-- Localized: /ru/tiktok-shop, /de/tiktok-shop, /it/tiktok-shop, /es/tiktok-shop, /zh/tiktok-shop, /pt/tiktok-shop, /hi/tiktok-shop, /fr/tiktok-shop
+- Localized: /ru/tiktok-shop, /de/tiktok-shop, /it/tiktok-shop, /es/tiktok-shop, /zh/tiktok-shop, /pt/tiktok-shop, /hi/tiktok-shop, /fr/tiktok-shop, /ar/tiktok-shop
 
 ## Free AI prompt pack for product and market research (2026, all languages)
 
 - [AI prompts EN](https://acciowork.pro/ai-prompts): copy paste prompts to find products, validate demand, check saturation, price with duties and vet suppliers
-- Localized: /ru/ai-prompts, /de/ai-prompts, /it/ai-prompts, /es/ai-prompts, /zh/ai-prompts, /pt/ai-prompts, /hi/ai-prompts, /fr/ai-prompts
+- Localized: /ru/ai-prompts, /de/ai-prompts, /it/ai-prompts, /es/ai-prompts, /zh/ai-prompts, /pt/ai-prompts, /hi/ai-prompts, /fr/ai-prompts, /ar/ai-prompts
 
 ## Free supplier reliability scorecard (interactive, all languages)
 
 - [Supplier scorecard EN](https://acciowork.pro/supplier-scorecard): rate a supplier across six risk factors and get a reliability score with next steps
-- Localized: /ru/supplier-scorecard, /de/supplier-scorecard, /it/supplier-scorecard, /es/supplier-scorecard, /zh/supplier-scorecard, /pt/supplier-scorecard, /hi/supplier-scorecard, /fr/supplier-scorecard
+- Localized: /ru/supplier-scorecard, /de/supplier-scorecard, /it/supplier-scorecard, /es/supplier-scorecard, /zh/supplier-scorecard, /pt/supplier-scorecard, /hi/supplier-scorecard, /fr/supplier-scorecard, /ar/supplier-scorecard
 
 ## Free 40-task AI agent delegation checklist (interactive, all languages)
 
 - [40 AI agent tasks EN](https://acciowork.pro/ai-agent-tasks): tick the work you would delegate and see the hours an AI agent could reclaim each month
-- Localized: /ru/ai-agent-tasks, /de/ai-agent-tasks, /it/ai-agent-tasks, /es/ai-agent-tasks, /zh/ai-agent-tasks, /pt/ai-agent-tasks, /hi/ai-agent-tasks, /fr/ai-agent-tasks
+- Localized: /ru/ai-agent-tasks, /de/ai-agent-tasks, /it/ai-agent-tasks, /es/ai-agent-tasks, /zh/ai-agent-tasks, /pt/ai-agent-tasks, /hi/ai-agent-tasks, /fr/ai-agent-tasks, /ar/ai-agent-tasks

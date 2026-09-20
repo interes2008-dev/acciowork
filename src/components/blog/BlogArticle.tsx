@@ -3,7 +3,7 @@ import remarkGfm from "remark-gfm";
 import type { ArticleFull } from "@/lib/blog.functions";
 import { BlogShell } from "./BlogShell";
 
-const BACK: Record<"en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr", string> = {
+const BACK: Record<"en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr" | "ar", string> = {
   en: "← All articles",
   ru: "← Все статьи",
   de: "← Alle Artikel",
@@ -13,9 +13,10 @@ const BACK: Record<"en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr",
   pt: "← Todos os artigos",
   hi: "← सभी लेख",
   fr: "← Tous les articles",
+  ar: "← كل المقالات",
 };
 
-const MIN: Record<"en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr", string> = {
+const MIN: Record<"en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr" | "ar", string> = {
   en: "min read",
   ru: "мин чтения",
   de: "Min. Lesezeit",
@@ -25,9 +26,13 @@ const MIN: Record<"en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr", 
   pt: "min de leitura",
   hi: "मिनट पढ़ाई",
   fr: "min de lecture",
+  ar: "دقيقة قراءة",
 };
 
-const CTA: Record<"en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr", { title: string; body: string; button: string; note: string }> = {
+const CTA: Record<
+  "en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr" | "ar",
+  { title: string; body: string; button: string; note: string }
+> = {
   en: {
     title: "Try Accio Work for yourself",
     body: "Everything in this article is one download away. Free trial with bonus credits, macOS and Windows.",
@@ -82,6 +87,12 @@ const CTA: Record<"en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr", 
     button: "Télécharger Accio Work",
     note: "Fonctionne sur Mac Apple Silicon et Intel, ainsi que sur Windows 10 ou plus récent.",
   },
+  ar: {
+    title: "جرّب Accio Work بنفسك",
+    body: "كل ما وصفه هذا المقال على بُعد تنزيل واحد. تجربة مجانية برصيد مبدئي، لنظامَي macOS وWindows.",
+    button: "نزّل Accio Work",
+    note: "يعمل على أجهزة Mac بمعالج Apple Silicon وIntel، وعلى Windows 10 أو أحدث.",
+  },
 };
 
 const KEEP_READING: Record<string, string> = {
@@ -101,21 +112,56 @@ export function BlogArticle({
   article,
   related = [],
 }: {
-  lang: "en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr";
+  lang: "en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr" | "ar";
   article: ArticleFull;
   related?: Array<{ slug: string; title: string; reading_minutes: number }>;
 }) {
   const base =
-    lang === "ru" ? "/ru/blog" : lang === "de" ? "/de/blog" : lang === "it" ? "/it/blog" : lang === "es" ? "/es/blog" : lang === "zh" ? "/zh/blog" : lang === "pt" ? "/pt/blog" : lang === "hi" ? "/hi/blog" : lang === "fr" ? "/fr/blog" : "/blog";
+    lang === "ru"
+      ? "/ru/blog"
+      : lang === "de"
+        ? "/de/blog"
+        : lang === "it"
+          ? "/it/blog"
+          : lang === "es"
+            ? "/es/blog"
+            : lang === "zh"
+              ? "/zh/blog"
+              : lang === "pt"
+                ? "/pt/blog"
+                : lang === "hi"
+                  ? "/hi/blog"
+                  : lang === "fr"
+                    ? "/fr/blog"
+                    : "/blog";
   const cta = CTA[lang];
   const date = new Date(article.published_at).toLocaleDateString(
-    lang === "en" ? "en-US" : lang === "ru" ? "ru-RU" : lang === "it" ? "it-IT" : lang === "es" ? "es-ES" : lang === "zh" ? "zh-CN" : lang === "pt" ? "pt-BR" : lang === "hi" ? "hi-IN" : lang === "fr" ? "fr-FR" : "de-DE",
+    lang === "en"
+      ? "en-US"
+      : lang === "ru"
+        ? "ru-RU"
+        : lang === "it"
+          ? "it-IT"
+          : lang === "es"
+            ? "es-ES"
+            : lang === "zh"
+              ? "zh-CN"
+              : lang === "pt"
+                ? "pt-BR"
+                : lang === "hi"
+                  ? "hi-IN"
+                  : lang === "fr"
+                    ? "fr-FR"
+                    : "de-DE",
     { day: "numeric", month: "long", year: "numeric" },
   );
 
   return (
     <BlogShell>
-      <a href={base} className="mb-10 inline-block text-sm text-foreground/60 hover:text-foreground">
+      <a
+        href={base}
+        className="mb-10 inline-block text-sm text-foreground/60 hover:text-foreground"
+      >
         {BACK[lang]}
       </a>
 
@@ -124,7 +170,9 @@ export function BlogArticle({
           <div className="mb-8 text-[11px] font-medium uppercase tracking-[0.28em] text-emerald-800/80">
             <span>{date}</span>
             <span className="mx-3 text-foreground/25">·</span>
-            <span>{article.reading_minutes} {MIN[lang]}</span>
+            <span>
+              {article.reading_minutes} {MIN[lang]}
+            </span>
           </div>
           <h1 className="font-serif-display text-[2.5rem] font-semibold leading-[1.08] tracking-[-0.025em] text-foreground md:text-[3.5rem]">
             {article.title}
@@ -137,7 +185,12 @@ export function BlogArticle({
 
         {article.cover_url ? (
           <figure className="mt-14 overflow-hidden rounded-2xl border border-border/40 bg-muted/40 shadow-[0_20px_60px_-30px_rgba(0,0,0,0.25)]">
-            <img src={article.cover_url} alt={article.title} loading="lazy" className="h-auto w-full" />
+            <img
+              src={article.cover_url}
+              alt={article.title}
+              loading="lazy"
+              className="h-auto w-full"
+            />
           </figure>
         ) : null}
 
@@ -152,7 +205,9 @@ export function BlogArticle({
         </div>
 
         <aside className="rounded-3xl bg-gradient-to-br from-emerald-50 via-emerald-50/60 to-white p-8 ring-1 ring-emerald-100 md:p-12">
-          <h2 className="font-serif-display text-3xl font-semibold tracking-tight text-emerald-950 md:text-4xl">{cta.title}</h2>
+          <h2 className="font-serif-display text-3xl font-semibold tracking-tight text-emerald-950 md:text-4xl">
+            {cta.title}
+          </h2>
           <p className="mt-4 text-lg text-foreground/75">{cta.body}</p>
           <a
             href="https://www.accio.com/login?sId=KECtp1GttZ42%2FwpJUH5IxQ%3D%3D&ic=IC506004212009&tenant=accio&src=p_referral_IC506004212009&source=invite_center&return_url=https%3A%2F%2Fwww.accio.com%2Fwork%2F"
@@ -177,7 +232,9 @@ export function BlogArticle({
                     href={`${base}/${r.slug}`}
                     className="block h-full rounded-2xl border border-border/50 p-5 transition hover:border-emerald-700/40 hover:bg-emerald-50/40"
                   >
-                    <span className="block text-base font-medium leading-snug text-foreground">{r.title}</span>
+                    <span className="block text-base font-medium leading-snug text-foreground">
+                      {r.title}
+                    </span>
                     <span className="mt-2 block text-xs text-foreground/55">
                       {r.reading_minutes} {MIN[lang]}
                     </span>

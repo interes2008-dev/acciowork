@@ -21,8 +21,7 @@ export const Route = createFileRoute("/zh/")({
       { property: "og:title", content: "Accio Work | 面向选品与业务自动化的 AI 工作台" },
       {
         property: "og:description",
-        content:
-          "Accio Work，AI 工作台：市场分析、供应商对比、内容创作与流程自动化。",
+        content: "Accio Work，AI 工作台：市场分析、供应商对比、内容创作与流程自动化。",
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Accio Work" },
@@ -49,6 +48,7 @@ export const Route = createFileRoute("/zh/")({
       { rel: "alternate", hrefLang: "pt", href: "https://acciowork.pro/pt" },
       { rel: "alternate", hrefLang: "hi", href: "https://acciowork.pro/hi" },
       { rel: "alternate", hrefLang: "fr", href: "https://acciowork.pro/fr" },
+      { rel: "alternate", hrefLang: "ar", href: "https://acciowork.pro/ar" },
       { rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/" },
     ],
     scripts: [
@@ -60,8 +60,7 @@ export const Route = createFileRoute("/zh/")({
           name: "Accio Work",
           url: "https://acciowork.pro/zh",
           inLanguage: "zh-CN",
-          description:
-            "AI 工作台：市场分析、供应商对比、内容创作与流程自动化。",
+          description: "AI 工作台：市场分析、供应商对比、内容创作与流程自动化。",
         }),
       },
       {

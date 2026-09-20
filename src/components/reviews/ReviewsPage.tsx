@@ -17,7 +17,11 @@ function Shell({ lang, children }: { lang: RvLang; children: ReactNode }) {
     <div className="min-h-screen bg-background text-foreground">
       <header className="border-b border-border bg-background/80 backdrop-blur">
         <div className="mx-auto flex max-w-4xl items-center justify-between px-5 py-4">
-          <a href={homeHref(lang)} className="flex items-center gap-1.5 font-bold tracking-tight text-foreground" style={{ fontSize: 22 }}>
+          <a
+            href={homeHref(lang)}
+            className="flex items-center gap-1.5 font-bold tracking-tight text-foreground"
+            style={{ fontSize: 22 }}
+          >
             <svg width={21} height={22} viewBox="0 0 28 28" aria-hidden>
               <defs>
                 <linearGradient id="accioTri" x1="0" y1="1" x2="1" y2="0">
@@ -34,20 +38,22 @@ function Shell({ lang, children }: { lang: RvLang; children: ReactNode }) {
             <ThemeToggle />
             <LangMenu lang={lang} />
             <a
-            href={REFERRAL_URL}
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            className="whitespace-nowrap rounded-full bg-[#34d399] px-3 py-2 text-[13px] font-semibold text-white transition hover:brightness-110 sm:px-4 sm:text-sm"
-          >
-            {c.ctaPrimary}
-          </a>
+              href={REFERRAL_URL}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="whitespace-nowrap rounded-full bg-[#34d399] px-3 py-2 text-[13px] font-semibold text-white transition hover:brightness-110 sm:px-4 sm:text-sm"
+            >
+              {c.ctaPrimary}
+            </a>
           </div>
         </div>
       </header>
       {children}
       <footer className="border-t border-border bg-card">
         <div className="mx-auto max-w-4xl px-5 py-8 text-sm text-foreground/65">
-          <a href={homeHref(lang)} className="hover:underline">{c.backHome}</a>
+          <a href={homeHref(lang)} className="hover:underline">
+            {c.backHome}
+          </a>
         </div>
       </footer>
     </div>
@@ -78,12 +84,16 @@ export function ReviewsPage({ lang }: { lang: RvLang }) {
     <Shell lang={lang}>
       <main className="mx-auto max-w-4xl px-5 py-10 sm:py-14">
         <nav className="mb-6 text-xs text-foreground/58">
-          <a href={homeHref(lang)} className="hover:underline">{c.backHome}</a>
+          <a href={homeHref(lang)} className="hover:underline">
+            {c.backHome}
+          </a>
           <span className="mx-1.5">/</span>
           <span className="text-foreground/72">{c.kicker}</span>
         </nav>
 
-        <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-[#34d399]">{c.kicker}</p>
+        <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-[#34d399]">
+          {c.kicker}
+        </p>
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">{c.h1}</h1>
         <p className="mt-5 max-w-3xl text-lg leading-relaxed text-foreground/75">{c.intro}</p>
 
@@ -103,7 +113,9 @@ export function ReviewsPage({ lang }: { lang: RvLang }) {
               <div key={p.id} className="rounded-2xl border border-border bg-card p-5">
                 <div className="mb-2 flex items-center gap-2">
                   <span className="font-semibold">{p.source}</span>
-                  <span className="rounded-full bg-[#34d399]/10 px-2 py-0.5 text-[11px] font-medium text-[#34d399]">{p.tag}</span>
+                  <span className="rounded-full bg-[#34d399]/10 px-2 py-0.5 text-[11px] font-medium text-[#34d399]">
+                    {p.tag}
+                  </span>
                 </div>
                 <p className="text-[15px] leading-relaxed text-foreground/75">{p.takeaway[lang]}</p>
                 <a
@@ -139,7 +151,10 @@ export function ReviewsPage({ lang }: { lang: RvLang }) {
         <Cta lang={lang} />
 
         <p className="mt-8 text-center text-xs text-foreground/48">
-          <a href={homeHref(lang)} className="inline-flex items-center gap-1 hover:text-foreground/72">
+          <a
+            href={homeHref(lang)}
+            className="inline-flex items-center gap-1 hover:text-foreground/72"
+          >
             <ArrowLeft className="h-3 w-3" /> {c.backHome}
           </a>
         </p>

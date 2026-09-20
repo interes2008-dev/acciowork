@@ -3,7 +3,7 @@ import { UseCaseHub } from "@/components/usecase/UseCasePage";
 import { ucChrome, ucPages, ucOrder } from "@/lib/usecase-data";
 
 const LANG = "es" as const;
-const LANGS = ["en","ru","de","it","es","zh","pt","hi","fr"] as const;
+const LANGS = ["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr", "ar"] as const;
 
 export const Route = createFileRoute("/es/for/")({
   head: () => {

@@ -1,4 +1,5 @@
 import type { Lang } from "@/lib/translations";
+import { fillAr } from "@/lib/fill-ar";
 import { REFERRAL_URL } from "./FreeForeverPage";
 
 type Dict = {
@@ -17,7 +18,7 @@ type Dict = {
   note: string;
 };
 
-const D: Record<Lang, Dict> = {
+const D: Record<Lang, Dict> = fillAr({
   en: {
     badge: "Product update",
     title: "Same plan.",
@@ -29,10 +30,26 @@ const D: Record<Lang, Dict> = {
     headline: "We thought so too.",
     sub: "So we made every credit go further. Generate images. Build sites. Negotiate with suppliers. Tasks that used to burn lots of credits are now much cheaper.",
     bullets: [
-      { icon: "🖼️", title: "Image generation", desc: "Product shots and ad creatives at a fraction of the previous credit cost." },
-      { icon: "🌐", title: "Site building", desc: "Landing pages and stores generated end to end without draining your plan." },
-      { icon: "🤝", title: "Supplier negotiation", desc: "Long agent conversations now cost far fewer credits per task." },
-      { icon: "⚡", title: "Auto model", desc: "Pick the auto model and Accio Work chooses the cheapest engine per task." },
+      {
+        icon: "🖼️",
+        title: "Image generation",
+        desc: "Product shots and ad creatives at a fraction of the previous credit cost.",
+      },
+      {
+        icon: "🌐",
+        title: "Site building",
+        desc: "Landing pages and stores generated end to end without draining your plan.",
+      },
+      {
+        icon: "🤝",
+        title: "Supplier negotiation",
+        desc: "Long agent conversations now cost far fewer credits per task.",
+      },
+      {
+        icon: "⚡",
+        title: "Auto model",
+        desc: "Pick the auto model and Accio Work chooses the cheapest engine per task.",
+      },
     ],
     beforeLabel: "Before",
     afterLabel: "Now",
@@ -52,10 +69,26 @@ const D: Record<Lang, Dict> = {
     headline: "Мы тоже так думали.",
     sub: "Поэтому сделали так, чтобы каждый кредит работал дольше. Генерация изображений, создание сайтов, переговоры с поставщиками, задачи, которые раньше съедали кучу кредитов, стали заметно дешевле.",
     bullets: [
-      { icon: "🖼️", title: "Генерация изображений", desc: "Карточки товаров и креативы стоят в разы меньше кредитов." },
-      { icon: "🌐", title: "Создание сайтов", desc: "Лендинги и магазины собираются целиком, не опустошая тариф." },
-      { icon: "🤝", title: "Переговоры с поставщиками", desc: "Длинные диалоги агента теперь требуют значительно меньше кредитов." },
-      { icon: "⚡", title: "Авто-модель", desc: "Включите авто-модель, Accio Work сам выберет самый экономный движок." },
+      {
+        icon: "🖼️",
+        title: "Генерация изображений",
+        desc: "Карточки товаров и креативы стоят в разы меньше кредитов.",
+      },
+      {
+        icon: "🌐",
+        title: "Создание сайтов",
+        desc: "Лендинги и магазины собираются целиком, не опустошая тариф.",
+      },
+      {
+        icon: "🤝",
+        title: "Переговоры с поставщиками",
+        desc: "Длинные диалоги агента теперь требуют значительно меньше кредитов.",
+      },
+      {
+        icon: "⚡",
+        title: "Авто-модель",
+        desc: "Включите авто-модель, Accio Work сам выберет самый экономный движок.",
+      },
     ],
     beforeLabel: "Было",
     afterLabel: "Стало",
@@ -75,10 +108,26 @@ const D: Record<Lang, Dict> = {
     headline: "Das fanden wir auch.",
     sub: "Deshalb reicht jedes Credit jetzt weiter. Bilder generieren, Websites bauen, mit Lieferanten verhandeln, Aufgaben, die früher viele Credits verbrannt haben, sind deutlich günstiger.",
     bullets: [
-      { icon: "🖼️", title: "Bildgenerierung", desc: "Produktfotos und Ad-Creatives für einen Bruchteil der bisherigen Credits." },
-      { icon: "🌐", title: "Website-Erstellung", desc: "Landingpages und Shops komplett generiert, ohne den Plan zu leeren." },
-      { icon: "🤝", title: "Lieferantenverhandlung", desc: "Lange Agenten-Dialoge kosten pro Aufgabe deutlich weniger Credits." },
-      { icon: "⚡", title: "Auto-Modell", desc: "Auto-Modell wählen und Accio Work nimmt die günstigste Engine je Aufgabe." },
+      {
+        icon: "🖼️",
+        title: "Bildgenerierung",
+        desc: "Produktfotos und Ad-Creatives für einen Bruchteil der bisherigen Credits.",
+      },
+      {
+        icon: "🌐",
+        title: "Website-Erstellung",
+        desc: "Landingpages und Shops komplett generiert, ohne den Plan zu leeren.",
+      },
+      {
+        icon: "🤝",
+        title: "Lieferantenverhandlung",
+        desc: "Lange Agenten-Dialoge kosten pro Aufgabe deutlich weniger Credits.",
+      },
+      {
+        icon: "⚡",
+        title: "Auto-Modell",
+        desc: "Auto-Modell wählen und Accio Work nimmt die günstigste Engine je Aufgabe.",
+      },
     ],
     beforeLabel: "Vorher",
     afterLabel: "Jetzt",
@@ -98,10 +147,26 @@ const D: Record<Lang, Dict> = {
     headline: "La pensavamo uguale.",
     sub: "Per questo ogni credito rende di più. Generare immagini, creare siti, trattare con i fornitori: attività che prima consumavano molti crediti ora costano molto meno.",
     bullets: [
-      { icon: "🖼️", title: "Generazione immagini", desc: "Foto prodotto e creatività pubblicitarie a una frazione dei crediti." },
-      { icon: "🌐", title: "Creazione siti", desc: "Landing page e store generati per intero senza svuotare il piano." },
-      { icon: "🤝", title: "Trattative fornitori", desc: "Le lunghe conversazioni dell'agente costano molti meno crediti." },
-      { icon: "⚡", title: "Modello auto", desc: "Scegli il modello auto: Accio Work usa il motore più economico per ogni task." },
+      {
+        icon: "🖼️",
+        title: "Generazione immagini",
+        desc: "Foto prodotto e creatività pubblicitarie a una frazione dei crediti.",
+      },
+      {
+        icon: "🌐",
+        title: "Creazione siti",
+        desc: "Landing page e store generati per intero senza svuotare il piano.",
+      },
+      {
+        icon: "🤝",
+        title: "Trattative fornitori",
+        desc: "Le lunghe conversazioni dell'agente costano molti meno crediti.",
+      },
+      {
+        icon: "⚡",
+        title: "Modello auto",
+        desc: "Scegli il modello auto: Accio Work usa il motore più economico per ogni task.",
+      },
     ],
     beforeLabel: "Prima",
     afterLabel: "Ora",
@@ -121,10 +186,26 @@ const D: Record<Lang, Dict> = {
     headline: "Nosotros pensábamos igual.",
     sub: "Por eso cada crédito rinde más. Generar imágenes, crear sitios, negociar con proveedores: tareas que antes consumían muchos créditos ahora cuestan mucho menos.",
     bullets: [
-      { icon: "🖼️", title: "Generación de imágenes", desc: "Fotos de producto y creatividades por una fracción de los créditos." },
-      { icon: "🌐", title: "Creación de sitios", desc: "Landings y tiendas generadas completas sin vaciar tu plan." },
-      { icon: "🤝", title: "Negociación con proveedores", desc: "Las conversaciones largas del agente cuestan muchos menos créditos." },
-      { icon: "⚡", title: "Modelo auto", desc: "Elige el modelo auto y Accio Work usa el motor más barato en cada tarea." },
+      {
+        icon: "🖼️",
+        title: "Generación de imágenes",
+        desc: "Fotos de producto y creatividades por una fracción de los créditos.",
+      },
+      {
+        icon: "🌐",
+        title: "Creación de sitios",
+        desc: "Landings y tiendas generadas completas sin vaciar tu plan.",
+      },
+      {
+        icon: "🤝",
+        title: "Negociación con proveedores",
+        desc: "Las conversaciones largas del agente cuestan muchos menos créditos.",
+      },
+      {
+        icon: "⚡",
+        title: "Modelo auto",
+        desc: "Elige el modelo auto y Accio Work usa el motor más barato en cada tarea.",
+      },
     ],
     beforeLabel: "Antes",
     afterLabel: "Ahora",
@@ -144,10 +225,26 @@ const D: Record<Lang, Dict> = {
     headline: "Nós também achávamos isso.",
     sub: "Por isso cada crédito rende mais. Gerar imagens, criar sites, negociar com fornecedores: tarefas que antes queimavam muitos créditos ficaram bem mais baratas.",
     bullets: [
-      { icon: "🖼️", title: "Geração de imagens", desc: "Fotos de produto e criativos por uma fração dos créditos anteriores." },
-      { icon: "🌐", title: "Criação de sites", desc: "Landing pages e lojas geradas por completo sem esvaziar o plano." },
-      { icon: "🤝", title: "Negociação com fornecedores", desc: "Conversas longas do agente custam bem menos créditos por tarefa." },
-      { icon: "⚡", title: "Modelo auto", desc: "Escolha o modelo auto e o Accio Work usa o motor mais barato por tarefa." },
+      {
+        icon: "🖼️",
+        title: "Geração de imagens",
+        desc: "Fotos de produto e criativos por uma fração dos créditos anteriores.",
+      },
+      {
+        icon: "🌐",
+        title: "Criação de sites",
+        desc: "Landing pages e lojas geradas por completo sem esvaziar o plano.",
+      },
+      {
+        icon: "🤝",
+        title: "Negociação com fornecedores",
+        desc: "Conversas longas do agente custam bem menos créditos por tarefa.",
+      },
+      {
+        icon: "⚡",
+        title: "Modelo auto",
+        desc: "Escolha o modelo auto e o Accio Work usa o motor mais barato por tarefa.",
+      },
     ],
     beforeLabel: "Antes",
     afterLabel: "Agora",
@@ -160,17 +257,18 @@ const D: Record<Lang, Dict> = {
     badge: "产品更新",
     title: "同样的套餐。",
     titleAccent: "多完成约 50% 的任务。",
-    lead: [
-      "“积分用完了。”可这个月才刚过一半。",
-      "于是我们把这条提示，往后推到了更远的日子。",
-    ],
+    lead: ["“积分用完了。”可这个月才刚过一半。", "于是我们把这条提示，往后推到了更远的日子。"],
     headline: "我们也这么觉得。",
     sub: "所以我们让每一点积分都更耐用。生成图片、搭建网站、与供应商谈判，过去很费积分的任务，现在便宜得多。",
     bullets: [
       { icon: "🖼️", title: "图片生成", desc: "产品图和广告素材的积分消耗大幅下降。" },
       { icon: "🌐", title: "网站搭建", desc: "落地页和店铺可一次生成，不再掏空套餐。" },
       { icon: "🤝", title: "供应商谈判", desc: "长对话的智能体任务，单次积分消耗明显更低。" },
-      { icon: "⚡", title: "自动模型", desc: "选择自动模型，Accio Work 会为每个任务挑选最省的引擎。" },
+      {
+        icon: "⚡",
+        title: "自动模型",
+        desc: "选择自动模型，Accio Work 会为每个任务挑选最省的引擎。",
+      },
     ],
     beforeLabel: "此前",
     afterLabel: "现在",
@@ -190,10 +288,26 @@ const D: Record<Lang, Dict> = {
     headline: "हमें भी यही लगा।",
     sub: "इसलिए हमने हर क्रेडिट को ज़्यादा दूर तक चलाया। इमेज बनाना, साइट बनाना, सप्लायर से बातचीत, जो काम पहले बहुत क्रेडिट खाते थे, अब काफ़ी सस्ते हैं।",
     bullets: [
-      { icon: "🖼️", title: "इमेज जनरेशन", desc: "प्रोडक्ट फ़ोटो और ऐड क्रिएटिव अब बहुत कम क्रेडिट में।" },
-      { icon: "🌐", title: "साइट बनाना", desc: "लैंडिंग पेज और स्टोर पूरे बनते हैं, प्लान खाली किए बिना।" },
-      { icon: "🤝", title: "सप्लायर बातचीत", desc: "एजेंट की लंबी बातचीत अब प्रति टास्क कम क्रेडिट लेती है।" },
-      { icon: "⚡", title: "ऑटो मॉडल", desc: "ऑटो मॉडल चुनें, Accio Work हर टास्क के लिए सबसे किफ़ायती इंजन चुनेगा।" },
+      {
+        icon: "🖼️",
+        title: "इमेज जनरेशन",
+        desc: "प्रोडक्ट फ़ोटो और ऐड क्रिएटिव अब बहुत कम क्रेडिट में।",
+      },
+      {
+        icon: "🌐",
+        title: "साइट बनाना",
+        desc: "लैंडिंग पेज और स्टोर पूरे बनते हैं, प्लान खाली किए बिना।",
+      },
+      {
+        icon: "🤝",
+        title: "सप्लायर बातचीत",
+        desc: "एजेंट की लंबी बातचीत अब प्रति टास्क कम क्रेडिट लेती है।",
+      },
+      {
+        icon: "⚡",
+        title: "ऑटो मॉडल",
+        desc: "ऑटो मॉडल चुनें, Accio Work हर टास्क के लिए सबसे किफ़ायती इंजन चुनेगा।",
+      },
     ],
     beforeLabel: "पहले",
     afterLabel: "अब",
@@ -213,10 +327,26 @@ const D: Record<Lang, Dict> = {
     headline: "On s'est dit pareil.",
     sub: "Chaque crédit va désormais plus loin. Générer des images, créer des sites, négocier avec les fournisseurs : les tâches qui consommaient beaucoup de crédits coûtent bien moins cher.",
     bullets: [
-      { icon: "🖼️", title: "Génération d'images", desc: "Visuels produits et créas publicitaires pour une fraction des crédits." },
-      { icon: "🌐", title: "Création de sites", desc: "Landing pages et boutiques générées de bout en bout sans vider le forfait." },
-      { icon: "🤝", title: "Négociation fournisseurs", desc: "Les longues conversations de l'agent coûtent bien moins de crédits." },
-      { icon: "⚡", title: "Modèle auto", desc: "Choisissez le modèle auto : Accio Work prend le moteur le moins cher par tâche." },
+      {
+        icon: "🖼️",
+        title: "Génération d'images",
+        desc: "Visuels produits et créas publicitaires pour une fraction des crédits.",
+      },
+      {
+        icon: "🌐",
+        title: "Création de sites",
+        desc: "Landing pages et boutiques générées de bout en bout sans vider le forfait.",
+      },
+      {
+        icon: "🤝",
+        title: "Négociation fournisseurs",
+        desc: "Les longues conversations de l'agent coûtent bien moins de crédits.",
+      },
+      {
+        icon: "⚡",
+        title: "Modèle auto",
+        desc: "Choisissez le modèle auto : Accio Work prend le moteur le moins cher par tâche.",
+      },
     ],
     beforeLabel: "Avant",
     afterLabel: "Maintenant",
@@ -225,7 +355,7 @@ const D: Record<Lang, Dict> = {
     cta: "Mettre à jour et essayer gratuitement",
     note: "Passez à la dernière version, choisissez le modèle auto et jugez par vous-même.",
   },
-};
+});
 
 export function CreditsUpdate({ lang }: { lang: Lang }) {
   const d = D[lang];

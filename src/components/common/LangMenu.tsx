@@ -2,9 +2,9 @@ import { useState, useRef, useEffect } from "react";
 import { useRouterState } from "@tanstack/react-router";
 import { Globe, ChevronDown, Check } from "lucide-react";
 
-const LANGS = ["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr"] as const;
+const LANGS = ["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr", "ar"] as const;
 type L = (typeof LANGS)[number];
-const NONEN = ["ru", "de", "it", "es", "zh", "pt", "hi", "fr"];
+const NONEN = ["ru", "de", "it", "es", "zh", "pt", "hi", "fr", "ar"];
 const NAMES: Record<L, string> = {
   en: "English",
   ru: "Русский",
@@ -15,6 +15,7 @@ const NAMES: Record<L, string> = {
   pt: "Português",
   hi: "हिन्दी",
   fr: "Français",
+  ar: "العربية",
 };
 
 export function LangMenu({ lang }: { lang: L }) {
@@ -51,12 +52,14 @@ export function LangMenu({ lang }: { lang: L }) {
       >
         <Globe className="h-4 w-4" />
         <span className="hidden sm:inline">{NAMES[lang]}</span>
-        <ChevronDown className={`h-4 w-4 opacity-60 transition-transform ${open ? "rotate-180" : ""}`} />
+        <ChevronDown
+          className={`h-4 w-4 opacity-60 transition-transform ${open ? "rotate-180" : ""}`}
+        />
       </button>
       {open && (
         <div
           role="menu"
-          className="absolute right-0 top-full z-50 mt-2 w-44 overflow-hidden rounded-2xl border border-border bg-card p-1.5 shadow-[0_8px_30px_rgba(0,0,0,0.12)]"
+          className="absolute end-0 top-full z-50 mt-2 w-44 overflow-hidden rounded-2xl border border-border bg-card p-1.5 shadow-[0_8px_30px_rgba(0,0,0,0.12)]"
         >
           {LANGS.map((l) => (
             <a
@@ -64,7 +67,9 @@ export function LangMenu({ lang }: { lang: L }) {
               href={hrefFor(l)}
               role="menuitem"
               className={`flex items-center justify-between rounded-xl px-3 py-2 text-[15px] transition ${
-                l === lang ? "bg-muted font-semibold text-foreground" : "text-foreground/75 hover:bg-muted"
+                l === lang
+                  ? "bg-muted font-semibold text-foreground"
+                  : "text-foreground/75 hover:bg-muted"
               }`}
             >
               {NAMES[l]}

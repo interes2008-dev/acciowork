@@ -31,10 +31,16 @@ export const Route = createFileRoute("/pt/")({
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { property: "og:image:type", content: "image/png" },
-      { property: "og:image:alt", content: "Accio Work, workspace com IA para sourcing, análise e automação" },
+      {
+        property: "og:image:alt",
+        content: "Accio Work, workspace com IA para sourcing, análise e automação",
+      },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Accio Work | Plataforma de IA para sourcing" },
-      { name: "twitter:description", content: "Workspace com IA: sourcing, análise de concorrência, conteúdo e automação." },
+      {
+        name: "twitter:description",
+        content: "Workspace com IA: sourcing, análise de concorrência, conteúdo e automação.",
+      },
       { name: "twitter:image", content: "https://acciowork.pro/og/og-pt.png" },
       { name: "twitter:image:alt", content: "Accio Work, plataforma de IA para o negócio" },
     ],
@@ -49,6 +55,7 @@ export const Route = createFileRoute("/pt/")({
       { rel: "alternate", hrefLang: "pt", href: "https://acciowork.pro/pt" },
       { rel: "alternate", hrefLang: "hi", href: "https://acciowork.pro/hi" },
       { rel: "alternate", hrefLang: "fr", href: "https://acciowork.pro/fr" },
+      { rel: "alternate", hrefLang: "ar", href: "https://acciowork.pro/ar" },
       { rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/" },
     ],
     scripts: [

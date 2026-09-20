@@ -3,7 +3,7 @@ import { ComparePage } from "@/components/compare/ComparePage";
 import { comparePages } from "@/lib/compare-data";
 
 const LANG = "zh" as const;
-const LANGS = ["en","ru","de","it","es","zh","pt","hi","fr"] as const;
+const LANGS = ["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr", "ar"] as const;
 
 function alternates(slug: string) {
   const list = LANGS.map((l) => ({
@@ -11,7 +11,11 @@ function alternates(slug: string) {
     hrefLang: l as string,
     href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/compare/${slug}`,
   }));
-  list.push({ rel: "alternate", hrefLang: "x-default", href: `https://acciowork.pro/compare/${slug}` });
+  list.push({
+    rel: "alternate",
+    hrefLang: "x-default",
+    href: `https://acciowork.pro/compare/${slug}`,
+  });
   return list;
 }
 
@@ -30,7 +34,10 @@ export const Route = createFileRoute("/zh/compare/$competitor")({
       meta: [
         { title: p.metaTitle },
         { name: "description", content: p.metaDescription },
-        { name: "keywords", content: `Accio Work, ${p.name}, Accio Work vs ${p.name}, AI sourcing, supplier research, e-commerce AI` },
+        {
+          name: "keywords",
+          content: `Accio Work, ${p.name}, Accio Work vs ${p.name}, AI sourcing, supplier research, e-commerce AI`,
+        },
         { property: "og:locale", content: "zh_CN" },
         { property: "og:title", content: p.metaTitle },
         { property: "og:description", content: p.metaDescription },
@@ -66,8 +73,18 @@ export const Route = createFileRoute("/zh/compare/$competitor")({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Accio Work", item: "https://acciowork.pro/zh/" },
-              { "@type": "ListItem", position: 2, name: "Comparisons", item: "https://acciowork.pro/zh/compare" },
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Accio Work",
+                item: "https://acciowork.pro/zh/",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Comparisons",
+                item: "https://acciowork.pro/zh/compare",
+              },
               { "@type": "ListItem", position: 3, name: p.h1, item: url },
             ],
           }),

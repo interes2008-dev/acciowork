@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AiAgentTasksRouteImport } from './routes/ai-agent-tasks'
 import { Route as AiPromptsRouteImport } from './routes/ai-prompts'
+import { Route as ArRouteImport } from './routes/ar'
 import { Route as DeRouteImport } from './routes/de'
 import { Route as DeMinimisRouteImport } from './routes/de-minimis'
 import { Route as DutyRouteImport } from './routes/duty'
@@ -31,6 +32,17 @@ import { Route as TemplatesRouteImport } from './routes/templates'
 import { Route as TiktokShopRouteImport } from './routes/tiktok-shop'
 import { Route as ZhRouteImport } from './routes/zh'
 import { Route as ApiOgRouteImport } from './routes/api/og'
+import { Route as ArIndexRouteImport } from './routes/ar.index'
+import { Route as ArAiAgentTasksRouteImport } from './routes/ar.ai-agent-tasks'
+import { Route as ArAiPromptsRouteImport } from './routes/ar.ai-prompts'
+import { Route as ArDeMinimisRouteImport } from './routes/ar.de-minimis'
+import { Route as ArDutyRouteImport } from './routes/ar.duty'
+import { Route as ArQuizRouteImport } from './routes/ar.quiz'
+import { Route as ArReviewsRouteImport } from './routes/ar.reviews'
+import { Route as ArRoiRouteImport } from './routes/ar.roi'
+import { Route as ArSupplierScorecardRouteImport } from './routes/ar.supplier-scorecard'
+import { Route as ArTemplatesRouteImport } from './routes/ar.templates'
+import { Route as ArTiktokShopRouteImport } from './routes/ar.tiktok-shop'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as CompareIndexRouteImport } from './routes/compare.index'
@@ -128,6 +140,14 @@ import { Route as ZhRoiRouteImport } from './routes/zh.roi'
 import { Route as ZhSupplierScorecardRouteImport } from './routes/zh.supplier-scorecard'
 import { Route as ZhTemplatesRouteImport } from './routes/zh.templates'
 import { Route as ZhTiktokShopRouteImport } from './routes/zh.tiktok-shop'
+import { Route as ArBlogIndexRouteImport } from './routes/ar.blog.index'
+import { Route as ArBlogSlugRouteImport } from './routes/ar.blog.$slug'
+import { Route as ArCompareIndexRouteImport } from './routes/ar.compare.index'
+import { Route as ArCompareCompetitorRouteImport } from './routes/ar.compare.$competitor'
+import { Route as ArForIndexRouteImport } from './routes/ar.for.index'
+import { Route as ArForUseCaseRouteImport } from './routes/ar.for.$useCase'
+import { Route as ArGuideIndexRouteImport } from './routes/ar.guide.index'
+import { Route as ArGuideGuideRouteImport } from './routes/ar.guide.$guide'
 import { Route as DeBlogIndexRouteImport } from './routes/de.blog.index'
 import { Route as DeBlogSlugRouteImport } from './routes/de.blog.$slug'
 import { Route as DeCompareIndexRouteImport } from './routes/de.compare.index'
@@ -217,6 +237,11 @@ const AiAgentTasksRoute = AiAgentTasksRouteImport.update({
 const AiPromptsRoute = AiPromptsRouteImport.update({
   id: '/ai-prompts',
   path: '/ai-prompts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArRoute = ArRouteImport.update({
+  id: '/ar',
+  path: '/ar',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DeRoute = DeRouteImport.update({
@@ -313,6 +338,61 @@ const ApiOgRoute = ApiOgRouteImport.update({
   id: '/api/og',
   path: '/api/og',
   getParentRoute: () => rootRouteImport,
+} as any)
+const ArIndexRoute = ArIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ArRoute,
+} as any)
+const ArAiAgentTasksRoute = ArAiAgentTasksRouteImport.update({
+  id: '/ai-agent-tasks',
+  path: '/ai-agent-tasks',
+  getParentRoute: () => ArRoute,
+} as any)
+const ArAiPromptsRoute = ArAiPromptsRouteImport.update({
+  id: '/ai-prompts',
+  path: '/ai-prompts',
+  getParentRoute: () => ArRoute,
+} as any)
+const ArDeMinimisRoute = ArDeMinimisRouteImport.update({
+  id: '/de-minimis',
+  path: '/de-minimis',
+  getParentRoute: () => ArRoute,
+} as any)
+const ArDutyRoute = ArDutyRouteImport.update({
+  id: '/duty',
+  path: '/duty',
+  getParentRoute: () => ArRoute,
+} as any)
+const ArQuizRoute = ArQuizRouteImport.update({
+  id: '/quiz',
+  path: '/quiz',
+  getParentRoute: () => ArRoute,
+} as any)
+const ArReviewsRoute = ArReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
+  getParentRoute: () => ArRoute,
+} as any)
+const ArRoiRoute = ArRoiRouteImport.update({
+  id: '/roi',
+  path: '/roi',
+  getParentRoute: () => ArRoute,
+} as any)
+const ArSupplierScorecardRoute = ArSupplierScorecardRouteImport.update({
+  id: '/supplier-scorecard',
+  path: '/supplier-scorecard',
+  getParentRoute: () => ArRoute,
+} as any)
+const ArTemplatesRoute = ArTemplatesRouteImport.update({
+  id: '/templates',
+  path: '/templates',
+  getParentRoute: () => ArRoute,
+} as any)
+const ArTiktokShopRoute = ArTiktokShopRouteImport.update({
+  id: '/tiktok-shop',
+  path: '/tiktok-shop',
+  getParentRoute: () => ArRoute,
 } as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
   id: '/blog/',
@@ -799,6 +879,46 @@ const ZhTiktokShopRoute = ZhTiktokShopRouteImport.update({
   path: '/tiktok-shop',
   getParentRoute: () => ZhRoute,
 } as any)
+const ArBlogIndexRoute = ArBlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => ArRoute,
+} as any)
+const ArBlogSlugRoute = ArBlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => ArRoute,
+} as any)
+const ArCompareIndexRoute = ArCompareIndexRouteImport.update({
+  id: '/compare/',
+  path: '/compare/',
+  getParentRoute: () => ArRoute,
+} as any)
+const ArCompareCompetitorRoute = ArCompareCompetitorRouteImport.update({
+  id: '/compare/$competitor',
+  path: '/compare/$competitor',
+  getParentRoute: () => ArRoute,
+} as any)
+const ArForIndexRoute = ArForIndexRouteImport.update({
+  id: '/for/',
+  path: '/for/',
+  getParentRoute: () => ArRoute,
+} as any)
+const ArForUseCaseRoute = ArForUseCaseRouteImport.update({
+  id: '/for/$useCase',
+  path: '/for/$useCase',
+  getParentRoute: () => ArRoute,
+} as any)
+const ArGuideIndexRoute = ArGuideIndexRouteImport.update({
+  id: '/guide/',
+  path: '/guide/',
+  getParentRoute: () => ArRoute,
+} as any)
+const ArGuideGuideRoute = ArGuideGuideRouteImport.update({
+  id: '/guide/$guide',
+  path: '/guide/$guide',
+  getParentRoute: () => ArRoute,
+} as any)
 const DeBlogIndexRoute = DeBlogIndexRouteImport.update({
   id: '/blog/',
   path: '/blog/',
@@ -1180,6 +1300,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/ai-agent-tasks': typeof AiAgentTasksRoute
   '/ai-prompts': typeof AiPromptsRoute
+  '/ar': typeof ArRouteWithChildren
   '/de': typeof DeRouteWithChildren
   '/de-minimis': typeof DeMinimisRoute
   '/duty': typeof DutyRoute
@@ -1199,6 +1320,16 @@ export interface FileRoutesByFullPath {
   '/tiktok-shop': typeof TiktokShopRoute
   '/zh': typeof ZhRouteWithChildren
   '/api/og': typeof ApiOgRoute
+  '/ar/ai-agent-tasks': typeof ArAiAgentTasksRoute
+  '/ar/ai-prompts': typeof ArAiPromptsRoute
+  '/ar/de-minimis': typeof ArDeMinimisRoute
+  '/ar/duty': typeof ArDutyRoute
+  '/ar/quiz': typeof ArQuizRoute
+  '/ar/reviews': typeof ArReviewsRoute
+  '/ar/roi': typeof ArRoiRoute
+  '/ar/supplier-scorecard': typeof ArSupplierScorecardRoute
+  '/ar/templates': typeof ArTemplatesRoute
+  '/ar/tiktok-shop': typeof ArTiktokShopRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$competitor': typeof CompareCompetitorRoute
   '/de/ai-agent-tasks': typeof DeAiAgentTasksRoute
@@ -1284,6 +1415,7 @@ export interface FileRoutesByFullPath {
   '/zh/supplier-scorecard': typeof ZhSupplierScorecardRoute
   '/zh/templates': typeof ZhTemplatesRoute
   '/zh/tiktok-shop': typeof ZhTiktokShopRoute
+  '/ar/': typeof ArIndexRoute
   '/blog/': typeof BlogIndexRoute
   '/compare/': typeof CompareIndexRoute
   '/de/': typeof DeIndexRoute
@@ -1296,6 +1428,10 @@ export interface FileRoutesByFullPath {
   '/pt/': typeof PtIndexRoute
   '/ru/': typeof RuIndexRoute
   '/zh/': typeof ZhIndexRoute
+  '/ar/blog/$slug': typeof ArBlogSlugRoute
+  '/ar/compare/$competitor': typeof ArCompareCompetitorRoute
+  '/ar/for/$useCase': typeof ArForUseCaseRoute
+  '/ar/guide/$guide': typeof ArGuideGuideRoute
   '/de/blog/$slug': typeof DeBlogSlugRoute
   '/de/compare/$competitor': typeof DeCompareCompetitorRoute
   '/de/events/free-forever': typeof DeEventsFreeForeverRoute
@@ -1336,6 +1472,10 @@ export interface FileRoutesByFullPath {
   '/zh/events/free-forever': typeof ZhEventsFreeForeverRoute
   '/zh/for/$useCase': typeof ZhForUseCaseRoute
   '/zh/guide/$guide': typeof ZhGuideGuideRoute
+  '/ar/blog/': typeof ArBlogIndexRoute
+  '/ar/compare/': typeof ArCompareIndexRoute
+  '/ar/for/': typeof ArForIndexRoute
+  '/ar/guide/': typeof ArGuideIndexRoute
   '/de/blog/': typeof DeBlogIndexRoute
   '/de/compare/': typeof DeCompareIndexRoute
   '/de/for/': typeof DeForIndexRoute
@@ -1387,6 +1527,16 @@ export interface FileRoutesByTo {
   '/templates': typeof TemplatesRoute
   '/tiktok-shop': typeof TiktokShopRoute
   '/api/og': typeof ApiOgRoute
+  '/ar/ai-agent-tasks': typeof ArAiAgentTasksRoute
+  '/ar/ai-prompts': typeof ArAiPromptsRoute
+  '/ar/de-minimis': typeof ArDeMinimisRoute
+  '/ar/duty': typeof ArDutyRoute
+  '/ar/quiz': typeof ArQuizRoute
+  '/ar/reviews': typeof ArReviewsRoute
+  '/ar/roi': typeof ArRoiRoute
+  '/ar/supplier-scorecard': typeof ArSupplierScorecardRoute
+  '/ar/templates': typeof ArTemplatesRoute
+  '/ar/tiktok-shop': typeof ArTiktokShopRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$competitor': typeof CompareCompetitorRoute
   '/de/ai-agent-tasks': typeof DeAiAgentTasksRoute
@@ -1472,6 +1622,7 @@ export interface FileRoutesByTo {
   '/zh/supplier-scorecard': typeof ZhSupplierScorecardRoute
   '/zh/templates': typeof ZhTemplatesRoute
   '/zh/tiktok-shop': typeof ZhTiktokShopRoute
+  '/ar': typeof ArIndexRoute
   '/blog': typeof BlogIndexRoute
   '/compare': typeof CompareIndexRoute
   '/de': typeof DeIndexRoute
@@ -1484,6 +1635,10 @@ export interface FileRoutesByTo {
   '/pt': typeof PtIndexRoute
   '/ru': typeof RuIndexRoute
   '/zh': typeof ZhIndexRoute
+  '/ar/blog/$slug': typeof ArBlogSlugRoute
+  '/ar/compare/$competitor': typeof ArCompareCompetitorRoute
+  '/ar/for/$useCase': typeof ArForUseCaseRoute
+  '/ar/guide/$guide': typeof ArGuideGuideRoute
   '/de/blog/$slug': typeof DeBlogSlugRoute
   '/de/compare/$competitor': typeof DeCompareCompetitorRoute
   '/de/events/free-forever': typeof DeEventsFreeForeverRoute
@@ -1524,6 +1679,10 @@ export interface FileRoutesByTo {
   '/zh/events/free-forever': typeof ZhEventsFreeForeverRoute
   '/zh/for/$useCase': typeof ZhForUseCaseRoute
   '/zh/guide/$guide': typeof ZhGuideGuideRoute
+  '/ar/blog': typeof ArBlogIndexRoute
+  '/ar/compare': typeof ArCompareIndexRoute
+  '/ar/for': typeof ArForIndexRoute
+  '/ar/guide': typeof ArGuideIndexRoute
   '/de/blog': typeof DeBlogIndexRoute
   '/de/compare': typeof DeCompareIndexRoute
   '/de/for': typeof DeForIndexRoute
@@ -1565,6 +1724,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/ai-agent-tasks': typeof AiAgentTasksRoute
   '/ai-prompts': typeof AiPromptsRoute
+  '/ar': typeof ArRouteWithChildren
   '/de': typeof DeRouteWithChildren
   '/de-minimis': typeof DeMinimisRoute
   '/duty': typeof DutyRoute
@@ -1584,6 +1744,16 @@ export interface FileRoutesById {
   '/tiktok-shop': typeof TiktokShopRoute
   '/zh': typeof ZhRouteWithChildren
   '/api/og': typeof ApiOgRoute
+  '/ar/ai-agent-tasks': typeof ArAiAgentTasksRoute
+  '/ar/ai-prompts': typeof ArAiPromptsRoute
+  '/ar/de-minimis': typeof ArDeMinimisRoute
+  '/ar/duty': typeof ArDutyRoute
+  '/ar/quiz': typeof ArQuizRoute
+  '/ar/reviews': typeof ArReviewsRoute
+  '/ar/roi': typeof ArRoiRoute
+  '/ar/supplier-scorecard': typeof ArSupplierScorecardRoute
+  '/ar/templates': typeof ArTemplatesRoute
+  '/ar/tiktok-shop': typeof ArTiktokShopRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/compare/$competitor': typeof CompareCompetitorRoute
   '/de/ai-agent-tasks': typeof DeAiAgentTasksRoute
@@ -1669,6 +1839,7 @@ export interface FileRoutesById {
   '/zh/supplier-scorecard': typeof ZhSupplierScorecardRoute
   '/zh/templates': typeof ZhTemplatesRoute
   '/zh/tiktok-shop': typeof ZhTiktokShopRoute
+  '/ar/': typeof ArIndexRoute
   '/blog/': typeof BlogIndexRoute
   '/compare/': typeof CompareIndexRoute
   '/de/': typeof DeIndexRoute
@@ -1681,6 +1852,10 @@ export interface FileRoutesById {
   '/pt/': typeof PtIndexRoute
   '/ru/': typeof RuIndexRoute
   '/zh/': typeof ZhIndexRoute
+  '/ar/blog/$slug': typeof ArBlogSlugRoute
+  '/ar/compare/$competitor': typeof ArCompareCompetitorRoute
+  '/ar/for/$useCase': typeof ArForUseCaseRoute
+  '/ar/guide/$guide': typeof ArGuideGuideRoute
   '/de/blog/$slug': typeof DeBlogSlugRoute
   '/de/compare/$competitor': typeof DeCompareCompetitorRoute
   '/de/events/free-forever': typeof DeEventsFreeForeverRoute
@@ -1721,6 +1896,10 @@ export interface FileRoutesById {
   '/zh/events/free-forever': typeof ZhEventsFreeForeverRoute
   '/zh/for/$useCase': typeof ZhForUseCaseRoute
   '/zh/guide/$guide': typeof ZhGuideGuideRoute
+  '/ar/blog/': typeof ArBlogIndexRoute
+  '/ar/compare/': typeof ArCompareIndexRoute
+  '/ar/for/': typeof ArForIndexRoute
+  '/ar/guide/': typeof ArGuideIndexRoute
   '/de/blog/': typeof DeBlogIndexRoute
   '/de/compare/': typeof DeCompareIndexRoute
   '/de/for/': typeof DeForIndexRoute
@@ -1763,6 +1942,7 @@ export interface FileRouteTypes {
     | '/'
     | '/ai-agent-tasks'
     | '/ai-prompts'
+    | '/ar'
     | '/de'
     | '/de-minimis'
     | '/duty'
@@ -1782,6 +1962,16 @@ export interface FileRouteTypes {
     | '/tiktok-shop'
     | '/zh'
     | '/api/og'
+    | '/ar/ai-agent-tasks'
+    | '/ar/ai-prompts'
+    | '/ar/de-minimis'
+    | '/ar/duty'
+    | '/ar/quiz'
+    | '/ar/reviews'
+    | '/ar/roi'
+    | '/ar/supplier-scorecard'
+    | '/ar/templates'
+    | '/ar/tiktok-shop'
     | '/blog/$slug'
     | '/compare/$competitor'
     | '/de/ai-agent-tasks'
@@ -1867,6 +2057,7 @@ export interface FileRouteTypes {
     | '/zh/supplier-scorecard'
     | '/zh/templates'
     | '/zh/tiktok-shop'
+    | '/ar/'
     | '/blog/'
     | '/compare/'
     | '/de/'
@@ -1879,6 +2070,10 @@ export interface FileRouteTypes {
     | '/pt/'
     | '/ru/'
     | '/zh/'
+    | '/ar/blog/$slug'
+    | '/ar/compare/$competitor'
+    | '/ar/for/$useCase'
+    | '/ar/guide/$guide'
     | '/de/blog/$slug'
     | '/de/compare/$competitor'
     | '/de/events/free-forever'
@@ -1919,6 +2114,10 @@ export interface FileRouteTypes {
     | '/zh/events/free-forever'
     | '/zh/for/$useCase'
     | '/zh/guide/$guide'
+    | '/ar/blog/'
+    | '/ar/compare/'
+    | '/ar/for/'
+    | '/ar/guide/'
     | '/de/blog/'
     | '/de/compare/'
     | '/de/for/'
@@ -1970,6 +2169,16 @@ export interface FileRouteTypes {
     | '/templates'
     | '/tiktok-shop'
     | '/api/og'
+    | '/ar/ai-agent-tasks'
+    | '/ar/ai-prompts'
+    | '/ar/de-minimis'
+    | '/ar/duty'
+    | '/ar/quiz'
+    | '/ar/reviews'
+    | '/ar/roi'
+    | '/ar/supplier-scorecard'
+    | '/ar/templates'
+    | '/ar/tiktok-shop'
     | '/blog/$slug'
     | '/compare/$competitor'
     | '/de/ai-agent-tasks'
@@ -2055,6 +2264,7 @@ export interface FileRouteTypes {
     | '/zh/supplier-scorecard'
     | '/zh/templates'
     | '/zh/tiktok-shop'
+    | '/ar'
     | '/blog'
     | '/compare'
     | '/de'
@@ -2067,6 +2277,10 @@ export interface FileRouteTypes {
     | '/pt'
     | '/ru'
     | '/zh'
+    | '/ar/blog/$slug'
+    | '/ar/compare/$competitor'
+    | '/ar/for/$useCase'
+    | '/ar/guide/$guide'
     | '/de/blog/$slug'
     | '/de/compare/$competitor'
     | '/de/events/free-forever'
@@ -2107,6 +2321,10 @@ export interface FileRouteTypes {
     | '/zh/events/free-forever'
     | '/zh/for/$useCase'
     | '/zh/guide/$guide'
+    | '/ar/blog'
+    | '/ar/compare'
+    | '/ar/for'
+    | '/ar/guide'
     | '/de/blog'
     | '/de/compare'
     | '/de/for'
@@ -2147,6 +2365,7 @@ export interface FileRouteTypes {
     | '/'
     | '/ai-agent-tasks'
     | '/ai-prompts'
+    | '/ar'
     | '/de'
     | '/de-minimis'
     | '/duty'
@@ -2166,6 +2385,16 @@ export interface FileRouteTypes {
     | '/tiktok-shop'
     | '/zh'
     | '/api/og'
+    | '/ar/ai-agent-tasks'
+    | '/ar/ai-prompts'
+    | '/ar/de-minimis'
+    | '/ar/duty'
+    | '/ar/quiz'
+    | '/ar/reviews'
+    | '/ar/roi'
+    | '/ar/supplier-scorecard'
+    | '/ar/templates'
+    | '/ar/tiktok-shop'
     | '/blog/$slug'
     | '/compare/$competitor'
     | '/de/ai-agent-tasks'
@@ -2251,6 +2480,7 @@ export interface FileRouteTypes {
     | '/zh/supplier-scorecard'
     | '/zh/templates'
     | '/zh/tiktok-shop'
+    | '/ar/'
     | '/blog/'
     | '/compare/'
     | '/de/'
@@ -2263,6 +2493,10 @@ export interface FileRouteTypes {
     | '/pt/'
     | '/ru/'
     | '/zh/'
+    | '/ar/blog/$slug'
+    | '/ar/compare/$competitor'
+    | '/ar/for/$useCase'
+    | '/ar/guide/$guide'
     | '/de/blog/$slug'
     | '/de/compare/$competitor'
     | '/de/events/free-forever'
@@ -2303,6 +2537,10 @@ export interface FileRouteTypes {
     | '/zh/events/free-forever'
     | '/zh/for/$useCase'
     | '/zh/guide/$guide'
+    | '/ar/blog/'
+    | '/ar/compare/'
+    | '/ar/for/'
+    | '/ar/guide/'
     | '/de/blog/'
     | '/de/compare/'
     | '/de/for/'
@@ -2344,6 +2582,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AiAgentTasksRoute: typeof AiAgentTasksRoute
   AiPromptsRoute: typeof AiPromptsRoute
+  ArRoute: typeof ArRouteWithChildren
   DeRoute: typeof DeRouteWithChildren
   DeMinimisRoute: typeof DeMinimisRoute
   DutyRoute: typeof DutyRoute
@@ -2398,6 +2637,13 @@ declare module '@tanstack/react-router' {
       path: '/ai-prompts'
       fullPath: '/ai-prompts'
       preLoaderRoute: typeof AiPromptsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ar': {
+      id: '/ar'
+      path: '/ar'
+      fullPath: '/ar'
+      preLoaderRoute: typeof ArRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/de': {
@@ -2532,6 +2778,83 @@ declare module '@tanstack/react-router' {
       fullPath: '/api/og'
       preLoaderRoute: typeof ApiOgRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/ar/': {
+      id: '/ar/'
+      path: '/'
+      fullPath: '/ar/'
+      preLoaderRoute: typeof ArIndexRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/ai-agent-tasks': {
+      id: '/ar/ai-agent-tasks'
+      path: '/ai-agent-tasks'
+      fullPath: '/ar/ai-agent-tasks'
+      preLoaderRoute: typeof ArAiAgentTasksRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/ai-prompts': {
+      id: '/ar/ai-prompts'
+      path: '/ai-prompts'
+      fullPath: '/ar/ai-prompts'
+      preLoaderRoute: typeof ArAiPromptsRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/de-minimis': {
+      id: '/ar/de-minimis'
+      path: '/de-minimis'
+      fullPath: '/ar/de-minimis'
+      preLoaderRoute: typeof ArDeMinimisRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/duty': {
+      id: '/ar/duty'
+      path: '/duty'
+      fullPath: '/ar/duty'
+      preLoaderRoute: typeof ArDutyRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/quiz': {
+      id: '/ar/quiz'
+      path: '/quiz'
+      fullPath: '/ar/quiz'
+      preLoaderRoute: typeof ArQuizRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/reviews': {
+      id: '/ar/reviews'
+      path: '/reviews'
+      fullPath: '/ar/reviews'
+      preLoaderRoute: typeof ArReviewsRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/roi': {
+      id: '/ar/roi'
+      path: '/roi'
+      fullPath: '/ar/roi'
+      preLoaderRoute: typeof ArRoiRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/supplier-scorecard': {
+      id: '/ar/supplier-scorecard'
+      path: '/supplier-scorecard'
+      fullPath: '/ar/supplier-scorecard'
+      preLoaderRoute: typeof ArSupplierScorecardRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/templates': {
+      id: '/ar/templates'
+      path: '/templates'
+      fullPath: '/ar/templates'
+      preLoaderRoute: typeof ArTemplatesRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/tiktok-shop': {
+      id: '/ar/tiktok-shop'
+      path: '/tiktok-shop'
+      fullPath: '/ar/tiktok-shop'
+      preLoaderRoute: typeof ArTiktokShopRouteImport
+      parentRoute: typeof ArRoute
     }
     '/blog/': {
       id: '/blog/'
@@ -3212,6 +3535,62 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ZhTiktokShopRouteImport
       parentRoute: typeof ZhRoute
     }
+    '/ar/blog/': {
+      id: '/ar/blog/'
+      path: '/blog'
+      fullPath: '/ar/blog/'
+      preLoaderRoute: typeof ArBlogIndexRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/blog/$slug': {
+      id: '/ar/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/ar/blog/$slug'
+      preLoaderRoute: typeof ArBlogSlugRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/compare/': {
+      id: '/ar/compare/'
+      path: '/compare'
+      fullPath: '/ar/compare/'
+      preLoaderRoute: typeof ArCompareIndexRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/compare/$competitor': {
+      id: '/ar/compare/$competitor'
+      path: '/compare/$competitor'
+      fullPath: '/ar/compare/$competitor'
+      preLoaderRoute: typeof ArCompareCompetitorRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/for/': {
+      id: '/ar/for/'
+      path: '/for'
+      fullPath: '/ar/for/'
+      preLoaderRoute: typeof ArForIndexRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/for/$useCase': {
+      id: '/ar/for/$useCase'
+      path: '/for/$useCase'
+      fullPath: '/ar/for/$useCase'
+      preLoaderRoute: typeof ArForUseCaseRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/guide/': {
+      id: '/ar/guide/'
+      path: '/guide'
+      fullPath: '/ar/guide/'
+      preLoaderRoute: typeof ArGuideIndexRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/guide/$guide': {
+      id: '/ar/guide/$guide'
+      path: '/guide/$guide'
+      fullPath: '/ar/guide/$guide'
+      preLoaderRoute: typeof ArGuideGuideRouteImport
+      parentRoute: typeof ArRoute
+    }
     '/de/blog/': {
       id: '/de/blog/'
       path: '/blog'
@@ -3740,6 +4119,52 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface ArRouteChildren {
+  ArAiAgentTasksRoute: typeof ArAiAgentTasksRoute
+  ArAiPromptsRoute: typeof ArAiPromptsRoute
+  ArDeMinimisRoute: typeof ArDeMinimisRoute
+  ArDutyRoute: typeof ArDutyRoute
+  ArQuizRoute: typeof ArQuizRoute
+  ArReviewsRoute: typeof ArReviewsRoute
+  ArRoiRoute: typeof ArRoiRoute
+  ArSupplierScorecardRoute: typeof ArSupplierScorecardRoute
+  ArTemplatesRoute: typeof ArTemplatesRoute
+  ArTiktokShopRoute: typeof ArTiktokShopRoute
+  ArIndexRoute: typeof ArIndexRoute
+  ArBlogSlugRoute: typeof ArBlogSlugRoute
+  ArCompareCompetitorRoute: typeof ArCompareCompetitorRoute
+  ArForUseCaseRoute: typeof ArForUseCaseRoute
+  ArGuideGuideRoute: typeof ArGuideGuideRoute
+  ArBlogIndexRoute: typeof ArBlogIndexRoute
+  ArCompareIndexRoute: typeof ArCompareIndexRoute
+  ArForIndexRoute: typeof ArForIndexRoute
+  ArGuideIndexRoute: typeof ArGuideIndexRoute
+}
+
+const ArRouteChildren: ArRouteChildren = {
+  ArAiAgentTasksRoute: ArAiAgentTasksRoute,
+  ArAiPromptsRoute: ArAiPromptsRoute,
+  ArDeMinimisRoute: ArDeMinimisRoute,
+  ArDutyRoute: ArDutyRoute,
+  ArQuizRoute: ArQuizRoute,
+  ArReviewsRoute: ArReviewsRoute,
+  ArRoiRoute: ArRoiRoute,
+  ArSupplierScorecardRoute: ArSupplierScorecardRoute,
+  ArTemplatesRoute: ArTemplatesRoute,
+  ArTiktokShopRoute: ArTiktokShopRoute,
+  ArIndexRoute: ArIndexRoute,
+  ArBlogSlugRoute: ArBlogSlugRoute,
+  ArCompareCompetitorRoute: ArCompareCompetitorRoute,
+  ArForUseCaseRoute: ArForUseCaseRoute,
+  ArGuideGuideRoute: ArGuideGuideRoute,
+  ArBlogIndexRoute: ArBlogIndexRoute,
+  ArCompareIndexRoute: ArCompareIndexRoute,
+  ArForIndexRoute: ArForIndexRoute,
+  ArGuideIndexRoute: ArGuideIndexRoute,
+}
+
+const ArRouteWithChildren = ArRoute._addFileChildren(ArRouteChildren)
+
 interface DeRouteChildren {
   DeAiAgentTasksRoute: typeof DeAiAgentTasksRoute
   DeAiPromptsRoute: typeof DeAiPromptsRoute
@@ -4128,6 +4553,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AiAgentTasksRoute: AiAgentTasksRoute,
   AiPromptsRoute: AiPromptsRoute,
+  ArRoute: ArRouteWithChildren,
   DeRoute: DeRouteWithChildren,
   DeMinimisRoute: DeMinimisRoute,
   DutyRoute: DutyRoute,

@@ -33,7 +33,14 @@ export async function fetchAlerts(lang: string): Promise<AlertItem[] | null> {
     const now = Date.now();
     const live = rows.filter((r) => !r.expires_at || new Date(r.expires_at).getTime() > now);
     if (live.length === 0) return null;
-    return live.map((r) => ({ tag: r.tag, title: r.title, body: r.body, cta: r.cta, href: r.href, img: r.img }));
+    return live.map((r) => ({
+      tag: r.tag,
+      title: r.title,
+      body: r.body,
+      cta: r.cta,
+      href: r.href,
+      img: r.img,
+    }));
   } catch {
     return null;
   }

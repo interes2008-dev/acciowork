@@ -30,14 +30,7 @@ import globalProductsImageZh from "@/assets/accio-story/accio-global-products-zh
 import marketInsightsImageZh from "@/assets/accio-story/accio-market-insights-zh.png.asset.json";
 import verifiedSuppliersImageZh from "@/assets/accio-story/accio-verified-suppliers-zh.png.asset.json";
 import voiceSearchImageZh from "@/assets/accio-story/accio-voice-search-zh.png.asset.json";
-import {
-  ChevronDown,
-  Check,
-  Globe,
-  Menu,
-  Sparkles,
-  X,
-} from "lucide-react";
+import { ChevronDown, Check, Globe, Menu, Sparkles, X } from "lucide-react";
 import { ThemeToggle } from "@/components/common/ThemeToggle";
 import { I18nProvider, useI18n, renderHighlighted } from "@/lib/i18n";
 import { rvPress, rvChrome } from "@/lib/reviews-data";
@@ -47,7 +40,15 @@ import type { Lang, TabKey, Testimonial as TestimonialT } from "@/lib/translatio
 const REFERRAL_URL =
   "https://www.accio.com/login?sId=KECtp1GttZ42%2FwpJUH5IxQ%3D%3D&ic=IC506004212009&tenant=accio&src=p_referral_IC506004212009&source=invite_center&return_url=https%3A%2F%2Fwww.accio.com%2Fwork%2F";
 
-const TAB_KEYS: TabKey[] = ["launch", "monitor", "source", "promote", "tools", "organize", "analyze"];
+const TAB_KEYS: TabKey[] = [
+  "launch",
+  "monitor",
+  "source",
+  "promote",
+  "tools",
+  "organize",
+  "analyze",
+];
 
 const TAB_VIDEOS: Record<TabKey, string> = {
   launch: "/accio-store.mp4",
@@ -110,7 +111,7 @@ function LanguageSwitcher() {
     return () => document.removeEventListener("mousedown", onDoc);
   }, [open]);
 
-  const options: Lang[] = ["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr"];
+  const options: Lang[] = ["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr", "ar"];
 
   return (
     <div ref={rootRef} className="relative">
@@ -124,12 +125,14 @@ function LanguageSwitcher() {
       >
         <Globe className="h-4 w-4" />
         <span className="hidden md:inline">{t.langNames[lang]}</span>
-        <ChevronDown className={`h-4 w-4 opacity-60 transition-transform ${open ? "rotate-180" : ""}`} />
+        <ChevronDown
+          className={`h-4 w-4 opacity-60 transition-transform ${open ? "rotate-180" : ""}`}
+        />
       </button>
       {open && (
         <ul
           role="listbox"
-          className="absolute right-0 top-full z-50 mt-2 w-40 overflow-hidden rounded-2xl border border-border/70 bg-popover p-1.5 shadow-elegant"
+          className="absolute end-0 top-full z-50 mt-2 w-40 overflow-hidden rounded-2xl border border-border/70 bg-popover p-1.5 shadow-elegant"
         >
           {options.map((code) => (
             <li key={code}>
@@ -141,14 +144,32 @@ function LanguageSwitcher() {
                   setOpen(false);
                   if (typeof window !== "undefined") {
                     const target =
-                      code === "ru" ? "/ru" : code === "de" ? "/de" : code === "it" ? "/it" : code === "es" ? "/es" : code === "zh" ? "/zh" : code === "pt" ? "/pt" : code === "hi" ? "/hi" : code === "fr" ? "/fr" : "/";
+                      code === "ru"
+                        ? "/ru"
+                        : code === "de"
+                          ? "/de"
+                          : code === "it"
+                            ? "/it"
+                            : code === "es"
+                              ? "/es"
+                              : code === "zh"
+                                ? "/zh"
+                                : code === "pt"
+                                  ? "/pt"
+                                  : code === "hi"
+                                    ? "/hi"
+                                    : code === "fr"
+                                      ? "/fr"
+                                      : "/";
                     if (window.location.pathname !== target) {
                       window.history.pushState({}, "", target);
                     }
                   }
                 }}
-                className={`flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-[14px] font-medium transition ${
-                  lang === code ? "bg-mint-50 text-foreground" : "text-foreground/80 hover:bg-mint-50"
+                className={`flex w-full items-center justify-between rounded-xl px-3 py-2 text-start text-[14px] font-medium transition ${
+                  lang === code
+                    ? "bg-mint-50 text-foreground"
+                    : "text-foreground/80 hover:bg-mint-50"
                 }`}
               >
                 <span>{t.langNames[code]}</span>
@@ -163,7 +184,13 @@ function LanguageSwitcher() {
 }
 
 /* ---------- Nav dropdown ---------- */
-function NavDropdown({ label, items }: { label: string; items: { href: string; label: string }[] }) {
+function NavDropdown({
+  label,
+  items,
+}: {
+  label: string;
+  items: { href: string; label: string }[];
+}) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -204,10 +231,12 @@ function NavDropdown({ label, items }: { label: string; items: { href: string; l
         className="flex items-center gap-1 hover:text-foreground"
       >
         {label}
-        <ChevronDown className={`h-4 w-4 opacity-60 transition-transform ${open ? "rotate-180" : ""}`} />
+        <ChevronDown
+          className={`h-4 w-4 opacity-60 transition-transform ${open ? "rotate-180" : ""}`}
+        />
       </button>
       {open && (
-        <div role="menu" className="absolute left-1/2 top-full z-50 w-52 -translate-x-1/2 pt-2">
+        <div role="menu" className="absolute start-1/2 top-full z-50 w-52 -translate-x-1/2 pt-2">
           <div className="overflow-hidden rounded-2xl border border-border/70 bg-popover p-1.5 shadow-elegant">
             {items.map((it) => (
               <a
@@ -246,7 +275,9 @@ function Navbar() {
                   ? "/hi/blog"
                   : lang === "fr"
                     ? "/fr/blog"
-                    : "/blog",
+                    : lang === "ar"
+                      ? "/ar/blog"
+                      : "/blog",
   );
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -259,6 +290,7 @@ function Navbar() {
     else if (p.startsWith("/pt")) setBlogHref("/pt/blog");
     else if (p.startsWith("/hi")) setBlogHref("/hi/blog");
     else if (p.startsWith("/fr")) setBlogHref("/fr/blog");
+    else if (p.startsWith("/ar")) setBlogHref("/ar/blog");
     else setBlogHref("/blog");
   }, [lang]);
   const compareHref = blogHref.replace("/blog", "/compare");
@@ -297,10 +329,16 @@ function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-[1280px] items-center justify-between px-6">
         <div className="flex items-center gap-10">
-          <a href="#top" className="flex items-center"><Logo size={26} /></a>
+          <a href="#top" className="flex items-center">
+            <Logo size={26} />
+          </a>
           <nav className="hidden items-center gap-7 text-[15px] font-medium text-foreground/80 md:flex">
-            <a href={compareHref} className="hover:text-foreground">{t.nav.compare}</a>
-            <a href="#pricing" className="hover:text-foreground">{t.nav.pricing}</a>
+            <a href={compareHref} className="hover:text-foreground">
+              {t.nav.compare}
+            </a>
+            <a href="#pricing" className="hover:text-foreground">
+              {t.nav.pricing}
+            </a>
             <NavDropdown
               label={t.nav.tools}
               items={[
@@ -324,7 +362,9 @@ function Navbar() {
                 { href: "#faq", label: t.nav.help },
               ]}
             />
-            <a href={eventsHref} className="flex items-center gap-1 hover:text-foreground">{t.nav.events} <span>🔥</span></a>
+            <a href={eventsHref} className="flex items-center gap-1 hover:text-foreground">
+              {t.nav.events} <span>🔥</span>
+            </a>
           </nav>
         </div>
         <div className="flex items-center gap-5">
@@ -452,7 +492,9 @@ function Hero() {
         </p>
 
         <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
-          {t.hero.pills.map((p) => <TrustPill key={p}>{p}</TrustPill>)}
+          {t.hero.pills.map((p) => (
+            <TrustPill key={p}>{p}</TrustPill>
+          ))}
         </div>
 
         <p className="mx-auto mt-8 max-w-3xl text-[16px] leading-relaxed text-muted-foreground sm:text-[17px]">
@@ -516,7 +558,10 @@ function BusinessNeeds() {
           {t.business.heading}
         </h2>
 
-        <div className="mt-10 flex flex-nowrap justify-center gap-3 overflow-x-auto" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
+        <div
+          className="mt-10 flex flex-nowrap justify-center gap-3 overflow-x-auto"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
           {TAB_KEYS.map((k) => (
             <button
               key={k}
@@ -540,20 +585,32 @@ function BusinessNeeds() {
           }`}
         >
           <div className="flex flex-col justify-center">
-            <h3 className="text-[28px] font-bold tracking-tight text-foreground sm:text-[36px]" style={{ lineHeight: "45px" }}>
+            <h3
+              className="text-[28px] font-bold tracking-tight text-foreground sm:text-[36px]"
+              style={{ lineHeight: "45px" }}
+            >
               {content.title}
             </h3>
-            <p className="mt-6 max-w-md text-[18px] text-muted-foreground" style={{ lineHeight: "29px" }}>
+            <p
+              className="mt-6 max-w-md text-[18px] text-muted-foreground"
+              style={{ lineHeight: "29px" }}
+            >
               {content.body}
             </p>
             <div className="mt-8 grid max-w-md grid-cols-[1fr_auto_1fr] items-center gap-x-4 rounded-2xl bg-[#34d399]/10 px-6 py-5">
               <div className="flex flex-col gap-1">
-                <span className="text-[12px] font-bold uppercase tracking-wider text-[#34d399]">You</span>
-                <span className="text-[17px] font-semibold text-foreground">{content.extraYou}</span>
+                <span className="text-[12px] font-bold uppercase tracking-wider text-[#34d399]">
+                  You
+                </span>
+                <span className="text-[17px] font-semibold text-foreground">
+                  {content.extraYou}
+                </span>
               </div>
               <span className="text-[#34d399]">→</span>
               <div className="flex flex-col gap-1">
-                <span className="text-[12px] font-bold uppercase tracking-wider text-[#34d399]">AI</span>
+                <span className="text-[12px] font-bold uppercase tracking-wider text-[#34d399]">
+                  AI
+                </span>
                 <span className="text-[17px] font-semibold text-foreground">{content.extraAI}</span>
               </div>
             </div>
@@ -629,20 +686,28 @@ function ConnectorsRow() {
 
 function PlatformMockup() {
   return (
-    <div className="pointer-events-none relative mt-6 h-[220px] md:absolute md:right-6 md:top-8 md:h-[240px] md:w-[520px]">
-      <div className="absolute left-2 top-2 w-[220px] rotate-[-4deg] rounded-2xl bg-white/[0.03] p-4 shadow-elegant">
+    <div className="pointer-events-none relative mt-6 h-[220px] md:absolute md:end-6 md:top-8 md:h-[240px] md:w-[520px]">
+      <div className="absolute start-2 top-2 w-[220px] rotate-[-4deg] rounded-2xl bg-white/[0.03] p-4 shadow-elegant">
         <div className="flex items-center gap-2 text-[12px] font-semibold text-foreground/80">
-          <span className="grid h-5 w-5 place-items-center rounded bg-[#3B82F6]/20 text-[10px] text-[#3B82F6]">📊</span>
+          <span className="grid h-5 w-5 place-items-center rounded bg-[#3B82F6]/20 text-[10px] text-[#3B82F6]">
+            📊
+          </span>
           Sourcing
         </div>
         <div className="mt-3 text-[26px] font-extrabold text-foreground">
-          32<span className="ml-1 text-[12px] font-medium text-muted-foreground">suppliers</span>
+          32<span className="ms-1 text-[12px] font-medium text-muted-foreground">suppliers</span>
         </div>
-        <svg viewBox="0 0 180 40" className="mt-2 h-10 w-full text-[#3B82F6]" fill="none" stroke="currentColor" strokeWidth="2">
+        <svg
+          viewBox="0 0 180 40"
+          className="mt-2 h-10 w-full text-[#3B82F6]"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+        >
           <path d="M0 30 L30 22 L60 26 L90 14 L120 18 L150 8 L180 12" />
         </svg>
       </div>
-      <div className="absolute left-[180px] top-0 w-[240px] rounded-2xl bg-white/[0.03] p-4 shadow-elegant">
+      <div className="absolute start-[180px] top-0 w-[240px] rounded-2xl bg-white/[0.03] p-4 shadow-elegant">
         <div className="flex items-center justify-between text-[12px] font-semibold text-foreground/80">
           <span className="flex items-center gap-2">
             <span className="h-2 w-2 rounded-full bg-[#8B5CF6]" />
@@ -655,16 +720,22 @@ function PlatformMockup() {
           <div className="grid h-14 place-items-center rounded-lg bg-white/[0.04]">
             <div className="h-6 w-6 rounded-full bg-gradient-to-br from-[#8B5CF6] to-[#EC4899]" />
           </div>
-          <div className="grid h-14 place-items-center rounded-lg bg-white/[0.04] text-foreground/40">→</div>
+          <div className="grid h-14 place-items-center rounded-lg bg-white/[0.04] text-foreground/40">
+            →
+          </div>
         </div>
       </div>
-      <div className="absolute right-0 top-10 w-[240px] rotate-[3deg] rounded-2xl bg-white/[0.03] p-4 shadow-elegant">
+      <div className="absolute end-0 top-10 w-[240px] rotate-[3deg] rounded-2xl bg-white/[0.03] p-4 shadow-elegant">
         <div className="flex items-center gap-2 text-[12px] font-semibold text-foreground/80">
           <span className="font-mono text-[#34d399]">&lt; / &gt;</span>
           HTML
-          <span className="ml-auto rounded bg-[#34d399]/15 px-1.5 py-0.5 text-[9px] font-bold text-[#34d399]">live preview</span>
+          <span className="ms-auto rounded bg-[#34d399]/15 px-1.5 py-0.5 text-[9px] font-bold text-[#34d399]">
+            live preview
+          </span>
         </div>
-        <div className="mt-2 rounded-lg border border-border/60 bg-white/[0.03] px-2 py-1 text-[10px] text-muted-foreground">store.accio.com</div>
+        <div className="mt-2 rounded-lg border border-border/60 bg-white/[0.03] px-2 py-1 text-[10px] text-muted-foreground">
+          store.accio.com
+        </div>
         <div className="mt-2 h-16 rounded-lg bg-gradient-to-br from-[#E8F7EE] to-[#DDF0FF]" />
       </div>
     </div>
@@ -682,21 +753,36 @@ function WhyChoose() {
 
         <div className="mt-12 grid grid-cols-[minmax(0,1fr)] gap-6 md:grid-cols-3 md:grid-rows-2">
           <div className="min-w-0 overflow-hidden rounded-[28px] bg-gradient-to-br from-white/[0.06] to-white/[0.02] p-6 sm:p-8 md:row-span-2 md:p-10">
-            <h3 className="text-[22px] font-bold leading-tight text-foreground sm:text-[24px]">{t.why.aiTitle}</h3>
+            <h3 className="text-[22px] font-bold leading-tight text-foreground sm:text-[24px]">
+              {t.why.aiTitle}
+            </h3>
             <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">{t.why.aiBody}</p>
             <AgentsMockup />
           </div>
 
           <div className="min-w-0 overflow-hidden rounded-[28px] bg-[#0a1120] p-6 text-white sm:p-8 md:p-10">
-            <h3 className="text-[22px] font-bold leading-tight sm:text-[24px]">{t.why.connectTitle}</h3>
+            <h3 className="text-[22px] font-bold leading-tight sm:text-[24px]">
+              {t.why.connectTitle}
+            </h3>
             <p className="mt-4 text-[15px] leading-relaxed text-white/90">{t.why.connectBody}</p>
             <ConnectorsRow />
           </div>
 
           <div className="relative min-w-0 overflow-hidden rounded-[28px] bg-gradient-to-br from-[#C6EFDA] to-[#A2E3C0] p-6 sm:p-8 md:p-10">
-            <h3 className="text-[22px] font-bold leading-tight text-[#0F4E33] sm:text-[24px]">{t.why.dataTitle}</h3>
+            <h3 className="text-[22px] font-bold leading-tight text-[#0F4E33] sm:text-[24px]">
+              {t.why.dataTitle}
+            </h3>
             <p className="mt-4 text-[15px] leading-relaxed text-[#0F4E33]">{t.why.dataBody}</p>
-            <svg viewBox="0 0 48 48" className="absolute bottom-6 right-6 h-12 w-12 text-[#0F7B4A]" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <svg
+              viewBox="0 0 48 48"
+              className="absolute bottom-6 end-6 h-12 w-12 text-[#0F7B4A]"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
               <path d="M24 4 L42 12 V24 C42 34 34 42 24 44 C14 42 6 34 6 24 V12 Z" />
               <path d="M16 24 L22 30 L34 18" />
             </svg>
@@ -704,8 +790,12 @@ function WhyChoose() {
 
           <div className="relative min-w-0 overflow-hidden rounded-[28px] bg-gradient-to-br from-[#DCE7FA] to-[#C3D5F5] p-6 sm:p-8 md:col-span-2 md:p-10">
             <div className="max-w-md">
-              <h3 className="text-[22px] font-bold leading-tight text-[#0F2954] sm:text-[24px]">{t.why.platformTitle}</h3>
-              <p className="mt-4 text-[15px] leading-relaxed text-[#0F2954]">{t.why.platformBody}</p>
+              <h3 className="text-[22px] font-bold leading-tight text-[#0F2954] sm:text-[24px]">
+                {t.why.platformTitle}
+              </h3>
+              <p className="mt-4 text-[15px] leading-relaxed text-[#0F2954]">
+                {t.why.platformBody}
+              </p>
             </div>
             <PlatformMockup />
           </div>
@@ -729,7 +819,11 @@ function HowItWorks() {
         </p>
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {t.steps.items.map((s, i) => (
-            <div key={s.title} onMouseMove={trackSpotlight} className="card-spotlight rounded-[24px] border border-border/60 bg-white/[0.03] p-7 shadow-card hover:-translate-y-1 hover:shadow-elegant">
+            <div
+              key={s.title}
+              onMouseMove={trackSpotlight}
+              className="card-spotlight rounded-[24px] border border-border/60 bg-white/[0.03] p-7 shadow-card hover:-translate-y-1 hover:shadow-elegant"
+            >
               <div className="grid h-11 w-11 place-items-center rounded-2xl bg-[#34d399]/15 text-[18px] font-extrabold text-[#34d399]">
                 {i + 1}
               </div>
@@ -760,39 +854,468 @@ type AgentStoryCopy = {
 };
 
 const AGENT_STORY_COPY: Record<Lang, AgentStoryCopy> = {
+  ar: {
+    eyebrow: "Accio: وكيل Alibaba الذكي",
+    title: "من الفكرة إلى مورّد موثوق بطلب واحد",
+    intro:
+      "يجمع Accio التصميم وتحليل الاتجاهات والبحث العالمي عن المنتجات والتواصل مع المورّدين في مسار عمل واحد متكامل.",
+    workflow: "تصميم ← اتجاهات ← منتجات ← مورّدون ← تواصل",
+    chapters: [
+      {
+        title: "أنشئ وفوّض بشكل طبيعي",
+        body: "ارفع صورة أو صِف فكرتك صوتاً أو نصّاً، فيحوّلها الوكيل إلى تصميم ومسار عمل قابل للتنفيذ.",
+        points: ["أفكار منتجات وتصاميم أولية", "بحث صوتي وبصري", "عدّة مهام في طلب واحد"],
+      },
+      {
+        title: "تحقّق من الطلب قبل أن تستثمر",
+        body: "يقرأ الذكاء الاصطناعي بيانات السوق، ويبرز الفئات الواعدة، ويختصر أسابيع من البحث اليدوي إلى ثوانٍ.",
+        points: ["اتجاهات وطلب لحظي", "توصيات بالمنتجات", "تدقيق متقاطع بالذكاء الاصطناعي"],
+      },
+      {
+        title: "اعثر على المنتجات وتواصل مباشرة",
+        body: "ابحث في Alibaba.com و1688 وTaobao وAliExpress، قارن العروض، وتواصل مع مصنّعين موثوقين.",
+        points: ["بحث عالمي عن المنتجات", "مورّدون موثوقون", "ردود وتواصل مؤتمت"],
+      },
+    ],
+    statsTitle: "منظومة B2B عالمية في وكيل واحد",
+    stats: [
+      { value: "1.5M+", label: "مورّد موثوق" },
+      { value: "7,600+", label: "فئة منتجات" },
+      { value: "400M+", label: "منتج قابل للبحث" },
+    ],
+    proof: "يثق أكثر من 3 ملايين مستخدم أعمال بـ Accio لاكتشاف المنتجات والمورّدين.",
+    ctaTitle: "حمّل Accio اليوم",
+    ctaBody: "حوّل أفكارك إلى فرص أعمال حقيقية، أسرع ودون تبديل الأدوات.",
+    ctaLabel: "حمّل Accio",
+    alts: [
+      "Accio ينشئ تصميم منتج من صورة مرفوعة",
+      "وكيل Accio الذكي يبحث عن مورّدين ويجهّز استفساراً",
+      "بحث صوتي عن المنتجات في Accio",
+      "Accio يحلّل بيانات السوق ويوصي بالمنتجات",
+      "كتالوج منتجات عالمي من Alibaba و1688 وAliExpress في Accio",
+      "Accio يعثر على مصنّعين موثوقين",
+      "Accio يعالج ردود المورّدين تلقائياً",
+    ],
+  },
   ru: {
     eyebrow: "Accio: ИИ-агент Alibaba",
     title: "От идеи до проверенного поставщика — одним запросом",
-    intro: "Accio объединяет дизайн, анализ трендов, глобальный поиск товаров и связь с поставщиками в одном сквозном рабочем процессе.",
+    intro:
+      "Accio объединяет дизайн, анализ трендов, глобальный поиск товаров и связь с поставщиками в одном сквозном рабочем процессе.",
     workflow: "Дизайн → Тренды → Товары → Поставщики → Связь",
     chapters: [
-      { title: "Создавайте и ставьте задачи естественно", body: "Загрузите изображение, опишите идею голосом или текстом — агент превратит запрос в дизайн и последовательность действий.", points: ["Идеи и первоначальные дизайны", "Голосовой и визуальный поиск", "Несколько задач в одном запросе"] },
-      { title: "Проверяйте спрос до инвестиций", body: "ИИ анализирует данные рынка, выделяет перспективные категории и сокращает недели ручного исследования до нескольких секунд.", points: ["Тренды и спрос в реальном времени", "Рекомендации товаров", "Перекрёстная проверка данных"] },
-      { title: "Находите товары и связывайтесь напрямую", body: "Ищите на Alibaba.com, 1688, Taobao и AliExpress, сравнивайте предложения и отправляйте запросы проверенным производителям.", points: ["Глобальный поиск товаров", "Проверенные поставщики", "Автоответы и мгновенная связь"] },
+      {
+        title: "Создавайте и ставьте задачи естественно",
+        body: "Загрузите изображение, опишите идею голосом или текстом — агент превратит запрос в дизайн и последовательность действий.",
+        points: [
+          "Идеи и первоначальные дизайны",
+          "Голосовой и визуальный поиск",
+          "Несколько задач в одном запросе",
+        ],
+      },
+      {
+        title: "Проверяйте спрос до инвестиций",
+        body: "ИИ анализирует данные рынка, выделяет перспективные категории и сокращает недели ручного исследования до нескольких секунд.",
+        points: [
+          "Тренды и спрос в реальном времени",
+          "Рекомендации товаров",
+          "Перекрёстная проверка данных",
+        ],
+      },
+      {
+        title: "Находите товары и связывайтесь напрямую",
+        body: "Ищите на Alibaba.com, 1688, Taobao и AliExpress, сравнивайте предложения и отправляйте запросы проверенным производителям.",
+        points: [
+          "Глобальный поиск товаров",
+          "Проверенные поставщики",
+          "Автоответы и мгновенная связь",
+        ],
+      },
     ],
     statsTitle: "Глобальная B2B-экосистема в одном агенте",
-    stats: [{ value: "1,5M+", label: "проверенных поставщиков" }, { value: "7 600+", label: "категорий товаров" }, { value: "400M+", label: "товаров для поиска" }],
+    stats: [
+      { value: "1,5M+", label: "проверенных поставщиков" },
+      { value: "7 600+", label: "категорий товаров" },
+      { value: "400M+", label: "товаров для поиска" },
+    ],
     proof: "Более 3 миллионов бизнес-пользователей доверяют Accio поиск товаров и поставщиков.",
     ctaTitle: "Скачайте Accio сегодня",
-    ctaBody: "Превращайте идеи в реальные бизнес-возможности — быстрее и без переключения между инструментами.",
+    ctaBody:
+      "Превращайте идеи в реальные бизнес-возможности — быстрее и без переключения между инструментами.",
     ctaLabel: "Скачать Accio",
-    alts: ["Accio создаёт дизайн товара по загруженному изображению", "AI-агент Accio выполняет поиск поставщиков и готовит запрос", "Голосовой поиск товаров в Accio", "Accio анализирует рыночные данные и рекомендует товары", "Глобальный каталог товаров Alibaba, 1688 и AliExpress в Accio", "Accio находит проверенных производителей", "Accio автоматически обрабатывает ответы поставщиков"],
+    alts: [
+      "Accio создаёт дизайн товара по загруженному изображению",
+      "AI-агент Accio выполняет поиск поставщиков и готовит запрос",
+      "Голосовой поиск товаров в Accio",
+      "Accio анализирует рыночные данные и рекомендует товары",
+      "Глобальный каталог товаров Alibaba, 1688 и AliExpress в Accio",
+      "Accio находит проверенных производителей",
+      "Accio автоматически обрабатывает ответы поставщиков",
+    ],
   },
   en: {
-    eyebrow: "Accio: Alibaba's AI agent", title: "From idea to verified supplier in one prompt", intro: "Accio brings design, trend analysis, global product search and supplier communication into one end-to-end workflow.", workflow: "Design → Trends → Products → Suppliers → Contact",
+    eyebrow: "Accio: Alibaba's AI agent",
+    title: "From idea to verified supplier in one prompt",
+    intro:
+      "Accio brings design, trend analysis, global product search and supplier communication into one end-to-end workflow.",
+    workflow: "Design → Trends → Products → Suppliers → Contact",
     chapters: [
-      { title: "Create and delegate naturally", body: "Upload an image or describe an idea by voice or text. The agent turns it into a design and an actionable workflow.", points: ["Product ideas and first designs", "Voice and visual search", "Multiple tasks in one prompt"] },
-      { title: "Validate demand before investing", body: "AI reads market data, highlights promising categories and reduces weeks of manual research to seconds.", points: ["Real-time trends and demand", "Product recommendations", "AI cross-checking"] },
-      { title: "Find products and connect directly", body: "Search Alibaba.com, 1688, Taobao and AliExpress, compare offers and contact verified manufacturers.", points: ["Global product search", "Verified suppliers", "Automated replies and contact"] },
-    ], statsTitle: "A global B2B ecosystem in one agent", stats: [{ value: "1.5M+", label: "verified suppliers" }, { value: "7,600+", label: "product categories" }, { value: "400M+", label: "searchable products" }], proof: "More than 3 million business users trust Accio for product and supplier discovery.", ctaTitle: "Download Accio today", ctaBody: "Turn ideas into real business opportunities, faster and without switching tools.", ctaLabel: "Download Accio", alts: ["Accio creates a product design from an uploaded image", "Accio AI agent searches suppliers and prepares an inquiry", "Voice product search in Accio", "Accio analyses market data and recommends products", "Global Alibaba, 1688 and AliExpress product catalogue in Accio", "Accio finds verified manufacturers", "Accio automatically processes supplier replies"],
+      {
+        title: "Create and delegate naturally",
+        body: "Upload an image or describe an idea by voice or text. The agent turns it into a design and an actionable workflow.",
+        points: [
+          "Product ideas and first designs",
+          "Voice and visual search",
+          "Multiple tasks in one prompt",
+        ],
+      },
+      {
+        title: "Validate demand before investing",
+        body: "AI reads market data, highlights promising categories and reduces weeks of manual research to seconds.",
+        points: ["Real-time trends and demand", "Product recommendations", "AI cross-checking"],
+      },
+      {
+        title: "Find products and connect directly",
+        body: "Search Alibaba.com, 1688, Taobao and AliExpress, compare offers and contact verified manufacturers.",
+        points: ["Global product search", "Verified suppliers", "Automated replies and contact"],
+      },
+    ],
+    statsTitle: "A global B2B ecosystem in one agent",
+    stats: [
+      { value: "1.5M+", label: "verified suppliers" },
+      { value: "7,600+", label: "product categories" },
+      { value: "400M+", label: "searchable products" },
+    ],
+    proof: "More than 3 million business users trust Accio for product and supplier discovery.",
+    ctaTitle: "Download Accio today",
+    ctaBody: "Turn ideas into real business opportunities, faster and without switching tools.",
+    ctaLabel: "Download Accio",
+    alts: [
+      "Accio creates a product design from an uploaded image",
+      "Accio AI agent searches suppliers and prepares an inquiry",
+      "Voice product search in Accio",
+      "Accio analyses market data and recommends products",
+      "Global Alibaba, 1688 and AliExpress product catalogue in Accio",
+      "Accio finds verified manufacturers",
+      "Accio automatically processes supplier replies",
+    ],
   },
-  de: { eyebrow: "Accio: Alibabas KI-Agent", title: "Von der Idee zum geprüften Lieferanten mit einer Anfrage", intro: "Accio vereint Design, Trendanalyse, globale Produktsuche und Lieferantenkontakt in einem durchgängigen Ablauf.", workflow: "Design → Trends → Produkte → Lieferanten → Kontakt", chapters: [{ title: "Natürlich erstellen und delegieren", body: "Bild hochladen oder Idee per Sprache oder Text beschreiben. Der Agent erstellt Design und Aufgabenablauf.", points: ["Produktideen und Entwürfe", "Sprach- und Bildsuche", "Mehrere Aufgaben pro Anfrage"] }, { title: "Nachfrage vor der Investition prüfen", body: "KI analysiert Marktdaten, erkennt Chancen und verkürzt wochenlange Recherche auf Sekunden.", points: ["Trends und Nachfrage", "Produktempfehlungen", "KI-Datenprüfung"] }, { title: "Produkte finden und direkt kontaktieren", body: "Auf Alibaba.com, 1688, Taobao und AliExpress suchen, Angebote vergleichen und Hersteller kontaktieren.", points: ["Globale Produktsuche", "Geprüfte Lieferanten", "Automatisierte Antworten"] }], statsTitle: "Ein globales B2B-Ökosystem in einem Agenten", stats: [{ value: "1,5M+", label: "geprüfte Lieferanten" }, { value: "7.600+", label: "Produktkategorien" }, { value: "400M+", label: "durchsuchbare Produkte" }], proof: "Mehr als 3 Millionen Geschäftskunden vertrauen Accio.", ctaTitle: "Accio heute herunterladen", ctaBody: "Ideen schneller und ohne Toolwechsel in echte Geschäftschancen verwandeln.", ctaLabel: "Accio herunterladen", alts: ["Accio erstellt ein Produktdesign aus einem Bild", "Accio Agent sucht Lieferanten und bereitet Anfragen vor", "Sprachsuche in Accio", "Accio analysiert Marktdaten", "Globaler Produktkatalog in Accio", "Accio findet geprüfte Hersteller", "Accio verarbeitet Lieferantenantworten automatisch"] },
-  it: { eyebrow: "Accio: l'agente AI di Alibaba", title: "Dall'idea al fornitore verificato con un solo prompt", intro: "Accio riunisce design, analisi delle tendenze, ricerca globale e contatto con i fornitori in un unico flusso.", workflow: "Design → Tendenze → Prodotti → Fornitori → Contatto", chapters: [{ title: "Crea e delega naturalmente", body: "Carica un'immagine o descrivi un'idea con voce o testo: l'agente crea design e attività.", points: ["Idee e primi design", "Ricerca vocale e visiva", "Più attività in un prompt"] }, { title: "Valida la domanda prima di investire", body: "L'AI analizza il mercato, individua opportunità e riduce settimane di ricerca a pochi secondi.", points: ["Tendenze e domanda", "Prodotti consigliati", "Verifica incrociata AI"] }, { title: "Trova prodotti e contatta direttamente", body: "Cerca su Alibaba.com, 1688, Taobao e AliExpress, confronta e contatta produttori verificati.", points: ["Ricerca globale", "Fornitori verificati", "Risposte automatiche"] }], statsTitle: "Un ecosistema B2B globale in un agente", stats: [{ value: "1,5M+", label: "fornitori verificati" }, { value: "7.600+", label: "categorie" }, { value: "400M+", label: "prodotti" }], proof: "Oltre 3 milioni di utenti business si affidano ad Accio.", ctaTitle: "Scarica Accio oggi", ctaBody: "Trasforma le idee in opportunità reali, più velocemente e senza cambiare strumenti.", ctaLabel: "Scarica Accio", alts: ["Accio crea un design da un'immagine", "L'agente Accio cerca fornitori", "Ricerca vocale in Accio", "Analisi di mercato Accio", "Catalogo globale in Accio", "Fornitori verificati in Accio", "Risposte automatiche ai fornitori"] },
-  es: { eyebrow: "Accio: el agente de IA de Alibaba", title: "De la idea al proveedor verificado con una consulta", intro: "Accio une diseño, tendencias, búsqueda global y contacto con proveedores en un solo flujo de trabajo.", workflow: "Diseño → Tendencias → Productos → Proveedores → Contacto", chapters: [{ title: "Crea y delega de forma natural", body: "Sube una imagen o describe una idea por voz o texto. El agente crea el diseño y las tareas.", points: ["Ideas y primeros diseños", "Búsqueda por voz e imagen", "Varias tareas en una consulta"] }, { title: "Valida la demanda antes de invertir", body: "La IA analiza el mercado, detecta oportunidades y reduce semanas de investigación a segundos.", points: ["Tendencias y demanda", "Recomendaciones", "Verificación cruzada con IA"] }, { title: "Encuentra productos y contacta directamente", body: "Busca en Alibaba.com, 1688, Taobao y AliExpress, compara y contacta fabricantes verificados.", points: ["Búsqueda global", "Proveedores verificados", "Respuestas automáticas"] }], statsTitle: "Un ecosistema B2B global en un agente", stats: [{ value: "1,5M+", label: "proveedores verificados" }, { value: "7.600+", label: "categorías" }, { value: "400M+", label: "productos" }], proof: "Más de 3 millones de usuarios empresariales confían en Accio.", ctaTitle: "Descarga Accio hoy", ctaBody: "Convierte ideas en oportunidades reales, más rápido y sin cambiar de herramienta.", ctaLabel: "Descargar Accio", alts: ["Accio crea un diseño desde una imagen", "El agente Accio busca proveedores", "Búsqueda por voz en Accio", "Análisis de mercado en Accio", "Catálogo global en Accio", "Fabricantes verificados en Accio", "Respuestas automáticas a proveedores"] },
-  zh: { eyebrow: "Accio：阿里巴巴 AI 智能体", title: "一个指令，从创意直达认证供应商", intro: "Accio 将设计、趋势分析、全球商品搜索和供应商沟通整合为一个端到端工作流。", workflow: "设计 → 趋势 → 商品 → 供应商 → 沟通", chapters: [{ title: "自然表达，智能执行", body: "上传图片，或用语音和文字描述创意，智能体会生成设计并执行多项任务。", points: ["产品创意与初步设计", "语音和图片搜索", "一个指令处理多项任务"] }, { title: "投资前验证需求", body: "AI 分析市场数据、发现潜力品类，将数周研究缩短到几秒。", points: ["实时趋势与需求", "商品推荐", "AI 交叉验证"] }, { title: "全球找货，直接联系", body: "搜索 Alibaba.com、1688、淘宝和 AliExpress，对比商品并联系认证制造商。", points: ["全球商品搜索", "认证供应商", "自动回复与沟通"] }], statsTitle: "一个智能体，连接全球 B2B 生态", stats: [{ value: "150万+", label: "认证供应商" }, { value: "7,600+", label: "商品类目" }, { value: "4亿+", label: "可搜索商品" }], proof: "全球超过 300 万企业用户信赖 Accio。", ctaTitle: "立即下载 Accio", ctaBody: "无需切换工具，更快把创意变成真实商机。", ctaLabel: "下载 Accio", alts: ["Accio 根据图片创建设计", "Accio 智能体搜索供应商", "Accio 语音搜索", "Accio 市场分析", "Accio 全球商品目录", "Accio 认证制造商", "Accio 自动处理供应商回复"] },
-  pt: { eyebrow: "Accio: o agente de IA da Alibaba", title: "Da ideia ao fornecedor verificado com um comando", intro: "Accio reúne design, tendências, busca global e contato com fornecedores em um único fluxo.", workflow: "Design → Tendências → Produtos → Fornecedores → Contato", chapters: [{ title: "Crie e delegue naturalmente", body: "Envie uma imagem ou descreva uma ideia por voz ou texto. O agente cria o design e as tarefas.", points: ["Ideias e primeiros designs", "Busca por voz e imagem", "Várias tarefas em um comando"] }, { title: "Valide a demanda antes de investir", body: "A IA analisa o mercado, identifica oportunidades e reduz semanas de pesquisa a segundos.", points: ["Tendências e demanda", "Recomendações", "Verificação cruzada por IA"] }, { title: "Encontre produtos e fale diretamente", body: "Pesquise no Alibaba.com, 1688, Taobao e AliExpress, compare e contate fabricantes verificados.", points: ["Busca global", "Fornecedores verificados", "Respostas automáticas"] }], statsTitle: "Um ecossistema B2B global em um agente", stats: [{ value: "1,5M+", label: "fornecedores verificados" }, { value: "7.600+", label: "categorias" }, { value: "400M+", label: "produtos" }], proof: "Mais de 3 milhões de usuários empresariais confiam na Accio.", ctaTitle: "Baixe a Accio hoje", ctaBody: "Transforme ideias em oportunidades reais, mais rápido e sem trocar de ferramenta.", ctaLabel: "Baixar Accio", alts: ["Accio cria um design a partir de uma imagem", "Agente Accio busca fornecedores", "Busca por voz na Accio", "Análise de mercado na Accio", "Catálogo global na Accio", "Fabricantes verificados na Accio", "Respostas automáticas a fornecedores"] },
-  hi: { eyebrow: "Accio: Alibaba का AI एजेंट", title: "एक प्रॉम्प्ट में आइडिया से सत्यापित सप्लायर तक", intro: "Accio डिज़ाइन, ट्रेंड विश्लेषण, वैश्विक उत्पाद खोज और सप्लायर संपर्क को एक वर्कफ़्लो में जोड़ता है।", workflow: "डिज़ाइन → ट्रेंड → उत्पाद → सप्लायर → संपर्क", chapters: [{ title: "स्वाभाविक रूप से बनाएँ और काम सौंपें", body: "इमेज अपलोड करें या आवाज़ और टेक्स्ट में आइडिया बताएँ। एजेंट डिज़ाइन और कार्य तैयार करता है।", points: ["उत्पाद आइडिया और डिज़ाइन", "वॉइस और विज़ुअल खोज", "एक प्रॉम्प्ट में कई काम"] }, { title: "निवेश से पहले माँग जाँचें", body: "AI बाज़ार डेटा पढ़ता है, अवसर पहचानता है और हफ्तों की रिसर्च सेकंडों में करता है।", points: ["रीयल-टाइम ट्रेंड", "उत्पाद सुझाव", "AI क्रॉस-चेक"] }, { title: "उत्पाद खोजें और सीधे जुड़ें", body: "Alibaba.com, 1688, Taobao और AliExpress पर खोजें, तुलना करें और सत्यापित निर्माताओं से जुड़ें।", points: ["वैश्विक उत्पाद खोज", "सत्यापित सप्लायर", "स्वचालित उत्तर"] }], statsTitle: "एक एजेंट में वैश्विक B2B इकोसिस्टम", stats: [{ value: "1.5M+", label: "सत्यापित सप्लायर" }, { value: "7,600+", label: "उत्पाद श्रेणियाँ" }, { value: "400M+", label: "खोज योग्य उत्पाद" }], proof: "30 लाख से अधिक व्यवसायिक उपयोगकर्ता Accio पर भरोसा करते हैं।", ctaTitle: "आज ही Accio डाउनलोड करें", ctaBody: "बिना टूल बदले आइडिया को तेज़ी से वास्तविक अवसरों में बदलें।", ctaLabel: "Accio डाउनलोड करें", alts: ["Accio इमेज से उत्पाद डिज़ाइन बनाता है", "Accio एजेंट सप्लायर खोजता है", "Accio में वॉइस खोज", "Accio बाज़ार विश्लेषण", "Accio वैश्विक उत्पाद कैटलॉग", "Accio सत्यापित निर्माता", "Accio स्वचालित सप्लायर उत्तर"] },
-  fr: { eyebrow: "Accio : l'agent IA d'Alibaba", title: "De l'idée au fournisseur vérifié en une seule demande", intro: "Accio réunit design, analyse des tendances, recherche mondiale et contact fournisseurs dans un seul flux.", workflow: "Design → Tendances → Produits → Fournisseurs → Contact", chapters: [{ title: "Créez et déléguez naturellement", body: "Importez une image ou décrivez une idée par la voix ou le texte. L'agent crée le design et les tâches.", points: ["Idées et premiers designs", "Recherche vocale et visuelle", "Plusieurs tâches par demande"] }, { title: "Validez la demande avant d'investir", body: "L'IA analyse le marché, détecte les opportunités et réduit des semaines de recherche à quelques secondes.", points: ["Tendances et demande", "Recommandations", "Vérification croisée par IA"] }, { title: "Trouvez et contactez directement", body: "Recherchez sur Alibaba.com, 1688, Taobao et AliExpress, comparez et contactez des fabricants vérifiés.", points: ["Recherche mondiale", "Fournisseurs vérifiés", "Réponses automatisées"] }], statsTitle: "Un écosystème B2B mondial dans un agent", stats: [{ value: "1,5M+", label: "fournisseurs vérifiés" }, { value: "7 600+", label: "catégories" }, { value: "400M+", label: "produits" }], proof: "Plus de 3 millions d'utilisateurs professionnels font confiance à Accio.", ctaTitle: "Téléchargez Accio aujourd'hui", ctaBody: "Transformez vos idées en opportunités réelles, plus vite et sans changer d'outil.", ctaLabel: "Télécharger Accio", alts: ["Accio crée un design depuis une image", "L'agent Accio recherche des fournisseurs", "Recherche vocale dans Accio", "Analyse de marché Accio", "Catalogue mondial dans Accio", "Fabricants vérifiés dans Accio", "Réponses fournisseurs automatisées"] },
+  de: {
+    eyebrow: "Accio: Alibabas KI-Agent",
+    title: "Von der Idee zum geprüften Lieferanten mit einer Anfrage",
+    intro:
+      "Accio vereint Design, Trendanalyse, globale Produktsuche und Lieferantenkontakt in einem durchgängigen Ablauf.",
+    workflow: "Design → Trends → Produkte → Lieferanten → Kontakt",
+    chapters: [
+      {
+        title: "Natürlich erstellen und delegieren",
+        body: "Bild hochladen oder Idee per Sprache oder Text beschreiben. Der Agent erstellt Design und Aufgabenablauf.",
+        points: [
+          "Produktideen und Entwürfe",
+          "Sprach- und Bildsuche",
+          "Mehrere Aufgaben pro Anfrage",
+        ],
+      },
+      {
+        title: "Nachfrage vor der Investition prüfen",
+        body: "KI analysiert Marktdaten, erkennt Chancen und verkürzt wochenlange Recherche auf Sekunden.",
+        points: ["Trends und Nachfrage", "Produktempfehlungen", "KI-Datenprüfung"],
+      },
+      {
+        title: "Produkte finden und direkt kontaktieren",
+        body: "Auf Alibaba.com, 1688, Taobao und AliExpress suchen, Angebote vergleichen und Hersteller kontaktieren.",
+        points: ["Globale Produktsuche", "Geprüfte Lieferanten", "Automatisierte Antworten"],
+      },
+    ],
+    statsTitle: "Ein globales B2B-Ökosystem in einem Agenten",
+    stats: [
+      { value: "1,5M+", label: "geprüfte Lieferanten" },
+      { value: "7.600+", label: "Produktkategorien" },
+      { value: "400M+", label: "durchsuchbare Produkte" },
+    ],
+    proof: "Mehr als 3 Millionen Geschäftskunden vertrauen Accio.",
+    ctaTitle: "Accio heute herunterladen",
+    ctaBody: "Ideen schneller und ohne Toolwechsel in echte Geschäftschancen verwandeln.",
+    ctaLabel: "Accio herunterladen",
+    alts: [
+      "Accio erstellt ein Produktdesign aus einem Bild",
+      "Accio Agent sucht Lieferanten und bereitet Anfragen vor",
+      "Sprachsuche in Accio",
+      "Accio analysiert Marktdaten",
+      "Globaler Produktkatalog in Accio",
+      "Accio findet geprüfte Hersteller",
+      "Accio verarbeitet Lieferantenantworten automatisch",
+    ],
+  },
+  it: {
+    eyebrow: "Accio: l'agente AI di Alibaba",
+    title: "Dall'idea al fornitore verificato con un solo prompt",
+    intro:
+      "Accio riunisce design, analisi delle tendenze, ricerca globale e contatto con i fornitori in un unico flusso.",
+    workflow: "Design → Tendenze → Prodotti → Fornitori → Contatto",
+    chapters: [
+      {
+        title: "Crea e delega naturalmente",
+        body: "Carica un'immagine o descrivi un'idea con voce o testo: l'agente crea design e attività.",
+        points: ["Idee e primi design", "Ricerca vocale e visiva", "Più attività in un prompt"],
+      },
+      {
+        title: "Valida la domanda prima di investire",
+        body: "L'AI analizza il mercato, individua opportunità e riduce settimane di ricerca a pochi secondi.",
+        points: ["Tendenze e domanda", "Prodotti consigliati", "Verifica incrociata AI"],
+      },
+      {
+        title: "Trova prodotti e contatta direttamente",
+        body: "Cerca su Alibaba.com, 1688, Taobao e AliExpress, confronta e contatta produttori verificati.",
+        points: ["Ricerca globale", "Fornitori verificati", "Risposte automatiche"],
+      },
+    ],
+    statsTitle: "Un ecosistema B2B globale in un agente",
+    stats: [
+      { value: "1,5M+", label: "fornitori verificati" },
+      { value: "7.600+", label: "categorie" },
+      { value: "400M+", label: "prodotti" },
+    ],
+    proof: "Oltre 3 milioni di utenti business si affidano ad Accio.",
+    ctaTitle: "Scarica Accio oggi",
+    ctaBody: "Trasforma le idee in opportunità reali, più velocemente e senza cambiare strumenti.",
+    ctaLabel: "Scarica Accio",
+    alts: [
+      "Accio crea un design da un'immagine",
+      "L'agente Accio cerca fornitori",
+      "Ricerca vocale in Accio",
+      "Analisi di mercato Accio",
+      "Catalogo globale in Accio",
+      "Fornitori verificati in Accio",
+      "Risposte automatiche ai fornitori",
+    ],
+  },
+  es: {
+    eyebrow: "Accio: el agente de IA de Alibaba",
+    title: "De la idea al proveedor verificado con una consulta",
+    intro:
+      "Accio une diseño, tendencias, búsqueda global y contacto con proveedores en un solo flujo de trabajo.",
+    workflow: "Diseño → Tendencias → Productos → Proveedores → Contacto",
+    chapters: [
+      {
+        title: "Crea y delega de forma natural",
+        body: "Sube una imagen o describe una idea por voz o texto. El agente crea el diseño y las tareas.",
+        points: [
+          "Ideas y primeros diseños",
+          "Búsqueda por voz e imagen",
+          "Varias tareas en una consulta",
+        ],
+      },
+      {
+        title: "Valida la demanda antes de invertir",
+        body: "La IA analiza el mercado, detecta oportunidades y reduce semanas de investigación a segundos.",
+        points: ["Tendencias y demanda", "Recomendaciones", "Verificación cruzada con IA"],
+      },
+      {
+        title: "Encuentra productos y contacta directamente",
+        body: "Busca en Alibaba.com, 1688, Taobao y AliExpress, compara y contacta fabricantes verificados.",
+        points: ["Búsqueda global", "Proveedores verificados", "Respuestas automáticas"],
+      },
+    ],
+    statsTitle: "Un ecosistema B2B global en un agente",
+    stats: [
+      { value: "1,5M+", label: "proveedores verificados" },
+      { value: "7.600+", label: "categorías" },
+      { value: "400M+", label: "productos" },
+    ],
+    proof: "Más de 3 millones de usuarios empresariales confían en Accio.",
+    ctaTitle: "Descarga Accio hoy",
+    ctaBody: "Convierte ideas en oportunidades reales, más rápido y sin cambiar de herramienta.",
+    ctaLabel: "Descargar Accio",
+    alts: [
+      "Accio crea un diseño desde una imagen",
+      "El agente Accio busca proveedores",
+      "Búsqueda por voz en Accio",
+      "Análisis de mercado en Accio",
+      "Catálogo global en Accio",
+      "Fabricantes verificados en Accio",
+      "Respuestas automáticas a proveedores",
+    ],
+  },
+  zh: {
+    eyebrow: "Accio：阿里巴巴 AI 智能体",
+    title: "一个指令，从创意直达认证供应商",
+    intro: "Accio 将设计、趋势分析、全球商品搜索和供应商沟通整合为一个端到端工作流。",
+    workflow: "设计 → 趋势 → 商品 → 供应商 → 沟通",
+    chapters: [
+      {
+        title: "自然表达，智能执行",
+        body: "上传图片，或用语音和文字描述创意，智能体会生成设计并执行多项任务。",
+        points: ["产品创意与初步设计", "语音和图片搜索", "一个指令处理多项任务"],
+      },
+      {
+        title: "投资前验证需求",
+        body: "AI 分析市场数据、发现潜力品类，将数周研究缩短到几秒。",
+        points: ["实时趋势与需求", "商品推荐", "AI 交叉验证"],
+      },
+      {
+        title: "全球找货，直接联系",
+        body: "搜索 Alibaba.com、1688、淘宝和 AliExpress，对比商品并联系认证制造商。",
+        points: ["全球商品搜索", "认证供应商", "自动回复与沟通"],
+      },
+    ],
+    statsTitle: "一个智能体，连接全球 B2B 生态",
+    stats: [
+      { value: "150万+", label: "认证供应商" },
+      { value: "7,600+", label: "商品类目" },
+      { value: "4亿+", label: "可搜索商品" },
+    ],
+    proof: "全球超过 300 万企业用户信赖 Accio。",
+    ctaTitle: "立即下载 Accio",
+    ctaBody: "无需切换工具，更快把创意变成真实商机。",
+    ctaLabel: "下载 Accio",
+    alts: [
+      "Accio 根据图片创建设计",
+      "Accio 智能体搜索供应商",
+      "Accio 语音搜索",
+      "Accio 市场分析",
+      "Accio 全球商品目录",
+      "Accio 认证制造商",
+      "Accio 自动处理供应商回复",
+    ],
+  },
+  pt: {
+    eyebrow: "Accio: o agente de IA da Alibaba",
+    title: "Da ideia ao fornecedor verificado com um comando",
+    intro:
+      "Accio reúne design, tendências, busca global e contato com fornecedores em um único fluxo.",
+    workflow: "Design → Tendências → Produtos → Fornecedores → Contato",
+    chapters: [
+      {
+        title: "Crie e delegue naturalmente",
+        body: "Envie uma imagem ou descreva uma ideia por voz ou texto. O agente cria o design e as tarefas.",
+        points: [
+          "Ideias e primeiros designs",
+          "Busca por voz e imagem",
+          "Várias tarefas em um comando",
+        ],
+      },
+      {
+        title: "Valide a demanda antes de investir",
+        body: "A IA analisa o mercado, identifica oportunidades e reduz semanas de pesquisa a segundos.",
+        points: ["Tendências e demanda", "Recomendações", "Verificação cruzada por IA"],
+      },
+      {
+        title: "Encontre produtos e fale diretamente",
+        body: "Pesquise no Alibaba.com, 1688, Taobao e AliExpress, compare e contate fabricantes verificados.",
+        points: ["Busca global", "Fornecedores verificados", "Respostas automáticas"],
+      },
+    ],
+    statsTitle: "Um ecossistema B2B global em um agente",
+    stats: [
+      { value: "1,5M+", label: "fornecedores verificados" },
+      { value: "7.600+", label: "categorias" },
+      { value: "400M+", label: "produtos" },
+    ],
+    proof: "Mais de 3 milhões de usuários empresariais confiam na Accio.",
+    ctaTitle: "Baixe a Accio hoje",
+    ctaBody: "Transforme ideias em oportunidades reais, mais rápido e sem trocar de ferramenta.",
+    ctaLabel: "Baixar Accio",
+    alts: [
+      "Accio cria um design a partir de uma imagem",
+      "Agente Accio busca fornecedores",
+      "Busca por voz na Accio",
+      "Análise de mercado na Accio",
+      "Catálogo global na Accio",
+      "Fabricantes verificados na Accio",
+      "Respostas automáticas a fornecedores",
+    ],
+  },
+  hi: {
+    eyebrow: "Accio: Alibaba का AI एजेंट",
+    title: "एक प्रॉम्प्ट में आइडिया से सत्यापित सप्लायर तक",
+    intro:
+      "Accio डिज़ाइन, ट्रेंड विश्लेषण, वैश्विक उत्पाद खोज और सप्लायर संपर्क को एक वर्कफ़्लो में जोड़ता है।",
+    workflow: "डिज़ाइन → ट्रेंड → उत्पाद → सप्लायर → संपर्क",
+    chapters: [
+      {
+        title: "स्वाभाविक रूप से बनाएँ और काम सौंपें",
+        body: "इमेज अपलोड करें या आवाज़ और टेक्स्ट में आइडिया बताएँ। एजेंट डिज़ाइन और कार्य तैयार करता है।",
+        points: ["उत्पाद आइडिया और डिज़ाइन", "वॉइस और विज़ुअल खोज", "एक प्रॉम्प्ट में कई काम"],
+      },
+      {
+        title: "निवेश से पहले माँग जाँचें",
+        body: "AI बाज़ार डेटा पढ़ता है, अवसर पहचानता है और हफ्तों की रिसर्च सेकंडों में करता है।",
+        points: ["रीयल-टाइम ट्रेंड", "उत्पाद सुझाव", "AI क्रॉस-चेक"],
+      },
+      {
+        title: "उत्पाद खोजें और सीधे जुड़ें",
+        body: "Alibaba.com, 1688, Taobao और AliExpress पर खोजें, तुलना करें और सत्यापित निर्माताओं से जुड़ें।",
+        points: ["वैश्विक उत्पाद खोज", "सत्यापित सप्लायर", "स्वचालित उत्तर"],
+      },
+    ],
+    statsTitle: "एक एजेंट में वैश्विक B2B इकोसिस्टम",
+    stats: [
+      { value: "1.5M+", label: "सत्यापित सप्लायर" },
+      { value: "7,600+", label: "उत्पाद श्रेणियाँ" },
+      { value: "400M+", label: "खोज योग्य उत्पाद" },
+    ],
+    proof: "30 लाख से अधिक व्यवसायिक उपयोगकर्ता Accio पर भरोसा करते हैं।",
+    ctaTitle: "आज ही Accio डाउनलोड करें",
+    ctaBody: "बिना टूल बदले आइडिया को तेज़ी से वास्तविक अवसरों में बदलें।",
+    ctaLabel: "Accio डाउनलोड करें",
+    alts: [
+      "Accio इमेज से उत्पाद डिज़ाइन बनाता है",
+      "Accio एजेंट सप्लायर खोजता है",
+      "Accio में वॉइस खोज",
+      "Accio बाज़ार विश्लेषण",
+      "Accio वैश्विक उत्पाद कैटलॉग",
+      "Accio सत्यापित निर्माता",
+      "Accio स्वचालित सप्लायर उत्तर",
+    ],
+  },
+  fr: {
+    eyebrow: "Accio : l'agent IA d'Alibaba",
+    title: "De l'idée au fournisseur vérifié en une seule demande",
+    intro:
+      "Accio réunit design, analyse des tendances, recherche mondiale et contact fournisseurs dans un seul flux.",
+    workflow: "Design → Tendances → Produits → Fournisseurs → Contact",
+    chapters: [
+      {
+        title: "Créez et déléguez naturellement",
+        body: "Importez une image ou décrivez une idée par la voix ou le texte. L'agent crée le design et les tâches.",
+        points: [
+          "Idées et premiers designs",
+          "Recherche vocale et visuelle",
+          "Plusieurs tâches par demande",
+        ],
+      },
+      {
+        title: "Validez la demande avant d'investir",
+        body: "L'IA analyse le marché, détecte les opportunités et réduit des semaines de recherche à quelques secondes.",
+        points: ["Tendances et demande", "Recommandations", "Vérification croisée par IA"],
+      },
+      {
+        title: "Trouvez et contactez directement",
+        body: "Recherchez sur Alibaba.com, 1688, Taobao et AliExpress, comparez et contactez des fabricants vérifiés.",
+        points: ["Recherche mondiale", "Fournisseurs vérifiés", "Réponses automatisées"],
+      },
+    ],
+    statsTitle: "Un écosystème B2B mondial dans un agent",
+    stats: [
+      { value: "1,5M+", label: "fournisseurs vérifiés" },
+      { value: "7 600+", label: "catégories" },
+      { value: "400M+", label: "produits" },
+    ],
+    proof: "Plus de 3 millions d'utilisateurs professionnels font confiance à Accio.",
+    ctaTitle: "Téléchargez Accio aujourd'hui",
+    ctaBody: "Transformez vos idées en opportunités réelles, plus vite et sans changer d'outil.",
+    ctaLabel: "Télécharger Accio",
+    alts: [
+      "Accio crée un design depuis une image",
+      "L'agent Accio recherche des fournisseurs",
+      "Recherche vocale dans Accio",
+      "Analyse de marché Accio",
+      "Catalogue mondial dans Accio",
+      "Fabricants vérifiés dans Accio",
+      "Réponses fournisseurs automatisées",
+    ],
+  },
 };
 
 const AGENT_STORY_IMAGES_RU = [
@@ -825,11 +1348,32 @@ const AGENT_STORY_IMAGES_ZH = [
   autoRepliesImageZh.url,
 ];
 
-function AgentStoryImage({ src, alt, featured = false }: { src: string; alt: string; featured?: boolean }) {
+function AgentStoryImage({
+  src,
+  alt,
+  featured = false,
+}: {
+  src: string;
+  alt: string;
+  featured?: boolean;
+}) {
   return (
-    <figure className={`group relative shrink-0 overflow-hidden rounded-[24px] border border-border/70 bg-card shadow-card ${featured ? "w-[82vw] max-w-[350px] xl:w-[270px]" : "w-[78vw] max-w-[330px] xl:w-[230px]"}`}>
-      <img src={src} alt={alt} width={768} height={1365} loading="lazy" decoding="async" className="h-auto w-full transition-transform duration-700 ease-out group-hover:scale-[1.018]" />
-      <span className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-foreground/10" aria-hidden />
+    <figure
+      className={`group relative shrink-0 overflow-hidden rounded-[24px] border border-border/70 bg-card shadow-card ${featured ? "w-[82vw] max-w-[350px] xl:w-[270px]" : "w-[78vw] max-w-[330px] xl:w-[230px]"}`}
+    >
+      <img
+        src={src}
+        alt={alt}
+        width={768}
+        height={1365}
+        loading="lazy"
+        decoding="async"
+        className="h-auto w-full transition-transform duration-700 ease-out group-hover:scale-[1.018]"
+      />
+      <span
+        className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-foreground/10"
+        aria-hidden
+      />
     </figure>
   );
 }
@@ -837,15 +1381,30 @@ function AgentStoryImage({ src, alt, featured = false }: { src: string; alt: str
 function AgentStory() {
   const { lang } = useI18n();
   const copy = AGENT_STORY_COPY[lang];
-  const storyImages = lang === "ru" ? AGENT_STORY_IMAGES_RU : lang === "zh" ? AGENT_STORY_IMAGES_ZH : AGENT_STORY_IMAGES_EN;
-  const imageGroups = [[0, 1, 2], [3, 4], [5, 6]];
+  const storyImages =
+    lang === "ru"
+      ? AGENT_STORY_IMAGES_RU
+      : lang === "zh"
+        ? AGENT_STORY_IMAGES_ZH
+        : AGENT_STORY_IMAGES_EN;
+  const imageGroups = [
+    [0, 1, 2],
+    [3, 4],
+    [5, 6],
+  ];
   return (
     <section className="overflow-hidden border-y border-border/60 bg-card py-24 sm:py-32">
       <div className="mx-auto max-w-[1240px] px-5 sm:px-6">
         <header className="mx-auto max-w-4xl text-center">
-          <p className="text-[13px] font-bold uppercase tracking-[0.14em] text-primary">{copy.eyebrow}</p>
-          <h2 className="mt-4 text-[28px] font-bold tracking-tight text-foreground sm:text-[40px]">{copy.title}</h2>
-          <p className="mx-auto mt-5 max-w-3xl text-[17px] leading-relaxed text-muted-foreground sm:text-[19px]">{copy.intro}</p>
+          <p className="text-[13px] font-bold uppercase tracking-[0.14em] text-primary">
+            {copy.eyebrow}
+          </p>
+          <h2 className="mt-4 text-[28px] font-bold tracking-tight text-foreground sm:text-[40px]">
+            {copy.title}
+          </h2>
+          <p className="mx-auto mt-5 max-w-3xl text-[17px] leading-relaxed text-muted-foreground sm:text-[19px]">
+            {copy.intro}
+          </p>
           <div className="mx-auto mt-7 inline-flex max-w-full overflow-x-auto rounded-full border border-primary/25 bg-primary/10 px-5 py-2.5 text-[13px] font-semibold text-primary sm:text-[15px]">
             <span className="whitespace-nowrap">{copy.workflow}</span>
           </div>
@@ -853,24 +1412,47 @@ function AgentStory() {
 
         <div className="mt-20 space-y-24 sm:space-y-32">
           {copy.chapters.map((chapter, chapterIndex) => (
-            <article key={chapter.title} className="grid min-w-0 items-center gap-10 xl:grid-cols-[0.68fr_1.32fr] xl:gap-16">
+            <article
+              key={chapter.title}
+              className="grid min-w-0 items-center gap-10 xl:grid-cols-[0.68fr_1.32fr] xl:gap-16"
+            >
               <div className={`min-w-0 ${chapterIndex % 2 === 1 ? "xl:order-2" : ""}`}>
-                <span className="text-[12px] font-bold uppercase tracking-[0.14em] text-primary">0{chapterIndex + 1}</span>
-                <h3 className="mt-3 text-[26px] font-bold leading-tight text-foreground sm:text-[32px]">{chapter.title}</h3>
-                <p className="mt-5 text-[16px] leading-relaxed text-muted-foreground sm:text-[18px]">{chapter.body}</p>
+                <span className="text-[12px] font-bold uppercase tracking-[0.14em] text-primary">
+                  0{chapterIndex + 1}
+                </span>
+                <h3 className="mt-3 text-[26px] font-bold leading-tight text-foreground sm:text-[32px]">
+                  {chapter.title}
+                </h3>
+                <p className="mt-5 text-[16px] leading-relaxed text-muted-foreground sm:text-[18px]">
+                  {chapter.body}
+                </p>
                 <ul className="mt-7 space-y-3">
                   {chapter.points.map((point) => (
-                    <li key={point} className="flex items-start gap-3 text-[15px] font-medium text-foreground/85">
-                      <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-primary/15 text-primary"><Check className="h-3.5 w-3.5" /></span>
+                    <li
+                      key={point}
+                      className="flex items-start gap-3 text-[15px] font-medium text-foreground/85"
+                    >
+                      <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-primary/15 text-primary">
+                        <Check className="h-3.5 w-3.5" />
+                      </span>
                       {point}
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className={`flex min-w-0 max-w-full snap-x snap-mandatory items-start gap-4 overflow-x-auto pb-5 xl:overflow-visible ${chapterIndex % 2 === 1 ? "xl:order-1 xl:justify-end" : ""}`}>
+              <div
+                className={`flex min-w-0 max-w-full snap-x snap-mandatory items-start gap-4 overflow-x-auto pb-5 xl:overflow-visible ${chapterIndex % 2 === 1 ? "xl:order-1 xl:justify-end" : ""}`}
+              >
                 {imageGroups[chapterIndex].map((imageIndex, groupIndex) => (
-                  <div key={storyImages[imageIndex]} className={`snap-center ${groupIndex % 2 ? "xl:translate-y-8" : ""}`}>
-                    <AgentStoryImage src={storyImages[imageIndex]} alt={copy.alts[imageIndex]} featured={groupIndex === 0} />
+                  <div
+                    key={storyImages[imageIndex]}
+                    className={`snap-center ${groupIndex % 2 ? "xl:translate-y-8" : ""}`}
+                  >
+                    <AgentStoryImage
+                      src={storyImages[imageIndex]}
+                      alt={copy.alts[imageIndex]}
+                      featured={groupIndex === 0}
+                    />
                   </div>
                 ))}
               </div>
@@ -879,22 +1461,35 @@ function AgentStory() {
         </div>
 
         <div className="mt-24 border-t border-border/60 pt-14 sm:mt-32 sm:pt-16">
-          <p className="text-center text-[14px] font-semibold text-foreground/70">{copy.statsTitle}</p>
+          <p className="text-center text-[14px] font-semibold text-foreground/70">
+            {copy.statsTitle}
+          </p>
           <div className="mt-8 grid gap-8 text-center sm:grid-cols-3">
             {copy.stats.map((stat) => (
               <div key={stat.value}>
-                <strong className="block text-[34px] font-extrabold tracking-tight text-primary sm:text-[42px]">{stat.value}</strong>
+                <strong className="block text-[34px] font-extrabold tracking-tight text-primary sm:text-[42px]">
+                  {stat.value}
+                </strong>
                 <span className="mt-1 block text-[14px] text-muted-foreground">{stat.label}</span>
               </div>
             ))}
           </div>
-          <p className="mx-auto mt-9 max-w-2xl text-center text-[14px] leading-relaxed text-muted-foreground">{copy.proof}</p>
+          <p className="mx-auto mt-9 max-w-2xl text-center text-[14px] leading-relaxed text-muted-foreground">
+            {copy.proof}
+          </p>
         </div>
 
         <div className="mx-auto mt-16 max-w-4xl text-center">
           <h3 className="text-[26px] font-bold text-foreground sm:text-[32px]">{copy.ctaTitle}</h3>
-          <p className="mx-auto mt-4 max-w-2xl text-[16px] leading-relaxed text-muted-foreground">{copy.ctaBody}</p>
-          <a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-[16px] font-semibold text-primary-foreground shadow-elegant transition hover:-translate-y-0.5 hover:brightness-110">
+          <p className="mx-auto mt-4 max-w-2xl text-[16px] leading-relaxed text-muted-foreground">
+            {copy.ctaBody}
+          </p>
+          <a
+            href={REFERRAL_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-[16px] font-semibold text-primary-foreground shadow-elegant transition hover:-translate-y-0.5 hover:brightness-110"
+          >
             <Sparkles className="h-4 w-4" />
             {copy.ctaLabel}
           </a>
@@ -908,7 +1503,14 @@ function AgentStory() {
 function UseCases() {
   const { t, lang } = useI18n();
   const forBase = lang === "en" ? "/for" : `/${lang}/for`;
-  const ucSlugs = ["dropshipping", "sourcing", "content", "market-research", "automation", "custom-tools"];
+  const ucSlugs = [
+    "dropshipping",
+    "sourcing",
+    "content",
+    "market-research",
+    "automation",
+    "custom-tools",
+  ];
   return (
     <section id="use-cases" className="scroll-mt-24 bg-white/[0.03] py-24 sm:py-32">
       <div className="mx-auto max-w-[1200px] px-6">
@@ -920,8 +1522,15 @@ function UseCases() {
         </p>
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {t.useCases.items.map((u, i) => (
-            <a key={u.title} href={`${forBase}/${ucSlugs[i]}`} onMouseMove={trackSpotlight} className="card-spotlight block rounded-[24px] border border-border/60 bg-white/[0.03] p-7 shadow-card hover:-translate-y-1 hover:shadow-elegant">
-              <div className="grid h-12 w-12 place-items-center rounded-2xl bg-mint-50 text-[24px]">{u.icon}</div>
+            <a
+              key={u.title}
+              href={`${forBase}/${ucSlugs[i]}`}
+              onMouseMove={trackSpotlight}
+              className="card-spotlight block rounded-[24px] border border-border/60 bg-white/[0.03] p-7 shadow-card hover:-translate-y-1 hover:shadow-elegant"
+            >
+              <div className="grid h-12 w-12 place-items-center rounded-2xl bg-mint-50 text-[24px]">
+                {u.icon}
+              </div>
               <h3 className="mt-5 text-[19px] font-bold text-foreground">{u.title}</h3>
               <p className="mt-2 text-[14.5px] leading-relaxed text-muted-foreground">{u.body}</p>
             </a>
@@ -961,7 +1570,9 @@ function CompareChat() {
               </div>
               <div className="flex items-start gap-3 border-t border-border/60 bg-[#0a1120]/[0.02] px-5 py-5 sm:px-8">
                 <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#34d399]" />
-                <span className="text-[14.5px] font-medium leading-snug text-foreground">{r.accio}</span>
+                <span className="text-[14.5px] font-medium leading-snug text-foreground">
+                  {r.accio}
+                </span>
               </div>
             </div>
           ))}
@@ -994,29 +1605,43 @@ function Pricing() {
               }`}
             >
               {p.highlight && (
-                <span className="absolute -top-3 left-8 rounded-full bg-[#34d399] px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white">
+                <span className="absolute -top-3 start-8 rounded-full bg-[#34d399] px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white">
                   ★
                 </span>
               )}
-              <h3 className={`text-[20px] font-bold ${p.highlight ? "text-white" : "text-foreground"}`}>{p.name}</h3>
+              <h3
+                className={`text-[20px] font-bold ${p.highlight ? "text-white" : "text-foreground"}`}
+              >
+                {p.name}
+              </h3>
               <div className="mt-4 flex items-baseline gap-2">
                 <span className="text-[34px] font-extrabold tracking-tight">{p.price}</span>
-                <span className={`text-[13px] ${p.highlight ? "text-white/60" : "text-muted-foreground"}`}>
+                <span
+                  className={`text-[13px] ${p.highlight ? "text-white/60" : "text-muted-foreground"}`}
+                >
                   {p.priceNote}
                 </span>
               </div>
-              <p className={`mt-3 text-[14.5px] leading-relaxed ${p.highlight ? "text-white/80" : "text-muted-foreground"}`}>
+              <p
+                className={`mt-3 text-[14.5px] leading-relaxed ${p.highlight ? "text-white/80" : "text-muted-foreground"}`}
+              >
                 {p.tagline}
               </p>
               <div className="my-6 h-px w-full bg-current opacity-10" />
-              <p className={`mb-3 text-[12px] font-bold uppercase tracking-wider ${p.highlight ? "text-white/50" : "text-foreground/40"}`}>
+              <p
+                className={`mb-3 text-[12px] font-bold uppercase tracking-wider ${p.highlight ? "text-white/50" : "text-foreground/40"}`}
+              >
                 {t.pricing.perksTitle}
               </p>
               <ul className="flex flex-col gap-3">
                 {p.features.map((f) => (
                   <li key={f} className="flex items-start gap-2.5">
                     <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#34d399]" />
-                    <span className={`text-[14.5px] leading-snug ${p.highlight ? "text-white/90" : "text-foreground/85"}`}>{f}</span>
+                    <span
+                      className={`text-[14.5px] leading-snug ${p.highlight ? "text-white/90" : "text-foreground/85"}`}
+                    >
+                      {f}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -1059,7 +1684,9 @@ function TestimonialCard({ t }: { t: TestimonialT }) {
           <div className="text-[13px] text-muted-foreground">{t.role}</div>
         </div>
       </header>
-      <p className="mt-4 text-[15px] leading-[1.55] text-foreground/85">{renderHighlighted(t.text)}</p>
+      <p className="mt-4 text-[15px] leading-[1.55] text-foreground/85">
+        {renderHighlighted(t.text)}
+      </p>
     </article>
   );
 }
@@ -1087,7 +1714,8 @@ function Testimonials() {
     <section className="relative overflow-hidden bg-mint-50 py-24 sm:py-32">
       <div className="mx-auto max-w-[1280px] px-6 text-center">
         <h2 className="text-[28px] font-bold tracking-tight text-foreground sm:text-[40px]">
-          {t.testimonials.heading1} <span className="text-[#34d399]">{t.testimonials.highlight}</span>
+          {t.testimonials.heading1}{" "}
+          <span className="text-[#34d399]">{t.testimonials.highlight}</span>
           <br />
           {t.testimonials.heading2}
         </h2>
@@ -1096,12 +1724,14 @@ function Testimonials() {
             <span key={p.id}>{p.source}</span>
           ))}
         </div>
-        <div className="mt-12 grid gap-5 text-left sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-5 text-start sm:grid-cols-2 lg:grid-cols-3">
           {rvPress.map((p) => (
             <div key={p.id} className="rounded-2xl border border-white/12 bg-white/[0.03] p-6">
               <div className="mb-2 flex items-center gap-2">
                 <span className="font-semibold text-foreground">{p.source}</span>
-                <span className="rounded-full bg-mint-50 px-2 py-0.5 text-[11px] font-medium text-[#34d399]">{p.tag}</span>
+                <span className="rounded-full bg-mint-50 px-2 py-0.5 text-[11px] font-medium text-[#34d399]">
+                  {p.tag}
+                </span>
               </div>
               <p className="text-[15px] leading-relaxed text-foreground/75">
                 {p.takeaway[lang as keyof typeof p.takeaway] ?? p.takeaway.en}
@@ -1144,7 +1774,7 @@ function FaqRow({
         type="button"
         onClick={onToggle}
         aria-expanded={open}
-        className="flex w-full items-center justify-between gap-6 px-7 py-6 text-left"
+        className="flex w-full items-center justify-between gap-6 px-7 py-6 text-start"
       >
         <span className="text-[17px] font-bold text-foreground sm:text-[18px]">{item.q}</span>
         <ChevronDown
@@ -1153,7 +1783,9 @@ function FaqRow({
       </button>
       {open && (
         <div className="px-7 pb-7 -mt-1">
-          <p className="text-[15px] leading-relaxed text-muted-foreground sm:text-[16px]">{item.a}</p>
+          <p className="text-[15px] leading-relaxed text-muted-foreground sm:text-[16px]">
+            {item.a}
+          </p>
           {item.linkLabel && (
             <a
               href={REFERRAL_URL}
@@ -1211,22 +1843,42 @@ function AppleIcon({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" className={className} aria-hidden>
       <defs>
-        <linearGradient id={gradientId} x1="4" y1="3" x2="20" y2="21" gradientUnits="userSpaceOnUse">
+        <linearGradient
+          id={gradientId}
+          x1="4"
+          y1="3"
+          x2="20"
+          y2="21"
+          gradientUnits="userSpaceOnUse"
+        >
           <stop className="apple-stop-cyan" />
           <stop offset="0.48" className="apple-stop-green" />
           <stop offset="1" className="apple-stop-gold" />
         </linearGradient>
       </defs>
-      <path fill={`url(#${gradientId})`} d="M12.2 6.35c-.07-1.57.58-2.72 1.98-3.62.27 1.54-.34 2.82-1.98 3.62Zm6.42 8.76c-.45 1.05-.99 2.02-1.72 2.93-.98 1.25-1.8 2.12-3.18 2.12-1.21 0-1.61-.75-3.03-.75-1.47 0-1.92.72-3.06.75-1.32.05-2.33-1.14-3.32-2.4C2.26 15.15 2.05 12.1 3.3 10.16a4.8 4.8 0 0 1 4.08-2.34c1.28 0 2.48.83 3.25.83.75 0 2.16-1.03 3.65-.88a4.46 4.46 0 0 1 3.48 1.88c-3.12 1.86-2.4 5.96.86 7.46Z" />
+      <path
+        fill={`url(#${gradientId})`}
+        d="M12.2 6.35c-.07-1.57.58-2.72 1.98-3.62.27 1.54-.34 2.82-1.98 3.62Zm6.42 8.76c-.45 1.05-.99 2.02-1.72 2.93-.98 1.25-1.8 2.12-3.18 2.12-1.21 0-1.61-.75-3.03-.75-1.47 0-1.92.72-3.06.75-1.32.05-2.33-1.14-3.32-2.4C2.26 15.15 2.05 12.1 3.3 10.16a4.8 4.8 0 0 1 4.08-2.34c1.28 0 2.48.83 3.25.83.75 0 2.16-1.03 3.65-.88a4.46 4.46 0 0 1 3.48 1.88c-3.12 1.86-2.4 5.96.86 7.46Z"
+      />
     </svg>
   );
 }
 
-function PlatformIconBadge({ platform, size = "large" }: { platform: "mac" | "win"; size?: "large" | "small" }) {
+function PlatformIconBadge({
+  platform,
+  size = "large",
+}: {
+  platform: "mac" | "win";
+  size?: "large" | "small";
+}) {
   const iconClass = size === "large" ? "h-5 w-5" : "h-4 w-4";
   return (
     <span className={`download-platform-icon download-platform-icon-${size}`}>
-      {platform === "win" ? <WindowsIcon className={iconClass} /> : <AppleIcon className={iconClass} />}
+      {platform === "win" ? (
+        <WindowsIcon className={iconClass} />
+      ) : (
+        <AppleIcon className={iconClass} />
+      )}
     </span>
   );
 }
@@ -1264,7 +1916,7 @@ function DownloadButton() {
           href={REFERRAL_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 py-4 pl-6 pr-4 text-[16px] font-semibold transition hover:bg-white/5"
+          className="inline-flex items-center gap-3 py-4 ps-6 pe-4 text-[16px] font-semibold transition hover:bg-white/5"
         >
           <PlatformIconBadge platform={os} />
           {label}
@@ -1277,15 +1929,21 @@ function DownloadButton() {
           aria-label="Choose platform"
           className="inline-flex items-center gap-2 border-l border-white/15 px-4 transition hover:bg-white/5"
         >
-          <span className={os === "mac" ? "opacity-100" : "opacity-45"}><PlatformIconBadge platform="mac" size="small" /></span>
-          <span className={os === "win" ? "opacity-100" : "opacity-45"}><PlatformIconBadge platform="win" size="small" /></span>
-          <ChevronDown className={`h-4 w-4 text-white/70 transition-transform ${open ? "rotate-180" : ""}`} />
+          <span className={os === "mac" ? "opacity-100" : "opacity-45"}>
+            <PlatformIconBadge platform="mac" size="small" />
+          </span>
+          <span className={os === "win" ? "opacity-100" : "opacity-45"}>
+            <PlatformIconBadge platform="win" size="small" />
+          </span>
+          <ChevronDown
+            className={`h-4 w-4 text-white/70 transition-transform ${open ? "rotate-180" : ""}`}
+          />
         </button>
       </div>
       {open && (
         <div
           role="menu"
-          className="absolute left-1/2 top-full z-50 mt-2 w-64 -translate-x-1/2 overflow-hidden rounded-2xl border border-border/70 bg-popover p-1.5 text-left shadow-elegant"
+          className="absolute start-1/2 top-full z-50 mt-2 w-64 -translate-x-1/2 overflow-hidden rounded-2xl border border-border/70 bg-popover p-1.5 text-start shadow-elegant"
         >
           {options.map((o, i) => (
             <a
@@ -1299,7 +1957,7 @@ function DownloadButton() {
             >
               <PlatformIconBadge platform={o.os} size="small" />
               <span className="font-medium">{o.name}</span>
-              <span className="ml-auto text-[13px] text-[#e8eef9]/45">{o.variant}</span>
+              <span className="ms-auto text-[13px] text-[#e8eef9]/45">{o.variant}</span>
             </a>
           ))}
         </div>
@@ -1337,14 +1995,24 @@ function FinalCta() {
 }
 
 /* ---------- Footer ---------- */
-function FooterCol({ heading, links }: { heading: string; links: { href: string; label: string }[] }) {
+function FooterCol({
+  heading,
+  links,
+}: {
+  heading: string;
+  links: { href: string; label: string }[];
+}) {
   return (
     <div>
-      <h3 className="mb-3 text-[13px] font-semibold uppercase tracking-wide text-foreground/50">{heading}</h3>
+      <h3 className="mb-3 text-[13px] font-semibold uppercase tracking-wide text-foreground/50">
+        {heading}
+      </h3>
       <ul className="space-y-2.5">
         {links.map((l) => (
           <li key={l.href}>
-            <a href={l.href} className="text-[15px] text-foreground/75 hover:text-foreground">{l.label}</a>
+            <a href={l.href} className="text-[15px] text-foreground/75 hover:text-foreground">
+              {l.label}
+            </a>
           </li>
         ))}
       </ul>
@@ -1355,7 +2023,7 @@ function FooterCol({ heading, links }: { heading: string; links: { href: string;
 function Footer() {
   const { t, lang } = useI18n();
   const base = lang === "en" ? "" : `/${lang}`;
-  const langs: Lang[] = ["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr"];
+  const langs: Lang[] = ["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr", "ar"];
   const langHome = (l: Lang) => (l === "en" ? "/" : `/${l}`);
   return (
     <footer className="border-t border-border/70 bg-background pt-16 pb-10">
@@ -1363,8 +2031,12 @@ function Footer() {
         <div className="grid gap-10 md:grid-cols-[1.6fr_2.2fr]">
           <div className="max-w-xs">
             <Logo size={22} />
-            <p className="mt-4 text-[15px] leading-relaxed text-foreground/70">{t.footer.tagline}</p>
-            <p className="mt-4 text-[13px] leading-relaxed text-muted-foreground">{t.footer.disclosure}</p>
+            <p className="mt-4 text-[15px] leading-relaxed text-foreground/70">
+              {t.footer.tagline}
+            </p>
+            <p className="mt-4 text-[13px] leading-relaxed text-muted-foreground">
+              {t.footer.disclosure}
+            </p>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
             <FooterCol
@@ -1403,7 +2075,9 @@ function Footer() {
         </div>
 
         <div className="mt-14 border-t border-border/60 pt-8">
-          <p className="mb-4 text-[15px] font-medium text-muted-foreground">{t.footer.featuredIn}</p>
+          <p className="mb-4 text-[15px] font-medium text-muted-foreground">
+            {t.footer.featuredIn}
+          </p>
           <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
             {rvPress.map((p, i) => (
               <a
@@ -1416,7 +2090,10 @@ function Footer() {
                 {p.source}
               </a>
             ))}
-            <a href={`${base}/reviews`} className="text-[14px] font-medium text-[#34d399] hover:underline">
+            <a
+              href={`${base}/reviews`}
+              className="text-[14px] font-medium text-[#34d399] hover:underline"
+            >
               {t.nav.reviews}
             </a>
           </div>
@@ -1431,12 +2108,16 @@ function Footer() {
           ))}
         </div>
 
-        <p className="mt-8 max-w-3xl text-[13px] leading-relaxed text-muted-foreground/80">{t.footer.about}</p>
+        <p className="mt-8 max-w-3xl text-[13px] leading-relaxed text-muted-foreground/80">
+          {t.footer.about}
+        </p>
 
         <div className="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-border/60 pt-6 text-[13px] text-muted-foreground">
           <div className="flex items-center gap-2">
             <Logo size={16} />
-            <span>· © {new Date().getFullYear()} Accio Work. {t.footer.rights}</span>
+            <span>
+              · © {new Date().getFullYear()} Accio Work. {t.footer.rights}
+            </span>
           </div>
         </div>
       </div>
@@ -1453,11 +2134,15 @@ function CalculatorTeaser() {
     <section className="bg-background py-20 sm:py-28">
       <div className="mx-auto max-w-[1200px] px-6">
         <div className="overflow-hidden rounded-[32px] bg-gradient-to-br from-[#0a1120] to-[#0f2e26] px-8 py-14 text-center sm:px-16">
-          <p className="text-sm font-semibold uppercase tracking-wide text-[#5eead4]">{rc.kicker}</p>
+          <p className="text-sm font-semibold uppercase tracking-wide text-[#5eead4]">
+            {rc.kicker}
+          </p>
           <h2 className="mx-auto mt-3 text-[28px] font-bold tracking-tight text-white sm:text-[40px]">
             {rc.h1}
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-[16px] leading-relaxed text-white/70">{rc.intro}</p>
+          <p className="mx-auto mt-4 max-w-xl text-[16px] leading-relaxed text-white/70">
+            {rc.intro}
+          </p>
           <a
             href={roiHref}
             className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#34d399] px-7 py-3.5 font-semibold text-white transition hover:brightness-110"
@@ -1498,19 +2183,93 @@ function MobileStickyCta() {
   );
 }
 
-const STATS: Record<string, { heading: string; users: string; suppliers: string; products: string; note: string }> = {
-  en: { heading: "Powered by Accio, by Alibaba", users: "monthly active users", suppliers: "verified suppliers", products: "products", note: "Accio / Alibaba figures" },
-  ru: { heading: "Работает на Accio от Alibaba", users: "активных пользователей в месяц", suppliers: "проверенных поставщиков", products: "товаров", note: "Данные Accio / Alibaba" },
-  de: { heading: "Angetrieben von Accio, von Alibaba", users: "monatlich aktive Nutzer", suppliers: "verifizierte Lieferanten", products: "Produkte", note: "Zahlen von Accio / Alibaba" },
-  it: { heading: "Basato su Accio, di Alibaba", users: "utenti attivi al mese", suppliers: "fornitori verificati", products: "prodotti", note: "Dati Accio / Alibaba" },
-  es: { heading: "Con la tecnología de Accio, de Alibaba", users: "usuarios activos al mes", suppliers: "proveedores verificados", products: "productos", note: "Datos de Accio / Alibaba" },
-  zh: { heading: "由阿里巴巴 Accio 提供支持", users: "月活跃用户", suppliers: "已核验供应商", products: "件商品", note: "数据来自 Accio / Alibaba" },
-  pt: { heading: "Com tecnologia Accio, da Alibaba", users: "usuários ativos por mês", suppliers: "fornecedores verificados", products: "produtos", note: "Dados Accio / Alibaba" },
-  hi: { heading: "Accio द्वारा संचालित, Alibaba से", users: "मासिक सक्रिय उपयोगकर्ता", suppliers: "सत्यापित सप्लायर", products: "उत्पाद", note: "Accio / Alibaba के आंकड़े" },
-  fr: { heading: "Propulsé par Accio, d'Alibaba", users: "utilisateurs actifs par mois", suppliers: "fournisseurs vérifiés", products: "produits", note: "Chiffres Accio / Alibaba" },
+const STATS: Record<
+  string,
+  { heading: string; users: string; suppliers: string; products: string; note: string }
+> = {
+  en: {
+    heading: "Powered by Accio, by Alibaba",
+    users: "monthly active users",
+    suppliers: "verified suppliers",
+    products: "products",
+    note: "Accio / Alibaba figures",
+  },
+  ru: {
+    heading: "Работает на Accio от Alibaba",
+    users: "активных пользователей в месяц",
+    suppliers: "проверенных поставщиков",
+    products: "товаров",
+    note: "Данные Accio / Alibaba",
+  },
+  de: {
+    heading: "Angetrieben von Accio, von Alibaba",
+    users: "monatlich aktive Nutzer",
+    suppliers: "verifizierte Lieferanten",
+    products: "Produkte",
+    note: "Zahlen von Accio / Alibaba",
+  },
+  it: {
+    heading: "Basato su Accio, di Alibaba",
+    users: "utenti attivi al mese",
+    suppliers: "fornitori verificati",
+    products: "prodotti",
+    note: "Dati Accio / Alibaba",
+  },
+  es: {
+    heading: "Con la tecnología de Accio, de Alibaba",
+    users: "usuarios activos al mes",
+    suppliers: "proveedores verificados",
+    products: "productos",
+    note: "Datos de Accio / Alibaba",
+  },
+  zh: {
+    heading: "由阿里巴巴 Accio 提供支持",
+    users: "月活跃用户",
+    suppliers: "已核验供应商",
+    products: "件商品",
+    note: "数据来自 Accio / Alibaba",
+  },
+  pt: {
+    heading: "Com tecnologia Accio, da Alibaba",
+    users: "usuários ativos por mês",
+    suppliers: "fornecedores verificados",
+    products: "produtos",
+    note: "Dados Accio / Alibaba",
+  },
+  hi: {
+    heading: "Accio द्वारा संचालित, Alibaba से",
+    users: "मासिक सक्रिय उपयोगकर्ता",
+    suppliers: "सत्यापित सप्लायर",
+    products: "उत्पाद",
+    note: "Accio / Alibaba के आंकड़े",
+  },
+  fr: {
+    heading: "Propulsé par Accio, d'Alibaba",
+    users: "utilisateurs actifs par mois",
+    suppliers: "fournisseurs vérifiés",
+    products: "produits",
+    note: "Chiffres Accio / Alibaba",
+  },
+  ar: {
+    heading: "مدعوم بـ Accio من Alibaba",
+    users: "مستخدم نشط شهرياً",
+    suppliers: "مورّد موثوق",
+    products: "منتج",
+    note: "أرقام Accio / Alibaba",
+  },
 };
 
-function CountUp({ value, decimals, suffix, run }: { value: number; decimals: number; suffix: string; run: boolean }) {
+function CountUp({
+  value,
+  decimals,
+  suffix,
+  run,
+}: {
+  value: number;
+  decimals: number;
+  suffix: string;
+  run: boolean;
+}) {
   const [display, setDisplay] = useState(value);
   const animated = useRef(false);
   useEffect(() => {
@@ -1537,7 +2296,10 @@ function CountUp({ value, decimals, suffix, run }: { value: number; decimals: nu
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
   }, [run, value]);
-  const text = display.toLocaleString("en-US", { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
+  const text = display.toLocaleString("en-US", {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals,
+  });
   return (
     <span>
       {text}
@@ -1558,7 +2320,9 @@ function AccioStats() {
   return (
     <section ref={ref} className="border-y border-border bg-card py-14 sm:py-16">
       <div className="mx-auto max-w-[1100px] px-6 text-center">
-        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#34d399]">{s.heading}</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#34d399]">
+          {s.heading}
+        </p>
         <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-3">
           {items.map((it) => (
             <div key={it.l} className="flex flex-col items-center">

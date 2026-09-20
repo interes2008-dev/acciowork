@@ -18,6 +18,7 @@ const IMG_ALT: Record<QzLang, string> = {
   pt: "Um caminho de decisão ramificado com marcas até um alvo",
   hi: "चेकमार्क वाला शाखाओं वाला निर्णय पथ लक्ष्य तक",
   fr: "Un chemin de décision ramifié avec des coches vers une cible",
+  ar: "مسار قرار متفرّع بعلامات صحّ يقود إلى هدف",
 };
 
 const SHARE: Record<QzLang, { share: string; copied: string }> = {
@@ -30,6 +31,7 @@ const SHARE: Record<QzLang, { share: string; copied: string }> = {
   pt: { share: "Compartilhar resultado", copied: "Link copiado" },
   hi: { share: "परिणाम शेयर करें", copied: "लिंक कॉपी हो गया" },
   fr: { share: "Partager le résultat", copied: "Lien copié" },
+  ar: { share: "شارك النتيجة", copied: "نُسخ الرابط" },
 };
 
 function homeHref(lang: QzLang) {
@@ -42,7 +44,11 @@ function Shell({ lang, children }: { lang: QzLang; children: ReactNode }) {
     <div className="min-h-screen bg-background text-foreground">
       <header className="border-b border-border bg-background/80 backdrop-blur">
         <div className="mx-auto flex max-w-3xl items-center justify-between px-5 py-4">
-          <a href={homeHref(lang)} className="flex items-center gap-1.5 font-bold tracking-tight text-foreground" style={{ fontSize: 22 }}>
+          <a
+            href={homeHref(lang)}
+            className="flex items-center gap-1.5 font-bold tracking-tight text-foreground"
+            style={{ fontSize: 22 }}
+          >
             <svg width={21} height={22} viewBox="0 0 28 28" aria-hidden>
               <defs>
                 <linearGradient id="accioTri" x1="0" y1="1" x2="1" y2="0">
@@ -58,17 +64,24 @@ function Shell({ lang, children }: { lang: QzLang; children: ReactNode }) {
           <div className="flex items-center gap-2 sm:gap-3">
             <ThemeToggle />
             <LangMenu lang={lang} />
-            <a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer nofollow"
-            className="whitespace-nowrap rounded-full bg-[#34d399] px-3 py-2 text-[13px] font-semibold text-white transition hover:brightness-110 sm:px-4 sm:text-sm">
-            {c.ctaFit}
-          </a>
+            <a
+              href={REFERRAL_URL}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="whitespace-nowrap rounded-full bg-[#34d399] px-3 py-2 text-[13px] font-semibold text-white transition hover:brightness-110 sm:px-4 sm:text-sm"
+            >
+              {c.ctaFit}
+            </a>
           </div>
         </div>
       </header>
       {children}
       <footer className="border-t border-border bg-card">
         <div className="mx-auto max-w-3xl px-5 py-8 text-sm text-foreground/68">
-          <a href={homeHref(lang)} className="inline-flex items-center gap-1.5 hover:text-foreground/85">
+          <a
+            href={homeHref(lang)}
+            className="inline-flex items-center gap-1.5 hover:text-foreground/85"
+          >
             <ArrowLeft className="h-4 w-4" />
           </a>
         </div>
@@ -99,7 +112,10 @@ export function FitQuiz({ lang }: { lang: QzLang }) {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    if (skipSync.current) { skipSync.current = false; return; }
+    if (skipSync.current) {
+      skipSync.current = false;
+      return;
+    }
     if (done && answers.every((v) => v !== null)) {
       const q = new URLSearchParams();
       q.set("a", answers.join("-"));
@@ -113,13 +129,20 @@ export function FitQuiz({ lang }: { lang: QzLang }) {
     if (typeof window === "undefined") return;
     const shareUrl = window.location.href;
     try {
-      if (navigator.share) { await navigator.share({ title: qzChrome[lang].h1, url: shareUrl }); return; }
-    } catch { /* cancelled */ }
+      if (navigator.share) {
+        await navigator.share({ title: qzChrome[lang].h1, url: shareUrl });
+        return;
+      }
+    } catch {
+      /* cancelled */
+    }
     try {
       await navigator.clipboard.writeText(shareUrl);
       setShared(true);
       setTimeout(() => setShared(false), 1800);
-    } catch { /* blocked */ }
+    } catch {
+      /* blocked */
+    }
   }
 
   const total = qzQuestions.length;
@@ -138,7 +161,10 @@ export function FitQuiz({ lang }: { lang: QzLang }) {
     setDone(false);
   }
 
-  const score = answers.reduce<number>((sum, a, i) => sum + (a !== null ? qzQuestions[i].options[a].score : 0), 0);
+  const score = answers.reduce<number>(
+    (sum, a, i) => sum + (a !== null ? qzQuestions[i].options[a].score : 0),
+    0,
+  );
   const tier = score >= 7 ? "strong" : score >= 4 ? "partial" : "weak";
   const result = qzResults[tier];
 
@@ -147,20 +173,33 @@ export function FitQuiz({ lang }: { lang: QzLang }) {
       <main className="mx-auto max-w-3xl px-5 py-10 sm:py-14">
         {!done ? (
           <>
-            <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-[#34d399]">{c.kicker}</p>
+            <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-[#34d399]">
+              {c.kicker}
+            </p>
             <h1 className="text-3xl font-bold tracking-tight sm:text-[38px]">{c.h1}</h1>
             <p className="mt-3 max-w-2xl text-lg leading-relaxed text-foreground/75">{c.intro}</p>
-            <img src="/img/tool-quiz.webp" alt={IMG_ALT[lang]} width={800} height={800} loading="eager" className="mx-auto mt-6 w-full max-w-sm" />
+            <img
+              src="/img/tool-quiz.webp"
+              alt={IMG_ALT[lang]}
+              width={800}
+              height={800}
+              loading="eager"
+              className="mx-auto mt-6 w-full max-w-sm"
+            />
 
             {/* progress */}
             <div className="mt-8 mb-6">
               <div className="mb-2 flex justify-between text-xs font-medium text-foreground/58">
-                <span>{c.question} {step + 1} {c.of} {total}</span>
+                <span>
+                  {c.question} {step + 1} {c.of} {total}
+                </span>
                 <span>{Math.round(((step + (answered ? 1 : 0)) / total) * 100)}%</span>
               </div>
               <div className="h-2 overflow-hidden rounded-full bg-[#34d399]/15">
-                <div className="h-full bg-[#34d399] transition-all duration-300"
-                  style={{ width: `${((step + (answered ? 1 : 0)) / total) * 100}%` }} />
+                <div
+                  className="h-full bg-[#34d399] transition-all duration-300"
+                  style={{ width: `${((step + (answered ? 1 : 0)) / total) * 100}%` }}
+                />
               </div>
             </div>
 
@@ -170,12 +209,19 @@ export function FitQuiz({ lang }: { lang: QzLang }) {
                 {qzQuestions[step].options.map((o, i) => {
                   const sel = answers[step] === i;
                   return (
-                    <button key={i} onClick={() => pick(i)}
-                      className={`flex w-full items-center justify-between gap-3 rounded-2xl border px-5 py-4 text-left text-[15px] font-medium transition ${
-                        sel ? "border-[#34d399] bg-muted text-foreground" : "border-border bg-secondary text-foreground/80 hover:border-[#34d399]/40"
-                      }`}>
+                    <button
+                      key={i}
+                      onClick={() => pick(i)}
+                      className={`flex w-full items-center justify-between gap-3 rounded-2xl border px-5 py-4 text-start text-[15px] font-medium transition ${
+                        sel
+                          ? "border-[#34d399] bg-muted text-foreground"
+                          : "border-border bg-secondary text-foreground/80 hover:border-[#34d399]/40"
+                      }`}
+                    >
                       <span>{o.label[lang]}</span>
-                      <span className={`grid h-5 w-5 shrink-0 place-items-center rounded-full border ${sel ? "border-[#34d399] bg-[#34d399] text-white" : "border-black/20"}`}>
+                      <span
+                        className={`grid h-5 w-5 shrink-0 place-items-center rounded-full border ${sel ? "border-[#34d399] bg-[#34d399] text-white" : "border-black/20"}`}
+                      >
                         {sel && <Check className="h-3.5 w-3.5" />}
                       </span>
                     </button>
@@ -185,28 +231,46 @@ export function FitQuiz({ lang }: { lang: QzLang }) {
             </div>
 
             <div className="mt-6 flex items-center justify-between">
-              <button onClick={() => setStep(Math.max(0, step - 1))} disabled={step === 0}
-                className="inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium text-foreground/68 disabled:opacity-40">
+              <button
+                onClick={() => setStep(Math.max(0, step - 1))}
+                disabled={step === 0}
+                className="inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium text-foreground/68 disabled:opacity-40"
+              >
                 <ArrowLeft className="h-4 w-4" /> {c.back}
               </button>
-              <button onClick={next} disabled={!answered}
-                className="inline-flex items-center gap-2 rounded-full bg-[#34d399] px-6 py-3 text-sm font-semibold text-white transition hover:brightness-110 disabled:opacity-40">
+              <button
+                onClick={next}
+                disabled={!answered}
+                className="inline-flex items-center gap-2 rounded-full bg-[#34d399] px-6 py-3 text-sm font-semibold text-white transition hover:brightness-110 disabled:opacity-40"
+              >
                 {step < total - 1 ? c.next : c.seeResult} <ArrowRight className="h-4 w-4" />
               </button>
             </div>
           </>
         ) : (
           <>
-            <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-[#34d399]">{c.resultKicker}</p>
-            <div className={`rounded-3xl border p-7 sm:p-9 ${tier === "weak" ? "border-border bg-card" : "border-[#34d399]/30 bg-muted"}`}>
-              <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">{result.title[lang]}</h1>
-              <p className="mt-4 text-[17px] leading-relaxed text-foreground/80">{result.body[lang]}</p>
+            <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-[#34d399]">
+              {c.resultKicker}
+            </p>
+            <div
+              className={`rounded-3xl border p-7 sm:p-9 ${tier === "weak" ? "border-border bg-card" : "border-[#34d399]/30 bg-muted"}`}
+            >
+              <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">
+                {result.title[lang]}
+              </h1>
+              <p className="mt-4 text-[17px] leading-relaxed text-foreground/80">
+                {result.body[lang]}
+              </p>
 
               {result.cta ? (
                 <div className="mt-7">
                   <p className="mb-3 text-sm text-foreground/68">{c.tryLine}</p>
-                  <a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer nofollow"
-                    className="inline-flex items-center gap-2 rounded-full bg-[#34d399] px-7 py-3.5 font-semibold text-white transition hover:brightness-110">
+                  <a
+                    href={REFERRAL_URL}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    className="inline-flex items-center gap-2 rounded-full bg-[#34d399] px-7 py-3.5 font-semibold text-white transition hover:brightness-110"
+                  >
                     {c.ctaFit} <ArrowRight className="h-4 w-4" />
                   </a>
                   <p className="mt-2 text-xs text-foreground/58">{c.ctaNote}</p>
@@ -219,11 +283,21 @@ export function FitQuiz({ lang }: { lang: QzLang }) {
             </div>
 
             <div className="mt-6 flex items-center gap-4">
-              <button onClick={reset} className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground/68 hover:text-foreground/90">
+              <button
+                onClick={reset}
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground/68 hover:text-foreground/90"
+              >
                 <RotateCcw className="h-4 w-4" /> {c.retake}
               </button>
-              <button onClick={onShare} className="inline-flex items-center gap-1.5 rounded-full border border-border bg-secondary px-4 py-2 text-sm font-semibold text-foreground transition hover:border-[#34d399]/50">
-                {shared ? <Check className="h-4 w-4 text-[#34d399]" /> : <Share2 className="h-4 w-4" />}
+              <button
+                onClick={onShare}
+                className="inline-flex items-center gap-1.5 rounded-full border border-border bg-secondary px-4 py-2 text-sm font-semibold text-foreground transition hover:border-[#34d399]/50"
+              >
+                {shared ? (
+                  <Check className="h-4 w-4 text-[#34d399]" />
+                ) : (
+                  <Share2 className="h-4 w-4" />
+                )}
                 {shared ? SHARE[lang].copied : SHARE[lang].share}
               </button>
             </div>

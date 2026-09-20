@@ -21,6 +21,7 @@ const SHARE: Record<DutyLang, { share: string; copied: string }> = {
   pt: { share: "Compartilhar resultado", copied: "Link copiado" },
   hi: { share: "परिणाम शेयर करें", copied: "लिंक कॉपी हो गया" },
   fr: { share: "Partager le résultat", copied: "Lien copié" },
+  ar: { share: "شارك النتيجة", copied: "نُسخ الرابط" },
 };
 
 function homeHref(lang: DutyLang) {
@@ -33,7 +34,11 @@ function Shell({ lang, children }: { lang: DutyLang; children: ReactNode }) {
     <div className="min-h-screen bg-background text-foreground">
       <header className="border-b border-border bg-background/80 backdrop-blur">
         <div className="mx-auto flex max-w-4xl items-center justify-between px-5 py-4">
-          <a href={homeHref(lang)} className="flex items-center gap-1.5 font-bold tracking-tight text-foreground" style={{ fontSize: 22 }}>
+          <a
+            href={homeHref(lang)}
+            className="flex items-center gap-1.5 font-bold tracking-tight text-foreground"
+            style={{ fontSize: 22 }}
+          >
             <svg width={21} height={22} viewBox="0 0 28 28" aria-hidden>
               <defs>
                 <linearGradient id="accioTri" x1="0" y1="1" x2="1" y2="0">
@@ -49,8 +54,12 @@ function Shell({ lang, children }: { lang: DutyLang; children: ReactNode }) {
           <div className="flex items-center gap-2 sm:gap-3">
             <ThemeToggle />
             <LangMenu lang={lang} />
-            <a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer nofollow"
-              className="whitespace-nowrap rounded-full bg-[#34d399] px-3 py-2 text-[13px] font-semibold text-white transition hover:brightness-110 sm:px-4 sm:text-sm">
+            <a
+              href={REFERRAL_URL}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="whitespace-nowrap rounded-full bg-[#34d399] px-3 py-2 text-[13px] font-semibold text-white transition hover:brightness-110 sm:px-4 sm:text-sm"
+            >
               {c.cta}
             </a>
           </div>
@@ -59,7 +68,10 @@ function Shell({ lang, children }: { lang: DutyLang; children: ReactNode }) {
       {children}
       <footer className="border-t border-border bg-card">
         <div className="mx-auto max-w-4xl px-5 py-8 text-sm text-foreground/68">
-          <a href={homeHref(lang)} className="inline-flex items-center gap-1.5 hover:text-foreground/85">
+          <a
+            href={homeHref(lang)}
+            className="inline-flex items-center gap-1.5 hover:text-foreground/85"
+          >
             <ArrowLeft className="h-4 w-4" />
           </a>
         </div>
@@ -73,7 +85,9 @@ function Field({ label, hint, children }: { label: string; hint?: string; childr
     <label className="block">
       <span className="mb-1.5 block text-sm font-medium text-foreground/75">{label}</span>
       {children}
-      {hint && <span className="mt-1 block text-xs leading-relaxed text-foreground/52">{hint}</span>}
+      {hint && (
+        <span className="mt-1 block text-xs leading-relaxed text-foreground/52">{hint}</span>
+      )}
     </label>
   );
 }
@@ -91,6 +105,7 @@ const IMG_ALT: Record<DutyLang, string> = {
   pt: "Um pacote passa pela alfândega com impostos somados ao custo",
   hi: "पार्सल कस्टम से गुज़रता है, लागत में शुल्क जुड़ते हैं",
   fr: "Un colis passe la douane avec des droits ajoutés au coût",
+  ar: "طرد يمرّ بالجمارك مع رسوم مضافة إلى التكلفة",
 };
 
 export function DutyCalculator({ lang }: { lang: DutyLang }) {
@@ -202,11 +217,22 @@ export function DutyCalculator({ lang }: { lang: DutyLang }) {
   return (
     <Shell lang={lang}>
       <main className="mx-auto max-w-4xl px-5 py-10 sm:py-14">
-        <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-[#34d399]">{c.kicker}</p>
-        <h1 className="text-3xl font-bold tracking-tight sm:text-[38px] sm:leading-tight">{c.h1}</h1>
+        <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-[#34d399]">
+          {c.kicker}
+        </p>
+        <h1 className="text-3xl font-bold tracking-tight sm:text-[38px] sm:leading-tight">
+          {c.h1}
+        </h1>
         <p className="mt-4 max-w-2xl text-lg leading-relaxed text-foreground/75">{c.intro}</p>
 
-        <img src="/img/landing-duty.webp" alt={IMG_ALT[lang]} width={640} height={640} loading="eager" className="mx-auto mt-8 w-full max-w-[260px]" />
+        <img
+          src="/img/landing-duty.webp"
+          alt={IMG_ALT[lang]}
+          width={640}
+          height={640}
+          loading="eager"
+          className="mx-auto mt-8 w-full max-w-[260px]"
+        />
 
         <div className="mt-8 grid gap-6 lg:grid-cols-2">
           {/* Inputs */}
@@ -215,32 +241,59 @@ export function DutyCalculator({ lang }: { lang: DutyLang }) {
               <div className="grid grid-cols-2 gap-4">
                 <Field label={c.productCost}>
                   <div className="flex items-center gap-2">
-                    <select value={cur} onChange={(e) => setCur(e.target.value)}
-                      className="rounded-xl border border-border bg-secondary px-2 py-2.5 text-[15px] focus:outline-none">
-                      {CURRENCIES.map((s) => <option key={s} value={s}>{s}</option>)}
+                    <select
+                      value={cur}
+                      onChange={(e) => setCur(e.target.value)}
+                      className="rounded-xl border border-border bg-secondary px-2 py-2.5 text-[15px] focus:outline-none"
+                    >
+                      {CURRENCIES.map((s) => (
+                        <option key={s} value={s}>
+                          {s}
+                        </option>
+                      ))}
                     </select>
-                    <input type="number" min={0} value={cost}
-                      onChange={(e) => setCost(parseFloat(e.target.value) || 0)} className={inputCls} />
+                    <input
+                      type="number"
+                      min={0}
+                      value={cost}
+                      onChange={(e) => setCost(parseFloat(e.target.value) || 0)}
+                      className={inputCls}
+                    />
                   </div>
                 </Field>
                 <Field label={c.units}>
-                  <input type="number" min={1} value={units}
-                    onChange={(e) => setUnits(parseInt(e.target.value) || 0)} className={inputCls} />
+                  <input
+                    type="number"
+                    min={1}
+                    value={units}
+                    onChange={(e) => setUnits(parseInt(e.target.value) || 0)}
+                    className={inputCls}
+                  />
                 </Field>
               </div>
 
               <Field label={c.shipping}>
-                <input type="number" min={0} value={ship}
-                  onChange={(e) => setShip(parseFloat(e.target.value) || 0)} className={inputCls} />
+                <input
+                  type="number"
+                  min={0}
+                  value={ship}
+                  onChange={(e) => setShip(parseFloat(e.target.value) || 0)}
+                  className={inputCls}
+                />
               </Field>
 
               <Field label={c.destination}>
                 <div className="flex gap-2">
                   {(["US", "EU", "UK"] as Dest[]).map((d) => (
-                    <button key={d} onClick={() => pickDest(d)}
+                    <button
+                      key={d}
+                      onClick={() => pickDest(d)}
                       className={`flex-1 rounded-xl border px-3 py-2.5 text-sm font-medium transition ${
-                        dest === d ? "border-[#34d399] bg-muted text-foreground" : "border-border text-foreground/75 hover:border-[#34d399]/40"
-                      }`}>
+                        dest === d
+                          ? "border-[#34d399] bg-muted text-foreground"
+                          : "border-border text-foreground/75 hover:border-[#34d399]/40"
+                      }`}
+                    >
                       {d === "US" ? c.dUS : d === "EU" ? c.dEU : c.dUK}
                     </button>
                   ))}
@@ -248,23 +301,41 @@ export function DutyCalculator({ lang }: { lang: DutyLang }) {
               </Field>
 
               <Field label={`${c.dutyRate}: ${duty}%`} hint={c.dutyHint}>
-                <input type="range" min={0} max={150} step={1} value={duty}
+                <input
+                  type="range"
+                  min={0}
+                  max={150}
+                  step={1}
+                  value={duty}
                   onChange={(e) => setDuty(parseInt(e.target.value))}
-                  className="w-full accent-[#34d399]" />
+                  className="w-full accent-[#34d399]"
+                />
               </Field>
 
               <Field label={`${c.importTax}: ${vat}%`} hint={c.importHint}>
-                <input type="range" min={0} max={30} step={1} value={vat}
+                <input
+                  type="range"
+                  min={0}
+                  max={30}
+                  step={1}
+                  value={vat}
                   onChange={(e) => setVat(parseInt(e.target.value))}
-                  className="w-full accent-[#34d399]" />
+                  className="w-full accent-[#34d399]"
+                />
               </Field>
 
               <Field label={c.sellPrice}>
                 <div className="flex items-center gap-2">
                   <span className="text-foreground/58">{cur}</span>
-                  <input type="number" min={0} value={sell}
-                    onChange={(e) => setSell(e.target.value === "" ? "" : parseFloat(e.target.value) || 0)}
-                    className={inputCls} />
+                  <input
+                    type="number"
+                    min={0}
+                    value={sell}
+                    onChange={(e) =>
+                      setSell(e.target.value === "" ? "" : parseFloat(e.target.value) || 0)
+                    }
+                    className={inputCls}
+                  />
                 </div>
               </Field>
             </div>
@@ -294,11 +365,19 @@ export function DutyCalculator({ lang }: { lang: DutyLang }) {
                   <div className="mt-2 grid grid-cols-2 gap-3 border-t border-border pt-3">
                     <div>
                       <dt className="text-xs text-foreground/58">{c.marginUnit}</dt>
-                      <dd className={`text-lg font-bold ${r.marginUnit >= 0 ? "text-foreground" : "text-red-600"}`}>{money(r.marginUnit)}</dd>
+                      <dd
+                        className={`text-lg font-bold ${r.marginUnit >= 0 ? "text-foreground" : "text-red-600"}`}
+                      >
+                        {money(r.marginUnit)}
+                      </dd>
                     </div>
                     <div>
                       <dt className="text-xs text-foreground/58">{c.marginPct}</dt>
-                      <dd className={`text-lg font-bold ${r.marginPct >= 0 ? "text-foreground" : "text-red-600"}`}>{r.marginPct.toFixed(1)}%</dd>
+                      <dd
+                        className={`text-lg font-bold ${r.marginPct >= 0 ? "text-foreground" : "text-red-600"}`}
+                      >
+                        {r.marginPct.toFixed(1)}%
+                      </dd>
                     </div>
                   </div>
                 )}
@@ -308,7 +387,11 @@ export function DutyCalculator({ lang }: { lang: DutyLang }) {
                 onClick={onShare}
                 className="mt-5 inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-4 py-2 text-sm font-semibold text-foreground transition hover:border-[#34d399]/50"
               >
-                {shared ? <Check className="h-4 w-4 text-[#34d399]" /> : <Share2 className="h-4 w-4" />}
+                {shared ? (
+                  <Check className="h-4 w-4 text-[#34d399]" />
+                ) : (
+                  <Share2 className="h-4 w-4" />
+                )}
                 {shared ? SHARE[lang].copied : SHARE[lang].share}
               </button>
             </div>
@@ -323,8 +406,12 @@ export function DutyCalculator({ lang }: { lang: DutyLang }) {
         {/* CTA */}
         <div className="mt-8 rounded-3xl bg-gradient-to-br from-[#0a1120] to-[#0f2e26] p-7 text-center sm:p-9">
           <p className="mx-auto max-w-2xl text-[16px] leading-relaxed text-white/85">{c.ctaLine}</p>
-          <a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer nofollow"
-            className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#34d399] px-7 py-3.5 font-semibold text-white transition hover:brightness-110">
+          <a
+            href={REFERRAL_URL}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#34d399] px-7 py-3.5 font-semibold text-white transition hover:brightness-110"
+          >
             {c.cta} <ArrowRight className="h-4 w-4" />
           </a>
           <p className="mt-2 text-xs text-white/50">{c.ctaNote}</p>

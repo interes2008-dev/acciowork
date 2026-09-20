@@ -97,12 +97,8 @@ export async function inspectPage(url: string, lang: string): Promise<PageFacts>
 
 export function evaluatePage(p: PageFacts): Issue[] {
   const issues: Issue[] = [];
-  const add = (
-    category: string,
-    severity: Issue["severity"],
-    message: string,
-    detail?: string,
-  ) => issues.push({ url: p.url, lang: p.lang, category, severity, message, detail });
+  const add = (category: string, severity: Issue["severity"], message: string, detail?: string) =>
+    issues.push({ url: p.url, lang: p.lang, category, severity, message, detail });
 
   if (p.status !== 200) {
     add("indexing", "critical", `Страница отвечает ${p.status}`, `HTTP ${p.status}`);
@@ -111,8 +107,10 @@ export function evaluatePage(p: PageFacts): Issue[] {
 
   if (!p.title) add("title", "critical", "Отсутствует <title>");
   else {
-    if (p.title.length < 20) add("title", "warning", "Слишком короткий title", `${p.title.length} симв.`);
-    if (p.title.length > 60) add("title", "warning", "Title длиннее 60 символов", `${p.title.length} симв.`);
+    if (p.title.length < 20)
+      add("title", "warning", "Слишком короткий title", `${p.title.length} симв.`);
+    if (p.title.length > 60)
+      add("title", "warning", "Title длиннее 60 символов", `${p.title.length} симв.`);
     if (/lovable/i.test(p.title)) add("title", "critical", "Дефолтный title", p.title);
   }
 
@@ -121,8 +119,14 @@ export function evaluatePage(p: PageFacts): Issue[] {
     if (p.description.length < 70)
       add("description", "warning", "Слишком короткое описание", `${p.description.length} симв.`);
     if (p.description.length > 160)
-      add("description", "warning", "Описание длиннее 160 символов", `${p.description.length} симв.`);
-    if (/lovable/i.test(p.description)) add("description", "critical", "Дефолтное описание", p.description);
+      add(
+        "description",
+        "warning",
+        "Описание длиннее 160 символов",
+        `${p.description.length} симв.`,
+      );
+    if (/lovable/i.test(p.description))
+      add("description", "critical", "Дефолтное описание", p.description);
   }
 
   if (!p.canonical) add("canonical", "critical", "Отсутствует canonical");
@@ -195,7 +199,9 @@ function covers(siteUrl: string, host: string) {
     return host === d || host.endsWith(`.${d}`);
   }
   try {
-    return new URL(siteUrl).hostname.toLowerCase().replace(/^www\./, "") === host.replace(/^www\./, "");
+    return (
+      new URL(siteUrl).hostname.toLowerCase().replace(/^www\./, "") === host.replace(/^www\./, "")
+    );
   } catch {
     return false;
   }

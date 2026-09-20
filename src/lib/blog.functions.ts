@@ -3,16 +3,12 @@ import { createClient } from "@supabase/supabase-js";
 import { z } from "zod";
 import type { Database } from "@/integrations/supabase/types";
 
-const LangSchema = z.enum(["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr"]);
+const LangSchema = z.enum(["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr", "ar"]);
 
 function publicClient() {
-  return createClient<Database>(
-    process.env.SUPABASE_URL!,
-    process.env.SUPABASE_PUBLISHABLE_KEY!,
-    {
-      auth: { storage: undefined, persistSession: false, autoRefreshToken: false },
-    },
-  );
+  return createClient<Database>(process.env.SUPABASE_URL!, process.env.SUPABASE_PUBLISHABLE_KEY!, {
+    auth: { storage: undefined, persistSession: false, autoRefreshToken: false },
+  });
 }
 
 export type ArticleListItem = {
@@ -34,7 +30,9 @@ export type ArticleFull = ArticleListItem & {
 
 export const listArticles = createServerFn({ method: "GET" })
   .inputValidator((input: unknown) =>
-    z.object({ lang: LangSchema, limit: z.number().int().min(1).max(200).default(50) }).parse(input),
+    z
+      .object({ lang: LangSchema, limit: z.number().int().min(1).max(200).default(50) })
+      .parse(input),
   )
   .handler(async ({ data }): Promise<ArticleListItem[]> => {
     const supabase = publicClient();
@@ -67,7 +65,9 @@ export const getArticle = createServerFn({ method: "GET" })
   .handler(async ({ data }): Promise<ArticleFull | null> => {
     const supabase = publicClient();
     const { data: row, error } = await (supabase.from("blog_articles") as any)
-      .select("id, slug, title, description, has_cover, reading_minutes, published_at, lang, body_md, keywords, topic_id")
+      .select(
+        "id, slug, title, description, has_cover, reading_minutes, published_at, lang, body_md, keywords, topic_id",
+      )
       .eq("lang", data.lang)
       .eq("slug", data.slug)
       .eq("status", "published")
@@ -129,7 +129,9 @@ export const getArticleBundle = createServerFn({ method: "GET" })
   .handler(async ({ data }): Promise<ArticleBundle | null> => {
     const supabase = publicClient();
     const { data: row, error } = await (supabase.from("blog_articles") as any)
-      .select("id, slug, title, description, has_cover, reading_minutes, published_at, lang, body_md, keywords, topic_id")
+      .select(
+        "id, slug, title, description, has_cover, reading_minutes, published_at, lang, body_md, keywords, topic_id",
+      )
       .eq("lang", data.lang)
       .eq("slug", data.slug)
       .eq("status", "published")
@@ -168,7 +170,7 @@ export const getArticleBundle = createServerFn({ method: "GET" })
       .neq("slug", article.slug)
       .order("published_at", { ascending: false })
       .limit(4);
-    const related = ((rel ?? []) as Array<{ slug: string; title: string; reading_minutes: number }>);
+    const related = (rel ?? []) as Array<{ slug: string; title: string; reading_minutes: number }>;
 
     return { article, alternates, related };
   });

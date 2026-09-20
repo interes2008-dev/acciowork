@@ -1,4 +1,4 @@
-export type Lang = "en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr";
+export type Lang = "en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr" | "ar";
 
 export type Testimonial = {
   name: string;
@@ -7,14 +7,7 @@ export type Testimonial = {
   text: string; // supports **highlight** markers
 };
 
-export type TabKey =
-  | "launch"
-  | "monitor"
-  | "source"
-  | "promote"
-  | "tools"
-  | "organize"
-  | "analyze";
+export type TabKey = "launch" | "monitor" | "source" | "promote" | "tools" | "organize" | "analyze";
 
 export type TabContent = {
   tabLabel: string;
@@ -146,7 +139,18 @@ export type Dict = {
     subheading: string;
     items: UseCase[];
   };
-  langNames: { en: string; ru: string; de: string; it: string; es: string; zh: string; pt: string; hi: string; fr: string };
+  langNames: {
+    en: string;
+    ru: string;
+    de: string;
+    it: string;
+    es: string;
+    zh: string;
+    pt: string;
+    hi: string;
+    fr: string;
+    ar: string;
+  };
 };
 
 const en: Dict = {
@@ -177,8 +181,7 @@ const en: Dict = {
     brand: "Work",
     tagline: "Your 24/7 agentic business team",
     pills: ["Zero learning curve", "Built for business", "Enterprise-grade security"],
-    desc:
-      "Automates your business end-to-end, research & analysis, sourcing & negotiation, marketing & sales, operations & CRM, delivering real profit.",
+    desc: "Automates your business end-to-end, research & analysis, sourcing & negotiation, marketing & sales, operations & CRM, delivering real profit.",
     cta: "Download for macOS",
     ctaBadge: "Apple Silicon",
     ctaNote: "For macOS 11+ and Windows 10+",
@@ -270,14 +273,45 @@ const en: Dict = {
     heading: "FAQ",
     readGuide: "Read the quickstart guide",
     items: [
-      { q: "How is Accio Work different from a normal AI chat tool?", a: "Typical chat tools only answer with text. Accio Work is an execution-oriented agent platform that can read local files, run terminal commands, control your browser, and call external APIs. It does not just tell you what to do, it helps you do the work.", linkLabel: "Read the quickstart guide" },
-      { q: "Which LLMs are supported?", a: "We currently support Gemini, GPT-4o, Claude, and Qwen. You can assign different models to different agents. Model access is routed through our gateway so you do not have to manage a complicated API-key setup.", linkLabel: "View agent capabilities" },
-      { q: "What can the browser automation do?", a: "Accio Work can control a real browser via Chrome DevTools Protocol. Agents can search the web, scrape pages, fill out forms, take screenshots, and navigate multi-step workflows, all hands-free. Browser access is treated as a sensitive capability and requires explicit permission.", linkLabel: "View agent tools" },
-      { q: "Can I schedule agents to run automatically?", a: "Yes. The Automations feature lets you create cron-like scheduled tasks, either by describing them in natural language in a chat, or by configuring them on the Automations page. Schedules run locally, so they work even without an internet connection. Missed runs are reconciled on restart.", linkLabel: "View automation docs" },
-      { q: "How do I connect an agent to Telegram or DingTalk?", a: "Open the Channels page in the client, choose the platform you need, and follow the setup guide to add a bot token. Accio Work supports Telegram, Discord, DingTalk, Lark (Feishu), and WeChat. Once connected, the agent can reply in chats or receive tasks automatically.", linkLabel: "View supported channels" },
-      { q: "What are Skills and how do they extend agents?", a: "Skills are plugin packs that give agents domain-specific abilities, code review, copywriting, SEO audit, and more. You can install skills from the marketplace or create your own. Accio Work also supports the Model Context Protocol (MCP) standard for integrating external tool servers.", linkLabel: "View skills management" },
-      { q: "Which platforms are supported?", a: "Accio Work is available for macOS (Apple Silicon and Intel) and Windows (x64). It is a native desktop application built with Electron, so you get full access to local system resources." },
-      { q: "Can multiple agents collaborate on a task?", a: "Yes. The Teams feature lets you create agent groups with a Team Lead and member agents. The TL can delegate subtasks, coordinate work through group chat, and orchestrate multi-agent workflows, useful for complex projects that benefit from specialized roles.", linkLabel: "View agent team docs" },
+      {
+        q: "How is Accio Work different from a normal AI chat tool?",
+        a: "Typical chat tools only answer with text. Accio Work is an execution-oriented agent platform that can read local files, run terminal commands, control your browser, and call external APIs. It does not just tell you what to do, it helps you do the work.",
+        linkLabel: "Read the quickstart guide",
+      },
+      {
+        q: "Which LLMs are supported?",
+        a: "We currently support Gemini, GPT-4o, Claude, and Qwen. You can assign different models to different agents. Model access is routed through our gateway so you do not have to manage a complicated API-key setup.",
+        linkLabel: "View agent capabilities",
+      },
+      {
+        q: "What can the browser automation do?",
+        a: "Accio Work can control a real browser via Chrome DevTools Protocol. Agents can search the web, scrape pages, fill out forms, take screenshots, and navigate multi-step workflows, all hands-free. Browser access is treated as a sensitive capability and requires explicit permission.",
+        linkLabel: "View agent tools",
+      },
+      {
+        q: "Can I schedule agents to run automatically?",
+        a: "Yes. The Automations feature lets you create cron-like scheduled tasks, either by describing them in natural language in a chat, or by configuring them on the Automations page. Schedules run locally, so they work even without an internet connection. Missed runs are reconciled on restart.",
+        linkLabel: "View automation docs",
+      },
+      {
+        q: "How do I connect an agent to Telegram or DingTalk?",
+        a: "Open the Channels page in the client, choose the platform you need, and follow the setup guide to add a bot token. Accio Work supports Telegram, Discord, DingTalk, Lark (Feishu), and WeChat. Once connected, the agent can reply in chats or receive tasks automatically.",
+        linkLabel: "View supported channels",
+      },
+      {
+        q: "What are Skills and how do they extend agents?",
+        a: "Skills are plugin packs that give agents domain-specific abilities, code review, copywriting, SEO audit, and more. You can install skills from the marketplace or create your own. Accio Work also supports the Model Context Protocol (MCP) standard for integrating external tool servers.",
+        linkLabel: "View skills management",
+      },
+      {
+        q: "Which platforms are supported?",
+        a: "Accio Work is available for macOS (Apple Silicon and Intel) and Windows (x64). It is a native desktop application built with Electron, so you get full access to local system resources.",
+      },
+      {
+        q: "Can multiple agents collaborate on a task?",
+        a: "Yes. The Teams feature lets you create agent groups with a Team Lead and member agents. The TL can delegate subtasks, coordinate work through group chat, and orchestrate multi-agent workflows, useful for complex projects that benefit from specialized roles.",
+        linkLabel: "View agent team docs",
+      },
     ],
   },
   cta: {
@@ -293,8 +327,10 @@ const en: Dict = {
     partneredWith: "Partnered with",
     rights: "All rights reserved.",
     tagline: "The AI agent that runs your sourcing, research and busywork.",
-    about: "Compare Accio Work with other AI agents, estimate the hours it saves, grab ready supplier templates and read cross border sourcing guides.",
-    disclosure: "Independent resource about Accio Work, a product of Alibaba. Buttons open the official site through a referral link.",
+    about:
+      "Compare Accio Work with other AI agents, estimate the hours it saves, grab ready supplier templates and read cross border sourcing guides.",
+    disclosure:
+      "Independent resource about Accio Work, a product of Alibaba. Buttons open the official site through a referral link.",
     colProduct: "Product",
     colTools: "Tools",
     colResources: "Resources",
@@ -304,23 +340,74 @@ const en: Dict = {
   availability: "Works on macOS and Windows. Or start right in your browser, no install needed.",
   steps: {
     heading: "From idea to done in four steps",
-    subheading: "No setup projects, no developers. You describe the outcome, the agents handle the work.",
+    subheading:
+      "No setup projects, no developers. You describe the outcome, the agents handle the work.",
     items: [
-      { title: "Tell it your goal", body: "Type what you want in plain words. «Find three verified suppliers for LED mirrors under $8.» There are no prompts to learn." },
-      { title: "Agents get to work", body: "A general agent plans the job and pulls in specialists for sourcing, design or copy. Each keeps its own memory." },
-      { title: "You review and approve", body: "Every critical step waits for your yes. Nothing is sent, bought or published without you seeing it first." },
-      { title: "Ship the result", body: "Live listings, a ready store, a supplier shortlist, a scheduled campaign. Real output you can use the same day." },
+      {
+        title: "Tell it your goal",
+        body: "Type what you want in plain words. «Find three verified suppliers for LED mirrors under $8.» There are no prompts to learn.",
+      },
+      {
+        title: "Agents get to work",
+        body: "A general agent plans the job and pulls in specialists for sourcing, design or copy. Each keeps its own memory.",
+      },
+      {
+        title: "You review and approve",
+        body: "Every critical step waits for your yes. Nothing is sent, bought or published without you seeing it first.",
+      },
+      {
+        title: "Ship the result",
+        body: "Live listings, a ready store, a supplier shortlist, a scheduled campaign. Real output you can use the same day.",
+      },
     ],
   },
   pricing: {
     heading: "Simple pricing. Start free.",
-    subheading: "Create your account without a card. You only pay when a heavy task spends credits.",
+    subheading:
+      "Create your account without a card. You only pay when a heavy task spends credits.",
     perksTitle: "Every plan includes",
     note: "Prices and credit costs are set by Accio and can change. Check the app for current details.",
     plans: [
-      { name: "Free", price: "$0", priceNote: "no card needed", tagline: "Everything you need to launch your first project.", features: ["24/7 general AI agent", "50+ one-click integrations", "Browser automation", "Market research from real trade data"], cta: "Start free" },
-      { name: "Pro", price: "Usage-based", priceNote: "credits for heavy jobs", tagline: "For sellers running real sourcing and data work.", features: ["Everything in Free", "Senior specialist agents", "Extra data feeds: Amazon, TikTok, YouTube", "Scheduled automations and teams"], cta: "Get started", highlight: true },
-      { name: "Enterprise", price: "Custom", priceNote: "talk to the team", tagline: "For teams that need scale and control.", features: ["Everything in Pro", "Priority support", "Advanced security and controls", "Hands-on onboarding"], cta: "Try it now" },
+      {
+        name: "Free",
+        price: "$0",
+        priceNote: "no card needed",
+        tagline: "Everything you need to launch your first project.",
+        features: [
+          "24/7 general AI agent",
+          "50+ one-click integrations",
+          "Browser automation",
+          "Market research from real trade data",
+        ],
+        cta: "Start free",
+      },
+      {
+        name: "Pro",
+        price: "Usage-based",
+        priceNote: "credits for heavy jobs",
+        tagline: "For sellers running real sourcing and data work.",
+        features: [
+          "Everything in Free",
+          "Senior specialist agents",
+          "Extra data feeds: Amazon, TikTok, YouTube",
+          "Scheduled automations and teams",
+        ],
+        cta: "Get started",
+        highlight: true,
+      },
+      {
+        name: "Enterprise",
+        price: "Custom",
+        priceNote: "talk to the team",
+        tagline: "For teams that need scale and control.",
+        features: [
+          "Everything in Pro",
+          "Priority support",
+          "Advanced security and controls",
+          "Hands-on onboarding",
+        ],
+        cta: "Try it now",
+      },
     ],
   },
   compareChat: {
@@ -330,9 +417,15 @@ const en: Dict = {
     accioLabel: "Accio Work",
     rows: [
       { chat: "Answers with text", accio: "Executes real tasks on your files and browser" },
-      { chat: "Guesses from the public web", accio: "Draws on Alibaba's real supplier and trade data" },
+      {
+        chat: "Guesses from the public web",
+        accio: "Draws on Alibaba's real supplier and trade data",
+      },
       { chat: "You copy, paste and do the work", accio: "Agents finish the job end to end" },
-      { chat: "One model, one thread", accio: "A team of specialists that hand work to each other" },
+      {
+        chat: "One model, one thread",
+        accio: "A team of specialists that hand work to each other",
+      },
       { chat: "Forgets between chats", accio: "Each agent keeps its own memory and schedule" },
     ],
   },
@@ -340,15 +433,50 @@ const en: Dict = {
     heading: "Built for the way you actually work",
     subheading: "Pick a job. An agent runs it start to finish, on its own schedule.",
     items: [
-      { icon: "🛍️", title: "Dropshipping and D2C", body: "Spot a trend, source it, build the store, launch ads. From idea to first sale in one sitting." },
-      { icon: "🔎", title: "Supplier sourcing", body: "Verified suppliers, sent inquiries, price talks by email. You skip the calls." },
-      { icon: "✍️", title: "Content and marketing", body: "Landing pages, product cards, social posts, scheduling. It publishes while you sleep." },
-      { icon: "📊", title: "Market research", body: "Niches, demand and competitor moves from real trade data, not noisy guesses." },
-      { icon: "⚙️", title: "Workflow automation", body: "Schedule a task once. Price checks, reports and syncs run on their own, even offline." },
-      { icon: "🧰", title: "Custom tools", body: "Describe a calculator, dashboard or tracker. Get a working tool built on the spot." },
+      {
+        icon: "🛍️",
+        title: "Dropshipping and D2C",
+        body: "Spot a trend, source it, build the store, launch ads. From idea to first sale in one sitting.",
+      },
+      {
+        icon: "🔎",
+        title: "Supplier sourcing",
+        body: "Verified suppliers, sent inquiries, price talks by email. You skip the calls.",
+      },
+      {
+        icon: "✍️",
+        title: "Content and marketing",
+        body: "Landing pages, product cards, social posts, scheduling. It publishes while you sleep.",
+      },
+      {
+        icon: "📊",
+        title: "Market research",
+        body: "Niches, demand and competitor moves from real trade data, not noisy guesses.",
+      },
+      {
+        icon: "⚙️",
+        title: "Workflow automation",
+        body: "Schedule a task once. Price checks, reports and syncs run on their own, even offline.",
+      },
+      {
+        icon: "🧰",
+        title: "Custom tools",
+        body: "Describe a calculator, dashboard or tracker. Get a working tool built on the spot.",
+      },
     ],
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português", hi: "हिन्दी", fr: "Français" },
+  langNames: {
+    en: "English",
+    ru: "Русский",
+    de: "Deutsch",
+    it: "Italiano",
+    es: "Español",
+    zh: "中文",
+    pt: "Português",
+    hi: "हिन्दी",
+    fr: "Français",
+    ar: "العربية",
+  },
 };
 
 const ru: Dict = {
@@ -379,8 +507,7 @@ const ru: Dict = {
     brand: "Work",
     tagline: "Ваша агентская бизнес-команда 24/7",
     pills: ["Никакого обучения", "Создано для бизнеса", "Корпоративная безопасность"],
-    desc:
-      "Автоматизирует ваш бизнес от исследований и поиска поставщиков до маркетинга, продаж, операций и CRM — и приносит реальную прибыль.",
+    desc: "Автоматизирует ваш бизнес от исследований и поиска поставщиков до маркетинга, продаж, операций и CRM — и приносит реальную прибыль.",
     cta: "Скачать для macOS",
     ctaBadge: "Apple Silicon",
     ctaNote: "Для macOS 11+ и Windows 10+",
@@ -456,7 +583,10 @@ const ru: Dict = {
       "Отчёты по поставщикам, концепт-дизайн, посадочные страницы, слежение за конкурентами, выберите навык, поставьте на расписание и забудьте.",
     agents: [
       { name: "Маркет-скаут", msg: "Спрос в ЕС на портативные увлажнители ↑ 38% за 30 дней." },
-      { name: "Эксперт по закупкам", msg: "12 проверенных поставщиков из Шэньчжэня · MOQ 100+ · BSCI ✓" },
+      {
+        name: "Эксперт по закупкам",
+        msg: "12 проверенных поставщиков из Шэньчжэня · MOQ 100+ · BSCI ✓",
+      },
       { name: "Продукт-дизайнер", msg: "3 концепта в матовом исполнении, готовы к обзору." },
       { name: "Копирайтер карточек", msg: "SEO-заголовок готов, прогноз +37% CTR." },
     ],
@@ -472,14 +602,45 @@ const ru: Dict = {
     heading: "FAQ",
     readGuide: "Читать руководство по быстрому старту",
     items: [
-      { q: "Чем Accio Work отличается от обычного ИИ-чата?", a: "Обычные чаты только отвечают текстом. Accio Work, исполнительная агентская платформа: читает локальные файлы, выполняет команды терминала, управляет браузером и вызывает внешние API. Он не просто рассказывает, что делать, он делает работу.", linkLabel: "Читать руководство по быстрому старту" },
-      { q: "Какие LLM поддерживаются?", a: "Сейчас поддерживаются Gemini, GPT-4o, Claude и Qwen. Можно назначать разные модели разным агентам. Доступ к моделям идёт через наш шлюз, без сложных настроек API-ключей.", linkLabel: "Смотреть возможности агентов" },
-      { q: "Что умеет автоматизация браузера?", a: "Accio Work управляет настоящим браузером через Chrome DevTools Protocol. Агенты ищут в вебе, парсят страницы, заполняют формы, делают скриншоты и проходят многошаговые сценарии, без вашего участия. Доступ к браузеру, чувствительная возможность и требует явного разрешения.", linkLabel: "Смотреть инструменты агентов" },
-      { q: "Можно ли ставить агентов на расписание?", a: "Да. Функция Automations позволяет создавать задачи по расписанию, описанием на естественном языке в чате или настройкой на странице Automations. Расписания работают локально, даже без интернета. Пропущенные запуски восстанавливаются после запуска.", linkLabel: "Смотреть документацию по автоматизации" },
-      { q: "Как подключить агента к Telegram или DingTalk?", a: "Откройте страницу Channels в клиенте, выберите нужную платформу и добавьте токен бота по гайду. Поддерживаются Telegram, Discord, DingTalk, Lark (Feishu) и WeChat. После подключения агент отвечает в чатах и принимает задачи автоматически.", linkLabel: "Смотреть поддерживаемые каналы" },
-      { q: "Что такое Skills и как они расширяют агентов?", a: "Skills, это пакеты-плагины, дающие агентам специализацию: код-ревью, копирайтинг, SEO-аудит и др. Устанавливайте из маркетплейса или создавайте свои. Accio Work также поддерживает стандарт Model Context Protocol (MCP) для внешних инструментов.", linkLabel: "Смотреть управление навыками" },
-      { q: "Какие платформы поддерживаются?", a: "Accio Work доступен для macOS (Apple Silicon и Intel) и Windows (x64). Это нативное десктоп-приложение на Electron с полным доступом к локальным ресурсам." },
-      { q: "Могут ли несколько агентов работать вместе?", a: "Да. Функция Teams позволяет создавать группы агентов с Team Lead и участниками. Лидер делегирует подзадачи, координирует работу через групповой чат и оркестрирует мульти-агентные сценарии, удобно для сложных проектов с ролями.", linkLabel: "Смотреть документацию по командам агентов" },
+      {
+        q: "Чем Accio Work отличается от обычного ИИ-чата?",
+        a: "Обычные чаты только отвечают текстом. Accio Work, исполнительная агентская платформа: читает локальные файлы, выполняет команды терминала, управляет браузером и вызывает внешние API. Он не просто рассказывает, что делать, он делает работу.",
+        linkLabel: "Читать руководство по быстрому старту",
+      },
+      {
+        q: "Какие LLM поддерживаются?",
+        a: "Сейчас поддерживаются Gemini, GPT-4o, Claude и Qwen. Можно назначать разные модели разным агентам. Доступ к моделям идёт через наш шлюз, без сложных настроек API-ключей.",
+        linkLabel: "Смотреть возможности агентов",
+      },
+      {
+        q: "Что умеет автоматизация браузера?",
+        a: "Accio Work управляет настоящим браузером через Chrome DevTools Protocol. Агенты ищут в вебе, парсят страницы, заполняют формы, делают скриншоты и проходят многошаговые сценарии, без вашего участия. Доступ к браузеру, чувствительная возможность и требует явного разрешения.",
+        linkLabel: "Смотреть инструменты агентов",
+      },
+      {
+        q: "Можно ли ставить агентов на расписание?",
+        a: "Да. Функция Automations позволяет создавать задачи по расписанию, описанием на естественном языке в чате или настройкой на странице Automations. Расписания работают локально, даже без интернета. Пропущенные запуски восстанавливаются после запуска.",
+        linkLabel: "Смотреть документацию по автоматизации",
+      },
+      {
+        q: "Как подключить агента к Telegram или DingTalk?",
+        a: "Откройте страницу Channels в клиенте, выберите нужную платформу и добавьте токен бота по гайду. Поддерживаются Telegram, Discord, DingTalk, Lark (Feishu) и WeChat. После подключения агент отвечает в чатах и принимает задачи автоматически.",
+        linkLabel: "Смотреть поддерживаемые каналы",
+      },
+      {
+        q: "Что такое Skills и как они расширяют агентов?",
+        a: "Skills, это пакеты-плагины, дающие агентам специализацию: код-ревью, копирайтинг, SEO-аудит и др. Устанавливайте из маркетплейса или создавайте свои. Accio Work также поддерживает стандарт Model Context Protocol (MCP) для внешних инструментов.",
+        linkLabel: "Смотреть управление навыками",
+      },
+      {
+        q: "Какие платформы поддерживаются?",
+        a: "Accio Work доступен для macOS (Apple Silicon и Intel) и Windows (x64). Это нативное десктоп-приложение на Electron с полным доступом к локальным ресурсам.",
+      },
+      {
+        q: "Могут ли несколько агентов работать вместе?",
+        a: "Да. Функция Teams позволяет создавать группы агентов с Team Lead и участниками. Лидер делегирует подзадачи, координирует работу через групповой чат и оркестрирует мульти-агентные сценарии, удобно для сложных проектов с ролями.",
+        linkLabel: "Смотреть документацию по командам агентов",
+      },
     ],
   },
   cta: {
@@ -495,8 +656,10 @@ const ru: Dict = {
     partneredWith: "В партнёрстве с",
     rights: "Все права защищены.",
     tagline: "AI-агент, который берёт на себя сорсинг, ресёрч и рутину.",
-    about: "Сравнивайте Accio Work с другими AI-агентами, считайте сэкономленные часы, берите готовые шаблоны поставщикам и читайте гайды по трансграничным закупкам.",
-    disclosure: "Независимый ресурс об Accio Work, продукте Alibaba. Кнопки открывают официальный сайт по реферальной ссылке.",
+    about:
+      "Сравнивайте Accio Work с другими AI-агентами, считайте сэкономленные часы, берите готовые шаблоны поставщикам и читайте гайды по трансграничным закупкам.",
+    disclosure:
+      "Независимый ресурс об Accio Work, продукте Alibaba. Кнопки открывают официальный сайт по реферальной ссылке.",
     colProduct: "Продукт",
     colTools: "Инструменты",
     colResources: "Ресурсы",
@@ -506,23 +669,74 @@ const ru: Dict = {
   availability: "Работает на macOS и Windows. Или запускается прямо в браузере, без установки.",
   steps: {
     heading: "От идеи до результата за четыре шага",
-    subheading: "Никаких проектов по внедрению и программистов. Вы описываете результат, агенты делают работу.",
+    subheading:
+      "Никаких проектов по внедрению и программистов. Вы описываете результат, агенты делают работу.",
     items: [
-      { title: "Скажите, что нужно", body: "Пишете обычными словами. «Найди трёх проверенных поставщиков LED-зеркал дешевле $8.» Учить промпты не надо." },
-      { title: "Агенты берутся за дело", body: "Общий агент планирует задачу и подключает специалистов по сорсингу, дизайну или тексту. У каждого своя память." },
-      { title: "Вы проверяете и одобряете", body: "Каждый важный шаг ждёт вашего согласия. Ничего не отправится, не купится и не опубликуется без вашего просмотра." },
-      { title: "Забираете результат", body: "Готовые карточки, собранный магазин, шорт-лист поставщиков, запланированная кампания. Всё можно пустить в дело в тот же день." },
+      {
+        title: "Скажите, что нужно",
+        body: "Пишете обычными словами. «Найди трёх проверенных поставщиков LED-зеркал дешевле $8.» Учить промпты не надо.",
+      },
+      {
+        title: "Агенты берутся за дело",
+        body: "Общий агент планирует задачу и подключает специалистов по сорсингу, дизайну или тексту. У каждого своя память.",
+      },
+      {
+        title: "Вы проверяете и одобряете",
+        body: "Каждый важный шаг ждёт вашего согласия. Ничего не отправится, не купится и не опубликуется без вашего просмотра.",
+      },
+      {
+        title: "Забираете результат",
+        body: "Готовые карточки, собранный магазин, шорт-лист поставщиков, запланированная кампания. Всё можно пустить в дело в тот же день.",
+      },
     ],
   },
   pricing: {
     heading: "Понятные цены. Старт бесплатный.",
-    subheading: "Заводите аккаунт без карты. Платите только тогда, когда тяжёлая задача тратит кредиты.",
+    subheading:
+      "Заводите аккаунт без карты. Платите только тогда, когда тяжёлая задача тратит кредиты.",
     perksTitle: "В каждом тарифе есть",
     note: "Цены и стоимость кредитов устанавливает Accio, они могут меняться. Актуальное смотрите в приложении.",
     plans: [
-      { name: "Free", price: "$0", priceNote: "без карты", tagline: "Всё, чтобы запустить первый проект.", features: ["Общий AI-агент 24/7", "50+ интеграций в один клик", "Автоматизация браузера", "Анализ рынка на реальных торговых данных"], cta: "Начать бесплатно" },
-      { name: "Pro", price: "По кредитам", priceNote: "оплата за тяжёлые задачи", tagline: "Для тех, кто ведёт реальный сорсинг и работу с данными.", features: ["Всё из Free", "Старшие агенты-специалисты", "Доп. данные: Amazon, TikTok, YouTube", "Расписания автоматизаций и команды"], cta: "Перейти", highlight: true },
-      { name: "Enterprise", price: "Индивидуально", priceNote: "обсудить с командой", tagline: "Для команд, которым нужен масштаб и контроль.", features: ["Всё из Pro", "Приоритетная поддержка", "Расширенная безопасность и контроль", "Помощь с внедрением"], cta: "Попробовать" },
+      {
+        name: "Free",
+        price: "$0",
+        priceNote: "без карты",
+        tagline: "Всё, чтобы запустить первый проект.",
+        features: [
+          "Общий AI-агент 24/7",
+          "50+ интеграций в один клик",
+          "Автоматизация браузера",
+          "Анализ рынка на реальных торговых данных",
+        ],
+        cta: "Начать бесплатно",
+      },
+      {
+        name: "Pro",
+        price: "По кредитам",
+        priceNote: "оплата за тяжёлые задачи",
+        tagline: "Для тех, кто ведёт реальный сорсинг и работу с данными.",
+        features: [
+          "Всё из Free",
+          "Старшие агенты-специалисты",
+          "Доп. данные: Amazon, TikTok, YouTube",
+          "Расписания автоматизаций и команды",
+        ],
+        cta: "Перейти",
+        highlight: true,
+      },
+      {
+        name: "Enterprise",
+        price: "Индивидуально",
+        priceNote: "обсудить с командой",
+        tagline: "Для команд, которым нужен масштаб и контроль.",
+        features: [
+          "Всё из Pro",
+          "Приоритетная поддержка",
+          "Расширенная безопасность и контроль",
+          "Помощь с внедрением",
+        ],
+        cta: "Попробовать",
+      },
     ],
   },
   compareChat: {
@@ -532,9 +746,15 @@ const ru: Dict = {
     accioLabel: "Accio Work",
     rows: [
       { chat: "Отвечает текстом", accio: "Выполняет реальные задачи в ваших файлах и браузере" },
-      { chat: "Гадает по открытому вебу", accio: "Опирается на реальные данные поставщиков и торговли Alibaba" },
+      {
+        chat: "Гадает по открытому вебу",
+        accio: "Опирается на реальные данные поставщиков и торговли Alibaba",
+      },
       { chat: "Вы копируете и делаете сами", accio: "Агенты доводят задачу до конца" },
-      { chat: "Одна модель, один тред", accio: "Команда специалистов, которые передают работу друг другу" },
+      {
+        chat: "Одна модель, один тред",
+        accio: "Команда специалистов, которые передают работу друг другу",
+      },
       { chat: "Забывает между чатами", accio: "У каждого агента своя память и расписание" },
     ],
   },
@@ -542,15 +762,50 @@ const ru: Dict = {
     heading: "Под то, как вы реально работаете",
     subheading: "Выберите задачу. Агент проведёт её от начала до конца по своему расписанию.",
     items: [
-      { icon: "🛍️", title: "Дропшиппинг и D2C", body: "Заметить тренд, найти товар, собрать магазин, запустить рекламу. От идеи до первой продажи за один присест." },
-      { icon: "🔎", title: "Поиск поставщиков", body: "Проверенные поставщики, отправленные запросы, торг по почте. Без созвонов." },
-      { icon: "✍️", title: "Контент и маркетинг", body: "Лендинги, карточки товаров, посты, расписание публикаций. Публикует, пока вы спите." },
-      { icon: "📊", title: "Анализ рынка", body: "Ниши, спрос и движения конкурентов на реальных торговых данных, а не на догадках." },
-      { icon: "⚙️", title: "Автоматизация процессов", body: "Настроили задачу один раз. Проверка цен, отчёты и синхронизации идут сами, даже офлайн." },
-      { icon: "🧰", title: "Кастомные инструменты", body: "Опишите калькулятор, дашборд или трекер. Рабочий инструмент соберётся на месте." },
+      {
+        icon: "🛍️",
+        title: "Дропшиппинг и D2C",
+        body: "Заметить тренд, найти товар, собрать магазин, запустить рекламу. От идеи до первой продажи за один присест.",
+      },
+      {
+        icon: "🔎",
+        title: "Поиск поставщиков",
+        body: "Проверенные поставщики, отправленные запросы, торг по почте. Без созвонов.",
+      },
+      {
+        icon: "✍️",
+        title: "Контент и маркетинг",
+        body: "Лендинги, карточки товаров, посты, расписание публикаций. Публикует, пока вы спите.",
+      },
+      {
+        icon: "📊",
+        title: "Анализ рынка",
+        body: "Ниши, спрос и движения конкурентов на реальных торговых данных, а не на догадках.",
+      },
+      {
+        icon: "⚙️",
+        title: "Автоматизация процессов",
+        body: "Настроили задачу один раз. Проверка цен, отчёты и синхронизации идут сами, даже офлайн.",
+      },
+      {
+        icon: "🧰",
+        title: "Кастомные инструменты",
+        body: "Опишите калькулятор, дашборд или трекер. Рабочий инструмент соберётся на месте.",
+      },
     ],
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português", hi: "हिन्दी", fr: "Français" },
+  langNames: {
+    en: "English",
+    ru: "Русский",
+    de: "Deutsch",
+    it: "Italiano",
+    es: "Español",
+    zh: "中文",
+    pt: "Português",
+    hi: "हिन्दी",
+    fr: "Français",
+    ar: "العربية",
+  },
 };
 
 const de: Dict = {
@@ -581,8 +836,7 @@ const de: Dict = {
     brand: "Work",
     tagline: "Ihr agentisches Business-Team rund um die Uhr",
     pills: ["Ohne Einarbeitung", "Für Unternehmen gemacht", "Enterprise-Sicherheit"],
-    desc:
-      "Automatisiert Ihr Business von A bis Z, Recherche & Analyse, Sourcing & Verhandlung, Marketing & Vertrieb, Betrieb & CRM, für echten Gewinn.",
+    desc: "Automatisiert Ihr Business von A bis Z, Recherche & Analyse, Sourcing & Verhandlung, Marketing & Vertrieb, Betrieb & CRM, für echten Gewinn.",
     cta: "Für macOS herunterladen",
     ctaBadge: "Apple Silicon",
     ctaNote: "Für macOS 11+ und Windows 10+",
@@ -657,7 +911,10 @@ const de: Dict = {
     platformBody:
       "Sourcing-Reports, Konzept-Design, Landingpages, Wettbewerbsbeobachtung, Skill wählen, planen, vergessen.",
     agents: [
-      { name: "Market Scout", msg: "EU-Nachfrage nach tragbaren Luftbefeuchtern ↑ 38% in 30 Tagen." },
+      {
+        name: "Market Scout",
+        msg: "EU-Nachfrage nach tragbaren Luftbefeuchtern ↑ 38% in 30 Tagen.",
+      },
       { name: "Sourcing-Experte", msg: "12 geprüfte Shenzhen-Lieferanten · MOQ 100+ · BSCI ✓" },
       { name: "Produktdesigner", msg: "3 Konzeptvarianten in Matt, bereit zur Prüfung." },
       { name: "Listing-Texter", msg: "SEO-Titel entworfen, prognostiziert +37% CTR." },
@@ -674,14 +931,45 @@ const de: Dict = {
     heading: "FAQ",
     readGuide: "Schnellstart-Anleitung lesen",
     items: [
-      { q: "Wie unterscheidet sich Accio Work von einem normalen KI-Chat?", a: "Übliche Chat-Tools antworten nur mit Text. Accio Work ist eine ausführungsorientierte Agenten-Plattform, die lokale Dateien liest, Terminalbefehle ausführt, den Browser steuert und externe APIs aufruft. Es sagt nicht nur, was zu tun ist, es erledigt die Arbeit.", linkLabel: "Schnellstart-Anleitung lesen" },
-      { q: "Welche LLMs werden unterstützt?", a: "Aktuell unterstützen wir Gemini, GPT-4o, Claude und Qwen. Sie können verschiedenen Agenten unterschiedliche Modelle zuweisen. Der Modellzugriff läuft über unser Gateway, ohne komplizierte API-Key-Verwaltung.", linkLabel: "Agenten-Fähigkeiten ansehen" },
-      { q: "Was kann die Browser-Automatisierung?", a: "Accio Work steuert einen echten Browser über das Chrome DevTools Protocol. Agenten können im Web suchen, Seiten scrapen, Formulare ausfüllen, Screenshots machen und mehrstufige Workflows durchlaufen, freihändig. Browser-Zugriff ist sensibel und braucht explizite Erlaubnis.", linkLabel: "Agenten-Tools ansehen" },
-      { q: "Kann ich Agenten automatisch nach Zeitplan ausführen?", a: "Ja. Die Automations-Funktion erlaubt cron-artige geplante Aufgaben, per natürlicher Sprache im Chat oder über die Automations-Seite. Zeitpläne laufen lokal, auch offline. Verpasste Läufe werden beim Neustart nachgeholt.", linkLabel: "Automatisierungs-Docs ansehen" },
-      { q: "Wie verbinde ich einen Agenten mit Telegram oder DingTalk?", a: "Öffnen Sie die Channels-Seite im Client, wählen Sie die Plattform und folgen Sie der Anleitung zum Hinzufügen eines Bot-Tokens. Accio Work unterstützt Telegram, Discord, DingTalk, Lark (Feishu) und WeChat. Danach antwortet der Agent in Chats und nimmt Aufgaben automatisch entgegen.", linkLabel: "Unterstützte Kanäle ansehen" },
-      { q: "Was sind Skills und wie erweitern sie Agenten?", a: "Skills sind Plugin-Pakete, die Agenten fachliche Fähigkeiten geben, Code-Review, Copywriting, SEO-Audit und mehr. Aus dem Marketplace installieren oder eigene erstellen. Accio Work unterstützt auch den Model Context Protocol (MCP)-Standard für externe Tool-Server.", linkLabel: "Skills-Verwaltung ansehen" },
-      { q: "Welche Plattformen werden unterstützt?", a: "Accio Work ist für macOS (Apple Silicon und Intel) und Windows (x64) verfügbar. Es ist eine native Desktop-App mit Electron und vollem Zugriff auf lokale Systemressourcen." },
-      { q: "Können mehrere Agenten an einer Aufgabe zusammenarbeiten?", a: "Ja. Die Teams-Funktion erlaubt Agentengruppen mit Team Lead und Mitgliedern. Der TL delegiert Teilaufgaben, koordiniert Arbeit im Gruppenchat und orchestriert Multi-Agenten-Workflows, ideal für komplexe Projekte mit spezialisierten Rollen.", linkLabel: "Agenten-Team-Docs ansehen" },
+      {
+        q: "Wie unterscheidet sich Accio Work von einem normalen KI-Chat?",
+        a: "Übliche Chat-Tools antworten nur mit Text. Accio Work ist eine ausführungsorientierte Agenten-Plattform, die lokale Dateien liest, Terminalbefehle ausführt, den Browser steuert und externe APIs aufruft. Es sagt nicht nur, was zu tun ist, es erledigt die Arbeit.",
+        linkLabel: "Schnellstart-Anleitung lesen",
+      },
+      {
+        q: "Welche LLMs werden unterstützt?",
+        a: "Aktuell unterstützen wir Gemini, GPT-4o, Claude und Qwen. Sie können verschiedenen Agenten unterschiedliche Modelle zuweisen. Der Modellzugriff läuft über unser Gateway, ohne komplizierte API-Key-Verwaltung.",
+        linkLabel: "Agenten-Fähigkeiten ansehen",
+      },
+      {
+        q: "Was kann die Browser-Automatisierung?",
+        a: "Accio Work steuert einen echten Browser über das Chrome DevTools Protocol. Agenten können im Web suchen, Seiten scrapen, Formulare ausfüllen, Screenshots machen und mehrstufige Workflows durchlaufen, freihändig. Browser-Zugriff ist sensibel und braucht explizite Erlaubnis.",
+        linkLabel: "Agenten-Tools ansehen",
+      },
+      {
+        q: "Kann ich Agenten automatisch nach Zeitplan ausführen?",
+        a: "Ja. Die Automations-Funktion erlaubt cron-artige geplante Aufgaben, per natürlicher Sprache im Chat oder über die Automations-Seite. Zeitpläne laufen lokal, auch offline. Verpasste Läufe werden beim Neustart nachgeholt.",
+        linkLabel: "Automatisierungs-Docs ansehen",
+      },
+      {
+        q: "Wie verbinde ich einen Agenten mit Telegram oder DingTalk?",
+        a: "Öffnen Sie die Channels-Seite im Client, wählen Sie die Plattform und folgen Sie der Anleitung zum Hinzufügen eines Bot-Tokens. Accio Work unterstützt Telegram, Discord, DingTalk, Lark (Feishu) und WeChat. Danach antwortet der Agent in Chats und nimmt Aufgaben automatisch entgegen.",
+        linkLabel: "Unterstützte Kanäle ansehen",
+      },
+      {
+        q: "Was sind Skills und wie erweitern sie Agenten?",
+        a: "Skills sind Plugin-Pakete, die Agenten fachliche Fähigkeiten geben, Code-Review, Copywriting, SEO-Audit und mehr. Aus dem Marketplace installieren oder eigene erstellen. Accio Work unterstützt auch den Model Context Protocol (MCP)-Standard für externe Tool-Server.",
+        linkLabel: "Skills-Verwaltung ansehen",
+      },
+      {
+        q: "Welche Plattformen werden unterstützt?",
+        a: "Accio Work ist für macOS (Apple Silicon und Intel) und Windows (x64) verfügbar. Es ist eine native Desktop-App mit Electron und vollem Zugriff auf lokale Systemressourcen.",
+      },
+      {
+        q: "Können mehrere Agenten an einer Aufgabe zusammenarbeiten?",
+        a: "Ja. Die Teams-Funktion erlaubt Agentengruppen mit Team Lead und Mitgliedern. Der TL delegiert Teilaufgaben, koordiniert Arbeit im Gruppenchat und orchestriert Multi-Agenten-Workflows, ideal für komplexe Projekte mit spezialisierten Rollen.",
+        linkLabel: "Agenten-Team-Docs ansehen",
+      },
     ],
   },
   cta: {
@@ -697,8 +985,10 @@ const de: Dict = {
     partneredWith: "In Partnerschaft mit",
     rights: "Alle Rechte vorbehalten.",
     tagline: "Der AI-Agent, der Sourcing, Recherche und Kleinkram übernimmt.",
-    about: "Vergleiche Accio Work mit anderen AI-Agenten, schätze die gesparten Stunden, hol dir fertige Lieferantenvorlagen und lies Guides zum grenzüberschreitenden Sourcing.",
-    disclosure: "Unabhängige Ressource über Accio Work, ein Produkt von Alibaba. Buttons öffnen die offizielle Seite über einen Empfehlungslink.",
+    about:
+      "Vergleiche Accio Work mit anderen AI-Agenten, schätze die gesparten Stunden, hol dir fertige Lieferantenvorlagen und lies Guides zum grenzüberschreitenden Sourcing.",
+    disclosure:
+      "Unabhängige Ressource über Accio Work, ein Produkt von Alibaba. Buttons öffnen die offizielle Seite über einen Empfehlungslink.",
     colProduct: "Produkt",
     colTools: "Tools",
     colResources: "Ressourcen",
@@ -708,23 +998,74 @@ const de: Dict = {
   availability: "Läuft auf macOS und Windows. Oder direkt im Browser starten, ohne Installation.",
   steps: {
     heading: "Von der Idee zum Ergebnis in vier Schritten",
-    subheading: "Keine Einführungsprojekte, keine Entwickler. Sie beschreiben das Ergebnis, die Agenten erledigen die Arbeit.",
+    subheading:
+      "Keine Einführungsprojekte, keine Entwickler. Sie beschreiben das Ergebnis, die Agenten erledigen die Arbeit.",
     items: [
-      { title: "Nennen Sie Ihr Ziel", body: "Schreiben Sie in normalen Worten. «Finde drei geprüfte Lieferanten für LED-Spiegel unter 8 $.» Es gibt keine Prompts zu lernen." },
-      { title: "Agenten legen los", body: "Ein allgemeiner Agent plant die Aufgabe und holt Spezialisten für Sourcing, Design oder Text dazu. Jeder hat sein eigenes Gedächtnis." },
-      { title: "Sie prüfen und geben frei", body: "Jeder kritische Schritt wartet auf Ihr Ja. Nichts wird gesendet, gekauft oder veröffentlicht, ohne dass Sie es sehen." },
-      { title: "Ergebnis übernehmen", body: "Fertige Listings, ein aufgebauter Shop, eine Lieferanten-Shortlist, eine geplante Kampagne. Am selben Tag nutzbar." },
+      {
+        title: "Nennen Sie Ihr Ziel",
+        body: "Schreiben Sie in normalen Worten. «Finde drei geprüfte Lieferanten für LED-Spiegel unter 8 $.» Es gibt keine Prompts zu lernen.",
+      },
+      {
+        title: "Agenten legen los",
+        body: "Ein allgemeiner Agent plant die Aufgabe und holt Spezialisten für Sourcing, Design oder Text dazu. Jeder hat sein eigenes Gedächtnis.",
+      },
+      {
+        title: "Sie prüfen und geben frei",
+        body: "Jeder kritische Schritt wartet auf Ihr Ja. Nichts wird gesendet, gekauft oder veröffentlicht, ohne dass Sie es sehen.",
+      },
+      {
+        title: "Ergebnis übernehmen",
+        body: "Fertige Listings, ein aufgebauter Shop, eine Lieferanten-Shortlist, eine geplante Kampagne. Am selben Tag nutzbar.",
+      },
     ],
   },
   pricing: {
     heading: "Klare Preise. Kostenlos starten.",
-    subheading: "Konto ohne Karte anlegen. Sie zahlen nur, wenn eine schwere Aufgabe Credits verbraucht.",
+    subheading:
+      "Konto ohne Karte anlegen. Sie zahlen nur, wenn eine schwere Aufgabe Credits verbraucht.",
     perksTitle: "In jedem Tarif enthalten",
     note: "Preise und Credit-Kosten legt Accio fest und können sich ändern. Aktuelles finden Sie in der App.",
     plans: [
-      { name: "Free", price: "0 $", priceNote: "keine Karte nötig", tagline: "Alles, um Ihr erstes Projekt zu starten.", features: ["Allgemeiner KI-Agent rund um die Uhr", "50+ Integrationen mit einem Klick", "Browser-Automatisierung", "Marktanalyse aus echten Handelsdaten"], cta: "Kostenlos starten" },
-      { name: "Pro", price: "Nach Nutzung", priceNote: "Credits für schwere Jobs", tagline: "Für Händler mit echtem Sourcing und Datenarbeit.", features: ["Alles aus Free", "Senior-Spezialisten-Agenten", "Zusatzdaten: Amazon, TikTok, YouTube", "Geplante Automationen und Teams"], cta: "Loslegen", highlight: true },
-      { name: "Enterprise", price: "Individuell", priceNote: "mit dem Team sprechen", tagline: "Für Teams, die Skalierung und Kontrolle brauchen.", features: ["Alles aus Pro", "Priorisierter Support", "Erweiterte Sicherheit und Kontrolle", "Persönliches Onboarding"], cta: "Jetzt testen" },
+      {
+        name: "Free",
+        price: "0 $",
+        priceNote: "keine Karte nötig",
+        tagline: "Alles, um Ihr erstes Projekt zu starten.",
+        features: [
+          "Allgemeiner KI-Agent rund um die Uhr",
+          "50+ Integrationen mit einem Klick",
+          "Browser-Automatisierung",
+          "Marktanalyse aus echten Handelsdaten",
+        ],
+        cta: "Kostenlos starten",
+      },
+      {
+        name: "Pro",
+        price: "Nach Nutzung",
+        priceNote: "Credits für schwere Jobs",
+        tagline: "Für Händler mit echtem Sourcing und Datenarbeit.",
+        features: [
+          "Alles aus Free",
+          "Senior-Spezialisten-Agenten",
+          "Zusatzdaten: Amazon, TikTok, YouTube",
+          "Geplante Automationen und Teams",
+        ],
+        cta: "Loslegen",
+        highlight: true,
+      },
+      {
+        name: "Enterprise",
+        price: "Individuell",
+        priceNote: "mit dem Team sprechen",
+        tagline: "Für Teams, die Skalierung und Kontrolle brauchen.",
+        features: [
+          "Alles aus Pro",
+          "Priorisierter Support",
+          "Erweiterte Sicherheit und Kontrolle",
+          "Persönliches Onboarding",
+        ],
+        cta: "Jetzt testen",
+      },
     ],
   },
   compareChat: {
@@ -733,26 +1074,74 @@ const de: Dict = {
     chatLabel: "Normaler KI-Chat",
     accioLabel: "Accio Work",
     rows: [
-      { chat: "Antwortet mit Text", accio: "Führt echte Aufgaben in Ihren Dateien und im Browser aus" },
-      { chat: "Rät aus dem offenen Web", accio: "Nutzt echte Lieferanten- und Handelsdaten von Alibaba" },
+      {
+        chat: "Antwortet mit Text",
+        accio: "Führt echte Aufgaben in Ihren Dateien und im Browser aus",
+      },
+      {
+        chat: "Rät aus dem offenen Web",
+        accio: "Nutzt echte Lieferanten- und Handelsdaten von Alibaba",
+      },
       { chat: "Sie kopieren und machen selbst", accio: "Agenten erledigen die Aufgabe komplett" },
-      { chat: "Ein Modell, ein Thread", accio: "Ein Team von Spezialisten, die sich Arbeit übergeben" },
-      { chat: "Vergisst zwischen Chats", accio: "Jeder Agent hat eigenes Gedächtnis und eigenen Zeitplan" },
+      {
+        chat: "Ein Modell, ein Thread",
+        accio: "Ein Team von Spezialisten, die sich Arbeit übergeben",
+      },
+      {
+        chat: "Vergisst zwischen Chats",
+        accio: "Jeder Agent hat eigenes Gedächtnis und eigenen Zeitplan",
+      },
     ],
   },
   useCases: {
     heading: "Gebaut für Ihre echte Arbeit",
-    subheading: "Wählen Sie eine Aufgabe. Ein Agent führt sie von Anfang bis Ende aus, nach eigenem Zeitplan.",
+    subheading:
+      "Wählen Sie eine Aufgabe. Ein Agent führt sie von Anfang bis Ende aus, nach eigenem Zeitplan.",
     items: [
-      { icon: "🛍️", title: "Dropshipping und D2C", body: "Trend erkennen, Ware finden, Shop bauen, Ads starten. Von der Idee zum ersten Verkauf in einer Sitzung." },
-      { icon: "🔎", title: "Lieferantensuche", body: "Geprüfte Lieferanten, gesendete Anfragen, Preisverhandlung per Mail. Ohne Telefonate." },
-      { icon: "✍️", title: "Content und Marketing", body: "Landingpages, Produktkarten, Social Posts, Planung. Veröffentlicht, während Sie schlafen." },
-      { icon: "📊", title: "Marktforschung", body: "Nischen, Nachfrage und Wettbewerb aus echten Handelsdaten statt vager Vermutungen." },
-      { icon: "⚙️", title: "Prozess-Automatisierung", body: "Aufgabe einmal einrichten. Preischecks, Reports und Syncs laufen von selbst, auch offline." },
-      { icon: "🧰", title: "Eigene Tools", body: "Beschreiben Sie Rechner, Dashboard oder Tracker. Ein funktionierendes Tool entsteht sofort." },
+      {
+        icon: "🛍️",
+        title: "Dropshipping und D2C",
+        body: "Trend erkennen, Ware finden, Shop bauen, Ads starten. Von der Idee zum ersten Verkauf in einer Sitzung.",
+      },
+      {
+        icon: "🔎",
+        title: "Lieferantensuche",
+        body: "Geprüfte Lieferanten, gesendete Anfragen, Preisverhandlung per Mail. Ohne Telefonate.",
+      },
+      {
+        icon: "✍️",
+        title: "Content und Marketing",
+        body: "Landingpages, Produktkarten, Social Posts, Planung. Veröffentlicht, während Sie schlafen.",
+      },
+      {
+        icon: "📊",
+        title: "Marktforschung",
+        body: "Nischen, Nachfrage und Wettbewerb aus echten Handelsdaten statt vager Vermutungen.",
+      },
+      {
+        icon: "⚙️",
+        title: "Prozess-Automatisierung",
+        body: "Aufgabe einmal einrichten. Preischecks, Reports und Syncs laufen von selbst, auch offline.",
+      },
+      {
+        icon: "🧰",
+        title: "Eigene Tools",
+        body: "Beschreiben Sie Rechner, Dashboard oder Tracker. Ein funktionierendes Tool entsteht sofort.",
+      },
     ],
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português", hi: "हिन्दी", fr: "Français" },
+  langNames: {
+    en: "English",
+    ru: "Русский",
+    de: "Deutsch",
+    it: "Italiano",
+    es: "Español",
+    zh: "中文",
+    pt: "Português",
+    hi: "हिन्दी",
+    fr: "Français",
+    ar: "العربية",
+  },
 };
 
 const it: Dict = {
@@ -783,8 +1172,7 @@ const it: Dict = {
     brand: "Work",
     tagline: "Il tuo team di business con agenti AI, 24 ore su 24",
     pills: ["Nessuna curva di apprendimento", "Pensato per il business", "Sicurezza enterprise"],
-    desc:
-      "Automatizza il tuo business dall'inizio alla fine: ricerca e analisi, sourcing e negoziazione, marketing e vendite, operazioni e CRM, con un profitto reale.",
+    desc: "Automatizza il tuo business dall'inizio alla fine: ricerca e analisi, sourcing e negoziazione, marketing e vendite, operazioni e CRM, con un profitto reale.",
     cta: "Scarica per macOS",
     ctaBadge: "Apple Silicon",
     ctaNote: "Per macOS 11+ e Windows 10+",
@@ -859,9 +1247,15 @@ const it: Dict = {
     platformBody:
       "Report di sourcing, concept design, landing page, monitoraggio dei concorrenti: scegli una skill, mettila a calendario, dimenticatene.",
     agents: [
-      { name: "Market Scout", msg: "Domanda UE di umidificatori portatili ↑ 38% negli ultimi 30 giorni." },
+      {
+        name: "Market Scout",
+        msg: "Domanda UE di umidificatori portatili ↑ 38% negli ultimi 30 giorni.",
+      },
       { name: "Esperto Sourcing", msg: "12 fornitori verificati da Shenzhen · MOQ 100+ · BSCI ✓" },
-      { name: "Product Designer", msg: "3 varianti concept in finitura opaca, pronte per la revisione." },
+      {
+        name: "Product Designer",
+        msg: "3 varianti concept in finitura opaca, pronte per la revisione.",
+      },
       { name: "Copywriter listing", msg: "Titolo SEO redatto, CTR previsto +37%." },
     ],
   },
@@ -876,14 +1270,45 @@ const it: Dict = {
     heading: "FAQ",
     readGuide: "Leggi la guida rapida",
     items: [
-      { q: "In cosa Accio Work è diverso da un normale chatbot AI?", a: "I classici strumenti di chat rispondono solo con testo. Accio Work è una piattaforma di agenti orientata all'esecuzione: legge file locali, esegue comandi da terminale, controlla il browser e chiama API esterne. Non ti dice solo cosa fare, ti aiuta a farlo davvero.", linkLabel: "Leggi la guida rapida" },
-      { q: "Quali LLM sono supportati?", a: "Attualmente supportiamo Gemini, GPT-4o, Claude e Qwen. Puoi assegnare modelli diversi ad agenti diversi. L'accesso ai modelli passa dal nostro gateway, così non devi gestire configurazioni complicate di chiavi API.", linkLabel: "Vedi le capacità degli agenti" },
-      { q: "Cosa può fare l'automazione del browser?", a: "Accio Work controlla un vero browser tramite Chrome DevTools Protocol. Gli agenti possono cercare sul web, estrarre pagine, compilare form, catturare screenshot e completare flussi multi-step, senza le tue mani. L'accesso al browser è una capacità sensibile e richiede autorizzazione esplicita.", linkLabel: "Vedi gli strumenti degli agenti" },
-      { q: "Posso pianificare l'esecuzione automatica degli agenti?", a: "Sì. La funzione Automations permette di creare task pianificati in stile cron, descritti in linguaggio naturale in chat o configurati dalla pagina Automations. Le pianificazioni girano in locale, quindi funzionano anche offline. Le esecuzioni saltate vengono recuperate al riavvio.", linkLabel: "Vedi la documentazione automazioni" },
-      { q: "Come collego un agente a Telegram o DingTalk?", a: "Apri la pagina Channels nel client, scegli la piattaforma e segui la guida per aggiungere un bot token. Accio Work supporta Telegram, Discord, DingTalk, Lark (Feishu) e WeChat. Una volta collegato, l'agente risponde in chat o riceve task in automatico.", linkLabel: "Vedi i canali supportati" },
-      { q: "Cosa sono le Skill e come estendono gli agenti?", a: "Le Skill sono pacchetti plugin che danno agli agenti capacità specifiche di dominio: code review, copywriting, SEO audit e altro. Puoi installarle dal marketplace o crearne di tue. Accio Work supporta anche lo standard Model Context Protocol (MCP) per integrare server di strumenti esterni.", linkLabel: "Vedi la gestione delle skill" },
-      { q: "Quali piattaforme sono supportate?", a: "Accio Work è disponibile per macOS (Apple Silicon e Intel) e Windows (x64). È un'app desktop nativa costruita con Electron, con pieno accesso alle risorse locali di sistema." },
-      { q: "Più agenti possono collaborare a un task?", a: "Sì. La funzione Teams consente di creare gruppi di agenti con un Team Lead e agenti membri. Il TL delega sotto-task, coordina il lavoro tramite chat di gruppo e orchestra flussi multi-agente, utile per progetti complessi con ruoli specializzati.", linkLabel: "Vedi la documentazione team" },
+      {
+        q: "In cosa Accio Work è diverso da un normale chatbot AI?",
+        a: "I classici strumenti di chat rispondono solo con testo. Accio Work è una piattaforma di agenti orientata all'esecuzione: legge file locali, esegue comandi da terminale, controlla il browser e chiama API esterne. Non ti dice solo cosa fare, ti aiuta a farlo davvero.",
+        linkLabel: "Leggi la guida rapida",
+      },
+      {
+        q: "Quali LLM sono supportati?",
+        a: "Attualmente supportiamo Gemini, GPT-4o, Claude e Qwen. Puoi assegnare modelli diversi ad agenti diversi. L'accesso ai modelli passa dal nostro gateway, così non devi gestire configurazioni complicate di chiavi API.",
+        linkLabel: "Vedi le capacità degli agenti",
+      },
+      {
+        q: "Cosa può fare l'automazione del browser?",
+        a: "Accio Work controlla un vero browser tramite Chrome DevTools Protocol. Gli agenti possono cercare sul web, estrarre pagine, compilare form, catturare screenshot e completare flussi multi-step, senza le tue mani. L'accesso al browser è una capacità sensibile e richiede autorizzazione esplicita.",
+        linkLabel: "Vedi gli strumenti degli agenti",
+      },
+      {
+        q: "Posso pianificare l'esecuzione automatica degli agenti?",
+        a: "Sì. La funzione Automations permette di creare task pianificati in stile cron, descritti in linguaggio naturale in chat o configurati dalla pagina Automations. Le pianificazioni girano in locale, quindi funzionano anche offline. Le esecuzioni saltate vengono recuperate al riavvio.",
+        linkLabel: "Vedi la documentazione automazioni",
+      },
+      {
+        q: "Come collego un agente a Telegram o DingTalk?",
+        a: "Apri la pagina Channels nel client, scegli la piattaforma e segui la guida per aggiungere un bot token. Accio Work supporta Telegram, Discord, DingTalk, Lark (Feishu) e WeChat. Una volta collegato, l'agente risponde in chat o riceve task in automatico.",
+        linkLabel: "Vedi i canali supportati",
+      },
+      {
+        q: "Cosa sono le Skill e come estendono gli agenti?",
+        a: "Le Skill sono pacchetti plugin che danno agli agenti capacità specifiche di dominio: code review, copywriting, SEO audit e altro. Puoi installarle dal marketplace o crearne di tue. Accio Work supporta anche lo standard Model Context Protocol (MCP) per integrare server di strumenti esterni.",
+        linkLabel: "Vedi la gestione delle skill",
+      },
+      {
+        q: "Quali piattaforme sono supportate?",
+        a: "Accio Work è disponibile per macOS (Apple Silicon e Intel) e Windows (x64). È un'app desktop nativa costruita con Electron, con pieno accesso alle risorse locali di sistema.",
+      },
+      {
+        q: "Più agenti possono collaborare a un task?",
+        a: "Sì. La funzione Teams consente di creare gruppi di agenti con un Team Lead e agenti membri. Il TL delega sotto-task, coordina il lavoro tramite chat di gruppo e orchestra flussi multi-agente, utile per progetti complessi con ruoli specializzati.",
+        linkLabel: "Vedi la documentazione team",
+      },
     ],
   },
   cta: {
@@ -899,23 +1324,39 @@ const it: Dict = {
     partneredWith: "In partnership con",
     rights: "Tutti i diritti riservati.",
     tagline: "L'agente AI che gestisce sourcing, ricerca e lavoro ripetitivo.",
-    about: "Confronta Accio Work con altri agenti AI, stima le ore risparmiate, prendi modelli pronti per i fornitori e leggi le guide sul sourcing transfrontaliero.",
-    disclosure: "Risorsa indipendente su Accio Work, un prodotto di Alibaba. I pulsanti aprono il sito ufficiale tramite un link di referral.",
+    about:
+      "Confronta Accio Work con altri agenti AI, stima le ore risparmiate, prendi modelli pronti per i fornitori e leggi le guide sul sourcing transfrontaliero.",
+    disclosure:
+      "Risorsa indipendente su Accio Work, un prodotto di Alibaba. I pulsanti aprono il sito ufficiale tramite un link di referral.",
     colProduct: "Prodotto",
     colTools: "Strumenti",
     colResources: "Risorse",
     otherLanguages: "Altre lingue",
     featuredIn: "Ne hanno parlato",
   },
-  availability: "Funziona su macOS e Windows. Oppure parti subito nel browser, senza installare nulla.",
+  availability:
+    "Funziona su macOS e Windows. Oppure parti subito nel browser, senza installare nulla.",
   steps: {
     heading: "Dall'idea al risultato in quattro passi",
-    subheading: "Nessun progetto di setup, nessuno sviluppatore. Tu descrivi il risultato, gli agenti fanno il lavoro.",
+    subheading:
+      "Nessun progetto di setup, nessuno sviluppatore. Tu descrivi il risultato, gli agenti fanno il lavoro.",
     items: [
-      { title: "Indica l'obiettivo", body: "Scrivi con parole tue. «Trova tre fornitori verificati di specchi LED sotto gli 8 $.» Non ci sono prompt da imparare." },
-      { title: "Gli agenti si mettono al lavoro", body: "Un agente generale pianifica e coinvolge specialisti per sourcing, design o testi. Ognuno ha la propria memoria." },
-      { title: "Controlli e approvi", body: "Ogni passo critico aspetta il tuo sì. Niente viene inviato, comprato o pubblicato senza che tu lo veda." },
-      { title: "Prendi il risultato", body: "Schede pronte, uno store costruito, una shortlist di fornitori, una campagna programmata. Usabile in giornata." },
+      {
+        title: "Indica l'obiettivo",
+        body: "Scrivi con parole tue. «Trova tre fornitori verificati di specchi LED sotto gli 8 $.» Non ci sono prompt da imparare.",
+      },
+      {
+        title: "Gli agenti si mettono al lavoro",
+        body: "Un agente generale pianifica e coinvolge specialisti per sourcing, design o testi. Ognuno ha la propria memoria.",
+      },
+      {
+        title: "Controlli e approvi",
+        body: "Ogni passo critico aspetta il tuo sì. Niente viene inviato, comprato o pubblicato senza che tu lo veda.",
+      },
+      {
+        title: "Prendi il risultato",
+        body: "Schede pronte, uno store costruito, una shortlist di fornitori, una campagna programmata. Usabile in giornata.",
+      },
     ],
   },
   pricing: {
@@ -924,9 +1365,46 @@ const it: Dict = {
     perksTitle: "Ogni piano include",
     note: "Prezzi e costo dei crediti sono decisi da Accio e possono cambiare. Controlla l'app per i dettagli aggiornati.",
     plans: [
-      { name: "Free", price: "0 $", priceNote: "senza carta", tagline: "Tutto il necessario per lanciare il primo progetto.", features: ["Agente IA generale 24/7", "50+ integrazioni con un clic", "Automazione del browser", "Analisi di mercato su dati commerciali reali"], cta: "Inizia gratis" },
-      { name: "Pro", price: "A consumo", priceNote: "crediti per i lavori pesanti", tagline: "Per chi fa sourcing e lavoro sui dati sul serio.", features: ["Tutto di Free", "Agenti specialisti senior", "Dati extra: Amazon, TikTok, YouTube", "Automazioni programmate e team"], cta: "Inizia ora", highlight: true },
-      { name: "Enterprise", price: "Su misura", priceNote: "parla col team", tagline: "Per team che vogliono scala e controllo.", features: ["Tutto di Pro", "Supporto prioritario", "Sicurezza e controlli avanzati", "Onboarding dedicato"], cta: "Provalo ora" },
+      {
+        name: "Free",
+        price: "0 $",
+        priceNote: "senza carta",
+        tagline: "Tutto il necessario per lanciare il primo progetto.",
+        features: [
+          "Agente IA generale 24/7",
+          "50+ integrazioni con un clic",
+          "Automazione del browser",
+          "Analisi di mercato su dati commerciali reali",
+        ],
+        cta: "Inizia gratis",
+      },
+      {
+        name: "Pro",
+        price: "A consumo",
+        priceNote: "crediti per i lavori pesanti",
+        tagline: "Per chi fa sourcing e lavoro sui dati sul serio.",
+        features: [
+          "Tutto di Free",
+          "Agenti specialisti senior",
+          "Dati extra: Amazon, TikTok, YouTube",
+          "Automazioni programmate e team",
+        ],
+        cta: "Inizia ora",
+        highlight: true,
+      },
+      {
+        name: "Enterprise",
+        price: "Su misura",
+        priceNote: "parla col team",
+        tagline: "Per team che vogliono scala e controllo.",
+        features: [
+          "Tutto di Pro",
+          "Supporto prioritario",
+          "Sicurezza e controlli avanzati",
+          "Onboarding dedicato",
+        ],
+        cta: "Provalo ora",
+      },
     ],
   },
   compareChat: {
@@ -936,25 +1414,67 @@ const it: Dict = {
     accioLabel: "Accio Work",
     rows: [
       { chat: "Risponde con del testo", accio: "Esegue compiti reali sui tuoi file e nel browser" },
-      { chat: "Tira a indovinare dal web aperto", accio: "Si basa sui dati reali di fornitori e commercio di Alibaba" },
+      {
+        chat: "Tira a indovinare dal web aperto",
+        accio: "Si basa sui dati reali di fornitori e commercio di Alibaba",
+      },
       { chat: "Copi, incolli e fai da te", accio: "Gli agenti portano a termine il lavoro" },
       { chat: "Un modello, un thread", accio: "Un team di specialisti che si passano il lavoro" },
-      { chat: "Dimentica tra una chat e l'altra", accio: "Ogni agente ha memoria e calendario propri" },
+      {
+        chat: "Dimentica tra una chat e l'altra",
+        accio: "Ogni agente ha memoria e calendario propri",
+      },
     ],
   },
   useCases: {
     heading: "Pensato per come lavori davvero",
-    subheading: "Scegli un compito. Un agente lo esegue dall'inizio alla fine, secondo il suo calendario.",
+    subheading:
+      "Scegli un compito. Un agente lo esegue dall'inizio alla fine, secondo il suo calendario.",
     items: [
-      { icon: "🛍️", title: "Dropshipping e D2C", body: "Individua un trend, trova il prodotto, costruisci lo store, lancia le ads. Dall'idea alla prima vendita in una sessione." },
-      { icon: "🔎", title: "Ricerca fornitori", body: "Fornitori verificati, richieste inviate, trattative via email. Salti le telefonate." },
-      { icon: "✍️", title: "Contenuti e marketing", body: "Landing page, schede prodotto, post social, pianificazione. Pubblica mentre dormi." },
-      { icon: "📊", title: "Analisi di mercato", body: "Nicchie, domanda e mosse dei concorrenti da dati commerciali reali, non da supposizioni." },
-      { icon: "⚙️", title: "Automazione dei flussi", body: "Imposti un compito una volta. Controlli prezzi, report e sync vanno da soli, anche offline." },
-      { icon: "🧰", title: "Strumenti su misura", body: "Descrivi un calcolatore, una dashboard o un tracker. Ottieni uno strumento funzionante all'istante." },
+      {
+        icon: "🛍️",
+        title: "Dropshipping e D2C",
+        body: "Individua un trend, trova il prodotto, costruisci lo store, lancia le ads. Dall'idea alla prima vendita in una sessione.",
+      },
+      {
+        icon: "🔎",
+        title: "Ricerca fornitori",
+        body: "Fornitori verificati, richieste inviate, trattative via email. Salti le telefonate.",
+      },
+      {
+        icon: "✍️",
+        title: "Contenuti e marketing",
+        body: "Landing page, schede prodotto, post social, pianificazione. Pubblica mentre dormi.",
+      },
+      {
+        icon: "📊",
+        title: "Analisi di mercato",
+        body: "Nicchie, domanda e mosse dei concorrenti da dati commerciali reali, non da supposizioni.",
+      },
+      {
+        icon: "⚙️",
+        title: "Automazione dei flussi",
+        body: "Imposti un compito una volta. Controlli prezzi, report e sync vanno da soli, anche offline.",
+      },
+      {
+        icon: "🧰",
+        title: "Strumenti su misura",
+        body: "Descrivi un calcolatore, una dashboard o un tracker. Ottieni uno strumento funzionante all'istante.",
+      },
     ],
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português", hi: "हिन्दी", fr: "Français" },
+  langNames: {
+    en: "English",
+    ru: "Русский",
+    de: "Deutsch",
+    it: "Italiano",
+    es: "Español",
+    zh: "中文",
+    pt: "Português",
+    hi: "हिन्दी",
+    fr: "Français",
+    ar: "العربية",
+  },
 };
 
 const es: Dict = {
@@ -985,8 +1505,7 @@ const es: Dict = {
     brand: "Work",
     tagline: "Tu equipo de negocio con agentes de IA, 24 horas al día",
     pills: ["Sin curva de aprendizaje", "Pensado para el negocio", "Seguridad enterprise"],
-    desc:
-      "Automatiza tu negocio de principio a fin: investigación y análisis, sourcing y negociación, marketing y ventas, operaciones y CRM, con beneficios reales.",
+    desc: "Automatiza tu negocio de principio a fin: investigación y análisis, sourcing y negociación, marketing y ventas, operaciones y CRM, con beneficios reales.",
     cta: "Descargar para macOS",
     ctaBadge: "Apple Silicon",
     ctaNote: "Para macOS 11+ y Windows 10+",
@@ -1062,7 +1581,10 @@ const es: Dict = {
       "Informes de sourcing, concept design, landing pages, vigilancia de competidores: elige una skill, prográmala, olvídate.",
     agents: [
       { name: "Market Scout", msg: "Demanda UE de humidificadores portátiles ↑ 38% en 30 días." },
-      { name: "Experto en Sourcing", msg: "12 proveedores verificados de Shenzhen · MOQ 100+ · BSCI ✓" },
+      {
+        name: "Experto en Sourcing",
+        msg: "12 proveedores verificados de Shenzhen · MOQ 100+ · BSCI ✓",
+      },
       { name: "Product Designer", msg: "3 conceptos en acabado mate, listos para revisión." },
       { name: "Copywriter de fichas", msg: "Título SEO redactado, CTR previsto +37%." },
     ],
@@ -1078,14 +1600,45 @@ const es: Dict = {
     heading: "FAQ",
     readGuide: "Leer la guía rápida",
     items: [
-      { q: "¿En qué se diferencia Accio Work de un chatbot de IA cualquiera?", a: "Las herramientas de chat corrientes solo responden con texto. Accio Work es una plataforma de agentes orientada a la ejecución: lee archivos locales, ejecuta comandos de terminal, controla el navegador y llama a APIs externas. No solo te dice qué hacer, hace el trabajo.", linkLabel: "Leer la guía rápida" },
-      { q: "¿Qué LLM están soportados?", a: "Actualmente soportamos Gemini, GPT-4o, Claude y Qwen. Puedes asignar modelos distintos a agentes distintos. El acceso a los modelos pasa por nuestro gateway, así te olvidas de configurar claves API complicadas.", linkLabel: "Ver capacidades de los agentes" },
-      { q: "¿Qué puede hacer la automatización del navegador?", a: "Accio Work controla un navegador real vía Chrome DevTools Protocol. Los agentes pueden buscar en la web, extraer páginas, rellenar formularios, capturar screenshots y completar flujos de varios pasos sin tus manos. El acceso al navegador es una capacidad sensible y requiere autorización explícita.", linkLabel: "Ver herramientas de los agentes" },
-      { q: "¿Puedo programar la ejecución automática de los agentes?", a: "Sí. La función Automations permite crear tareas programadas al estilo cron, descritas en lenguaje natural en el chat o configuradas desde la página Automations. Las planificaciones corren en local, así que funcionan incluso sin conexión. Las ejecuciones perdidas se recuperan al reiniciar.", linkLabel: "Ver la documentación de automatizaciones" },
-      { q: "¿Cómo conecto un agente con Telegram o DingTalk?", a: "Abre la página Channels en el cliente, elige la plataforma y sigue la guía para añadir un token de bot. Accio Work soporta Telegram, Discord, DingTalk, Lark (Feishu) y WeChat. Una vez conectado, el agente responde en los chats o recibe tareas de forma automática.", linkLabel: "Ver los canales soportados" },
-      { q: "¿Qué son las Skills y cómo amplían a los agentes?", a: "Las Skills son paquetes plugin que dan a los agentes capacidades de dominio específicas: revisión de código, copywriting, auditoría SEO y más. Puedes instalarlas desde el marketplace o crear las tuyas. Accio Work también soporta el estándar Model Context Protocol (MCP) para integrar servidores de herramientas externas.", linkLabel: "Ver la gestión de skills" },
-      { q: "¿Qué plataformas están soportadas?", a: "Accio Work está disponible para macOS (Apple Silicon e Intel) y Windows (x64). Es una app de escritorio nativa hecha con Electron, con acceso completo a los recursos locales del sistema." },
-      { q: "¿Pueden varios agentes colaborar en una tarea?", a: "Sí. La función Teams permite crear grupos de agentes con un Team Lead y agentes miembros. El TL delega subtareas, coordina el trabajo por chat de grupo y orquesta flujos multi-agente, ideal para proyectos complejos con roles especializados.", linkLabel: "Ver la documentación de equipos" },
+      {
+        q: "¿En qué se diferencia Accio Work de un chatbot de IA cualquiera?",
+        a: "Las herramientas de chat corrientes solo responden con texto. Accio Work es una plataforma de agentes orientada a la ejecución: lee archivos locales, ejecuta comandos de terminal, controla el navegador y llama a APIs externas. No solo te dice qué hacer, hace el trabajo.",
+        linkLabel: "Leer la guía rápida",
+      },
+      {
+        q: "¿Qué LLM están soportados?",
+        a: "Actualmente soportamos Gemini, GPT-4o, Claude y Qwen. Puedes asignar modelos distintos a agentes distintos. El acceso a los modelos pasa por nuestro gateway, así te olvidas de configurar claves API complicadas.",
+        linkLabel: "Ver capacidades de los agentes",
+      },
+      {
+        q: "¿Qué puede hacer la automatización del navegador?",
+        a: "Accio Work controla un navegador real vía Chrome DevTools Protocol. Los agentes pueden buscar en la web, extraer páginas, rellenar formularios, capturar screenshots y completar flujos de varios pasos sin tus manos. El acceso al navegador es una capacidad sensible y requiere autorización explícita.",
+        linkLabel: "Ver herramientas de los agentes",
+      },
+      {
+        q: "¿Puedo programar la ejecución automática de los agentes?",
+        a: "Sí. La función Automations permite crear tareas programadas al estilo cron, descritas en lenguaje natural en el chat o configuradas desde la página Automations. Las planificaciones corren en local, así que funcionan incluso sin conexión. Las ejecuciones perdidas se recuperan al reiniciar.",
+        linkLabel: "Ver la documentación de automatizaciones",
+      },
+      {
+        q: "¿Cómo conecto un agente con Telegram o DingTalk?",
+        a: "Abre la página Channels en el cliente, elige la plataforma y sigue la guía para añadir un token de bot. Accio Work soporta Telegram, Discord, DingTalk, Lark (Feishu) y WeChat. Una vez conectado, el agente responde en los chats o recibe tareas de forma automática.",
+        linkLabel: "Ver los canales soportados",
+      },
+      {
+        q: "¿Qué son las Skills y cómo amplían a los agentes?",
+        a: "Las Skills son paquetes plugin que dan a los agentes capacidades de dominio específicas: revisión de código, copywriting, auditoría SEO y más. Puedes instalarlas desde el marketplace o crear las tuyas. Accio Work también soporta el estándar Model Context Protocol (MCP) para integrar servidores de herramientas externas.",
+        linkLabel: "Ver la gestión de skills",
+      },
+      {
+        q: "¿Qué plataformas están soportadas?",
+        a: "Accio Work está disponible para macOS (Apple Silicon e Intel) y Windows (x64). Es una app de escritorio nativa hecha con Electron, con acceso completo a los recursos locales del sistema.",
+      },
+      {
+        q: "¿Pueden varios agentes colaborar en una tarea?",
+        a: "Sí. La función Teams permite crear grupos de agentes con un Team Lead y agentes miembros. El TL delega subtareas, coordina el trabajo por chat de grupo y orquesta flujos multi-agente, ideal para proyectos complejos con roles especializados.",
+        linkLabel: "Ver la documentación de equipos",
+      },
     ],
   },
   cta: {
@@ -1101,23 +1654,39 @@ const es: Dict = {
     partneredWith: "En colaboración con",
     rights: "Todos los derechos reservados.",
     tagline: "El agente de IA que lleva tu sourcing, investigación y tareas repetitivas.",
-    about: "Compara Accio Work con otros agentes de IA, estima las horas que ahorra, toma plantillas listas para proveedores y lee guías de sourcing transfronterizo.",
-    disclosure: "Recurso independiente sobre Accio Work, un producto de Alibaba. Los botones abren el sitio oficial mediante un enlace de referido.",
+    about:
+      "Compara Accio Work con otros agentes de IA, estima las horas que ahorra, toma plantillas listas para proveedores y lee guías de sourcing transfronterizo.",
+    disclosure:
+      "Recurso independiente sobre Accio Work, un producto de Alibaba. Los botones abren el sitio oficial mediante un enlace de referido.",
     colProduct: "Producto",
     colTools: "Herramientas",
     colResources: "Recursos",
     otherLanguages: "Otros idiomas",
     featuredIn: "Aparecimos en",
   },
-  availability: "Funciona en macOS y Windows. O empieza directo en el navegador, sin instalar nada.",
+  availability:
+    "Funciona en macOS y Windows. O empieza directo en el navegador, sin instalar nada.",
   steps: {
     heading: "De la idea al resultado en cuatro pasos",
-    subheading: "Sin proyectos de implementación ni desarrolladores. Tú describes el resultado, los agentes hacen el trabajo.",
+    subheading:
+      "Sin proyectos de implementación ni desarrolladores. Tú describes el resultado, los agentes hacen el trabajo.",
     items: [
-      { title: "Dile tu objetivo", body: "Escribe con tus palabras. «Encuentra tres proveedores verificados de espejos LED por menos de 8 $.» No hay prompts que aprender." },
-      { title: "Los agentes se ponen a trabajar", body: "Un agente general planifica y suma especialistas de sourcing, diseño o copy. Cada uno guarda su propia memoria." },
-      { title: "Revisas y apruebas", body: "Cada paso crítico espera tu sí. Nada se envía, compra ni publica sin que lo veas antes." },
-      { title: "Te llevas el resultado", body: "Fichas listas, una tienda montada, una lista corta de proveedores, una campaña programada. Listo para usar el mismo día." },
+      {
+        title: "Dile tu objetivo",
+        body: "Escribe con tus palabras. «Encuentra tres proveedores verificados de espejos LED por menos de 8 $.» No hay prompts que aprender.",
+      },
+      {
+        title: "Los agentes se ponen a trabajar",
+        body: "Un agente general planifica y suma especialistas de sourcing, diseño o copy. Cada uno guarda su propia memoria.",
+      },
+      {
+        title: "Revisas y apruebas",
+        body: "Cada paso crítico espera tu sí. Nada se envía, compra ni publica sin que lo veas antes.",
+      },
+      {
+        title: "Te llevas el resultado",
+        body: "Fichas listas, una tienda montada, una lista corta de proveedores, una campaña programada. Listo para usar el mismo día.",
+      },
     ],
   },
   pricing: {
@@ -1126,9 +1695,46 @@ const es: Dict = {
     perksTitle: "Todos los planes incluyen",
     note: "Los precios y el costo de los créditos los define Accio y pueden cambiar. Consulta la app para ver lo actual.",
     plans: [
-      { name: "Free", price: "0 $", priceNote: "sin tarjeta", tagline: "Todo lo necesario para lanzar tu primer proyecto.", features: ["Agente de IA general 24/7", "50+ integraciones en un clic", "Automatización del navegador", "Análisis de mercado con datos comerciales reales"], cta: "Empezar gratis" },
-      { name: "Pro", price: "Por uso", priceNote: "créditos para tareas pesadas", tagline: "Para quien hace sourcing y trabajo con datos de verdad.", features: ["Todo lo de Free", "Agentes especialistas senior", "Datos extra: Amazon, TikTok, YouTube", "Automatizaciones programadas y equipos"], cta: "Comenzar", highlight: true },
-      { name: "Enterprise", price: "A medida", priceNote: "habla con el equipo", tagline: "Para equipos que necesitan escala y control.", features: ["Todo lo de Pro", "Soporte prioritario", "Seguridad y controles avanzados", "Onboarding dedicado"], cta: "Probarlo ya" },
+      {
+        name: "Free",
+        price: "0 $",
+        priceNote: "sin tarjeta",
+        tagline: "Todo lo necesario para lanzar tu primer proyecto.",
+        features: [
+          "Agente de IA general 24/7",
+          "50+ integraciones en un clic",
+          "Automatización del navegador",
+          "Análisis de mercado con datos comerciales reales",
+        ],
+        cta: "Empezar gratis",
+      },
+      {
+        name: "Pro",
+        price: "Por uso",
+        priceNote: "créditos para tareas pesadas",
+        tagline: "Para quien hace sourcing y trabajo con datos de verdad.",
+        features: [
+          "Todo lo de Free",
+          "Agentes especialistas senior",
+          "Datos extra: Amazon, TikTok, YouTube",
+          "Automatizaciones programadas y equipos",
+        ],
+        cta: "Comenzar",
+        highlight: true,
+      },
+      {
+        name: "Enterprise",
+        price: "A medida",
+        priceNote: "habla con el equipo",
+        tagline: "Para equipos que necesitan escala y control.",
+        features: [
+          "Todo lo de Pro",
+          "Soporte prioritario",
+          "Seguridad y controles avanzados",
+          "Onboarding dedicado",
+        ],
+        cta: "Probarlo ya",
+      },
     ],
   },
   compareChat: {
@@ -1138,8 +1744,14 @@ const es: Dict = {
     accioLabel: "Accio Work",
     rows: [
       { chat: "Responde con texto", accio: "Ejecuta tareas reales en tus archivos y el navegador" },
-      { chat: "Adivina desde la web abierta", accio: "Se apoya en datos reales de proveedores y comercio de Alibaba" },
-      { chat: "Copias, pegas y lo haces tú", accio: "Los agentes terminan el trabajo de principio a fin" },
+      {
+        chat: "Adivina desde la web abierta",
+        accio: "Se apoya en datos reales de proveedores y comercio de Alibaba",
+      },
+      {
+        chat: "Copias, pegas y lo haces tú",
+        accio: "Los agentes terminan el trabajo de principio a fin",
+      },
       { chat: "Un modelo, un hilo", accio: "Un equipo de especialistas que se pasan el trabajo" },
       { chat: "Olvida entre chats", accio: "Cada agente guarda su memoria y su calendario" },
     ],
@@ -1148,15 +1760,50 @@ const es: Dict = {
     heading: "Hecho para como trabajas de verdad",
     subheading: "Elige una tarea. Un agente la ejecuta de principio a fin, en su propio horario.",
     items: [
-      { icon: "🛍️", title: "Dropshipping y D2C", body: "Detecta una tendencia, consigue el producto, monta la tienda, lanza anuncios. De la idea a la primera venta en una sesión." },
-      { icon: "🔎", title: "Búsqueda de proveedores", body: "Proveedores verificados, consultas enviadas, negociación por correo. Sin llamadas." },
-      { icon: "✍️", title: "Contenido y marketing", body: "Landing pages, fichas de producto, posts, programación. Publica mientras duermes." },
-      { icon: "📊", title: "Estudio de mercado", body: "Nichos, demanda y movimientos de la competencia con datos comerciales reales, no suposiciones." },
-      { icon: "⚙️", title: "Automatización de flujos", body: "Configura una tarea una vez. Chequeos de precio, informes y sincronizaciones corren solos, incluso sin conexión." },
-      { icon: "🧰", title: "Herramientas a medida", body: "Describe una calculadora, un panel o un tracker. Obtienes una herramienta funcional al momento." },
+      {
+        icon: "🛍️",
+        title: "Dropshipping y D2C",
+        body: "Detecta una tendencia, consigue el producto, monta la tienda, lanza anuncios. De la idea a la primera venta en una sesión.",
+      },
+      {
+        icon: "🔎",
+        title: "Búsqueda de proveedores",
+        body: "Proveedores verificados, consultas enviadas, negociación por correo. Sin llamadas.",
+      },
+      {
+        icon: "✍️",
+        title: "Contenido y marketing",
+        body: "Landing pages, fichas de producto, posts, programación. Publica mientras duermes.",
+      },
+      {
+        icon: "📊",
+        title: "Estudio de mercado",
+        body: "Nichos, demanda y movimientos de la competencia con datos comerciales reales, no suposiciones.",
+      },
+      {
+        icon: "⚙️",
+        title: "Automatización de flujos",
+        body: "Configura una tarea una vez. Chequeos de precio, informes y sincronizaciones corren solos, incluso sin conexión.",
+      },
+      {
+        icon: "🧰",
+        title: "Herramientas a medida",
+        body: "Describe una calculadora, un panel o un tracker. Obtienes una herramienta funcional al momento.",
+      },
     ],
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português", hi: "हिन्दी", fr: "Français" },
+  langNames: {
+    en: "English",
+    ru: "Русский",
+    de: "Deutsch",
+    it: "Italiano",
+    es: "Español",
+    zh: "中文",
+    pt: "Português",
+    hi: "हिन्दी",
+    fr: "Français",
+    ar: "العربية",
+  },
 };
 
 const zh: Dict = {
@@ -1187,8 +1834,7 @@ const zh: Dict = {
     brand: "Work",
     tagline: "全天候的 AI 智能体业务团队",
     pills: ["零学习成本", "为业务而生", "企业级安全"],
-    desc:
-      "端到端自动化你的业务：市场研究与分析、供应商采购与谈判、营销与销售、运营与 CRM，带来真实收益。",
+    desc: "端到端自动化你的业务：市场研究与分析、供应商采购与谈判、营销与销售、运营与 CRM，带来真实收益。",
     cta: "下载 macOS 版",
     ctaBadge: "Apple Silicon",
     ctaNote: "适用于 macOS 11+ 和 Windows 10+",
@@ -1257,11 +1903,9 @@ const zh: Dict = {
     connectBody:
       "Shopify、Gmail、Slack、LinkedIn，以及 50+ 服务，一键接入，无需集成项目，也无需开发者。",
     dataTitle: "你的数据，你说了算。",
-    dataBody:
-      "沙箱化执行，每一次关键操作都由你亲自审批，数据主权由阿里巴巴的基础设施保障。",
+    dataBody: "沙箱化执行，每一次关键操作都由你亲自审批，数据主权由阿里巴巴的基础设施保障。",
     platformTitle: "一个平台，覆盖分析、设计与自动化。",
-    platformBody:
-      "采购报告、概念设计、落地页、竞品监控，选一项技能、设个时间，剩下的交给它。",
+    platformBody: "采购报告、概念设计、落地页、竞品监控，选一项技能、设个时间，剩下的交给它。",
     agents: [
       { name: "Market Scout", msg: "欧盟便携加湿器需求近 30 天上升 38%。" },
       { name: "Sourcing Expert", msg: "获取 12 家已验证深圳供应商 · MOQ 100+ · BSCI ✓" },
@@ -1280,14 +1924,45 @@ const zh: Dict = {
     heading: "常见问题",
     readGuide: "阅读快速上手指南",
     items: [
-      { q: "Accio Work 与普通 AI 聊天工具有什么不同?", a: "普通聊天工具只会回复文字,而 Accio Work 是面向执行的智能体平台,能读取本地文件、执行命令行、控制浏览器并调用外部 API。它不只告诉你怎么做,而是帮你把工作做完。", linkLabel: "阅读快速上手指南" },
-      { q: "支持哪些大模型?", a: "目前支持 Gemini、GPT-4o、Claude 与 Qwen,可以为不同智能体分配不同模型。所有模型调用都通过我们的网关,不需要你去折腾复杂的 API Key。", linkLabel: "查看智能体能力" },
-      { q: "浏览器自动化能做什么?", a: "Accio Work 通过 Chrome DevTools Protocol 控制真实浏览器,智能体可以搜索网页、抓取内容、填写表单、截图并完成多步骤流程,全程无需你动手。浏览器访问被视为敏感能力,需要你显式授权。", linkLabel: "查看智能体工具" },
-      { q: "可以让智能体按计划自动运行吗?", a: "可以。Automations 功能支持创建类 cron 的定时任务,既可以在聊天中用自然语言描述,也可以在 Automations 页面配置。计划任务在本地运行,离线也能执行,漏跑的任务在重启后会自动补齐。", linkLabel: "查看自动化文档" },
-      { q: "如何把智能体接入 Telegram 或钉钉?", a: "在客户端打开 Channels 页面,选择所需平台并按引导添加 Bot Token。Accio Work 支持 Telegram、Discord、钉钉、飞书与微信。连接后智能体可以在聊天中回复消息或自动接收任务。", linkLabel: "查看支持的渠道" },
-      { q: "Skills 是什么,如何扩展智能体?", a: "Skills 是插件包,可为智能体加上领域能力,例如代码审查、文案写作、SEO 审计等。你可以从市场安装,也可以自建。Accio Work 同时支持 MCP(Model Context Protocol)标准,便于接入外部工具服务。", linkLabel: "查看 Skills 管理" },
-      { q: "支持哪些平台?", a: "Accio Work 支持 macOS(Apple Silicon 与 Intel)和 Windows(x64),是基于 Electron 的原生桌面应用,可完整访问本地系统资源。" },
-      { q: "多个智能体可以协同完成任务吗?", a: "可以。Teams 功能允许你组建带 Team Lead 的智能体小组,TL 会拆解子任务、通过群聊协调工作、编排多智能体流程,适合需要角色分工的复杂项目。", linkLabel: "查看智能体团队文档" },
+      {
+        q: "Accio Work 与普通 AI 聊天工具有什么不同?",
+        a: "普通聊天工具只会回复文字,而 Accio Work 是面向执行的智能体平台,能读取本地文件、执行命令行、控制浏览器并调用外部 API。它不只告诉你怎么做,而是帮你把工作做完。",
+        linkLabel: "阅读快速上手指南",
+      },
+      {
+        q: "支持哪些大模型?",
+        a: "目前支持 Gemini、GPT-4o、Claude 与 Qwen,可以为不同智能体分配不同模型。所有模型调用都通过我们的网关,不需要你去折腾复杂的 API Key。",
+        linkLabel: "查看智能体能力",
+      },
+      {
+        q: "浏览器自动化能做什么?",
+        a: "Accio Work 通过 Chrome DevTools Protocol 控制真实浏览器,智能体可以搜索网页、抓取内容、填写表单、截图并完成多步骤流程,全程无需你动手。浏览器访问被视为敏感能力,需要你显式授权。",
+        linkLabel: "查看智能体工具",
+      },
+      {
+        q: "可以让智能体按计划自动运行吗?",
+        a: "可以。Automations 功能支持创建类 cron 的定时任务,既可以在聊天中用自然语言描述,也可以在 Automations 页面配置。计划任务在本地运行,离线也能执行,漏跑的任务在重启后会自动补齐。",
+        linkLabel: "查看自动化文档",
+      },
+      {
+        q: "如何把智能体接入 Telegram 或钉钉?",
+        a: "在客户端打开 Channels 页面,选择所需平台并按引导添加 Bot Token。Accio Work 支持 Telegram、Discord、钉钉、飞书与微信。连接后智能体可以在聊天中回复消息或自动接收任务。",
+        linkLabel: "查看支持的渠道",
+      },
+      {
+        q: "Skills 是什么,如何扩展智能体?",
+        a: "Skills 是插件包,可为智能体加上领域能力,例如代码审查、文案写作、SEO 审计等。你可以从市场安装,也可以自建。Accio Work 同时支持 MCP(Model Context Protocol)标准,便于接入外部工具服务。",
+        linkLabel: "查看 Skills 管理",
+      },
+      {
+        q: "支持哪些平台?",
+        a: "Accio Work 支持 macOS(Apple Silicon 与 Intel)和 Windows(x64),是基于 Electron 的原生桌面应用,可完整访问本地系统资源。",
+      },
+      {
+        q: "多个智能体可以协同完成任务吗?",
+        a: "可以。Teams 功能允许你组建带 Team Lead 的智能体小组,TL 会拆解子任务、通过群聊协调工作、编排多智能体流程,适合需要角色分工的复杂项目。",
+        linkLabel: "查看智能体团队文档",
+      },
     ],
   },
   cta: {
@@ -1303,7 +1978,8 @@ const zh: Dict = {
     partneredWith: "合作伙伴",
     rights: "版权所有。",
     tagline: "会替你搞定选品、调研和琐事的 AI 智能体。",
-    about: "把 Accio Work 与其他 AI 智能体对比，估算省下的时间，取用现成的供应商模板，并阅读跨境采购指南。",
+    about:
+      "把 Accio Work 与其他 AI 智能体对比，估算省下的时间，取用现成的供应商模板，并阅读跨境采购指南。",
     disclosure: "关于阿里产品 Accio Work 的独立资源。按钮通过推荐链接打开官方网站。",
     colProduct: "产品",
     colTools: "工具",
@@ -1316,9 +1992,18 @@ const zh: Dict = {
     heading: "四步，从想法到成品",
     subheading: "无需实施项目，无需开发者。你描述结果，智能体负责干活。",
     items: [
-      { title: "说出你的目标", body: "用大白话写清楚。「帮我找三家 8 美元以下的 LED 镜子认证供应商。」不用学任何提示词。" },
-      { title: "智能体开始干活", body: "通用智能体拆解任务，并调来负责寻源、设计或文案的专家，每个都有自己的记忆。" },
-      { title: "你审核并批准", body: "每个关键步骤都等你点头。没有你的确认，什么都不会发送、下单或发布。" },
+      {
+        title: "说出你的目标",
+        body: "用大白话写清楚。「帮我找三家 8 美元以下的 LED 镜子认证供应商。」不用学任何提示词。",
+      },
+      {
+        title: "智能体开始干活",
+        body: "通用智能体拆解任务，并调来负责寻源、设计或文案的专家，每个都有自己的记忆。",
+      },
+      {
+        title: "你审核并批准",
+        body: "每个关键步骤都等你点头。没有你的确认，什么都不会发送、下单或发布。",
+      },
       { title: "拿走成果", body: "上架的商品、搭好的商店、供应商短名单、排期的推广。当天就能用。" },
     ],
   },
@@ -1328,9 +2013,41 @@ const zh: Dict = {
     perksTitle: "每个套餐都包含",
     note: "价格和额度成本由 Accio 设定，可能变动。最新信息请以应用内为准。",
     plans: [
-      { name: "Free", price: "0 美元", priceNote: "无需绑卡", tagline: "启动第一个项目所需的一切。", features: ["全天候通用 AI 智能体", "50+ 一键集成", "浏览器自动化", "基于真实交易数据的市场分析"], cta: "免费开始" },
-      { name: "Pro", price: "按用量", priceNote: "重任务消耗额度", tagline: "适合真正做寻源和数据工作的卖家。", features: ["包含 Free 全部", "资深专家智能体", "额外数据：Amazon、TikTok、YouTube", "定时自动化与团队"], cta: "立即开始", highlight: true },
-      { name: "Enterprise", price: "定制", priceNote: "联系团队", tagline: "适合需要规模和管控的团队。", features: ["包含 Pro 全部", "优先支持", "高级安全与管控", "专人上手指导"], cta: "马上试用" },
+      {
+        name: "Free",
+        price: "0 美元",
+        priceNote: "无需绑卡",
+        tagline: "启动第一个项目所需的一切。",
+        features: [
+          "全天候通用 AI 智能体",
+          "50+ 一键集成",
+          "浏览器自动化",
+          "基于真实交易数据的市场分析",
+        ],
+        cta: "免费开始",
+      },
+      {
+        name: "Pro",
+        price: "按用量",
+        priceNote: "重任务消耗额度",
+        tagline: "适合真正做寻源和数据工作的卖家。",
+        features: [
+          "包含 Free 全部",
+          "资深专家智能体",
+          "额外数据：Amazon、TikTok、YouTube",
+          "定时自动化与团队",
+        ],
+        cta: "立即开始",
+        highlight: true,
+      },
+      {
+        name: "Enterprise",
+        price: "定制",
+        priceNote: "联系团队",
+        tagline: "适合需要规模和管控的团队。",
+        features: ["包含 Pro 全部", "优先支持", "高级安全与管控", "专人上手指导"],
+        cta: "马上试用",
+      },
     ],
   },
   compareChat: {
@@ -1350,17 +2067,39 @@ const zh: Dict = {
     heading: "贴合你真实的工作方式",
     subheading: "选一个任务，智能体按自己的排期从头做到尾。",
     items: [
-      { icon: "🛍️", title: "一件代发与 D2C", body: "发现趋势、找货、建店、投广告。一次坐下就能从想法做到首单。" },
+      {
+        icon: "🛍️",
+        title: "一件代发与 D2C",
+        body: "发现趋势、找货、建店、投广告。一次坐下就能从想法做到首单。",
+      },
       { icon: "🔎", title: "供应商寻源", body: "认证供应商、发出询盘、邮件议价。省掉打电话。" },
-      { icon: "✍️", title: "内容与营销", body: "落地页、商品卡、社媒帖子、排期发布。你睡觉时它在发。" },
+      {
+        icon: "✍️",
+        title: "内容与营销",
+        body: "落地页、商品卡、社媒帖子、排期发布。你睡觉时它在发。",
+      },
       { icon: "📊", title: "市场调研", body: "用真实交易数据看细分、需求和对手动向，而不是靠猜。" },
       { icon: "⚙️", title: "流程自动化", body: "任务设一次。比价、报表、同步自动跑，离线也行。" },
-      { icon: "🧰", title: "定制工具", body: "描述一个计算器、看板或追踪器，现场就给你一个能用的工具。" },
+      {
+        icon: "🧰",
+        title: "定制工具",
+        body: "描述一个计算器、看板或追踪器，现场就给你一个能用的工具。",
+      },
     ],
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português", hi: "हिन्दी", fr: "Français" },
+  langNames: {
+    en: "English",
+    ru: "Русский",
+    de: "Deutsch",
+    it: "Italiano",
+    es: "Español",
+    zh: "中文",
+    pt: "Português",
+    hi: "हिन्दी",
+    fr: "Français",
+    ar: "العربية",
+  },
 };
-
 
 const pt: Dict = {
   nav: {
@@ -1390,8 +2129,7 @@ const pt: Dict = {
     brand: "Work",
     tagline: "Seu time de negócios com agentes de IA, 24 horas por dia",
     pills: ["Sem curva de aprendizado", "Feito para o negócio", "Segurança enterprise"],
-    desc:
-      "Automatize seu negócio de ponta a ponta: pesquisa e análise, sourcing e negociação, marketing e vendas, operações e CRM, com resultados reais.",
+    desc: "Automatize seu negócio de ponta a ponta: pesquisa e análise, sourcing e negociação, marketing e vendas, operações e CRM, com resultados reais.",
     cta: "Baixar para macOS",
     ctaBadge: "Apple Silicon",
     ctaNote: "Para macOS 11+ e Windows 10+",
@@ -1467,7 +2205,10 @@ const pt: Dict = {
       "Relatórios de sourcing, concept design, landing pages, vigilância de concorrentes: escolha uma skill, agende, esqueça.",
     agents: [
       { name: "Market Scout", msg: "Demanda UE de umidificadores portáteis ↑ 38% em 30 dias." },
-      { name: "Especialista em Sourcing", msg: "12 fornecedores verificados de Shenzhen · MOQ 100+ · BSCI ✓" },
+      {
+        name: "Especialista em Sourcing",
+        msg: "12 fornecedores verificados de Shenzhen · MOQ 100+ · BSCI ✓",
+      },
       { name: "Product Designer", msg: "3 conceitos em acabamento fosco, prontos para revisão." },
       { name: "Copywriter de Fichas", msg: "Título SEO redigido, CTR previsto +37%." },
     ],
@@ -1483,14 +2224,45 @@ const pt: Dict = {
     heading: "FAQ",
     readGuide: "Ler o guia rápido",
     items: [
-      { q: "O que diferencia a Accio Work de um chatbot de IA qualquer?", a: "Ferramentas de chat comuns só respondem com texto. Accio Work é uma plataforma de agentes orientada à execução: lê arquivos locais, roda comandos no terminal, controla o navegador e chama APIs externas. Ela não só diz o que fazer, faz o trabalho.", linkLabel: "Ler o guia rápido" },
-      { q: "Quais LLMs são suportados?", a: "Hoje suportamos Gemini, GPT-4o, Claude e Qwen. Você pode atribuir modelos diferentes a agentes diferentes. O acesso aos modelos passa pelo nosso gateway, então esqueça a configuração de chaves de API complicadas.", linkLabel: "Ver capacidades dos agentes" },
-      { q: "O que a automação de navegador pode fazer?", a: "Accio Work controla um navegador real via Chrome DevTools Protocol. Os agentes podem pesquisar na web, extrair páginas, preencher formulários, tirar screenshots e completar fluxos de várias etapas sem as suas mãos. O acesso ao navegador é uma capacidade sensível e exige autorização explícita.", linkLabel: "Ver ferramentas dos agentes" },
-      { q: "Posso agendar a execução automática dos agentes?", a: "Sim. O recurso Automations permite criar tarefas agendadas estilo cron, descritas em linguagem natural no chat ou configuradas na página Automations. As agendas rodam localmente, então funcionam mesmo sem conexão. Execuções perdidas são recuperadas ao reiniciar.", linkLabel: "Ver a documentação de automações" },
-      { q: "Como conecto um agente ao Telegram ou DingTalk?", a: "Abra a página Channels no cliente, escolha a plataforma e siga o guia para adicionar um token de bot. Accio Work suporta Telegram, Discord, DingTalk, Lark (Feishu) e WeChat. Uma vez conectado, o agente responde nos chats ou recebe tarefas automaticamente.", linkLabel: "Ver os canais suportados" },
-      { q: "O que são Skills e como ampliam os agentes?", a: "Skills são pacotes plugin que dão aos agentes capacidades de domínio específicas: revisão de código, copywriting, auditoria de SEO e mais. Você pode instalar do marketplace ou criar as suas. Accio Work também suporta o padrão Model Context Protocol (MCP) para integrar servidores de ferramentas externas.", linkLabel: "Ver a gestão de skills" },
-      { q: "Quais plataformas são suportadas?", a: "Accio Work está disponível para macOS (Apple Silicon e Intel) e Windows (x64). É um app desktop nativo feito com Electron, com acesso completo aos recursos locais do sistema." },
-      { q: "Vários agentes podem colaborar em uma tarefa?", a: "Sim. O recurso Teams permite criar grupos de agentes com um Team Lead e agentes membros. O TL delega subtarefas, coordena o trabalho no chat de grupo e orquestra fluxos multi-agente, ideal para projetos complexos com papéis especializados.", linkLabel: "Ver a documentação de times" },
+      {
+        q: "O que diferencia a Accio Work de um chatbot de IA qualquer?",
+        a: "Ferramentas de chat comuns só respondem com texto. Accio Work é uma plataforma de agentes orientada à execução: lê arquivos locais, roda comandos no terminal, controla o navegador e chama APIs externas. Ela não só diz o que fazer, faz o trabalho.",
+        linkLabel: "Ler o guia rápido",
+      },
+      {
+        q: "Quais LLMs são suportados?",
+        a: "Hoje suportamos Gemini, GPT-4o, Claude e Qwen. Você pode atribuir modelos diferentes a agentes diferentes. O acesso aos modelos passa pelo nosso gateway, então esqueça a configuração de chaves de API complicadas.",
+        linkLabel: "Ver capacidades dos agentes",
+      },
+      {
+        q: "O que a automação de navegador pode fazer?",
+        a: "Accio Work controla um navegador real via Chrome DevTools Protocol. Os agentes podem pesquisar na web, extrair páginas, preencher formulários, tirar screenshots e completar fluxos de várias etapas sem as suas mãos. O acesso ao navegador é uma capacidade sensível e exige autorização explícita.",
+        linkLabel: "Ver ferramentas dos agentes",
+      },
+      {
+        q: "Posso agendar a execução automática dos agentes?",
+        a: "Sim. O recurso Automations permite criar tarefas agendadas estilo cron, descritas em linguagem natural no chat ou configuradas na página Automations. As agendas rodam localmente, então funcionam mesmo sem conexão. Execuções perdidas são recuperadas ao reiniciar.",
+        linkLabel: "Ver a documentação de automações",
+      },
+      {
+        q: "Como conecto um agente ao Telegram ou DingTalk?",
+        a: "Abra a página Channels no cliente, escolha a plataforma e siga o guia para adicionar um token de bot. Accio Work suporta Telegram, Discord, DingTalk, Lark (Feishu) e WeChat. Uma vez conectado, o agente responde nos chats ou recebe tarefas automaticamente.",
+        linkLabel: "Ver os canais suportados",
+      },
+      {
+        q: "O que são Skills e como ampliam os agentes?",
+        a: "Skills são pacotes plugin que dão aos agentes capacidades de domínio específicas: revisão de código, copywriting, auditoria de SEO e mais. Você pode instalar do marketplace ou criar as suas. Accio Work também suporta o padrão Model Context Protocol (MCP) para integrar servidores de ferramentas externas.",
+        linkLabel: "Ver a gestão de skills",
+      },
+      {
+        q: "Quais plataformas são suportadas?",
+        a: "Accio Work está disponível para macOS (Apple Silicon e Intel) e Windows (x64). É um app desktop nativo feito com Electron, com acesso completo aos recursos locais do sistema.",
+      },
+      {
+        q: "Vários agentes podem colaborar em uma tarefa?",
+        a: "Sim. O recurso Teams permite criar grupos de agentes com um Team Lead e agentes membros. O TL delega subtarefas, coordena o trabalho no chat de grupo e orquestra fluxos multi-agente, ideal para projetos complexos com papéis especializados.",
+        linkLabel: "Ver a documentação de times",
+      },
     ],
   },
   cta: {
@@ -1506,8 +2278,10 @@ const pt: Dict = {
     partneredWith: "Em parceria com",
     rights: "Todos os direitos reservados.",
     tagline: "O agente de IA que cuida do seu sourcing, pesquisa e tarefas repetitivas.",
-    about: "Compare o Accio Work com outros agentes de IA, estime as horas economizadas, pegue modelos prontos para fornecedores e leia guias de sourcing transfronteiriço.",
-    disclosure: "Recurso independente sobre o Accio Work, um produto da Alibaba. Os botões abrem o site oficial por um link de indicação.",
+    about:
+      "Compare o Accio Work com outros agentes de IA, estime as horas economizadas, pegue modelos prontos para fornecedores e leia guias de sourcing transfronteiriço.",
+    disclosure:
+      "Recurso independente sobre o Accio Work, um produto da Alibaba. Os botões abrem o site oficial por um link de indicação.",
     colProduct: "Produto",
     colTools: "Ferramentas",
     colResources: "Recursos",
@@ -1517,12 +2291,25 @@ const pt: Dict = {
   availability: "Funciona no macOS e no Windows. Ou comece direto no navegador, sem instalar nada.",
   steps: {
     heading: "Da ideia ao resultado em quatro passos",
-    subheading: "Sem projetos de implantação, sem desenvolvedores. Você descreve o resultado, os agentes fazem o trabalho.",
+    subheading:
+      "Sem projetos de implantação, sem desenvolvedores. Você descreve o resultado, os agentes fazem o trabalho.",
     items: [
-      { title: "Diga o seu objetivo", body: "Escreva com suas palavras. «Ache três fornecedores verificados de espelhos LED abaixo de US$ 8.» Não há prompts para aprender." },
-      { title: "Os agentes vão à obra", body: "Um agente geral planeja a tarefa e chama especialistas de sourcing, design ou texto. Cada um guarda a própria memória." },
-      { title: "Você revisa e aprova", body: "Cada passo crítico espera o seu sim. Nada é enviado, comprado ou publicado sem você ver antes." },
-      { title: "Leve o resultado", body: "Anúncios prontos, uma loja montada, uma lista curta de fornecedores, uma campanha agendada. Dá para usar no mesmo dia." },
+      {
+        title: "Diga o seu objetivo",
+        body: "Escreva com suas palavras. «Ache três fornecedores verificados de espelhos LED abaixo de US$ 8.» Não há prompts para aprender.",
+      },
+      {
+        title: "Os agentes vão à obra",
+        body: "Um agente geral planeja a tarefa e chama especialistas de sourcing, design ou texto. Cada um guarda a própria memória.",
+      },
+      {
+        title: "Você revisa e aprova",
+        body: "Cada passo crítico espera o seu sim. Nada é enviado, comprado ou publicado sem você ver antes.",
+      },
+      {
+        title: "Leve o resultado",
+        body: "Anúncios prontos, uma loja montada, uma lista curta de fornecedores, uma campanha agendada. Dá para usar no mesmo dia.",
+      },
     ],
   },
   pricing: {
@@ -1531,9 +2318,46 @@ const pt: Dict = {
     perksTitle: "Todo plano inclui",
     note: "Preços e custo dos créditos são definidos pela Accio e podem mudar. Veja o app para os valores atuais.",
     plans: [
-      { name: "Free", price: "US$ 0", priceNote: "sem cartão", tagline: "Tudo para lançar o seu primeiro projeto.", features: ["Agente de IA geral 24/7", "50+ integrações em um clique", "Automação de navegador", "Análise de mercado com dados comerciais reais"], cta: "Começar grátis" },
-      { name: "Pro", price: "Por uso", priceNote: "créditos para tarefas pesadas", tagline: "Para quem faz sourcing e trabalho com dados de verdade.", features: ["Tudo do Free", "Agentes especialistas sênior", "Dados extras: Amazon, TikTok, YouTube", "Automações agendadas e times"], cta: "Começar", highlight: true },
-      { name: "Enterprise", price: "Sob medida", priceNote: "fale com o time", tagline: "Para times que precisam de escala e controle.", features: ["Tudo do Pro", "Suporte prioritário", "Segurança e controles avançados", "Onboarding dedicado"], cta: "Testar agora" },
+      {
+        name: "Free",
+        price: "US$ 0",
+        priceNote: "sem cartão",
+        tagline: "Tudo para lançar o seu primeiro projeto.",
+        features: [
+          "Agente de IA geral 24/7",
+          "50+ integrações em um clique",
+          "Automação de navegador",
+          "Análise de mercado com dados comerciais reais",
+        ],
+        cta: "Começar grátis",
+      },
+      {
+        name: "Pro",
+        price: "Por uso",
+        priceNote: "créditos para tarefas pesadas",
+        tagline: "Para quem faz sourcing e trabalho com dados de verdade.",
+        features: [
+          "Tudo do Free",
+          "Agentes especialistas sênior",
+          "Dados extras: Amazon, TikTok, YouTube",
+          "Automações agendadas e times",
+        ],
+        cta: "Começar",
+        highlight: true,
+      },
+      {
+        name: "Enterprise",
+        price: "Sob medida",
+        priceNote: "fale com o time",
+        tagline: "Para times que precisam de escala e controle.",
+        features: [
+          "Tudo do Pro",
+          "Suporte prioritário",
+          "Segurança e controles avançados",
+          "Onboarding dedicado",
+        ],
+        cta: "Testar agora",
+      },
     ],
   },
   compareChat: {
@@ -1542,26 +2366,76 @@ const pt: Dict = {
     chatLabel: "Chat de IA comum",
     accioLabel: "Accio Work",
     rows: [
-      { chat: "Responde com texto", accio: "Executa tarefas reais nos seus arquivos e no navegador" },
-      { chat: "Chuta a partir da web aberta", accio: "Usa dados reais de fornecedores e comércio da Alibaba" },
-      { chat: "Você copia, cola e faz sozinho", accio: "Os agentes concluem o trabalho de ponta a ponta" },
-      { chat: "Um modelo, uma conversa", accio: "Um time de especialistas que passam trabalho entre si" },
-      { chat: "Esquece de uma conversa para outra", accio: "Cada agente guarda memória e agenda próprias" },
+      {
+        chat: "Responde com texto",
+        accio: "Executa tarefas reais nos seus arquivos e no navegador",
+      },
+      {
+        chat: "Chuta a partir da web aberta",
+        accio: "Usa dados reais de fornecedores e comércio da Alibaba",
+      },
+      {
+        chat: "Você copia, cola e faz sozinho",
+        accio: "Os agentes concluem o trabalho de ponta a ponta",
+      },
+      {
+        chat: "Um modelo, uma conversa",
+        accio: "Um time de especialistas que passam trabalho entre si",
+      },
+      {
+        chat: "Esquece de uma conversa para outra",
+        accio: "Cada agente guarda memória e agenda próprias",
+      },
     ],
   },
   useCases: {
     heading: "Feito para o jeito que você trabalha de verdade",
     subheading: "Escolha uma tarefa. Um agente a executa do início ao fim, no ritmo dele.",
     items: [
-      { icon: "🛍️", title: "Dropshipping e D2C", body: "Ache uma tendência, encontre o produto, monte a loja, suba anúncios. Da ideia à primeira venda numa sentada." },
-      { icon: "🔎", title: "Busca de fornecedores", body: "Fornecedores verificados, cotações enviadas, negociação por e-mail. Sem ligações." },
-      { icon: "✍️", title: "Conteúdo e marketing", body: "Landing pages, fichas de produto, posts, agendamento. Publica enquanto você dorme." },
-      { icon: "📊", title: "Pesquisa de mercado", body: "Nichos, demanda e movimentos dos concorrentes com dados comerciais reais, não achismo." },
-      { icon: "⚙️", title: "Automação de fluxos", body: "Configure a tarefa uma vez. Checagem de preços, relatórios e syncs rodam sozinhos, até offline." },
-      { icon: "🧰", title: "Ferramentas sob medida", body: "Descreva uma calculadora, um painel ou um tracker. Receba uma ferramenta funcional na hora." },
+      {
+        icon: "🛍️",
+        title: "Dropshipping e D2C",
+        body: "Ache uma tendência, encontre o produto, monte a loja, suba anúncios. Da ideia à primeira venda numa sentada.",
+      },
+      {
+        icon: "🔎",
+        title: "Busca de fornecedores",
+        body: "Fornecedores verificados, cotações enviadas, negociação por e-mail. Sem ligações.",
+      },
+      {
+        icon: "✍️",
+        title: "Conteúdo e marketing",
+        body: "Landing pages, fichas de produto, posts, agendamento. Publica enquanto você dorme.",
+      },
+      {
+        icon: "📊",
+        title: "Pesquisa de mercado",
+        body: "Nichos, demanda e movimentos dos concorrentes com dados comerciais reais, não achismo.",
+      },
+      {
+        icon: "⚙️",
+        title: "Automação de fluxos",
+        body: "Configure a tarefa uma vez. Checagem de preços, relatórios e syncs rodam sozinhos, até offline.",
+      },
+      {
+        icon: "🧰",
+        title: "Ferramentas sob medida",
+        body: "Descreva uma calculadora, um painel ou um tracker. Receba uma ferramenta funcional na hora.",
+      },
     ],
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português", hi: "हिन्दी", fr: "Français" },
+  langNames: {
+    en: "English",
+    ru: "Русский",
+    de: "Deutsch",
+    it: "Italiano",
+    es: "Español",
+    zh: "中文",
+    pt: "Português",
+    hi: "हिन्दी",
+    fr: "Français",
+    ar: "العربية",
+  },
 };
 
 const hi: Dict = {
@@ -1592,8 +2466,7 @@ const hi: Dict = {
     brand: "Work",
     tagline: "आपकी 24 घंटे काम करने वाली AI बिज़नेस टीम",
     pills: ["कोई सीखने की ज़रूरत नहीं", "व्यवसाय के लिए बना", "एंटरप्राइज़ सुरक्षा"],
-    desc:
-      "अपने पूरे बिज़नेस को शुरू से अंत तक ऑटोमेट करें: रिसर्च और एनालिसिस, सोर्सिंग और बातचीत, मार्केटिंग और सेल्स, ऑपरेशन और CRM, असली नतीजों के साथ।",
+    desc: "अपने पूरे बिज़नेस को शुरू से अंत तक ऑटोमेट करें: रिसर्च और एनालिसिस, सोर्सिंग और बातचीत, मार्केटिंग और सेल्स, ऑपरेशन और CRM, असली नतीजों के साथ।",
     cta: "macOS के लिए डाउनलोड करें",
     ctaBadge: "Apple Silicon",
     ctaNote: "macOS 11+ और Windows 10+ के लिए",
@@ -1685,14 +2558,45 @@ const hi: Dict = {
     heading: "अक्सर पूछे जाने वाले प्रश्न",
     readGuide: "क्विक गाइड पढ़ें",
     items: [
-      { q: "Accio Work किसी आम AI चैटबॉट से कैसे अलग है?", a: "आम चैट टूल सिर्फ़ टेक्स्ट में जवाब देते हैं। Accio Work एक एक्ज़ीक्यूशन-केंद्रित एजेंट प्लेटफ़ॉर्म है: लोकल फ़ाइलें पढ़ता है, टर्मिनल कमांड चलाता है, ब्राउज़र नियंत्रित करता है और बाहरी API कॉल करता है। यह बताता नहीं, काम करता है।", linkLabel: "क्विक गाइड पढ़ें" },
-      { q: "कौन-कौन से LLM समर्थित हैं?", a: "आज Gemini, GPT-4o, Claude और Qwen समर्थित हैं। आप अलग-अलग एजेंट को अलग मॉडल असाइन कर सकते हैं। मॉडल एक्सेस हमारे गेटवे से होता है, यानी API की चाबियों की झंझट नहीं।", linkLabel: "एजेंट क्षमताएँ देखें" },
-      { q: "ब्राउज़र ऑटोमेशन क्या कर सकता है?", a: "Accio Work Chrome DevTools Protocol के ज़रिए असली ब्राउज़र चलाता है। एजेंट वेब पर सर्च कर सकते हैं, पेज निकाल सकते हैं, फ़ॉर्म भर सकते हैं, स्क्रीनशॉट ले सकते हैं और मल्टी-स्टेप फ़्लो पूरे कर सकते हैं। ब्राउज़र एक्सेस के लिए स्पष्ट अनुमति ज़रूरी है।", linkLabel: "एजेंट टूल्स देखें" },
-      { q: "क्या एजेंट अपने आप चलने के लिए शेड्यूल हो सकते हैं?", a: "हाँ। Automations से आप cron-जैसी शेड्यूल टास्क बना सकते हैं, चैट में नैचुरल भाषा में या Automations पेज से। शेड्यूल लोकल चलते हैं, इसलिए बिना इंटरनेट भी काम करते हैं। छूटे रन रिस्टार्ट पर पूरे होते हैं।", linkLabel: "ऑटोमेशन डॉक्स देखें" },
-      { q: "किसी एजेंट को Telegram या DingTalk से कैसे जोड़ें?", a: "क्लाइंट में Channels पेज खोलें, प्लेटफ़ॉर्म चुनें और बॉट टोकन जोड़ने की गाइड फ़ॉलो करें। Accio Work Telegram, Discord, DingTalk, Lark (Feishu) और WeChat सपोर्ट करता है। कनेक्ट होने पर एजेंट चैट में जवाब देता है या टास्क अपने आप ले लेता है।", linkLabel: "समर्थित चैनल देखें" },
-      { q: "Skills क्या हैं और वे एजेंट कैसे बढ़ाती हैं?", a: "Skills प्लगइन पैक हैं जो एजेंट को खास डोमेन क्षमताएँ देते हैं: कोड रिव्यू, कॉपीराइटिंग, SEO ऑडिट और भी। मार्केटप्लेस से इंस्टॉल करें या अपनी बनाएँ। Accio Work Model Context Protocol (MCP) मानक भी समर्थित है ताकि बाहरी टूल सर्वर जोड़े जा सकें।", linkLabel: "स्किल प्रबंधन देखें" },
-      { q: "कौन-कौन से प्लेटफ़ॉर्म समर्थित हैं?", a: "Accio Work macOS (Apple Silicon और Intel) और Windows (x64) के लिए उपलब्ध है। यह Electron से बना नेटिव डेस्कटॉप ऐप है, जिसे लोकल सिस्टम रिसोर्स तक पूर्ण एक्सेस है।" },
-      { q: "क्या कई एजेंट मिलकर एक टास्क पर काम कर सकते हैं?", a: "हाँ। Teams फ़ीचर से आप एक Team Lead और सदस्य एजेंट के साथ ग्रुप बना सकते हैं। TL सब-टास्क बाँटता है, ग्रुप चैट में काम को कोऑर्डिनेट करता है और मल्टी-एजेंट फ़्लो चलाता है, विशेष भूमिकाओं वाले जटिल प्रोजेक्ट के लिए बेहतरीन।", linkLabel: "टीम डॉक्स देखें" },
+      {
+        q: "Accio Work किसी आम AI चैटबॉट से कैसे अलग है?",
+        a: "आम चैट टूल सिर्फ़ टेक्स्ट में जवाब देते हैं। Accio Work एक एक्ज़ीक्यूशन-केंद्रित एजेंट प्लेटफ़ॉर्म है: लोकल फ़ाइलें पढ़ता है, टर्मिनल कमांड चलाता है, ब्राउज़र नियंत्रित करता है और बाहरी API कॉल करता है। यह बताता नहीं, काम करता है।",
+        linkLabel: "क्विक गाइड पढ़ें",
+      },
+      {
+        q: "कौन-कौन से LLM समर्थित हैं?",
+        a: "आज Gemini, GPT-4o, Claude और Qwen समर्थित हैं। आप अलग-अलग एजेंट को अलग मॉडल असाइन कर सकते हैं। मॉडल एक्सेस हमारे गेटवे से होता है, यानी API की चाबियों की झंझट नहीं।",
+        linkLabel: "एजेंट क्षमताएँ देखें",
+      },
+      {
+        q: "ब्राउज़र ऑटोमेशन क्या कर सकता है?",
+        a: "Accio Work Chrome DevTools Protocol के ज़रिए असली ब्राउज़र चलाता है। एजेंट वेब पर सर्च कर सकते हैं, पेज निकाल सकते हैं, फ़ॉर्म भर सकते हैं, स्क्रीनशॉट ले सकते हैं और मल्टी-स्टेप फ़्लो पूरे कर सकते हैं। ब्राउज़र एक्सेस के लिए स्पष्ट अनुमति ज़रूरी है।",
+        linkLabel: "एजेंट टूल्स देखें",
+      },
+      {
+        q: "क्या एजेंट अपने आप चलने के लिए शेड्यूल हो सकते हैं?",
+        a: "हाँ। Automations से आप cron-जैसी शेड्यूल टास्क बना सकते हैं, चैट में नैचुरल भाषा में या Automations पेज से। शेड्यूल लोकल चलते हैं, इसलिए बिना इंटरनेट भी काम करते हैं। छूटे रन रिस्टार्ट पर पूरे होते हैं।",
+        linkLabel: "ऑटोमेशन डॉक्स देखें",
+      },
+      {
+        q: "किसी एजेंट को Telegram या DingTalk से कैसे जोड़ें?",
+        a: "क्लाइंट में Channels पेज खोलें, प्लेटफ़ॉर्म चुनें और बॉट टोकन जोड़ने की गाइड फ़ॉलो करें। Accio Work Telegram, Discord, DingTalk, Lark (Feishu) और WeChat सपोर्ट करता है। कनेक्ट होने पर एजेंट चैट में जवाब देता है या टास्क अपने आप ले लेता है।",
+        linkLabel: "समर्थित चैनल देखें",
+      },
+      {
+        q: "Skills क्या हैं और वे एजेंट कैसे बढ़ाती हैं?",
+        a: "Skills प्लगइन पैक हैं जो एजेंट को खास डोमेन क्षमताएँ देते हैं: कोड रिव्यू, कॉपीराइटिंग, SEO ऑडिट और भी। मार्केटप्लेस से इंस्टॉल करें या अपनी बनाएँ। Accio Work Model Context Protocol (MCP) मानक भी समर्थित है ताकि बाहरी टूल सर्वर जोड़े जा सकें।",
+        linkLabel: "स्किल प्रबंधन देखें",
+      },
+      {
+        q: "कौन-कौन से प्लेटफ़ॉर्म समर्थित हैं?",
+        a: "Accio Work macOS (Apple Silicon और Intel) और Windows (x64) के लिए उपलब्ध है। यह Electron से बना नेटिव डेस्कटॉप ऐप है, जिसे लोकल सिस्टम रिसोर्स तक पूर्ण एक्सेस है।",
+      },
+      {
+        q: "क्या कई एजेंट मिलकर एक टास्क पर काम कर सकते हैं?",
+        a: "हाँ। Teams फ़ीचर से आप एक Team Lead और सदस्य एजेंट के साथ ग्रुप बना सकते हैं। TL सब-टास्क बाँटता है, ग्रुप चैट में काम को कोऑर्डिनेट करता है और मल्टी-एजेंट फ़्लो चलाता है, विशेष भूमिकाओं वाले जटिल प्रोजेक्ट के लिए बेहतरीन।",
+        linkLabel: "टीम डॉक्स देखें",
+      },
     ],
   },
   cta: {
@@ -1708,8 +2612,10 @@ const hi: Dict = {
     partneredWith: "सहयोगी",
     rights: "सर्वाधिकार सुरक्षित।",
     tagline: "एआई एजेंट जो आपकी सोर्सिंग, रिसर्च और रोज़मर्रा का काम संभालता है।",
-    about: "Accio Work की तुलना दूसरे AI एजेंट से करें, बचने वाले घंटे आँकें, तैयार सप्लायर टेम्पलेट लें और सीमापार सोर्सिंग गाइड पढ़ें।",
-    disclosure: "Alibaba के उत्पाद Accio Work के बारे में स्वतंत्र संसाधन। बटन रेफ़रल लिंक से आधिकारिक साइट खोलते हैं।",
+    about:
+      "Accio Work की तुलना दूसरे AI एजेंट से करें, बचने वाले घंटे आँकें, तैयार सप्लायर टेम्पलेट लें और सीमापार सोर्सिंग गाइड पढ़ें।",
+    disclosure:
+      "Alibaba के उत्पाद Accio Work के बारे में स्वतंत्र संसाधन। बटन रेफ़रल लिंक से आधिकारिक साइट खोलते हैं।",
     colProduct: "उत्पाद",
     colTools: "टूल",
     colResources: "संसाधन",
@@ -1721,10 +2627,22 @@ const hi: Dict = {
     heading: "आइडिया से नतीजे तक, चार कदम में",
     subheading: "न कोई इम्प्लीमेंटेशन प्रोजेक्ट, न डेवलपर। आप नतीजा बताते हैं, एजेंट काम करते हैं।",
     items: [
-      { title: "अपना लक्ष्य बताएं", body: "आम शब्दों में लिखें। «8 डॉलर से कम में LED शीशों के तीन वेरिफ़ाइड सप्लायर ढूँढो।» कोई प्रॉम्प्ट सीखने की ज़रूरत नहीं।" },
-      { title: "एजेंट काम पर लग जाते हैं", body: "एक जनरल एजेंट काम की योजना बनाता है और सोर्सिंग, डिज़ाइन या कॉपी के विशेषज्ञ जोड़ता है। हर एक की अपनी मेमोरी होती है।" },
-      { title: "आप जाँचते और मंज़ूरी देते हैं", body: "हर अहम कदम आपकी हाँ का इंतज़ार करता है। आपके देखे बिना कुछ भी भेजा, ख़रीदा या पब्लिश नहीं होता।" },
-      { title: "नतीजा ले जाएं", body: "तैयार लिस्टिंग, बना-बनाया स्टोर, सप्लायर की छोटी लिस्ट, शेड्यूल की गई कैंपेन। उसी दिन इस्तेमाल के लिए तैयार।" },
+      {
+        title: "अपना लक्ष्य बताएं",
+        body: "आम शब्दों में लिखें। «8 डॉलर से कम में LED शीशों के तीन वेरिफ़ाइड सप्लायर ढूँढो।» कोई प्रॉम्प्ट सीखने की ज़रूरत नहीं।",
+      },
+      {
+        title: "एजेंट काम पर लग जाते हैं",
+        body: "एक जनरल एजेंट काम की योजना बनाता है और सोर्सिंग, डिज़ाइन या कॉपी के विशेषज्ञ जोड़ता है। हर एक की अपनी मेमोरी होती है।",
+      },
+      {
+        title: "आप जाँचते और मंज़ूरी देते हैं",
+        body: "हर अहम कदम आपकी हाँ का इंतज़ार करता है। आपके देखे बिना कुछ भी भेजा, ख़रीदा या पब्लिश नहीं होता।",
+      },
+      {
+        title: "नतीजा ले जाएं",
+        body: "तैयार लिस्टिंग, बना-बनाया स्टोर, सप्लायर की छोटी लिस्ट, शेड्यूल की गई कैंपेन। उसी दिन इस्तेमाल के लिए तैयार।",
+      },
     ],
   },
   pricing: {
@@ -1733,9 +2651,46 @@ const hi: Dict = {
     perksTitle: "हर प्लान में शामिल",
     note: "क़ीमत और क्रेडिट की लागत Accio तय करता है और बदल सकती है। ताज़ा जानकारी ऐप में देखें।",
     plans: [
-      { name: "Free", price: "$0", priceNote: "कार्ड की ज़रूरत नहीं", tagline: "पहला प्रोजेक्ट लॉन्च करने के लिए सब कुछ।", features: ["24/7 जनरल AI एजेंट", "50+ एक-क्लिक इंटीग्रेशन", "ब्राउज़र ऑटोमेशन", "असली ट्रेड डेटा से मार्केट एनालिसिस"], cta: "मुफ़्त शुरू करें" },
-      { name: "Pro", price: "इस्तेमाल के हिसाब से", priceNote: "भारी टास्क के लिए क्रेडिट", tagline: "उनके लिए जो असल सोर्सिंग और डेटा का काम करते हैं।", features: ["Free का सब कुछ", "सीनियर विशेषज्ञ एजेंट", "अतिरिक्त डेटा: Amazon, TikTok, YouTube", "शेड्यूल्ड ऑटोमेशन और टीमें"], cta: "शुरू करें", highlight: true },
-      { name: "Enterprise", price: "कस्टम", priceNote: "टीम से बात करें", tagline: "उन टीमों के लिए जिन्हें स्केल और कंट्रोल चाहिए।", features: ["Pro का सब कुछ", "प्राथमिकता सपोर्ट", "एडवांस सुरक्षा और कंट्रोल", "हैंड्स-ऑन ऑनबोर्डिंग"], cta: "अभी आज़माएं" },
+      {
+        name: "Free",
+        price: "$0",
+        priceNote: "कार्ड की ज़रूरत नहीं",
+        tagline: "पहला प्रोजेक्ट लॉन्च करने के लिए सब कुछ।",
+        features: [
+          "24/7 जनरल AI एजेंट",
+          "50+ एक-क्लिक इंटीग्रेशन",
+          "ब्राउज़र ऑटोमेशन",
+          "असली ट्रेड डेटा से मार्केट एनालिसिस",
+        ],
+        cta: "मुफ़्त शुरू करें",
+      },
+      {
+        name: "Pro",
+        price: "इस्तेमाल के हिसाब से",
+        priceNote: "भारी टास्क के लिए क्रेडिट",
+        tagline: "उनके लिए जो असल सोर्सिंग और डेटा का काम करते हैं।",
+        features: [
+          "Free का सब कुछ",
+          "सीनियर विशेषज्ञ एजेंट",
+          "अतिरिक्त डेटा: Amazon, TikTok, YouTube",
+          "शेड्यूल्ड ऑटोमेशन और टीमें",
+        ],
+        cta: "शुरू करें",
+        highlight: true,
+      },
+      {
+        name: "Enterprise",
+        price: "कस्टम",
+        priceNote: "टीम से बात करें",
+        tagline: "उन टीमों के लिए जिन्हें स्केल और कंट्रोल चाहिए।",
+        features: [
+          "Pro का सब कुछ",
+          "प्राथमिकता सपोर्ट",
+          "एडवांस सुरक्षा और कंट्रोल",
+          "हैंड्स-ऑन ऑनबोर्डिंग",
+        ],
+        cta: "अभी आज़माएं",
+      },
     ],
   },
   compareChat: {
@@ -1744,8 +2699,14 @@ const hi: Dict = {
     chatLabel: "आम AI चैट",
     accioLabel: "Accio Work",
     rows: [
-      { chat: "टेक्स्ट में जवाब देता है", accio: "आपकी फ़ाइलों और ब्राउज़र में असली टास्क करता है" },
-      { chat: "खुले वेब से अंदाज़ा लगाता है", accio: "Alibaba के असली सप्लायर और ट्रेड डेटा पर टिका है" },
+      {
+        chat: "टेक्स्ट में जवाब देता है",
+        accio: "आपकी फ़ाइलों और ब्राउज़र में असली टास्क करता है",
+      },
+      {
+        chat: "खुले वेब से अंदाज़ा लगाता है",
+        accio: "Alibaba के असली सप्लायर और ट्रेड डेटा पर टिका है",
+      },
       { chat: "आप कॉपी-पेस्ट कर ख़ुद करते हैं", accio: "एजेंट काम शुरू से आख़िर तक पूरा करते हैं" },
       { chat: "एक मॉडल, एक थ्रेड", accio: "विशेषज्ञों की टीम जो आपस में काम सौंपती है" },
       { chat: "चैट के बीच भूल जाता है", accio: "हर एजेंट की अपनी मेमोरी और शेड्यूल है" },
@@ -1755,17 +2716,51 @@ const hi: Dict = {
     heading: "आप जैसे सच में काम करते हैं, उसके लिए बना",
     subheading: "एक टास्क चुनें। एजेंट उसे अपने शेड्यूल पर शुरू से आख़िर तक चलाता है।",
     items: [
-      { icon: "🛍️", title: "ड्रॉपशिपिंग और D2C", body: "ट्रेंड पकड़ें, सामान ढूँढें, स्टोर बनाएं, विज्ञापन चलाएं। एक ही बैठक में आइडिया से पहली बिक्री तक।" },
-      { icon: "🔎", title: "सप्लायर सोर्सिंग", body: "वेरिफ़ाइड सप्लायर, भेजी गई पूछताछ, ईमेल पर मोलभाव। कॉल की ज़रूरत नहीं।" },
-      { icon: "✍️", title: "कंटेंट और मार्केटिंग", body: "लैंडिंग पेज, प्रोडक्ट कार्ड, सोशल पोस्ट, शेड्यूलिंग। आपके सोते वक़्त पब्लिश करता है।" },
-      { icon: "📊", title: "मार्केट रिसर्च", body: "निच, माँग और प्रतिस्पर्धियों की चालें असली ट्रेड डेटा से, अंदाज़े से नहीं।" },
-      { icon: "⚙️", title: "वर्कफ़्लो ऑटोमेशन", body: "टास्क एक बार सेट करें। प्राइस चेक, रिपोर्ट और सिंक ख़ुद चलते हैं, ऑफ़लाइन भी।" },
-      { icon: "🧰", title: "कस्टम टूल", body: "एक कैलकुलेटर, डैशबोर्ड या ट्रैकर बताएं। मौक़े पर चलता-फिरता टूल मिलेगा।" },
+      {
+        icon: "🛍️",
+        title: "ड्रॉपशिपिंग और D2C",
+        body: "ट्रेंड पकड़ें, सामान ढूँढें, स्टोर बनाएं, विज्ञापन चलाएं। एक ही बैठक में आइडिया से पहली बिक्री तक।",
+      },
+      {
+        icon: "🔎",
+        title: "सप्लायर सोर्सिंग",
+        body: "वेरिफ़ाइड सप्लायर, भेजी गई पूछताछ, ईमेल पर मोलभाव। कॉल की ज़रूरत नहीं।",
+      },
+      {
+        icon: "✍️",
+        title: "कंटेंट और मार्केटिंग",
+        body: "लैंडिंग पेज, प्रोडक्ट कार्ड, सोशल पोस्ट, शेड्यूलिंग। आपके सोते वक़्त पब्लिश करता है।",
+      },
+      {
+        icon: "📊",
+        title: "मार्केट रिसर्च",
+        body: "निच, माँग और प्रतिस्पर्धियों की चालें असली ट्रेड डेटा से, अंदाज़े से नहीं।",
+      },
+      {
+        icon: "⚙️",
+        title: "वर्कफ़्लो ऑटोमेशन",
+        body: "टास्क एक बार सेट करें। प्राइस चेक, रिपोर्ट और सिंक ख़ुद चलते हैं, ऑफ़लाइन भी।",
+      },
+      {
+        icon: "🧰",
+        title: "कस्टम टूल",
+        body: "एक कैलकुलेटर, डैशबोर्ड या ट्रैकर बताएं। मौक़े पर चलता-फिरता टूल मिलेगा।",
+      },
     ],
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português", hi: "हिन्दी", fr: "Français" },
+  langNames: {
+    en: "English",
+    ru: "Русский",
+    de: "Deutsch",
+    it: "Italiano",
+    es: "Español",
+    zh: "中文",
+    pt: "Português",
+    hi: "हिन्दी",
+    fr: "Français",
+    ar: "العربية",
+  },
 };
-
 
 const fr: Dict = {
   nav: {
@@ -1795,8 +2790,7 @@ const fr: Dict = {
     brand: "Work",
     tagline: "Votre équipe business d'agents IA, disponible 24h/24",
     pills: ["Aucune courbe d'apprentissage", "Pensé pour le business", "Sécurité entreprise"],
-    desc:
-      "Automatisez votre activité de bout en bout : recherche et analyse, sourcing et négociation, marketing et ventes, opérations et CRM, avec un vrai retour sur investissement.",
+    desc: "Automatisez votre activité de bout en bout : recherche et analyse, sourcing et négociation, marketing et ventes, opérations et CRM, avec un vrai retour sur investissement.",
     cta: "Télécharger pour macOS",
     ctaBadge: "Apple Silicon",
     ctaNote: "Pour macOS 11+ et Windows 10+",
@@ -1873,7 +2867,10 @@ const fr: Dict = {
     agents: [
       { name: "Market Scout", msg: "Demande UE d'humidificateurs portables ↑ 38 % sur 30 jours." },
       { name: "Expert sourcing", msg: "12 fournisseurs vérifiés à Shenzhen · MOQ 100+ · BSCI ✓" },
-      { name: "Designer produit", msg: "3 variantes de concept en finition mate, prêtes à relire." },
+      {
+        name: "Designer produit",
+        msg: "3 variantes de concept en finition mate, prêtes à relire.",
+      },
       { name: "Rédacteur fiches", msg: "Titre SEO rédigé, CTR estimé +37 %." },
     ],
   },
@@ -1888,14 +2885,45 @@ const fr: Dict = {
     heading: "FAQ",
     readGuide: "Lire le guide de démarrage",
     items: [
-      { q: "En quoi Accio Work diffère-t-il d'un chatbot IA classique ?", a: "Les outils de chat classiques répondent en texte. Accio Work est une plateforme d'agents orientée exécution : elle lit vos fichiers locaux, lance des commandes terminal, pilote le navigateur et appelle des API externes. Elle ne dit pas seulement quoi faire, elle le fait avec vous.", linkLabel: "Lire le guide de démarrage" },
-      { q: "Quels LLM sont pris en charge ?", a: "Nous prenons en charge Gemini, GPT-4o, Claude et Qwen. Vous pouvez attribuer un modèle différent à chaque agent. L'accès passe par notre passerelle, donc aucune configuration compliquée de clés API.", linkLabel: "Voir les capacités des agents" },
-      { q: "Que peut faire l'automatisation du navigateur ?", a: "Accio Work pilote un vrai navigateur via Chrome DevTools Protocol. Les agents peuvent chercher sur le web, extraire des pages, remplir des formulaires, prendre des captures et enchaîner des parcours complets sans vous. L'accès navigateur est une capacité sensible et demande une autorisation explicite.", linkLabel: "Voir les outils des agents" },
-      { q: "Puis-je planifier l'exécution automatique des agents ?", a: "Oui. La fonction Automations permet de créer des tâches planifiées façon cron, décrites en langage naturel dans le chat ou configurées depuis la page Automations. Les planifications tournent en local, donc même hors ligne. Les exécutions manquées sont rattrapées au redémarrage.", linkLabel: "Voir la documentation automatisations" },
-      { q: "Comment connecter un agent à Telegram ou DingTalk ?", a: "Ouvrez la page Channels dans le client, choisissez la plateforme et suivez le guide pour ajouter un token de bot. Accio Work prend en charge Telegram, Discord, DingTalk, Lark (Feishu) et WeChat. Une fois connecté, l'agent répond en chat ou reçoit des tâches automatiquement.", linkLabel: "Voir les canaux pris en charge" },
-      { q: "Que sont les Skills et comment étendent-elles les agents ?", a: "Les Skills sont des modules qui donnent aux agents des compétences métier précises : revue de code, rédaction, audit SEO et bien d'autres. Installez-les depuis la marketplace ou créez les vôtres. Accio Work supporte aussi le standard Model Context Protocol (MCP) pour brancher des serveurs d'outils externes.", linkLabel: "Voir la gestion des skills" },
-      { q: "Quelles plateformes sont prises en charge ?", a: "Accio Work est disponible sur macOS (Apple Silicon et Intel) et Windows (x64). C'est une application desktop native construite avec Electron, avec un accès complet aux ressources locales." },
-      { q: "Plusieurs agents peuvent-ils collaborer sur une tâche ?", a: "Oui. La fonction Teams permet de créer des groupes d'agents avec un Team Lead et des membres. Le TL délègue les sous-tâches, coordonne le travail via un chat de groupe et orchestre des flux multi-agents, utile pour les projets complexes.", linkLabel: "Voir la documentation équipes" },
+      {
+        q: "En quoi Accio Work diffère-t-il d'un chatbot IA classique ?",
+        a: "Les outils de chat classiques répondent en texte. Accio Work est une plateforme d'agents orientée exécution : elle lit vos fichiers locaux, lance des commandes terminal, pilote le navigateur et appelle des API externes. Elle ne dit pas seulement quoi faire, elle le fait avec vous.",
+        linkLabel: "Lire le guide de démarrage",
+      },
+      {
+        q: "Quels LLM sont pris en charge ?",
+        a: "Nous prenons en charge Gemini, GPT-4o, Claude et Qwen. Vous pouvez attribuer un modèle différent à chaque agent. L'accès passe par notre passerelle, donc aucune configuration compliquée de clés API.",
+        linkLabel: "Voir les capacités des agents",
+      },
+      {
+        q: "Que peut faire l'automatisation du navigateur ?",
+        a: "Accio Work pilote un vrai navigateur via Chrome DevTools Protocol. Les agents peuvent chercher sur le web, extraire des pages, remplir des formulaires, prendre des captures et enchaîner des parcours complets sans vous. L'accès navigateur est une capacité sensible et demande une autorisation explicite.",
+        linkLabel: "Voir les outils des agents",
+      },
+      {
+        q: "Puis-je planifier l'exécution automatique des agents ?",
+        a: "Oui. La fonction Automations permet de créer des tâches planifiées façon cron, décrites en langage naturel dans le chat ou configurées depuis la page Automations. Les planifications tournent en local, donc même hors ligne. Les exécutions manquées sont rattrapées au redémarrage.",
+        linkLabel: "Voir la documentation automatisations",
+      },
+      {
+        q: "Comment connecter un agent à Telegram ou DingTalk ?",
+        a: "Ouvrez la page Channels dans le client, choisissez la plateforme et suivez le guide pour ajouter un token de bot. Accio Work prend en charge Telegram, Discord, DingTalk, Lark (Feishu) et WeChat. Une fois connecté, l'agent répond en chat ou reçoit des tâches automatiquement.",
+        linkLabel: "Voir les canaux pris en charge",
+      },
+      {
+        q: "Que sont les Skills et comment étendent-elles les agents ?",
+        a: "Les Skills sont des modules qui donnent aux agents des compétences métier précises : revue de code, rédaction, audit SEO et bien d'autres. Installez-les depuis la marketplace ou créez les vôtres. Accio Work supporte aussi le standard Model Context Protocol (MCP) pour brancher des serveurs d'outils externes.",
+        linkLabel: "Voir la gestion des skills",
+      },
+      {
+        q: "Quelles plateformes sont prises en charge ?",
+        a: "Accio Work est disponible sur macOS (Apple Silicon et Intel) et Windows (x64). C'est une application desktop native construite avec Electron, avec un accès complet aux ressources locales.",
+      },
+      {
+        q: "Plusieurs agents peuvent-ils collaborer sur une tâche ?",
+        a: "Oui. La fonction Teams permet de créer des groupes d'agents avec un Team Lead et des membres. Le TL délègue les sous-tâches, coordonne le travail via un chat de groupe et orchestre des flux multi-agents, utile pour les projets complexes.",
+        linkLabel: "Voir la documentation équipes",
+      },
     ],
   },
   cta: {
@@ -1911,34 +2939,88 @@ const fr: Dict = {
     partneredWith: "En partenariat avec",
     rights: "Tous droits réservés.",
     tagline: "L'agent IA qui gère votre sourcing, vos recherches et les tâches répétitives.",
-    about: "Comparez Accio Work à d'autres agents IA, estimez les heures gagnées, récupérez des modèles fournisseurs prêts à l'emploi et lisez des guides de sourcing transfrontalier.",
-    disclosure: "Ressource indépendante sur Accio Work, un produit d'Alibaba. Les boutons ouvrent le site officiel via un lien de parrainage.",
+    about:
+      "Comparez Accio Work à d'autres agents IA, estimez les heures gagnées, récupérez des modèles fournisseurs prêts à l'emploi et lisez des guides de sourcing transfrontalier.",
+    disclosure:
+      "Ressource indépendante sur Accio Work, un produit d'Alibaba. Les boutons ouvrent le site officiel via un lien de parrainage.",
     colProduct: "Produit",
     colTools: "Outils",
     colResources: "Ressources",
     otherLanguages: "Autres langues",
     featuredIn: "Ils en parlent",
   },
-  availability: "Fonctionne sur macOS et Windows. Ou lancez-le directement dans le navigateur, sans installation.",
+  availability:
+    "Fonctionne sur macOS et Windows. Ou lancez-le directement dans le navigateur, sans installation.",
   steps: {
     heading: "De l'idée au résultat en quatre étapes",
-    subheading: "Pas de projet d'intégration, pas de développeurs. Vous décrivez le résultat, les agents font le travail.",
+    subheading:
+      "Pas de projet d'intégration, pas de développeurs. Vous décrivez le résultat, les agents font le travail.",
     items: [
-      { title: "Donnez votre objectif", body: "Écrivez avec vos mots. «Trouve trois fournisseurs vérifiés de miroirs LED à moins de 8 $.» Aucun prompt à apprendre." },
-      { title: "Les agents se mettent au travail", body: "Un agent général planifie la tâche et appelle des spécialistes du sourcing, du design ou du texte. Chacun garde sa mémoire." },
-      { title: "Vous vérifiez et validez", body: "Chaque étape critique attend votre feu vert. Rien n'est envoyé, acheté ni publié sans que vous le voyiez." },
-      { title: "Récupérez le résultat", body: "Fiches prêtes, boutique montée, liste courte de fournisseurs, campagne planifiée. Utilisable le jour même." },
+      {
+        title: "Donnez votre objectif",
+        body: "Écrivez avec vos mots. «Trouve trois fournisseurs vérifiés de miroirs LED à moins de 8 $.» Aucun prompt à apprendre.",
+      },
+      {
+        title: "Les agents se mettent au travail",
+        body: "Un agent général planifie la tâche et appelle des spécialistes du sourcing, du design ou du texte. Chacun garde sa mémoire.",
+      },
+      {
+        title: "Vous vérifiez et validez",
+        body: "Chaque étape critique attend votre feu vert. Rien n'est envoyé, acheté ni publié sans que vous le voyiez.",
+      },
+      {
+        title: "Récupérez le résultat",
+        body: "Fiches prêtes, boutique montée, liste courte de fournisseurs, campagne planifiée. Utilisable le jour même.",
+      },
     ],
   },
   pricing: {
     heading: "Tarifs simples. Démarrez gratuitement.",
-    subheading: "Créez votre compte sans carte. Vous payez seulement quand une tâche lourde consomme des crédits.",
+    subheading:
+      "Créez votre compte sans carte. Vous payez seulement quand une tâche lourde consomme des crédits.",
     perksTitle: "Chaque offre inclut",
     note: "Les prix et le coût des crédits sont fixés par Accio et peuvent changer. Consultez l'app pour les détails à jour.",
     plans: [
-      { name: "Free", price: "0 $", priceNote: "sans carte", tagline: "Tout pour lancer votre premier projet.", features: ["Agent IA généraliste 24h/24", "50+ intégrations en un clic", "Automatisation du navigateur", "Analyse de marché sur données commerciales réelles"], cta: "Démarrer gratuitement" },
-      { name: "Pro", price: "À l'usage", priceNote: "crédits pour les tâches lourdes", tagline: "Pour ceux qui font du vrai sourcing et du travail sur données.", features: ["Tout de Free", "Agents spécialistes seniors", "Données en plus : Amazon, TikTok, YouTube", "Automatisations planifiées et équipes"], cta: "Commencer", highlight: true },
-      { name: "Enterprise", price: "Sur mesure", priceNote: "parler à l'équipe", tagline: "Pour les équipes qui veulent échelle et contrôle.", features: ["Tout de Pro", "Support prioritaire", "Sécurité et contrôles avancés", "Onboarding accompagné"], cta: "Essayer maintenant" },
+      {
+        name: "Free",
+        price: "0 $",
+        priceNote: "sans carte",
+        tagline: "Tout pour lancer votre premier projet.",
+        features: [
+          "Agent IA généraliste 24h/24",
+          "50+ intégrations en un clic",
+          "Automatisation du navigateur",
+          "Analyse de marché sur données commerciales réelles",
+        ],
+        cta: "Démarrer gratuitement",
+      },
+      {
+        name: "Pro",
+        price: "À l'usage",
+        priceNote: "crédits pour les tâches lourdes",
+        tagline: "Pour ceux qui font du vrai sourcing et du travail sur données.",
+        features: [
+          "Tout de Free",
+          "Agents spécialistes seniors",
+          "Données en plus : Amazon, TikTok, YouTube",
+          "Automatisations planifiées et équipes",
+        ],
+        cta: "Commencer",
+        highlight: true,
+      },
+      {
+        name: "Enterprise",
+        price: "Sur mesure",
+        priceNote: "parler à l'équipe",
+        tagline: "Pour les équipes qui veulent échelle et contrôle.",
+        features: [
+          "Tout de Pro",
+          "Support prioritaire",
+          "Sécurité et contrôles avancés",
+          "Onboarding accompagné",
+        ],
+        cta: "Essayer maintenant",
+      },
     ],
   },
   compareChat: {
@@ -1947,26 +3029,403 @@ const fr: Dict = {
     chatLabel: "Chat IA classique",
     accioLabel: "Accio Work",
     rows: [
-      { chat: "Répond avec du texte", accio: "Exécute de vraies tâches sur vos fichiers et le navigateur" },
-      { chat: "Devine à partir du web ouvert", accio: "S'appuie sur les vraies données fournisseurs et commerce d'Alibaba" },
-      { chat: "Vous copiez, collez et faites vous-même", accio: "Les agents mènent la tâche de bout en bout" },
+      {
+        chat: "Répond avec du texte",
+        accio: "Exécute de vraies tâches sur vos fichiers et le navigateur",
+      },
+      {
+        chat: "Devine à partir du web ouvert",
+        accio: "S'appuie sur les vraies données fournisseurs et commerce d'Alibaba",
+      },
+      {
+        chat: "Vous copiez, collez et faites vous-même",
+        accio: "Les agents mènent la tâche de bout en bout",
+      },
       { chat: "Un modèle, un fil", accio: "Une équipe de spécialistes qui se passent le travail" },
-      { chat: "Oublie d'un chat à l'autre", accio: "Chaque agent garde sa mémoire et son planning" },
+      {
+        chat: "Oublie d'un chat à l'autre",
+        accio: "Chaque agent garde sa mémoire et son planning",
+      },
     ],
   },
   useCases: {
     heading: "Pensé pour votre vraie façon de travailler",
     subheading: "Choisissez une tâche. Un agent la mène du début à la fin, à son propre rythme.",
     items: [
-      { icon: "🛍️", title: "Dropshipping et D2C", body: "Repérez une tendance, trouvez le produit, montez la boutique, lancez les pubs. De l'idée à la première vente en une séance." },
-      { icon: "🔎", title: "Sourcing fournisseurs", body: "Fournisseurs vérifiés, demandes envoyées, négociation par e-mail. Vous évitez les appels." },
-      { icon: "✍️", title: "Contenu et marketing", body: "Landing pages, fiches produits, posts, planification. Ça publie pendant que vous dormez." },
-      { icon: "📊", title: "Étude de marché", body: "Niches, demande et mouvements des concurrents à partir de données commerciales réelles, pas de suppositions." },
-      { icon: "⚙️", title: "Automatisation des flux", body: "Réglez une tâche une fois. Vérifs de prix, rapports et syncs tournent seuls, même hors ligne." },
-      { icon: "🧰", title: "Outils sur mesure", body: "Décrivez un calculateur, un tableau de bord ou un tracker. Un outil fonctionnel arrive aussitôt." },
+      {
+        icon: "🛍️",
+        title: "Dropshipping et D2C",
+        body: "Repérez une tendance, trouvez le produit, montez la boutique, lancez les pubs. De l'idée à la première vente en une séance.",
+      },
+      {
+        icon: "🔎",
+        title: "Sourcing fournisseurs",
+        body: "Fournisseurs vérifiés, demandes envoyées, négociation par e-mail. Vous évitez les appels.",
+      },
+      {
+        icon: "✍️",
+        title: "Contenu et marketing",
+        body: "Landing pages, fiches produits, posts, planification. Ça publie pendant que vous dormez.",
+      },
+      {
+        icon: "📊",
+        title: "Étude de marché",
+        body: "Niches, demande et mouvements des concurrents à partir de données commerciales réelles, pas de suppositions.",
+      },
+      {
+        icon: "⚙️",
+        title: "Automatisation des flux",
+        body: "Réglez une tâche une fois. Vérifs de prix, rapports et syncs tournent seuls, même hors ligne.",
+      },
+      {
+        icon: "🧰",
+        title: "Outils sur mesure",
+        body: "Décrivez un calculateur, un tableau de bord ou un tracker. Un outil fonctionnel arrive aussitôt.",
+      },
     ],
   },
-  langNames: { en: "English", ru: "Русский", de: "Deutsch", it: "Italiano", es: "Español", zh: "中文", pt: "Português", hi: "हिन्दी", fr: "Français" },
+  langNames: {
+    en: "English",
+    ru: "Русский",
+    de: "Deutsch",
+    it: "Italiano",
+    es: "Español",
+    zh: "中文",
+    pt: "Português",
+    hi: "हिन्दी",
+    fr: "Français",
+    ar: "العربية",
+  },
 };
 
-export const translations: Record<Lang, Dict> = { en, ru, de, it, es, zh, pt, hi, fr };
+const ar: Dict = {
+  nav: {
+    pricing: "الأسعار",
+    help: "مركز المساعدة",
+    events: "الفعاليات",
+    language: "العربية",
+    download: "حمّل Accio Work",
+    blog: "المدونة",
+    compare: "مقارنة",
+    useCases: "حالات الاستخدام",
+    guide: "الدليل",
+    reviews: "المراجعات",
+    roi: "الحاسبة",
+    quiz: "اختبار الملاءمة",
+    templates: "القوالب",
+    tools: "الأدوات",
+    resources: "المصادر",
+    duty: "حاسبة الرسوم",
+    deMinimis: "دليل الإعفاء الجمركي",
+    tiktok: "متجر تيك توك",
+    prompts: "حزمة أوامر الذكاء الاصطناعي",
+    scorecard: "بطاقة تقييم المورّد",
+    checklist: "40 مهمة للذكاء الاصطناعي",
+  },
+  hero: {
+    brand: "Work",
+    tagline: "فريق أعمالك الذكي على مدار الساعة",
+    pills: ["بلا منحنى تعلّم", "مصمّم للأعمال", "أمان بمستوى المؤسسات"],
+    desc: "يؤتمت أعمالك من البداية إلى النهاية: البحث والتحليل، إيجاد المورّدين والتفاوض، التسويق والمبيعات، التشغيل وإدارة العملاء، ويحقّق لك ربحاً فعلياً.",
+    cta: "حمّل لنظام macOS",
+    ctaBadge: "Apple Silicon",
+    ctaNote: "يعمل على macOS 11 وما بعده وWindows 10 وما بعده",
+  },
+  business: {
+    heading: "مصمّم لكل احتياج في عملك",
+    tabs: {
+      launch: {
+        tabLabel: "أطلق متجرك",
+        title: "من الفكرة إلى أول عملية بيع خلال دقائق",
+        body: "أنشئ متجراً إلكترونياً متكاملاً بمنتجاته وصفحاته وتصميمه وتهيئته لمحركات البحث جاهزاً من أول لحظة، وابدأ البيع فور إطلاقه.",
+        extraYou: "فكرة واحدة",
+        extraAI: "منتجات، صفحات، تحسين محركات البحث",
+      },
+      monitor: {
+        tabLabel: "راقب المنافسين",
+        title: "اضبطها مرة واحدة، وتعمل تلقائياً",
+        body: "تابع أسعار منافسيك ومنتجاتهم وحملاتهم عبر مهام مجدولة، وحوّل كل ملاحظة إلى خطوة عملية تنفّذها بثقة.",
+        extraYou: "ضبط واحد",
+        extraAI: "أسعار، منتجات، حملات",
+      },
+      source: {
+        tabLabel: "ابحث وتفاوض",
+        title: "المورّد المناسب بالسعر المناسب",
+        body: "اعثر على مورّدين موثوقين، أرسل الاستفسارات، وتفاوض عبر البريد، كل ذلك يُدار نيابةً عنك حتى تحصل على أفضل صفقة.",
+        extraYou: "بلا مكالمات",
+        extraAI: "مورّدون موثوقون، استفسارات",
+      },
+      promote: {
+        tabLabel: "روّج على المنصات",
+        title: "انشر وتفاعل وانمُ على الطيار الآلي",
+        body: "أنشئ محتوى جاهزاً للانتشار، وجدول المنشورات على المنصات، وتفاعل مع جمهورك، وتابع ما ينجح ليلاً ونهاراً.",
+        extraYou: "انشر مرة",
+        extraAI: "جدولة، تفاعل، تحليلات",
+      },
+      tools: {
+        tabLabel: "صمّم أدواتك",
+        title: "أدوات عمل مخصّصة بلا برمجة",
+        body: "صِف ما تحتاجه فقط: حاسبات، لوحات معلومات، أدوات تتبّع، أو مواقع، واحصل على أداة تعمل في الحال وتتطوّر مع نمو عملك.",
+        extraYou: "صِف مرة",
+        extraAI: "حاسبات، لوحات، أدوات تتبّع",
+      },
+      organize: {
+        tabLabel: "نظّم ملفاتك",
+        title: "حوّل الوثائق المبعثرة إلى قرارات واضحة",
+        body: "ارفع عروض الأسعار والفواتير والتقارير أو أي ملف، وشاهد كل شيء منظّماً في جداول ورسوم واضحة، جاهزاً للمقارنة والتصرّف خلال ثوانٍ.",
+        extraYou: "ارفع الملفات",
+        extraAI: "جداول، رسوم، رؤى",
+      },
+      analyze: {
+        tabLabel: "حلّل الأكثر مبيعاً",
+        title: "افهم سوقك بنقرة واحدة",
+        body: "احصل على رؤية للسوق ببيانات من Jungle Scout وتيك توك وReddit وAlibaba.com وغيرها من المصادر الموثوقة.",
+        extraYou: "نقرة واحدة",
+        extraAI: "اتجاهات، طلب، تصنيفات",
+      },
+    },
+  },
+  why: {
+    heading: "لماذا تختار Accio Work؟",
+    aiTitle: "ذكاء اصطناعي واحد لكل شيء. أو فريق من المختصين.",
+    aiBody:
+      "وكيل عام يتولّى المهام اليومية. أضِف مختصين للمبيعات وإيجاد المورّدين والتصميم، لكلٍّ خبرته وذاكرته الخاصة.",
+    aiChannel: "#إطلاق-منتج-جديد",
+    connectTitle: "اربط مرة واحدة. وأتمِت كل شيء.",
+    connectBody:
+      "Shopify وGmail وSlack وLinkedIn وأكثر من 50 خدمة أخرى، بإعداد بنقرة واحدة. بلا مشاريع تكامل ولا حاجة لمطوّرين.",
+    dataTitle: "بياناتك. وأنت من يتحكّم بها.",
+    dataBody:
+      "تنفيذ في بيئة معزولة. أنت من يوافق على كل إجراء حسّاس. سيادة على البيانات مدعومة ببنية Alibaba التحتية.",
+    platformTitle: "منصة واحدة: تحليل، تصميم، أتمتة.",
+    platformBody:
+      "تقارير إيجاد المورّدين، تصميم المفاهيم، صفحات الهبوط، تتبّع المنافسين، اختر مهارة، جدولها، وانسَ أمرها.",
+    agents: [
+      {
+        name: "كشّاف السوق",
+        msg: "طلب الأوروبيين على أجهزة الترطيب المحمولة ارتفع 38% خلال 30 يوماً.",
+      },
+      {
+        name: "خبير التوريد",
+        msg: "12 مورّداً موثوقاً في شنجن · حد أدنى للطلب 100+ · شهادة BSCI ✓",
+      },
+      { name: "مصمّم المنتجات", msg: "3 مفاهيم بلمسة مطفية، جاهزة للمراجعة." },
+      {
+        name: "كاتب صفحات المنتجات",
+        msg: "صيغ عنوان محسّن لمحركات البحث، بزيادة متوقعة 37% في النقرات.",
+      },
+    ],
+  },
+  testimonials: {
+    heading1: "يحبّه",
+    highlight: "أكثر من 10 ملايين",
+    heading2: "مستخدم نشط شهرياً",
+    row1: [],
+    row2: [],
+  },
+  faq: {
+    heading: "الأسئلة الشائعة",
+    readGuide: "اقرأ دليل البدء السريع",
+    items: [
+      {
+        q: "بمَ يختلف Accio Work عن أداة محادثة ذكاء اصطناعي عادية؟",
+        a: "أدوات المحادثة المعتادة تكتفي بالردّ نصّاً. أمّا Accio Work فمنصّة وكلاء موجّهة للتنفيذ، تقرأ الملفات المحلية، وتشغّل أوامر الطرفية، وتتحكّم بمتصفحك، وتستدعي واجهات برمجية خارجية. لا يخبرك بما تفعل فحسب، بل يساعدك على إنجازه.",
+        linkLabel: "اقرأ دليل البدء السريع",
+      },
+      {
+        q: "ما نماذج اللغة المدعومة؟",
+        a: "ندعم حالياً Gemini وGPT-4o وClaude وQwen. يمكنك إسناد نماذج مختلفة لوكلاء مختلفين. يمرّ الوصول إلى النماذج عبر بوابتنا، فلا حاجة لإعداد معقّد لمفاتيح الواجهات.",
+        linkLabel: "اطّلع على قدرات الوكلاء",
+      },
+      {
+        q: "ماذا يمكن لأتمتة المتصفح أن تفعل؟",
+        a: "يتحكّم Accio Work بمتصفح حقيقي عبر بروتوكول Chrome DevTools. يبحث الوكلاء في الويب، ويستخرجون بيانات الصفحات، ويملؤون النماذج، ويلتقطون لقطات الشاشة، وينفّذون مسارات متعدّدة الخطوات دون تدخّل يدوي. الوصول إلى المتصفح صلاحية حسّاسة تتطلّب إذناً صريحاً.",
+        linkLabel: "اطّلع على أدوات الوكلاء",
+      },
+      {
+        q: "هل يمكنني جدولة الوكلاء ليعملوا تلقائياً؟",
+        a: "نعم. تتيح ميزة الأتمتة إنشاء مهام مجدولة على غرار cron، إمّا بوصفها بلغة طبيعية داخل المحادثة، أو بإعدادها من صفحة الأتمتة. تعمل الجداول محلياً، فتشتغل حتى بلا اتصال بالإنترنت، وتُعوَّض المهام الفائتة عند إعادة التشغيل.",
+        linkLabel: "اطّلع على وثائق الأتمتة",
+      },
+      {
+        q: "كيف أربط وكيلاً بتيليجرام أو DingTalk؟",
+        a: "افتح صفحة القنوات في التطبيق، اختر المنصة التي تريدها، واتبع دليل الإعداد لإضافة رمز البوت. يدعم Accio Work تيليجرام وDiscord وDingTalk وLark (فيشو) وWeChat. بعد الربط يمكن للوكيل الردّ في المحادثات أو استقبال المهام تلقائياً.",
+        linkLabel: "اطّلع على القنوات المدعومة",
+      },
+      {
+        q: "ما المهارات وكيف توسّع قدرات الوكلاء؟",
+        a: "المهارات حزم إضافية تمنح الوكلاء قدرات متخصّصة: مراجعة الشيفرة، كتابة النصوص، تدقيق تحسين محركات البحث وغيرها. يمكنك تثبيت المهارات من المتجر أو إنشاء مهاراتك الخاصة. كما يدعم Accio Work معيار بروتوكول سياق النموذج (MCP) لدمج خوادم أدوات خارجية.",
+        linkLabel: "اطّلع على إدارة المهارات",
+      },
+      {
+        q: "ما الأنظمة المدعومة؟",
+        a: "يتوفّر Accio Work على macOS (بمعالجات Apple Silicon وIntel) وWindows (x64). وهو تطبيق سطح مكتب أصلي مبني على Electron، فتحصل على وصول كامل لموارد نظامك المحلي.",
+      },
+      {
+        q: "هل يتعاون عدّة وكلاء على مهمة واحدة؟",
+        a: "نعم. تتيح ميزة الفِرَق إنشاء مجموعات وكلاء بقائد فريق وأعضاء. يوزّع القائد المهام الفرعية، وينسّق العمل عبر محادثة المجموعة، ويدير مسارات متعدّدة الوكلاء، وهو ما يفيد المشاريع المعقّدة التي تستفيد من أدوار متخصّصة.",
+        linkLabel: "اطّلع على وثائق فِرَق الوكلاء",
+      },
+    ],
+  },
+  cta: {
+    title: "جرّب Accio Work اليوم.",
+    subtitle: "عِش أفضل تجربة عمل مع Accio Work.",
+    download: "حمّل لنظام macOS",
+    downloadWin: "حمّل لنظام Windows",
+    ctaBadge: "Apple Silicon",
+    quickStart: "بدء سريع",
+    note: "يعمل على macOS 11 وما بعده وWindows 10 وما بعده",
+  },
+  footer: {
+    partneredWith: "بالشراكة مع",
+    rights: "جميع الحقوق محفوظة.",
+    tagline: "وكيل الذكاء الاصطناعي الذي يتولّى توريدك وبحثك ومهامك الروتينية.",
+    about:
+      "قارن Accio Work بوكلاء الذكاء الاصطناعي الآخرين، واحسب الساعات التي يوفّرها، واحصل على قوالب مورّدين جاهزة، واقرأ أدلّة التوريد عبر الحدود.",
+    disclosure:
+      "مصدر مستقل يتناول Accio Work، أحد منتجات Alibaba. تفتح الأزرار الموقع الرسمي عبر رابط إحالة.",
+    colProduct: "المنتج",
+    colTools: "الأدوات",
+    colResources: "المصادر",
+    otherLanguages: "لغات أخرى",
+    featuredIn: "ظهر في",
+  },
+  availability: "يعمل على macOS وWindows. أو ابدأ من متصفحك مباشرة دون أي تثبيت.",
+  steps: {
+    heading: "من الفكرة إلى الإنجاز في أربع خطوات",
+    subheading: "بلا مشاريع إعداد ولا مطوّرين. تصف النتيجة، ويتولّى الوكلاء العمل.",
+    items: [
+      {
+        title: "أخبره بهدفك",
+        body: "اكتب ما تريده بكلمات بسيطة: «اعثر على ثلاثة مورّدين موثوقين لمرايا LED بأقل من 8 دولارات». لا أوامر عليك حفظها.",
+      },
+      {
+        title: "الوكلاء يباشرون العمل",
+        body: "وكيل عام يخطّط للمهمة ويستدعي مختصين للتوريد أو التصميم أو الكتابة، ولكلٍّ ذاكرته الخاصة.",
+      },
+      {
+        title: "تراجع وتوافق",
+        body: "كل خطوة حاسمة تنتظر موافقتك. لا يُرسَل شيء ولا يُشترى ولا يُنشر قبل أن تراه أولاً.",
+      },
+      {
+        title: "أطلق النتيجة",
+        body: "صفحات منتجات منشورة، متجر جاهز، قائمة مورّدين مختصرة، حملة مجدولة. نتيجة فعلية تستخدمها في اليوم نفسه.",
+      },
+    ],
+  },
+  pricing: {
+    heading: "أسعار بسيطة. ابدأ مجاناً.",
+    subheading: "أنشئ حسابك دون بطاقة. لا تدفع إلا حين تستهلك مهمة ثقيلة رصيداً.",
+    perksTitle: "كل باقة تشمل",
+    note: "تحدّد Accio الأسعار وتكاليف الرصيد وقد تتغيّر. راجع التطبيق لأحدث التفاصيل.",
+    plans: [
+      {
+        name: "مجانية",
+        price: "0$",
+        priceNote: "بلا بطاقة",
+        tagline: "كل ما تحتاجه لإطلاق مشروعك الأول.",
+        features: [
+          "وكيل ذكاء اصطناعي عام على مدار الساعة",
+          "أكثر من 50 تكاملاً بنقرة واحدة",
+          "أتمتة المتصفح",
+          "بحث سوقي من بيانات تجارية حقيقية",
+        ],
+        cta: "ابدأ مجاناً",
+      },
+      {
+        name: "احترافية",
+        price: "حسب الاستخدام",
+        priceNote: "رصيد للمهام الثقيلة",
+        tagline: "لمن يديرون توريداً وعملاً على البيانات بجدّية.",
+        features: [
+          "كل ما في المجانية",
+          "وكلاء مختصون بخبرة عالية",
+          "تغذية بيانات إضافية: أمازون، تيك توك، يوتيوب",
+          "أتمتة مجدولة وفِرَق",
+        ],
+        cta: "ابدأ الآن",
+        highlight: true,
+      },
+      {
+        name: "للمؤسسات",
+        price: "مخصّصة",
+        priceNote: "تواصل مع الفريق",
+        tagline: "للفِرَق التي تحتاج توسّعاً وتحكّماً.",
+        features: [
+          "كل ما في الاحترافية",
+          "دعم بأولوية",
+          "أمان وضوابط متقدّمة",
+          "تهيئة عملية مباشرة",
+        ],
+        cta: "جرّبه الآن",
+      },
+    ],
+  },
+  compareChat: {
+    heading: "لماذا لا أكتفي بـ ChatGPT؟",
+    subheading: "أداة المحادثة تخبرك بما تفعل. أمّا Accio Work فينفّذه.",
+    chatLabel: "محادثة ذكاء اصطناعي عادية",
+    accioLabel: "Accio Work",
+    rows: [
+      { chat: "يردّ بالنصّ", accio: "ينفّذ مهاماً فعلية على ملفاتك ومتصفحك" },
+      {
+        chat: "يخمّن من الويب العام",
+        accio: "يعتمد على بيانات المورّدين والتجارة الحقيقية لدى Alibaba",
+      },
+      { chat: "أنت من ينسخ ويلصق وينجز العمل", accio: "الوكلاء يكملون المهمة من أولها إلى آخرها" },
+      { chat: "نموذج واحد ومحادثة واحدة", accio: "فريق مختصين يسلّمون العمل بعضهم لبعض" },
+      { chat: "ينسى بين المحادثات", accio: "كل وكيل يحتفظ بذاكرته وجدوله" },
+    ],
+  },
+  useCases: {
+    heading: "مصمّم للطريقة التي تعمل بها فعلاً",
+    subheading: "اختر مهمة، ويشغّلها وكيل من البداية إلى النهاية وفق جدوله الخاص.",
+    items: [
+      {
+        icon: "🛍️",
+        title: "الدروبشيبينغ والبيع المباشر",
+        body: "ارصد اتجاهاً، ووفّر مصدره، وابنِ المتجر، وأطلق الإعلانات. من الفكرة إلى أول بيع في جلسة واحدة.",
+      },
+      {
+        icon: "🔎",
+        title: "إيجاد المورّدين",
+        body: "مورّدون موثوقون، استفسارات مُرسَلة، مفاوضات سعر عبر البريد. تتخطّى المكالمات.",
+      },
+      {
+        icon: "✍️",
+        title: "المحتوى والتسويق",
+        body: "صفحات هبوط، بطاقات منتجات، منشورات اجتماعية، جدولة. ينشر بينما تنام.",
+      },
+      {
+        icon: "📊",
+        title: "أبحاث السوق",
+        body: "أسواق متخصّصة وطلب وتحرّكات منافسين من بيانات تجارية حقيقية، لا تخمينات مشوّشة.",
+      },
+      {
+        icon: "⚙️",
+        title: "أتمتة سير العمل",
+        body: "جدول المهمة مرة واحدة. فحوص الأسعار والتقارير والمزامنة تعمل وحدها، حتى دون اتصال.",
+      },
+      {
+        icon: "🧰",
+        title: "أدوات مخصّصة",
+        body: "صِف حاسبة أو لوحة معلومات أو أداة تتبّع، واحصل على أداة تعمل في الحال.",
+      },
+    ],
+  },
+  langNames: {
+    en: "English",
+    ru: "Русский",
+    de: "Deutsch",
+    it: "Italiano",
+    es: "Español",
+    zh: "中文",
+    pt: "Português",
+    hi: "हिन्दी",
+    fr: "Français",
+    ar: "العربية",
+  },
+};
+
+export const translations: Record<Lang, Dict> = { en, ru, de, it, es, zh, pt, hi, fr, ar };

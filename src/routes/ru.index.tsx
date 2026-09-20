@@ -18,7 +18,10 @@ export const Route = createFileRoute("/ru/")({
       },
       { property: "og:locale", content: "ru_RU" },
       { property: "og:locale:alternate", content: "en_US" },
-      { property: "og:title", content: "Accio Work | AI-платформа для поиска поставщиков и автоматизации бизнеса" },
+      {
+        property: "og:title",
+        content: "Accio Work | AI-платформа для поиска поставщиков и автоматизации бизнеса",
+      },
       {
         property: "og:description",
         content:
@@ -31,10 +34,17 @@ export const Route = createFileRoute("/ru/")({
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { property: "og:image:type", content: "image/png" },
-      { property: "og:image:alt", content: "Accio Work, AI-рабочее пространство для сорсинга, аналитики и автоматизации" },
+      {
+        property: "og:image:alt",
+        content: "Accio Work, AI-рабочее пространство для сорсинга, аналитики и автоматизации",
+      },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Accio Work | AI-платформа для поиска поставщиков" },
-      { name: "twitter:description", content: "AI-рабочее пространство: сорсинг, аналитика конкурентов, генерация контента и автоматизация." },
+      {
+        name: "twitter:description",
+        content:
+          "AI-рабочее пространство: сорсинг, аналитика конкурентов, генерация контента и автоматизация.",
+      },
       { name: "twitter:image", content: "https://acciowork.pro/og/og-ru.png" },
       { name: "twitter:image:alt", content: "Accio Work, AI-платформа для бизнеса" },
     ],
@@ -49,6 +59,7 @@ export const Route = createFileRoute("/ru/")({
       { rel: "alternate", hrefLang: "pt", href: "https://acciowork.pro/pt" },
       { rel: "alternate", hrefLang: "hi", href: "https://acciowork.pro/hi" },
       { rel: "alternate", hrefLang: "fr", href: "https://acciowork.pro/fr" },
+      { rel: "alternate", hrefLang: "ar", href: "https://acciowork.pro/ar" },
       { rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/" },
     ],
     scripts: [

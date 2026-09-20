@@ -14,6 +14,7 @@ function detectInitial(): Lang {
   if (typeof window === "undefined") return "en";
   try {
     const path = window.location.pathname.replace(/\/+$/, "").toLowerCase();
+    if (path === "/ar") return "ar";
     if (path === "/ru") return "ru";
     if (path === "/de") return "de";
     if (path === "/it") return "it";
@@ -22,6 +23,7 @@ function detectInitial(): Lang {
     if (path === "/pt") return "pt";
     if (path === "/hi") return "hi";
     if (path === "/fr") return "fr";
+    if (path.startsWith("/ar/")) return "ar";
     if (path.startsWith("/it/")) return "it";
     if (path.startsWith("/ru/")) return "ru";
     if (path.startsWith("/de/")) return "de";
@@ -33,17 +35,42 @@ function detectInitial(): Lang {
   } catch {}
   try {
     const param = new URLSearchParams(window.location.search).get("lang");
-    if (param === "ru" || param === "en" || param === "de" || param === "it" || param === "es" || param === "zh" || param === "pt" || param === "hi" || param === "fr") return param;
+    if (
+      param === "ru" ||
+      param === "en" ||
+      param === "de" ||
+      param === "it" ||
+      param === "es" ||
+      param === "zh" ||
+      param === "pt" ||
+      param === "hi" ||
+      param === "fr" ||
+      param === "ar"
+    )
+      return param;
   } catch {}
   try {
     const saved = window.localStorage.getItem(STORAGE_KEY);
-    if (saved === "ru" || saved === "en" || saved === "de" || saved === "it" || saved === "es" || saved === "zh" || saved === "pt" || saved === "hi" || saved === "fr") return saved;
+    if (
+      saved === "ru" ||
+      saved === "en" ||
+      saved === "de" ||
+      saved === "it" ||
+      saved === "es" ||
+      saved === "zh" ||
+      saved === "pt" ||
+      saved === "hi" ||
+      saved === "fr" ||
+      saved === "ar"
+    )
+      return saved;
   } catch {}
   const nav =
     (typeof navigator !== "undefined" &&
       (navigator.language || (navigator.languages && navigator.languages[0]))) ||
     "";
   const low = nav.toLowerCase();
+  if (low.startsWith("ar")) return "ar";
   if (low.startsWith("ru")) return "ru";
   if (low.startsWith("de")) return "de";
   if (low.startsWith("it")) return "it";
@@ -65,7 +92,10 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   }, []);
 
   useEffect(() => {
-    if (typeof document !== "undefined") document.documentElement.lang = lang;
+    if (typeof document !== "undefined") {
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+    }
     try {
       window.localStorage.setItem(STORAGE_KEY, lang);
     } catch {}
@@ -90,7 +120,9 @@ export function renderHighlighted(text: string) {
   const parts = text.split(/(\*\*[^*]+\*\*)/g);
   return parts.map((p, i) =>
     p.startsWith("**") && p.endsWith("**") ? (
-      <mark key={i} className="bg-[#DDF7EE] text-foreground">{p.slice(2, -2)}</mark>
+      <mark key={i} className="bg-[#DDF7EE] text-foreground">
+        {p.slice(2, -2)}
+      </mark>
     ) : (
       <span key={i}>{p}</span>
     ),

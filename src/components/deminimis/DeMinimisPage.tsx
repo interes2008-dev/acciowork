@@ -17,6 +17,7 @@ const IMG_ALT: Record<DmLang, string> = {
   pt: "Um pacote passa pela alfândega com impostos somados ao custo",
   hi: "पार्सल कस्टम से गुज़रता है, लागत में शुल्क जुड़ते हैं",
   fr: "Un colis passe la douane avec des droits ajoutés au coût",
+  ar: "طرد يمرّ ببوابة الجمارك مع رسوم مضافة إلى التكلفة",
 };
 
 function homeHref(lang: DmLang) {
@@ -32,7 +33,11 @@ function Shell({ lang, children }: { lang: DmLang; children: ReactNode }) {
     <div className="min-h-screen bg-background text-foreground">
       <header className="border-b border-border bg-background/80 backdrop-blur">
         <div className="mx-auto flex max-w-3xl items-center justify-between px-5 py-4">
-          <a href={homeHref(lang)} className="flex items-center gap-1.5 font-bold tracking-tight text-foreground" style={{ fontSize: 22 }}>
+          <a
+            href={homeHref(lang)}
+            className="flex items-center gap-1.5 font-bold tracking-tight text-foreground"
+            style={{ fontSize: 22 }}
+          >
             <svg width={21} height={22} viewBox="0 0 28 28" aria-hidden>
               <defs>
                 <linearGradient id="accioTri" x1="0" y1="1" x2="1" y2="0">
@@ -48,8 +53,12 @@ function Shell({ lang, children }: { lang: DmLang; children: ReactNode }) {
           <div className="flex items-center gap-2 sm:gap-3">
             <ThemeToggle />
             <LangMenu lang={lang} />
-            <a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer nofollow"
-              className="whitespace-nowrap rounded-full bg-[#34d399] px-3 py-2 text-[13px] font-semibold text-white transition hover:brightness-110 sm:px-4 sm:text-sm">
+            <a
+              href={REFERRAL_URL}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="whitespace-nowrap rounded-full bg-[#34d399] px-3 py-2 text-[13px] font-semibold text-white transition hover:brightness-110 sm:px-4 sm:text-sm"
+            >
               {c.cta}
             </a>
           </div>
@@ -58,7 +67,10 @@ function Shell({ lang, children }: { lang: DmLang; children: ReactNode }) {
       {children}
       <footer className="border-t border-border bg-card">
         <div className="mx-auto max-w-3xl px-5 py-8 text-sm text-foreground/68">
-          <a href={homeHref(lang)} className="inline-flex items-center gap-1.5 hover:text-foreground/85">
+          <a
+            href={homeHref(lang)}
+            className="inline-flex items-center gap-1.5 hover:text-foreground/85"
+          >
             <ArrowLeft className="h-4 w-4" />
           </a>
         </div>
@@ -72,19 +84,35 @@ export function DeMinimisPage({ lang }: { lang: DmLang }) {
   return (
     <Shell lang={lang}>
       <main className="mx-auto max-w-3xl px-5 py-10 sm:py-14">
-        <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-[#34d399]">{c.kicker}</p>
-        <h1 className="text-3xl font-bold tracking-tight sm:text-[40px] sm:leading-tight">{c.h1}</h1>
+        <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-[#34d399]">
+          {c.kicker}
+        </p>
+        <h1 className="text-3xl font-bold tracking-tight sm:text-[40px] sm:leading-tight">
+          {c.h1}
+        </h1>
         <p className="mt-4 text-lg leading-relaxed text-foreground/75">{c.intro}</p>
 
-        <img src="/img/landing-duty.webp" alt={IMG_ALT[lang]} width={640} height={640} loading="eager" className="mx-auto mt-8 w-full max-w-xs" />
+        <img
+          src="/img/landing-duty.webp"
+          alt={IMG_ALT[lang]}
+          width={640}
+          height={640}
+          loading="eager"
+          className="mx-auto mt-8 w-full max-w-xs"
+        />
 
         {/* What changed */}
         <section className="mt-10">
           <h2 className="text-xl font-bold tracking-tight">{c.changedTitle}</h2>
           <ul className="mt-4 space-y-3">
             {c.changed.map((line, i) => (
-              <li key={i} className="flex gap-3 rounded-2xl border border-black/8 bg-card p-4 text-[15px] leading-relaxed text-foreground/80">
-                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#0E1210] text-[11px] font-bold text-white">{i + 1}</span>
+              <li
+                key={i}
+                className="flex gap-3 rounded-2xl border border-black/8 bg-card p-4 text-[15px] leading-relaxed text-foreground/80"
+              >
+                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#0E1210] text-[11px] font-bold text-white">
+                  {i + 1}
+                </span>
                 {line}
               </li>
             ))}
@@ -100,8 +128,10 @@ export function DeMinimisPage({ lang }: { lang: DmLang }) {
               <p className="mt-1 text-[15px] leading-relaxed text-foreground/75">{c.calcBody}</p>
             </div>
           </div>
-          <a href={dutyHref(lang)}
-            className="inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#0E1210] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#0E1210]/90">
+          <a
+            href={dutyHref(lang)}
+            className="inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-[#0E1210] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#0E1210]/90"
+          >
             {c.calcBtn} <ArrowRight className="h-4 w-4" />
           </a>
         </section>
@@ -116,10 +146,15 @@ export function DeMinimisPage({ lang }: { lang: DmLang }) {
                   <span className="text-2xl font-bold text-[#34d399]">{i + 1}</span>
                   <h3 className="text-xl font-bold tracking-tight">{s.title[lang]}</h3>
                 </div>
-                <p className="mt-2 text-[15px] leading-relaxed text-foreground/75">{s.body[lang]}</p>
+                <p className="mt-2 text-[15px] leading-relaxed text-foreground/75">
+                  {s.body[lang]}
+                </p>
                 <ul className="mt-4 grid gap-2 sm:grid-cols-2">
                   {s.steps[lang].map((step, j) => (
-                    <li key={j} className="flex items-start gap-2 text-[14px] leading-relaxed text-foreground/80">
+                    <li
+                      key={j}
+                      className="flex items-start gap-2 text-[14px] leading-relaxed text-foreground/80"
+                    >
                       <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#34d399]" />
                       {step}
                     </li>
@@ -132,10 +167,16 @@ export function DeMinimisPage({ lang }: { lang: DmLang }) {
 
         {/* CTA */}
         <section className="mt-12 rounded-3xl bg-gradient-to-br from-[#0a1120] to-[#0f2e26] p-7 text-center sm:p-9">
-          <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-[#5eead4]">{c.accioLabel}</p>
+          <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-[#5eead4]">
+            {c.accioLabel}
+          </p>
           <p className="mx-auto max-w-2xl text-[16px] leading-relaxed text-white/85">{c.ctaLine}</p>
-          <a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer nofollow"
-            className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#34d399] px-7 py-3.5 font-semibold text-white transition hover:brightness-110">
+          <a
+            href={REFERRAL_URL}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#34d399] px-7 py-3.5 font-semibold text-white transition hover:brightness-110"
+          >
             {c.cta} <ArrowRight className="h-4 w-4" />
           </a>
           <p className="mt-2 text-xs text-white/50">{c.ctaNote}</p>

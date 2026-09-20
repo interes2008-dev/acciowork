@@ -601,3 +601,58 @@
   .article-prose blockquote { font-size: 1.2rem; padding-left: 1.1em; }
   .article-prose > p:first-of-type::first-letter { font-size: 3.8em; padding-right: 0.5rem; }
 }
+
+/* ============================================================
+ * RTL + Arabic typography
+ * Applied when <html dir="rtl"> (Arabic locale). Fraunces has no
+ * Arabic glyphs, so switch the display and body faces to Arabic
+ * webfonts and mirror the physical directions used in article prose.
+ * ============================================================ */
+[dir="rtl"] {
+  font-family: "Cairo", "Noto Kufi Arabic", "Segoe UI", "Tahoma", sans-serif;
+}
+[dir="rtl"] body {
+  font-family: "Cairo", "Noto Kufi Arabic", "Segoe UI", "Tahoma", sans-serif;
+  letter-spacing: 0;
+}
+/* Display / heading face in Arabic */
+[dir="rtl"] .font-serif-display,
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4 {
+  font-family: "Noto Kufi Arabic", "Cairo", "Georgia", serif;
+  letter-spacing: 0;
+}
+
+/* Article prose in RTL */
+[dir="rtl"] .article-prose {
+  hanging-punctuation: none;
+  letter-spacing: 0;
+}
+[dir="rtl"] .article-prose p { letter-spacing: 0; }
+[dir="rtl"] .article-prose th,
+[dir="rtl"] .article-prose td { text-align: right; }
+[dir="rtl"] .article-prose blockquote {
+  border-left: 0;
+  border-right: 3px solid var(--ring);
+  padding-left: 0;
+  padding-right: 1.25em;
+}
+/* Drop cap floats to the right in RTL */
+[dir="rtl"] .article-prose > p:first-of-type::first-letter {
+  float: right;
+  font-family: "Noto Kufi Arabic", "Cairo", serif;
+  padding: 0.28rem 0 0 0.7rem;
+  margin-right: 0;
+  margin-left: 0.05em;
+}
+[dir="rtl"] .article-prose h2::before { margin-left: auto; }
+
+/* Numbers stay LTR inside RTL text (prices, stats, versions) */
+[dir="rtl"] .num,
+[dir="rtl"] [data-ltr] {
+  direction: ltr;
+  unicode-bidi: embed;
+  display: inline-block;
+}

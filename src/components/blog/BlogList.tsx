@@ -1,7 +1,10 @@
 import type { ArticleListItem } from "@/lib/blog.functions";
 import { BlogShell } from "./BlogShell";
 
-const COPY: Record<"en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr", { title: string; lede: string; empty: string; read: string; minutes: string }> = {
+const COPY: Record<
+  "en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr" | "ar",
+  { title: string; lede: string; empty: string; read: string; minutes: string }
+> = {
   en: {
     title: "The Accio Work journal",
     lede: "Field notes on running a modern business with an AI team you can actually direct.",
@@ -65,12 +68,41 @@ const COPY: Record<"en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr",
     read: "Lire",
     minutes: "min de lecture",
   },
+  ar: {
+    title: "مدوّنة Accio Work",
+    lede: "ملاحظات ميدانية عن إدارة عمل حديث بفريق ذكاء اصطناعي يمكنك توجيهه فعلاً.",
+    empty: "مقال جديد يصل هنا كل يوم. عُد غداً.",
+    read: "اقرأ",
+    minutes: "دقيقة قراءة",
+  },
 };
 
-export function BlogList({ lang, articles }: { lang: "en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr"; articles: ArticleListItem[] }) {
+export function BlogList({
+  lang,
+  articles,
+}: {
+  lang: "en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr" | "ar";
+  articles: ArticleListItem[];
+}) {
   const copy = COPY[lang];
   const base =
-    lang === "ru" ? "/ru/blog" : lang === "de" ? "/de/blog" : lang === "it" ? "/it/blog" : lang === "es" ? "/es/blog" : lang === "zh" ? "/zh/blog" : lang === "pt" ? "/pt/blog" : lang === "hi" ? "/hi/blog" : lang === "fr" ? "/fr/blog" : "/blog";
+    lang === "ru"
+      ? "/ru/blog"
+      : lang === "de"
+        ? "/de/blog"
+        : lang === "it"
+          ? "/it/blog"
+          : lang === "es"
+            ? "/es/blog"
+            : lang === "zh"
+              ? "/zh/blog"
+              : lang === "pt"
+                ? "/pt/blog"
+                : lang === "hi"
+                  ? "/hi/blog"
+                  : lang === "fr"
+                    ? "/fr/blog"
+                    : "/blog";
 
   return (
     <BlogShell>
@@ -107,11 +139,27 @@ export function BlogList({ lang, articles }: { lang: "en" | "ru" | "de" | "it" |
               <div className="flex flex-1 flex-col gap-3 p-6">
                 <div className="text-xs text-foreground/50">
                   {new Date(a.published_at).toLocaleDateString(
-                    lang === "en" ? "en-US" : lang === "ru" ? "ru-RU" : lang === "it" ? "it-IT" : lang === "es" ? "es-ES" : lang === "zh" ? "zh-CN" : lang === "pt" ? "pt-BR" : lang === "hi" ? "hi-IN" : lang === "fr" ? "fr-FR" : "de-DE",
+                    lang === "en"
+                      ? "en-US"
+                      : lang === "ru"
+                        ? "ru-RU"
+                        : lang === "it"
+                          ? "it-IT"
+                          : lang === "es"
+                            ? "es-ES"
+                            : lang === "zh"
+                              ? "zh-CN"
+                              : lang === "pt"
+                                ? "pt-BR"
+                                : lang === "hi"
+                                  ? "hi-IN"
+                                  : lang === "fr"
+                                    ? "fr-FR"
+                                    : "de-DE",
                     {
-                    day: "numeric",
-                    month: "short",
-                    year: "numeric",
+                      day: "numeric",
+                      month: "short",
+                      year: "numeric",
                     },
                   )}{" "}
                   · {a.reading_minutes} {copy.minutes}

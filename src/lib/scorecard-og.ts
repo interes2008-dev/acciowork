@@ -31,7 +31,12 @@ export function scOg(search: ScSearch, lang: ScLang): OgResult | null {
     score += opt.s;
   }
   const pct = Math.round((score / SC_MAX) * 100);
-  const tier = score >= scVerdicts.strong.min ? "strong" : score >= scVerdicts.caution.min ? "caution" : "risk";
+  const tier =
+    score >= scVerdicts.strong.min
+      ? "strong"
+      : score >= scVerdicts.caution.min
+        ? "caution"
+        : "risk";
   const c = scChrome[lang];
   const vTitle = scVerdicts[tier].title[lang];
 

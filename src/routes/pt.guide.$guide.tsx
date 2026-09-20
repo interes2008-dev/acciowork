@@ -3,7 +3,7 @@ import { GuidePage } from "@/components/guide/GuidePage";
 import { gdPages } from "@/lib/guide-data";
 
 const LANG = "pt" as const;
-const LANGS = ["en","ru","de","it","es","zh","pt","hi","fr"] as const;
+const LANGS = ["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr", "ar"] as const;
 
 function alternates(slug: string) {
   const list = LANGS.map((l) => ({
@@ -11,7 +11,11 @@ function alternates(slug: string) {
     hrefLang: l as string,
     href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/guide/${slug}`,
   }));
-  list.push({ rel: "alternate", hrefLang: "x-default", href: `https://acciowork.pro/guide/${slug}` });
+  list.push({
+    rel: "alternate",
+    hrefLang: "x-default",
+    href: `https://acciowork.pro/guide/${slug}`,
+  });
   return list;
 }
 
@@ -30,7 +34,10 @@ export const Route = createFileRoute("/pt/guide/$guide")({
       meta: [
         { title: p.metaTitle },
         { name: "description", content: p.metaDescription },
-        { name: "keywords", content: `Accio Work, guide, tutorial, ${p.name}, getting started, how to` },
+        {
+          name: "keywords",
+          content: `Accio Work, guide, tutorial, ${p.name}, getting started, how to`,
+        },
         { property: "og:locale", content: "pt_BR" },
         { property: "og:title", content: p.metaTitle },
         { property: "og:description", content: p.metaDescription },
@@ -82,8 +89,18 @@ export const Route = createFileRoute("/pt/guide/$guide")({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Accio Work", item: "https://acciowork.pro/pt/" },
-              { "@type": "ListItem", position: 2, name: "Guide", item: "https://acciowork.pro/pt/guide" },
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Accio Work",
+                item: "https://acciowork.pro/pt/",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Guide",
+                item: "https://acciowork.pro/pt/guide",
+              },
               { "@type": "ListItem", position: 3, name: p.h1, item: url },
             ],
           }),

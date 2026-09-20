@@ -36,7 +36,7 @@ function LanguageSwitcher() {
     return () => document.removeEventListener("mousedown", onDoc);
   }, [open]);
 
-  const options: Lang[] = ["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr"];
+  const options: Lang[] = ["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr", "ar"];
 
   return (
     <div ref={rootRef} className="relative">
@@ -50,12 +50,14 @@ function LanguageSwitcher() {
       >
         <Globe className="h-4 w-4" />
         <span className="hidden md:inline">{t.langNames[lang]}</span>
-        <ChevronDown className={`h-4 w-4 opacity-60 transition-transform ${open ? "rotate-180" : ""}`} />
+        <ChevronDown
+          className={`h-4 w-4 opacity-60 transition-transform ${open ? "rotate-180" : ""}`}
+        />
       </button>
       {open && (
         <ul
           role="listbox"
-          className="absolute right-0 top-full z-50 mt-2 w-40 overflow-hidden rounded-2xl border border-border/70 bg-popover p-1.5 shadow-elegant"
+          className="absolute end-0 top-full z-50 mt-2 w-40 overflow-hidden rounded-2xl border border-border/70 bg-popover p-1.5 shadow-elegant"
         >
           {options.map((code) => (
             <li key={code}>
@@ -83,14 +85,18 @@ function LanguageSwitcher() {
                                     ? "/hi/blog"
                                     : code === "fr"
                                       ? "/fr/blog"
-                                      : "/blog";
+                                      : code === "ar"
+                                        ? "/ar/blog"
+                                        : "/blog";
                     if (window.location.pathname !== target) {
                       window.location.assign(target);
                     }
                   }
                 }}
-                className={`flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-[14px] font-medium transition ${
-                  lang === code ? "bg-mint-50 text-foreground" : "text-foreground/80 hover:bg-mint-50"
+                className={`flex w-full items-center justify-between rounded-xl px-3 py-2 text-start text-[14px] font-medium transition ${
+                  lang === code
+                    ? "bg-mint-50 text-foreground"
+                    : "text-foreground/80 hover:bg-mint-50"
                 }`}
               >
                 <span>{t.langNames[code]}</span>
@@ -106,17 +112,56 @@ function LanguageSwitcher() {
 
 export function BlogShell({ children }: { children: React.ReactNode }) {
   const { lang } = useI18n();
-  const home = lang === "ru" ? "/ru" : lang === "de" ? "/de" : lang === "it" ? "/it" : lang === "es" ? "/es" : lang === "zh" ? "/zh" : lang === "pt" ? "/pt" : lang === "hi" ? "/hi" : lang === "fr" ? "/fr" : "/";
+  const home =
+    lang === "ru"
+      ? "/ru"
+      : lang === "de"
+        ? "/de"
+        : lang === "it"
+          ? "/it"
+          : lang === "es"
+            ? "/es"
+            : lang === "zh"
+              ? "/zh"
+              : lang === "pt"
+                ? "/pt"
+                : lang === "hi"
+                  ? "/hi"
+                  : lang === "fr"
+                    ? "/fr"
+                    : "/";
   const blog =
-    lang === "ru" ? "/ru/blog" : lang === "de" ? "/de/blog" : lang === "it" ? "/it/blog" : lang === "es" ? "/es/blog" : lang === "zh" ? "/zh/blog" : lang === "pt" ? "/pt/blog" : lang === "hi" ? "/hi/blog" : lang === "fr" ? "/fr/blog" : "/blog";
+    lang === "ru"
+      ? "/ru/blog"
+      : lang === "de"
+        ? "/de/blog"
+        : lang === "it"
+          ? "/it/blog"
+          : lang === "es"
+            ? "/es/blog"
+            : lang === "zh"
+              ? "/zh/blog"
+              : lang === "pt"
+                ? "/pt/blog"
+                : lang === "hi"
+                  ? "/hi/blog"
+                  : lang === "fr"
+                    ? "/fr/blog"
+                    : "/blog";
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur">
         <div className="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-6">
-          <a href={home} className="flex items-center"><Logo /></a>
+          <a href={home} className="flex items-center">
+            <Logo />
+          </a>
           <nav className="flex items-center gap-6 text-sm text-foreground/80">
-            <a href={home} className="hover:text-foreground">Home</a>
-            <a href={blog} className="hover:text-foreground">Blog</a>
+            <a href={home} className="hover:text-foreground">
+              Home
+            </a>
+            <a href={blog} className="hover:text-foreground">
+              Blog
+            </a>
             <ThemeToggle />
             <LanguageSwitcher />
           </nav>

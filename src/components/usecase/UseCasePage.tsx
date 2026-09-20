@@ -23,7 +23,11 @@ function Shell({ lang, children }: { lang: UcLang; children: ReactNode }) {
     <div className="min-h-screen bg-background text-foreground">
       <header className="border-b border-border bg-background/80 backdrop-blur">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-5 py-4">
-          <a href={homeHref(lang)} className="flex items-center gap-1.5 font-bold tracking-tight text-foreground" style={{ fontSize: 22 }}>
+          <a
+            href={homeHref(lang)}
+            className="flex items-center gap-1.5 font-bold tracking-tight text-foreground"
+            style={{ fontSize: 22 }}
+          >
             <svg width={21} height={22} viewBox="0 0 28 28" aria-hidden>
               <defs>
                 <linearGradient id="accioTri" x1="0" y1="1" x2="1" y2="0">
@@ -40,13 +44,13 @@ function Shell({ lang, children }: { lang: UcLang; children: ReactNode }) {
             <ThemeToggle />
             <LangMenu lang={lang} />
             <a
-            href={REFERRAL_URL}
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            className="whitespace-nowrap rounded-full bg-[#34d399] px-3 py-2 text-[13px] font-semibold text-white transition hover:brightness-110 sm:px-4 sm:text-sm"
-          >
-            {c.ctaPrimary}
-          </a>
+              href={REFERRAL_URL}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="whitespace-nowrap rounded-full bg-[#34d399] px-3 py-2 text-[13px] font-semibold text-white transition hover:brightness-110 sm:px-4 sm:text-sm"
+            >
+              {c.ctaPrimary}
+            </a>
           </div>
         </div>
       </header>
@@ -99,14 +103,20 @@ export function UseCasePage({ lang, useCase }: { lang: UcLang; useCase: string }
     <Shell lang={lang}>
       <main className="mx-auto max-w-5xl px-5 py-10 sm:py-14">
         <nav className="mb-6 text-xs text-foreground/58">
-          <a href={homeHref(lang)} className="hover:underline">{c.backHome}</a>
+          <a href={homeHref(lang)} className="hover:underline">
+            {c.backHome}
+          </a>
           <span className="mx-1.5">/</span>
-          <a href={hubHref(lang)} className="hover:underline">{c.allUseCases}</a>
+          <a href={hubHref(lang)} className="hover:underline">
+            {c.allUseCases}
+          </a>
           <span className="mx-1.5">/</span>
           <span className="text-foreground/72">{page.h1}</span>
         </nav>
 
-        <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-[#34d399]">{c.kicker}</p>
+        <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-[#34d399]">
+          {c.kicker}
+        </p>
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">{page.h1}</h1>
         <p className="mt-2 text-foreground/58">{page.tagline}</p>
         <p className="mt-5 max-w-3xl text-lg leading-relaxed text-foreground/75">{page.intro}</p>
@@ -131,7 +141,9 @@ export function UseCasePage({ lang, useCase }: { lang: UcLang; useCase: string }
             {page.caps.map((cap, i) => (
               <div key={i} className="rounded-2xl border border-border bg-card p-5">
                 <div className="flex items-center gap-2">
-                  <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#34d399]/15 text-xs font-bold text-[#34d399]">{i + 1}</span>
+                  <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#34d399]/15 text-xs font-bold text-[#34d399]">
+                    {i + 1}
+                  </span>
                   <h3 className="font-semibold">{cap.title}</h3>
                 </div>
                 <p className="mt-2 text-sm leading-relaxed text-foreground/72">{cap.desc}</p>
@@ -193,7 +205,10 @@ export function UseCaseHub({ lang }: { lang: UcLang }) {
   return (
     <Shell lang={lang}>
       <main className="mx-auto max-w-5xl px-5 py-12 sm:py-16">
-        <a href={homeHref(lang)} className="mb-6 inline-flex items-center gap-1.5 text-sm text-foreground/58 hover:text-foreground/80">
+        <a
+          href={homeHref(lang)}
+          className="mb-6 inline-flex items-center gap-1.5 text-sm text-foreground/58 hover:text-foreground/80"
+        >
           <ArrowLeft className="h-4 w-4" /> {c.backHome}
         </a>
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">{c.hubTitle}</h1>
@@ -211,7 +226,8 @@ export function UseCaseHub({ lang }: { lang: UcLang }) {
                 <h2 className="text-lg font-semibold">{p.name}</h2>
                 <p className="mt-1.5 text-sm text-foreground/62">{p.tagline}</p>
                 <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-[#34d399]">
-                  {c.readMore} <ArrowRight className="h-3.5 w-3.5 transition group-hover:translate-x-0.5" />
+                  {c.readMore}{" "}
+                  <ArrowRight className="h-3.5 w-3.5 transition group-hover:translate-x-0.5" />
                 </span>
               </a>
             );

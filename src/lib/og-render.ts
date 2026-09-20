@@ -5,7 +5,8 @@ import { OG_FONT_REGULAR_B64, OG_FONT_BOLD_B64, b64ToBytes } from "./og-font";
 const fontRegular = b64ToBytes(OG_FONT_REGULAR_B64);
 const fontBold = b64ToBytes(OG_FONT_BOLD_B64);
 
-type WasmInput = Response | Promise<Response> | BufferSource | Promise<BufferSource> | WebAssembly.Module;
+type WasmInput =
+  Response | Promise<Response> | BufferSource | Promise<BufferSource> | WebAssembly.Module;
 
 let wasmReady: Promise<unknown> | null = null;
 // Initialize the resvg wasm exactly once. The caller injects how to obtain the
@@ -25,7 +26,13 @@ function initResvgOnce(input: () => WasmInput): Promise<unknown> {
 /* eslint-disable @typescript-eslint/no-explicit-any */
 function h(type: string, props: Record<string, any>, ...children: any[]): any {
   const kids = children.filter((c) => c !== null && c !== undefined && c !== "");
-  return { type, props: { ...props, children: kids.length === 0 ? undefined : kids.length === 1 ? kids[0] : kids } };
+  return {
+    type,
+    props: {
+      ...props,
+      children: kids.length === 0 ? undefined : kids.length === 1 ? kids[0] : kids,
+    },
+  };
 }
 
 export interface OgCard {
@@ -60,7 +67,15 @@ function cardElement(card: OgCard): any {
     },
     h(
       "div",
-      { style: { display: "flex", alignItems: "center", gap: "14px", fontSize: "34px", fontWeight: 700 } },
+      {
+        style: {
+          display: "flex",
+          alignItems: "center",
+          gap: "14px",
+          fontSize: "34px",
+          fontWeight: 700,
+        },
+      },
       h("div", {
         style: {
           display: "flex",
@@ -76,17 +91,44 @@ function cardElement(card: OgCard): any {
     h(
       "div",
       { style: { display: "flex", flexDirection: "column", marginTop: "auto", gap: "8px" } },
-      h("div", { style: { display: "flex", fontSize: "30px", color: "#7CE7C2", fontWeight: 700 } }, card.label),
       h(
         "div",
-        { style: { display: "flex", fontSize: bigFontSize(card.big) + "px", fontWeight: 700, lineHeight: "1.05", maxWidth: "1040px" } },
+        { style: { display: "flex", fontSize: "30px", color: "#7CE7C2", fontWeight: 700 } },
+        card.label,
+      ),
+      h(
+        "div",
+        {
+          style: {
+            display: "flex",
+            fontSize: bigFontSize(card.big) + "px",
+            fontWeight: 700,
+            lineHeight: "1.05",
+            maxWidth: "1040px",
+          },
+        },
         card.big,
       ),
       card.sub
-        ? h("div", { style: { display: "flex", fontSize: "30px", color: "rgba(255,255,255,0.72)" } }, card.sub)
+        ? h(
+            "div",
+            { style: { display: "flex", fontSize: "30px", color: "rgba(255,255,255,0.72)" } },
+            card.sub,
+          )
         : null,
     ),
-    h("div", { style: { display: "flex", marginTop: "40px", fontSize: "25px", color: "rgba(255,255,255,0.5)" } }, card.foot),
+    h(
+      "div",
+      {
+        style: {
+          display: "flex",
+          marginTop: "40px",
+          fontSize: "25px",
+          color: "rgba(255,255,255,0.5)",
+        },
+      },
+      card.foot,
+    ),
   );
 }
 
@@ -95,8 +137,18 @@ export async function renderOg(card: OgCard, wasmInput: () => WasmInput): Promis
     width: 1200,
     height: 630,
     fonts: [
-      { name: "Liberation Sans", data: fontRegular.buffer as ArrayBuffer, weight: 400, style: "normal" },
-      { name: "Liberation Sans", data: fontBold.buffer as ArrayBuffer, weight: 700, style: "normal" },
+      {
+        name: "Liberation Sans",
+        data: fontRegular.buffer as ArrayBuffer,
+        weight: 400,
+        style: "normal",
+      },
+      {
+        name: "Liberation Sans",
+        data: fontBold.buffer as ArrayBuffer,
+        weight: 700,
+        style: "normal",
+      },
     ],
   });
   await initResvgOnce(wasmInput);

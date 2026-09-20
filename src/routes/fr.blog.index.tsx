@@ -8,17 +8,29 @@ export const Route = createFileRoute("/fr/blog/")({
   head: () => ({
     meta: [
       { title: "Blog Accio Work: business piloté par l’IA" },
-      { name: "description", content: "Notes de terrain sur la conduite d’un business moderne avec une équipe d’IA que vous dirigez vraiment. Un nouvel article chaque jour." },
+      {
+        name: "description",
+        content:
+          "Notes de terrain sur la conduite d’un business moderne avec une équipe d’IA que vous dirigez vraiment. Un nouvel article chaque jour.",
+      },
       { property: "og:title", content: "Blog Accio Work" },
       { property: "og:locale", content: "fr_FR" },
       { property: "og:url", content: "https://acciowork.pro/fr/blog" },
-      { property: "og:description", content: "Notes de terrain sur la conduite d’un business moderne avec une équipe d’IA que vous dirigez vraiment. Un nouvel article chaque jour." },
+      {
+        property: "og:description",
+        content:
+          "Notes de terrain sur la conduite d’un business moderne avec une équipe d’IA que vous dirigez vraiment. Un nouvel article chaque jour.",
+      },
       { property: "og:image", content: "https://acciowork.pro/og/og-fr.png" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Blog Accio Work: business piloté par l’IA" },
-      { name: "twitter:description", content: "Notes de terrain sur la conduite d’un business moderne avec une équipe d’IA que vous dirigez vraiment. Un nouvel article chaque jour." },
+      {
+        name: "twitter:description",
+        content:
+          "Notes de terrain sur la conduite d’un business moderne avec une équipe d’IA que vous dirigez vraiment. Un nouvel article chaque jour.",
+      },
       { name: "twitter:image", content: "https://acciowork.pro/og/og-fr.png" },
     ],
     links: [
@@ -32,6 +44,7 @@ export const Route = createFileRoute("/fr/blog/")({
       { rel: "alternate", hrefLang: "pt", href: "https://acciowork.pro/pt/blog" },
       { rel: "alternate", hrefLang: "hi", href: "https://acciowork.pro/hi/blog" },
       { rel: "alternate", hrefLang: "fr", href: "https://acciowork.pro/fr/blog" },
+      { rel: "alternate", hrefLang: "ar", href: "https://acciowork.pro/ar/blog" },
       { rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/blog" },
     ],
     scripts: [

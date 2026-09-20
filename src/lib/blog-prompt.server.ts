@@ -1,6 +1,6 @@
 // Server-only prompt builder + text sanitizer used by the daily generation cron.
 
-export type BlogLang = "en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr";
+export type BlogLang = "en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr" | "ar";
 
 export const LANG_LABEL: Record<BlogLang, string> = {
   en: "English",
@@ -12,6 +12,7 @@ export const LANG_LABEL: Record<BlogLang, string> = {
   pt: "Portuguese (Português do Brasil)",
   hi: "Hindi (हिन्दी)",
   fr: "French (français)",
+  ar: "Arabic (العربية)",
 };
 
 const CAPABILITY_SHEET = `
@@ -227,6 +228,28 @@ Structure :
 - cover_prompt : une phrase en anglais décrivant une couverture éditoriale (aucun texte ni logo dans l'image).
 `;
 
+const STYLE_RULES_AR = `
+تكتب لمدوّنة Accio Work. الصوت: كاتب متمرّس في المنتج والعمليات لمجلة تقنية راقية. واثق، إنساني، ملموس، بلا تسويق أجوف.
+
+قواعد صارمة:
+- لا تستخدم الشرطة الطويلة أو القصيرة كفاصل داخل الجملة. أعد الصياغة بنقطة أو فاصلة أو قوسين أو نقطتين.
+- لا تفتتح بعبارات مبتذلة مثل "في عالم اليوم" أو "في عصر الذكاء الاصطناعي" أو "تخيّل عالماً".
+- ممنوع: "الغوص في"، "علاوة على ذلك" كحشو، "في الختام"، "إطلاق كامل الإمكانات"، "سلس"، "ثوري"، "نقلة نوعية"، "الارتقاء إلى مستوى آخر"، "من المهم أن نلاحظ".
+- لا تتجاوز ثلاث نقاط متتالية. فضّل الفقرات الحقيقية.
+- لا تختلق أي ميزة للمنتج. استخدم فقط القدرات المذكورة في البطاقة أدناه.
+- نوّع طول الجمل. جمل قصيرة بجوار جمل طويلة. إيقاع.
+- في كل قسم: سيناريو ملموس، ورقم أو مثال حقيقي.
+- الخاتمة: دعوة هادئة وصادقة لتجربة Accio Work، لا صيحة إعلانية.
+
+البنية:
+- title: مؤثّر، 5-10 كلمات، بلا حشو للكلمات المفتاحية.
+- description: جملة صادقة، 140-160 حرفاً.
+- body: 1200-1800 كلمة، ماركداون. H2 للأقسام، H3 نادراً. الفقرة الأولى قبل أي عنوان.
+- slug: kebab-case، 3-6 كلمات، حروف لاتينية فقط.
+- keywords: 4-6 عبارات قصيرة يبحث عنها شخص حقيقي.
+- cover_prompt: جملة بالإنجليزية تصف غلافاً تحريرياً (بلا نصّ أو شعار في الصورة).
+`;
+
 const STYLE_RULES: Record<BlogLang, string> = {
   en: STYLE_RULES_EN,
   ru: STYLE_RULES_RU,
@@ -237,6 +260,7 @@ const STYLE_RULES: Record<BlogLang, string> = {
   pt: STYLE_RULES_PT,
   hi: STYLE_RULES_HI,
   fr: STYLE_RULES_FR,
+  ar: STYLE_RULES_AR,
 };
 
 export type TopicSeed = {
@@ -247,7 +271,10 @@ export type TopicSeed = {
   capability: string;
 };
 
-export function buildArticlePrompt(lang: BlogLang, topic: TopicSeed): {
+export function buildArticlePrompt(
+  lang: BlogLang,
+  topic: TopicSeed,
+): {
   system: string;
   user: string;
 } {
@@ -287,7 +314,10 @@ export function sanitizeAiText(text: string): string {
   // Stray leading dashes on a line
   out = out.replace(/^[—–]\s+/gm, "");
   // Trailing "In conclusion" style closers
-  out = out.replace(/\n#{1,6}\s*(In conclusion|Conclusion|Fazit|Zusammenfassung|В заключение|Заключение)[\s\S]*$/i, "");
+  out = out.replace(
+    /\n#{1,6}\s*(In conclusion|Conclusion|Fazit|Zusammenfassung|В заключение|Заключение)[\s\S]*$/i,
+    "",
+  );
   return out.trim();
 }
 

@@ -62,8 +62,16 @@ function SeoMonitor() {
       ) : (
         <>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <Stat label="Страниц проверено" value={String(latest.pages_checked)} hint={fmt(latest.started_at)} />
-            <Stat label="Критических проблем" value={String(latest.critical_count)} hint={`новых: ${latest.new_issues_count}`} />
+            <Stat
+              label="Страниц проверено"
+              value={String(latest.pages_checked)}
+              hint={fmt(latest.started_at)}
+            />
+            <Stat
+              label="Критических проблем"
+              value={String(latest.critical_count)}
+              hint={`новых: ${latest.new_issues_count}`}
+            />
             <Stat label="Всего замечаний" value={String(latest.issues_count)} />
             <Stat
               label="Индексация главной"
@@ -103,7 +111,7 @@ function SeoMonitor() {
               </p>
             ) : (
               <div className="mt-4 overflow-x-auto rounded-2xl border border-border">
-                <table className="w-full min-w-[720px] text-left text-sm">
+                <table className="w-full min-w-[720px] text-start text-sm">
                   <thead className="bg-muted/50 text-xs uppercase tracking-wide text-muted-foreground">
                     <tr>
                       <th className="px-4 py-3">Уровень</th>
@@ -149,7 +157,7 @@ function SeoMonitor() {
           <section className="mt-10">
             <h2 className="text-xl font-semibold text-foreground">История проверок</h2>
             <div className="mt-4 overflow-x-auto rounded-2xl border border-border">
-              <table className="w-full min-w-[640px] text-left text-sm">
+              <table className="w-full min-w-[640px] text-start text-sm">
                 <thead className="bg-muted/50 text-xs uppercase tracking-wide text-muted-foreground">
                   <tr>
                     <th className="px-4 py-3">Дата</th>
@@ -165,12 +173,18 @@ function SeoMonitor() {
                     <tr key={r.id} className="border-t border-border">
                       <td className="px-4 py-3 text-foreground">{fmt(r.started_at)}</td>
                       <td className="px-4 py-3 text-muted-foreground">
-                        {r.status === "ok" ? "готово" : r.status === "error" ? "ошибка" : "в работе"}
+                        {r.status === "ok"
+                          ? "готово"
+                          : r.status === "error"
+                            ? "ошибка"
+                            : "в работе"}
                       </td>
                       <td className="px-4 py-3 text-muted-foreground">{r.pages_checked}</td>
                       <td className="px-4 py-3 text-muted-foreground">{r.issues_count}</td>
                       <td className="px-4 py-3 text-muted-foreground">{r.critical_count}</td>
-                      <td className="px-4 py-3 text-muted-foreground">{r.alert_sent ? "отправлен" : "-"}</td>
+                      <td className="px-4 py-3 text-muted-foreground">
+                        {r.alert_sent ? "отправлен" : "-"}
+                      </td>
                     </tr>
                   ))}
                 </tbody>

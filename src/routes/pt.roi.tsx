@@ -4,7 +4,7 @@ import { roiChrome } from "@/lib/roi-data";
 import { validateRoiSearch, roiOg, roiOgImageUrl } from "@/lib/roi-og";
 
 const LANG = "pt" as const;
-const LANGS = ["en","ru","de","it","es","zh","pt","hi","fr"] as const;
+const LANGS = ["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr", "ar"] as const;
 
 export const Route = createFileRoute("/pt/roi")({
   validateSearch: validateRoiSearch,
@@ -17,13 +17,20 @@ export const Route = createFileRoute("/pt/roi")({
     const ogTitle = og ? og.title : c.metaTitle;
     const ogDesc = og ? og.desc : c.metaDesc;
     const ogImg = loaderData?.ogImage ?? "https://acciowork.pro/og/og-pt.png";
-    const alternates = LANGS.map((l) => ({ rel: "alternate", hrefLang: l as string, href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/roi` }));
+    const alternates = LANGS.map((l) => ({
+      rel: "alternate",
+      hrefLang: l as string,
+      href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/roi`,
+    }));
     alternates.push({ rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/roi" });
     return {
       meta: [
         { title: c.metaTitle },
         { name: "description", content: c.metaDesc },
-        { name: "keywords", content: "AI agent ROI calculator, time savings, Accio Work, sourcing hours, automation" },
+        {
+          name: "keywords",
+          content: "AI agent ROI calculator, time savings, Accio Work, sourcing hours, automation",
+        },
         { property: "og:locale", content: "pt_BR" },
         { property: "og:title", content: ogTitle },
         { property: "og:description", content: ogDesc },
@@ -40,7 +47,22 @@ export const Route = createFileRoute("/pt/roi")({
       ],
       links: [{ rel: "canonical", href: url }, ...alternates],
       scripts: [
-        { type: "application/ld+json", children: JSON.stringify({ "@context":"https://schema.org","@type":"BreadcrumbList", itemListElement:[{"@type":"ListItem",position:1,name:"Accio Work",item:"https://acciowork.pro/pt/"},{"@type":"ListItem",position:2,name:c.kicker,item:url}] }) },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Accio Work",
+                item: "https://acciowork.pro/pt/",
+              },
+              { "@type": "ListItem", position: 2, name: c.kicker, item: url },
+            ],
+          }),
+        },
       ],
     };
   },

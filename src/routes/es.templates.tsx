@@ -3,19 +3,31 @@ import { TemplatesPage } from "@/components/templates/TemplatesPage";
 import { tplChrome } from "@/lib/templates-data";
 
 const LANG = "es" as const;
-const LANGS = ["en","ru","de","it","es","zh","pt","hi","fr"] as const;
+const LANGS = ["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr", "ar"] as const;
 
 export const Route = createFileRoute("/es/templates")({
   head: () => {
     const c = tplChrome[LANG];
     const url = "https://acciowork.pro/es/templates";
-    const alternates = LANGS.map((l) => ({ rel: "alternate", hrefLang: l as string, href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/templates` }));
-    alternates.push({ rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/templates" });
+    const alternates = LANGS.map((l) => ({
+      rel: "alternate",
+      hrefLang: l as string,
+      href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/templates`,
+    }));
+    alternates.push({
+      rel: "alternate",
+      hrefLang: "x-default",
+      href: "https://acciowork.pro/templates",
+    });
     return {
       meta: [
         { title: c.metaTitle },
         { name: "description", content: c.metaDesc },
-        { name: "keywords", content: "supplier inquiry email template, Alibaba supplier email, supplier vetting checklist, RFQ template, sourcing" },
+        {
+          name: "keywords",
+          content:
+            "supplier inquiry email template, Alibaba supplier email, supplier vetting checklist, RFQ template, sourcing",
+        },
         { property: "og:locale", content: "es_ES" },
         { property: "og:title", content: c.metaTitle },
         { property: "og:description", content: c.metaDesc },
@@ -32,7 +44,22 @@ export const Route = createFileRoute("/es/templates")({
       ],
       links: [{ rel: "canonical", href: url }, ...alternates],
       scripts: [
-        { type: "application/ld+json", children: JSON.stringify({ "@context":"https://schema.org","@type":"BreadcrumbList", itemListElement:[{"@type":"ListItem",position:1,name:"Accio Work",item:"https://acciowork.pro/es/"},{"@type":"ListItem",position:2,name:c.h1,item:url}] }) },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Accio Work",
+                item: "https://acciowork.pro/es/",
+              },
+              { "@type": "ListItem", position: 2, name: c.h1, item: url },
+            ],
+          }),
+        },
       ],
     };
   },

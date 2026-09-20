@@ -18,7 +18,10 @@ export const Route = createFileRoute("/it/")({
       },
       { property: "og:locale", content: "it_IT" },
       { property: "og:locale:alternate", content: "en_US" },
-      { property: "og:title", content: "Accio Work | Piattaforma AI per sourcing e automazione business" },
+      {
+        property: "og:title",
+        content: "Accio Work | Piattaforma AI per sourcing e automazione business",
+      },
       {
         property: "og:description",
         content:
@@ -31,10 +34,16 @@ export const Route = createFileRoute("/it/")({
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { property: "og:image:type", content: "image/png" },
-      { property: "og:image:alt", content: "Accio Work, spazio di lavoro AI per sourcing, analisi e automazione" },
+      {
+        property: "og:image:alt",
+        content: "Accio Work, spazio di lavoro AI per sourcing, analisi e automazione",
+      },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Accio Work | Piattaforma AI per il sourcing" },
-      { name: "twitter:description", content: "Spazio di lavoro AI: sourcing, analisi concorrenti, contenuti e automazione." },
+      {
+        name: "twitter:description",
+        content: "Spazio di lavoro AI: sourcing, analisi concorrenti, contenuti e automazione.",
+      },
       { name: "twitter:image", content: "https://acciowork.pro/og/og-it.png" },
       { name: "twitter:image:alt", content: "Accio Work, piattaforma AI per il business" },
     ],
@@ -49,6 +58,7 @@ export const Route = createFileRoute("/it/")({
       { rel: "alternate", hrefLang: "pt", href: "https://acciowork.pro/pt" },
       { rel: "alternate", hrefLang: "hi", href: "https://acciowork.pro/hi" },
       { rel: "alternate", hrefLang: "fr", href: "https://acciowork.pro/fr" },
+      { rel: "alternate", hrefLang: "ar", href: "https://acciowork.pro/ar" },
       { rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/" },
     ],
     scripts: [

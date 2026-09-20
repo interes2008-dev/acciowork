@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { fetchAlerts, type AlertItem } from "@/lib/alerts";
 import { ThemeToggle } from "@/components/common/ThemeToggle";
 import type { Lang } from "@/lib/translations";
+import { fillAr } from "@/lib/fill-ar";
 import { CreditsUpdate } from "./CreditsUpdate";
 import { EcomWorkspace } from "./EcomWorkspace";
 import aiAgentImage from "@/assets/event-feature-ai-agent.png";
@@ -84,10 +85,16 @@ type EventDict = {
   };
 };
 
-const DICTS: Record<Lang, EventDict> = {
+const DICTS: Record<Lang, EventDict> = fillAr({
   en: {
     langLabel: "English",
-    nav: { pricing: "Pricing", blog: "Blog", help: "Help Center", events: "Events", download: "Download Accio Work" },
+    nav: {
+      pricing: "Pricing",
+      blog: "Blog",
+      help: "Help Center",
+      events: "Events",
+      download: "Download Accio Work",
+    },
     hero: {
       badge: "Just announced • July 28, 2026",
       title1: "Accio Work is now free.",
@@ -97,16 +104,45 @@ const DICTS: Record<Lang, EventDict> = {
       ctaSecondary: "See plans",
       note: "macOS 11+. Apple Silicon and Intel. 42 MB.",
     },
-    stats: { users: "Users worldwide", launch: "Average time to launch a store", launchSuffix: " min", cheaper: "Cheaper than freelancers" },
+    stats: {
+      users: "Users worldwide",
+      launch: "Average time to launch a store",
+      launchSuffix: " min",
+      cheaper: "Cheaper than freelancers",
+    },
     features: {
       heading: "What the free plan includes",
       items: [
-        { icon: "🤖", title: "24/7 AI agent", desc: "Full assistant with search, analytics and automation. No task limits." },
-        { icon: "🌐", title: "Browser automation", desc: "Opens sites, clicks, scrapes, fills forms. No code, no Selenium." },
-        { icon: "🔌", title: "50+ integrations", desc: "Shopify, Gmail, Telegram, Slack, LinkedIn, connect in one click." },
-        { icon: "✍️", title: "Content generation", desc: "Landing pages, product cards, SEO copy. Ready in minutes." },
-        { icon: "📈", title: "Market Scout", desc: "Niche, trend and competitor analysis. Data from Alibaba.com and Jungle Scout." },
-        { icon: "👥", title: "Specialists on demand", desc: "Sourcing Expert, Product Designer, Listing Copywriter, pay pennies, only when needed." },
+        {
+          icon: "🤖",
+          title: "24/7 AI agent",
+          desc: "Full assistant with search, analytics and automation. No task limits.",
+        },
+        {
+          icon: "🌐",
+          title: "Browser automation",
+          desc: "Opens sites, clicks, scrapes, fills forms. No code, no Selenium.",
+        },
+        {
+          icon: "🔌",
+          title: "50+ integrations",
+          desc: "Shopify, Gmail, Telegram, Slack, LinkedIn, connect in one click.",
+        },
+        {
+          icon: "✍️",
+          title: "Content generation",
+          desc: "Landing pages, product cards, SEO copy. Ready in minutes.",
+        },
+        {
+          icon: "📈",
+          title: "Market Scout",
+          desc: "Niche, trend and competitor analysis. Data from Alibaba.com and Jungle Scout.",
+        },
+        {
+          icon: "👥",
+          title: "Specialists on demand",
+          desc: "Sourcing Expert, Product Designer, Listing Copywriter, pay pennies, only when needed.",
+        },
       ],
     },
     compare: {
@@ -143,36 +179,90 @@ const DICTS: Record<Lang, EventDict> = {
       heading: "What is shifting in the market right now",
       sub: "Real changes hitting cross-border sellers this year. What happened, and what to do about it.",
       items: [
-        { tag: "Customs · 2026", title: "The de minimis threshold is gone", body: "The duty-free exemption for cheap parcels into the US has ended, and the EU is adding fees on low-value goods. Every parcel is costed differently now, which changes your real landed price.", cta: "Recalculate landed cost" },
-        { tag: "Channels · 2026", title: "TikTok Shop is booming, windows close fast", body: "Marketplace volume is climbing hard, but winning products saturate within days. Whoever finds and launches faster keeps the margin.", cta: "How to enter TikTok Shop" },
-        { tag: "Suppliers · 2026", title: "Reliable suppliers are pain number one", body: "Most sellers name finding reliable suppliers as their biggest challenge. One bad batch eats your margin and your timeline.", cta: "Score a supplier" },
+        {
+          tag: "Customs · 2026",
+          title: "The de minimis threshold is gone",
+          body: "The duty-free exemption for cheap parcels into the US has ended, and the EU is adding fees on low-value goods. Every parcel is costed differently now, which changes your real landed price.",
+          cta: "Recalculate landed cost",
+        },
+        {
+          tag: "Channels · 2026",
+          title: "TikTok Shop is booming, windows close fast",
+          body: "Marketplace volume is climbing hard, but winning products saturate within days. Whoever finds and launches faster keeps the margin.",
+          cta: "How to enter TikTok Shop",
+        },
+        {
+          tag: "Suppliers · 2026",
+          title: "Reliable suppliers are pain number one",
+          body: "Most sellers name finding reliable suppliers as their biggest challenge. One bad batch eats your margin and your timeline.",
+          cta: "Score a supplier",
+        },
       ],
     },
     story: {
       heading: "How this could look for you",
       who: "Friday night: you have the idea, not the time",
-      p: ["Launching a store keeps slipping: design, suppliers, SEO, product cards. Sound familiar?", "You just describe the task: what you sell and which market you target.", "Accio Work helps assemble the basics: it finds suppliers on live Alibaba data, drafts your product cards and landing page, and flags duties and compliance.", "From there you refine it, launch ads and handle orders yourself. The setup grind that used to eat weeks fits into one evening."],
+      p: [
+        "Launching a store keeps slipping: design, suppliers, SEO, product cards. Sound familiar?",
+        "You just describe the task: what you sell and which market you target.",
+        "Accio Work helps assemble the basics: it finds suppliers on live Alibaba data, drafts your product cards and landing page, and flags duties and compliance.",
+        "From there you refine it, launch ads and handle orders yourself. The setup grind that used to eat weeks fits into one evening.",
+      ],
       highlight: "Less setup grind. More time for the actual business.",
       quote: "You do not need to be a designer or a developer to get online.",
-      videoCaption: "Illustrative scenario, not a guarantee. Real timelines and sales depend on your product, market and effort.",
+      videoCaption:
+        "Illustrative scenario, not a guarantee. Real timelines and sales depend on your product, market and effort.",
       steps: ["Describe the task", "The store basics come together", "Refine and launch"],
     },
     faq: {
       heading: "Frequently asked questions",
       items: [
-        { q: "Is the free plan permanent or a temporary promo?", a: "Permanent. No time limits, no forced upgrade. We can afford it thanks to Alibaba's infrastructure." },
-        { q: "What are the free plan limits?", a: "Base AI agent and every integration, unlimited. Only senior specialists (Sourcing Expert, Product Designer, etc.) are paid, and they cost $1-3 per task." },
-        { q: "Do I need a credit card to sign up?", a: "No. Sign-up is instant, no card required." },
-        { q: "Does it really work without a developer?", a: "Yes. Everything runs on plain text, English or Russian. No code, no Selenium, no command line." },
-        { q: "How does Accio Work connect to Shopify / Telegram / Gmail?", a: "Built-in OAuth. One click and it's done. No API keys, no docs to read." },
+        {
+          q: "Is the free plan permanent or a temporary promo?",
+          a: "Permanent. No time limits, no forced upgrade. We can afford it thanks to Alibaba's infrastructure.",
+        },
+        {
+          q: "What are the free plan limits?",
+          a: "Base AI agent and every integration, unlimited. Only senior specialists (Sourcing Expert, Product Designer, etc.) are paid, and they cost $1-3 per task.",
+        },
+        {
+          q: "Do I need a credit card to sign up?",
+          a: "No. Sign-up is instant, no card required.",
+        },
+        {
+          q: "Does it really work without a developer?",
+          a: "Yes. Everything runs on plain text, English or Russian. No code, no Selenium, no command line.",
+        },
+        {
+          q: "How does Accio Work connect to Shopify / Telegram / Gmail?",
+          a: "Built-in OAuth. One click and it's done. No API keys, no docs to read.",
+        },
       ],
     },
-    cta: { title: "Ready to launch a business in an hour?", subtitle: "Download Accio Work for free. Your first store, today.", button: "Download free", note: "macOS 11+ • 42 MB • No card • No trial" },
-    footer: { pricing: "Pricing", blog: "Blog", help: "Help Center", privacy: "Privacy", terms: "Terms", copyright: "© 2026 Accio. Built on Alibaba infrastructure." },
+    cta: {
+      title: "Ready to launch a business in an hour?",
+      subtitle: "Download Accio Work for free. Your first store, today.",
+      button: "Download free",
+      note: "macOS 11+ • 42 MB • No card • No trial",
+    },
+    footer: {
+      pricing: "Pricing",
+      blog: "Blog",
+      help: "Help Center",
+      privacy: "Privacy",
+      terms: "Terms",
+      copyright: "© 2026 Accio. Built on Alibaba infrastructure.",
+    },
   },
   ru: {
     langLabel: "Русский",
-    nav: { pricing: "Тарифы", blog: "Блог", help: "Помощь", events: "События", download: "Скачать Accio Work" },
+    nav: {
+      pricing: "Тарифы",
+      blog: "Блог",
+      help: "Помощь",
+      events: "События",
+      download: "Скачать Accio Work",
+    },
     hero: {
       badge: "Только что • 28 июля 2026",
       title1: "Accio Work стал бесплатным.",
@@ -182,16 +272,45 @@ const DICTS: Record<Lang, EventDict> = {
       ctaSecondary: "Посмотреть тарифы",
       note: "macOS 11+. Apple Silicon и Intel. 42 МБ.",
     },
-    stats: { users: "Пользователей по всему миру", launch: "Среднее время запуска магазина", launchSuffix: " мин", cheaper: "Экономия по сравнению с фрилансерами" },
+    stats: {
+      users: "Пользователей по всему миру",
+      launch: "Среднее время запуска магазина",
+      launchSuffix: " мин",
+      cheaper: "Экономия по сравнению с фрилансерами",
+    },
     features: {
       heading: "Что внутри бесплатного тарифа",
       items: [
-        { icon: "🤖", title: "AI-агент 24/7", desc: "Полноценный ассистент с поиском, аналитикой и автоматизацией. Без лимитов на количество задач." },
-        { icon: "🌐", title: "Браузерная автоматизация", desc: "Открывает сайты, кликает, собирает данные, заполняет формы. Без кода, без Selenium." },
-        { icon: "🔌", title: "50+ интеграций", desc: "Shopify, Gmail, Telegram, Slack, LinkedIn, подключение в один клик." },
-        { icon: "✍️", title: "Генерация контента", desc: "Лендинги, карточки товаров, SEO-тексты. Готово за минуты." },
-        { icon: "📈", title: "Market Scout", desc: "Анализ ниш, трендов и конкурентов. Данные из Alibaba.com и Jungle Scout." },
-        { icon: "👥", title: "Специалисты по требованию", desc: "Sourcing Expert, Product Designer, Listing Copywriter, подключаются за копейки, только когда нужны." },
+        {
+          icon: "🤖",
+          title: "AI-агент 24/7",
+          desc: "Полноценный ассистент с поиском, аналитикой и автоматизацией. Без лимитов на количество задач.",
+        },
+        {
+          icon: "🌐",
+          title: "Браузерная автоматизация",
+          desc: "Открывает сайты, кликает, собирает данные, заполняет формы. Без кода, без Selenium.",
+        },
+        {
+          icon: "🔌",
+          title: "50+ интеграций",
+          desc: "Shopify, Gmail, Telegram, Slack, LinkedIn, подключение в один клик.",
+        },
+        {
+          icon: "✍️",
+          title: "Генерация контента",
+          desc: "Лендинги, карточки товаров, SEO-тексты. Готово за минуты.",
+        },
+        {
+          icon: "📈",
+          title: "Market Scout",
+          desc: "Анализ ниш, трендов и конкурентов. Данные из Alibaba.com и Jungle Scout.",
+        },
+        {
+          icon: "👥",
+          title: "Специалисты по требованию",
+          desc: "Sourcing Expert, Product Designer, Listing Copywriter, подключаются за копейки, только когда нужны.",
+        },
       ],
     },
     compare: {
@@ -228,36 +347,90 @@ const DICTS: Record<Lang, EventDict> = {
       heading: "Что меняется на рынке прямо сейчас",
       sub: "Реальные сдвиги, которые бьют по трансграничным продавцам в этом году. Что случилось и что с этим делать.",
       items: [
-        { tag: "Таможня · 2026", title: "Порог de minimis отменён", body: "Освобождение от пошлин для дешёвых посылок в США закрыто, а ЕС добавляет сборы на товары низкой стоимости. Каждая посылка теперь считается иначе, и это меняет вашу реальную себестоимость.", cta: "Пересчитать себестоимость" },
-        { tag: "Каналы · 2026", title: "TikTok Shop растёт, окна закрываются быстро", body: "Оборот площадки резко растёт, но выигрышные товары насыщаются за считанные дни. Кто быстрее находит и запускает, тот и снимает маржу.", cta: "Как выходить в TikTok Shop" },
-        { tag: "Поставщики · 2026", title: "Надёжный поставщик, боль номер один", body: "Большинство продавцов называют поиск надёжных поставщиков главной трудностью. Одной плохой партии хватает, чтобы съесть маржу и сорвать сроки.", cta: "Оценить поставщика" },
+        {
+          tag: "Таможня · 2026",
+          title: "Порог de minimis отменён",
+          body: "Освобождение от пошлин для дешёвых посылок в США закрыто, а ЕС добавляет сборы на товары низкой стоимости. Каждая посылка теперь считается иначе, и это меняет вашу реальную себестоимость.",
+          cta: "Пересчитать себестоимость",
+        },
+        {
+          tag: "Каналы · 2026",
+          title: "TikTok Shop растёт, окна закрываются быстро",
+          body: "Оборот площадки резко растёт, но выигрышные товары насыщаются за считанные дни. Кто быстрее находит и запускает, тот и снимает маржу.",
+          cta: "Как выходить в TikTok Shop",
+        },
+        {
+          tag: "Поставщики · 2026",
+          title: "Надёжный поставщик, боль номер один",
+          body: "Большинство продавцов называют поиск надёжных поставщиков главной трудностью. Одной плохой партии хватает, чтобы съесть маржу и сорвать сроки.",
+          cta: "Оценить поставщика",
+        },
       ],
     },
     story: {
       heading: "Как это может выглядеть у вас",
       who: "Вечер пятницы: идея есть, времени нет",
-      p: ["Запуск магазина всё время откладывается: дизайн, поставщики, SEO, карточки. Знакомо?", "Вы просто описываете задачу: что продаёте и на каком рынке.", "Accio Work помогает собрать основу: ищет поставщиков на живых данных Alibaba, готовит карточки и лендинг, подсказывает по пошлинам и комплаенсу.", "Дальше вы правите под себя, запускаете рекламу и ведёте заказы. Рутина старта, которая съедала недели, укладывается в один вечер."],
+      p: [
+        "Запуск магазина всё время откладывается: дизайн, поставщики, SEO, карточки. Знакомо?",
+        "Вы просто описываете задачу: что продаёте и на каком рынке.",
+        "Accio Work помогает собрать основу: ищет поставщиков на живых данных Alibaba, готовит карточки и лендинг, подсказывает по пошлинам и комплаенсу.",
+        "Дальше вы правите под себя, запускаете рекламу и ведёте заказы. Рутина старта, которая съедала недели, укладывается в один вечер.",
+      ],
       highlight: "Меньше рутины на старте. Больше времени на сам бизнес.",
       quote: "Не нужно быть дизайнером или разработчиком, чтобы выйти в онлайн.",
-      videoCaption: "Иллюстративный сценарий, не гарантия. Реальные сроки и продажи зависят от товара, рынка и ваших усилий.",
+      videoCaption:
+        "Иллюстративный сценарий, не гарантия. Реальные сроки и продажи зависят от товара, рынка и ваших усилий.",
       steps: ["Опишите задачу", "Собирается основа магазина", "Правьте и запускайте"],
     },
     faq: {
       heading: "Частые вопросы",
       items: [
-        { q: "Бесплатный тариф, навсегда или временная акция?", a: "Навсегда. Без ограничений по времени, без принудительного апгрейда. Мы можем себе это позволить благодаря инфраструктуре Alibaba." },
-        { q: "Какие ограничения у бесплатного тарифа?", a: "Базовый AI-агент и все интеграции, без ограничений. Платные только старшие специалисты (Sourcing Expert, Product Designer и др.), но они стоят $1-3 за задачу." },
-        { q: "Нужна ли банковская карта для регистрации?", a: "Нет. Регистрация мгновенная, карта не требуется." },
-        { q: "Это точно работает без программиста?", a: "Да. Всё управляется текстом, на русском или английском. Никакого кода, никакого Selenium, никакой командной строки." },
-        { q: "Как Accio Work подключается к Shopify / Telegram / Gmail?", a: "Встроенная OAuth-авторизация. Один клик, и готово. Никаких API-ключей, никакой документации." },
+        {
+          q: "Бесплатный тариф, навсегда или временная акция?",
+          a: "Навсегда. Без ограничений по времени, без принудительного апгрейда. Мы можем себе это позволить благодаря инфраструктуре Alibaba.",
+        },
+        {
+          q: "Какие ограничения у бесплатного тарифа?",
+          a: "Базовый AI-агент и все интеграции, без ограничений. Платные только старшие специалисты (Sourcing Expert, Product Designer и др.), но они стоят $1-3 за задачу.",
+        },
+        {
+          q: "Нужна ли банковская карта для регистрации?",
+          a: "Нет. Регистрация мгновенная, карта не требуется.",
+        },
+        {
+          q: "Это точно работает без программиста?",
+          a: "Да. Всё управляется текстом, на русском или английском. Никакого кода, никакого Selenium, никакой командной строки.",
+        },
+        {
+          q: "Как Accio Work подключается к Shopify / Telegram / Gmail?",
+          a: "Встроенная OAuth-авторизация. Один клик, и готово. Никаких API-ключей, никакой документации.",
+        },
       ],
     },
-    cta: { title: "Готовы запустить бизнес за час?", subtitle: "Скачайте Accio Work бесплатно. Первый магазин, сегодня.", button: "Скачать бесплатно", note: "macOS 11+ • 42 МБ • Без карты • Без триала" },
-    footer: { pricing: "Тарифы", blog: "Блог", help: "Помощь", privacy: "Конфиденциальность", terms: "Условия", copyright: "© 2026 Accio. На инфраструктуре Alibaba." },
+    cta: {
+      title: "Готовы запустить бизнес за час?",
+      subtitle: "Скачайте Accio Work бесплатно. Первый магазин, сегодня.",
+      button: "Скачать бесплатно",
+      note: "macOS 11+ • 42 МБ • Без карты • Без триала",
+    },
+    footer: {
+      pricing: "Тарифы",
+      blog: "Блог",
+      help: "Помощь",
+      privacy: "Конфиденциальность",
+      terms: "Условия",
+      copyright: "© 2026 Accio. На инфраструктуре Alibaba.",
+    },
   },
   de: {
     langLabel: "Deutsch",
-    nav: { pricing: "Preise", blog: "Blog", help: "Hilfe", events: "Events", download: "Accio Work laden" },
+    nav: {
+      pricing: "Preise",
+      blog: "Blog",
+      help: "Hilfe",
+      events: "Events",
+      download: "Accio Work laden",
+    },
     hero: {
       badge: "Gerade verkündet • 28. Juli 2026",
       title1: "Accio Work ist jetzt kostenlos.",
@@ -267,16 +440,45 @@ const DICTS: Record<Lang, EventDict> = {
       ctaSecondary: "Preise ansehen",
       note: "macOS 11+. Apple Silicon und Intel. 42 MB.",
     },
-    stats: { users: "Nutzer weltweit", launch: "Ø Zeit zum Start eines Shops", launchSuffix: " Min", cheaper: "Günstiger als Freelancer" },
+    stats: {
+      users: "Nutzer weltweit",
+      launch: "Ø Zeit zum Start eines Shops",
+      launchSuffix: " Min",
+      cheaper: "Günstiger als Freelancer",
+    },
     features: {
       heading: "Was im kostenlosen Plan enthalten ist",
       items: [
-        { icon: "🤖", title: "24/7-KI-Agent", desc: "Vollständiger Assistent für Suche, Analyse und Automatisierung. Ohne Task-Limits." },
-        { icon: "🌐", title: "Browser-Automatisierung", desc: "Öffnet Seiten, klickt, extrahiert Daten, füllt Formulare aus. Kein Code, kein Selenium." },
-        { icon: "🔌", title: "50+ Integrationen", desc: "Shopify, Gmail, Telegram, Slack, LinkedIn, Anschluss mit einem Klick." },
-        { icon: "✍️", title: "Content-Generierung", desc: "Landingpages, Produktkarten, SEO-Texte. In Minuten fertig." },
-        { icon: "📈", title: "Market Scout", desc: "Nischen-, Trend- und Wettbewerbsanalyse. Daten aus Alibaba.com und Jungle Scout." },
-        { icon: "👥", title: "Spezialisten auf Abruf", desc: "Sourcing Expert, Product Designer, Listing Copywriter, Cent-Preise, nur bei Bedarf." },
+        {
+          icon: "🤖",
+          title: "24/7-KI-Agent",
+          desc: "Vollständiger Assistent für Suche, Analyse und Automatisierung. Ohne Task-Limits.",
+        },
+        {
+          icon: "🌐",
+          title: "Browser-Automatisierung",
+          desc: "Öffnet Seiten, klickt, extrahiert Daten, füllt Formulare aus. Kein Code, kein Selenium.",
+        },
+        {
+          icon: "🔌",
+          title: "50+ Integrationen",
+          desc: "Shopify, Gmail, Telegram, Slack, LinkedIn, Anschluss mit einem Klick.",
+        },
+        {
+          icon: "✍️",
+          title: "Content-Generierung",
+          desc: "Landingpages, Produktkarten, SEO-Texte. In Minuten fertig.",
+        },
+        {
+          icon: "📈",
+          title: "Market Scout",
+          desc: "Nischen-, Trend- und Wettbewerbsanalyse. Daten aus Alibaba.com und Jungle Scout.",
+        },
+        {
+          icon: "👥",
+          title: "Spezialisten auf Abruf",
+          desc: "Sourcing Expert, Product Designer, Listing Copywriter, Cent-Preise, nur bei Bedarf.",
+        },
       ],
     },
     compare: {
@@ -313,36 +515,90 @@ const DICTS: Record<Lang, EventDict> = {
       heading: "Was sich gerade am Markt verschiebt",
       sub: "Echte Veränderungen, die grenzüberschreitende Verkäufer dieses Jahr treffen. Was passiert ist und was zu tun ist.",
       items: [
-        { tag: "Zoll · 2026", title: "Die de-minimis-Grenze ist weg", body: "Die Zollfreiheit für billige Pakete in die USA ist beendet, und die EU erhebt Gebühren auf geringwertige Waren. Jedes Paket wird jetzt anders kalkuliert, das ändert deinen echten Landepreis.", cta: "Landepreis neu berechnen" },
-        { tag: "Kanäle · 2026", title: "TikTok Shop boomt, Fenster schließen schnell", body: "Das Marktplatzvolumen steigt stark, aber Gewinnerprodukte sind in Tagen gesättigt. Wer schneller findet und startet, behält die Marge.", cta: "So startest du bei TikTok Shop" },
-        { tag: "Lieferanten · 2026", title: "Zuverlässige Lieferanten sind Schmerz Nummer eins", body: "Die meisten Verkäufer nennen zuverlässige Lieferanten als größte Hürde. Eine schlechte Charge frisst Marge und Zeitplan.", cta: "Lieferant bewerten" },
+        {
+          tag: "Zoll · 2026",
+          title: "Die de-minimis-Grenze ist weg",
+          body: "Die Zollfreiheit für billige Pakete in die USA ist beendet, und die EU erhebt Gebühren auf geringwertige Waren. Jedes Paket wird jetzt anders kalkuliert, das ändert deinen echten Landepreis.",
+          cta: "Landepreis neu berechnen",
+        },
+        {
+          tag: "Kanäle · 2026",
+          title: "TikTok Shop boomt, Fenster schließen schnell",
+          body: "Das Marktplatzvolumen steigt stark, aber Gewinnerprodukte sind in Tagen gesättigt. Wer schneller findet und startet, behält die Marge.",
+          cta: "So startest du bei TikTok Shop",
+        },
+        {
+          tag: "Lieferanten · 2026",
+          title: "Zuverlässige Lieferanten sind Schmerz Nummer eins",
+          body: "Die meisten Verkäufer nennen zuverlässige Lieferanten als größte Hürde. Eine schlechte Charge frisst Marge und Zeitplan.",
+          cta: "Lieferant bewerten",
+        },
       ],
     },
     story: {
       heading: "So könnte es bei dir aussehen",
       who: "Freitagabend: die Idee ist da, die Zeit fehlt",
-      p: ["Der Store-Start verschiebt sich ständig: Design, Lieferanten, SEO, Produktkarten. Kommt dir das bekannt vor?", "Du beschreibst einfach die Aufgabe: was du verkaufst und welchen Markt du anpeilst.", "Accio Work hilft, die Basis zusammenzustellen: findet Lieferanten auf Live-Alibaba-Daten, erstellt Produktkarten und Landingpage und weist auf Zoll und Compliance hin.", "Danach passt du alles an, schaltest Ads und bearbeitest Bestellungen selbst. Die Startroutine, die früher Wochen fraß, passt in einen Abend."],
+      p: [
+        "Der Store-Start verschiebt sich ständig: Design, Lieferanten, SEO, Produktkarten. Kommt dir das bekannt vor?",
+        "Du beschreibst einfach die Aufgabe: was du verkaufst und welchen Markt du anpeilst.",
+        "Accio Work hilft, die Basis zusammenzustellen: findet Lieferanten auf Live-Alibaba-Daten, erstellt Produktkarten und Landingpage und weist auf Zoll und Compliance hin.",
+        "Danach passt du alles an, schaltest Ads und bearbeitest Bestellungen selbst. Die Startroutine, die früher Wochen fraß, passt in einen Abend.",
+      ],
       highlight: "Weniger Startaufwand. Mehr Zeit fürs eigentliche Geschäft.",
       quote: "Du musst kein Designer und kein Entwickler sein, um online zu gehen.",
-      videoCaption: "Illustratives Szenario, keine Garantie. Echte Zeiten und Umsätze hängen von Produkt, Markt und Einsatz ab.",
+      videoCaption:
+        "Illustratives Szenario, keine Garantie. Echte Zeiten und Umsätze hängen von Produkt, Markt und Einsatz ab.",
       steps: ["Aufgabe beschreiben", "Die Store-Basis entsteht", "Anpassen und starten"],
     },
     faq: {
       heading: "Häufige Fragen",
       items: [
-        { q: "Ist der kostenlose Plan dauerhaft oder eine Aktion?", a: "Dauerhaft. Kein Zeitlimit, kein erzwungenes Upgrade. Möglich dank Alibaba-Infrastruktur." },
-        { q: "Welche Limits hat der kostenlose Plan?", a: "Basis-KI und alle Integrationen, unbegrenzt. Nur Senior-Spezialisten (Sourcing Expert, Product Designer etc.) sind kostenpflichtig, 1-3 $ pro Aufgabe." },
-        { q: "Brauche ich eine Kreditkarte zur Anmeldung?", a: "Nein. Sofort-Anmeldung, keine Karte nötig." },
-        { q: "Funktioniert das wirklich ohne Entwickler?", a: "Ja. Alles wird per Text gesteuert. Kein Code, kein Selenium, keine Kommandozeile." },
-        { q: "Wie verbindet sich Accio Work mit Shopify / Telegram / Gmail?", a: "Eingebautes OAuth. Ein Klick genügt. Keine API-Keys, keine Dokumentation." },
+        {
+          q: "Ist der kostenlose Plan dauerhaft oder eine Aktion?",
+          a: "Dauerhaft. Kein Zeitlimit, kein erzwungenes Upgrade. Möglich dank Alibaba-Infrastruktur.",
+        },
+        {
+          q: "Welche Limits hat der kostenlose Plan?",
+          a: "Basis-KI und alle Integrationen, unbegrenzt. Nur Senior-Spezialisten (Sourcing Expert, Product Designer etc.) sind kostenpflichtig, 1-3 $ pro Aufgabe.",
+        },
+        {
+          q: "Brauche ich eine Kreditkarte zur Anmeldung?",
+          a: "Nein. Sofort-Anmeldung, keine Karte nötig.",
+        },
+        {
+          q: "Funktioniert das wirklich ohne Entwickler?",
+          a: "Ja. Alles wird per Text gesteuert. Kein Code, kein Selenium, keine Kommandozeile.",
+        },
+        {
+          q: "Wie verbindet sich Accio Work mit Shopify / Telegram / Gmail?",
+          a: "Eingebautes OAuth. Ein Klick genügt. Keine API-Keys, keine Dokumentation.",
+        },
       ],
     },
-    cta: { title: "Bereit, ein Business in einer Stunde zu starten?", subtitle: "Lade Accio Work kostenlos. Dein erster Shop, heute.", button: "Kostenlos laden", note: "macOS 11+ • 42 MB • Ohne Karte • Ohne Testphase" },
-    footer: { pricing: "Preise", blog: "Blog", help: "Hilfe", privacy: "Datenschutz", terms: "AGB", copyright: "© 2026 Accio. Auf Alibaba-Infrastruktur." },
+    cta: {
+      title: "Bereit, ein Business in einer Stunde zu starten?",
+      subtitle: "Lade Accio Work kostenlos. Dein erster Shop, heute.",
+      button: "Kostenlos laden",
+      note: "macOS 11+ • 42 MB • Ohne Karte • Ohne Testphase",
+    },
+    footer: {
+      pricing: "Preise",
+      blog: "Blog",
+      help: "Hilfe",
+      privacy: "Datenschutz",
+      terms: "AGB",
+      copyright: "© 2026 Accio. Auf Alibaba-Infrastruktur.",
+    },
   },
   it: {
     langLabel: "Italiano",
-    nav: { pricing: "Prezzi", blog: "Blog", help: "Aiuto", events: "Eventi", download: "Scarica Accio Work" },
+    nav: {
+      pricing: "Prezzi",
+      blog: "Blog",
+      help: "Aiuto",
+      events: "Eventi",
+      download: "Scarica Accio Work",
+    },
     hero: {
       badge: "Appena annunciato • 28 luglio 2026",
       title1: "Accio Work è ora gratuito.",
@@ -352,16 +608,45 @@ const DICTS: Record<Lang, EventDict> = {
       ctaSecondary: "Vedi i piani",
       note: "macOS 11+. Apple Silicon e Intel. 42 MB.",
     },
-    stats: { users: "Utenti in tutto il mondo", launch: "Tempo medio per lanciare uno store", launchSuffix: " min", cheaper: "Più conveniente dei freelancer" },
+    stats: {
+      users: "Utenti in tutto il mondo",
+      launch: "Tempo medio per lanciare uno store",
+      launchSuffix: " min",
+      cheaper: "Più conveniente dei freelancer",
+    },
     features: {
       heading: "Cosa include il piano gratuito",
       items: [
-        { icon: "🤖", title: "Agente AI 24/7", desc: "Assistente completo con ricerca, analisi e automazione. Senza limiti di task." },
-        { icon: "🌐", title: "Automazione browser", desc: "Apre siti, clicca, estrae dati, compila form. Zero codice, zero Selenium." },
-        { icon: "🔌", title: "50+ integrazioni", desc: "Shopify, Gmail, Telegram, Slack, LinkedIn, collega in un clic." },
-        { icon: "✍️", title: "Generazione contenuti", desc: "Landing, schede prodotto, SEO. Pronti in minuti." },
-        { icon: "📈", title: "Market Scout", desc: "Analisi di nicchie, trend e competitor. Dati da Alibaba.com e Jungle Scout." },
-        { icon: "👥", title: "Specialisti on-demand", desc: "Sourcing Expert, Product Designer, Listing Copywriter, pochi centesimi, solo quando servono." },
+        {
+          icon: "🤖",
+          title: "Agente AI 24/7",
+          desc: "Assistente completo con ricerca, analisi e automazione. Senza limiti di task.",
+        },
+        {
+          icon: "🌐",
+          title: "Automazione browser",
+          desc: "Apre siti, clicca, estrae dati, compila form. Zero codice, zero Selenium.",
+        },
+        {
+          icon: "🔌",
+          title: "50+ integrazioni",
+          desc: "Shopify, Gmail, Telegram, Slack, LinkedIn, collega in un clic.",
+        },
+        {
+          icon: "✍️",
+          title: "Generazione contenuti",
+          desc: "Landing, schede prodotto, SEO. Pronti in minuti.",
+        },
+        {
+          icon: "📈",
+          title: "Market Scout",
+          desc: "Analisi di nicchie, trend e competitor. Dati da Alibaba.com e Jungle Scout.",
+        },
+        {
+          icon: "👥",
+          title: "Specialisti on-demand",
+          desc: "Sourcing Expert, Product Designer, Listing Copywriter, pochi centesimi, solo quando servono.",
+        },
       ],
     },
     compare: {
@@ -398,36 +683,90 @@ const DICTS: Record<Lang, EventDict> = {
       heading: "Cosa sta cambiando sul mercato ora",
       sub: "Cambiamenti reali che colpiscono i venditori cross-border quest'anno. Cosa è successo e cosa fare.",
       items: [
-        { tag: "Dogana · 2026", title: "La soglia de minimis non c'è più", body: "L'esenzione dai dazi per i pacchi economici verso gli USA è finita e la UE aggiunge oneri sui beni di basso valore. Ogni pacco ora si calcola diversamente, e questo cambia il tuo costo reale a destino.", cta: "Ricalcola il costo a destino" },
-        { tag: "Canali · 2026", title: "TikTok Shop cresce, le finestre si chiudono in fretta", body: "Il volume del marketplace sale forte, ma i prodotti vincenti si saturano in giorni. Chi trova e lancia più in fretta tiene il margine.", cta: "Come entrare in TikTok Shop" },
-        { tag: "Fornitori · 2026", title: "Fornitori affidabili, dolore numero uno", body: "La maggior parte dei venditori indica i fornitori affidabili come sfida principale. Un lotto sbagliato divora margine e tempi.", cta: "Valuta un fornitore" },
+        {
+          tag: "Dogana · 2026",
+          title: "La soglia de minimis non c'è più",
+          body: "L'esenzione dai dazi per i pacchi economici verso gli USA è finita e la UE aggiunge oneri sui beni di basso valore. Ogni pacco ora si calcola diversamente, e questo cambia il tuo costo reale a destino.",
+          cta: "Ricalcola il costo a destino",
+        },
+        {
+          tag: "Canali · 2026",
+          title: "TikTok Shop cresce, le finestre si chiudono in fretta",
+          body: "Il volume del marketplace sale forte, ma i prodotti vincenti si saturano in giorni. Chi trova e lancia più in fretta tiene il margine.",
+          cta: "Come entrare in TikTok Shop",
+        },
+        {
+          tag: "Fornitori · 2026",
+          title: "Fornitori affidabili, dolore numero uno",
+          body: "La maggior parte dei venditori indica i fornitori affidabili come sfida principale. Un lotto sbagliato divora margine e tempi.",
+          cta: "Valuta un fornitore",
+        },
       ],
     },
     story: {
       heading: "Come potrebbe essere per te",
       who: "Venerdì sera: hai l'idea, non il tempo",
-      p: ["Il lancio del negozio slitta sempre: design, fornitori, SEO, schede prodotto. Ti suona familiare?", "Tu descrivi semplicemente il compito: cosa vendi e su quale mercato.", "Accio Work aiuta a mettere insieme le basi: trova fornitori su dati Alibaba in tempo reale, prepara schede prodotto e landing e segnala dazi e compliance.", "Poi rifinisci tu, lanci le ads e gestisci gli ordini. La routine di avvio che divorava settimane sta in una sera."],
+      p: [
+        "Il lancio del negozio slitta sempre: design, fornitori, SEO, schede prodotto. Ti suona familiare?",
+        "Tu descrivi semplicemente il compito: cosa vendi e su quale mercato.",
+        "Accio Work aiuta a mettere insieme le basi: trova fornitori su dati Alibaba in tempo reale, prepara schede prodotto e landing e segnala dazi e compliance.",
+        "Poi rifinisci tu, lanci le ads e gestisci gli ordini. La routine di avvio che divorava settimane sta in una sera.",
+      ],
       highlight: "Meno lavoro di avvio. Più tempo per il business vero.",
       quote: "Non serve essere designer o sviluppatore per andare online.",
-      videoCaption: "Scenario illustrativo, non una garanzia. Tempi e vendite reali dipendono da prodotto, mercato e impegno.",
+      videoCaption:
+        "Scenario illustrativo, non una garanzia. Tempi e vendite reali dipendono da prodotto, mercato e impegno.",
       steps: ["Descrivi il compito", "Le basi del negozio prendono forma", "Rifinisci e lancia"],
     },
     faq: {
       heading: "Domande frequenti",
       items: [
-        { q: "Il piano gratuito è permanente o una promo?", a: "Permanente. Nessun limite di tempo, nessun upgrade forzato. Possiamo permettercelo grazie all'infrastruttura di Alibaba." },
-        { q: "Quali sono i limiti del piano gratuito?", a: "Agente AI base e tutte le integrazioni, illimitati. A pagamento solo gli specialisti senior (Sourcing Expert, Product Designer ecc.), $1-3 a task." },
-        { q: "Serve una carta per registrarsi?", a: "No. Registrazione istantanea, nessuna carta richiesta." },
-        { q: "Funziona davvero senza programmatore?", a: "Sì. Tutto si gestisce via testo. Zero codice, zero Selenium, zero riga di comando." },
-        { q: "Come si collega Accio Work a Shopify / Telegram / Gmail?", a: "OAuth integrato. Un clic e sei collegato. Zero API key, zero documentazione." },
+        {
+          q: "Il piano gratuito è permanente o una promo?",
+          a: "Permanente. Nessun limite di tempo, nessun upgrade forzato. Possiamo permettercelo grazie all'infrastruttura di Alibaba.",
+        },
+        {
+          q: "Quali sono i limiti del piano gratuito?",
+          a: "Agente AI base e tutte le integrazioni, illimitati. A pagamento solo gli specialisti senior (Sourcing Expert, Product Designer ecc.), $1-3 a task.",
+        },
+        {
+          q: "Serve una carta per registrarsi?",
+          a: "No. Registrazione istantanea, nessuna carta richiesta.",
+        },
+        {
+          q: "Funziona davvero senza programmatore?",
+          a: "Sì. Tutto si gestisce via testo. Zero codice, zero Selenium, zero riga di comando.",
+        },
+        {
+          q: "Come si collega Accio Work a Shopify / Telegram / Gmail?",
+          a: "OAuth integrato. Un clic e sei collegato. Zero API key, zero documentazione.",
+        },
       ],
     },
-    cta: { title: "Pronto a lanciare un business in un'ora?", subtitle: "Scarica Accio Work gratis. Il tuo primo store, oggi.", button: "Scarica gratis", note: "macOS 11+ • 42 MB • Senza carta • Senza trial" },
-    footer: { pricing: "Prezzi", blog: "Blog", help: "Aiuto", privacy: "Privacy", terms: "Termini", copyright: "© 2026 Accio. Su infrastruttura Alibaba." },
+    cta: {
+      title: "Pronto a lanciare un business in un'ora?",
+      subtitle: "Scarica Accio Work gratis. Il tuo primo store, oggi.",
+      button: "Scarica gratis",
+      note: "macOS 11+ • 42 MB • Senza carta • Senza trial",
+    },
+    footer: {
+      pricing: "Prezzi",
+      blog: "Blog",
+      help: "Aiuto",
+      privacy: "Privacy",
+      terms: "Termini",
+      copyright: "© 2026 Accio. Su infrastruttura Alibaba.",
+    },
   },
   es: {
     langLabel: "Español",
-    nav: { pricing: "Precios", blog: "Blog", help: "Ayuda", events: "Eventos", download: "Descargar Accio Work" },
+    nav: {
+      pricing: "Precios",
+      blog: "Blog",
+      help: "Ayuda",
+      events: "Eventos",
+      download: "Descargar Accio Work",
+    },
     hero: {
       badge: "Recién anunciado • 28 de julio de 2026",
       title1: "Accio Work ahora es gratis.",
@@ -437,16 +776,45 @@ const DICTS: Record<Lang, EventDict> = {
       ctaSecondary: "Ver planes",
       note: "macOS 11+. Apple Silicon e Intel. 42 MB.",
     },
-    stats: { users: "Usuarios en todo el mundo", launch: "Tiempo medio para lanzar una tienda", launchSuffix: " min", cheaper: "Más barato que freelancers" },
+    stats: {
+      users: "Usuarios en todo el mundo",
+      launch: "Tiempo medio para lanzar una tienda",
+      launchSuffix: " min",
+      cheaper: "Más barato que freelancers",
+    },
     features: {
       heading: "Qué incluye el plan gratuito",
       items: [
-        { icon: "🤖", title: "Agente IA 24/7", desc: "Asistente completo con búsqueda, análisis y automatización. Sin límites de tareas." },
-        { icon: "🌐", title: "Automatización del navegador", desc: "Abre sitios, hace clic, extrae datos, rellena formularios. Sin código, sin Selenium." },
-        { icon: "🔌", title: "50+ integraciones", desc: "Shopify, Gmail, Telegram, Slack, LinkedIn, conecta con un clic." },
-        { icon: "✍️", title: "Generación de contenido", desc: "Landings, fichas de producto, SEO. Listo en minutos." },
-        { icon: "📈", title: "Market Scout", desc: "Análisis de nichos, tendencias y competidores. Datos de Alibaba.com y Jungle Scout." },
-        { icon: "👥", title: "Especialistas bajo demanda", desc: "Sourcing Expert, Product Designer, Listing Copywriter, céntimos, solo cuando los necesitas." },
+        {
+          icon: "🤖",
+          title: "Agente IA 24/7",
+          desc: "Asistente completo con búsqueda, análisis y automatización. Sin límites de tareas.",
+        },
+        {
+          icon: "🌐",
+          title: "Automatización del navegador",
+          desc: "Abre sitios, hace clic, extrae datos, rellena formularios. Sin código, sin Selenium.",
+        },
+        {
+          icon: "🔌",
+          title: "50+ integraciones",
+          desc: "Shopify, Gmail, Telegram, Slack, LinkedIn, conecta con un clic.",
+        },
+        {
+          icon: "✍️",
+          title: "Generación de contenido",
+          desc: "Landings, fichas de producto, SEO. Listo en minutos.",
+        },
+        {
+          icon: "📈",
+          title: "Market Scout",
+          desc: "Análisis de nichos, tendencias y competidores. Datos de Alibaba.com y Jungle Scout.",
+        },
+        {
+          icon: "👥",
+          title: "Especialistas bajo demanda",
+          desc: "Sourcing Expert, Product Designer, Listing Copywriter, céntimos, solo cuando los necesitas.",
+        },
       ],
     },
     compare: {
@@ -483,36 +851,87 @@ const DICTS: Record<Lang, EventDict> = {
       heading: "Qué está cambiando en el mercado ahora",
       sub: "Cambios reales que golpean a los vendedores cross-border este año. Qué pasó y qué hacer.",
       items: [
-        { tag: "Aduana · 2026", title: "El umbral de minimis desapareció", body: "La exención de aranceles para paquetes baratos hacia EE. UU. terminó, y la UE suma cargos a los bienes de bajo valor. Cada paquete se calcula distinto ahora, y eso cambia tu costo real a destino.", cta: "Recalcular el costo total" },
-        { tag: "Canales · 2026", title: "TikTok Shop crece, las ventanas se cierran rápido", body: "El volumen del marketplace sube fuerte, pero los productos ganadores se saturan en días. Quien encuentra y lanza más rápido se queda el margen.", cta: "Cómo entrar a TikTok Shop" },
-        { tag: "Proveedores · 2026", title: "Proveedores fiables, el dolor número uno", body: "La mayoría de vendedores señala a los proveedores fiables como su mayor reto. Un lote malo se come tu margen y tus plazos.", cta: "Evaluar un proveedor" },
+        {
+          tag: "Aduana · 2026",
+          title: "El umbral de minimis desapareció",
+          body: "La exención de aranceles para paquetes baratos hacia EE. UU. terminó, y la UE suma cargos a los bienes de bajo valor. Cada paquete se calcula distinto ahora, y eso cambia tu costo real a destino.",
+          cta: "Recalcular el costo total",
+        },
+        {
+          tag: "Canales · 2026",
+          title: "TikTok Shop crece, las ventanas se cierran rápido",
+          body: "El volumen del marketplace sube fuerte, pero los productos ganadores se saturan en días. Quien encuentra y lanza más rápido se queda el margen.",
+          cta: "Cómo entrar a TikTok Shop",
+        },
+        {
+          tag: "Proveedores · 2026",
+          title: "Proveedores fiables, el dolor número uno",
+          body: "La mayoría de vendedores señala a los proveedores fiables como su mayor reto. Un lote malo se come tu margen y tus plazos.",
+          cta: "Evaluar un proveedor",
+        },
       ],
     },
     story: {
       heading: "Cómo podría verse en tu caso",
       who: "Viernes por la noche: tienes la idea, no el tiempo",
-      p: ["El lanzamiento de la tienda se aplaza siempre: diseño, proveedores, SEO, fichas. ¿Te suena?", "Tú solo describes la tarea: qué vendes y a qué mercado apuntas.", "Accio Work ayuda a montar lo básico: encuentra proveedores con datos de Alibaba en vivo, prepara fichas y landing y avisa de aranceles y compliance.", "Luego ajustas tú, lanzas anuncios y gestionas los pedidos. La rutina de arranque que se comía semanas cabe en una tarde."],
+      p: [
+        "El lanzamiento de la tienda se aplaza siempre: diseño, proveedores, SEO, fichas. ¿Te suena?",
+        "Tú solo describes la tarea: qué vendes y a qué mercado apuntas.",
+        "Accio Work ayuda a montar lo básico: encuentra proveedores con datos de Alibaba en vivo, prepara fichas y landing y avisa de aranceles y compliance.",
+        "Luego ajustas tú, lanzas anuncios y gestionas los pedidos. La rutina de arranque que se comía semanas cabe en una tarde.",
+      ],
       highlight: "Menos trabajo de arranque. Más tiempo para el negocio real.",
       quote: "No hace falta ser diseñador ni programador para salir online.",
-      videoCaption: "Escenario ilustrativo, no una garantía. Los plazos y ventas reales dependen de tu producto, mercado y esfuerzo.",
+      videoCaption:
+        "Escenario ilustrativo, no una garantía. Los plazos y ventas reales dependen de tu producto, mercado y esfuerzo.",
       steps: ["Describe la tarea", "Se arma la base de la tienda", "Ajusta y lanza"],
     },
     faq: {
       heading: "Preguntas frecuentes",
       items: [
-        { q: "¿El plan gratuito es para siempre o una promo?", a: "Para siempre. Sin límite de tiempo, sin upgrade forzado. Podemos permitirlo gracias a la infraestructura de Alibaba." },
-        { q: "¿Qué límites tiene el plan gratuito?", a: "Agente IA básico y todas las integraciones, sin límite. Solo se pagan los especialistas senior (Sourcing Expert, Product Designer, etc.), $1-3 por tarea." },
+        {
+          q: "¿El plan gratuito es para siempre o una promo?",
+          a: "Para siempre. Sin límite de tiempo, sin upgrade forzado. Podemos permitirlo gracias a la infraestructura de Alibaba.",
+        },
+        {
+          q: "¿Qué límites tiene el plan gratuito?",
+          a: "Agente IA básico y todas las integraciones, sin límite. Solo se pagan los especialistas senior (Sourcing Expert, Product Designer, etc.), $1-3 por tarea.",
+        },
         { q: "¿Necesito tarjeta para registrarme?", a: "No. Registro instantáneo, sin tarjeta." },
-        { q: "¿De verdad funciona sin programador?", a: "Sí. Todo se controla por texto. Sin código, sin Selenium, sin terminal." },
-        { q: "¿Cómo se conecta Accio Work a Shopify / Telegram / Gmail?", a: "OAuth integrado. Un clic y listo. Sin claves API, sin documentación." },
+        {
+          q: "¿De verdad funciona sin programador?",
+          a: "Sí. Todo se controla por texto. Sin código, sin Selenium, sin terminal.",
+        },
+        {
+          q: "¿Cómo se conecta Accio Work a Shopify / Telegram / Gmail?",
+          a: "OAuth integrado. Un clic y listo. Sin claves API, sin documentación.",
+        },
       ],
     },
-    cta: { title: "¿Listo para lanzar un negocio en una hora?", subtitle: "Descarga Accio Work gratis. Tu primera tienda, hoy.", button: "Descargar gratis", note: "macOS 11+ • 42 MB • Sin tarjeta • Sin prueba" },
-    footer: { pricing: "Precios", blog: "Blog", help: "Ayuda", privacy: "Privacidad", terms: "Términos", copyright: "© 2026 Accio. Sobre infraestructura Alibaba." },
+    cta: {
+      title: "¿Listo para lanzar un negocio en una hora?",
+      subtitle: "Descarga Accio Work gratis. Tu primera tienda, hoy.",
+      button: "Descargar gratis",
+      note: "macOS 11+ • 42 MB • Sin tarjeta • Sin prueba",
+    },
+    footer: {
+      pricing: "Precios",
+      blog: "Blog",
+      help: "Ayuda",
+      privacy: "Privacidad",
+      terms: "Términos",
+      copyright: "© 2026 Accio. Sobre infraestructura Alibaba.",
+    },
   },
   pt: {
     langLabel: "Português",
-    nav: { pricing: "Preços", blog: "Blog", help: "Ajuda", events: "Eventos", download: "Baixar Accio Work" },
+    nav: {
+      pricing: "Preços",
+      blog: "Blog",
+      help: "Ajuda",
+      events: "Eventos",
+      download: "Baixar Accio Work",
+    },
     hero: {
       badge: "Anunciado agora • 28 de julho de 2026",
       title1: "Accio Work agora é grátis.",
@@ -522,16 +941,45 @@ const DICTS: Record<Lang, EventDict> = {
       ctaSecondary: "Ver planos",
       note: "macOS 11+. Apple Silicon e Intel. 42 MB.",
     },
-    stats: { users: "Usuários no mundo todo", launch: "Tempo médio para lançar uma loja", launchSuffix: " min", cheaper: "Mais barato que freelancers" },
+    stats: {
+      users: "Usuários no mundo todo",
+      launch: "Tempo médio para lançar uma loja",
+      launchSuffix: " min",
+      cheaper: "Mais barato que freelancers",
+    },
     features: {
       heading: "O que o plano grátis inclui",
       items: [
-        { icon: "🤖", title: "Agente de IA 24/7", desc: "Assistente completo com busca, análise e automação. Sem limite de tarefas." },
-        { icon: "🌐", title: "Automação de navegador", desc: "Abre sites, clica, extrai dados, preenche formulários. Sem código, sem Selenium." },
-        { icon: "🔌", title: "50+ integrações", desc: "Shopify, Gmail, Telegram, Slack, LinkedIn, conecte em um clique." },
-        { icon: "✍️", title: "Geração de conteúdo", desc: "Landings, fichas de produto, SEO. Pronto em minutos." },
-        { icon: "📈", title: "Market Scout", desc: "Análise de nichos, tendências e concorrentes. Dados do Alibaba.com e Jungle Scout." },
-        { icon: "👥", title: "Especialistas sob demanda", desc: "Sourcing Expert, Product Designer, Listing Copywriter, centavos, só quando precisar." },
+        {
+          icon: "🤖",
+          title: "Agente de IA 24/7",
+          desc: "Assistente completo com busca, análise e automação. Sem limite de tarefas.",
+        },
+        {
+          icon: "🌐",
+          title: "Automação de navegador",
+          desc: "Abre sites, clica, extrai dados, preenche formulários. Sem código, sem Selenium.",
+        },
+        {
+          icon: "🔌",
+          title: "50+ integrações",
+          desc: "Shopify, Gmail, Telegram, Slack, LinkedIn, conecte em um clique.",
+        },
+        {
+          icon: "✍️",
+          title: "Geração de conteúdo",
+          desc: "Landings, fichas de produto, SEO. Pronto em minutos.",
+        },
+        {
+          icon: "📈",
+          title: "Market Scout",
+          desc: "Análise de nichos, tendências e concorrentes. Dados do Alibaba.com e Jungle Scout.",
+        },
+        {
+          icon: "👥",
+          title: "Especialistas sob demanda",
+          desc: "Sourcing Expert, Product Designer, Listing Copywriter, centavos, só quando precisar.",
+        },
       ],
     },
     compare: {
@@ -568,15 +1016,35 @@ const DICTS: Record<Lang, EventDict> = {
       heading: "当下市场正在发生的变化",
       sub: "今年真实冲击跨境卖家的变化。发生了什么，以及该怎么做。",
       items: [
-        { tag: "关税 · 2026", title: "de minimis 门槛已取消", body: "美国对低价包裹的免税已结束，欧盟对低值商品加征费用。现在每个包裹的核算方式不同，这会改变你的真实到岸成本。", cta: "重新计算到岸成本" },
-        { tag: "渠道 · 2026", title: "TikTok Shop 爆发，窗口关得很快", body: "平台成交额猛涨，但爆款几天就饱和。谁更快找到并上线，谁就吃到利润。", cta: "如何进入 TikTok Shop" },
-        { tag: "供应商 · 2026", title: "可靠供应商是头号痛点", body: "多数卖家把找到可靠供应商列为最大难题。一批货出问题，就吃掉你的利润和交期。", cta: "给供应商打分" },
+        {
+          tag: "关税 · 2026",
+          title: "de minimis 门槛已取消",
+          body: "美国对低价包裹的免税已结束，欧盟对低值商品加征费用。现在每个包裹的核算方式不同，这会改变你的真实到岸成本。",
+          cta: "重新计算到岸成本",
+        },
+        {
+          tag: "渠道 · 2026",
+          title: "TikTok Shop 爆发，窗口关得很快",
+          body: "平台成交额猛涨，但爆款几天就饱和。谁更快找到并上线，谁就吃到利润。",
+          cta: "如何进入 TikTok Shop",
+        },
+        {
+          tag: "供应商 · 2026",
+          title: "可靠供应商是头号痛点",
+          body: "多数卖家把找到可靠供应商列为最大难题。一批货出问题，就吃掉你的利润和交期。",
+          cta: "给供应商打分",
+        },
       ],
     },
     story: {
       heading: "在你身上可能是这样",
       who: "周五晚上：有想法，没时间",
-      p: ["开店总是一拖再拖：设计、供应商、SEO、商品页。是不是很熟悉？", "你只需描述任务：卖什么、面向哪个市场。", "Accio Work 帮你搭好底子：基于阿里实时数据找供应商，起草商品页和落地页，并提示关税与合规。", "之后你自己微调、投广告、处理订单。过去吃掉几周的开店琐事，一个晚上就能搞定。"],
+      p: [
+        "开店总是一拖再拖：设计、供应商、SEO、商品页。是不是很熟悉？",
+        "你只需描述任务：卖什么、面向哪个市场。",
+        "Accio Work 帮你搭好底子：基于阿里实时数据找供应商，起草商品页和落地页，并提示关税与合规。",
+        "之后你自己微调、投广告、处理订单。过去吃掉几周的开店琐事，一个晚上就能搞定。",
+      ],
       highlight: "开店琐事更少，做真正的生意的时间更多。",
       quote: "不必是设计师或开发者，也能上线开店。",
       videoCaption: "这是示意场景，并非保证。真实周期与销量取决于你的产品、市场和投入。",
@@ -585,19 +1053,49 @@ const DICTS: Record<Lang, EventDict> = {
     faq: {
       heading: "Perguntas frequentes",
       items: [
-        { q: "O plano grátis é para sempre ou uma promoção?", a: "Para sempre. Sem limite de tempo, sem upgrade forçado. Possível graças à infraestrutura da Alibaba." },
-        { q: "Quais são os limites do plano grátis?", a: "Agente de IA base e todas as integrações, ilimitados. Só especialistas sênior (Sourcing Expert, Product Designer etc.) são pagos, US$ 1-3 por tarefa." },
+        {
+          q: "O plano grátis é para sempre ou uma promoção?",
+          a: "Para sempre. Sem limite de tempo, sem upgrade forçado. Possível graças à infraestrutura da Alibaba.",
+        },
+        {
+          q: "Quais são os limites do plano grátis?",
+          a: "Agente de IA base e todas as integrações, ilimitados. Só especialistas sênior (Sourcing Expert, Product Designer etc.) são pagos, US$ 1-3 por tarefa.",
+        },
         { q: "Preciso de cartão para me cadastrar?", a: "Não. Cadastro instantâneo, sem cartão." },
-        { q: "Funciona mesmo sem programador?", a: "Sim. Tudo por texto. Sem código, sem Selenium, sem terminal." },
-        { q: "Como o Accio Work conecta com Shopify / Telegram / Gmail?", a: "OAuth embutido. Um clique e pronto. Sem API keys, sem docs." },
+        {
+          q: "Funciona mesmo sem programador?",
+          a: "Sim. Tudo por texto. Sem código, sem Selenium, sem terminal.",
+        },
+        {
+          q: "Como o Accio Work conecta com Shopify / Telegram / Gmail?",
+          a: "OAuth embutido. Um clique e pronto. Sem API keys, sem docs.",
+        },
       ],
     },
-    cta: { title: "Pronto para lançar um negócio em uma hora?", subtitle: "Baixe o Accio Work grátis. Sua primeira loja, hoje.", button: "Baixar grátis", note: "macOS 11+ • 42 MB • Sem cartão • Sem trial" },
-    footer: { pricing: "Preços", blog: "Blog", help: "Ajuda", privacy: "Privacidade", terms: "Termos", copyright: "© 2026 Accio. Na infraestrutura Alibaba." },
+    cta: {
+      title: "Pronto para lançar um negócio em uma hora?",
+      subtitle: "Baixe o Accio Work grátis. Sua primeira loja, hoje.",
+      button: "Baixar grátis",
+      note: "macOS 11+ • 42 MB • Sem cartão • Sem trial",
+    },
+    footer: {
+      pricing: "Preços",
+      blog: "Blog",
+      help: "Ajuda",
+      privacy: "Privacidade",
+      terms: "Termos",
+      copyright: "© 2026 Accio. Na infraestrutura Alibaba.",
+    },
   },
   zh: {
     langLabel: "中文",
-    nav: { pricing: "价格", blog: "博客", help: "帮助中心", events: "活动", download: "下载 Accio Work" },
+    nav: {
+      pricing: "价格",
+      blog: "博客",
+      help: "帮助中心",
+      events: "活动",
+      download: "下载 Accio Work",
+    },
     hero: {
       badge: "刚刚发布 • 2026 年 7 月 28 日",
       title1: "Accio Work 现已免费。",
@@ -607,16 +1105,41 @@ const DICTS: Record<Lang, EventDict> = {
       ctaSecondary: "查看方案",
       note: "macOS 11+。Apple Silicon 和 Intel。42 MB。",
     },
-    stats: { users: "全球用户", launch: "开店平均耗时", launchSuffix: " 分钟", cheaper: "比自由职业者便宜" },
+    stats: {
+      users: "全球用户",
+      launch: "开店平均耗时",
+      launchSuffix: " 分钟",
+      cheaper: "比自由职业者便宜",
+    },
     features: {
       heading: "免费方案包含什么",
       items: [
-        { icon: "🤖", title: "全天候 AI 助手", desc: "具备搜索、分析和自动化能力的完整助手。任务不限量。" },
-        { icon: "🌐", title: "浏览器自动化", desc: "打开网站、点击、抓取数据、填写表单。无需代码,无需 Selenium。" },
-        { icon: "🔌", title: "50+ 集成", desc: "Shopify、Gmail、Telegram、Slack、LinkedIn ， 一键连接。" },
+        {
+          icon: "🤖",
+          title: "全天候 AI 助手",
+          desc: "具备搜索、分析和自动化能力的完整助手。任务不限量。",
+        },
+        {
+          icon: "🌐",
+          title: "浏览器自动化",
+          desc: "打开网站、点击、抓取数据、填写表单。无需代码,无需 Selenium。",
+        },
+        {
+          icon: "🔌",
+          title: "50+ 集成",
+          desc: "Shopify、Gmail、Telegram、Slack、LinkedIn ， 一键连接。",
+        },
         { icon: "✍️", title: "内容生成", desc: "落地页、商品卡、SEO 文案。几分钟内完成。" },
-        { icon: "📈", title: "Market Scout", desc: "细分市场、趋势和竞品分析。数据来自 Alibaba.com 和 Jungle Scout。" },
-        { icon: "👥", title: "按需专家", desc: "Sourcing Expert、Product Designer、Listing Copywriter ， 按次几美分,用时即调。" },
+        {
+          icon: "📈",
+          title: "Market Scout",
+          desc: "细分市场、趋势和竞品分析。数据来自 Alibaba.com 和 Jungle Scout。",
+        },
+        {
+          icon: "👥",
+          title: "按需专家",
+          desc: "Sourcing Expert、Product Designer、Listing Copywriter ， 按次几美分,用时即调。",
+        },
       ],
     },
     compare: {
@@ -653,36 +1176,87 @@ const DICTS: Record<Lang, EventDict> = {
       heading: "O que está mudando no mercado agora",
       sub: "Mudanças reais que atingem vendedores cross-border neste ano. O que aconteceu e o que fazer.",
       items: [
-        { tag: "Alfândega · 2026", title: "O limite de minimis acabou", body: "A isenção de impostos para pacotes baratos aos EUA terminou, e a UE está somando taxas a bens de baixo valor. Cada pacote é calculado de forma diferente agora, e isso muda seu custo real a destino.", cta: "Recalcular o custo a destino" },
-        { tag: "Canais · 2026", title: "TikTok Shop bombando, as janelas fecham rápido", body: "O volume do marketplace sobe forte, mas produtos campeões saturam em dias. Quem acha e lança mais rápido fica com a margem.", cta: "Como entrar no TikTok Shop" },
-        { tag: "Fornecedores · 2026", title: "Fornecedor confiável é a dor número um", body: "A maioria dos vendedores aponta fornecedores confiáveis como o maior desafio. Um lote ruim consome sua margem e seu prazo.", cta: "Avaliar um fornecedor" },
+        {
+          tag: "Alfândega · 2026",
+          title: "O limite de minimis acabou",
+          body: "A isenção de impostos para pacotes baratos aos EUA terminou, e a UE está somando taxas a bens de baixo valor. Cada pacote é calculado de forma diferente agora, e isso muda seu custo real a destino.",
+          cta: "Recalcular o custo a destino",
+        },
+        {
+          tag: "Canais · 2026",
+          title: "TikTok Shop bombando, as janelas fecham rápido",
+          body: "O volume do marketplace sobe forte, mas produtos campeões saturam em dias. Quem acha e lança mais rápido fica com a margem.",
+          cta: "Como entrar no TikTok Shop",
+        },
+        {
+          tag: "Fornecedores · 2026",
+          title: "Fornecedor confiável é a dor número um",
+          body: "A maioria dos vendedores aponta fornecedores confiáveis como o maior desafio. Um lote ruim consome sua margem e seu prazo.",
+          cta: "Avaliar um fornecedor",
+        },
       ],
     },
     story: {
       heading: "Como isso poderia ser para você",
       who: "Sexta à noite: você tem a ideia, não o tempo",
-      p: ["O lançamento da loja vive adiando: design, fornecedores, SEO, anúncios de produto. Soa familiar?", "Você só descreve a tarefa: o que vende e para qual mercado.", "O Accio Work ajuda a montar a base: encontra fornecedores em dados ao vivo da Alibaba, prepara anúncios e landing e sinaliza impostos e compliance.", "Depois você ajusta, sobe anúncios e cuida dos pedidos. A rotina de arranque que comia semanas cabe em uma noite."],
+      p: [
+        "O lançamento da loja vive adiando: design, fornecedores, SEO, anúncios de produto. Soa familiar?",
+        "Você só descreve a tarefa: o que vende e para qual mercado.",
+        "O Accio Work ajuda a montar a base: encontra fornecedores em dados ao vivo da Alibaba, prepara anúncios e landing e sinaliza impostos e compliance.",
+        "Depois você ajusta, sobe anúncios e cuida dos pedidos. A rotina de arranque que comia semanas cabe em uma noite.",
+      ],
       highlight: "Menos trabalho de arranque. Mais tempo para o negócio de verdade.",
       quote: "Você não precisa ser designer nem programador para entrar online.",
-      videoCaption: "Cenário ilustrativo, não uma garantia. Prazos e vendas reais dependem do seu produto, mercado e esforço.",
+      videoCaption:
+        "Cenário ilustrativo, não uma garantia. Prazos e vendas reais dependem do seu produto, mercado e esforço.",
       steps: ["Descreva a tarefa", "A base da loja toma forma", "Ajuste e lance"],
     },
     faq: {
       heading: "常见问题",
       items: [
-        { q: "免费方案是永久的,还是短期活动?", a: "永久。没有时间限制,不会强制升级。依托 Alibaba 基础设施才能做到。" },
-        { q: "免费方案有什么限制?", a: "基础 AI 助手和全部集成 ， 无限使用。仅高级专家(Sourcing Expert、Product Designer 等)按次付费,每次 1-3 美元。" },
+        {
+          q: "免费方案是永久的,还是短期活动?",
+          a: "永久。没有时间限制,不会强制升级。依托 Alibaba 基础设施才能做到。",
+        },
+        {
+          q: "免费方案有什么限制?",
+          a: "基础 AI 助手和全部集成 ， 无限使用。仅高级专家(Sourcing Expert、Product Designer 等)按次付费,每次 1-3 美元。",
+        },
         { q: "注册需要信用卡吗?", a: "不需要。即时注册,无需信用卡。" },
-        { q: "真的可以不用程序员?", a: "可以。全部通过文本操作。无需代码、无需 Selenium、无需命令行。" },
-        { q: "Accio Work 如何连接 Shopify / Telegram / Gmail?", a: "内置 OAuth。一键完成。无需 API Key,无需读文档。" },
+        {
+          q: "真的可以不用程序员?",
+          a: "可以。全部通过文本操作。无需代码、无需 Selenium、无需命令行。",
+        },
+        {
+          q: "Accio Work 如何连接 Shopify / Telegram / Gmail?",
+          a: "内置 OAuth。一键完成。无需 API Key,无需读文档。",
+        },
       ],
     },
-    cta: { title: "准备好在一小时内启动业务了吗?", subtitle: "免费下载 Accio Work。今天就开出第一家店。", button: "免费下载", note: "macOS 11+ • 42 MB • 无需信用卡 • 无试用限制" },
-    footer: { pricing: "价格", blog: "博客", help: "帮助中心", privacy: "隐私", terms: "条款", copyright: "© 2026 Accio。基于 Alibaba 基础设施。" },
+    cta: {
+      title: "准备好在一小时内启动业务了吗?",
+      subtitle: "免费下载 Accio Work。今天就开出第一家店。",
+      button: "免费下载",
+      note: "macOS 11+ • 42 MB • 无需信用卡 • 无试用限制",
+    },
+    footer: {
+      pricing: "价格",
+      blog: "博客",
+      help: "帮助中心",
+      privacy: "隐私",
+      terms: "条款",
+      copyright: "© 2026 Accio。基于 Alibaba 基础设施。",
+    },
   },
   hi: {
     langLabel: "हिन्दी",
-    nav: { pricing: "मूल्य", blog: "ब्लॉग", help: "सहायता", events: "इवेंट्स", download: "Accio Work डाउनलोड करें" },
+    nav: {
+      pricing: "मूल्य",
+      blog: "ब्लॉग",
+      help: "सहायता",
+      events: "इवेंट्स",
+      download: "Accio Work डाउनलोड करें",
+    },
     hero: {
       badge: "अभी घोषित • 28 जुलाई 2026",
       title1: "Accio Work अब मुफ़्त है।",
@@ -692,16 +1266,45 @@ const DICTS: Record<Lang, EventDict> = {
       ctaSecondary: "प्लान देखें",
       note: "macOS 11+। Apple Silicon और Intel। 42 MB।",
     },
-    stats: { users: "दुनिया भर में उपयोगकर्ता", launch: "स्टोर लॉन्च करने का औसत समय", launchSuffix: " मिनट", cheaper: "फ्रीलांसर्स से सस्ता" },
+    stats: {
+      users: "दुनिया भर में उपयोगकर्ता",
+      launch: "स्टोर लॉन्च करने का औसत समय",
+      launchSuffix: " मिनट",
+      cheaper: "फ्रीलांसर्स से सस्ता",
+    },
     features: {
       heading: "मुफ़्त प्लान में क्या शामिल है",
       items: [
-        { icon: "🤖", title: "24/7 AI एजेंट", desc: "सर्च, विश्लेषण और ऑटोमेशन वाला पूरा असिस्टेंट। टास्क की कोई सीमा नहीं।" },
-        { icon: "🌐", title: "ब्राउज़र ऑटोमेशन", desc: "साइट खोलता है, क्लिक करता है, डेटा निकालता है, फ़ॉर्म भरता है। न कोड, न Selenium।" },
-        { icon: "🔌", title: "50+ इंटीग्रेशन", desc: "Shopify, Gmail, Telegram, Slack, LinkedIn, एक क्लिक में जुड़ जाते हैं।" },
-        { icon: "✍️", title: "कंटेंट जनरेशन", desc: "लैंडिंग पेज, प्रोडक्ट कार्ड, SEO कॉपी। मिनटों में तैयार।" },
-        { icon: "📈", title: "Market Scout", desc: "निच, ट्रेंड और प्रतिस्पर्धियों का विश्लेषण। Alibaba.com और Jungle Scout से डेटा।" },
-        { icon: "👥", title: "ऑन-डिमांड विशेषज्ञ", desc: "Sourcing Expert, Product Designer, Listing Copywriter, कुछ सेंट में, ज़रूरत पर।" },
+        {
+          icon: "🤖",
+          title: "24/7 AI एजेंट",
+          desc: "सर्च, विश्लेषण और ऑटोमेशन वाला पूरा असिस्टेंट। टास्क की कोई सीमा नहीं।",
+        },
+        {
+          icon: "🌐",
+          title: "ब्राउज़र ऑटोमेशन",
+          desc: "साइट खोलता है, क्लिक करता है, डेटा निकालता है, फ़ॉर्म भरता है। न कोड, न Selenium।",
+        },
+        {
+          icon: "🔌",
+          title: "50+ इंटीग्रेशन",
+          desc: "Shopify, Gmail, Telegram, Slack, LinkedIn, एक क्लिक में जुड़ जाते हैं।",
+        },
+        {
+          icon: "✍️",
+          title: "कंटेंट जनरेशन",
+          desc: "लैंडिंग पेज, प्रोडक्ट कार्ड, SEO कॉपी। मिनटों में तैयार।",
+        },
+        {
+          icon: "📈",
+          title: "Market Scout",
+          desc: "निच, ट्रेंड और प्रतिस्पर्धियों का विश्लेषण। Alibaba.com और Jungle Scout से डेटा।",
+        },
+        {
+          icon: "👥",
+          title: "ऑन-डिमांड विशेषज्ञ",
+          desc: "Sourcing Expert, Product Designer, Listing Copywriter, कुछ सेंट में, ज़रूरत पर।",
+        },
       ],
     },
     compare: {
@@ -738,36 +1341,87 @@ const DICTS: Record<Lang, EventDict> = {
       heading: "बाज़ार में अभी क्या बदल रहा है",
       sub: "इस साल क्रॉस-बॉर्डर विक्रेताओं पर असर डालने वाले असली बदलाव। क्या हुआ और क्या करें।",
       items: [
-        { tag: "कस्टम · 2026", title: "de minimis सीमा खत्म", body: "अमेरिका में सस्ते पार्सल पर शुल्क-छूट समाप्त, और EU कम-मूल्य वस्तुओं पर शुल्क जोड़ रहा है। अब हर पार्सल की गणना अलग होती है, जिससे आपकी असली लैंडेड कीमत बदल जाती है।", cta: "लैंडेड कॉस्ट फिर से जोड़ें" },
-        { tag: "चैनल · 2026", title: "TikTok Shop उछाल पर, मौके जल्दी बंद", body: "मार्केटप्लेस वॉल्यूम तेज़ी से बढ़ रहा है, पर विनिंग प्रोडक्ट दिनों में संतृप्त हो जाते हैं। जो तेज़ ढूँढता और लॉन्च करता है, मार्जिन वही रखता है।", cta: "TikTok Shop में कैसे उतरें" },
-        { tag: "सप्लायर · 2026", title: "भरोसेमंद सप्लायर, पहला दर्द", body: "ज़्यादातर विक्रेता भरोसेमंद सप्लायर को सबसे बड़ी चुनौती बताते हैं। एक खराब बैच आपका मार्जिन और समय दोनों खा जाता है।", cta: "सप्लायर परखें" },
+        {
+          tag: "कस्टम · 2026",
+          title: "de minimis सीमा खत्म",
+          body: "अमेरिका में सस्ते पार्सल पर शुल्क-छूट समाप्त, और EU कम-मूल्य वस्तुओं पर शुल्क जोड़ रहा है। अब हर पार्सल की गणना अलग होती है, जिससे आपकी असली लैंडेड कीमत बदल जाती है।",
+          cta: "लैंडेड कॉस्ट फिर से जोड़ें",
+        },
+        {
+          tag: "चैनल · 2026",
+          title: "TikTok Shop उछाल पर, मौके जल्दी बंद",
+          body: "मार्केटप्लेस वॉल्यूम तेज़ी से बढ़ रहा है, पर विनिंग प्रोडक्ट दिनों में संतृप्त हो जाते हैं। जो तेज़ ढूँढता और लॉन्च करता है, मार्जिन वही रखता है।",
+          cta: "TikTok Shop में कैसे उतरें",
+        },
+        {
+          tag: "सप्लायर · 2026",
+          title: "भरोसेमंद सप्लायर, पहला दर्द",
+          body: "ज़्यादातर विक्रेता भरोसेमंद सप्लायर को सबसे बड़ी चुनौती बताते हैं। एक खराब बैच आपका मार्जिन और समय दोनों खा जाता है।",
+          cta: "सप्लायर परखें",
+        },
       ],
     },
     story: {
       heading: "आपके लिए यह ऐसा दिख सकता है",
       who: "शुक्रवार रात: आइडिया है, समय नहीं",
-      p: ["स्टोर लॉन्च टलता ही रहता है: डिज़ाइन, सप्लायर, SEO, प्रोडक्ट कार्ड। जाना-पहचाना लगता है?", "आप बस काम बताते हैं: क्या बेचते हैं और किस बाज़ार में।", "Accio Work आधार तैयार करने में मदद करता है: अलीबाबा के लाइव डेटा पर सप्लायर ढूँढता है, प्रोडक्ट कार्ड और लैंडिंग बनाता है, शुल्क और कंप्लायंस पर सचेत करता है।", "फिर आप खुद ठीक करते हैं, विज्ञापन चलाते हैं और ऑर्डर संभालते हैं। शुरुआत की जो रूटीन हफ्ते खा जाती थी, एक शाम में सिमट जाती है।"],
+      p: [
+        "स्टोर लॉन्च टलता ही रहता है: डिज़ाइन, सप्लायर, SEO, प्रोडक्ट कार्ड। जाना-पहचाना लगता है?",
+        "आप बस काम बताते हैं: क्या बेचते हैं और किस बाज़ार में।",
+        "Accio Work आधार तैयार करने में मदद करता है: अलीबाबा के लाइव डेटा पर सप्लायर ढूँढता है, प्रोडक्ट कार्ड और लैंडिंग बनाता है, शुल्क और कंप्लायंस पर सचेत करता है।",
+        "फिर आप खुद ठीक करते हैं, विज्ञापन चलाते हैं और ऑर्डर संभालते हैं। शुरुआत की जो रूटीन हफ्ते खा जाती थी, एक शाम में सिमट जाती है।",
+      ],
       highlight: "शुरुआत की मेहनत कम। असली बिज़नेस के लिए समय ज़्यादा।",
       quote: "ऑनलाइन आने के लिए डिज़ाइनर या डेवलपर होना ज़रूरी नहीं।",
-      videoCaption: "यह उदाहरण-स्वरूप परिदृश्य है, गारंटी नहीं। असली समय और बिक्री आपके उत्पाद, बाज़ार और मेहनत पर निर्भर हैं।",
+      videoCaption:
+        "यह उदाहरण-स्वरूप परिदृश्य है, गारंटी नहीं। असली समय और बिक्री आपके उत्पाद, बाज़ार और मेहनत पर निर्भर हैं।",
       steps: ["काम बताएं", "स्टोर का आधार बनता है", "ठीक करें और लॉन्च करें"],
     },
     faq: {
       heading: "अक्सर पूछे जाने वाले प्रश्न",
       items: [
-        { q: "क्या मुफ़्त प्लान हमेशा के लिए है या प्रोमो?", a: "हमेशा के लिए। कोई समय सीमा नहीं, कोई ज़बरदस्ती अपग्रेड नहीं। Alibaba इंफ्रास्ट्रक्चर की वजह से मुमकिन।" },
-        { q: "मुफ़्त प्लान की सीमाएँ क्या हैं?", a: "बेसिक AI एजेंट और सभी इंटीग्रेशन, असीमित। सिर्फ़ सीनियर विशेषज्ञ (Sourcing Expert, Product Designer आदि) पेड हैं, $1-3 प्रति टास्क।" },
+        {
+          q: "क्या मुफ़्त प्लान हमेशा के लिए है या प्रोमो?",
+          a: "हमेशा के लिए। कोई समय सीमा नहीं, कोई ज़बरदस्ती अपग्रेड नहीं। Alibaba इंफ्रास्ट्रक्चर की वजह से मुमकिन।",
+        },
+        {
+          q: "मुफ़्त प्लान की सीमाएँ क्या हैं?",
+          a: "बेसिक AI एजेंट और सभी इंटीग्रेशन, असीमित। सिर्फ़ सीनियर विशेषज्ञ (Sourcing Expert, Product Designer आदि) पेड हैं, $1-3 प्रति टास्क।",
+        },
         { q: "क्या साइन-अप के लिए कार्ड चाहिए?", a: "नहीं। तुरंत साइन-अप, कार्ड की ज़रूरत नहीं।" },
-        { q: "क्या यह डेवलपर के बिना सच में काम करता है?", a: "हाँ। सब कुछ टेक्स्ट से। न कोड, न Selenium, न कमांड लाइन।" },
-        { q: "Accio Work Shopify / Telegram / Gmail से कैसे जुड़ता है?", a: "बिल्ट-इन OAuth। एक क्लिक और हो गया। न API की, न डॉक्स।" },
+        {
+          q: "क्या यह डेवलपर के बिना सच में काम करता है?",
+          a: "हाँ। सब कुछ टेक्स्ट से। न कोड, न Selenium, न कमांड लाइन।",
+        },
+        {
+          q: "Accio Work Shopify / Telegram / Gmail से कैसे जुड़ता है?",
+          a: "बिल्ट-इन OAuth। एक क्लिक और हो गया। न API की, न डॉक्स।",
+        },
       ],
     },
-    cta: { title: "एक घंटे में बिज़नेस लॉन्च करने को तैयार?", subtitle: "Accio Work मुफ़्त डाउनलोड करें। पहला स्टोर, आज।", button: "मुफ़्त डाउनलोड करें", note: "macOS 11+ • 42 MB • कार्ड नहीं • ट्रायल नहीं" },
-    footer: { pricing: "मूल्य", blog: "ब्लॉग", help: "सहायता", privacy: "गोपनीयता", terms: "शर्तें", copyright: "© 2026 Accio। Alibaba इंफ्रास्ट्रक्चर पर।" },
+    cta: {
+      title: "एक घंटे में बिज़नेस लॉन्च करने को तैयार?",
+      subtitle: "Accio Work मुफ़्त डाउनलोड करें। पहला स्टोर, आज।",
+      button: "मुफ़्त डाउनलोड करें",
+      note: "macOS 11+ • 42 MB • कार्ड नहीं • ट्रायल नहीं",
+    },
+    footer: {
+      pricing: "मूल्य",
+      blog: "ब्लॉग",
+      help: "सहायता",
+      privacy: "गोपनीयता",
+      terms: "शर्तें",
+      copyright: "© 2026 Accio। Alibaba इंफ्रास्ट्रक्चर पर।",
+    },
   },
   fr: {
     langLabel: "Français",
-    nav: { pricing: "Tarifs", blog: "Blog", help: "Aide", events: "Événements", download: "Télécharger Accio Work" },
+    nav: {
+      pricing: "Tarifs",
+      blog: "Blog",
+      help: "Aide",
+      events: "Événements",
+      download: "Télécharger Accio Work",
+    },
     hero: {
       badge: "Annoncé le 28 juillet 2026",
       title1: "Accio Work devient gratuit.",
@@ -777,16 +1431,45 @@ const DICTS: Record<Lang, EventDict> = {
       ctaSecondary: "Voir les offres",
       note: "macOS 11+. Apple Silicon et Intel. 42 Mo.",
     },
-    stats: { users: "utilisateurs dans le monde", launch: "temps moyen pour lancer une boutique", launchSuffix: " minutes", cheaper: "moins cher que des freelances" },
+    stats: {
+      users: "utilisateurs dans le monde",
+      launch: "temps moyen pour lancer une boutique",
+      launchSuffix: " minutes",
+      cheaper: "moins cher que des freelances",
+    },
     features: {
       heading: "Ce que contient l'offre gratuite",
       items: [
-        { icon: "🤖", title: "Agent IA 24h/24", desc: "Un assistant complet : recherche, analyse, automatisation. Aucune limite de tâches." },
-        { icon: "🌐", title: "Automatisation du navigateur", desc: "Il ouvre des sites, clique, extrait des données, remplit des formulaires. Sans code, sans Selenium." },
-        { icon: "🔌", title: "50+ intégrations", desc: "Shopify, Gmail, Telegram, Slack, LinkedIn : connectés en un clic." },
-        { icon: "✍️", title: "Génération de contenu", desc: "Landing pages, fiches produits, textes SEO. Prêts en quelques minutes." },
-        { icon: "📈", title: "Market Scout", desc: "Analyse de niches, tendances et concurrents. Données d'Alibaba.com et Jungle Scout." },
-        { icon: "👥", title: "Experts à la demande", desc: "Sourcing Expert, Product Designer, Listing Copywriter : quelques centimes, quand vous en avez besoin." },
+        {
+          icon: "🤖",
+          title: "Agent IA 24h/24",
+          desc: "Un assistant complet : recherche, analyse, automatisation. Aucune limite de tâches.",
+        },
+        {
+          icon: "🌐",
+          title: "Automatisation du navigateur",
+          desc: "Il ouvre des sites, clique, extrait des données, remplit des formulaires. Sans code, sans Selenium.",
+        },
+        {
+          icon: "🔌",
+          title: "50+ intégrations",
+          desc: "Shopify, Gmail, Telegram, Slack, LinkedIn : connectés en un clic.",
+        },
+        {
+          icon: "✍️",
+          title: "Génération de contenu",
+          desc: "Landing pages, fiches produits, textes SEO. Prêts en quelques minutes.",
+        },
+        {
+          icon: "📈",
+          title: "Market Scout",
+          desc: "Analyse de niches, tendances et concurrents. Données d'Alibaba.com et Jungle Scout.",
+        },
+        {
+          icon: "👥",
+          title: "Experts à la demande",
+          desc: "Sourcing Expert, Product Designer, Listing Copywriter : quelques centimes, quand vous en avez besoin.",
+        },
       ],
     },
     compare: {
@@ -823,35 +1506,82 @@ const DICTS: Record<Lang, EventDict> = {
       heading: "Ce qui bouge sur le marché en ce moment",
       sub: "Des changements réels qui frappent les vendeurs cross-border cette année. Ce qui s'est passé et quoi faire.",
       items: [
-        { tag: "Douane · 2026", title: "Le seuil de minimis a disparu", body: "L'exonération de droits pour les petits colis vers les USA est terminée, et l'UE ajoute des frais sur les biens de faible valeur. Chaque colis se calcule différemment désormais, ce qui change votre coût rendu réel.", cta: "Recalculer le coût rendu" },
-        { tag: "Canaux · 2026", title: "TikTok Shop explose, les fenêtres se ferment vite", body: "Le volume de la marketplace grimpe fort, mais les produits gagnants saturent en quelques jours. Qui trouve et lance plus vite garde la marge.", cta: "Comment se lancer sur TikTok Shop" },
-        { tag: "Fournisseurs · 2026", title: "Un fournisseur fiable, la douleur numéro un", body: "La plupart des vendeurs citent les fournisseurs fiables comme leur plus grand défi. Un mauvais lot dévore votre marge et vos délais.", cta: "Évaluer un fournisseur" },
+        {
+          tag: "Douane · 2026",
+          title: "Le seuil de minimis a disparu",
+          body: "L'exonération de droits pour les petits colis vers les USA est terminée, et l'UE ajoute des frais sur les biens de faible valeur. Chaque colis se calcule différemment désormais, ce qui change votre coût rendu réel.",
+          cta: "Recalculer le coût rendu",
+        },
+        {
+          tag: "Canaux · 2026",
+          title: "TikTok Shop explose, les fenêtres se ferment vite",
+          body: "Le volume de la marketplace grimpe fort, mais les produits gagnants saturent en quelques jours. Qui trouve et lance plus vite garde la marge.",
+          cta: "Comment se lancer sur TikTok Shop",
+        },
+        {
+          tag: "Fournisseurs · 2026",
+          title: "Un fournisseur fiable, la douleur numéro un",
+          body: "La plupart des vendeurs citent les fournisseurs fiables comme leur plus grand défi. Un mauvais lot dévore votre marge et vos délais.",
+          cta: "Évaluer un fournisseur",
+        },
       ],
     },
     story: {
       heading: "À quoi cela pourrait ressembler pour vous",
       who: "Vendredi soir : vous avez l'idée, pas le temps",
-      p: ["Le lancement de la boutique est sans cesse repoussé : design, fournisseurs, SEO, fiches produit. Ça vous parle ?", "Vous décrivez simplement la tâche : ce que vous vendez et sur quel marché.", "Accio Work aide à monter la base : il trouve des fournisseurs sur données Alibaba en direct, rédige fiches et landing et signale droits et conformité.", "Ensuite vous affinez, lancez les pubs et gérez les commandes. La routine de démarrage qui dévorait des semaines tient en une soirée."],
+      p: [
+        "Le lancement de la boutique est sans cesse repoussé : design, fournisseurs, SEO, fiches produit. Ça vous parle ?",
+        "Vous décrivez simplement la tâche : ce que vous vendez et sur quel marché.",
+        "Accio Work aide à monter la base : il trouve des fournisseurs sur données Alibaba en direct, rédige fiches et landing et signale droits et conformité.",
+        "Ensuite vous affinez, lancez les pubs et gérez les commandes. La routine de démarrage qui dévorait des semaines tient en une soirée.",
+      ],
       highlight: "Moins de corvées de démarrage. Plus de temps pour le vrai business.",
       quote: "Pas besoin d'être designer ou développeur pour se lancer en ligne.",
-      videoCaption: "Scénario illustratif, pas une garantie. Les délais et ventes réels dépendent de votre produit, marché et efforts.",
+      videoCaption:
+        "Scénario illustratif, pas une garantie. Les délais et ventes réels dépendent de votre produit, marché et efforts.",
       steps: ["Décrivez la tâche", "La base de la boutique se met en place", "Affinez et lancez"],
     },
     faq: {
       heading: "Questions fréquentes",
       items: [
-        { q: "L'offre gratuite est-elle permanente ou promotionnelle ?", a: "Permanente. Pas de date limite, pas d'upgrade forcé. C'est possible grâce à l'infrastructure Alibaba." },
-        { q: "Quelles sont les limites de l'offre gratuite ?", a: "L'agent IA de base et toutes les intégrations sont illimités. Seuls les experts seniors (Sourcing Expert, Product Designer, etc.) sont payants, entre 1 et 3 $ par tâche." },
-        { q: "Faut-il une carte bancaire pour s'inscrire ?", a: "Non. Inscription immédiate, aucune carte demandée." },
-        { q: "Est-ce que ça marche vraiment sans développeur ?", a: "Oui. Tout passe par du texte. Pas de code, pas de Selenium, pas de ligne de commande." },
-        { q: "Comment Accio Work se connecte-t-il à Shopify, Telegram ou Gmail ?", a: "Via OAuth intégré. Un clic et c'est fait. Pas de clé API, pas de documentation à lire." },
+        {
+          q: "L'offre gratuite est-elle permanente ou promotionnelle ?",
+          a: "Permanente. Pas de date limite, pas d'upgrade forcé. C'est possible grâce à l'infrastructure Alibaba.",
+        },
+        {
+          q: "Quelles sont les limites de l'offre gratuite ?",
+          a: "L'agent IA de base et toutes les intégrations sont illimités. Seuls les experts seniors (Sourcing Expert, Product Designer, etc.) sont payants, entre 1 et 3 $ par tâche.",
+        },
+        {
+          q: "Faut-il une carte bancaire pour s'inscrire ?",
+          a: "Non. Inscription immédiate, aucune carte demandée.",
+        },
+        {
+          q: "Est-ce que ça marche vraiment sans développeur ?",
+          a: "Oui. Tout passe par du texte. Pas de code, pas de Selenium, pas de ligne de commande.",
+        },
+        {
+          q: "Comment Accio Work se connecte-t-il à Shopify, Telegram ou Gmail ?",
+          a: "Via OAuth intégré. Un clic et c'est fait. Pas de clé API, pas de documentation à lire.",
+        },
       ],
     },
-    cta: { title: "Prêt à lancer votre business en une heure ?", subtitle: "Téléchargez Accio Work gratuitement. Première boutique dès aujourd'hui.", button: "Télécharger gratuitement", note: "macOS 11+ • 42 Mo • sans carte • sans essai" },
-    footer: { pricing: "Tarifs", blog: "Blog", help: "Aide", privacy: "Confidentialité", terms: "Conditions", copyright: "© 2026 Accio. Sur l'infrastructure Alibaba." },
+    cta: {
+      title: "Prêt à lancer votre business en une heure ?",
+      subtitle: "Téléchargez Accio Work gratuitement. Première boutique dès aujourd'hui.",
+      button: "Télécharger gratuitement",
+      note: "macOS 11+ • 42 Mo • sans carte • sans essai",
+    },
+    footer: {
+      pricing: "Tarifs",
+      blog: "Blog",
+      help: "Aide",
+      privacy: "Confidentialité",
+      terms: "Conditions",
+      copyright: "© 2026 Accio. Sur l'infrastructure Alibaba.",
+    },
   },
-};
-
+});
 
 /* ---------- Path helpers ---------- */
 const langPrefix = (lang: Lang) => (lang === "en" ? "" : `/${lang}`);
@@ -865,9 +1595,17 @@ function useReveal<T extends HTMLElement>() {
   const [shown, setShown] = useState(false);
   useEffect(() => {
     if (!ref.current || shown) return;
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((e) => { if (e.isIntersecting) { setShown(true); io.disconnect(); } });
-    }, { threshold: 0.15 });
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            setShown(true);
+            io.disconnect();
+          }
+        });
+      },
+      { threshold: 0.15 },
+    );
     io.observe(ref.current);
     return () => io.disconnect();
   }, [shown]);
@@ -877,34 +1615,51 @@ function useReveal<T extends HTMLElement>() {
 function Reveal({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   const { ref, shown } = useReveal<HTMLDivElement>();
   return (
-    <div ref={ref} style={{ transitionDelay: `${delay}ms` }} className={`transition-all duration-700 ease-out ${shown ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
+    <div
+      ref={ref}
+      style={{ transitionDelay: `${delay}ms` }}
+      className={`transition-all duration-700 ease-out ${shown ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+    >
       {children}
     </div>
   );
 }
 
 /* ---------- Counter ---------- */
-function Counter({ to, suffix = "", duration = 2000, locale }: { to: number; suffix?: string; duration?: number; locale: string }) {
+function Counter({
+  to,
+  suffix = "",
+  duration = 2000,
+  locale,
+}: {
+  to: number;
+  suffix?: string;
+  duration?: number;
+  locale: string;
+}) {
   const ref = useRef<HTMLSpanElement | null>(null);
   const [val, setVal] = useState(0);
   const started = useRef(false);
   useEffect(() => {
     if (!ref.current) return;
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((e) => {
-        if (e.isIntersecting && !started.current) {
-          started.current = true;
-          const start = performance.now();
-          const step = (now: number) => {
-            const p = Math.min(1, (now - start) / duration);
-            const eased = 1 - Math.pow(1 - p, 3);
-            setVal(Math.floor(eased * to));
-            if (p < 1) requestAnimationFrame(step);
-          };
-          requestAnimationFrame(step);
-        }
-      });
-    }, { threshold: 0.4 });
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting && !started.current) {
+            started.current = true;
+            const start = performance.now();
+            const step = (now: number) => {
+              const p = Math.min(1, (now - start) / duration);
+              const eased = 1 - Math.pow(1 - p, 3);
+              setVal(Math.floor(eased * to));
+              if (p < 1) requestAnimationFrame(step);
+            };
+            requestAnimationFrame(step);
+          }
+        });
+      },
+      { threshold: 0.4 },
+    );
     io.observe(ref.current);
     return () => io.disconnect();
   }, [to, duration]);
@@ -913,8 +1668,12 @@ function Counter({ to, suffix = "", duration = 2000, locale }: { to: number; suf
       ? `${(val / 1_000_000).toFixed(val >= to ? 0 : 1)}M`
       : val.toLocaleString(locale);
   return (
-    <span ref={ref} className="bg-gradient-to-r from-[#34d399] to-[#5eead4] bg-clip-text text-transparent">
-      {formatted}{suffix}
+    <span
+      ref={ref}
+      className="bg-gradient-to-r from-[#34d399] to-[#5eead4] bg-clip-text text-transparent"
+    >
+      {formatted}
+      {suffix}
     </span>
   );
 }
@@ -940,8 +1699,16 @@ function BrandLogo({ size = 22 }: { size?: number }) {
 
 /* ---------- Language switcher ---------- */
 const LANG_NAMES: Record<Lang, string> = {
-  en: "English", ru: "Русский", de: "Deutsch", it: "Italiano",
-  es: "Español", pt: "Português", zh: "中文", hi: "हिन्दी", fr: "Français",
+  en: "English",
+  ru: "Русский",
+  de: "Deutsch",
+  it: "Italiano",
+  es: "Español",
+  pt: "Português",
+  zh: "中文",
+  hi: "हिन्दी",
+  fr: "Français",
+  ar: "العربية",
 };
 
 function LangSwitcher({ lang }: { lang: Lang }) {
@@ -965,7 +1732,7 @@ function LangSwitcher({ lang }: { lang: Lang }) {
         {LANG_NAMES[lang]} <span className="opacity-60">▾</span>
       </button>
       {open && (
-        <div className="absolute right-0 top-full z-50 mt-2 w-40 overflow-hidden rounded-xl border border-border bg-card shadow-lg">
+        <div className="absolute end-0 top-full z-50 mt-2 w-40 overflow-hidden rounded-xl border border-border bg-card shadow-lg">
           {langs.map((l) => (
             <a
               key={l}
@@ -996,11 +1763,18 @@ function Header({ lang, d }: { lang: Lang; d: EventDict }) {
           <BrandLogo size={22} />
         </a>
         <nav className="hidden items-center gap-8 text-[14px] font-medium text-foreground/80 md:flex">
-          <a href={`${homeHref(lang)}#pricing`} className="hover:text-foreground">{d.nav.pricing}</a>
-          <a href={blogHref(lang)} className="hover:text-foreground">{d.nav.blog}</a>
-          <a href={eventsHref(lang)} className="flex items-center gap-1 font-semibold text-foreground">
+          <a href={`${homeHref(lang)}#pricing`} className="hover:text-foreground">
+            {d.nav.pricing}
+          </a>
+          <a href={blogHref(lang)} className="hover:text-foreground">
+            {d.nav.blog}
+          </a>
+          <a
+            href={eventsHref(lang)}
+            className="flex items-center gap-1 font-semibold text-foreground"
+          >
             {d.nav.events} <span>🔥</span>
-            <span className="ml-1 h-1.5 w-1.5 rounded-full bg-gradient-to-r from-[#34d399] to-[#5eead4]" />
+            <span className="ms-1 h-1.5 w-1.5 rounded-full bg-gradient-to-r from-[#34d399] to-[#5eead4]" />
           </a>
         </nav>
         <div className="flex items-center gap-3 sm:gap-5">
@@ -1021,8 +1795,27 @@ function Header({ lang, d }: { lang: Lang; d: EventDict }) {
             onClick={() => setOpen((v) => !v)}
             className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-foreground/80 hover:bg-foreground/5 md:hidden"
           >
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-              {open ? <><line x1="6" y1="6" x2="18" y2="18" /><line x1="18" y1="6" x2="6" y2="18" /></> : <><line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="18" x2="21" y2="18" /></>}
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+            >
+              {open ? (
+                <>
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                </>
+              ) : (
+                <>
+                  <line x1="3" y1="6" x2="21" y2="6" />
+                  <line x1="3" y1="12" x2="21" y2="12" />
+                  <line x1="3" y1="18" x2="21" y2="18" />
+                </>
+              )}
             </svg>
           </button>
         </div>
@@ -1053,26 +1846,44 @@ function Header({ lang, d }: { lang: Lang; d: EventDict }) {
 function Hero({ lang, d }: { lang: Lang; d: EventDict }) {
   return (
     <section className="relative overflow-hidden bg-card pb-20 pt-20 sm:pb-28 sm:pt-28">
-      <div aria-hidden className="pointer-events-none absolute -right-32 -top-32 h-[480px] w-[480px] rounded-full opacity-40 blur-3xl" style={{ background: "radial-gradient(circle,#5eead433,transparent 70%)" }} />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -end-32 -top-32 h-[480px] w-[480px] rounded-full opacity-40 blur-3xl"
+        style={{ background: "radial-gradient(circle,#5eead433,transparent 70%)" }}
+      />
       <div className="relative mx-auto max-w-[900px] px-6 text-center">
         <Reveal>
-          <span className="inline-flex items-center gap-2 rounded-full bg-[#34d399]/10 px-4 py-1.5 text-[13px] font-semibold text-[#34d399]">{d.hero.badge}</span>
+          <span className="inline-flex items-center gap-2 rounded-full bg-[#34d399]/10 px-4 py-1.5 text-[13px] font-semibold text-[#34d399]">
+            {d.hero.badge}
+          </span>
         </Reveal>
         <Reveal delay={80}>
           <h1 className="mt-6 text-[40px] font-extrabold leading-[1.05] tracking-tight text-foreground sm:text-[56px] lg:text-[64px]">
             {d.hero.title1}{" "}
-            <span className="bg-gradient-to-r from-[#34d399] to-[#5eead4] bg-clip-text text-transparent">{d.hero.titleAccent}</span>
+            <span className="bg-gradient-to-r from-[#34d399] to-[#5eead4] bg-clip-text text-transparent">
+              {d.hero.titleAccent}
+            </span>
           </h1>
         </Reveal>
         <Reveal delay={140}>
-          <p className="mx-auto mt-6 max-w-[600px] text-[18px] leading-relaxed text-foreground/55 sm:text-[20px]">{d.hero.desc}</p>
+          <p className="mx-auto mt-6 max-w-[600px] text-[18px] leading-relaxed text-foreground/55 sm:text-[20px]">
+            {d.hero.desc}
+          </p>
         </Reveal>
         <Reveal delay={200}>
           <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center justify-center rounded-full bg-[#34d399] px-7 text-[15px] font-bold text-[#04120d] transition hover:brightness-110">
+            <a
+              href={REFERRAL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-12 items-center justify-center rounded-full bg-[#34d399] px-7 text-[15px] font-bold text-[#04120d] transition hover:brightness-110"
+            >
               {d.hero.ctaPrimary}
             </a>
-            <a href={`${homeHref(lang)}#pricing`} className="inline-flex h-12 items-center justify-center rounded-full border border-border px-7 text-[15px] font-semibold text-foreground transition hover:bg-foreground/5">
+            <a
+              href={`${homeHref(lang)}#pricing`}
+              className="inline-flex h-12 items-center justify-center rounded-full border border-border px-7 text-[15px] font-semibold text-foreground transition hover:bg-foreground/5"
+            >
               {d.hero.ctaSecondary}
             </a>
           </div>
@@ -1121,7 +1932,9 @@ function Features({ d }: { d: EventDict }) {
     <section className="bg-card py-20 sm:py-28">
       <div className="mx-auto max-w-[1200px] px-6">
         <Reveal>
-          <h2 className="text-center text-[32px] font-extrabold tracking-tight text-foreground sm:text-[44px]">{d.features.heading}</h2>
+          <h2 className="text-center text-[32px] font-extrabold tracking-tight text-foreground sm:text-[44px]">
+            {d.features.heading}
+          </h2>
         </Reveal>
         <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {d.features.items.map((f, i) => (
@@ -1140,7 +1953,7 @@ function Features({ d }: { d: EventDict }) {
                 </div>
                 <div className="p-8">
                   <h3 className="text-[18px] font-semibold text-foreground">{f.title}</h3>
-                <p className="mt-2 text-[15px] leading-relaxed text-foreground/55">{f.desc}</p>
+                  <p className="mt-2 text-[15px] leading-relaxed text-foreground/55">{f.desc}</p>
                 </div>
               </div>
             </Reveal>
@@ -1151,12 +1964,26 @@ function Features({ d }: { d: EventDict }) {
   );
 }
 
-function CompareTable({ title, bg, rows, totalCost, totalTime, d }: { title: string; bg: string; rows: [string, string, string][]; totalCost: string; totalTime: string; d: EventDict }) {
+function CompareTable({
+  title,
+  bg,
+  rows,
+  totalCost,
+  totalTime,
+  d,
+}: {
+  title: string;
+  bg: string;
+  rows: [string, string, string][];
+  totalCost: string;
+  totalTime: string;
+  d: EventDict;
+}) {
   return (
     <div className={`rounded-2xl p-6 sm:p-8 ${bg}`}>
       <h3 className="text-[20px] font-bold text-foreground">{title}</h3>
       <div className="mt-6 overflow-hidden rounded-xl bg-card">
-        <table className="w-full text-left text-[14px]">
+        <table className="w-full text-start text-[14px]">
           <thead className="text-[12px] uppercase tracking-wide text-foreground/55">
             <tr>
               <th className="px-4 py-3 font-semibold">{d.compare.colSpecialist}</th>
@@ -1189,27 +2016,51 @@ function Compare({ d }: { d: EventDict }) {
     <section className="bg-background py-20 sm:py-28">
       <div className="mx-auto max-w-[1200px] px-6">
         <Reveal>
-          <h2 className="text-center text-[32px] font-extrabold tracking-tight text-foreground sm:text-[44px]">{d.compare.heading}</h2>
+          <h2 className="text-center text-[32px] font-extrabold tracking-tight text-foreground sm:text-[44px]">
+            {d.compare.heading}
+          </h2>
         </Reveal>
         <div className="relative mt-14 grid grid-cols-1 gap-6 lg:grid-cols-2">
           <Reveal>
-            <CompareTable title={d.compare.without} bg="bg-red-500/10" rows={d.compare.withoutRows} totalCost={d.compare.withoutTotalCost} totalTime={d.compare.withoutTotalTime} d={d} />
+            <CompareTable
+              title={d.compare.without}
+              bg="bg-red-500/10"
+              rows={d.compare.withoutRows}
+              totalCost={d.compare.withoutTotalCost}
+              totalTime={d.compare.withoutTotalTime}
+              d={d}
+            />
           </Reveal>
-          <div className="pointer-events-none absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 lg:block">
-            <span className="flex h-12 w-12 items-center justify-center rounded-full border border-border bg-card text-[14px] font-bold text-foreground/55 shadow-sm">vs</span>
+          <div className="pointer-events-none absolute start-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 lg:block">
+            <span className="flex h-12 w-12 items-center justify-center rounded-full border border-border bg-card text-[14px] font-bold text-foreground/55 shadow-sm">
+              vs
+            </span>
           </div>
           <div className="flex items-center justify-center lg:hidden">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card text-[13px] font-bold text-foreground/55">vs</span>
+            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card text-[13px] font-bold text-foreground/55">
+              vs
+            </span>
           </div>
           <Reveal delay={100}>
-            <CompareTable title={d.compare.with} bg="bg-[#34d399]/10" rows={d.compare.withRows} totalCost={d.compare.withTotalCost} totalTime={d.compare.withTotalTime} d={d} />
+            <CompareTable
+              title={d.compare.with}
+              bg="bg-[#34d399]/10"
+              rows={d.compare.withRows}
+              totalCost={d.compare.withTotalCost}
+              totalTime={d.compare.withTotalTime}
+              d={d}
+            />
           </Reveal>
         </div>
         <Reveal delay={150}>
           <p className="mx-auto mt-12 max-w-[820px] text-center text-[22px] font-extrabold text-foreground sm:text-[28px]">
-            <span className="bg-gradient-to-r from-[#34d399] to-[#5eead4] bg-clip-text text-transparent">{d.compare.summaryMoney}</span>
+            <span className="bg-gradient-to-r from-[#34d399] to-[#5eead4] bg-clip-text text-transparent">
+              {d.compare.summaryMoney}
+            </span>
             {" · "}
-            <span className="bg-gradient-to-r from-[#34d399] to-[#5eead4] bg-clip-text text-transparent">{d.compare.summaryTime}</span>
+            <span className="bg-gradient-to-r from-[#34d399] to-[#5eead4] bg-clip-text text-transparent">
+              {d.compare.summaryTime}
+            </span>
           </p>
         </Reveal>
       </div>
@@ -1245,8 +2096,12 @@ function MarketAlerts({ d, lang }: { d: EventDict; lang: Lang }) {
   return (
     <section className="bg-background py-20 sm:py-28">
       <div className="mx-auto max-w-[1200px] px-6">
-        <h2 className="text-center text-[32px] font-extrabold tracking-tight text-foreground sm:text-[44px]">{d.alerts.heading}</h2>
-        <p className="mx-auto mt-4 max-w-[680px] text-center text-[17px] leading-relaxed text-foreground/70">{d.alerts.sub}</p>
+        <h2 className="text-center text-[32px] font-extrabold tracking-tight text-foreground sm:text-[44px]">
+          {d.alerts.heading}
+        </h2>
+        <p className="mx-auto mt-4 max-w-[680px] text-center text-[17px] leading-relaxed text-foreground/70">
+          {d.alerts.sub}
+        </p>
         <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
           {items.map((it, i) => (
             <a
@@ -1254,11 +2109,22 @@ function MarketAlerts({ d, lang }: { d: EventDict; lang: Lang }) {
               href={it.href}
               className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-muted transition hover:-translate-y-1 hover:border-[#34d399]/50"
             >
-              <img src={it.img} alt={`${it.tag}: ${it.title}`} width={400} height={220} loading="lazy" className="h-40 w-full object-cover" />
+              <img
+                src={it.img}
+                alt={`${it.tag}: ${it.title}`}
+                width={400}
+                height={220}
+                loading="lazy"
+                className="h-40 w-full object-cover"
+              />
               <div className="flex flex-1 flex-col p-6">
-                <span className="text-[12px] font-semibold uppercase tracking-wide text-[#34d399]">{it.tag}</span>
+                <span className="text-[12px] font-semibold uppercase tracking-wide text-[#34d399]">
+                  {it.tag}
+                </span>
                 <h3 className="mt-2 text-[18px] font-bold text-foreground">{it.title}</h3>
-                <p className="mt-2 flex-1 text-[14px] leading-relaxed text-foreground/70">{it.body}</p>
+                <p className="mt-2 flex-1 text-[14px] leading-relaxed text-foreground/70">
+                  {it.body}
+                </p>
                 <span className="mt-4 inline-flex items-center gap-1 text-[14px] font-semibold text-[#34d399]">
                   {it.cta} <span aria-hidden>{"\u2192"}</span>
                 </span>
@@ -1276,27 +2142,40 @@ function Story({ d }: { d: EventDict }) {
     <section className="bg-card py-20 sm:py-28">
       <div className="mx-auto max-w-[1200px] px-6">
         <Reveal>
-          <h2 className="text-center text-[32px] font-extrabold tracking-tight text-foreground sm:text-[44px]">{d.story.heading}</h2>
+          <h2 className="text-center text-[32px] font-extrabold tracking-tight text-foreground sm:text-[44px]">
+            {d.story.heading}
+          </h2>
         </Reveal>
         <Reveal delay={100}>
           <div className="mt-14 grid grid-cols-1 gap-0 overflow-hidden rounded-2xl bg-muted shadow-[0_2px_12px_rgba(0,0,0,0.04)] lg:grid-cols-[1.3fr_1fr]">
             <div className="relative p-8 sm:p-12">
-              <span aria-hidden className="absolute left-0 top-6 bottom-6 w-1 rounded-r bg-gradient-to-b from-[#34d399] to-[#5eead4]" />
+              <span
+                aria-hidden
+                className="absolute start-0 top-6 bottom-6 w-1 rounded-r bg-gradient-to-b from-[#34d399] to-[#5eead4]"
+              />
               <h3 className="text-[22px] font-bold text-foreground">{d.story.who}</h3>
               <div className="mt-5 space-y-4 text-[16px] leading-relaxed text-foreground/72">
-                {d.story.p.map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
+                {d.story.p.map((paragraph, i) => (
+                  <p key={i}>{paragraph}</p>
+                ))}
                 <p className="font-semibold text-foreground">{d.story.highlight}</p>
-                <blockquote className="border-l-2 border-[#34d399] pl-4 italic text-foreground">{d.story.quote}</blockquote>
+                <blockquote className="border-l-2 border-[#34d399] ps-4 italic text-foreground">
+                  {d.story.quote}
+                </blockquote>
               </div>
             </div>
             <div className="flex min-h-[280px] flex-col justify-center gap-5 bg-muted p-8 sm:p-12">
               {d.story.steps.map((s, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#34d399] text-[14px] font-bold text-[#04120d]">{i + 1}</span>
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#34d399] text-[14px] font-bold text-[#04120d]">
+                    {i + 1}
+                  </span>
                   <span className="pt-1 text-[15px] font-medium text-foreground">{s}</span>
                 </div>
               ))}
-              <p className="mt-2 text-[12px] leading-relaxed text-foreground/50">{d.story.videoCaption}</p>
+              <p className="mt-2 text-[12px] leading-relaxed text-foreground/50">
+                {d.story.videoCaption}
+              </p>
             </div>
           </div>
         </Reveal>
@@ -1311,18 +2190,29 @@ function Faq({ d }: { d: EventDict }) {
     <section className="bg-background py-20 sm:py-28">
       <div className="mx-auto max-w-[820px] px-6">
         <Reveal>
-          <h2 className="text-center text-[32px] font-extrabold tracking-tight text-foreground sm:text-[44px]">{d.faq.heading}</h2>
+          <h2 className="text-center text-[32px] font-extrabold tracking-tight text-foreground sm:text-[44px]">
+            {d.faq.heading}
+          </h2>
         </Reveal>
         <div className="mt-12 divide-y divide-border overflow-hidden rounded-2xl bg-card shadow-[0_2px_12px_rgba(0,0,0,0.04)]">
           {d.faq.items.map((it, i) => {
             const isOpen = open === i;
             return (
               <div key={it.q}>
-                <button onClick={() => setOpen(isOpen ? null : i)} className="flex w-full items-center justify-between px-6 py-5 text-left text-[16px] font-semibold text-foreground transition hover:bg-muted sm:px-8 sm:text-[17px]">
+                <button
+                  onClick={() => setOpen(isOpen ? null : i)}
+                  className="flex w-full items-center justify-between px-6 py-5 text-start text-[16px] font-semibold text-foreground transition hover:bg-muted sm:px-8 sm:text-[17px]"
+                >
                   <span>{it.q}</span>
-                  <span className={`ml-4 text-[#34d399] transition-transform ${isOpen ? "rotate-45" : ""}`}>+</span>
+                  <span
+                    className={`ms-4 text-[#34d399] transition-transform ${isOpen ? "rotate-45" : ""}`}
+                  >
+                    +
+                  </span>
                 </button>
-                <div className={`grid overflow-hidden px-6 text-[15px] leading-relaxed text-foreground/55 transition-all duration-300 sm:px-8 ${isOpen ? "grid-rows-[1fr] pb-6" : "grid-rows-[0fr]"}`}>
+                <div
+                  className={`grid overflow-hidden px-6 text-[15px] leading-relaxed text-foreground/55 transition-all duration-300 sm:px-8 ${isOpen ? "grid-rows-[1fr] pb-6" : "grid-rows-[0fr]"}`}
+                >
                   <div className="overflow-hidden">{it.a}</div>
                 </div>
               </div>
@@ -1339,13 +2229,22 @@ function FinalCta({ d }: { d: EventDict }) {
     <section className="bg-[#16213E] py-20 sm:py-28">
       <div className="mx-auto max-w-[900px] px-6 text-center">
         <Reveal>
-          <h2 className="text-[36px] font-extrabold leading-tight tracking-tight text-white sm:text-[48px]">{d.cta.title}</h2>
+          <h2 className="text-[36px] font-extrabold leading-tight tracking-tight text-white sm:text-[48px]">
+            {d.cta.title}
+          </h2>
         </Reveal>
         <Reveal delay={100}>
-          <p className="mx-auto mt-5 max-w-[600px] text-[16px] text-white/80 sm:text-[18px]">{d.cta.subtitle}</p>
+          <p className="mx-auto mt-5 max-w-[600px] text-[16px] text-white/80 sm:text-[18px]">
+            {d.cta.subtitle}
+          </p>
         </Reveal>
         <Reveal delay={160}>
-          <a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer" className="mt-10 inline-flex h-12 items-center justify-center rounded-full bg-secondary px-8 text-[15px] font-bold text-[#34d399] transition hover:bg-foreground/10 sm:h-14 sm:text-[16px]">
+          <a
+            href={REFERRAL_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-10 inline-flex h-12 items-center justify-center rounded-full bg-secondary px-8 text-[15px] font-bold text-[#34d399] transition hover:bg-foreground/10 sm:h-14 sm:text-[16px]"
+          >
             {d.cta.button}
           </a>
           <p className="mt-5 text-[13px] text-white/60">{d.cta.note}</p>
@@ -1359,13 +2258,25 @@ function Footer({ lang, d }: { lang: Lang; d: EventDict }) {
   return (
     <footer className="bg-background py-10">
       <div className="mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-6 px-6 sm:flex-row">
-        <a href={homeHref(lang)} className="flex items-center gap-2"><BrandLogo size={18} /></a>
+        <a href={homeHref(lang)} className="flex items-center gap-2">
+          <BrandLogo size={18} />
+        </a>
         <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[13px] text-foreground/55">
-          <a href={`${homeHref(lang)}#pricing`} className="hover:text-foreground">{d.footer.pricing}</a>
-          <a href={blogHref(lang)} className="hover:text-foreground">{d.footer.blog}</a>
-          <a href="#" className="hover:text-foreground">{d.footer.help}</a>
-          <a href="#" className="hover:text-foreground">{d.footer.privacy}</a>
-          <a href="#" className="hover:text-foreground">{d.footer.terms}</a>
+          <a href={`${homeHref(lang)}#pricing`} className="hover:text-foreground">
+            {d.footer.pricing}
+          </a>
+          <a href={blogHref(lang)} className="hover:text-foreground">
+            {d.footer.blog}
+          </a>
+          <a href="#" className="hover:text-foreground">
+            {d.footer.help}
+          </a>
+          <a href="#" className="hover:text-foreground">
+            {d.footer.privacy}
+          </a>
+          <a href="#" className="hover:text-foreground">
+            {d.footer.terms}
+          </a>
         </nav>
         <p className="text-[12px] text-foreground/55">{d.footer.copyright}</p>
       </div>
@@ -1375,8 +2286,16 @@ function Footer({ lang, d }: { lang: Lang; d: EventDict }) {
 
 /* ---------- Page ---------- */
 const LOCALES: Record<Lang, string> = {
-  en: "en-US", ru: "ru-RU", de: "de-DE", it: "it-IT",
-  es: "es-ES", pt: "pt-BR", zh: "zh-CN", hi: "hi-IN", fr: "fr-FR",
+  en: "en-US",
+  ru: "ru-RU",
+  de: "de-DE",
+  it: "it-IT",
+  es: "es-ES",
+  pt: "pt-BR",
+  zh: "zh-CN",
+  hi: "hi-IN",
+  fr: "fr-FR",
+  ar: "ar",
 };
 
 export function FreeForeverPage({ lang }: { lang: Lang }) {
@@ -1403,15 +2322,56 @@ export function FreeForeverPage({ lang }: { lang: Lang }) {
 
 /* ---------- SEO helpers per lang ---------- */
 export const EVENT_SEO: Record<Lang, { title: string; description: string }> = {
-  en: { title: "Accio Work is free forever | Events", description: "Accio Work is now free forever. 10M+ users launch stores in under an hour, no card, no trial, no limits." },
-  ru: { title: "Accio Work стал бесплатным навсегда | Events", description: "Accio Work теперь бесплатен навсегда. 10 миллионов пользователей запускают магазины за час, без карты, без триала, без ограничений." },
-  de: { title: "Accio Work ist für immer kostenlos | Events", description: "Accio Work ist jetzt für immer kostenlos. Über 10 Mio. Nutzer starten Shops in unter einer Stunde, ohne Karte, ohne Test, ohne Limits." },
-  it: { title: "Accio Work è gratis per sempre | Eventi", description: "Accio Work è ora gratis per sempre. Oltre 10M di utenti lanciano store in meno di un'ora, senza carta, senza trial, senza limiti." },
-  es: { title: "Accio Work es gratis para siempre | Eventos", description: "Accio Work ahora es gratis para siempre. Más de 10 millones de usuarios lanzan tiendas en menos de una hora, sin tarjeta, sin prueba, sin límites." },
-  pt: { title: "Accio Work é grátis para sempre | Eventos", description: "Accio Work agora é grátis para sempre. Mais de 10 milhões de usuários lançam lojas em menos de uma hora, sem cartão, sem trial, sem limites." },
-  zh: { title: "Accio Work 永久免费 | 活动", description: "Accio Work 现已永久免费。超过 1000 万用户在一小时内上线店铺 ， 无需信用卡、无需试用、无限制。" },
-  fr: { title: "Accio Work est gratuit pour toujours | Événements", description: "Accio Work est désormais gratuit pour toujours. Plus de 10 millions d'utilisateurs lancent une boutique en moins d'une heure, sans carte, sans essai, sans limite." },
-  hi: { title: "Accio Work अब हमेशा के लिए मुफ़्त | इवेंट्स", description: "Accio Work अब हमेशा के लिए मुफ़्त है। 1 करोड़+ उपयोगकर्ता एक घंटे से भी कम में स्टोर लॉन्च कर रहे हैं, बिना कार्ड, बिना ट्रायल, बिना सीमा।" },
+  ar: {
+    title: "Accio Work مجاني إلى الأبد | الفعاليات",
+    description:
+      "أصبح Accio Work مجانياً إلى الأبد. أكثر من 10 ملايين مستخدم يطلقون متاجرهم في أقل من ساعة، بلا بطاقة ولا فترة تجريبية ولا حدود.",
+  },
+  en: {
+    title: "Accio Work is free forever | Events",
+    description:
+      "Accio Work is now free forever. 10M+ users launch stores in under an hour, no card, no trial, no limits.",
+  },
+  ru: {
+    title: "Accio Work стал бесплатным навсегда | Events",
+    description:
+      "Accio Work теперь бесплатен навсегда. 10 миллионов пользователей запускают магазины за час, без карты, без триала, без ограничений.",
+  },
+  de: {
+    title: "Accio Work ist für immer kostenlos | Events",
+    description:
+      "Accio Work ist jetzt für immer kostenlos. Über 10 Mio. Nutzer starten Shops in unter einer Stunde, ohne Karte, ohne Test, ohne Limits.",
+  },
+  it: {
+    title: "Accio Work è gratis per sempre | Eventi",
+    description:
+      "Accio Work è ora gratis per sempre. Oltre 10M di utenti lanciano store in meno di un'ora, senza carta, senza trial, senza limiti.",
+  },
+  es: {
+    title: "Accio Work es gratis para siempre | Eventos",
+    description:
+      "Accio Work ahora es gratis para siempre. Más de 10 millones de usuarios lanzan tiendas en menos de una hora, sin tarjeta, sin prueba, sin límites.",
+  },
+  pt: {
+    title: "Accio Work é grátis para sempre | Eventos",
+    description:
+      "Accio Work agora é grátis para sempre. Mais de 10 milhões de usuários lançam lojas em menos de uma hora, sem cartão, sem trial, sem limites.",
+  },
+  zh: {
+    title: "Accio Work 永久免费 | 活动",
+    description:
+      "Accio Work 现已永久免费。超过 1000 万用户在一小时内上线店铺 ， 无需信用卡、无需试用、无限制。",
+  },
+  fr: {
+    title: "Accio Work est gratuit pour toujours | Événements",
+    description:
+      "Accio Work est désormais gratuit pour toujours. Plus de 10 millions d'utilisateurs lancent une boutique en moins d'une heure, sans carte, sans essai, sans limite.",
+  },
+  hi: {
+    title: "Accio Work अब हमेशा के लिए मुफ़्त | इवेंट्स",
+    description:
+      "Accio Work अब हमेशा के लिए मुफ़्त है। 1 करोड़+ उपयोगकर्ता एक घंटे से भी कम में स्टोर लॉन्च कर रहे हैं, बिना कार्ड, बिना ट्रायल, बिना सीमा।",
+  },
 };
 
 export { REFERRAL_URL };

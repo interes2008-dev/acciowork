@@ -8,17 +8,29 @@ export const Route = createFileRoute("/de/blog/")({
   head: () => ({
     meta: [
       { title: "Accio Work Blog: KI-geführte Unternehmen" },
-      { name: "description", content: "Feldnotizen über modernes Unternehmertum mit einem KI-Team, das du wirklich lenken kannst. Jeden Tag neue Artikel." },
+      {
+        name: "description",
+        content:
+          "Feldnotizen über modernes Unternehmertum mit einem KI-Team, das du wirklich lenken kannst. Jeden Tag neue Artikel.",
+      },
       { property: "og:title", content: "Accio Work Blog" },
       { property: "og:locale", content: "de_DE" },
       { property: "og:url", content: "https://acciowork.pro/de/blog" },
-      { property: "og:description", content: "Feldnotizen über modernes Unternehmertum mit einem KI-Team, das du wirklich lenken kannst. Jeden Tag neue Artikel." },
+      {
+        property: "og:description",
+        content:
+          "Feldnotizen über modernes Unternehmertum mit einem KI-Team, das du wirklich lenken kannst. Jeden Tag neue Artikel.",
+      },
       { property: "og:image", content: "https://acciowork.pro/og/og-de.png" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Accio Work Blog: KI-geführte Unternehmen" },
-      { name: "twitter:description", content: "Feldnotizen über modernes Unternehmertum mit einem KI-Team, das du wirklich lenken kannst. Jeden Tag neue Artikel." },
+      {
+        name: "twitter:description",
+        content:
+          "Feldnotizen über modernes Unternehmertum mit einem KI-Team, das du wirklich lenken kannst. Jeden Tag neue Artikel.",
+      },
       { name: "twitter:image", content: "https://acciowork.pro/og/og-de.png" },
     ],
     links: [
@@ -32,6 +44,7 @@ export const Route = createFileRoute("/de/blog/")({
       { rel: "alternate", hrefLang: "pt", href: "https://acciowork.pro/pt/blog" },
       { rel: "alternate", hrefLang: "hi", href: "https://acciowork.pro/hi/blog" },
       { rel: "alternate", hrefLang: "fr", href: "https://acciowork.pro/fr/blog" },
+      { rel: "alternate", hrefLang: "ar", href: "https://acciowork.pro/ar/blog" },
       { rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/blog" },
     ],
     scripts: [

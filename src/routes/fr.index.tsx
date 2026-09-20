@@ -18,7 +18,10 @@ export const Route = createFileRoute("/fr/")({
       },
       { property: "og:locale", content: "fr_FR" },
       { property: "og:locale:alternate", content: "en_US" },
-      { property: "og:title", content: "Accio Work | Plateforme IA pour le sourcing et l’automatisation" },
+      {
+        property: "og:title",
+        content: "Accio Work | Plateforme IA pour le sourcing et l’automatisation",
+      },
       {
         property: "og:description",
         content:
@@ -31,10 +34,17 @@ export const Route = createFileRoute("/fr/")({
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { property: "og:image:type", content: "image/png" },
-      { property: "og:image:alt", content: "Accio Work, espace de travail IA pour le sourcing, l’analyse et l’automatisation" },
+      {
+        property: "og:image:alt",
+        content: "Accio Work, espace de travail IA pour le sourcing, l’analyse et l’automatisation",
+      },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Accio Work | Plateforme IA de sourcing" },
-      { name: "twitter:description", content: "Espace de travail IA : sourcing, veille concurrentielle, contenu et automatisation." },
+      {
+        name: "twitter:description",
+        content:
+          "Espace de travail IA : sourcing, veille concurrentielle, contenu et automatisation.",
+      },
       { name: "twitter:image", content: "https://acciowork.pro/og/og-fr.png" },
       { name: "twitter:image:alt", content: "Accio Work, plateforme IA pour le business" },
     ],
@@ -49,6 +59,7 @@ export const Route = createFileRoute("/fr/")({
       { rel: "alternate", hrefLang: "pt", href: "https://acciowork.pro/pt" },
       { rel: "alternate", hrefLang: "hi", href: "https://acciowork.pro/hi" },
       { rel: "alternate", hrefLang: "fr", href: "https://acciowork.pro/fr" },
+      { rel: "alternate", hrefLang: "ar", href: "https://acciowork.pro/ar" },
       { rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/" },
     ],
     scripts: [

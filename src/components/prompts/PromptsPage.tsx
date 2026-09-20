@@ -18,6 +18,7 @@ const IMG_ALT: Record<PrLang, string> = {
   pt: "Um hub de IA liga cartões: ideia, busca, gráfico, checklist",
   hi: "AI हब कार्ड जोड़ता है: आइडिया, खोज, चार्ट, चेकलिस्ट",
   fr: "Un hub IA relie des cartes : idée, recherche, graphique, liste",
+  ar: "مركز ذكاء اصطناعي يربط بطاقات: فكرة، بحث، رسم بياني، قائمة",
 };
 
 function homeHref(lang: PrLang) {
@@ -54,7 +55,11 @@ function Shell({ lang, children }: { lang: PrLang; children: ReactNode }) {
     <div className="min-h-screen bg-background text-foreground">
       <header className="border-b border-border bg-background/80 backdrop-blur">
         <div className="mx-auto flex max-w-3xl items-center justify-between px-5 py-4">
-          <a href={homeHref(lang)} className="flex items-center gap-1.5 font-bold tracking-tight text-foreground" style={{ fontSize: 22 }}>
+          <a
+            href={homeHref(lang)}
+            className="flex items-center gap-1.5 font-bold tracking-tight text-foreground"
+            style={{ fontSize: 22 }}
+          >
             <svg width={21} height={22} viewBox="0 0 28 28" aria-hidden>
               <defs>
                 <linearGradient id="accioTri" x1="0" y1="1" x2="1" y2="0">
@@ -70,8 +75,12 @@ function Shell({ lang, children }: { lang: PrLang; children: ReactNode }) {
           <div className="flex items-center gap-2 sm:gap-3">
             <ThemeToggle />
             <LangMenu lang={lang} />
-            <a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer nofollow"
-              className="whitespace-nowrap rounded-full bg-[#34d399] px-3 py-2 text-[13px] font-semibold text-white transition hover:brightness-110 sm:px-4 sm:text-sm">
+            <a
+              href={REFERRAL_URL}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="whitespace-nowrap rounded-full bg-[#34d399] px-3 py-2 text-[13px] font-semibold text-white transition hover:brightness-110 sm:px-4 sm:text-sm"
+            >
               {c.cta}
             </a>
           </div>
@@ -80,7 +89,10 @@ function Shell({ lang, children }: { lang: PrLang; children: ReactNode }) {
       {children}
       <footer className="border-t border-border bg-card">
         <div className="mx-auto max-w-3xl px-5 py-8 text-sm text-foreground/68">
-          <a href={homeHref(lang)} className="inline-flex items-center gap-1.5 hover:text-foreground/85">
+          <a
+            href={homeHref(lang)}
+            className="inline-flex items-center gap-1.5 hover:text-foreground/85"
+          >
             <ArrowLeft className="h-4 w-4" />
           </a>
         </div>
@@ -108,16 +120,26 @@ function PromptCard({ lang, index }: { lang: PrLang; index: number }) {
       </div>
       <p className="mt-1 text-[14px] leading-relaxed text-foreground/62">{p.desc[lang]}</p>
       <div className="mt-4 rounded-2xl bg-[#0E1210] p-4">
-        <p className="whitespace-pre-wrap text-[14px] leading-relaxed text-white/90">{p.body[lang]}</p>
-        <button onClick={onCopy}
-          className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3.5 py-1.5 text-[13px] font-medium text-white transition hover:bg-white/20">
-          {copied ? <Check className="h-3.5 w-3.5 text-[#5eead4]" /> : <Copy className="h-3.5 w-3.5" />}
+        <p className="whitespace-pre-wrap text-[14px] leading-relaxed text-white/90">
+          {p.body[lang]}
+        </p>
+        <button
+          onClick={onCopy}
+          className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3.5 py-1.5 text-[13px] font-medium text-white transition hover:bg-white/20"
+        >
+          {copied ? (
+            <Check className="h-3.5 w-3.5 text-[#5eead4]" />
+          ) : (
+            <Copy className="h-3.5 w-3.5" />
+          )}
           {copied ? c.copied : c.copy}
         </button>
       </div>
       <p className="mt-3 flex items-start gap-1.5 text-[13px] leading-relaxed text-foreground/62">
         <Lightbulb className="mt-0.5 h-4 w-4 shrink-0 text-amber-500" />
-        <span><span className="font-semibold text-foreground/75">{c.tipLabel}:</span> {p.tip[lang]}</span>
+        <span>
+          <span className="font-semibold text-foreground/75">{c.tipLabel}:</span> {p.tip[lang]}
+        </span>
       </p>
     </article>
   );
@@ -127,7 +149,9 @@ export function PromptsPage({ lang }: { lang: PrLang }) {
   const c = prChrome[lang];
   const [allCopied, setAllCopied] = useState(false);
   const onCopyAll = async () => {
-    const text = prPrompts.map((p, i) => `${i + 1}. ${p.title[lang]}\n${p.body[lang]}`).join("\n\n");
+    const text = prPrompts
+      .map((p, i) => `${i + 1}. ${p.title[lang]}\n${p.body[lang]}`)
+      .join("\n\n");
     const ok = await copyText(text);
     if (ok) {
       setAllCopied(true);
@@ -137,14 +161,27 @@ export function PromptsPage({ lang }: { lang: PrLang }) {
   return (
     <Shell lang={lang}>
       <main className="mx-auto max-w-3xl px-5 py-10 sm:py-14">
-        <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-[#34d399]">{c.kicker}</p>
-        <h1 className="text-3xl font-bold tracking-tight sm:text-[40px] sm:leading-tight">{c.h1}</h1>
+        <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-[#34d399]">
+          {c.kicker}
+        </p>
+        <h1 className="text-3xl font-bold tracking-tight sm:text-[40px] sm:leading-tight">
+          {c.h1}
+        </h1>
         <p className="mt-4 text-lg leading-relaxed text-foreground/75">{c.intro}</p>
 
-        <img src="/img/landing-prompts.webp" alt={IMG_ALT[lang]} width={640} height={640} loading="eager" className="mx-auto mt-8 w-full max-w-xs" />
+        <img
+          src="/img/landing-prompts.webp"
+          alt={IMG_ALT[lang]}
+          width={640}
+          height={640}
+          loading="eager"
+          className="mx-auto mt-8 w-full max-w-xs"
+        />
 
-        <button onClick={onCopyAll}
-          className="mt-6 inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-4 py-2 text-sm font-semibold text-foreground transition hover:border-[#34d399]/50">
+        <button
+          onClick={onCopyAll}
+          className="mt-6 inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-4 py-2 text-sm font-semibold text-foreground transition hover:border-[#34d399]/50"
+        >
           {allCopied ? <Check className="h-4 w-4 text-[#34d399]" /> : <Copy className="h-4 w-4" />}
           {allCopied ? c.copied : c.copyAll}
         </button>
@@ -157,10 +194,16 @@ export function PromptsPage({ lang }: { lang: PrLang }) {
 
         {/* CTA */}
         <section className="mt-12 rounded-3xl bg-gradient-to-br from-[#0a1120] to-[#0f2e26] p-7 text-center sm:p-9">
-          <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-[#5eead4]">{c.accioLabel}</p>
+          <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-[#5eead4]">
+            {c.accioLabel}
+          </p>
           <p className="mx-auto max-w-2xl text-[16px] leading-relaxed text-white/85">{c.ctaLine}</p>
-          <a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer nofollow"
-            className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#34d399] px-7 py-3.5 font-semibold text-white transition hover:brightness-110">
+          <a
+            href={REFERRAL_URL}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#34d399] px-7 py-3.5 font-semibold text-white transition hover:brightness-110"
+          >
             {c.cta} <ArrowRight className="h-4 w-4" />
           </a>
           <p className="mt-2 text-xs text-white/50">{c.ctaNote}</p>

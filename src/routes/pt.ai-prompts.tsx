@@ -3,19 +3,31 @@ import { PromptsPage } from "@/components/prompts/PromptsPage";
 import { prChrome } from "@/lib/prompts-data";
 
 const LANG = "pt" as const;
-const LANGS = ["en","ru","de","it","es","zh","pt","hi","fr"] as const;
+const LANGS = ["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr", "ar"] as const;
 
 export const Route = createFileRoute("/pt/ai-prompts")({
   head: () => {
     const c = prChrome[LANG];
     const url = "https://acciowork.pro/pt/ai-prompts";
-    const alternates = LANGS.map((l) => ({ rel: "alternate", hrefLang: l as string, href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/ai-prompts` }));
-    alternates.push({ rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/ai-prompts" });
+    const alternates = LANGS.map((l) => ({
+      rel: "alternate",
+      hrefLang: l as string,
+      href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/ai-prompts`,
+    }));
+    alternates.push({
+      rel: "alternate",
+      hrefLang: "x-default",
+      href: "https://acciowork.pro/ai-prompts",
+    });
     return {
       meta: [
         { title: c.metaTitle },
         { name: "description", content: c.metaDesc },
-        { name: "keywords", content: "AI prompts product research, ChatGPT prompts dropshipping, product validation prompts, free AI research, ecommerce prompts 2026" },
+        {
+          name: "keywords",
+          content:
+            "AI prompts product research, ChatGPT prompts dropshipping, product validation prompts, free AI research, ecommerce prompts 2026",
+        },
         { property: "og:locale", content: "pt_BR" },
         { property: "og:title", content: c.metaTitle },
         { property: "og:description", content: c.metaDesc },
@@ -32,7 +44,22 @@ export const Route = createFileRoute("/pt/ai-prompts")({
       ],
       links: [{ rel: "canonical", href: url }, ...alternates],
       scripts: [
-        { type: "application/ld+json", children: JSON.stringify({ "@context":"https://schema.org","@type":"BreadcrumbList", itemListElement:[{"@type":"ListItem",position:1,name:"Accio Work",item:"https://acciowork.pro/pt/"},{"@type":"ListItem",position:2,name:c.h1,item:url}] }) },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Accio Work",
+                item: "https://acciowork.pro/pt/",
+              },
+              { "@type": "ListItem", position: 2, name: c.h1, item: url },
+            ],
+          }),
+        },
       ],
     };
   },

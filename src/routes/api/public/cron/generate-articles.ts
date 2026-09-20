@@ -130,8 +130,7 @@ export const Route = createFileRoute("/api/public/cron/generate-articles")({
         const anon = process.env.SUPABASE_PUBLISHABLE_KEY ?? "";
         const cronSecret = process.env.CRON_SECRET ?? "";
         const isAllowed =
-          (!!cronSecret && supplied === cronSecret) ||
-          (!!anon && supplied === anon);
+          (!!cronSecret && supplied === cronSecret) || (!!anon && supplied === anon);
         if (!isAllowed) return new Response("Unauthorized", { status: 401 });
 
         const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
@@ -149,7 +148,10 @@ export const Route = createFileRoute("/api/public/cron/generate-articles")({
         const { data: artRows, error: artErr } = await supabaseAdmin
           .from("blog_articles")
           .select("topic_id, lang")
-          .in("topic_id", topicRows.map((t) => t.id));
+          .in(
+            "topic_id",
+            topicRows.map((t) => t.id),
+          );
         if (artErr) return new Response(artErr.message, { status: 500 });
         const covered = new Set((artRows ?? []).map((r) => `${r.topic_id}:${r.lang}`));
 
@@ -158,9 +160,12 @@ export const Route = createFileRoute("/api/public/cron/generate-articles")({
         const topic = withGaps ?? topicRows[0];
         const missingLangs = LANGS.filter((l) => !covered.has(`${topic.id}:${l}`));
         if (!missingLangs.length) {
-          return new Response(JSON.stringify({ topic_id: topic.id, results: [], note: "topic fully covered" }), {
-            headers: { "Content-Type": "application/json" },
-          });
+          return new Response(
+            JSON.stringify({ topic_id: topic.id, results: [], note: "topic fully covered" }),
+            {
+              headers: { "Content-Type": "application/json" },
+            },
+          );
         }
 
         const seed: TopicSeed = {

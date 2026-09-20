@@ -3,7 +3,7 @@ import { GuideHub } from "@/components/guide/GuidePage";
 import { gdChrome, gdPages, gdOrder } from "@/lib/guide-data";
 
 const LANG = "es" as const;
-const LANGS = ["en","ru","de","it","es","zh","pt","hi","fr"] as const;
+const LANGS = ["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr", "ar"] as const;
 
 export const Route = createFileRoute("/es/guide/")({
   head: () => {
@@ -14,7 +14,11 @@ export const Route = createFileRoute("/es/guide/")({
       hrefLang: l as string,
       href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/guide`,
     }));
-    alternates.push({ rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/guide" });
+    alternates.push({
+      rel: "alternate",
+      hrefLang: "x-default",
+      href: "https://acciowork.pro/guide",
+    });
     return {
       meta: [
         { title: c.hubMetaTitle },

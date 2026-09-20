@@ -38,7 +38,9 @@ export const Route = createFileRoute("/api/og")({
         const url = new URL(request.url);
         const params = Object.fromEntries(url.searchParams.entries());
         const tool = String(params.t ?? "");
-        const lang = (LANGS as readonly string[]).includes(String(params.l)) ? (params.l as Lang) : "en";
+        const lang = (LANGS as readonly string[]).includes(String(params.l))
+          ? (params.l as Lang)
+          : "en";
         // Any failure degrades gracefully to the static branded OG image.
         const staticOg = `https://acciowork.pro/og/og-${lang}.png`;
         try {
@@ -46,7 +48,9 @@ export const Route = createFileRoute("/api/og")({
           const img = card(tool, lang, params);
           if (!img) return Response.redirect(staticOg, 302);
           const wasmAbsolute = new URL("/resvg.wasm", url.origin).toString();
-          const png = await renderOg({ ...img, foot: FOOT[tool] ?? "acciowork.pro" }, () => fetch(wasmAbsolute));
+          const png = await renderOg({ ...img, foot: FOOT[tool] ?? "acciowork.pro" }, () =>
+            fetch(wasmAbsolute),
+          );
           return new Response(png as unknown as BodyInit, {
             headers: {
               "content-type": "image/png",

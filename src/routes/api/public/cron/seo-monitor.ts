@@ -28,7 +28,13 @@ function alertHtml(runId: string, issues: Issue[], stats: string) {
   return `<div style="font-family:Arial,sans-serif;color:#111"><h2>SEO-алерт acciowork.pro</h2><p>${stats}</p><table style="border-collapse:collapse;font-size:14px">${rows}</table><p style="margin-top:16px"><a href="https://acciowork.pro/seo-monitor">Открыть дашборд мониторинга</a></p><p style="color:#888;font-size:12px">Проверка ${runId}</p></div>`;
 }
 
-async function trySendAlert(origin: string, to: string, runId: string, issues: Issue[], stats: string) {
+async function trySendAlert(
+  origin: string,
+  to: string,
+  runId: string,
+  issues: Issue[],
+  stats: string,
+) {
   try {
     const res = await fetch(`${origin}/lovable/email/transactional/send`, {
       method: "POST",
@@ -147,7 +153,13 @@ export const Route = createFileRoute("/api/public/cron/seo-monitor")({
             newIssues.some((i) => i.severity === "critical");
           if (shouldAlert) {
             const stats = `Проверено страниц: ${pages.length}. Проблем: ${issues.length} (критических: ${criticalCount}, новых: ${newIssues.length}).`;
-            alertSent = await trySendAlert(origin, config!.alert_email as string, runId, newIssues, stats);
+            alertSent = await trySendAlert(
+              origin,
+              config!.alert_email as string,
+              runId,
+              newIssues,
+              stats,
+            );
           }
 
           await supabase
@@ -181,7 +193,9 @@ export const Route = createFileRoute("/api/public/cron/seo-monitor")({
               critical: criticalCount,
               newIssues: newIssues.length,
               alertSent,
-              gsc: gsc ? { site: gsc.siteUrl, clicks: gsc.clicks, impressions: gsc.impressions } : null,
+              gsc: gsc
+                ? { site: gsc.siteUrl, clicks: gsc.clicks, impressions: gsc.impressions }
+                : null,
             }),
             { headers: { "Content-Type": "application/json" } },
           );
@@ -189,7 +203,11 @@ export const Route = createFileRoute("/api/public/cron/seo-monitor")({
           const message = e instanceof Error ? e.message : String(e);
           await supabase
             .from("seo_scan_runs")
-            .update({ status: "error", error_message: message, finished_at: new Date().toISOString() })
+            .update({
+              status: "error",
+              error_message: message,
+              finished_at: new Date().toISOString(),
+            })
             .eq("id", runId);
           return new Response(JSON.stringify({ error: message }), {
             status: 500,

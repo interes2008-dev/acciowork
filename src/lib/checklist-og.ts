@@ -36,7 +36,11 @@ export function chOg(search: ChSearch, lang: ChLang): OgResult | null {
   return {
     title: `${c.resultKicker}: ${hours}h`,
     desc: `${c.resultKicker}: ${hours}h/mo, ${days} ${c.daysUnit}. ${c.metaDesc}`.slice(0, 200),
-    img: { label: c.resultKicker, big: `${hours}h`, sub: `${uniq.length} / ${chTasks.length} · ${days} ${c.daysUnit}` },
+    img: {
+      label: c.resultKicker,
+      big: `${hours}h`,
+      sub: `${uniq.length} / ${chTasks.length} · ${days} ${c.daysUnit}`,
+    },
   };
 }
 

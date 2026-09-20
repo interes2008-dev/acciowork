@@ -4,7 +4,7 @@ import { dutyChrome } from "@/lib/duty-data";
 import { validateDutySearch, dutyOg, dutyOgImageUrl } from "@/lib/duty-og";
 
 const LANG = "en" as const;
-const LANGS = ["en","ru","de","it","es","zh","pt","hi","fr"] as const;
+const LANGS = ["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr", "ar"] as const;
 
 export const Route = createFileRoute("/duty")({
   validateSearch: validateDutySearch,
@@ -17,13 +17,25 @@ export const Route = createFileRoute("/duty")({
     const ogTitle = og ? og.title : c.metaTitle;
     const ogDesc = og ? og.desc : c.metaDesc;
     const ogImg = loaderData?.ogImage ?? "https://acciowork.pro/og/og-en.png";
-    const alternates = LANGS.map((l) => ({ rel: "alternate", hrefLang: l as string, href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/duty` }));
-    alternates.push({ rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/duty" });
+    const alternates = LANGS.map((l) => ({
+      rel: "alternate",
+      hrefLang: l as string,
+      href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/duty`,
+    }));
+    alternates.push({
+      rel: "alternate",
+      hrefLang: "x-default",
+      href: "https://acciowork.pro/duty",
+    });
     return {
       meta: [
         { title: c.metaTitle },
         { name: "description", content: c.metaDesc },
-        { name: "keywords", content: "de minimis calculator, import duty calculator, landed cost, tariff calculator, cross border ecommerce 2026" },
+        {
+          name: "keywords",
+          content:
+            "de minimis calculator, import duty calculator, landed cost, tariff calculator, cross border ecommerce 2026",
+        },
         { property: "og:locale", content: "en_US" },
         { property: "og:title", content: ogTitle },
         { property: "og:description", content: ogDesc },
@@ -40,7 +52,22 @@ export const Route = createFileRoute("/duty")({
       ],
       links: [{ rel: "canonical", href: url }, ...alternates],
       scripts: [
-        { type: "application/ld+json", children: JSON.stringify({ "@context":"https://schema.org","@type":"BreadcrumbList", itemListElement:[{"@type":"ListItem",position:1,name:"Accio Work",item:"https://acciowork.pro/"},{"@type":"ListItem",position:2,name:c.h1,item:url}] }) },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Accio Work",
+                item: "https://acciowork.pro/",
+              },
+              { "@type": "ListItem", position: 2, name: c.h1, item: url },
+            ],
+          }),
+        },
       ],
     };
   },

@@ -3,6 +3,7 @@ import type {} from "@tanstack/react-start";
 import { listAllPublishedForSitemap } from "@/lib/blog.functions";
 
 const BASE_URL = "https://acciowork.pro";
+const TODAY = new Date().toISOString().slice(0, 10);
 
 interface SitemapEntry {
   path: string;
@@ -26,11 +27,23 @@ export const Route = createFileRoute("/sitemap.xml")({
           { hreflang: "pt", href: `${BASE_URL}/pt` },
           { hreflang: "hi", href: `${BASE_URL}/hi` },
           { hreflang: "fr", href: `${BASE_URL}/fr` },
+          { hreflang: "ar", href: `${BASE_URL}/ar` },
           { hreflang: "x-default", href: `${BASE_URL}/` },
         ];
-        const SLANGS = ["en","ru","de","it","es","zh","pt","hi","fr"];
+        const SLANGS = ["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr"];
         const alts = (suffix: string) => {
-          const list = SLANGS.map((l) => ({ hreflang: l, href: `${BASE_URL}${l === "en" ? "" : "/" + l}${suffix}` }));
+          const list = SLANGS.map((l) => ({
+            hreflang: l,
+            href: `${BASE_URL}${l === "en" ? "" : "/" + l}${suffix}`,
+          }));
+          list.push({ hreflang: "x-default", href: `${BASE_URL}${suffix}` });
+          return list;
+        };
+        const arAlts = (suffix: string) => {
+          const list = [...SLANGS, "ar"].map((l) => ({
+            hreflang: l,
+            href: `${BASE_URL}${l === "en" ? "" : "/" + l}${suffix}`,
+          }));
           list.push({ hreflang: "x-default", href: `${BASE_URL}${suffix}` });
           return list;
         };
@@ -44,84 +57,179 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/pt", changefreq: "weekly", priority: "0.9", alternates },
           { path: "/hi", changefreq: "weekly", priority: "0.9", alternates },
           { path: "/fr", changefreq: "weekly", priority: "0.9", alternates },
-          { path: "/blog", changefreq: "daily", priority: "0.8", alternates: alts("/blog") },
-          { path: "/ru/blog", changefreq: "daily", priority: "0.8", alternates: alts("/blog") },
-          { path: "/de/blog", changefreq: "daily", priority: "0.8", alternates: alts("/blog") },
-          { path: "/it/blog", changefreq: "daily", priority: "0.8", alternates: alts("/blog") },
-          { path: "/es/blog", changefreq: "daily", priority: "0.8", alternates: alts("/blog") },
-          { path: "/zh/blog", changefreq: "daily", priority: "0.8", alternates: alts("/blog") },
-          { path: "/pt/blog", changefreq: "daily", priority: "0.8", alternates: alts("/blog") },
-          { path: "/hi/blog", changefreq: "daily", priority: "0.8", alternates: alts("/blog") },
-          { path: "/fr/blog", changefreq: "daily", priority: "0.8", alternates: alts("/blog") },
+          { path: "/ar", changefreq: "weekly", priority: "0.9", alternates },
+          { path: "/blog", changefreq: "daily", priority: "0.8", alternates: arAlts("/blog") },
+          { path: "/ru/blog", changefreq: "daily", priority: "0.8", alternates: arAlts("/blog") },
+          { path: "/de/blog", changefreq: "daily", priority: "0.8", alternates: arAlts("/blog") },
+          { path: "/it/blog", changefreq: "daily", priority: "0.8", alternates: arAlts("/blog") },
+          { path: "/es/blog", changefreq: "daily", priority: "0.8", alternates: arAlts("/blog") },
+          { path: "/zh/blog", changefreq: "daily", priority: "0.8", alternates: arAlts("/blog") },
+          { path: "/pt/blog", changefreq: "daily", priority: "0.8", alternates: arAlts("/blog") },
+          { path: "/hi/blog", changefreq: "daily", priority: "0.8", alternates: arAlts("/blog") },
+          { path: "/fr/blog", changefreq: "daily", priority: "0.8", alternates: arAlts("/blog") },
+          { path: "/ar/blog", changefreq: "daily", priority: "0.8", alternates: arAlts("/blog") },
         ];
 
         const compareLangs = ["", "/ru", "/de", "/it", "/es", "/zh", "/pt", "/hi", "/fr"];
+        const arLangs = ["", "/ru", "/de", "/it", "/es", "/zh", "/pt", "/hi", "/fr", "/ar"];
         const competitors = ["chatgpt", "manus", "genspark", "operator", "devin"];
-        for (const l of compareLangs) {
-          entries.push({ path: `${l}/compare`, changefreq: "weekly", priority: "0.7", alternates: alts("/compare") });
+        for (const l of arLangs) {
+          entries.push({
+            path: `${l}/compare`,
+            changefreq: "weekly",
+            priority: "0.7",
+            alternates: arAlts("/compare"),
+          });
           for (const cmp of competitors) {
-            entries.push({ path: `${l}/compare/${cmp}`, changefreq: "monthly", priority: "0.7", alternates: alts(`/compare/${cmp}`) });
+            entries.push({
+              path: `${l}/compare/${cmp}`,
+              changefreq: "monthly",
+              priority: "0.7",
+              alternates: arAlts(`/compare/${cmp}`),
+            });
           }
         }
 
-        const useCases = ["dropshipping", "sourcing", "content", "market-research", "automation", "custom-tools"];
-        for (const l of compareLangs) {
-          entries.push({ path: `${l}/for`, changefreq: "weekly", priority: "0.7", alternates: alts("/for") });
+        const useCases = [
+          "dropshipping",
+          "sourcing",
+          "content",
+          "market-research",
+          "automation",
+          "custom-tools",
+        ];
+        for (const l of arLangs) {
+          entries.push({
+            path: `${l}/for`,
+            changefreq: "weekly",
+            priority: "0.7",
+            alternates: arAlts("/for"),
+          });
           for (const uc of useCases) {
-            entries.push({ path: `${l}/for/${uc}`, changefreq: "monthly", priority: "0.7", alternates: alts(`/for/${uc}`) });
+            entries.push({
+              path: `${l}/for/${uc}`,
+              changefreq: "monthly",
+              priority: "0.7",
+              alternates: arAlts(`/for/${uc}`),
+            });
           }
         }
 
         const guides = ["getting-started", "first-task", "connect-apps", "automations"];
-        for (const l of compareLangs) {
-          entries.push({ path: `${l}/guide`, changefreq: "weekly", priority: "0.7", alternates: alts("/guide") });
+        for (const l of arLangs) {
+          entries.push({
+            path: `${l}/guide`,
+            changefreq: "weekly",
+            priority: "0.7",
+            alternates: arAlts("/guide"),
+          });
           for (const g of guides) {
-            entries.push({ path: `${l}/guide/${g}`, changefreq: "monthly", priority: "0.7", alternates: alts(`/guide/${g}`) });
+            entries.push({
+              path: `${l}/guide/${g}`,
+              changefreq: "monthly",
+              priority: "0.7",
+              alternates: arAlts(`/guide/${g}`),
+            });
           }
         }
 
-        for (const l of compareLangs) {
-          entries.push({ path: `${l}/reviews`, changefreq: "weekly", priority: "0.7", alternates: alts("/reviews") });
+        for (const l of arLangs) {
+          entries.push({
+            path: `${l}/reviews`,
+            changefreq: "weekly",
+            priority: "0.7",
+            alternates: arAlts("/reviews"),
+          });
+        }
+
+        for (const l of arLangs) {
+          entries.push({
+            path: `${l}/roi`,
+            changefreq: "monthly",
+            priority: "0.7",
+            alternates: arAlts("/roi"),
+          });
+        }
+
+        for (const l of arLangs) {
+          entries.push({
+            path: `${l}/quiz`,
+            changefreq: "monthly",
+            priority: "0.7",
+            alternates: arAlts("/quiz"),
+          });
+        }
+
+        for (const l of arLangs) {
+          entries.push({
+            path: `${l}/templates`,
+            changefreq: "monthly",
+            priority: "0.7",
+            alternates: arAlts("/templates"),
+          });
+        }
+
+        for (const l of arLangs) {
+          entries.push({
+            path: `${l}/duty`,
+            changefreq: "monthly",
+            priority: "0.7",
+            alternates: arAlts("/duty"),
+          });
+        }
+
+        for (const l of arLangs) {
+          entries.push({
+            path: `${l}/de-minimis`,
+            changefreq: "monthly",
+            priority: "0.7",
+            alternates: arAlts("/de-minimis"),
+          });
+        }
+
+        for (const l of arLangs) {
+          entries.push({
+            path: `${l}/tiktok-shop`,
+            changefreq: "monthly",
+            priority: "0.7",
+            alternates: arAlts("/tiktok-shop"),
+          });
+        }
+
+        for (const l of arLangs) {
+          entries.push({
+            path: `${l}/ai-prompts`,
+            changefreq: "monthly",
+            priority: "0.7",
+            alternates: arAlts("/ai-prompts"),
+          });
+        }
+
+        for (const l of arLangs) {
+          entries.push({
+            path: `${l}/supplier-scorecard`,
+            changefreq: "monthly",
+            priority: "0.7",
+            alternates: arAlts("/supplier-scorecard"),
+          });
+        }
+
+        for (const l of arLangs) {
+          entries.push({
+            path: `${l}/ai-agent-tasks`,
+            changefreq: "monthly",
+            priority: "0.7",
+            alternates: arAlts("/ai-agent-tasks"),
+          });
         }
 
         for (const l of compareLangs) {
-          entries.push({ path: `${l}/roi`, changefreq: "monthly", priority: "0.7", alternates: alts("/roi") });
-        }
-
-        for (const l of compareLangs) {
-          entries.push({ path: `${l}/quiz`, changefreq: "monthly", priority: "0.7", alternates: alts("/quiz") });
-        }
-
-        for (const l of compareLangs) {
-          entries.push({ path: `${l}/templates`, changefreq: "monthly", priority: "0.7", alternates: alts("/templates") });
-        }
-
-        for (const l of compareLangs) {
-          entries.push({ path: `${l}/duty`, changefreq: "monthly", priority: "0.7", alternates: alts("/duty") });
-        }
-
-        for (const l of compareLangs) {
-          entries.push({ path: `${l}/de-minimis`, changefreq: "monthly", priority: "0.7", alternates: alts("/de-minimis") });
-        }
-
-        for (const l of compareLangs) {
-          entries.push({ path: `${l}/tiktok-shop`, changefreq: "monthly", priority: "0.7", alternates: alts("/tiktok-shop") });
-        }
-
-        for (const l of compareLangs) {
-          entries.push({ path: `${l}/ai-prompts`, changefreq: "monthly", priority: "0.7", alternates: alts("/ai-prompts") });
-        }
-
-        for (const l of compareLangs) {
-          entries.push({ path: `${l}/supplier-scorecard`, changefreq: "monthly", priority: "0.7", alternates: alts("/supplier-scorecard") });
-        }
-
-        for (const l of compareLangs) {
-          entries.push({ path: `${l}/ai-agent-tasks`, changefreq: "monthly", priority: "0.7", alternates: alts("/ai-agent-tasks") });
-        }
-
-        for (const l of compareLangs) {
-          entries.push({ path: `${l}/events/free-forever`, changefreq: "monthly", priority: "0.6", alternates: alts("/events/free-forever") });
+          entries.push({
+            path: `${l}/events/free-forever`,
+            changefreq: "monthly",
+            priority: "0.6",
+            alternates: alts("/events/free-forever"),
+          });
         }
 
         try {
@@ -136,16 +244,21 @@ export const Route = createFileRoute("/sitemap.xml")({
                     ? "/it/blog"
                     : a.lang === "es"
                       ? "/es/blog"
-                        : a.lang === "zh"
-                          ? "/zh/blog"
-                          : a.lang === "pt"
-                            ? "/pt/blog"
-                            : a.lang === "hi"
-                              ? "/hi/blog"
-                              : a.lang === "fr"
-                                ? "/fr/blog"
-                                : "/blog";
-            entries.push({ path: `${prefix}/${a.slug}`, lastmod: a.published_at, changefreq: "monthly", priority: "0.7" });
+                      : a.lang === "zh"
+                        ? "/zh/blog"
+                        : a.lang === "pt"
+                          ? "/pt/blog"
+                          : a.lang === "hi"
+                            ? "/hi/blog"
+                            : a.lang === "fr"
+                              ? "/fr/blog"
+                              : "/blog";
+            entries.push({
+              path: `${prefix}/${a.slug}`,
+              lastmod: a.published_at,
+              changefreq: "monthly",
+              priority: "0.7",
+            });
           }
         } catch {
           // sitemap should still render even if the DB read fails
@@ -155,10 +268,9 @@ export const Route = createFileRoute("/sitemap.xml")({
           [
             `  <url>`,
             `    <loc>${BASE_URL}${e.path}</loc>`,
-            ...(e.lastmod ? [`    <lastmod>${e.lastmod}</lastmod>`] : []),
+            ...(e.lastmod || TODAY ? [`    <lastmod>${e.lastmod ?? TODAY}</lastmod>`] : []),
             ...(e.alternates ?? []).map(
-              (a) =>
-                `    <xhtml:link rel="alternate" hreflang="${a.hreflang}" href="${a.href}" />`,
+              (a) => `    <xhtml:link rel="alternate" hreflang="${a.hreflang}" href="${a.href}" />`,
             ),
             e.changefreq ? `    <changefreq>${e.changefreq}</changefreq>` : null,
             e.priority ? `    <priority>${e.priority}</priority>` : null,

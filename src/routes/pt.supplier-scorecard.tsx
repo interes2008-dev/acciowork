@@ -4,7 +4,7 @@ import { scChrome } from "@/lib/scorecard-data";
 import { validateScSearch, scOg, scOgImageUrl } from "@/lib/scorecard-og";
 
 const LANG = "pt" as const;
-const LANGS = ["en","ru","de","it","es","zh","pt","hi","fr"] as const;
+const LANGS = ["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr", "ar"] as const;
 
 export const Route = createFileRoute("/pt/supplier-scorecard")({
   validateSearch: validateScSearch,
@@ -17,13 +17,25 @@ export const Route = createFileRoute("/pt/supplier-scorecard")({
     const ogTitle = og ? og.title : c.metaTitle;
     const ogDesc = og ? og.desc : c.metaDesc;
     const ogImg = loaderData?.ogImage ?? "https://acciowork.pro/og/og-pt.png";
-    const alternates = LANGS.map((l) => ({ rel: "alternate", hrefLang: l as string, href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/supplier-scorecard` }));
-    alternates.push({ rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/supplier-scorecard" });
+    const alternates = LANGS.map((l) => ({
+      rel: "alternate",
+      hrefLang: l as string,
+      href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/supplier-scorecard`,
+    }));
+    alternates.push({
+      rel: "alternate",
+      hrefLang: "x-default",
+      href: "https://acciowork.pro/supplier-scorecard",
+    });
     return {
       meta: [
         { title: c.metaTitle },
         { name: "description", content: c.metaDesc },
-        { name: "keywords", content: "supplier reliability scorecard, vet alibaba supplier, supplier risk check, verify supplier 2026" },
+        {
+          name: "keywords",
+          content:
+            "supplier reliability scorecard, vet alibaba supplier, supplier risk check, verify supplier 2026",
+        },
         { property: "og:locale", content: "pt_BR" },
         { property: "og:title", content: ogTitle },
         { property: "og:description", content: ogDesc },
@@ -40,7 +52,22 @@ export const Route = createFileRoute("/pt/supplier-scorecard")({
       ],
       links: [{ rel: "canonical", href: url }, ...alternates],
       scripts: [
-        { type: "application/ld+json", children: JSON.stringify({ "@context":"https://schema.org","@type":"BreadcrumbList", itemListElement:[{"@type":"ListItem",position:1,name:"Accio Work",item:"https://acciowork.pro/pt/"},{"@type":"ListItem",position:2,name:c.h1,item:url}] }) },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Accio Work",
+                item: "https://acciowork.pro/pt/",
+              },
+              { "@type": "ListItem", position: 2, name: c.h1, item: url },
+            ],
+          }),
+        },
       ],
     };
   },

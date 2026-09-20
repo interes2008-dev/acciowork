@@ -18,7 +18,10 @@ export const Route = createFileRoute("/hi/")({
       },
       { property: "og:locale", content: "hi_IN" },
       { property: "og:locale:alternate", content: "en_US" },
-      { property: "og:title", content: "Accio Work | सोर्सिंग और बिज़नेस ऑटोमेशन के लिए AI प्लेटफ़ॉर्म" },
+      {
+        property: "og:title",
+        content: "Accio Work | सोर्सिंग और बिज़नेस ऑटोमेशन के लिए AI प्लेटफ़ॉर्म",
+      },
       {
         property: "og:description",
         content:
@@ -31,10 +34,16 @@ export const Route = createFileRoute("/hi/")({
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { property: "og:image:type", content: "image/png" },
-      { property: "og:image:alt", content: "Accio Work, सोर्सिंग, एनालिसिस और ऑटोमेशन के लिए AI वर्कस्पेस" },
+      {
+        property: "og:image:alt",
+        content: "Accio Work, सोर्सिंग, एनालिसिस और ऑटोमेशन के लिए AI वर्कस्पेस",
+      },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Accio Work | सोर्सिंग के लिए AI प्लेटफ़ॉर्म" },
-      { name: "twitter:description", content: "AI वर्कस्पेस: सोर्सिंग, प्रतिस्पर्धी विश्लेषण, कंटेंट और ऑटोमेशन।" },
+      {
+        name: "twitter:description",
+        content: "AI वर्कस्पेस: सोर्सिंग, प्रतिस्पर्धी विश्लेषण, कंटेंट और ऑटोमेशन।",
+      },
       { name: "twitter:image", content: "https://acciowork.pro/og/og-hi.png" },
       { name: "twitter:image:alt", content: "Accio Work, बिज़नेस के लिए AI प्लेटफ़ॉर्म" },
     ],
@@ -49,6 +58,7 @@ export const Route = createFileRoute("/hi/")({
       { rel: "alternate", hrefLang: "pt", href: "https://acciowork.pro/pt" },
       { rel: "alternate", hrefLang: "hi", href: "https://acciowork.pro/hi" },
       { rel: "alternate", hrefLang: "fr", href: "https://acciowork.pro/fr" },
+      { rel: "alternate", hrefLang: "ar", href: "https://acciowork.pro/ar" },
       { rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/" },
     ],
     scripts: [

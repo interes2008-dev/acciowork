@@ -33,9 +33,7 @@ export const Route = createFileRoute("/api/public/blog-cover/$id")({
     handlers: {
       GET: async ({ request, params }) => {
         const id =
-          (params as { id?: string })?.id ??
-          new URL(request.url).pathname.split("/").pop() ??
-          "";
+          (params as { id?: string })?.id ?? new URL(request.url).pathname.split("/").pop() ?? "";
         const val = await readCover(id);
         if (!val) return new Response("Not found", { status: 404 });
 

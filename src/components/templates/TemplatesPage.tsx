@@ -18,6 +18,7 @@ const IMG_ALT: Record<TplLang, string> = {
   pt: "Cartões de modelo empilhados com ícone de copiar e envelope",
   hi: "कॉपी आइकन और लिफ़ाफ़े के साथ टेम्पलेट कार्ड का ढेर",
   fr: "Des cartes modèles empilées avec une icône copier et une enveloppe",
+  ar: "بطاقات قوالب رسائل متراكمة مع أيقونة نسخ ومظروف",
 };
 
 function homeHref(lang: TplLang) {
@@ -30,7 +31,11 @@ function Shell({ lang, children }: { lang: TplLang; children: ReactNode }) {
     <div className="min-h-screen bg-background text-foreground">
       <header className="border-b border-border bg-background/80 backdrop-blur">
         <div className="mx-auto flex max-w-3xl items-center justify-between px-5 py-4">
-          <a href={homeHref(lang)} className="flex items-center gap-1.5 font-bold tracking-tight text-foreground" style={{ fontSize: 22 }}>
+          <a
+            href={homeHref(lang)}
+            className="flex items-center gap-1.5 font-bold tracking-tight text-foreground"
+            style={{ fontSize: 22 }}
+          >
             <svg width={21} height={22} viewBox="0 0 28 28" aria-hidden>
               <defs>
                 <linearGradient id="accioTri" x1="0" y1="1" x2="1" y2="0">
@@ -46,17 +51,24 @@ function Shell({ lang, children }: { lang: TplLang; children: ReactNode }) {
           <div className="flex items-center gap-2 sm:gap-3">
             <ThemeToggle />
             <LangMenu lang={lang} />
-            <a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer nofollow"
-            className="whitespace-nowrap rounded-full bg-[#34d399] px-3 py-2 text-[13px] font-semibold text-white transition hover:brightness-110 sm:px-4 sm:text-sm">
-            {c.cta}
-          </a>
+            <a
+              href={REFERRAL_URL}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="whitespace-nowrap rounded-full bg-[#34d399] px-3 py-2 text-[13px] font-semibold text-white transition hover:brightness-110 sm:px-4 sm:text-sm"
+            >
+              {c.cta}
+            </a>
           </div>
         </div>
       </header>
       {children}
       <footer className="border-t border-border bg-card">
         <div className="mx-auto max-w-3xl px-5 py-8 text-sm text-foreground/68">
-          <a href={homeHref(lang)} className="inline-flex items-center gap-1.5 hover:text-foreground/85">
+          <a
+            href={homeHref(lang)}
+            className="inline-flex items-center gap-1.5 hover:text-foreground/85"
+          >
             <ArrowLeft className="h-4 w-4" />
           </a>
         </div>
@@ -79,7 +91,11 @@ function TemplateCard({ lang, idx }: { lang: TplLang; idx: number }) {
       ta.value = text;
       document.body.appendChild(ta);
       ta.select();
-      try { document.execCommand("copy"); } catch { /* ignore */ }
+      try {
+        document.execCommand("copy");
+      } catch {
+        /* ignore */
+      }
       document.body.removeChild(ta);
     }
     setCopied(true);
@@ -93,7 +109,9 @@ function TemplateCard({ lang, idx }: { lang: TplLang; idx: number }) {
         <button
           onClick={copy}
           className={`inline-flex shrink-0 items-center gap-1.5 rounded-full px-3.5 py-1.5 text-sm font-semibold transition ${
-            copied ? "bg-[#34d399] text-white" : "border border-[#34d399]/40 text-[#34d399] hover:bg-muted"
+            copied
+              ? "bg-[#34d399] text-white"
+              : "border border-[#34d399]/40 text-[#34d399] hover:bg-muted"
           }`}
         >
           {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
@@ -123,15 +141,28 @@ export function TemplatesPage({ lang }: { lang: TplLang }) {
     <Shell lang={lang}>
       <main className="mx-auto max-w-3xl px-5 py-10 sm:py-14">
         <nav className="mb-6 text-xs text-foreground/58">
-          <a href={homeHref(lang)} className="hover:underline">Accio Work</a>
+          <a href={homeHref(lang)} className="hover:underline">
+            Accio Work
+          </a>
           <span className="mx-1.5">/</span>
           <span className="text-foreground/75">{c.kicker}</span>
         </nav>
 
-        <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-[#34d399]">{c.kicker}</p>
-        <h1 className="text-3xl font-bold tracking-tight sm:text-[38px] sm:leading-tight">{c.h1}</h1>
+        <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-[#34d399]">
+          {c.kicker}
+        </p>
+        <h1 className="text-3xl font-bold tracking-tight sm:text-[38px] sm:leading-tight">
+          {c.h1}
+        </h1>
         <p className="mt-4 max-w-2xl text-lg leading-relaxed text-foreground/75">{c.intro}</p>
-        <img src="/img/tool-templates.webp" alt={IMG_ALT[lang]} width={800} height={800} loading="eager" className="mx-auto mt-6 w-full max-w-xs" />
+        <img
+          src="/img/tool-templates.webp"
+          alt={IMG_ALT[lang]}
+          width={800}
+          height={800}
+          loading="eager"
+          className="mx-auto mt-6 w-full max-w-xs"
+        />
 
         {/* Email templates */}
         <h2 className="mt-10 mb-5 text-xl font-semibold">{c.emailTitle}</h2>
@@ -156,14 +187,18 @@ export function TemplatesPage({ lang }: { lang: TplLang }) {
                 <button
                   key={i}
                   onClick={() => setChecked((a) => a.map((v, j) => (j === i ? !v : v)))}
-                  className={`flex w-full items-center gap-3 border-b border-border px-5 py-3.5 text-left text-[15px] transition last:border-b-0 ${
+                  className={`flex w-full items-center gap-3 border-b border-border px-5 py-3.5 text-start text-[15px] transition last:border-b-0 ${
                     on ? "bg-muted" : "hover:bg-black/[0.02]"
                   }`}
                 >
-                  <span className={`grid h-5 w-5 shrink-0 place-items-center rounded-md border ${on ? "border-[#34d399] bg-[#34d399] text-white" : "border-black/25"}`}>
+                  <span
+                    className={`grid h-5 w-5 shrink-0 place-items-center rounded-md border ${on ? "border-[#34d399] bg-[#34d399] text-white" : "border-black/25"}`}
+                  >
                     {on && <Check className="h-3.5 w-3.5" />}
                   </span>
-                  <span className={on ? "text-foreground/58 line-through" : "text-foreground/85"}>{item[lang]}</span>
+                  <span className={on ? "text-foreground/58 line-through" : "text-foreground/85"}>
+                    {item[lang]}
+                  </span>
                 </button>
               );
             })}
@@ -173,8 +208,12 @@ export function TemplatesPage({ lang }: { lang: TplLang }) {
         {/* CTA */}
         <div className="mt-12 rounded-2xl bg-gradient-to-br from-[#0a1120] to-[#0f2e26] p-7 text-center sm:p-9">
           <p className="mx-auto max-w-xl text-[16px] leading-relaxed text-white/85">{c.ctaLine}</p>
-          <a href={REFERRAL_URL} target="_blank" rel="noopener noreferrer nofollow"
-            className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#34d399] px-7 py-3.5 font-semibold text-white transition hover:brightness-110">
+          <a
+            href={REFERRAL_URL}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#34d399] px-7 py-3.5 font-semibold text-white transition hover:brightness-110"
+          >
             {c.cta} <ArrowRight className="h-4 w-4" />
           </a>
           <p className="mt-2 text-xs text-white/50">{c.ctaNote}</p>

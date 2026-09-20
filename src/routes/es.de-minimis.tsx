@@ -3,19 +3,31 @@ import { DeMinimisPage } from "@/components/deminimis/DeMinimisPage";
 import { dmChrome } from "@/lib/deminimis-data";
 
 const LANG = "es" as const;
-const LANGS = ["en","ru","de","it","es","zh","pt","hi","fr"] as const;
+const LANGS = ["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr", "ar"] as const;
 
 export const Route = createFileRoute("/es/de-minimis")({
   head: () => {
     const c = dmChrome[LANG];
     const url = "https://acciowork.pro/es/de-minimis";
-    const alternates = LANGS.map((l) => ({ rel: "alternate", hrefLang: l as string, href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/de-minimis` }));
-    alternates.push({ rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/de-minimis" });
+    const alternates = LANGS.map((l) => ({
+      rel: "alternate",
+      hrefLang: l as string,
+      href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/de-minimis`,
+    }));
+    alternates.push({
+      rel: "alternate",
+      hrefLang: "x-default",
+      href: "https://acciowork.pro/de-minimis",
+    });
     return {
       meta: [
         { title: c.metaTitle },
         { name: "description", content: c.metaDesc },
-        { name: "keywords", content: "de minimis 2026, importing after de minimis, tariff strategy, cross border ecommerce, alternate sourcing origin" },
+        {
+          name: "keywords",
+          content:
+            "de minimis 2026, importing after de minimis, tariff strategy, cross border ecommerce, alternate sourcing origin",
+        },
         { property: "og:locale", content: "es_ES" },
         { property: "og:title", content: c.metaTitle },
         { property: "og:description", content: c.metaDesc },
@@ -32,7 +44,22 @@ export const Route = createFileRoute("/es/de-minimis")({
       ],
       links: [{ rel: "canonical", href: url }, ...alternates],
       scripts: [
-        { type: "application/ld+json", children: JSON.stringify({ "@context":"https://schema.org","@type":"BreadcrumbList", itemListElement:[{"@type":"ListItem",position:1,name:"Accio Work",item:"https://acciowork.pro/es/"},{"@type":"ListItem",position:2,name:c.h1,item:url}] }) },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Accio Work",
+                item: "https://acciowork.pro/es/",
+              },
+              { "@type": "ListItem", position: 2, name: c.h1, item: url },
+            ],
+          }),
+        },
       ],
     };
   },
