@@ -326,7 +326,7 @@ function Navbar() {
     { href: eventsHref, label: t.nav.events },
   ];
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/85 backdrop-blur-md">
+    <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/85 pt-[env(safe-area-inset-top,0px)] backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-[1280px] items-center justify-between px-6">
         <div className="flex items-center gap-10">
           <a href="#top" className="flex items-center">
@@ -2254,7 +2254,7 @@ function MobileStickyCta() {
   }, []);
   return (
     <div
-      className={`fixed inset-x-0 bottom-0 z-40 border-t border-white/12 bg-[#0a1120]/95 px-4 py-3 backdrop-blur transition-transform duration-300 md:hidden ${
+      className={`fixed inset-x-0 bottom-0 z-40 border-t border-white/12 bg-[#0a1120]/95 px-4 pt-3 pb-[calc(env(safe-area-inset-bottom,0px)+0.75rem)] backdrop-blur transition-transform duration-300 md:hidden ${
         show ? "translate-y-0" : "translate-y-full"
       }`}
     >
