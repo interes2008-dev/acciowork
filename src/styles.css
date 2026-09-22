@@ -860,3 +860,33 @@
   display: inline-block;
   transform: scaleX(-1);
 }
+
+/* Pricing CTA light sweep */
+.cta-shine::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 70%
+  );
+  transform: translateX(-120%);
+  animation: cta-shine 3.2s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes cta-shine {
+  0%,
+  55% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cta-shine::after {
+    animation: none;
+  }
+}

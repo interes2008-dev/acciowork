@@ -111,7 +111,7 @@ export const ucChrome: Record<UcLang, UcChrome> = {
     hubTitle: "Was du mit Accio Work machen kannst",
     hubIntro:
       "Accio Work ist ein AI Agent, der echte Arbeit von Anfang bis Ende erledigt. Wähle die Aufgabe, die deiner am nächsten kommt, und sieh, wie er Sourcing, Recherche, Content und Automatisierung meistert.",
-    hubMetaTitle: "Accio Work Anwendungsfälle | Sourcing, Recherche, Content, Automatisierung",
+    hubMetaTitle: "Accio Work Anwendungsfälle | Sourcing, Content und mehr",
     hubMetaDesc:
       "Sieh, was Accio Work für Dropshipping, Lieferantensuche, Content, Marktforschung, Automatisierung und eigene Tools leistet. Gratisplan, keine Karte.",
   },
@@ -149,9 +149,9 @@ export const ucChrome: Record<UcLang, UcChrome> = {
     hubTitle: "Qué puedes hacer con Accio Work",
     hubIntro:
       "Accio Work es un agente de IA que ejecuta trabajo real de principio a fin. Elige la tarea más cercana a la tuya y mira cómo maneja sourcing, investigación, contenido y automatización.",
-    hubMetaTitle: "Casos de uso de Accio Work | Sourcing, investigación, contenido, automatización",
+    hubMetaTitle: "Casos de uso de Accio Work | Sourcing, contenido y más",
     hubMetaDesc:
-      "Mira qué hace Accio Work para dropshipping, sourcing de proveedores, contenido, investigación de mercado, automatización y herramientas a medida. Plan gratis, sin tarjeta.",
+      "Qué hace Accio Work en dropshipping, sourcing, contenido, estudios de mercado, automatización y herramientas a medida. Plan gratis, sin tarjeta.",
   },
   zh: {
     kicker: "使用场景",
@@ -225,9 +225,9 @@ export const ucChrome: Record<UcLang, UcChrome> = {
     hubTitle: "Ce que vous pouvez faire avec Accio Work",
     hubIntro:
       "Accio Work est un agent IA qui mène un vrai travail de bout en bout. Choisissez la tâche la plus proche de la vôtre et voyez comment il gère le sourcing, la recherche, le contenu et l'automatisation.",
-    hubMetaTitle: "Cas d'usage d'Accio Work | Sourcing, recherche, contenu, automatisation",
+    hubMetaTitle: "Cas d'usage d'Accio Work | Sourcing, contenu et plus",
     hubMetaDesc:
-      "Voyez ce qu'Accio Work fait pour le dropshipping, le sourcing fournisseurs, le contenu, l'étude de marché, l'automatisation et les outils sur mesure. Offre gratuite, sans carte.",
+      "Ce qu'Accio Work fait pour le dropshipping, le sourcing, le contenu, l'étude de marché, l'automatisation et les outils sur mesure. Gratuit, sans carte.",
   },
 };
 
@@ -333,7 +333,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       slug: "content",
       name: "Accio Work للمحتوى والتسويق",
       tagline: "صفحات هبوط ونصوص منتجات ومنشورات، تُنشر وفق جدول",
-      metaTitle: "Accio Work للمحتوى والتسويق | محتوى تجارة إلكترونية بالذكاء الاصطناعي",
+      metaTitle: "محتوى تجارة إلكترونية بالذكاء الاصطناعي | Accio Work",
       metaDescription:
         "محتوى التسويق سير لا يتوقّف. يكتب Accio Work صفحة الهبوط وبطاقات المنتجات والمنشورات الاجتماعية، ثم يجدولها، لتبقى قنواتك حيّة دون أن تلازم لوحة المفاتيح.",
       h1: "Accio Work للمحتوى والتسويق",
@@ -1333,7 +1333,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       slug: "automation",
       name: "Accio Work für Workflow Automatisierung",
       tagline: "Wiederkehrende Aufgaben, die der Agent planmäßig ausführt",
-      metaTitle: "Accio Work für Workflow Automatisierung | AI Workflow Automatisierung",
+      metaTitle: "Workflow-Automatisierung mit KI | Accio Work",
       metaDescription:
         "Die Aufgaben, die deine Woche fressen, sind meist jedes Mal gleich. Accio Work macht daraus Automatisierungen, die planmäßig und über deine bestehenden Apps",
       h1: "Accio Work für Workflow Automatisierung",
@@ -1659,7 +1659,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       slug: "automation",
       name: "Accio Work per l'automazione dei flussi",
       tagline: "Attività ripetitive eseguite dall'agente su pianificazione",
-      metaTitle: "Accio Work per l'automazione dei flussi | automazione dei flussi con AI",
+      metaTitle: "Automazione dei flussi con AI | Accio Work",
       metaDescription:
         "I compiti che divorano la settimana sono di solito sempre gli stessi. Accio Work li trasforma in automazioni, che girano su pianificazione e tra le app che",
       h1: "Accio Work per l'automazione dei flussi",
@@ -1823,7 +1823,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       slug: "sourcing",
       name: "Accio Work para sourcing de proveedores",
       tagline: "Proveedores verificados y consultas enviadas, sin idas y vueltas",
-      metaTitle: "Accio Work para sourcing de proveedores | sourcing de proveedores con IA",
+      metaTitle: "Sourcing de proveedores con IA | Accio Work",
       metaDescription:
         "El sourcing es lento porque todo es manual, buscar, comparar, escribir, perseguir. Accio Work hace el trabajo pesado, muestra proveedores verificados y",
       h1: "Accio Work para sourcing de proveedores",
@@ -1877,7 +1877,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       slug: "content",
       name: "Accio Work para contenido y marketing",
       tagline: "Landing pages, textos de producto y posts, publicados según agenda",
-      metaTitle: "Accio Work para contenido y marketing | contenido con IA para e-commerce",
+      metaTitle: "Contenido con IA para e-commerce | Accio Work",
       metaDescription:
         "El contenido de marketing es una cinta sin fin. Accio Work escribe la landing page, las fichas de producto y los posts, y luego los programa, para que tus",
       h1: "Accio Work para contenido y marketing",
@@ -1931,7 +1931,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       slug: "market-research",
       name: "Accio Work para investigación de mercado",
       tagline: "Competidores, demanda y precios, leídos por ti",
-      metaTitle: "Accio Work para investigación de mercado | investigación de mercado con IA",
+      metaTitle: "Investigación de mercado con IA | Accio Work",
       metaDescription:
         "Las buenas decisiones empiezan con una lectura clara del mercado. Accio Work reúne movimientos de la competencia, señales de demanda y precios, y te entrega",
       h1: "Accio Work para investigación de mercado",
@@ -1985,7 +1985,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       slug: "automation",
       name: "Accio Work para automatización de flujos",
       tagline: "Tareas repetitivas que el agente ejecuta según agenda",
-      metaTitle: "Accio Work para automatización de flujos | automatización de flujos con IA",
+      metaTitle: "Automatización de flujos con IA | Accio Work",
       metaDescription:
         "Las tareas que se comen tu semana suelen ser las mismas. Accio Work las convierte en automatizaciones, que corren según agenda y entre las apps que ya usas",
       h1: "Accio Work para automatización de flujos",
@@ -2443,7 +2443,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       slug: "sourcing",
       name: "Accio Work para sourcing de fornecedores",
       tagline: "Fornecedores verificados e consultas enviadas, sem idas e vindas",
-      metaTitle: "Accio Work para sourcing de fornecedores | sourcing de fornecedores com IA",
+      metaTitle: "Sourcing de fornecedores com IA | Accio Work",
       metaDescription:
         "O sourcing é lento porque é tudo manual, buscar, comparar, escrever, cobrar. O Accio Work faz o trabalho pesado, mostra fornecedores verificados e redige o",
       h1: "Accio Work para sourcing de fornecedores",
@@ -2497,7 +2497,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       slug: "content",
       name: "Accio Work para conteúdo e marketing",
       tagline: "Landing pages, textos de produto e posts, publicados no horário",
-      metaTitle: "Accio Work para conteúdo e marketing | conteúdo com IA para e-commerce",
+      metaTitle: "Conteúdo com IA para e-commerce | Accio Work",
       metaDescription:
         "Conteúdo de marketing é uma esteira. O Accio Work escreve a landing page, as fichas de produto e os posts, e depois agenda tudo, para seus canais seguirem",
       h1: "Accio Work para conteúdo e marketing",
@@ -2659,7 +2659,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       slug: "custom-tools",
       name: "Accio Work para ferramentas sob medida",
       tagline: "Pequenas ferramentas internas, criadas ao descrevê-las",
-      metaTitle: "Accio Work para ferramentas sob medida | ferramentas sob medida com IA",
+      metaTitle: "Ferramentas sob medida com IA | Accio Work",
       metaDescription:
         "Às vezes a ferramenta de que você precisa ainda não existe. O Accio Work cria pequenas ferramentas internas a partir de uma descrição simples, para você ter",
       h1: "Accio Work para ferramentas sob medida",
@@ -3085,7 +3085,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       slug: "sourcing",
       name: "Accio Work pour le sourcing fournisseurs",
       tagline: "Fournisseurs vérifiés et demandes envoyées, sans allers-retours",
-      metaTitle: "Accio Work pour le sourcing fournisseurs | sourcing fournisseurs par IA",
+      metaTitle: "Sourcing fournisseurs par IA | Accio Work",
       metaDescription:
         "Le sourcing est lent parce que tout est manuel, chercher, comparer, écrire, relancer. Accio Work fait le gros du travail, fait remonter des fournisseurs",
       h1: "Accio Work pour le sourcing fournisseurs",
@@ -3139,7 +3139,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       slug: "content",
       name: "Accio Work pour le contenu et le marketing",
       tagline: "Pages de destination, textes produit et posts, publiés selon le planning",
-      metaTitle: "Accio Work pour le contenu et le marketing | contenu IA pour l'e-commerce",
+      metaTitle: "Contenu IA pour l'e-commerce | Accio Work",
       metaDescription:
         "Le contenu marketing est un tapis roulant. Accio Work écrit la page de destination, les fiches produit et les posts sociaux, puis les programme, pour que vos",
       h1: "Accio Work pour le contenu et le marketing",
@@ -3247,7 +3247,7 @@ export const ucPages: Record<UcLang, Record<string, UcPage>> = {
       slug: "automation",
       name: "Accio Work pour l'automatisation des flux",
       tagline: "Des tâches répétitives que l'agent exécute selon un planning",
-      metaTitle: "Accio Work pour l'automatisation des flux | automatisation des flux par IA",
+      metaTitle: "Automatisation des flux par IA | Accio Work",
       metaDescription:
         "Les tâches qui dévorent votre semaine sont souvent les mêmes. Accio Work les transforme en automatisations, qui tournent selon un planning et à travers les",
       h1: "Accio Work pour l'automatisation des flux",

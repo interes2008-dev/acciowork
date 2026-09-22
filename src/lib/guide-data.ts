@@ -105,9 +105,9 @@ export const gdChrome: Record<GdLang, GdChrome> = {
     hubTitle: "Erste Schritte mit Accio Work",
     hubIntro:
       "Neu bei Accio Work? Diese kurzen Anleitungen führen dich von der Anmeldung zum ersten fertigen Ergebnis und weiter zum Verbinden deiner Tools und zum Automatisieren wiederkehrender Arbeit.",
-    hubMetaTitle: "Accio Work Anleitungen | Start, erste Aufgabe, Apps, Automatisierungen",
+    hubMetaTitle: "Accio Work Anleitungen | Start, erste Aufgabe, Apps",
     hubMetaDesc:
-      "Schritt für Schritt Anleitungen für Accio Work: starten, erste Aufgabe ausführen, Apps und Kanäle verbinden, geplante Automatisierungen einrichten. Gratisplan, keine Karte.",
+      "Anleitungen für Accio Work: starten, erste Aufgabe ausführen, Apps verbinden und geplante Automatisierungen einrichten. Gratisplan, keine Karte.",
   },
   it: {
     kicker: "Guida",
@@ -213,9 +213,9 @@ export const gdChrome: Record<GdLang, GdChrome> = {
     hubTitle: "Bien démarrer avec Accio Work",
     hubIntro:
       "Nouveau sur Accio Work ? Ces guides courts vous mènent de l'inscription au premier résultat terminé, puis à la connexion de vos outils et à l'automatisation du travail qui se répète.",
-    hubMetaTitle: "Guides Accio Work | Démarrer, première tâche, applis, automatisations",
+    hubMetaTitle: "Guides Accio Work | Démarrer, première tâche, applis",
     hubMetaDesc:
-      "Guides pas à pas pour Accio Work : démarrer, lancer votre première tâche, connecter applis et canaux, configurer des automatisations planifiées. Offre gratuite, sans carte.",
+      "Guides Accio Work pas à pas : démarrer, lancer une première tâche, connecter vos applis, planifier des automatisations. Gratuit, sans carte.",
   },
 };
 

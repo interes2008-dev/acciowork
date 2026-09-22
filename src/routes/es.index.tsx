@@ -5,7 +5,7 @@ export const Route = createFileRoute("/es/")({
   component: IndexEs,
   head: () => ({
     meta: [
-      { title: "Accio Work | Plataforma de IA para sourcing y automatización de negocio" },
+      { title: "Accio Work | Plataforma de IA para sourcing y automatización" },
       {
         name: "description",
         content:

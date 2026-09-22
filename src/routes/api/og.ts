@@ -7,10 +7,10 @@ import { validateQuizSearch, quizOg } from "@/lib/quiz-og";
 import { validateScSearch, scOg } from "@/lib/scorecard-og";
 import { validateChSearch, chOg } from "@/lib/checklist-og";
 
-const LANGS = ["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr"] as const;
+const LANGS = ["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr", "ar"] as const;
 type Lang = (typeof LANGS)[number];
 
-// Dynamic image font covers Latin + Cyrillic. zh/hi fall back to the static
+// Dynamic image font covers Latin + Cyrillic. zh/hi/ar fall back to the static
 // branded OG (their text title/description stay fully localized).
 const IMG_LANGS = new Set(["en", "ru", "de", "it", "es", "pt", "fr"]);
 

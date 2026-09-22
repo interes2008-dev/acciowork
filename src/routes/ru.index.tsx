@@ -5,7 +5,7 @@ export const Route = createFileRoute("/ru/")({
   component: IndexRu,
   head: () => ({
     meta: [
-      { title: "Accio Work | AI-платформа для поиска поставщиков и автоматизации бизнеса" },
+      { title: "Accio Work | ИИ-платформа для поиска поставщиков и автоматизации" },
       {
         name: "description",
         content:
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/ru/")({
       { property: "og:locale:alternate", content: "en_US" },
       {
         property: "og:title",
-        content: "Accio Work | AI-платформа для поиска поставщиков и автоматизации бизнеса",
+        content: "Accio Work | ИИ-платформа для поиска поставщиков и автоматизации",
       },
       {
         property: "og:description",

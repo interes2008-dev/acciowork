@@ -30,7 +30,7 @@ import globalProductsImageZh from "@/assets/accio-story/accio-global-products-zh
 import marketInsightsImageZh from "@/assets/accio-story/accio-market-insights-zh.png.asset.json";
 import verifiedSuppliersImageZh from "@/assets/accio-story/accio-verified-suppliers-zh.png.asset.json";
 import voiceSearchImageZh from "@/assets/accio-story/accio-voice-search-zh.png.asset.json";
-import { ChevronDown, Check, Globe, Menu, Sparkles, X } from "lucide-react";
+import { ArrowRight, ChevronDown, Check, Globe, Menu, Sparkles, X } from "lucide-react";
 import { ThemeToggle } from "@/components/common/ThemeToggle";
 import { I18nProvider, useI18n, renderHighlighted } from "@/lib/i18n";
 import { rvPress, rvChrome } from "@/lib/reviews-data";
@@ -1669,83 +1669,143 @@ function CompareChat() {
 /* ---------- Pricing ---------- */
 function Pricing() {
   const { t } = useI18n();
+  const pr = t.pricing;
   return (
-    <section id="pricing" className="scroll-mt-24 bg-mint-50 py-24 sm:py-32">
-      <div className="mx-auto max-w-[1160px] px-6">
-        <h2 className="text-center text-[28px] font-bold tracking-tight text-foreground sm:text-[40px]">
-          {t.pricing.heading}
+    <section
+      id="pricing"
+      className="relative scroll-mt-24 overflow-hidden bg-mint-50 py-24 sm:py-32"
+    >
+      <div
+        aria-hidden
+        className="pointer-events-none absolute left-1/2 top-40 h-[420px] w-[720px] max-w-full -translate-x-1/2 rounded-full bg-[#34d399]/10 blur-3xl"
+      />
+      <div className="relative mx-auto max-w-[1160px] px-6">
+        <div className="flex justify-center">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-[#34d399]/30 bg-[#34d399]/10 px-3 py-1 text-[12px] font-bold uppercase tracking-wider text-[#10b981]">
+            <Sparkles className="h-3.5 w-3.5" />
+            {pr.eyebrow}
+          </span>
+        </div>
+        <h2 className="mx-auto mt-5 max-w-3xl text-balance text-center text-[28px] font-bold tracking-tight text-foreground sm:text-[40px]">
+          {pr.heading}
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-center text-[16px] leading-relaxed text-muted-foreground sm:text-[18px]">
-          {t.pricing.subheading}
+          {pr.subheading}
         </p>
-        <div className="mt-14 grid items-stretch gap-6 lg:grid-cols-3">
-          {t.pricing.plans.map((p) => (
-            <div
-              key={p.name}
-              className={`relative flex flex-col rounded-[28px] p-8 ${
-                p.highlight
-                  ? "bg-[#0a1120] text-white shadow-elegant ring-2 ring-[#34d399]"
-                  : "border border-border/70 bg-card text-foreground shadow-card"
-              }`}
-            >
-              {p.highlight && (
-                <span className="absolute -top-3 start-8 rounded-full bg-[#34d399] px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white">
-                  ★
-                </span>
-              )}
-              <h3
-                className={`text-[20px] font-bold ${p.highlight ? "text-white" : "text-foreground"}`}
-              >
-                {p.name}
-              </h3>
-              <div className="mt-4 flex items-baseline gap-2">
-                <span className="text-[34px] font-extrabold tracking-tight">{p.price}</span>
-                <span
-                  className={`text-[13px] ${p.highlight ? "text-white/60" : "text-muted-foreground"}`}
-                >
-                  {p.priceNote}
-                </span>
-              </div>
-              <p
-                className={`mt-3 text-[14.5px] leading-relaxed ${p.highlight ? "text-white/80" : "text-muted-foreground"}`}
-              >
-                {p.tagline}
-              </p>
-              <div className="my-6 h-px w-full bg-current opacity-10" />
-              <p
-                className={`mb-3 text-[12px] font-bold uppercase tracking-wider ${p.highlight ? "text-white/50" : "text-foreground/40"}`}
-              >
-                {t.pricing.perksTitle}
-              </p>
-              <ul className="flex flex-col gap-3">
-                {p.features.map((f) => (
-                  <li key={f} className="flex items-start gap-2.5">
-                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#34d399]" />
-                    <span
-                      className={`text-[14.5px] leading-snug ${p.highlight ? "text-white/90" : "text-foreground/85"}`}
-                    >
-                      {f}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-              <a
-                href={REFERRAL_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`mt-8 inline-flex h-12 items-center justify-center rounded-full text-[15px] font-semibold transition hover:scale-[1.02] ${
-                  p.highlight
-                    ? "bg-[#34d399] text-white hover:brightness-110"
-                    : "bg-[#34d399] text-white hover:brightness-110"
+
+        <div className="mt-16 grid items-stretch gap-6 lg:grid-cols-3">
+          {pr.plans.map((p) => {
+            const hi = !!p.highlight;
+            const numeric = /\d/.test(p.price);
+            return (
+              <div
+                key={p.name}
+                className={`group relative flex flex-col rounded-[28px] p-8 transition duration-300 hover:-translate-y-1 ${
+                  hi
+                    ? "bg-[#0a1120] text-white shadow-[0_24px_70px_-20px_rgba(52,211,153,0.45)] ring-2 ring-[#34d399] lg:-my-3 lg:py-11"
+                    : "border border-border/70 bg-card text-foreground shadow-card hover:border-[#34d399]/40"
                 }`}
               >
-                {p.cta}
-              </a>
-            </div>
-          ))}
+                {hi && (
+                  <div
+                    aria-hidden
+                    className="pointer-events-none absolute inset-0 rounded-[28px] bg-[radial-gradient(120%_60%_at_50%_0%,rgba(52,211,153,0.18),transparent_60%)]"
+                  />
+                )}
+                {p.badge && (
+                  <span className="absolute -top-3.5 start-8 inline-flex items-center gap-1.5 rounded-full bg-[#34d399] px-3.5 py-1.5 text-[12px] font-bold uppercase tracking-wider text-[#04130c] shadow-lg shadow-[#34d399]/30">
+                    <Sparkles className="h-3.5 w-3.5" />
+                    {p.badge}
+                  </span>
+                )}
+                <div className="relative flex flex-1 flex-col">
+                  <h3 className={`text-[20px] font-bold ${hi ? "text-white" : "text-foreground"}`}>
+                    {p.name}
+                  </h3>
+                  <div className="mt-4">
+                    <div
+                      className={`font-extrabold leading-[1.05] tracking-tight ${
+                        numeric ? "text-[44px]" : "text-[30px] sm:text-[32px]"
+                      }`}
+                    >
+                      {p.price}
+                    </div>
+                    <div
+                      className={`mt-1.5 text-[13px] ${hi ? "text-[#6ee7b7]" : "text-[#10b981]"}`}
+                    >
+                      {p.priceNote}
+                    </div>
+                  </div>
+                  <p
+                    className={`mt-4 text-[14.5px] leading-relaxed ${hi ? "text-white/80" : "text-muted-foreground"}`}
+                  >
+                    {p.tagline}
+                  </p>
+                  <div className="my-6 h-px w-full bg-current opacity-10" />
+                  <p
+                    className={`mb-3 text-[12px] font-bold uppercase tracking-wider ${hi ? "text-white/50" : "text-foreground/40"}`}
+                  >
+                    {pr.perksTitle}
+                  </p>
+                  <ul className="flex flex-col gap-3">
+                    {p.features.map((f) => (
+                      <li key={f} className="flex items-start gap-2.5">
+                        <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#34d399]" />
+                        <span
+                          className={`text-[14.5px] leading-snug ${hi ? "text-white/90" : "text-foreground/85"}`}
+                        >
+                          {f}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-auto pt-7">
+                    <div
+                      className={`flex items-start gap-2.5 rounded-2xl border border-dashed px-4 py-3 text-[13.5px] leading-snug ${
+                        hi
+                          ? "border-[#34d399]/45 bg-white/[0.04] text-white/90"
+                          : "border-[#34d399]/40 bg-[#34d399]/[0.07] text-foreground/85"
+                      }`}
+                    >
+                      <Sparkles className="mt-0.5 h-4 w-4 shrink-0 text-[#34d399]" />
+                      <span>{p.unlock}</span>
+                    </div>
+                    <a
+                      href={REFERRAL_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`cta-shine group/cta relative mt-5 inline-flex h-12 w-full items-center justify-center gap-2 overflow-hidden rounded-full text-[15px] font-semibold transition hover:scale-[1.02] hover:brightness-110 ${
+                        hi ? "bg-[#34d399] text-[#04130c]" : "bg-[#34d399] text-white"
+                      }`}
+                    >
+                      <span className="relative">{p.cta}</span>
+                      <ArrowRight className="rtl-flip relative h-4 w-4 transition-transform group-hover/cta:translate-x-0.5" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
+
+        <div className="mx-auto mt-14 max-w-4xl rounded-[28px] border border-border/70 bg-card/70 p-6 shadow-card backdrop-blur sm:p-8">
+          <p className="text-center text-[12px] font-bold uppercase tracking-wider text-foreground/45">
+            {pr.stepsTitle}
+          </p>
+          <ol className="mt-5 grid gap-4 sm:grid-cols-3">
+            {pr.steps.map((st, i) => (
+              <li key={st} className="flex items-start gap-3">
+                <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-[#34d399]/15 text-[13px] font-bold text-[#10b981]">
+                  {i + 1}
+                </span>
+                <span className="pt-1 text-[14px] leading-snug text-foreground/85">{st}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+
         <p className="mx-auto mt-8 max-w-2xl text-center text-[13px] leading-relaxed text-muted-foreground">
-          {t.pricing.note}
+          {pr.note}
         </p>
       </div>
     </section>

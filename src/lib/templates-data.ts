@@ -142,7 +142,7 @@ export const tplChrome: Record<TplLang, TplChrome> = {
     ctaNote: "Plan gratuito, sin tarjeta",
     disclaimer:
       "Las plantillas son un punto de partida. Ajústalas a tu producto, mercado y proveedor.",
-    metaTitle: "Plantillas de correo para proveedores y lista de verificación | Accio Work",
+    metaTitle: "Plantillas de correo y checklist de proveedores | Accio Work",
     metaDesc:
       "Plantillas de correo gratis listas para copiar para contactar y negociar con proveedores, más una lista de verificación. Rellena los corchetes y envía.",
   },
