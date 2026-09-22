@@ -406,7 +406,10 @@ export function EcomWorkspace({ lang }: { lang: Lang }) {
       />
       <div className="relative mx-auto max-w-[1100px] text-center">
         <span className="inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-1.5 text-sm font-semibold tracking-wide text-[#34d399] shadow-sm">
-          <span aria-hidden>→</span> {d.badge}
+          <span aria-hidden className="rtl-flip">
+            →
+          </span>{" "}
+          {d.badge}
         </span>
         <h2 className="mt-6 text-[32px] font-bold leading-[1.15] tracking-tight md:text-[48px]">
           {d.title} <span className="text-[#34d399]">{d.titleAccent}</span>

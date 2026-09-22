@@ -1722,7 +1722,7 @@ function LangSwitcher({ lang }: { lang: Lang }) {
     document.addEventListener("mousedown", onDoc);
     return () => document.removeEventListener("mousedown", onDoc);
   }, [open]);
-  const langs: Lang[] = ["en", "ru", "de", "it", "es", "pt", "zh", "hi"];
+  const langs: Lang[] = ["en", "ru", "de", "it", "es", "pt", "zh", "hi", "fr", "ar"];
   return (
     <div ref={rootRef} className="relative">
       <button
@@ -2031,7 +2031,7 @@ function Compare({ d }: { d: EventDict }) {
               d={d}
             />
           </Reveal>
-          <div className="pointer-events-none absolute start-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 lg:block">
+          <div className="pointer-events-none absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 lg:block">
             <span className="flex h-12 w-12 items-center justify-center rounded-full border border-border bg-card text-[14px] font-bold text-foreground/55 shadow-sm">
               vs
             </span>

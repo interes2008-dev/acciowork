@@ -236,7 +236,7 @@ function NavDropdown({
         />
       </button>
       {open && (
-        <div role="menu" className="absolute start-1/2 top-full z-50 w-52 -translate-x-1/2 pt-2">
+        <div role="menu" className="absolute left-1/2 top-full z-50 w-52 -translate-x-1/2 pt-2">
           <div className="overflow-hidden rounded-2xl border border-border/70 bg-popover p-1.5 shadow-elegant">
             {items.map((it) => (
               <a
@@ -606,7 +606,7 @@ function BusinessNeeds() {
                   {content.extraYou}
                 </span>
               </div>
-              <span className="text-[#34d399]">→</span>
+              <span className="rtl-flip text-[#34d399]">→</span>
               <div className="flex flex-col gap-1">
                 <span className="text-[12px] font-bold uppercase tracking-wider text-[#34d399]">
                   AI
@@ -721,7 +721,7 @@ function PlatformMockup() {
             <div className="h-6 w-6 rounded-full bg-gradient-to-br from-[#8B5CF6] to-[#EC4899]" />
           </div>
           <div className="grid h-14 place-items-center rounded-lg bg-white/[0.04] text-foreground/40">
-            →
+            <span className="rtl-flip">→</span>
           </div>
         </div>
       </div>
@@ -1348,6 +1348,76 @@ const AGENT_STORY_IMAGES_ZH = [
   autoRepliesImageZh.url,
 ];
 
+const AGENT_STORY_IMAGES_AR = [
+  "/img/accio-story/accio-design-ar.webp",
+  "/img/accio-story/accio-agent-workflow-ar.webp",
+  "/img/accio-story/accio-voice-search-ar.webp",
+  "/img/accio-story/accio-market-insights-ar.webp",
+  "/img/accio-story/accio-global-products-ar.webp",
+  "/img/accio-story/accio-verified-suppliers-ar.webp",
+  "/img/accio-story/accio-auto-replies-ar.webp",
+];
+
+const AGENT_STORY_IMAGES_DE = [
+  "/img/accio-story/accio-design-de.webp",
+  "/img/accio-story/accio-agent-workflow-de.webp",
+  "/img/accio-story/accio-voice-search-de.webp",
+  "/img/accio-story/accio-market-insights-de.webp",
+  "/img/accio-story/accio-global-products-de.webp",
+  "/img/accio-story/accio-verified-suppliers-de.webp",
+  "/img/accio-story/accio-auto-replies-de.webp",
+];
+
+const AGENT_STORY_IMAGES_IT = [
+  "/img/accio-story/accio-design-it.webp",
+  "/img/accio-story/accio-agent-workflow-it.webp",
+  "/img/accio-story/accio-voice-search-it.webp",
+  "/img/accio-story/accio-market-insights-it.webp",
+  "/img/accio-story/accio-global-products-it.webp",
+  "/img/accio-story/accio-verified-suppliers-it.webp",
+  "/img/accio-story/accio-auto-replies-it.webp",
+];
+
+const AGENT_STORY_IMAGES_PT = [
+  "/img/accio-story/accio-design-pt.webp",
+  "/img/accio-story/accio-agent-workflow-pt.webp",
+  "/img/accio-story/accio-voice-search-pt.webp",
+  "/img/accio-story/accio-market-insights-pt.webp",
+  "/img/accio-story/accio-global-products-pt.webp",
+  "/img/accio-story/accio-verified-suppliers-pt.webp",
+  "/img/accio-story/accio-auto-replies-pt.webp",
+];
+
+const AGENT_STORY_IMAGES_FR = [
+  "/img/accio-story/accio-design-fr.webp",
+  "/img/accio-story/accio-agent-workflow-fr.webp",
+  "/img/accio-story/accio-voice-search-fr.webp",
+  "/img/accio-story/accio-market-insights-fr.webp",
+  "/img/accio-story/accio-global-products-fr.webp",
+  "/img/accio-story/accio-verified-suppliers-fr.webp",
+  "/img/accio-story/accio-auto-replies-fr.webp",
+];
+
+const AGENT_STORY_IMAGES_ES = [
+  "/img/accio-story/accio-design-es.webp",
+  "/img/accio-story/accio-agent-workflow-es.webp",
+  "/img/accio-story/accio-voice-search-es.webp",
+  "/img/accio-story/accio-market-insights-es.webp",
+  "/img/accio-story/accio-global-products-es.webp",
+  "/img/accio-story/accio-verified-suppliers-es.webp",
+  "/img/accio-story/accio-auto-replies-es.webp",
+];
+
+const AGENT_STORY_IMAGES_HI = [
+  "/img/accio-story/accio-design-hi.webp",
+  "/img/accio-story/accio-agent-workflow-hi.webp",
+  "/img/accio-story/accio-voice-search-hi.webp",
+  "/img/accio-story/accio-market-insights-hi.webp",
+  "/img/accio-story/accio-global-products-hi.webp",
+  "/img/accio-story/accio-verified-suppliers-hi.webp",
+  "/img/accio-story/accio-auto-replies-hi.webp",
+];
+
 function AgentStoryImage({
   src,
   alt,
@@ -1386,7 +1456,21 @@ function AgentStory() {
       ? AGENT_STORY_IMAGES_RU
       : lang === "zh"
         ? AGENT_STORY_IMAGES_ZH
-        : AGENT_STORY_IMAGES_EN;
+        : lang === "ar"
+          ? AGENT_STORY_IMAGES_AR
+          : lang === "de"
+            ? AGENT_STORY_IMAGES_DE
+            : lang === "it"
+              ? AGENT_STORY_IMAGES_IT
+              : lang === "pt"
+                ? AGENT_STORY_IMAGES_PT
+                : lang === "fr"
+                  ? AGENT_STORY_IMAGES_FR
+                  : lang === "es"
+                    ? AGENT_STORY_IMAGES_ES
+                    : lang === "hi"
+                      ? AGENT_STORY_IMAGES_HI
+                      : AGENT_STORY_IMAGES_EN;
   const imageGroups = [
     [0, 1, 2],
     [3, 4],
@@ -1793,7 +1877,10 @@ function FaqRow({
               rel="noopener noreferrer"
               className="mt-4 inline-flex items-center gap-1.5 text-[15px] font-semibold text-[#34d399] hover:underline"
             >
-              {item.linkLabel} <span aria-hidden>→</span>
+              {item.linkLabel}{" "}
+              <span aria-hidden className="rtl-flip">
+                →
+              </span>
             </a>
           )}
         </div>
@@ -1943,7 +2030,7 @@ function DownloadButton() {
       {open && (
         <div
           role="menu"
-          className="absolute start-1/2 top-full z-50 mt-2 w-64 -translate-x-1/2 overflow-hidden rounded-2xl border border-border/70 bg-popover p-1.5 text-start shadow-elegant"
+          className="absolute left-1/2 top-full z-50 mt-2 w-64 -translate-x-1/2 overflow-hidden rounded-2xl border border-border/70 bg-popover p-1.5 text-start shadow-elegant"
         >
           {options.map((o, i) => (
             <a

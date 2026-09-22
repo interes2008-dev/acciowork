@@ -144,6 +144,7 @@ import { Route as ArBlogIndexRouteImport } from './routes/ar.blog.index'
 import { Route as ArBlogSlugRouteImport } from './routes/ar.blog.$slug'
 import { Route as ArCompareIndexRouteImport } from './routes/ar.compare.index'
 import { Route as ArCompareCompetitorRouteImport } from './routes/ar.compare.$competitor'
+import { Route as ArEventsFreeForeverRouteImport } from './routes/ar.events.free-forever'
 import { Route as ArForIndexRouteImport } from './routes/ar.for.index'
 import { Route as ArForUseCaseRouteImport } from './routes/ar.for.$useCase'
 import { Route as ArGuideIndexRouteImport } from './routes/ar.guide.index'
@@ -899,6 +900,11 @@ const ArCompareCompetitorRoute = ArCompareCompetitorRouteImport.update({
   path: '/compare/$competitor',
   getParentRoute: () => ArRoute,
 } as any)
+const ArEventsFreeForeverRoute = ArEventsFreeForeverRouteImport.update({
+  id: '/events/free-forever',
+  path: '/events/free-forever',
+  getParentRoute: () => ArRoute,
+} as any)
 const ArForIndexRoute = ArForIndexRouteImport.update({
   id: '/for/',
   path: '/for/',
@@ -1430,6 +1436,7 @@ export interface FileRoutesByFullPath {
   '/zh/': typeof ZhIndexRoute
   '/ar/blog/$slug': typeof ArBlogSlugRoute
   '/ar/compare/$competitor': typeof ArCompareCompetitorRoute
+  '/ar/events/free-forever': typeof ArEventsFreeForeverRoute
   '/ar/for/$useCase': typeof ArForUseCaseRoute
   '/ar/guide/$guide': typeof ArGuideGuideRoute
   '/de/blog/$slug': typeof DeBlogSlugRoute
@@ -1637,6 +1644,7 @@ export interface FileRoutesByTo {
   '/zh': typeof ZhIndexRoute
   '/ar/blog/$slug': typeof ArBlogSlugRoute
   '/ar/compare/$competitor': typeof ArCompareCompetitorRoute
+  '/ar/events/free-forever': typeof ArEventsFreeForeverRoute
   '/ar/for/$useCase': typeof ArForUseCaseRoute
   '/ar/guide/$guide': typeof ArGuideGuideRoute
   '/de/blog/$slug': typeof DeBlogSlugRoute
@@ -1854,6 +1862,7 @@ export interface FileRoutesById {
   '/zh/': typeof ZhIndexRoute
   '/ar/blog/$slug': typeof ArBlogSlugRoute
   '/ar/compare/$competitor': typeof ArCompareCompetitorRoute
+  '/ar/events/free-forever': typeof ArEventsFreeForeverRoute
   '/ar/for/$useCase': typeof ArForUseCaseRoute
   '/ar/guide/$guide': typeof ArGuideGuideRoute
   '/de/blog/$slug': typeof DeBlogSlugRoute
@@ -2072,6 +2081,7 @@ export interface FileRouteTypes {
     | '/zh/'
     | '/ar/blog/$slug'
     | '/ar/compare/$competitor'
+    | '/ar/events/free-forever'
     | '/ar/for/$useCase'
     | '/ar/guide/$guide'
     | '/de/blog/$slug'
@@ -2279,6 +2289,7 @@ export interface FileRouteTypes {
     | '/zh'
     | '/ar/blog/$slug'
     | '/ar/compare/$competitor'
+    | '/ar/events/free-forever'
     | '/ar/for/$useCase'
     | '/ar/guide/$guide'
     | '/de/blog/$slug'
@@ -2495,6 +2506,7 @@ export interface FileRouteTypes {
     | '/zh/'
     | '/ar/blog/$slug'
     | '/ar/compare/$competitor'
+    | '/ar/events/free-forever'
     | '/ar/for/$useCase'
     | '/ar/guide/$guide'
     | '/de/blog/$slug'
@@ -3563,6 +3575,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ArCompareCompetitorRouteImport
       parentRoute: typeof ArRoute
     }
+    '/ar/events/free-forever': {
+      id: '/ar/events/free-forever'
+      path: '/events/free-forever'
+      fullPath: '/ar/events/free-forever'
+      preLoaderRoute: typeof ArEventsFreeForeverRouteImport
+      parentRoute: typeof ArRoute
+    }
     '/ar/for/': {
       id: '/ar/for/'
       path: '/for'
@@ -4133,6 +4152,7 @@ interface ArRouteChildren {
   ArIndexRoute: typeof ArIndexRoute
   ArBlogSlugRoute: typeof ArBlogSlugRoute
   ArCompareCompetitorRoute: typeof ArCompareCompetitorRoute
+  ArEventsFreeForeverRoute: typeof ArEventsFreeForeverRoute
   ArForUseCaseRoute: typeof ArForUseCaseRoute
   ArGuideGuideRoute: typeof ArGuideGuideRoute
   ArBlogIndexRoute: typeof ArBlogIndexRoute
@@ -4155,6 +4175,7 @@ const ArRouteChildren: ArRouteChildren = {
   ArIndexRoute: ArIndexRoute,
   ArBlogSlugRoute: ArBlogSlugRoute,
   ArCompareCompetitorRoute: ArCompareCompetitorRoute,
+  ArEventsFreeForeverRoute: ArEventsFreeForeverRoute,
   ArForUseCaseRoute: ArForUseCaseRoute,
   ArGuideGuideRoute: ArGuideGuideRoute,
   ArBlogIndexRoute: ArBlogIndexRoute,

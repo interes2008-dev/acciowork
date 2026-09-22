@@ -168,7 +168,9 @@ export function BlogList({
                   {a.title}
                 </h2>
                 <p className="line-clamp-3 text-sm text-foreground/70">{a.description}</p>
-                <span className="mt-auto text-sm font-medium text-emerald-800">{copy.read} →</span>
+                <span className="mt-auto text-sm font-medium text-emerald-800">
+                  {copy.read} <span className="rtl-flip">→</span>
+                </span>
               </div>
             </a>
           ))}

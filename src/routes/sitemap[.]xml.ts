@@ -223,12 +223,12 @@ export const Route = createFileRoute("/sitemap.xml")({
           });
         }
 
-        for (const l of compareLangs) {
+        for (const l of arLangs) {
           entries.push({
             path: `${l}/events/free-forever`,
             changefreq: "monthly",
             priority: "0.6",
-            alternates: alts("/events/free-forever"),
+            alternates: arAlts("/events/free-forever"),
           });
         }
 
