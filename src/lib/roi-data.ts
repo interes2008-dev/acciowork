@@ -21,6 +21,7 @@ export interface RoiChrome {
   agent: string;
   punch: string;
   cta: string;
+  ctaShort: string;
   ctaNote: string;
   tryLine: string;
   disclaimer: string;
@@ -50,6 +51,7 @@ export const roiChrome: Record<RoiLang, RoiChrome> = {
     agent: "يأخذ الوكيل",
     punch: "أي نحو {days} يوماً في السنة يمكنك قضاؤها في النموّ بدل الكدح.",
     cta: "ابدأ مجاناً على Accio Work",
+    ctaShort: "ابدأ مجاناً",
     ctaNote: "باقة مجانية، بلا بطاقة",
     tryLine: "ضع عليه مهمة حقيقية وانظر بنفسك.",
     disclaimer:
@@ -85,6 +87,7 @@ export const roiChrome: Record<RoiLang, RoiChrome> = {
     agent: "Agent takes",
     punch: "That is about {days} days a year you could spend on growth instead of grind.",
     cta: "Start free on Accio Work",
+    ctaShort: "Start free",
     ctaNote: "Free plan, no card required",
     tryLine: "Put a real task on it and see for yourself.",
     disclaimer:
@@ -115,6 +118,7 @@ export const roiChrome: Record<RoiLang, RoiChrome> = {
     agent: "Берёт агент",
     punch: "Это около {days} дней в году, которые можно тратить на рост, а не на рутину.",
     cta: "Начать бесплатно в Accio Work",
+    ctaShort: "Начать бесплатно",
     ctaNote: "Бесплатный план, карта не нужна",
     tryLine: "Дайте ему реальную задачу и проверьте сами.",
     disclaimer:
@@ -150,6 +154,7 @@ export const roiChrome: Record<RoiLang, RoiChrome> = {
     agent: "Agent nimmt",
     punch: "Das sind rund {days} Tage im Jahr für Wachstum statt Kleinarbeit.",
     cta: "Kostenlos mit Accio Work starten",
+    ctaShort: "Kostenlos starten",
     ctaNote: "Kostenloser Plan, keine Karte nötig",
     tryLine: "Gib ihm eine echte Aufgabe und überzeug dich selbst.",
     disclaimer:
@@ -185,6 +190,7 @@ export const roiChrome: Record<RoiLang, RoiChrome> = {
     agent: "Prende l'agente",
     punch: "Sono circa {days} giorni all'anno da dedicare alla crescita invece che alla fatica.",
     cta: "Inizia gratis su Accio Work",
+    ctaShort: "Inizia gratis",
     ctaNote: "Piano gratuito, nessuna carta richiesta",
     tryLine: "Dagli un compito vero e verifica di persona.",
     disclaimer:
@@ -220,6 +226,7 @@ export const roiChrome: Record<RoiLang, RoiChrome> = {
     agent: "Toma el agente",
     punch: "Son unos {days} días al año para crecer en vez de batallar.",
     cta: "Empieza gratis en Accio Work",
+    ctaShort: "Empieza gratis",
     ctaNote: "Plan gratuito, sin tarjeta",
     tryLine: "Ponle una tarea real y compruébalo.",
     disclaimer:
@@ -250,6 +257,7 @@ export const roiChrome: Record<RoiLang, RoiChrome> = {
     agent: "智能体承担",
     punch: "大约相当于每年 {days} 天，可以用来做增长而不是琐事。",
     cta: "免费开始使用 Accio Work",
+    ctaShort: "免费开始",
     ctaNote: "免费方案，无需绑定银行卡",
     tryLine: "给它一个真实任务，自己看看效果。",
     disclaimer:
@@ -285,6 +293,7 @@ export const roiChrome: Record<RoiLang, RoiChrome> = {
     agent: "Agente assume",
     punch: "São cerca de {days} dias por ano para crescer em vez de se desgastar.",
     cta: "Comece grátis no Accio Work",
+    ctaShort: "Comece grátis",
     ctaNote: "Plano gratuito, sem cartão",
     tryLine: "Dê a ele uma tarefa real e comprove.",
     disclaimer:
@@ -315,6 +324,7 @@ export const roiChrome: Record<RoiLang, RoiChrome> = {
     agent: "एजेंट लेता है",
     punch: "यानी साल में लगभग {days} दिन, जो रगड़ के बजाय ग्रोथ पर लगा सकते हैं।",
     cta: "Accio Work मुफ्त में शुरू करें",
+    ctaShort: "मुफ्त शुरू करें",
     ctaNote: "मुफ्त प्लान, कार्ड की जरूरत नहीं",
     tryLine: "इसे एक असली काम दें और खुद देखें।",
     disclaimer:
@@ -350,6 +360,7 @@ export const roiChrome: Record<RoiLang, RoiChrome> = {
     agent: "L'agent prend",
     punch: "Soit environ {days} jours par an à consacrer à la croissance plutôt qu'à la corvée.",
     cta: "Commencer gratuitement sur Accio Work",
+    ctaShort: "Commencer",
     ctaNote: "Offre gratuite, sans carte",
     tryLine: "Donnez-lui une vraie tâche et jugez par vous-même.",
     disclaimer:
