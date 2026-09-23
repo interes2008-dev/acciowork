@@ -126,7 +126,8 @@ function Shell({ lang, children }: { lang: RoiLang; children: ReactNode }) {
               rel="noopener noreferrer nofollow"
               className="whitespace-nowrap rounded-full bg-[#34d399] px-3 py-2 text-[13px] font-semibold text-white transition hover:brightness-110 sm:px-4 sm:text-sm"
             >
-              {c.cta}
+              <span className="sm:hidden">{c.ctaShort}</span>
+              <span className="hidden sm:inline">{c.cta}</span>
             </a>
           </div>
         </div>
@@ -237,7 +238,7 @@ export function RoiCalculator({ lang }: { lang: RoiLang }) {
         <p className="mb-2 inline-flex items-center gap-1.5 text-sm font-semibold uppercase tracking-wide text-[#34d399]">
           <Sparkles className="h-4 w-4" /> {c.kicker}
         </p>
-        <h1 className="whitespace-nowrap text-3xl font-bold tracking-tight sm:text-[40px] sm:leading-tight">
+        <h1 className="text-[26px] font-bold tracking-tight leading-snug sm:whitespace-nowrap sm:text-[40px] sm:leading-tight">
           {c.h1}
         </h1>
         <p className="mt-4 max-w-2xl text-lg leading-relaxed text-foreground/75">{c.intro}</p>

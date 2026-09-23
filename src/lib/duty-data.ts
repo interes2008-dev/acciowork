@@ -30,6 +30,7 @@ export interface DutyChrome {
   disclaimer: string;
   ctaLine: string;
   cta: string;
+  ctaShort: string;
   ctaNote: string;
   dUS: string;
   dEU: string;
@@ -74,6 +75,7 @@ export const dutyChrome: Record<DutyLang, DutyChrome> = {
     ctaLine:
       "يوفّر Accio Work عبر مناشئ متعدّدة ويتولّى إقرارات ضريبة القيمة المضافة ووثائق الجمارك في أكثر من 100 سوق.",
     cta: "ابدأ مجاناً على Accio Work",
+    ctaShort: "ابدأ مجاناً",
     ctaNote: "باقة مجانية، بلا بطاقة",
     dUS: "الولايات المتحدة",
     dEU: "الاتحاد الأوروبي",
@@ -119,6 +121,7 @@ export const dutyChrome: Record<DutyLang, DutyChrome> = {
     ctaLine:
       "Accio Work sources across origins and handles VAT filings and customs documentation in 100+ markets.",
     cta: "Start free on Accio Work",
+    ctaShort: "Start free",
     ctaNote: "Free plan, no card required",
     dUS: "United States",
     dEU: "European Union",
@@ -164,6 +167,7 @@ export const dutyChrome: Record<DutyLang, DutyChrome> = {
     ctaLine:
       "Accio Work ищет поставщиков по разным странам и ведёт VAT-отчётность и таможенные документы в 100+ рынках.",
     cta: "Начать бесплатно в Accio Work",
+    ctaShort: "Начать бесплатно",
     ctaNote: "Бесплатный план, карта не нужна",
     dUS: "США",
     dEU: "Евросоюз",
@@ -209,6 +213,7 @@ export const dutyChrome: Record<DutyLang, DutyChrome> = {
     ctaLine:
       "Accio Work beschafft aus verschiedenen Ländern und übernimmt USt-Meldungen und Zolldokumente in 100+ Märkten.",
     cta: "Kostenlos mit Accio Work starten",
+    ctaShort: "Kostenlos starten",
     ctaNote: "Kostenloser Plan, keine Karte nötig",
     dUS: "USA",
     dEU: "Europäische Union",
@@ -254,6 +259,7 @@ export const dutyChrome: Record<DutyLang, DutyChrome> = {
     ctaLine:
       "Accio Work si rifornisce da più origini e gestisce dichiarazioni IVA e documenti doganali in oltre 100 mercati.",
     cta: "Inizia gratis su Accio Work",
+    ctaShort: "Inizia gratis",
     ctaNote: "Piano gratuito, nessuna carta richiesta",
     dUS: "Stati Uniti",
     dEU: "Unione Europea",
@@ -298,6 +304,7 @@ export const dutyChrome: Record<DutyLang, DutyChrome> = {
     ctaLine:
       "Accio Work busca en varios orígenes y gestiona declaraciones de IVA y documentos aduaneros en más de 100 mercados.",
     cta: "Empieza gratis en Accio Work",
+    ctaShort: "Empieza gratis",
     ctaNote: "Plan gratuito, sin tarjeta",
     dUS: "Estados Unidos",
     dEU: "Unión Europea",
@@ -338,6 +345,7 @@ export const dutyChrome: Record<DutyLang, DutyChrome> = {
       "仅为估算。实际关税取决于准确的 HTS 归类、原产国和经常变动的现行政策。这不是清关或税务建议，请与持牌报关行确认。",
     ctaLine: "Accio Work 跨多个原产国寻源，并在 100 多个市场处理增值税申报与清关文件。",
     cta: "免费开始使用 Accio Work",
+    ctaShort: "免费开始",
     ctaNote: "免费方案，无需绑定银行卡",
     dUS: "美国",
     dEU: "欧盟",
@@ -383,6 +391,7 @@ export const dutyChrome: Record<DutyLang, DutyChrome> = {
     ctaLine:
       "O Accio Work busca em várias origens e cuida de declarações de IVA e documentos aduaneiros em mais de 100 mercados.",
     cta: "Comece grátis no Accio Work",
+    ctaShort: "Comece grátis",
     ctaNote: "Plano gratuito, sem cartão",
     dUS: "Estados Unidos",
     dEU: "União Europeia",
@@ -427,6 +436,7 @@ export const dutyChrome: Record<DutyLang, DutyChrome> = {
     ctaLine:
       "Accio Work कई मूल देशों से सोर्स करता है और 100+ बाज़ारों में VAT फाइलिंग और कस्टम दस्तावेज़ संभालता है।",
     cta: "Accio Work मुफ्त में शुरू करें",
+    ctaShort: "मुफ्त शुरू करें",
     ctaNote: "मुफ्त प्लान, कार्ड की जरूरत नहीं",
     dUS: "संयुक्त राज्य",
     dEU: "यूरोपीय संघ",
@@ -472,6 +482,7 @@ export const dutyChrome: Record<DutyLang, DutyChrome> = {
     ctaLine:
       "Accio Work source sur plusieurs origines et gère les déclarations de TVA et les documents douaniers dans plus de 100 marchés.",
     cta: "Commencer gratuitement sur Accio Work",
+    ctaShort: "Commencer",
     ctaNote: "Offre gratuite, sans carte",
     dUS: "États-Unis",
     dEU: "Union européenne",
