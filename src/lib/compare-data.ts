@@ -862,7 +862,7 @@ export const comparePages: Record<CmpLang, Record<string, CmpPage>> = {
       tagline: "Универсальный чат ассистент от OpenAI",
       metaTitle: "Accio Work против ChatGPT: какой AI для закупок?",
       metaDescription:
-        "Сравнение Accio Work и ChatGPT по поиску поставщиков, анализу рынка и контенту для e-commerce. Какой AI инструмент подходит вашему магазину, есть бесплатный",
+        "Сравнение Accio Work и ChatGPT по поиску поставщиков, анализу рынка и контенту для e-commerce. Что подойдёт вашему магазину и где есть бесплатный тариф.",
       h1: "Accio Work vs ChatGPT",
       intro:
         "ChatGPT это отличный универсальный ассистент, которым миллионы пользуются для текстов, кода и вопросов. Accio Work это другой инструмент, AI агент вокруг поиска товаров, исследования рынков и подготовки карточек. Здесь видно, где что уместно, чтобы выбрать без догадок.",
@@ -952,7 +952,7 @@ export const comparePages: Record<CmpLang, Record<string, CmpPage>> = {
       tagline: "Продукт AI поиска и агента",
       metaTitle: "Accio Work против Genspark: какой AI для закупок?",
       metaDescription:
-        "Сравнение Accio Work и Genspark по поиску поставщиков, анализу рынка и контенту для e-commerce. Какой AI инструмент подходит вашему магазину, есть бесплатный",
+        "Сравнение Accio Work и Genspark по поиску поставщиков, анализу рынка и контенту для e-commerce. Что подойдёт вашему магазину и где есть бесплатный тариф.",
       h1: "Accio Work vs Genspark",
       intro:
         "Genspark известен AI поиском и агентскими функциями по общим темам. Accio Work нацелен на цикл продавца, поиск поставщиков, изучение конкурентов и подготовку контента товара. Сравнение ниже держит фокус на практике для тех, у кого магазин.",
@@ -1316,7 +1316,7 @@ export const comparePages: Record<CmpLang, Record<string, CmpPage>> = {
       tagline: "Assistente chat generico di OpenAI",
       metaTitle: "Accio Work vs ChatGPT: quale AI per il sourcing?",
       metaDescription:
-        "Accio Work e ChatGPT a confronto per ricerca fornitori, analisi di mercato e contenuti e-commerce. Scopri quale strumento AI si adatta al tuo store, con",
+        "Accio Work e ChatGPT a confronto per ricerca fornitori, analisi di mercato e contenuti e-commerce. Scopri quale strumento AI fa per il tuo store.",
       h1: "Accio Work vs ChatGPT",
       intro:
         "ChatGPT è un ottimo assistente generale usato da milioni per scrivere, programmare e fare domande. Accio Work è uno strumento diverso, un agente AI costruito attorno a sourcing, ricerca di mercato e preparazione delle schede. Qui vedi dove ciascuno si adatta, così scegli senza tirare a indovinare.",
@@ -1361,7 +1361,7 @@ export const comparePages: Record<CmpLang, Record<string, CmpPage>> = {
       tagline: "Agente AI autonomo generico",
       metaTitle: "Accio Work vs Manus: quale AI per il sourcing?",
       metaDescription:
-        "Accio Work e Manus a confronto per ricerca fornitori, analisi di mercato e contenuti e-commerce. Scopri quale strumento AI si adatta al tuo store, con piano",
+        "Accio Work e Manus a confronto per ricerca fornitori, analisi di mercato e contenuti e-commerce. Scopri quale strumento AI fa per il tuo store.",
       h1: "Accio Work vs Manus",
       intro:
         "Manus è un agente autonomo generico capace di molti compiti. Anche Accio Work è un agente, ma calibrato su un solo lavoro, aiutare chi vende online a fare sourcing, ricerca e vendita. Se lavori nell'e-commerce, questa specializzazione cambia i risultati.",
@@ -1406,7 +1406,7 @@ export const comparePages: Record<CmpLang, Record<string, CmpPage>> = {
       tagline: "Prodotto di ricerca e agente AI",
       metaTitle: "Accio Work vs Genspark: quale AI per il sourcing?",
       metaDescription:
-        "Accio Work e Genspark a confronto per ricerca fornitori, analisi di mercato e contenuti e-commerce. Scopri quale strumento AI si adatta al tuo store, con",
+        "Accio Work e Genspark a confronto per ricerca fornitori, analisi di mercato e contenuti e-commerce. Scopri quale strumento AI fa per il tuo store.",
       h1: "Accio Work vs Genspark",
       intro:
         "Genspark è noto per ricerca AI e funzioni di agente su temi generali. Accio Work punta invece al ciclo di chi vende, trovare fornitori, studiare i concorrenti e produrre contenuti prodotto. Il confronto resta pratico per chiunque gestisca uno store.",
