@@ -26,6 +26,7 @@ export interface QzChrome {
   question: string;
   resultKicker: string;
   ctaFit: string;
+  ctaFitShort: string;
   ctaNote: string;
   tryLine: string;
   weakNote: string;
@@ -47,6 +48,7 @@ export const qzChrome: Record<QzLang, QzChrome> = {
     question: "سؤال",
     resultKicker: "نتيجتك",
     ctaFit: "ابدأ مجاناً على Accio Work",
+    ctaFitShort: "ابدأ مجاناً",
     ctaNote: "باقة مجانية، بلا بطاقة",
     tryLine: "جرّبه على مهمة حقيقية واحكم بنفسك.",
     weakNote: "لا مؤاخذة. قد يخدمك وكيل عام أكثر.",
@@ -68,6 +70,7 @@ export const qzChrome: Record<QzLang, QzChrome> = {
     question: "Question",
     resultKicker: "Your result",
     ctaFit: "Start free on Accio Work",
+    ctaFitShort: "Start free",
     ctaNote: "Free plan, no card required",
     tryLine: "Try it on a real task and judge for yourself.",
     weakNote: "No hard feelings. A general purpose agent may serve you better.",
@@ -89,6 +92,7 @@ export const qzChrome: Record<QzLang, QzChrome> = {
     question: "Вопрос",
     resultKicker: "Ваш результат",
     ctaFit: "Начать бесплатно в Accio Work",
+    ctaFitShort: "Начать бесплатно",
     ctaNote: "Бесплатный план, карта не нужна",
     tryLine: "Проверьте на реальной задаче и решите сами.",
     weakNote: "Ничего страшного. Универсальный агент подойдёт вам лучше.",
@@ -110,6 +114,7 @@ export const qzChrome: Record<QzLang, QzChrome> = {
     question: "Frage",
     resultKicker: "Dein Ergebnis",
     ctaFit: "Kostenlos mit Accio Work starten",
+    ctaFitShort: "Kostenlos starten",
     ctaNote: "Kostenloser Plan, keine Karte nötig",
     tryLine: "Teste es an einer echten Aufgabe und urteile selbst.",
     weakNote: "Kein Problem. Ein Allzweck-Agent dient dir vielleicht besser.",
@@ -132,6 +137,7 @@ export const qzChrome: Record<QzLang, QzChrome> = {
     question: "Domanda",
     resultKicker: "Il tuo risultato",
     ctaFit: "Inizia gratis su Accio Work",
+    ctaFitShort: "Inizia gratis",
     ctaNote: "Piano gratuito, nessuna carta richiesta",
     tryLine: "Provalo su un caso reale e giudica da te.",
     weakNote: "Nessun problema. Un agente generico potrebbe servirti meglio.",
@@ -153,6 +159,7 @@ export const qzChrome: Record<QzLang, QzChrome> = {
     question: "Pregunta",
     resultKicker: "Tu resultado",
     ctaFit: "Empieza gratis en Accio Work",
+    ctaFitShort: "Empieza gratis",
     ctaNote: "Plan gratuito, sin tarjeta",
     tryLine: "Pruébalo en una tarea real y juzga por ti mismo.",
     weakNote: "Sin problema. Un agente de propósito general podría servirte mejor.",
@@ -173,6 +180,7 @@ export const qzChrome: Record<QzLang, QzChrome> = {
     question: "第",
     resultKicker: "你的结果",
     ctaFit: "免费开始使用 Accio Work",
+    ctaFitShort: "免费开始",
     ctaNote: "免费方案，无需绑定银行卡",
     tryLine: "用一个真实任务试试，自己判断。",
     weakNote: "没关系。通用型智能体也许更适合你。",
@@ -194,6 +202,7 @@ export const qzChrome: Record<QzLang, QzChrome> = {
     question: "Pergunta",
     resultKicker: "Seu resultado",
     ctaFit: "Comece grátis no Accio Work",
+    ctaFitShort: "Comece grátis",
     ctaNote: "Plano gratuito, sem cartão",
     tryLine: "Teste em uma tarefa real e julgue você mesmo.",
     weakNote: "Sem problema. Um agente de uso geral pode te servir melhor.",
@@ -215,6 +224,7 @@ export const qzChrome: Record<QzLang, QzChrome> = {
     question: "सवाल",
     resultKicker: "आपका नतीजा",
     ctaFit: "Accio Work मुफ्त में शुरू करें",
+    ctaFitShort: "मुफ्त शुरू करें",
     ctaNote: "मुफ्त प्लान, कार्ड की जरूरत नहीं",
     tryLine: "किसी असली काम पर आज़माएं और खुद तय करें।",
     weakNote: "कोई बात नहीं। एक सामान्य एजेंट आपके लिए बेहतर हो सकता है।",
@@ -236,6 +246,7 @@ export const qzChrome: Record<QzLang, QzChrome> = {
     question: "Question",
     resultKicker: "Votre résultat",
     ctaFit: "Commencer gratuitement sur Accio Work",
+    ctaFitShort: "Commencer",
     ctaNote: "Offre gratuite, sans carte",
     tryLine: "Testez sur une vraie tâche et jugez par vous-même.",
     weakNote: "Pas de souci. Un agent généraliste vous conviendra peut-être mieux.",
