@@ -258,10 +258,13 @@ export const PILLARS: Pillar[] = [
       "Accio Work runs a team of agents with real tools: live search across Alibaba data, a browser to open supplier pages, file creation, and memory of your preferences.",
       "The result is not advice - it is a finished artifact: a verified shortlist with links, specs, prices and risk scores, saved where you can use it.",
     ],
-    artifactCaption: "Same prompt - what each tool returns",
+    artifactCaption: "Agent output: verified shortlist with specs checked",
     rows: [
-      { supplier: "Live supplier search", type: "Chatbot: no / Agent: yes", price: "-", moq: "-", certs: "-", risk: 0 },
+      { supplier: "Yangjiang factory A", type: "OEM manufacturer", price: "$2.35-2.80", moq: "300", certs: "LFGB, FDA", risk: 13 },
+      { supplier: "Dongguan factory B", type: "OEM/ODM", price: "$2.10-2.60", moq: "500", certs: "FDA, BSCI", risk: 21 },
+      { supplier: "Ningbo factory C", type: "OEM", price: "$2.70-2.95", moq: "200", certs: "LFGB", risk: 26 },
     ],
+    artifactNote: "Agent result for the prompt above (sample format, names anonymized). A chatbot returns a paragraph instead.",
     extraTable: {
       caption: "Comparison matrix: generic LLM chatbot vs. Accio Work agents",
       head: ["Capability", "Generic chatbot", "Accio Work agents"],
