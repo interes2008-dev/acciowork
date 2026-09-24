@@ -68,6 +68,8 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/hi/blog", changefreq: "daily", priority: "0.8", alternates: arAlts("/blog") },
           { path: "/fr/blog", changefreq: "daily", priority: "0.8", alternates: arAlts("/blog") },
           { path: "/ar/blog", changefreq: "daily", priority: "0.8", alternates: arAlts("/blog") },
+          { path: "/blog/china-sourcing", changefreq: "weekly", priority: "0.8" },
+          ...["how-to-find-verified-china-suppliers-ai","ai-supplier-negotiation-moq-price","china-import-risk-audit-landed-cost","chatgpt-vs-accio-sourcing-agents","case-study-sourcing-electronics-48-hours"].map((s) => ({ path: `/blog/${s}`, changefreq: "monthly" as const, priority: "0.8" })),
         ];
 
         const compareLangs = ["", "/ru", "/de", "/it", "/es", "/zh", "/pt", "/hi", "/fr"];
