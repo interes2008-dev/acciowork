@@ -97,7 +97,7 @@ function Slider({
 function Shell({ lang, children }: { lang: RoiLang; children: ReactNode }) {
   const c = roiChrome[lang];
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen overflow-x-clip bg-background text-foreground">
       <header className="border-b border-border bg-background/80 backdrop-blur">
         <div className="mx-auto flex max-w-4xl items-center justify-between px-5 py-4">
           <a
