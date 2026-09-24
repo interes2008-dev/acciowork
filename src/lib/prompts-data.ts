@@ -17,6 +17,7 @@ export interface PrChrome {
   tipLabel: string;
   ctaLine: string;
   cta: string;
+  ctaShort: string;
   ctaNote: string;
   accioLabel: string;
   note: string;
@@ -36,6 +37,7 @@ export const prChrome: Record<PrLang, PrChrome> = {
     ctaLine:
       "هذه الأوامر تعمل في أي محادثة ذكاء اصطناعي. Accio Work يذهب أبعد: يجري البحث على بيانات Alibaba الحيّة ويتصرّف بناءً عليه، فيعثر على المورّدين ويجهّز القوائم نيابةً عنك.",
     cta: "ابدأ مجاناً على Accio Work",
+    ctaShort: "ابدأ مجاناً",
     ctaNote: "باقة مجانية، بلا بطاقة",
     accioLabel: "تريده منجزاً نيابةً عنك",
     note: "الأوامر نقطة انطلاق. تحقّق من المخرجات مقابل مصادر حقيقية قبل أن تنفق، فالذكاء الاصطناعي قد يخطئ بثقة.",
@@ -55,6 +57,7 @@ export const prChrome: Record<PrLang, PrChrome> = {
     ctaLine:
       "These prompts work in any chat AI. Accio Work goes further: it runs the research on live Alibaba data and acts on it, finding suppliers and prepping listings for you.",
     cta: "Start free on Accio Work",
+    ctaShort: "Start free",
     ctaNote: "Free plan, no card required",
     accioLabel: "Want it done for you",
     note: "Prompts are a starting point. Check the output against real sources before you spend money, AI can be confidently wrong.",
@@ -74,6 +77,7 @@ export const prChrome: Record<PrLang, PrChrome> = {
     ctaLine:
       "Эти промпты работают в любом чат-AI. Accio Work идёт дальше: делает ресёрч на живых данных Alibaba и действует, находит поставщиков и готовит листинги за вас.",
     cta: "Начать бесплатно в Accio Work",
+    ctaShort: "Начать бесплатно",
     ctaNote: "Бесплатный план, карта не нужна",
     accioLabel: "Хотите, чтобы сделали за вас",
     note: "Промпты это отправная точка. Проверяйте ответ по реальным источникам до трат, AI бывает уверенно неправ.",
@@ -93,6 +97,7 @@ export const prChrome: Record<PrLang, PrChrome> = {
     ctaLine:
       "Diese Prompts laufen in jeder Chat-AI. Accio Work geht weiter: es recherchiert auf Live-Alibaba-Daten und handelt, findet Lieferanten und bereitet Listings für dich vor.",
     cta: "Kostenlos mit Accio Work starten",
+    ctaShort: "Kostenlos starten",
     ctaNote: "Kostenloser Plan, keine Karte nötig",
     accioLabel: "Soll es für dich erledigt werden",
     note: "Prompts sind ein Startpunkt. Prüfe das Ergebnis an echten Quellen, bevor du Geld ausgibst, AI kann selbstsicher falsch liegen.",
@@ -112,6 +117,7 @@ export const prChrome: Record<PrLang, PrChrome> = {
     ctaLine:
       "Questi prompt funzionano in qualsiasi chat AI. Accio Work va oltre: fa ricerca su dati Alibaba in tempo reale e agisce, trova fornitori e prepara i listing per te.",
     cta: "Inizia gratis su Accio Work",
+    ctaShort: "Inizia gratis",
     ctaNote: "Piano gratuito, nessuna carta richiesta",
     accioLabel: "Vuoi che lo faccia per te",
     note: "I prompt sono un punto di partenza. Verifica l'output su fonti reali prima di spendere, l'AI può sbagliare con sicurezza.",
@@ -131,6 +137,7 @@ export const prChrome: Record<PrLang, PrChrome> = {
     ctaLine:
       "Estos prompts funcionan en cualquier IA de chat. Accio Work va más allá: investiga con datos de Alibaba en vivo y actúa, encuentra proveedores y prepara listings por ti.",
     cta: "Empieza gratis en Accio Work",
+    ctaShort: "Empieza gratis",
     ctaNote: "Plan gratuito, sin tarjeta",
     accioLabel: "Quieres que lo hagan por ti",
     note: "Los prompts son un punto de partida. Contrasta la respuesta con fuentes reales antes de gastar, la IA puede equivocarse con seguridad.",
@@ -150,6 +157,7 @@ export const prChrome: Record<PrLang, PrChrome> = {
     ctaLine:
       "这些提示词在任意对话式 AI 中都能用。Accio Work 更进一步：基于阿里实时数据调研并动手执行，替你找供应商、备商品页。",
     cta: "免费开始使用 Accio Work",
+    ctaShort: "免费开始",
     ctaNote: "免费方案，无需绑定银行卡",
     accioLabel: "想让它替你完成",
     note: "提示词只是起点。花钱前请用真实来源核对结果，AI 可能一本正经地出错。",
@@ -169,6 +177,7 @@ export const prChrome: Record<PrLang, PrChrome> = {
     ctaLine:
       "Estes prompts funcionam em qualquer IA de chat. O Accio Work vai além: pesquisa em dados ao vivo da Alibaba e age, encontra fornecedores e prepara anúncios para você.",
     cta: "Comece grátis no Accio Work",
+    ctaShort: "Comece grátis",
     ctaNote: "Plano gratuito, sem cartão",
     accioLabel: "Quer que façam por você",
     note: "Os prompts são um ponto de partida. Confira a resposta com fontes reais antes de gastar, a IA pode errar com confiança.",
@@ -188,6 +197,7 @@ export const prChrome: Record<PrLang, PrChrome> = {
     ctaLine:
       "ये प्रॉम्प्ट किसी भी चैट AI में काम करते हैं। Accio Work आगे जाता है: अलीबाबा के लाइव डेटा पर रिसर्च करता है और अमल करता है, आपके लिए सप्लायर ढूँढता और लिस्टिंग तैयार करता है।",
     cta: "Accio Work मुफ्त में शुरू करें",
+    ctaShort: "मुफ्त शुरू करें",
     ctaNote: "मुफ्त प्लान, कार्ड की जरूरत नहीं",
     accioLabel: "चाहते हैं यह आपके लिए हो जाए",
     note: "प्रॉम्प्ट शुरुआत भर हैं। पैसे खर्च करने से पहले उत्तर को असली स्रोतों से जाँचें, AI आत्मविश्वास से ग़लत हो सकता है।",
@@ -207,6 +217,7 @@ export const prChrome: Record<PrLang, PrChrome> = {
     ctaLine:
       "Ces prompts marchent dans n'importe quelle IA de chat. Accio Work va plus loin : il fait la recherche sur données Alibaba en direct et agit, trouve des fournisseurs et prépare les fiches pour vous.",
     cta: "Commencer gratuitement sur Accio Work",
+    ctaShort: "Commencer",
     ctaNote: "Offre gratuite, sans carte",
     accioLabel: "Vous voulez que ce soit fait pour vous",
     note: "Les prompts sont un point de départ. Vérifiez la réponse sur de vraies sources avant de dépenser, l'IA peut se tromper avec assurance.",

@@ -25,6 +25,7 @@ export interface ScChrome {
   copied: string;
   resultKicker: string;
   cta: string;
+  ctaShort: string;
   ctaNote: string;
   accioLabel: string;
   ctaLine: string;
@@ -44,6 +45,7 @@ export const scChrome: Record<ScLang, ScChrome> = {
     copied: "نُسخ الرابط",
     resultKicker: "درجة موثوقية المورّد",
     cta: "دقّق المورّدين مع Accio Work",
+    ctaShort: "دقّق المورّدين",
     ctaNote: "باقة مجانية، بلا بطاقة",
     accioLabel: "دع الذكاء الاصطناعي يتحقّق نيابةً عنك",
     ctaLine:
@@ -64,6 +66,7 @@ export const scChrome: Record<ScLang, ScChrome> = {
     copied: "Link copied",
     resultKicker: "Supplier reliability score",
     cta: "Vet suppliers with Accio Work",
+    ctaShort: "Vet suppliers",
     ctaNote: "Free plan, no card required",
     accioLabel: "Let AI cross-check for you",
     ctaLine:
@@ -84,6 +87,7 @@ export const scChrome: Record<ScLang, ScChrome> = {
     copied: "Ссылка скопирована",
     resultKicker: "Балл надёжности поставщика",
     cta: "Проверять поставщиков в Accio Work",
+    ctaShort: "Проверить",
     ctaNote: "Бесплатный план, карта не нужна",
     accioLabel: "Пусть AI перепроверит за вас",
     ctaLine:
@@ -104,6 +108,7 @@ export const scChrome: Record<ScLang, ScChrome> = {
     copied: "Link kopiert",
     resultKicker: "Zuverlässigkeitswert des Lieferanten",
     cta: "Lieferanten mit Accio Work prüfen",
+    ctaShort: "Jetzt prüfen",
     ctaNote: "Kostenloser Plan, keine Karte nötig",
     accioLabel: "KI gegenprüfen lassen",
     ctaLine:
@@ -124,6 +129,7 @@ export const scChrome: Record<ScLang, ScChrome> = {
     copied: "Link copiato",
     resultKicker: "Punteggio di affidabilità del fornitore",
     cta: "Valuta i fornitori con Accio Work",
+    ctaShort: "Valuta i fornitori",
     ctaNote: "Piano gratuito, nessuna carta",
     accioLabel: "Fai verificare all'AI",
     ctaLine:
@@ -144,6 +150,7 @@ export const scChrome: Record<ScLang, ScChrome> = {
     copied: "Enlace copiado",
     resultKicker: "Puntuación de fiabilidad del proveedor",
     cta: "Evalúa proveedores con Accio Work",
+    ctaShort: "Evalúa proveedores",
     ctaNote: "Plan gratuito, sin tarjeta",
     accioLabel: "Deja que la IA verifique",
     ctaLine:
@@ -164,6 +171,7 @@ export const scChrome: Record<ScLang, ScChrome> = {
     copied: "链接已复制",
     resultKicker: "供应商可靠度分值",
     cta: "用 Accio Work 核验供应商",
+    ctaShort: "核验供应商",
     ctaNote: "免费方案，无需绑卡",
     accioLabel: "让 AI 替你交叉核验",
     ctaLine:
@@ -183,6 +191,7 @@ export const scChrome: Record<ScLang, ScChrome> = {
     copied: "Link copiado",
     resultKicker: "Pontuação de confiabilidade do fornecedor",
     cta: "Avalie fornecedores com Accio Work",
+    ctaShort: "Avalie fornecedores",
     ctaNote: "Plano gratuito, sem cartão",
     accioLabel: "Deixe a IA verificar",
     ctaLine:
@@ -203,6 +212,7 @@ export const scChrome: Record<ScLang, ScChrome> = {
     copied: "लिंक कॉपी हो गया",
     resultKicker: "सप्लायर विश्वसनीयता स्कोर",
     cta: "Accio Work से सप्लायर परखें",
+    ctaShort: "सप्लायर परखें",
     ctaNote: "मुफ्त प्लान, कार्ड की जरूरत नहीं",
     accioLabel: "AI से क्रॉस-चेक कराएं",
     ctaLine:
@@ -223,6 +233,7 @@ export const scChrome: Record<ScLang, ScChrome> = {
     copied: "Lien copié",
     resultKicker: "Score de fiabilité du fournisseur",
     cta: "Évaluez les fournisseurs avec Accio Work",
+    ctaShort: "Évaluer",
     ctaNote: "Offre gratuite, sans carte",
     accioLabel: "Laissez l'IA recouper",
     ctaLine:

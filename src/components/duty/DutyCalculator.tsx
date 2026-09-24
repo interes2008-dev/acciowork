@@ -31,7 +31,7 @@ function homeHref(lang: DutyLang) {
 function Shell({ lang, children }: { lang: DutyLang; children: ReactNode }) {
   const c = dutyChrome[lang];
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen overflow-x-clip bg-background text-foreground">
       <header className="border-b border-border bg-background/80 backdrop-blur">
         <div className="mx-auto flex max-w-4xl items-center justify-between px-5 py-4">
           <a
@@ -60,7 +60,8 @@ function Shell({ lang, children }: { lang: DutyLang; children: ReactNode }) {
               rel="noopener noreferrer nofollow"
               className="whitespace-nowrap rounded-full bg-[#34d399] px-3 py-2 text-[13px] font-semibold text-white transition hover:brightness-110 sm:px-4 sm:text-sm"
             >
-              {c.cta}
+              <span className="sm:hidden">{c.ctaShort}</span>
+              <span className="hidden sm:inline">{c.cta}</span>
             </a>
           </div>
         </div>
