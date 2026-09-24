@@ -57,7 +57,7 @@ function Shell({ lang, children }: { lang: DmLang; children: ReactNode }) {
               href={REFERRAL_URL}
               target="_blank"
               rel="noopener noreferrer nofollow"
-              className="whitespace-nowrap rounded-full bg-[#34d399] px-3 py-2 text-[13px] font-semibold text-white transition hover:brightness-110 sm:px-4 sm:text-sm"
+              className="max-w-[52vw] truncate whitespace-nowrap rounded-full bg-[#34d399] px-3 py-2 text-[13px] font-semibold text-white transition hover:brightness-110 sm:px-4 sm:text-sm"
             >
               {c.cta}
             </a>
