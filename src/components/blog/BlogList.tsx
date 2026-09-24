@@ -114,6 +114,16 @@ export function BlogList({
         <p className="mt-4 text-lg text-foreground/70">{copy.lede}</p>
       </section>
 
+      {lang === "en" && (
+        <a
+          href="/blog/china-sourcing"
+          className="mb-12 flex flex-col gap-2 rounded-[32px] border border-primary/30 bg-primary/5 p-6 transition hover:border-primary md:p-8"
+        >
+          <span className="text-xs font-semibold uppercase tracking-wider text-primary">New series - 5 guides</span>
+          <span className="text-2xl font-bold text-foreground">China Sourcing Hub: vet factories, negotiate MOQs, calculate landed cost with AI</span>
+          <span className="text-foreground/70">Read the playbook &rarr;</span>
+        </a>
+      )}
       {articles.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-border/70 bg-muted/40 px-8 py-16 text-center text-foreground/60">
           {copy.empty}
