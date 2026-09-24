@@ -66,7 +66,7 @@ function Shell({ lang, children }: { lang: ChLang; children: ReactNode }) {
               href={REFERRAL_URL}
               target="_blank"
               rel="noopener noreferrer nofollow"
-              className="max-w-[52vw] truncate whitespace-nowrap rounded-full bg-[#34d399] px-3 py-2 text-[13px] font-semibold text-[#04120d] transition hover:brightness-110 sm:px-4 sm:text-sm"
+              className="max-w-[52vw] truncate whitespace-nowrap rounded-full bg-[#34d399] px-3 py-2 text-[13px] font-semibold text-[#04120d] transition hover:brightness-110 sm:max-w-none sm:px-4 sm:text-sm"
             >
               {c.cta}
             </a>
