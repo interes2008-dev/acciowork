@@ -9,7 +9,7 @@ import {
   type TopicSeed,
 } from "@/lib/blog-prompt.server";
 
-const LANGS: BlogLang[] = ["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr"];
+const LANGS: BlogLang[] = ["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr", "ar"];
 
 type GeneratedArticle = {
   title: string;
