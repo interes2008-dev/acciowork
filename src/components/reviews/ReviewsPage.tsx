@@ -34,14 +34,14 @@ function Shell({ lang, children }: { lang: RvLang; children: ReactNode }) {
             </svg>
             <span>Accio</span>
           </a>
-          <div className="flex items-center gap-2 sm:gap-3">
+          <div className="flex min-w-0 items-center gap-2 sm:gap-3">
             <ThemeToggle />
             <LangMenu lang={lang} />
             <a
               href={REFERRAL_URL}
               target="_blank"
               rel="noopener noreferrer nofollow"
-              className="max-w-[52vw] truncate whitespace-nowrap rounded-full bg-[#34d399] px-3 py-2 text-[13px] font-semibold text-white transition hover:brightness-110 sm:max-w-none sm:px-4 sm:text-sm"
+              className="max-w-[34vw] truncate whitespace-nowrap rounded-full bg-[#34d399] px-3 py-2 text-[13px] font-semibold text-white transition hover:brightness-110 sm:max-w-none sm:px-4 sm:text-sm"
             >
               {c.ctaPrimary}
             </a>
