@@ -148,6 +148,12 @@ import { Route as ZhTemplatesRouteImport } from './routes/zh.templates'
 import { Route as ZhTiktokShopRouteImport } from './routes/zh.tiktok-shop'
 import { Route as ArBlogIndexRouteImport } from './routes/ar.blog.index'
 import { Route as ArBlogSlugRouteImport } from './routes/ar.blog.$slug'
+import { Route as ArBlogAiSupplierNegotiationMoqPriceRouteImport } from './routes/ar.blog.ai-supplier-negotiation-moq-price'
+import { Route as ArBlogCaseStudySourcingElectronics48HoursRouteImport } from './routes/ar.blog.case-study-sourcing-electronics-48-hours'
+import { Route as ArBlogChatgptVsAccioSourcingAgentsRouteImport } from './routes/ar.blog.chatgpt-vs-accio-sourcing-agents'
+import { Route as ArBlogChinaImportRiskAuditLandedCostRouteImport } from './routes/ar.blog.china-import-risk-audit-landed-cost'
+import { Route as ArBlogChinaSourcingRouteImport } from './routes/ar.blog.china-sourcing'
+import { Route as ArBlogHowToFindVerifiedChinaSuppliersAiRouteImport } from './routes/ar.blog.how-to-find-verified-china-suppliers-ai'
 import { Route as ArCompareIndexRouteImport } from './routes/ar.compare.index'
 import { Route as ArCompareCompetitorRouteImport } from './routes/ar.compare.$competitor'
 import { Route as ArEventsFreeForeverRouteImport } from './routes/ar.events.free-forever'
@@ -157,6 +163,12 @@ import { Route as ArGuideIndexRouteImport } from './routes/ar.guide.index'
 import { Route as ArGuideGuideRouteImport } from './routes/ar.guide.$guide'
 import { Route as DeBlogIndexRouteImport } from './routes/de.blog.index'
 import { Route as DeBlogSlugRouteImport } from './routes/de.blog.$slug'
+import { Route as DeBlogAiSupplierNegotiationMoqPriceRouteImport } from './routes/de.blog.ai-supplier-negotiation-moq-price'
+import { Route as DeBlogCaseStudySourcingElectronics48HoursRouteImport } from './routes/de.blog.case-study-sourcing-electronics-48-hours'
+import { Route as DeBlogChatgptVsAccioSourcingAgentsRouteImport } from './routes/de.blog.chatgpt-vs-accio-sourcing-agents'
+import { Route as DeBlogChinaImportRiskAuditLandedCostRouteImport } from './routes/de.blog.china-import-risk-audit-landed-cost'
+import { Route as DeBlogChinaSourcingRouteImport } from './routes/de.blog.china-sourcing'
+import { Route as DeBlogHowToFindVerifiedChinaSuppliersAiRouteImport } from './routes/de.blog.how-to-find-verified-china-suppliers-ai'
 import { Route as DeCompareIndexRouteImport } from './routes/de.compare.index'
 import { Route as DeCompareCompetitorRouteImport } from './routes/de.compare.$competitor'
 import { Route as DeEventsFreeForeverRouteImport } from './routes/de.events.free-forever'
@@ -166,6 +178,12 @@ import { Route as DeGuideIndexRouteImport } from './routes/de.guide.index'
 import { Route as DeGuideGuideRouteImport } from './routes/de.guide.$guide'
 import { Route as EsBlogIndexRouteImport } from './routes/es.blog.index'
 import { Route as EsBlogSlugRouteImport } from './routes/es.blog.$slug'
+import { Route as EsBlogAiSupplierNegotiationMoqPriceRouteImport } from './routes/es.blog.ai-supplier-negotiation-moq-price'
+import { Route as EsBlogCaseStudySourcingElectronics48HoursRouteImport } from './routes/es.blog.case-study-sourcing-electronics-48-hours'
+import { Route as EsBlogChatgptVsAccioSourcingAgentsRouteImport } from './routes/es.blog.chatgpt-vs-accio-sourcing-agents'
+import { Route as EsBlogChinaImportRiskAuditLandedCostRouteImport } from './routes/es.blog.china-import-risk-audit-landed-cost'
+import { Route as EsBlogChinaSourcingRouteImport } from './routes/es.blog.china-sourcing'
+import { Route as EsBlogHowToFindVerifiedChinaSuppliersAiRouteImport } from './routes/es.blog.how-to-find-verified-china-suppliers-ai'
 import { Route as EsCompareIndexRouteImport } from './routes/es.compare.index'
 import { Route as EsCompareCompetitorRouteImport } from './routes/es.compare.$competitor'
 import { Route as EsEventsFreeForeverRouteImport } from './routes/es.events.free-forever'
@@ -175,6 +193,12 @@ import { Route as EsGuideIndexRouteImport } from './routes/es.guide.index'
 import { Route as EsGuideGuideRouteImport } from './routes/es.guide.$guide'
 import { Route as FrBlogIndexRouteImport } from './routes/fr.blog.index'
 import { Route as FrBlogSlugRouteImport } from './routes/fr.blog.$slug'
+import { Route as FrBlogAiSupplierNegotiationMoqPriceRouteImport } from './routes/fr.blog.ai-supplier-negotiation-moq-price'
+import { Route as FrBlogCaseStudySourcingElectronics48HoursRouteImport } from './routes/fr.blog.case-study-sourcing-electronics-48-hours'
+import { Route as FrBlogChatgptVsAccioSourcingAgentsRouteImport } from './routes/fr.blog.chatgpt-vs-accio-sourcing-agents'
+import { Route as FrBlogChinaImportRiskAuditLandedCostRouteImport } from './routes/fr.blog.china-import-risk-audit-landed-cost'
+import { Route as FrBlogChinaSourcingRouteImport } from './routes/fr.blog.china-sourcing'
+import { Route as FrBlogHowToFindVerifiedChinaSuppliersAiRouteImport } from './routes/fr.blog.how-to-find-verified-china-suppliers-ai'
 import { Route as FrCompareIndexRouteImport } from './routes/fr.compare.index'
 import { Route as FrCompareCompetitorRouteImport } from './routes/fr.compare.$competitor'
 import { Route as FrEventsFreeForeverRouteImport } from './routes/fr.events.free-forever'
@@ -184,6 +208,12 @@ import { Route as FrGuideIndexRouteImport } from './routes/fr.guide.index'
 import { Route as FrGuideGuideRouteImport } from './routes/fr.guide.$guide'
 import { Route as HiBlogIndexRouteImport } from './routes/hi.blog.index'
 import { Route as HiBlogSlugRouteImport } from './routes/hi.blog.$slug'
+import { Route as HiBlogAiSupplierNegotiationMoqPriceRouteImport } from './routes/hi.blog.ai-supplier-negotiation-moq-price'
+import { Route as HiBlogCaseStudySourcingElectronics48HoursRouteImport } from './routes/hi.blog.case-study-sourcing-electronics-48-hours'
+import { Route as HiBlogChatgptVsAccioSourcingAgentsRouteImport } from './routes/hi.blog.chatgpt-vs-accio-sourcing-agents'
+import { Route as HiBlogChinaImportRiskAuditLandedCostRouteImport } from './routes/hi.blog.china-import-risk-audit-landed-cost'
+import { Route as HiBlogChinaSourcingRouteImport } from './routes/hi.blog.china-sourcing'
+import { Route as HiBlogHowToFindVerifiedChinaSuppliersAiRouteImport } from './routes/hi.blog.how-to-find-verified-china-suppliers-ai'
 import { Route as HiCompareIndexRouteImport } from './routes/hi.compare.index'
 import { Route as HiCompareCompetitorRouteImport } from './routes/hi.compare.$competitor'
 import { Route as HiEventsFreeForeverRouteImport } from './routes/hi.events.free-forever'
@@ -193,6 +223,12 @@ import { Route as HiGuideIndexRouteImport } from './routes/hi.guide.index'
 import { Route as HiGuideGuideRouteImport } from './routes/hi.guide.$guide'
 import { Route as ItBlogIndexRouteImport } from './routes/it.blog.index'
 import { Route as ItBlogSlugRouteImport } from './routes/it.blog.$slug'
+import { Route as ItBlogAiSupplierNegotiationMoqPriceRouteImport } from './routes/it.blog.ai-supplier-negotiation-moq-price'
+import { Route as ItBlogCaseStudySourcingElectronics48HoursRouteImport } from './routes/it.blog.case-study-sourcing-electronics-48-hours'
+import { Route as ItBlogChatgptVsAccioSourcingAgentsRouteImport } from './routes/it.blog.chatgpt-vs-accio-sourcing-agents'
+import { Route as ItBlogChinaImportRiskAuditLandedCostRouteImport } from './routes/it.blog.china-import-risk-audit-landed-cost'
+import { Route as ItBlogChinaSourcingRouteImport } from './routes/it.blog.china-sourcing'
+import { Route as ItBlogHowToFindVerifiedChinaSuppliersAiRouteImport } from './routes/it.blog.how-to-find-verified-china-suppliers-ai'
 import { Route as ItCompareIndexRouteImport } from './routes/it.compare.index'
 import { Route as ItCompareCompetitorRouteImport } from './routes/it.compare.$competitor'
 import { Route as ItEventsFreeForeverRouteImport } from './routes/it.events.free-forever'
@@ -202,6 +238,12 @@ import { Route as ItGuideIndexRouteImport } from './routes/it.guide.index'
 import { Route as ItGuideGuideRouteImport } from './routes/it.guide.$guide'
 import { Route as PtBlogIndexRouteImport } from './routes/pt.blog.index'
 import { Route as PtBlogSlugRouteImport } from './routes/pt.blog.$slug'
+import { Route as PtBlogAiSupplierNegotiationMoqPriceRouteImport } from './routes/pt.blog.ai-supplier-negotiation-moq-price'
+import { Route as PtBlogCaseStudySourcingElectronics48HoursRouteImport } from './routes/pt.blog.case-study-sourcing-electronics-48-hours'
+import { Route as PtBlogChatgptVsAccioSourcingAgentsRouteImport } from './routes/pt.blog.chatgpt-vs-accio-sourcing-agents'
+import { Route as PtBlogChinaImportRiskAuditLandedCostRouteImport } from './routes/pt.blog.china-import-risk-audit-landed-cost'
+import { Route as PtBlogChinaSourcingRouteImport } from './routes/pt.blog.china-sourcing'
+import { Route as PtBlogHowToFindVerifiedChinaSuppliersAiRouteImport } from './routes/pt.blog.how-to-find-verified-china-suppliers-ai'
 import { Route as PtCompareIndexRouteImport } from './routes/pt.compare.index'
 import { Route as PtCompareCompetitorRouteImport } from './routes/pt.compare.$competitor'
 import { Route as PtEventsFreeForeverRouteImport } from './routes/pt.events.free-forever'
@@ -211,6 +253,12 @@ import { Route as PtGuideIndexRouteImport } from './routes/pt.guide.index'
 import { Route as PtGuideGuideRouteImport } from './routes/pt.guide.$guide'
 import { Route as RuBlogIndexRouteImport } from './routes/ru.blog.index'
 import { Route as RuBlogSlugRouteImport } from './routes/ru.blog.$slug'
+import { Route as RuBlogAiSupplierNegotiationMoqPriceRouteImport } from './routes/ru.blog.ai-supplier-negotiation-moq-price'
+import { Route as RuBlogCaseStudySourcingElectronics48HoursRouteImport } from './routes/ru.blog.case-study-sourcing-electronics-48-hours'
+import { Route as RuBlogChatgptVsAccioSourcingAgentsRouteImport } from './routes/ru.blog.chatgpt-vs-accio-sourcing-agents'
+import { Route as RuBlogChinaImportRiskAuditLandedCostRouteImport } from './routes/ru.blog.china-import-risk-audit-landed-cost'
+import { Route as RuBlogChinaSourcingRouteImport } from './routes/ru.blog.china-sourcing'
+import { Route as RuBlogHowToFindVerifiedChinaSuppliersAiRouteImport } from './routes/ru.blog.how-to-find-verified-china-suppliers-ai'
 import { Route as RuCompareIndexRouteImport } from './routes/ru.compare.index'
 import { Route as RuCompareCompetitorRouteImport } from './routes/ru.compare.$competitor'
 import { Route as RuEventsFreeForeverRouteImport } from './routes/ru.events.free-forever'
@@ -220,6 +268,12 @@ import { Route as RuGuideIndexRouteImport } from './routes/ru.guide.index'
 import { Route as RuGuideGuideRouteImport } from './routes/ru.guide.$guide'
 import { Route as ZhBlogIndexRouteImport } from './routes/zh.blog.index'
 import { Route as ZhBlogSlugRouteImport } from './routes/zh.blog.$slug'
+import { Route as ZhBlogAiSupplierNegotiationMoqPriceRouteImport } from './routes/zh.blog.ai-supplier-negotiation-moq-price'
+import { Route as ZhBlogCaseStudySourcingElectronics48HoursRouteImport } from './routes/zh.blog.case-study-sourcing-electronics-48-hours'
+import { Route as ZhBlogChatgptVsAccioSourcingAgentsRouteImport } from './routes/zh.blog.chatgpt-vs-accio-sourcing-agents'
+import { Route as ZhBlogChinaImportRiskAuditLandedCostRouteImport } from './routes/zh.blog.china-import-risk-audit-landed-cost'
+import { Route as ZhBlogChinaSourcingRouteImport } from './routes/zh.blog.china-sourcing'
+import { Route as ZhBlogHowToFindVerifiedChinaSuppliersAiRouteImport } from './routes/zh.blog.how-to-find-verified-china-suppliers-ai'
 import { Route as ZhCompareIndexRouteImport } from './routes/zh.compare.index'
 import { Route as ZhCompareCompetitorRouteImport } from './routes/zh.compare.$competitor'
 import { Route as ZhEventsFreeForeverRouteImport } from './routes/zh.events.free-forever'
@@ -931,6 +985,41 @@ const ArBlogSlugRoute = ArBlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => ArRoute,
 } as any)
+const ArBlogAiSupplierNegotiationMoqPriceRoute =
+  ArBlogAiSupplierNegotiationMoqPriceRouteImport.update({
+    id: '/blog/ai-supplier-negotiation-moq-price',
+    path: '/blog/ai-supplier-negotiation-moq-price',
+    getParentRoute: () => ArRoute,
+  } as any)
+const ArBlogCaseStudySourcingElectronics48HoursRoute =
+  ArBlogCaseStudySourcingElectronics48HoursRouteImport.update({
+    id: '/blog/case-study-sourcing-electronics-48-hours',
+    path: '/blog/case-study-sourcing-electronics-48-hours',
+    getParentRoute: () => ArRoute,
+  } as any)
+const ArBlogChatgptVsAccioSourcingAgentsRoute =
+  ArBlogChatgptVsAccioSourcingAgentsRouteImport.update({
+    id: '/blog/chatgpt-vs-accio-sourcing-agents',
+    path: '/blog/chatgpt-vs-accio-sourcing-agents',
+    getParentRoute: () => ArRoute,
+  } as any)
+const ArBlogChinaImportRiskAuditLandedCostRoute =
+  ArBlogChinaImportRiskAuditLandedCostRouteImport.update({
+    id: '/blog/china-import-risk-audit-landed-cost',
+    path: '/blog/china-import-risk-audit-landed-cost',
+    getParentRoute: () => ArRoute,
+  } as any)
+const ArBlogChinaSourcingRoute = ArBlogChinaSourcingRouteImport.update({
+  id: '/blog/china-sourcing',
+  path: '/blog/china-sourcing',
+  getParentRoute: () => ArRoute,
+} as any)
+const ArBlogHowToFindVerifiedChinaSuppliersAiRoute =
+  ArBlogHowToFindVerifiedChinaSuppliersAiRouteImport.update({
+    id: '/blog/how-to-find-verified-china-suppliers-ai',
+    path: '/blog/how-to-find-verified-china-suppliers-ai',
+    getParentRoute: () => ArRoute,
+  } as any)
 const ArCompareIndexRoute = ArCompareIndexRouteImport.update({
   id: '/compare/',
   path: '/compare/',
@@ -976,6 +1065,41 @@ const DeBlogSlugRoute = DeBlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => DeRoute,
 } as any)
+const DeBlogAiSupplierNegotiationMoqPriceRoute =
+  DeBlogAiSupplierNegotiationMoqPriceRouteImport.update({
+    id: '/blog/ai-supplier-negotiation-moq-price',
+    path: '/blog/ai-supplier-negotiation-moq-price',
+    getParentRoute: () => DeRoute,
+  } as any)
+const DeBlogCaseStudySourcingElectronics48HoursRoute =
+  DeBlogCaseStudySourcingElectronics48HoursRouteImport.update({
+    id: '/blog/case-study-sourcing-electronics-48-hours',
+    path: '/blog/case-study-sourcing-electronics-48-hours',
+    getParentRoute: () => DeRoute,
+  } as any)
+const DeBlogChatgptVsAccioSourcingAgentsRoute =
+  DeBlogChatgptVsAccioSourcingAgentsRouteImport.update({
+    id: '/blog/chatgpt-vs-accio-sourcing-agents',
+    path: '/blog/chatgpt-vs-accio-sourcing-agents',
+    getParentRoute: () => DeRoute,
+  } as any)
+const DeBlogChinaImportRiskAuditLandedCostRoute =
+  DeBlogChinaImportRiskAuditLandedCostRouteImport.update({
+    id: '/blog/china-import-risk-audit-landed-cost',
+    path: '/blog/china-import-risk-audit-landed-cost',
+    getParentRoute: () => DeRoute,
+  } as any)
+const DeBlogChinaSourcingRoute = DeBlogChinaSourcingRouteImport.update({
+  id: '/blog/china-sourcing',
+  path: '/blog/china-sourcing',
+  getParentRoute: () => DeRoute,
+} as any)
+const DeBlogHowToFindVerifiedChinaSuppliersAiRoute =
+  DeBlogHowToFindVerifiedChinaSuppliersAiRouteImport.update({
+    id: '/blog/how-to-find-verified-china-suppliers-ai',
+    path: '/blog/how-to-find-verified-china-suppliers-ai',
+    getParentRoute: () => DeRoute,
+  } as any)
 const DeCompareIndexRoute = DeCompareIndexRouteImport.update({
   id: '/compare/',
   path: '/compare/',
@@ -1021,6 +1145,41 @@ const EsBlogSlugRoute = EsBlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => EsRoute,
 } as any)
+const EsBlogAiSupplierNegotiationMoqPriceRoute =
+  EsBlogAiSupplierNegotiationMoqPriceRouteImport.update({
+    id: '/blog/ai-supplier-negotiation-moq-price',
+    path: '/blog/ai-supplier-negotiation-moq-price',
+    getParentRoute: () => EsRoute,
+  } as any)
+const EsBlogCaseStudySourcingElectronics48HoursRoute =
+  EsBlogCaseStudySourcingElectronics48HoursRouteImport.update({
+    id: '/blog/case-study-sourcing-electronics-48-hours',
+    path: '/blog/case-study-sourcing-electronics-48-hours',
+    getParentRoute: () => EsRoute,
+  } as any)
+const EsBlogChatgptVsAccioSourcingAgentsRoute =
+  EsBlogChatgptVsAccioSourcingAgentsRouteImport.update({
+    id: '/blog/chatgpt-vs-accio-sourcing-agents',
+    path: '/blog/chatgpt-vs-accio-sourcing-agents',
+    getParentRoute: () => EsRoute,
+  } as any)
+const EsBlogChinaImportRiskAuditLandedCostRoute =
+  EsBlogChinaImportRiskAuditLandedCostRouteImport.update({
+    id: '/blog/china-import-risk-audit-landed-cost',
+    path: '/blog/china-import-risk-audit-landed-cost',
+    getParentRoute: () => EsRoute,
+  } as any)
+const EsBlogChinaSourcingRoute = EsBlogChinaSourcingRouteImport.update({
+  id: '/blog/china-sourcing',
+  path: '/blog/china-sourcing',
+  getParentRoute: () => EsRoute,
+} as any)
+const EsBlogHowToFindVerifiedChinaSuppliersAiRoute =
+  EsBlogHowToFindVerifiedChinaSuppliersAiRouteImport.update({
+    id: '/blog/how-to-find-verified-china-suppliers-ai',
+    path: '/blog/how-to-find-verified-china-suppliers-ai',
+    getParentRoute: () => EsRoute,
+  } as any)
 const EsCompareIndexRoute = EsCompareIndexRouteImport.update({
   id: '/compare/',
   path: '/compare/',
@@ -1066,6 +1225,41 @@ const FrBlogSlugRoute = FrBlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => FrRoute,
 } as any)
+const FrBlogAiSupplierNegotiationMoqPriceRoute =
+  FrBlogAiSupplierNegotiationMoqPriceRouteImport.update({
+    id: '/blog/ai-supplier-negotiation-moq-price',
+    path: '/blog/ai-supplier-negotiation-moq-price',
+    getParentRoute: () => FrRoute,
+  } as any)
+const FrBlogCaseStudySourcingElectronics48HoursRoute =
+  FrBlogCaseStudySourcingElectronics48HoursRouteImport.update({
+    id: '/blog/case-study-sourcing-electronics-48-hours',
+    path: '/blog/case-study-sourcing-electronics-48-hours',
+    getParentRoute: () => FrRoute,
+  } as any)
+const FrBlogChatgptVsAccioSourcingAgentsRoute =
+  FrBlogChatgptVsAccioSourcingAgentsRouteImport.update({
+    id: '/blog/chatgpt-vs-accio-sourcing-agents',
+    path: '/blog/chatgpt-vs-accio-sourcing-agents',
+    getParentRoute: () => FrRoute,
+  } as any)
+const FrBlogChinaImportRiskAuditLandedCostRoute =
+  FrBlogChinaImportRiskAuditLandedCostRouteImport.update({
+    id: '/blog/china-import-risk-audit-landed-cost',
+    path: '/blog/china-import-risk-audit-landed-cost',
+    getParentRoute: () => FrRoute,
+  } as any)
+const FrBlogChinaSourcingRoute = FrBlogChinaSourcingRouteImport.update({
+  id: '/blog/china-sourcing',
+  path: '/blog/china-sourcing',
+  getParentRoute: () => FrRoute,
+} as any)
+const FrBlogHowToFindVerifiedChinaSuppliersAiRoute =
+  FrBlogHowToFindVerifiedChinaSuppliersAiRouteImport.update({
+    id: '/blog/how-to-find-verified-china-suppliers-ai',
+    path: '/blog/how-to-find-verified-china-suppliers-ai',
+    getParentRoute: () => FrRoute,
+  } as any)
 const FrCompareIndexRoute = FrCompareIndexRouteImport.update({
   id: '/compare/',
   path: '/compare/',
@@ -1111,6 +1305,41 @@ const HiBlogSlugRoute = HiBlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => HiRoute,
 } as any)
+const HiBlogAiSupplierNegotiationMoqPriceRoute =
+  HiBlogAiSupplierNegotiationMoqPriceRouteImport.update({
+    id: '/blog/ai-supplier-negotiation-moq-price',
+    path: '/blog/ai-supplier-negotiation-moq-price',
+    getParentRoute: () => HiRoute,
+  } as any)
+const HiBlogCaseStudySourcingElectronics48HoursRoute =
+  HiBlogCaseStudySourcingElectronics48HoursRouteImport.update({
+    id: '/blog/case-study-sourcing-electronics-48-hours',
+    path: '/blog/case-study-sourcing-electronics-48-hours',
+    getParentRoute: () => HiRoute,
+  } as any)
+const HiBlogChatgptVsAccioSourcingAgentsRoute =
+  HiBlogChatgptVsAccioSourcingAgentsRouteImport.update({
+    id: '/blog/chatgpt-vs-accio-sourcing-agents',
+    path: '/blog/chatgpt-vs-accio-sourcing-agents',
+    getParentRoute: () => HiRoute,
+  } as any)
+const HiBlogChinaImportRiskAuditLandedCostRoute =
+  HiBlogChinaImportRiskAuditLandedCostRouteImport.update({
+    id: '/blog/china-import-risk-audit-landed-cost',
+    path: '/blog/china-import-risk-audit-landed-cost',
+    getParentRoute: () => HiRoute,
+  } as any)
+const HiBlogChinaSourcingRoute = HiBlogChinaSourcingRouteImport.update({
+  id: '/blog/china-sourcing',
+  path: '/blog/china-sourcing',
+  getParentRoute: () => HiRoute,
+} as any)
+const HiBlogHowToFindVerifiedChinaSuppliersAiRoute =
+  HiBlogHowToFindVerifiedChinaSuppliersAiRouteImport.update({
+    id: '/blog/how-to-find-verified-china-suppliers-ai',
+    path: '/blog/how-to-find-verified-china-suppliers-ai',
+    getParentRoute: () => HiRoute,
+  } as any)
 const HiCompareIndexRoute = HiCompareIndexRouteImport.update({
   id: '/compare/',
   path: '/compare/',
@@ -1156,6 +1385,41 @@ const ItBlogSlugRoute = ItBlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => ItRoute,
 } as any)
+const ItBlogAiSupplierNegotiationMoqPriceRoute =
+  ItBlogAiSupplierNegotiationMoqPriceRouteImport.update({
+    id: '/blog/ai-supplier-negotiation-moq-price',
+    path: '/blog/ai-supplier-negotiation-moq-price',
+    getParentRoute: () => ItRoute,
+  } as any)
+const ItBlogCaseStudySourcingElectronics48HoursRoute =
+  ItBlogCaseStudySourcingElectronics48HoursRouteImport.update({
+    id: '/blog/case-study-sourcing-electronics-48-hours',
+    path: '/blog/case-study-sourcing-electronics-48-hours',
+    getParentRoute: () => ItRoute,
+  } as any)
+const ItBlogChatgptVsAccioSourcingAgentsRoute =
+  ItBlogChatgptVsAccioSourcingAgentsRouteImport.update({
+    id: '/blog/chatgpt-vs-accio-sourcing-agents',
+    path: '/blog/chatgpt-vs-accio-sourcing-agents',
+    getParentRoute: () => ItRoute,
+  } as any)
+const ItBlogChinaImportRiskAuditLandedCostRoute =
+  ItBlogChinaImportRiskAuditLandedCostRouteImport.update({
+    id: '/blog/china-import-risk-audit-landed-cost',
+    path: '/blog/china-import-risk-audit-landed-cost',
+    getParentRoute: () => ItRoute,
+  } as any)
+const ItBlogChinaSourcingRoute = ItBlogChinaSourcingRouteImport.update({
+  id: '/blog/china-sourcing',
+  path: '/blog/china-sourcing',
+  getParentRoute: () => ItRoute,
+} as any)
+const ItBlogHowToFindVerifiedChinaSuppliersAiRoute =
+  ItBlogHowToFindVerifiedChinaSuppliersAiRouteImport.update({
+    id: '/blog/how-to-find-verified-china-suppliers-ai',
+    path: '/blog/how-to-find-verified-china-suppliers-ai',
+    getParentRoute: () => ItRoute,
+  } as any)
 const ItCompareIndexRoute = ItCompareIndexRouteImport.update({
   id: '/compare/',
   path: '/compare/',
@@ -1201,6 +1465,41 @@ const PtBlogSlugRoute = PtBlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => PtRoute,
 } as any)
+const PtBlogAiSupplierNegotiationMoqPriceRoute =
+  PtBlogAiSupplierNegotiationMoqPriceRouteImport.update({
+    id: '/blog/ai-supplier-negotiation-moq-price',
+    path: '/blog/ai-supplier-negotiation-moq-price',
+    getParentRoute: () => PtRoute,
+  } as any)
+const PtBlogCaseStudySourcingElectronics48HoursRoute =
+  PtBlogCaseStudySourcingElectronics48HoursRouteImport.update({
+    id: '/blog/case-study-sourcing-electronics-48-hours',
+    path: '/blog/case-study-sourcing-electronics-48-hours',
+    getParentRoute: () => PtRoute,
+  } as any)
+const PtBlogChatgptVsAccioSourcingAgentsRoute =
+  PtBlogChatgptVsAccioSourcingAgentsRouteImport.update({
+    id: '/blog/chatgpt-vs-accio-sourcing-agents',
+    path: '/blog/chatgpt-vs-accio-sourcing-agents',
+    getParentRoute: () => PtRoute,
+  } as any)
+const PtBlogChinaImportRiskAuditLandedCostRoute =
+  PtBlogChinaImportRiskAuditLandedCostRouteImport.update({
+    id: '/blog/china-import-risk-audit-landed-cost',
+    path: '/blog/china-import-risk-audit-landed-cost',
+    getParentRoute: () => PtRoute,
+  } as any)
+const PtBlogChinaSourcingRoute = PtBlogChinaSourcingRouteImport.update({
+  id: '/blog/china-sourcing',
+  path: '/blog/china-sourcing',
+  getParentRoute: () => PtRoute,
+} as any)
+const PtBlogHowToFindVerifiedChinaSuppliersAiRoute =
+  PtBlogHowToFindVerifiedChinaSuppliersAiRouteImport.update({
+    id: '/blog/how-to-find-verified-china-suppliers-ai',
+    path: '/blog/how-to-find-verified-china-suppliers-ai',
+    getParentRoute: () => PtRoute,
+  } as any)
 const PtCompareIndexRoute = PtCompareIndexRouteImport.update({
   id: '/compare/',
   path: '/compare/',
@@ -1246,6 +1545,41 @@ const RuBlogSlugRoute = RuBlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => RuRoute,
 } as any)
+const RuBlogAiSupplierNegotiationMoqPriceRoute =
+  RuBlogAiSupplierNegotiationMoqPriceRouteImport.update({
+    id: '/blog/ai-supplier-negotiation-moq-price',
+    path: '/blog/ai-supplier-negotiation-moq-price',
+    getParentRoute: () => RuRoute,
+  } as any)
+const RuBlogCaseStudySourcingElectronics48HoursRoute =
+  RuBlogCaseStudySourcingElectronics48HoursRouteImport.update({
+    id: '/blog/case-study-sourcing-electronics-48-hours',
+    path: '/blog/case-study-sourcing-electronics-48-hours',
+    getParentRoute: () => RuRoute,
+  } as any)
+const RuBlogChatgptVsAccioSourcingAgentsRoute =
+  RuBlogChatgptVsAccioSourcingAgentsRouteImport.update({
+    id: '/blog/chatgpt-vs-accio-sourcing-agents',
+    path: '/blog/chatgpt-vs-accio-sourcing-agents',
+    getParentRoute: () => RuRoute,
+  } as any)
+const RuBlogChinaImportRiskAuditLandedCostRoute =
+  RuBlogChinaImportRiskAuditLandedCostRouteImport.update({
+    id: '/blog/china-import-risk-audit-landed-cost',
+    path: '/blog/china-import-risk-audit-landed-cost',
+    getParentRoute: () => RuRoute,
+  } as any)
+const RuBlogChinaSourcingRoute = RuBlogChinaSourcingRouteImport.update({
+  id: '/blog/china-sourcing',
+  path: '/blog/china-sourcing',
+  getParentRoute: () => RuRoute,
+} as any)
+const RuBlogHowToFindVerifiedChinaSuppliersAiRoute =
+  RuBlogHowToFindVerifiedChinaSuppliersAiRouteImport.update({
+    id: '/blog/how-to-find-verified-china-suppliers-ai',
+    path: '/blog/how-to-find-verified-china-suppliers-ai',
+    getParentRoute: () => RuRoute,
+  } as any)
 const RuCompareIndexRoute = RuCompareIndexRouteImport.update({
   id: '/compare/',
   path: '/compare/',
@@ -1291,6 +1625,41 @@ const ZhBlogSlugRoute = ZhBlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => ZhRoute,
 } as any)
+const ZhBlogAiSupplierNegotiationMoqPriceRoute =
+  ZhBlogAiSupplierNegotiationMoqPriceRouteImport.update({
+    id: '/blog/ai-supplier-negotiation-moq-price',
+    path: '/blog/ai-supplier-negotiation-moq-price',
+    getParentRoute: () => ZhRoute,
+  } as any)
+const ZhBlogCaseStudySourcingElectronics48HoursRoute =
+  ZhBlogCaseStudySourcingElectronics48HoursRouteImport.update({
+    id: '/blog/case-study-sourcing-electronics-48-hours',
+    path: '/blog/case-study-sourcing-electronics-48-hours',
+    getParentRoute: () => ZhRoute,
+  } as any)
+const ZhBlogChatgptVsAccioSourcingAgentsRoute =
+  ZhBlogChatgptVsAccioSourcingAgentsRouteImport.update({
+    id: '/blog/chatgpt-vs-accio-sourcing-agents',
+    path: '/blog/chatgpt-vs-accio-sourcing-agents',
+    getParentRoute: () => ZhRoute,
+  } as any)
+const ZhBlogChinaImportRiskAuditLandedCostRoute =
+  ZhBlogChinaImportRiskAuditLandedCostRouteImport.update({
+    id: '/blog/china-import-risk-audit-landed-cost',
+    path: '/blog/china-import-risk-audit-landed-cost',
+    getParentRoute: () => ZhRoute,
+  } as any)
+const ZhBlogChinaSourcingRoute = ZhBlogChinaSourcingRouteImport.update({
+  id: '/blog/china-sourcing',
+  path: '/blog/china-sourcing',
+  getParentRoute: () => ZhRoute,
+} as any)
+const ZhBlogHowToFindVerifiedChinaSuppliersAiRoute =
+  ZhBlogHowToFindVerifiedChinaSuppliersAiRouteImport.update({
+    id: '/blog/how-to-find-verified-china-suppliers-ai',
+    path: '/blog/how-to-find-verified-china-suppliers-ai',
+    getParentRoute: () => ZhRoute,
+  } as any)
 const ZhCompareIndexRoute = ZhCompareIndexRouteImport.update({
   id: '/compare/',
   path: '/compare/',
@@ -1482,46 +1851,100 @@ export interface FileRoutesByFullPath {
   '/ru/': typeof RuIndexRoute
   '/zh/': typeof ZhIndexRoute
   '/ar/blog/$slug': typeof ArBlogSlugRoute
+  '/ar/blog/ai-supplier-negotiation-moq-price': typeof ArBlogAiSupplierNegotiationMoqPriceRoute
+  '/ar/blog/case-study-sourcing-electronics-48-hours': typeof ArBlogCaseStudySourcingElectronics48HoursRoute
+  '/ar/blog/chatgpt-vs-accio-sourcing-agents': typeof ArBlogChatgptVsAccioSourcingAgentsRoute
+  '/ar/blog/china-import-risk-audit-landed-cost': typeof ArBlogChinaImportRiskAuditLandedCostRoute
+  '/ar/blog/china-sourcing': typeof ArBlogChinaSourcingRoute
+  '/ar/blog/how-to-find-verified-china-suppliers-ai': typeof ArBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/ar/compare/$competitor': typeof ArCompareCompetitorRoute
   '/ar/events/free-forever': typeof ArEventsFreeForeverRoute
   '/ar/for/$useCase': typeof ArForUseCaseRoute
   '/ar/guide/$guide': typeof ArGuideGuideRoute
   '/de/blog/$slug': typeof DeBlogSlugRoute
+  '/de/blog/ai-supplier-negotiation-moq-price': typeof DeBlogAiSupplierNegotiationMoqPriceRoute
+  '/de/blog/case-study-sourcing-electronics-48-hours': typeof DeBlogCaseStudySourcingElectronics48HoursRoute
+  '/de/blog/chatgpt-vs-accio-sourcing-agents': typeof DeBlogChatgptVsAccioSourcingAgentsRoute
+  '/de/blog/china-import-risk-audit-landed-cost': typeof DeBlogChinaImportRiskAuditLandedCostRoute
+  '/de/blog/china-sourcing': typeof DeBlogChinaSourcingRoute
+  '/de/blog/how-to-find-verified-china-suppliers-ai': typeof DeBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/de/compare/$competitor': typeof DeCompareCompetitorRoute
   '/de/events/free-forever': typeof DeEventsFreeForeverRoute
   '/de/for/$useCase': typeof DeForUseCaseRoute
   '/de/guide/$guide': typeof DeGuideGuideRoute
   '/es/blog/$slug': typeof EsBlogSlugRoute
+  '/es/blog/ai-supplier-negotiation-moq-price': typeof EsBlogAiSupplierNegotiationMoqPriceRoute
+  '/es/blog/case-study-sourcing-electronics-48-hours': typeof EsBlogCaseStudySourcingElectronics48HoursRoute
+  '/es/blog/chatgpt-vs-accio-sourcing-agents': typeof EsBlogChatgptVsAccioSourcingAgentsRoute
+  '/es/blog/china-import-risk-audit-landed-cost': typeof EsBlogChinaImportRiskAuditLandedCostRoute
+  '/es/blog/china-sourcing': typeof EsBlogChinaSourcingRoute
+  '/es/blog/how-to-find-verified-china-suppliers-ai': typeof EsBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/es/compare/$competitor': typeof EsCompareCompetitorRoute
   '/es/events/free-forever': typeof EsEventsFreeForeverRoute
   '/es/for/$useCase': typeof EsForUseCaseRoute
   '/es/guide/$guide': typeof EsGuideGuideRoute
   '/fr/blog/$slug': typeof FrBlogSlugRoute
+  '/fr/blog/ai-supplier-negotiation-moq-price': typeof FrBlogAiSupplierNegotiationMoqPriceRoute
+  '/fr/blog/case-study-sourcing-electronics-48-hours': typeof FrBlogCaseStudySourcingElectronics48HoursRoute
+  '/fr/blog/chatgpt-vs-accio-sourcing-agents': typeof FrBlogChatgptVsAccioSourcingAgentsRoute
+  '/fr/blog/china-import-risk-audit-landed-cost': typeof FrBlogChinaImportRiskAuditLandedCostRoute
+  '/fr/blog/china-sourcing': typeof FrBlogChinaSourcingRoute
+  '/fr/blog/how-to-find-verified-china-suppliers-ai': typeof FrBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/fr/compare/$competitor': typeof FrCompareCompetitorRoute
   '/fr/events/free-forever': typeof FrEventsFreeForeverRoute
   '/fr/for/$useCase': typeof FrForUseCaseRoute
   '/fr/guide/$guide': typeof FrGuideGuideRoute
   '/hi/blog/$slug': typeof HiBlogSlugRoute
+  '/hi/blog/ai-supplier-negotiation-moq-price': typeof HiBlogAiSupplierNegotiationMoqPriceRoute
+  '/hi/blog/case-study-sourcing-electronics-48-hours': typeof HiBlogCaseStudySourcingElectronics48HoursRoute
+  '/hi/blog/chatgpt-vs-accio-sourcing-agents': typeof HiBlogChatgptVsAccioSourcingAgentsRoute
+  '/hi/blog/china-import-risk-audit-landed-cost': typeof HiBlogChinaImportRiskAuditLandedCostRoute
+  '/hi/blog/china-sourcing': typeof HiBlogChinaSourcingRoute
+  '/hi/blog/how-to-find-verified-china-suppliers-ai': typeof HiBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/hi/compare/$competitor': typeof HiCompareCompetitorRoute
   '/hi/events/free-forever': typeof HiEventsFreeForeverRoute
   '/hi/for/$useCase': typeof HiForUseCaseRoute
   '/hi/guide/$guide': typeof HiGuideGuideRoute
   '/it/blog/$slug': typeof ItBlogSlugRoute
+  '/it/blog/ai-supplier-negotiation-moq-price': typeof ItBlogAiSupplierNegotiationMoqPriceRoute
+  '/it/blog/case-study-sourcing-electronics-48-hours': typeof ItBlogCaseStudySourcingElectronics48HoursRoute
+  '/it/blog/chatgpt-vs-accio-sourcing-agents': typeof ItBlogChatgptVsAccioSourcingAgentsRoute
+  '/it/blog/china-import-risk-audit-landed-cost': typeof ItBlogChinaImportRiskAuditLandedCostRoute
+  '/it/blog/china-sourcing': typeof ItBlogChinaSourcingRoute
+  '/it/blog/how-to-find-verified-china-suppliers-ai': typeof ItBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/it/compare/$competitor': typeof ItCompareCompetitorRoute
   '/it/events/free-forever': typeof ItEventsFreeForeverRoute
   '/it/for/$useCase': typeof ItForUseCaseRoute
   '/it/guide/$guide': typeof ItGuideGuideRoute
   '/pt/blog/$slug': typeof PtBlogSlugRoute
+  '/pt/blog/ai-supplier-negotiation-moq-price': typeof PtBlogAiSupplierNegotiationMoqPriceRoute
+  '/pt/blog/case-study-sourcing-electronics-48-hours': typeof PtBlogCaseStudySourcingElectronics48HoursRoute
+  '/pt/blog/chatgpt-vs-accio-sourcing-agents': typeof PtBlogChatgptVsAccioSourcingAgentsRoute
+  '/pt/blog/china-import-risk-audit-landed-cost': typeof PtBlogChinaImportRiskAuditLandedCostRoute
+  '/pt/blog/china-sourcing': typeof PtBlogChinaSourcingRoute
+  '/pt/blog/how-to-find-verified-china-suppliers-ai': typeof PtBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/pt/compare/$competitor': typeof PtCompareCompetitorRoute
   '/pt/events/free-forever': typeof PtEventsFreeForeverRoute
   '/pt/for/$useCase': typeof PtForUseCaseRoute
   '/pt/guide/$guide': typeof PtGuideGuideRoute
   '/ru/blog/$slug': typeof RuBlogSlugRoute
+  '/ru/blog/ai-supplier-negotiation-moq-price': typeof RuBlogAiSupplierNegotiationMoqPriceRoute
+  '/ru/blog/case-study-sourcing-electronics-48-hours': typeof RuBlogCaseStudySourcingElectronics48HoursRoute
+  '/ru/blog/chatgpt-vs-accio-sourcing-agents': typeof RuBlogChatgptVsAccioSourcingAgentsRoute
+  '/ru/blog/china-import-risk-audit-landed-cost': typeof RuBlogChinaImportRiskAuditLandedCostRoute
+  '/ru/blog/china-sourcing': typeof RuBlogChinaSourcingRoute
+  '/ru/blog/how-to-find-verified-china-suppliers-ai': typeof RuBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/ru/compare/$competitor': typeof RuCompareCompetitorRoute
   '/ru/events/free-forever': typeof RuEventsFreeForeverRoute
   '/ru/for/$useCase': typeof RuForUseCaseRoute
   '/ru/guide/$guide': typeof RuGuideGuideRoute
   '/zh/blog/$slug': typeof ZhBlogSlugRoute
+  '/zh/blog/ai-supplier-negotiation-moq-price': typeof ZhBlogAiSupplierNegotiationMoqPriceRoute
+  '/zh/blog/case-study-sourcing-electronics-48-hours': typeof ZhBlogCaseStudySourcingElectronics48HoursRoute
+  '/zh/blog/chatgpt-vs-accio-sourcing-agents': typeof ZhBlogChatgptVsAccioSourcingAgentsRoute
+  '/zh/blog/china-import-risk-audit-landed-cost': typeof ZhBlogChinaImportRiskAuditLandedCostRoute
+  '/zh/blog/china-sourcing': typeof ZhBlogChinaSourcingRoute
+  '/zh/blog/how-to-find-verified-china-suppliers-ai': typeof ZhBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/zh/compare/$competitor': typeof ZhCompareCompetitorRoute
   '/zh/events/free-forever': typeof ZhEventsFreeForeverRoute
   '/zh/for/$useCase': typeof ZhForUseCaseRoute
@@ -1696,46 +2119,100 @@ export interface FileRoutesByTo {
   '/ru': typeof RuIndexRoute
   '/zh': typeof ZhIndexRoute
   '/ar/blog/$slug': typeof ArBlogSlugRoute
+  '/ar/blog/ai-supplier-negotiation-moq-price': typeof ArBlogAiSupplierNegotiationMoqPriceRoute
+  '/ar/blog/case-study-sourcing-electronics-48-hours': typeof ArBlogCaseStudySourcingElectronics48HoursRoute
+  '/ar/blog/chatgpt-vs-accio-sourcing-agents': typeof ArBlogChatgptVsAccioSourcingAgentsRoute
+  '/ar/blog/china-import-risk-audit-landed-cost': typeof ArBlogChinaImportRiskAuditLandedCostRoute
+  '/ar/blog/china-sourcing': typeof ArBlogChinaSourcingRoute
+  '/ar/blog/how-to-find-verified-china-suppliers-ai': typeof ArBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/ar/compare/$competitor': typeof ArCompareCompetitorRoute
   '/ar/events/free-forever': typeof ArEventsFreeForeverRoute
   '/ar/for/$useCase': typeof ArForUseCaseRoute
   '/ar/guide/$guide': typeof ArGuideGuideRoute
   '/de/blog/$slug': typeof DeBlogSlugRoute
+  '/de/blog/ai-supplier-negotiation-moq-price': typeof DeBlogAiSupplierNegotiationMoqPriceRoute
+  '/de/blog/case-study-sourcing-electronics-48-hours': typeof DeBlogCaseStudySourcingElectronics48HoursRoute
+  '/de/blog/chatgpt-vs-accio-sourcing-agents': typeof DeBlogChatgptVsAccioSourcingAgentsRoute
+  '/de/blog/china-import-risk-audit-landed-cost': typeof DeBlogChinaImportRiskAuditLandedCostRoute
+  '/de/blog/china-sourcing': typeof DeBlogChinaSourcingRoute
+  '/de/blog/how-to-find-verified-china-suppliers-ai': typeof DeBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/de/compare/$competitor': typeof DeCompareCompetitorRoute
   '/de/events/free-forever': typeof DeEventsFreeForeverRoute
   '/de/for/$useCase': typeof DeForUseCaseRoute
   '/de/guide/$guide': typeof DeGuideGuideRoute
   '/es/blog/$slug': typeof EsBlogSlugRoute
+  '/es/blog/ai-supplier-negotiation-moq-price': typeof EsBlogAiSupplierNegotiationMoqPriceRoute
+  '/es/blog/case-study-sourcing-electronics-48-hours': typeof EsBlogCaseStudySourcingElectronics48HoursRoute
+  '/es/blog/chatgpt-vs-accio-sourcing-agents': typeof EsBlogChatgptVsAccioSourcingAgentsRoute
+  '/es/blog/china-import-risk-audit-landed-cost': typeof EsBlogChinaImportRiskAuditLandedCostRoute
+  '/es/blog/china-sourcing': typeof EsBlogChinaSourcingRoute
+  '/es/blog/how-to-find-verified-china-suppliers-ai': typeof EsBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/es/compare/$competitor': typeof EsCompareCompetitorRoute
   '/es/events/free-forever': typeof EsEventsFreeForeverRoute
   '/es/for/$useCase': typeof EsForUseCaseRoute
   '/es/guide/$guide': typeof EsGuideGuideRoute
   '/fr/blog/$slug': typeof FrBlogSlugRoute
+  '/fr/blog/ai-supplier-negotiation-moq-price': typeof FrBlogAiSupplierNegotiationMoqPriceRoute
+  '/fr/blog/case-study-sourcing-electronics-48-hours': typeof FrBlogCaseStudySourcingElectronics48HoursRoute
+  '/fr/blog/chatgpt-vs-accio-sourcing-agents': typeof FrBlogChatgptVsAccioSourcingAgentsRoute
+  '/fr/blog/china-import-risk-audit-landed-cost': typeof FrBlogChinaImportRiskAuditLandedCostRoute
+  '/fr/blog/china-sourcing': typeof FrBlogChinaSourcingRoute
+  '/fr/blog/how-to-find-verified-china-suppliers-ai': typeof FrBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/fr/compare/$competitor': typeof FrCompareCompetitorRoute
   '/fr/events/free-forever': typeof FrEventsFreeForeverRoute
   '/fr/for/$useCase': typeof FrForUseCaseRoute
   '/fr/guide/$guide': typeof FrGuideGuideRoute
   '/hi/blog/$slug': typeof HiBlogSlugRoute
+  '/hi/blog/ai-supplier-negotiation-moq-price': typeof HiBlogAiSupplierNegotiationMoqPriceRoute
+  '/hi/blog/case-study-sourcing-electronics-48-hours': typeof HiBlogCaseStudySourcingElectronics48HoursRoute
+  '/hi/blog/chatgpt-vs-accio-sourcing-agents': typeof HiBlogChatgptVsAccioSourcingAgentsRoute
+  '/hi/blog/china-import-risk-audit-landed-cost': typeof HiBlogChinaImportRiskAuditLandedCostRoute
+  '/hi/blog/china-sourcing': typeof HiBlogChinaSourcingRoute
+  '/hi/blog/how-to-find-verified-china-suppliers-ai': typeof HiBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/hi/compare/$competitor': typeof HiCompareCompetitorRoute
   '/hi/events/free-forever': typeof HiEventsFreeForeverRoute
   '/hi/for/$useCase': typeof HiForUseCaseRoute
   '/hi/guide/$guide': typeof HiGuideGuideRoute
   '/it/blog/$slug': typeof ItBlogSlugRoute
+  '/it/blog/ai-supplier-negotiation-moq-price': typeof ItBlogAiSupplierNegotiationMoqPriceRoute
+  '/it/blog/case-study-sourcing-electronics-48-hours': typeof ItBlogCaseStudySourcingElectronics48HoursRoute
+  '/it/blog/chatgpt-vs-accio-sourcing-agents': typeof ItBlogChatgptVsAccioSourcingAgentsRoute
+  '/it/blog/china-import-risk-audit-landed-cost': typeof ItBlogChinaImportRiskAuditLandedCostRoute
+  '/it/blog/china-sourcing': typeof ItBlogChinaSourcingRoute
+  '/it/blog/how-to-find-verified-china-suppliers-ai': typeof ItBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/it/compare/$competitor': typeof ItCompareCompetitorRoute
   '/it/events/free-forever': typeof ItEventsFreeForeverRoute
   '/it/for/$useCase': typeof ItForUseCaseRoute
   '/it/guide/$guide': typeof ItGuideGuideRoute
   '/pt/blog/$slug': typeof PtBlogSlugRoute
+  '/pt/blog/ai-supplier-negotiation-moq-price': typeof PtBlogAiSupplierNegotiationMoqPriceRoute
+  '/pt/blog/case-study-sourcing-electronics-48-hours': typeof PtBlogCaseStudySourcingElectronics48HoursRoute
+  '/pt/blog/chatgpt-vs-accio-sourcing-agents': typeof PtBlogChatgptVsAccioSourcingAgentsRoute
+  '/pt/blog/china-import-risk-audit-landed-cost': typeof PtBlogChinaImportRiskAuditLandedCostRoute
+  '/pt/blog/china-sourcing': typeof PtBlogChinaSourcingRoute
+  '/pt/blog/how-to-find-verified-china-suppliers-ai': typeof PtBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/pt/compare/$competitor': typeof PtCompareCompetitorRoute
   '/pt/events/free-forever': typeof PtEventsFreeForeverRoute
   '/pt/for/$useCase': typeof PtForUseCaseRoute
   '/pt/guide/$guide': typeof PtGuideGuideRoute
   '/ru/blog/$slug': typeof RuBlogSlugRoute
+  '/ru/blog/ai-supplier-negotiation-moq-price': typeof RuBlogAiSupplierNegotiationMoqPriceRoute
+  '/ru/blog/case-study-sourcing-electronics-48-hours': typeof RuBlogCaseStudySourcingElectronics48HoursRoute
+  '/ru/blog/chatgpt-vs-accio-sourcing-agents': typeof RuBlogChatgptVsAccioSourcingAgentsRoute
+  '/ru/blog/china-import-risk-audit-landed-cost': typeof RuBlogChinaImportRiskAuditLandedCostRoute
+  '/ru/blog/china-sourcing': typeof RuBlogChinaSourcingRoute
+  '/ru/blog/how-to-find-verified-china-suppliers-ai': typeof RuBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/ru/compare/$competitor': typeof RuCompareCompetitorRoute
   '/ru/events/free-forever': typeof RuEventsFreeForeverRoute
   '/ru/for/$useCase': typeof RuForUseCaseRoute
   '/ru/guide/$guide': typeof RuGuideGuideRoute
   '/zh/blog/$slug': typeof ZhBlogSlugRoute
+  '/zh/blog/ai-supplier-negotiation-moq-price': typeof ZhBlogAiSupplierNegotiationMoqPriceRoute
+  '/zh/blog/case-study-sourcing-electronics-48-hours': typeof ZhBlogCaseStudySourcingElectronics48HoursRoute
+  '/zh/blog/chatgpt-vs-accio-sourcing-agents': typeof ZhBlogChatgptVsAccioSourcingAgentsRoute
+  '/zh/blog/china-import-risk-audit-landed-cost': typeof ZhBlogChinaImportRiskAuditLandedCostRoute
+  '/zh/blog/china-sourcing': typeof ZhBlogChinaSourcingRoute
+  '/zh/blog/how-to-find-verified-china-suppliers-ai': typeof ZhBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/zh/compare/$competitor': typeof ZhCompareCompetitorRoute
   '/zh/events/free-forever': typeof ZhEventsFreeForeverRoute
   '/zh/for/$useCase': typeof ZhForUseCaseRoute
@@ -1920,46 +2397,100 @@ export interface FileRoutesById {
   '/ru/': typeof RuIndexRoute
   '/zh/': typeof ZhIndexRoute
   '/ar/blog/$slug': typeof ArBlogSlugRoute
+  '/ar/blog/ai-supplier-negotiation-moq-price': typeof ArBlogAiSupplierNegotiationMoqPriceRoute
+  '/ar/blog/case-study-sourcing-electronics-48-hours': typeof ArBlogCaseStudySourcingElectronics48HoursRoute
+  '/ar/blog/chatgpt-vs-accio-sourcing-agents': typeof ArBlogChatgptVsAccioSourcingAgentsRoute
+  '/ar/blog/china-import-risk-audit-landed-cost': typeof ArBlogChinaImportRiskAuditLandedCostRoute
+  '/ar/blog/china-sourcing': typeof ArBlogChinaSourcingRoute
+  '/ar/blog/how-to-find-verified-china-suppliers-ai': typeof ArBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/ar/compare/$competitor': typeof ArCompareCompetitorRoute
   '/ar/events/free-forever': typeof ArEventsFreeForeverRoute
   '/ar/for/$useCase': typeof ArForUseCaseRoute
   '/ar/guide/$guide': typeof ArGuideGuideRoute
   '/de/blog/$slug': typeof DeBlogSlugRoute
+  '/de/blog/ai-supplier-negotiation-moq-price': typeof DeBlogAiSupplierNegotiationMoqPriceRoute
+  '/de/blog/case-study-sourcing-electronics-48-hours': typeof DeBlogCaseStudySourcingElectronics48HoursRoute
+  '/de/blog/chatgpt-vs-accio-sourcing-agents': typeof DeBlogChatgptVsAccioSourcingAgentsRoute
+  '/de/blog/china-import-risk-audit-landed-cost': typeof DeBlogChinaImportRiskAuditLandedCostRoute
+  '/de/blog/china-sourcing': typeof DeBlogChinaSourcingRoute
+  '/de/blog/how-to-find-verified-china-suppliers-ai': typeof DeBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/de/compare/$competitor': typeof DeCompareCompetitorRoute
   '/de/events/free-forever': typeof DeEventsFreeForeverRoute
   '/de/for/$useCase': typeof DeForUseCaseRoute
   '/de/guide/$guide': typeof DeGuideGuideRoute
   '/es/blog/$slug': typeof EsBlogSlugRoute
+  '/es/blog/ai-supplier-negotiation-moq-price': typeof EsBlogAiSupplierNegotiationMoqPriceRoute
+  '/es/blog/case-study-sourcing-electronics-48-hours': typeof EsBlogCaseStudySourcingElectronics48HoursRoute
+  '/es/blog/chatgpt-vs-accio-sourcing-agents': typeof EsBlogChatgptVsAccioSourcingAgentsRoute
+  '/es/blog/china-import-risk-audit-landed-cost': typeof EsBlogChinaImportRiskAuditLandedCostRoute
+  '/es/blog/china-sourcing': typeof EsBlogChinaSourcingRoute
+  '/es/blog/how-to-find-verified-china-suppliers-ai': typeof EsBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/es/compare/$competitor': typeof EsCompareCompetitorRoute
   '/es/events/free-forever': typeof EsEventsFreeForeverRoute
   '/es/for/$useCase': typeof EsForUseCaseRoute
   '/es/guide/$guide': typeof EsGuideGuideRoute
   '/fr/blog/$slug': typeof FrBlogSlugRoute
+  '/fr/blog/ai-supplier-negotiation-moq-price': typeof FrBlogAiSupplierNegotiationMoqPriceRoute
+  '/fr/blog/case-study-sourcing-electronics-48-hours': typeof FrBlogCaseStudySourcingElectronics48HoursRoute
+  '/fr/blog/chatgpt-vs-accio-sourcing-agents': typeof FrBlogChatgptVsAccioSourcingAgentsRoute
+  '/fr/blog/china-import-risk-audit-landed-cost': typeof FrBlogChinaImportRiskAuditLandedCostRoute
+  '/fr/blog/china-sourcing': typeof FrBlogChinaSourcingRoute
+  '/fr/blog/how-to-find-verified-china-suppliers-ai': typeof FrBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/fr/compare/$competitor': typeof FrCompareCompetitorRoute
   '/fr/events/free-forever': typeof FrEventsFreeForeverRoute
   '/fr/for/$useCase': typeof FrForUseCaseRoute
   '/fr/guide/$guide': typeof FrGuideGuideRoute
   '/hi/blog/$slug': typeof HiBlogSlugRoute
+  '/hi/blog/ai-supplier-negotiation-moq-price': typeof HiBlogAiSupplierNegotiationMoqPriceRoute
+  '/hi/blog/case-study-sourcing-electronics-48-hours': typeof HiBlogCaseStudySourcingElectronics48HoursRoute
+  '/hi/blog/chatgpt-vs-accio-sourcing-agents': typeof HiBlogChatgptVsAccioSourcingAgentsRoute
+  '/hi/blog/china-import-risk-audit-landed-cost': typeof HiBlogChinaImportRiskAuditLandedCostRoute
+  '/hi/blog/china-sourcing': typeof HiBlogChinaSourcingRoute
+  '/hi/blog/how-to-find-verified-china-suppliers-ai': typeof HiBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/hi/compare/$competitor': typeof HiCompareCompetitorRoute
   '/hi/events/free-forever': typeof HiEventsFreeForeverRoute
   '/hi/for/$useCase': typeof HiForUseCaseRoute
   '/hi/guide/$guide': typeof HiGuideGuideRoute
   '/it/blog/$slug': typeof ItBlogSlugRoute
+  '/it/blog/ai-supplier-negotiation-moq-price': typeof ItBlogAiSupplierNegotiationMoqPriceRoute
+  '/it/blog/case-study-sourcing-electronics-48-hours': typeof ItBlogCaseStudySourcingElectronics48HoursRoute
+  '/it/blog/chatgpt-vs-accio-sourcing-agents': typeof ItBlogChatgptVsAccioSourcingAgentsRoute
+  '/it/blog/china-import-risk-audit-landed-cost': typeof ItBlogChinaImportRiskAuditLandedCostRoute
+  '/it/blog/china-sourcing': typeof ItBlogChinaSourcingRoute
+  '/it/blog/how-to-find-verified-china-suppliers-ai': typeof ItBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/it/compare/$competitor': typeof ItCompareCompetitorRoute
   '/it/events/free-forever': typeof ItEventsFreeForeverRoute
   '/it/for/$useCase': typeof ItForUseCaseRoute
   '/it/guide/$guide': typeof ItGuideGuideRoute
   '/pt/blog/$slug': typeof PtBlogSlugRoute
+  '/pt/blog/ai-supplier-negotiation-moq-price': typeof PtBlogAiSupplierNegotiationMoqPriceRoute
+  '/pt/blog/case-study-sourcing-electronics-48-hours': typeof PtBlogCaseStudySourcingElectronics48HoursRoute
+  '/pt/blog/chatgpt-vs-accio-sourcing-agents': typeof PtBlogChatgptVsAccioSourcingAgentsRoute
+  '/pt/blog/china-import-risk-audit-landed-cost': typeof PtBlogChinaImportRiskAuditLandedCostRoute
+  '/pt/blog/china-sourcing': typeof PtBlogChinaSourcingRoute
+  '/pt/blog/how-to-find-verified-china-suppliers-ai': typeof PtBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/pt/compare/$competitor': typeof PtCompareCompetitorRoute
   '/pt/events/free-forever': typeof PtEventsFreeForeverRoute
   '/pt/for/$useCase': typeof PtForUseCaseRoute
   '/pt/guide/$guide': typeof PtGuideGuideRoute
   '/ru/blog/$slug': typeof RuBlogSlugRoute
+  '/ru/blog/ai-supplier-negotiation-moq-price': typeof RuBlogAiSupplierNegotiationMoqPriceRoute
+  '/ru/blog/case-study-sourcing-electronics-48-hours': typeof RuBlogCaseStudySourcingElectronics48HoursRoute
+  '/ru/blog/chatgpt-vs-accio-sourcing-agents': typeof RuBlogChatgptVsAccioSourcingAgentsRoute
+  '/ru/blog/china-import-risk-audit-landed-cost': typeof RuBlogChinaImportRiskAuditLandedCostRoute
+  '/ru/blog/china-sourcing': typeof RuBlogChinaSourcingRoute
+  '/ru/blog/how-to-find-verified-china-suppliers-ai': typeof RuBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/ru/compare/$competitor': typeof RuCompareCompetitorRoute
   '/ru/events/free-forever': typeof RuEventsFreeForeverRoute
   '/ru/for/$useCase': typeof RuForUseCaseRoute
   '/ru/guide/$guide': typeof RuGuideGuideRoute
   '/zh/blog/$slug': typeof ZhBlogSlugRoute
+  '/zh/blog/ai-supplier-negotiation-moq-price': typeof ZhBlogAiSupplierNegotiationMoqPriceRoute
+  '/zh/blog/case-study-sourcing-electronics-48-hours': typeof ZhBlogCaseStudySourcingElectronics48HoursRoute
+  '/zh/blog/chatgpt-vs-accio-sourcing-agents': typeof ZhBlogChatgptVsAccioSourcingAgentsRoute
+  '/zh/blog/china-import-risk-audit-landed-cost': typeof ZhBlogChinaImportRiskAuditLandedCostRoute
+  '/zh/blog/china-sourcing': typeof ZhBlogChinaSourcingRoute
+  '/zh/blog/how-to-find-verified-china-suppliers-ai': typeof ZhBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/zh/compare/$competitor': typeof ZhCompareCompetitorRoute
   '/zh/events/free-forever': typeof ZhEventsFreeForeverRoute
   '/zh/for/$useCase': typeof ZhForUseCaseRoute
@@ -2145,46 +2676,100 @@ export interface FileRouteTypes {
     | '/ru/'
     | '/zh/'
     | '/ar/blog/$slug'
+    | '/ar/blog/ai-supplier-negotiation-moq-price'
+    | '/ar/blog/case-study-sourcing-electronics-48-hours'
+    | '/ar/blog/chatgpt-vs-accio-sourcing-agents'
+    | '/ar/blog/china-import-risk-audit-landed-cost'
+    | '/ar/blog/china-sourcing'
+    | '/ar/blog/how-to-find-verified-china-suppliers-ai'
     | '/ar/compare/$competitor'
     | '/ar/events/free-forever'
     | '/ar/for/$useCase'
     | '/ar/guide/$guide'
     | '/de/blog/$slug'
+    | '/de/blog/ai-supplier-negotiation-moq-price'
+    | '/de/blog/case-study-sourcing-electronics-48-hours'
+    | '/de/blog/chatgpt-vs-accio-sourcing-agents'
+    | '/de/blog/china-import-risk-audit-landed-cost'
+    | '/de/blog/china-sourcing'
+    | '/de/blog/how-to-find-verified-china-suppliers-ai'
     | '/de/compare/$competitor'
     | '/de/events/free-forever'
     | '/de/for/$useCase'
     | '/de/guide/$guide'
     | '/es/blog/$slug'
+    | '/es/blog/ai-supplier-negotiation-moq-price'
+    | '/es/blog/case-study-sourcing-electronics-48-hours'
+    | '/es/blog/chatgpt-vs-accio-sourcing-agents'
+    | '/es/blog/china-import-risk-audit-landed-cost'
+    | '/es/blog/china-sourcing'
+    | '/es/blog/how-to-find-verified-china-suppliers-ai'
     | '/es/compare/$competitor'
     | '/es/events/free-forever'
     | '/es/for/$useCase'
     | '/es/guide/$guide'
     | '/fr/blog/$slug'
+    | '/fr/blog/ai-supplier-negotiation-moq-price'
+    | '/fr/blog/case-study-sourcing-electronics-48-hours'
+    | '/fr/blog/chatgpt-vs-accio-sourcing-agents'
+    | '/fr/blog/china-import-risk-audit-landed-cost'
+    | '/fr/blog/china-sourcing'
+    | '/fr/blog/how-to-find-verified-china-suppliers-ai'
     | '/fr/compare/$competitor'
     | '/fr/events/free-forever'
     | '/fr/for/$useCase'
     | '/fr/guide/$guide'
     | '/hi/blog/$slug'
+    | '/hi/blog/ai-supplier-negotiation-moq-price'
+    | '/hi/blog/case-study-sourcing-electronics-48-hours'
+    | '/hi/blog/chatgpt-vs-accio-sourcing-agents'
+    | '/hi/blog/china-import-risk-audit-landed-cost'
+    | '/hi/blog/china-sourcing'
+    | '/hi/blog/how-to-find-verified-china-suppliers-ai'
     | '/hi/compare/$competitor'
     | '/hi/events/free-forever'
     | '/hi/for/$useCase'
     | '/hi/guide/$guide'
     | '/it/blog/$slug'
+    | '/it/blog/ai-supplier-negotiation-moq-price'
+    | '/it/blog/case-study-sourcing-electronics-48-hours'
+    | '/it/blog/chatgpt-vs-accio-sourcing-agents'
+    | '/it/blog/china-import-risk-audit-landed-cost'
+    | '/it/blog/china-sourcing'
+    | '/it/blog/how-to-find-verified-china-suppliers-ai'
     | '/it/compare/$competitor'
     | '/it/events/free-forever'
     | '/it/for/$useCase'
     | '/it/guide/$guide'
     | '/pt/blog/$slug'
+    | '/pt/blog/ai-supplier-negotiation-moq-price'
+    | '/pt/blog/case-study-sourcing-electronics-48-hours'
+    | '/pt/blog/chatgpt-vs-accio-sourcing-agents'
+    | '/pt/blog/china-import-risk-audit-landed-cost'
+    | '/pt/blog/china-sourcing'
+    | '/pt/blog/how-to-find-verified-china-suppliers-ai'
     | '/pt/compare/$competitor'
     | '/pt/events/free-forever'
     | '/pt/for/$useCase'
     | '/pt/guide/$guide'
     | '/ru/blog/$slug'
+    | '/ru/blog/ai-supplier-negotiation-moq-price'
+    | '/ru/blog/case-study-sourcing-electronics-48-hours'
+    | '/ru/blog/chatgpt-vs-accio-sourcing-agents'
+    | '/ru/blog/china-import-risk-audit-landed-cost'
+    | '/ru/blog/china-sourcing'
+    | '/ru/blog/how-to-find-verified-china-suppliers-ai'
     | '/ru/compare/$competitor'
     | '/ru/events/free-forever'
     | '/ru/for/$useCase'
     | '/ru/guide/$guide'
     | '/zh/blog/$slug'
+    | '/zh/blog/ai-supplier-negotiation-moq-price'
+    | '/zh/blog/case-study-sourcing-electronics-48-hours'
+    | '/zh/blog/chatgpt-vs-accio-sourcing-agents'
+    | '/zh/blog/china-import-risk-audit-landed-cost'
+    | '/zh/blog/china-sourcing'
+    | '/zh/blog/how-to-find-verified-china-suppliers-ai'
     | '/zh/compare/$competitor'
     | '/zh/events/free-forever'
     | '/zh/for/$useCase'
@@ -2359,46 +2944,100 @@ export interface FileRouteTypes {
     | '/ru'
     | '/zh'
     | '/ar/blog/$slug'
+    | '/ar/blog/ai-supplier-negotiation-moq-price'
+    | '/ar/blog/case-study-sourcing-electronics-48-hours'
+    | '/ar/blog/chatgpt-vs-accio-sourcing-agents'
+    | '/ar/blog/china-import-risk-audit-landed-cost'
+    | '/ar/blog/china-sourcing'
+    | '/ar/blog/how-to-find-verified-china-suppliers-ai'
     | '/ar/compare/$competitor'
     | '/ar/events/free-forever'
     | '/ar/for/$useCase'
     | '/ar/guide/$guide'
     | '/de/blog/$slug'
+    | '/de/blog/ai-supplier-negotiation-moq-price'
+    | '/de/blog/case-study-sourcing-electronics-48-hours'
+    | '/de/blog/chatgpt-vs-accio-sourcing-agents'
+    | '/de/blog/china-import-risk-audit-landed-cost'
+    | '/de/blog/china-sourcing'
+    | '/de/blog/how-to-find-verified-china-suppliers-ai'
     | '/de/compare/$competitor'
     | '/de/events/free-forever'
     | '/de/for/$useCase'
     | '/de/guide/$guide'
     | '/es/blog/$slug'
+    | '/es/blog/ai-supplier-negotiation-moq-price'
+    | '/es/blog/case-study-sourcing-electronics-48-hours'
+    | '/es/blog/chatgpt-vs-accio-sourcing-agents'
+    | '/es/blog/china-import-risk-audit-landed-cost'
+    | '/es/blog/china-sourcing'
+    | '/es/blog/how-to-find-verified-china-suppliers-ai'
     | '/es/compare/$competitor'
     | '/es/events/free-forever'
     | '/es/for/$useCase'
     | '/es/guide/$guide'
     | '/fr/blog/$slug'
+    | '/fr/blog/ai-supplier-negotiation-moq-price'
+    | '/fr/blog/case-study-sourcing-electronics-48-hours'
+    | '/fr/blog/chatgpt-vs-accio-sourcing-agents'
+    | '/fr/blog/china-import-risk-audit-landed-cost'
+    | '/fr/blog/china-sourcing'
+    | '/fr/blog/how-to-find-verified-china-suppliers-ai'
     | '/fr/compare/$competitor'
     | '/fr/events/free-forever'
     | '/fr/for/$useCase'
     | '/fr/guide/$guide'
     | '/hi/blog/$slug'
+    | '/hi/blog/ai-supplier-negotiation-moq-price'
+    | '/hi/blog/case-study-sourcing-electronics-48-hours'
+    | '/hi/blog/chatgpt-vs-accio-sourcing-agents'
+    | '/hi/blog/china-import-risk-audit-landed-cost'
+    | '/hi/blog/china-sourcing'
+    | '/hi/blog/how-to-find-verified-china-suppliers-ai'
     | '/hi/compare/$competitor'
     | '/hi/events/free-forever'
     | '/hi/for/$useCase'
     | '/hi/guide/$guide'
     | '/it/blog/$slug'
+    | '/it/blog/ai-supplier-negotiation-moq-price'
+    | '/it/blog/case-study-sourcing-electronics-48-hours'
+    | '/it/blog/chatgpt-vs-accio-sourcing-agents'
+    | '/it/blog/china-import-risk-audit-landed-cost'
+    | '/it/blog/china-sourcing'
+    | '/it/blog/how-to-find-verified-china-suppliers-ai'
     | '/it/compare/$competitor'
     | '/it/events/free-forever'
     | '/it/for/$useCase'
     | '/it/guide/$guide'
     | '/pt/blog/$slug'
+    | '/pt/blog/ai-supplier-negotiation-moq-price'
+    | '/pt/blog/case-study-sourcing-electronics-48-hours'
+    | '/pt/blog/chatgpt-vs-accio-sourcing-agents'
+    | '/pt/blog/china-import-risk-audit-landed-cost'
+    | '/pt/blog/china-sourcing'
+    | '/pt/blog/how-to-find-verified-china-suppliers-ai'
     | '/pt/compare/$competitor'
     | '/pt/events/free-forever'
     | '/pt/for/$useCase'
     | '/pt/guide/$guide'
     | '/ru/blog/$slug'
+    | '/ru/blog/ai-supplier-negotiation-moq-price'
+    | '/ru/blog/case-study-sourcing-electronics-48-hours'
+    | '/ru/blog/chatgpt-vs-accio-sourcing-agents'
+    | '/ru/blog/china-import-risk-audit-landed-cost'
+    | '/ru/blog/china-sourcing'
+    | '/ru/blog/how-to-find-verified-china-suppliers-ai'
     | '/ru/compare/$competitor'
     | '/ru/events/free-forever'
     | '/ru/for/$useCase'
     | '/ru/guide/$guide'
     | '/zh/blog/$slug'
+    | '/zh/blog/ai-supplier-negotiation-moq-price'
+    | '/zh/blog/case-study-sourcing-electronics-48-hours'
+    | '/zh/blog/chatgpt-vs-accio-sourcing-agents'
+    | '/zh/blog/china-import-risk-audit-landed-cost'
+    | '/zh/blog/china-sourcing'
+    | '/zh/blog/how-to-find-verified-china-suppliers-ai'
     | '/zh/compare/$competitor'
     | '/zh/events/free-forever'
     | '/zh/for/$useCase'
@@ -2582,46 +3221,100 @@ export interface FileRouteTypes {
     | '/ru/'
     | '/zh/'
     | '/ar/blog/$slug'
+    | '/ar/blog/ai-supplier-negotiation-moq-price'
+    | '/ar/blog/case-study-sourcing-electronics-48-hours'
+    | '/ar/blog/chatgpt-vs-accio-sourcing-agents'
+    | '/ar/blog/china-import-risk-audit-landed-cost'
+    | '/ar/blog/china-sourcing'
+    | '/ar/blog/how-to-find-verified-china-suppliers-ai'
     | '/ar/compare/$competitor'
     | '/ar/events/free-forever'
     | '/ar/for/$useCase'
     | '/ar/guide/$guide'
     | '/de/blog/$slug'
+    | '/de/blog/ai-supplier-negotiation-moq-price'
+    | '/de/blog/case-study-sourcing-electronics-48-hours'
+    | '/de/blog/chatgpt-vs-accio-sourcing-agents'
+    | '/de/blog/china-import-risk-audit-landed-cost'
+    | '/de/blog/china-sourcing'
+    | '/de/blog/how-to-find-verified-china-suppliers-ai'
     | '/de/compare/$competitor'
     | '/de/events/free-forever'
     | '/de/for/$useCase'
     | '/de/guide/$guide'
     | '/es/blog/$slug'
+    | '/es/blog/ai-supplier-negotiation-moq-price'
+    | '/es/blog/case-study-sourcing-electronics-48-hours'
+    | '/es/blog/chatgpt-vs-accio-sourcing-agents'
+    | '/es/blog/china-import-risk-audit-landed-cost'
+    | '/es/blog/china-sourcing'
+    | '/es/blog/how-to-find-verified-china-suppliers-ai'
     | '/es/compare/$competitor'
     | '/es/events/free-forever'
     | '/es/for/$useCase'
     | '/es/guide/$guide'
     | '/fr/blog/$slug'
+    | '/fr/blog/ai-supplier-negotiation-moq-price'
+    | '/fr/blog/case-study-sourcing-electronics-48-hours'
+    | '/fr/blog/chatgpt-vs-accio-sourcing-agents'
+    | '/fr/blog/china-import-risk-audit-landed-cost'
+    | '/fr/blog/china-sourcing'
+    | '/fr/blog/how-to-find-verified-china-suppliers-ai'
     | '/fr/compare/$competitor'
     | '/fr/events/free-forever'
     | '/fr/for/$useCase'
     | '/fr/guide/$guide'
     | '/hi/blog/$slug'
+    | '/hi/blog/ai-supplier-negotiation-moq-price'
+    | '/hi/blog/case-study-sourcing-electronics-48-hours'
+    | '/hi/blog/chatgpt-vs-accio-sourcing-agents'
+    | '/hi/blog/china-import-risk-audit-landed-cost'
+    | '/hi/blog/china-sourcing'
+    | '/hi/blog/how-to-find-verified-china-suppliers-ai'
     | '/hi/compare/$competitor'
     | '/hi/events/free-forever'
     | '/hi/for/$useCase'
     | '/hi/guide/$guide'
     | '/it/blog/$slug'
+    | '/it/blog/ai-supplier-negotiation-moq-price'
+    | '/it/blog/case-study-sourcing-electronics-48-hours'
+    | '/it/blog/chatgpt-vs-accio-sourcing-agents'
+    | '/it/blog/china-import-risk-audit-landed-cost'
+    | '/it/blog/china-sourcing'
+    | '/it/blog/how-to-find-verified-china-suppliers-ai'
     | '/it/compare/$competitor'
     | '/it/events/free-forever'
     | '/it/for/$useCase'
     | '/it/guide/$guide'
     | '/pt/blog/$slug'
+    | '/pt/blog/ai-supplier-negotiation-moq-price'
+    | '/pt/blog/case-study-sourcing-electronics-48-hours'
+    | '/pt/blog/chatgpt-vs-accio-sourcing-agents'
+    | '/pt/blog/china-import-risk-audit-landed-cost'
+    | '/pt/blog/china-sourcing'
+    | '/pt/blog/how-to-find-verified-china-suppliers-ai'
     | '/pt/compare/$competitor'
     | '/pt/events/free-forever'
     | '/pt/for/$useCase'
     | '/pt/guide/$guide'
     | '/ru/blog/$slug'
+    | '/ru/blog/ai-supplier-negotiation-moq-price'
+    | '/ru/blog/case-study-sourcing-electronics-48-hours'
+    | '/ru/blog/chatgpt-vs-accio-sourcing-agents'
+    | '/ru/blog/china-import-risk-audit-landed-cost'
+    | '/ru/blog/china-sourcing'
+    | '/ru/blog/how-to-find-verified-china-suppliers-ai'
     | '/ru/compare/$competitor'
     | '/ru/events/free-forever'
     | '/ru/for/$useCase'
     | '/ru/guide/$guide'
     | '/zh/blog/$slug'
+    | '/zh/blog/ai-supplier-negotiation-moq-price'
+    | '/zh/blog/case-study-sourcing-electronics-48-hours'
+    | '/zh/blog/chatgpt-vs-accio-sourcing-agents'
+    | '/zh/blog/china-import-risk-audit-landed-cost'
+    | '/zh/blog/china-sourcing'
+    | '/zh/blog/how-to-find-verified-china-suppliers-ai'
     | '/zh/compare/$competitor'
     | '/zh/events/free-forever'
     | '/zh/for/$useCase'
@@ -3686,6 +4379,48 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ArBlogSlugRouteImport
       parentRoute: typeof ArRoute
     }
+    '/ar/blog/ai-supplier-negotiation-moq-price': {
+      id: '/ar/blog/ai-supplier-negotiation-moq-price'
+      path: '/blog/ai-supplier-negotiation-moq-price'
+      fullPath: '/ar/blog/ai-supplier-negotiation-moq-price'
+      preLoaderRoute: typeof ArBlogAiSupplierNegotiationMoqPriceRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/blog/case-study-sourcing-electronics-48-hours': {
+      id: '/ar/blog/case-study-sourcing-electronics-48-hours'
+      path: '/blog/case-study-sourcing-electronics-48-hours'
+      fullPath: '/ar/blog/case-study-sourcing-electronics-48-hours'
+      preLoaderRoute: typeof ArBlogCaseStudySourcingElectronics48HoursRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/blog/chatgpt-vs-accio-sourcing-agents': {
+      id: '/ar/blog/chatgpt-vs-accio-sourcing-agents'
+      path: '/blog/chatgpt-vs-accio-sourcing-agents'
+      fullPath: '/ar/blog/chatgpt-vs-accio-sourcing-agents'
+      preLoaderRoute: typeof ArBlogChatgptVsAccioSourcingAgentsRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/blog/china-import-risk-audit-landed-cost': {
+      id: '/ar/blog/china-import-risk-audit-landed-cost'
+      path: '/blog/china-import-risk-audit-landed-cost'
+      fullPath: '/ar/blog/china-import-risk-audit-landed-cost'
+      preLoaderRoute: typeof ArBlogChinaImportRiskAuditLandedCostRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/blog/china-sourcing': {
+      id: '/ar/blog/china-sourcing'
+      path: '/blog/china-sourcing'
+      fullPath: '/ar/blog/china-sourcing'
+      preLoaderRoute: typeof ArBlogChinaSourcingRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/blog/how-to-find-verified-china-suppliers-ai': {
+      id: '/ar/blog/how-to-find-verified-china-suppliers-ai'
+      path: '/blog/how-to-find-verified-china-suppliers-ai'
+      fullPath: '/ar/blog/how-to-find-verified-china-suppliers-ai'
+      preLoaderRoute: typeof ArBlogHowToFindVerifiedChinaSuppliersAiRouteImport
+      parentRoute: typeof ArRoute
+    }
     '/ar/compare/': {
       id: '/ar/compare/'
       path: '/compare'
@@ -3747,6 +4482,48 @@ declare module '@tanstack/react-router' {
       path: '/blog/$slug'
       fullPath: '/de/blog/$slug'
       preLoaderRoute: typeof DeBlogSlugRouteImport
+      parentRoute: typeof DeRoute
+    }
+    '/de/blog/ai-supplier-negotiation-moq-price': {
+      id: '/de/blog/ai-supplier-negotiation-moq-price'
+      path: '/blog/ai-supplier-negotiation-moq-price'
+      fullPath: '/de/blog/ai-supplier-negotiation-moq-price'
+      preLoaderRoute: typeof DeBlogAiSupplierNegotiationMoqPriceRouteImport
+      parentRoute: typeof DeRoute
+    }
+    '/de/blog/case-study-sourcing-electronics-48-hours': {
+      id: '/de/blog/case-study-sourcing-electronics-48-hours'
+      path: '/blog/case-study-sourcing-electronics-48-hours'
+      fullPath: '/de/blog/case-study-sourcing-electronics-48-hours'
+      preLoaderRoute: typeof DeBlogCaseStudySourcingElectronics48HoursRouteImport
+      parentRoute: typeof DeRoute
+    }
+    '/de/blog/chatgpt-vs-accio-sourcing-agents': {
+      id: '/de/blog/chatgpt-vs-accio-sourcing-agents'
+      path: '/blog/chatgpt-vs-accio-sourcing-agents'
+      fullPath: '/de/blog/chatgpt-vs-accio-sourcing-agents'
+      preLoaderRoute: typeof DeBlogChatgptVsAccioSourcingAgentsRouteImport
+      parentRoute: typeof DeRoute
+    }
+    '/de/blog/china-import-risk-audit-landed-cost': {
+      id: '/de/blog/china-import-risk-audit-landed-cost'
+      path: '/blog/china-import-risk-audit-landed-cost'
+      fullPath: '/de/blog/china-import-risk-audit-landed-cost'
+      preLoaderRoute: typeof DeBlogChinaImportRiskAuditLandedCostRouteImport
+      parentRoute: typeof DeRoute
+    }
+    '/de/blog/china-sourcing': {
+      id: '/de/blog/china-sourcing'
+      path: '/blog/china-sourcing'
+      fullPath: '/de/blog/china-sourcing'
+      preLoaderRoute: typeof DeBlogChinaSourcingRouteImport
+      parentRoute: typeof DeRoute
+    }
+    '/de/blog/how-to-find-verified-china-suppliers-ai': {
+      id: '/de/blog/how-to-find-verified-china-suppliers-ai'
+      path: '/blog/how-to-find-verified-china-suppliers-ai'
+      fullPath: '/de/blog/how-to-find-verified-china-suppliers-ai'
+      preLoaderRoute: typeof DeBlogHowToFindVerifiedChinaSuppliersAiRouteImport
       parentRoute: typeof DeRoute
     }
     '/de/compare/': {
@@ -3812,6 +4589,48 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EsBlogSlugRouteImport
       parentRoute: typeof EsRoute
     }
+    '/es/blog/ai-supplier-negotiation-moq-price': {
+      id: '/es/blog/ai-supplier-negotiation-moq-price'
+      path: '/blog/ai-supplier-negotiation-moq-price'
+      fullPath: '/es/blog/ai-supplier-negotiation-moq-price'
+      preLoaderRoute: typeof EsBlogAiSupplierNegotiationMoqPriceRouteImport
+      parentRoute: typeof EsRoute
+    }
+    '/es/blog/case-study-sourcing-electronics-48-hours': {
+      id: '/es/blog/case-study-sourcing-electronics-48-hours'
+      path: '/blog/case-study-sourcing-electronics-48-hours'
+      fullPath: '/es/blog/case-study-sourcing-electronics-48-hours'
+      preLoaderRoute: typeof EsBlogCaseStudySourcingElectronics48HoursRouteImport
+      parentRoute: typeof EsRoute
+    }
+    '/es/blog/chatgpt-vs-accio-sourcing-agents': {
+      id: '/es/blog/chatgpt-vs-accio-sourcing-agents'
+      path: '/blog/chatgpt-vs-accio-sourcing-agents'
+      fullPath: '/es/blog/chatgpt-vs-accio-sourcing-agents'
+      preLoaderRoute: typeof EsBlogChatgptVsAccioSourcingAgentsRouteImport
+      parentRoute: typeof EsRoute
+    }
+    '/es/blog/china-import-risk-audit-landed-cost': {
+      id: '/es/blog/china-import-risk-audit-landed-cost'
+      path: '/blog/china-import-risk-audit-landed-cost'
+      fullPath: '/es/blog/china-import-risk-audit-landed-cost'
+      preLoaderRoute: typeof EsBlogChinaImportRiskAuditLandedCostRouteImport
+      parentRoute: typeof EsRoute
+    }
+    '/es/blog/china-sourcing': {
+      id: '/es/blog/china-sourcing'
+      path: '/blog/china-sourcing'
+      fullPath: '/es/blog/china-sourcing'
+      preLoaderRoute: typeof EsBlogChinaSourcingRouteImport
+      parentRoute: typeof EsRoute
+    }
+    '/es/blog/how-to-find-verified-china-suppliers-ai': {
+      id: '/es/blog/how-to-find-verified-china-suppliers-ai'
+      path: '/blog/how-to-find-verified-china-suppliers-ai'
+      fullPath: '/es/blog/how-to-find-verified-china-suppliers-ai'
+      preLoaderRoute: typeof EsBlogHowToFindVerifiedChinaSuppliersAiRouteImport
+      parentRoute: typeof EsRoute
+    }
     '/es/compare/': {
       id: '/es/compare/'
       path: '/compare'
@@ -3873,6 +4692,48 @@ declare module '@tanstack/react-router' {
       path: '/blog/$slug'
       fullPath: '/fr/blog/$slug'
       preLoaderRoute: typeof FrBlogSlugRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/blog/ai-supplier-negotiation-moq-price': {
+      id: '/fr/blog/ai-supplier-negotiation-moq-price'
+      path: '/blog/ai-supplier-negotiation-moq-price'
+      fullPath: '/fr/blog/ai-supplier-negotiation-moq-price'
+      preLoaderRoute: typeof FrBlogAiSupplierNegotiationMoqPriceRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/blog/case-study-sourcing-electronics-48-hours': {
+      id: '/fr/blog/case-study-sourcing-electronics-48-hours'
+      path: '/blog/case-study-sourcing-electronics-48-hours'
+      fullPath: '/fr/blog/case-study-sourcing-electronics-48-hours'
+      preLoaderRoute: typeof FrBlogCaseStudySourcingElectronics48HoursRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/blog/chatgpt-vs-accio-sourcing-agents': {
+      id: '/fr/blog/chatgpt-vs-accio-sourcing-agents'
+      path: '/blog/chatgpt-vs-accio-sourcing-agents'
+      fullPath: '/fr/blog/chatgpt-vs-accio-sourcing-agents'
+      preLoaderRoute: typeof FrBlogChatgptVsAccioSourcingAgentsRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/blog/china-import-risk-audit-landed-cost': {
+      id: '/fr/blog/china-import-risk-audit-landed-cost'
+      path: '/blog/china-import-risk-audit-landed-cost'
+      fullPath: '/fr/blog/china-import-risk-audit-landed-cost'
+      preLoaderRoute: typeof FrBlogChinaImportRiskAuditLandedCostRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/blog/china-sourcing': {
+      id: '/fr/blog/china-sourcing'
+      path: '/blog/china-sourcing'
+      fullPath: '/fr/blog/china-sourcing'
+      preLoaderRoute: typeof FrBlogChinaSourcingRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/blog/how-to-find-verified-china-suppliers-ai': {
+      id: '/fr/blog/how-to-find-verified-china-suppliers-ai'
+      path: '/blog/how-to-find-verified-china-suppliers-ai'
+      fullPath: '/fr/blog/how-to-find-verified-china-suppliers-ai'
+      preLoaderRoute: typeof FrBlogHowToFindVerifiedChinaSuppliersAiRouteImport
       parentRoute: typeof FrRoute
     }
     '/fr/compare/': {
@@ -3938,6 +4799,48 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HiBlogSlugRouteImport
       parentRoute: typeof HiRoute
     }
+    '/hi/blog/ai-supplier-negotiation-moq-price': {
+      id: '/hi/blog/ai-supplier-negotiation-moq-price'
+      path: '/blog/ai-supplier-negotiation-moq-price'
+      fullPath: '/hi/blog/ai-supplier-negotiation-moq-price'
+      preLoaderRoute: typeof HiBlogAiSupplierNegotiationMoqPriceRouteImport
+      parentRoute: typeof HiRoute
+    }
+    '/hi/blog/case-study-sourcing-electronics-48-hours': {
+      id: '/hi/blog/case-study-sourcing-electronics-48-hours'
+      path: '/blog/case-study-sourcing-electronics-48-hours'
+      fullPath: '/hi/blog/case-study-sourcing-electronics-48-hours'
+      preLoaderRoute: typeof HiBlogCaseStudySourcingElectronics48HoursRouteImport
+      parentRoute: typeof HiRoute
+    }
+    '/hi/blog/chatgpt-vs-accio-sourcing-agents': {
+      id: '/hi/blog/chatgpt-vs-accio-sourcing-agents'
+      path: '/blog/chatgpt-vs-accio-sourcing-agents'
+      fullPath: '/hi/blog/chatgpt-vs-accio-sourcing-agents'
+      preLoaderRoute: typeof HiBlogChatgptVsAccioSourcingAgentsRouteImport
+      parentRoute: typeof HiRoute
+    }
+    '/hi/blog/china-import-risk-audit-landed-cost': {
+      id: '/hi/blog/china-import-risk-audit-landed-cost'
+      path: '/blog/china-import-risk-audit-landed-cost'
+      fullPath: '/hi/blog/china-import-risk-audit-landed-cost'
+      preLoaderRoute: typeof HiBlogChinaImportRiskAuditLandedCostRouteImport
+      parentRoute: typeof HiRoute
+    }
+    '/hi/blog/china-sourcing': {
+      id: '/hi/blog/china-sourcing'
+      path: '/blog/china-sourcing'
+      fullPath: '/hi/blog/china-sourcing'
+      preLoaderRoute: typeof HiBlogChinaSourcingRouteImport
+      parentRoute: typeof HiRoute
+    }
+    '/hi/blog/how-to-find-verified-china-suppliers-ai': {
+      id: '/hi/blog/how-to-find-verified-china-suppliers-ai'
+      path: '/blog/how-to-find-verified-china-suppliers-ai'
+      fullPath: '/hi/blog/how-to-find-verified-china-suppliers-ai'
+      preLoaderRoute: typeof HiBlogHowToFindVerifiedChinaSuppliersAiRouteImport
+      parentRoute: typeof HiRoute
+    }
     '/hi/compare/': {
       id: '/hi/compare/'
       path: '/compare'
@@ -3999,6 +4902,48 @@ declare module '@tanstack/react-router' {
       path: '/blog/$slug'
       fullPath: '/it/blog/$slug'
       preLoaderRoute: typeof ItBlogSlugRouteImport
+      parentRoute: typeof ItRoute
+    }
+    '/it/blog/ai-supplier-negotiation-moq-price': {
+      id: '/it/blog/ai-supplier-negotiation-moq-price'
+      path: '/blog/ai-supplier-negotiation-moq-price'
+      fullPath: '/it/blog/ai-supplier-negotiation-moq-price'
+      preLoaderRoute: typeof ItBlogAiSupplierNegotiationMoqPriceRouteImport
+      parentRoute: typeof ItRoute
+    }
+    '/it/blog/case-study-sourcing-electronics-48-hours': {
+      id: '/it/blog/case-study-sourcing-electronics-48-hours'
+      path: '/blog/case-study-sourcing-electronics-48-hours'
+      fullPath: '/it/blog/case-study-sourcing-electronics-48-hours'
+      preLoaderRoute: typeof ItBlogCaseStudySourcingElectronics48HoursRouteImport
+      parentRoute: typeof ItRoute
+    }
+    '/it/blog/chatgpt-vs-accio-sourcing-agents': {
+      id: '/it/blog/chatgpt-vs-accio-sourcing-agents'
+      path: '/blog/chatgpt-vs-accio-sourcing-agents'
+      fullPath: '/it/blog/chatgpt-vs-accio-sourcing-agents'
+      preLoaderRoute: typeof ItBlogChatgptVsAccioSourcingAgentsRouteImport
+      parentRoute: typeof ItRoute
+    }
+    '/it/blog/china-import-risk-audit-landed-cost': {
+      id: '/it/blog/china-import-risk-audit-landed-cost'
+      path: '/blog/china-import-risk-audit-landed-cost'
+      fullPath: '/it/blog/china-import-risk-audit-landed-cost'
+      preLoaderRoute: typeof ItBlogChinaImportRiskAuditLandedCostRouteImport
+      parentRoute: typeof ItRoute
+    }
+    '/it/blog/china-sourcing': {
+      id: '/it/blog/china-sourcing'
+      path: '/blog/china-sourcing'
+      fullPath: '/it/blog/china-sourcing'
+      preLoaderRoute: typeof ItBlogChinaSourcingRouteImport
+      parentRoute: typeof ItRoute
+    }
+    '/it/blog/how-to-find-verified-china-suppliers-ai': {
+      id: '/it/blog/how-to-find-verified-china-suppliers-ai'
+      path: '/blog/how-to-find-verified-china-suppliers-ai'
+      fullPath: '/it/blog/how-to-find-verified-china-suppliers-ai'
+      preLoaderRoute: typeof ItBlogHowToFindVerifiedChinaSuppliersAiRouteImport
       parentRoute: typeof ItRoute
     }
     '/it/compare/': {
@@ -4064,6 +5009,48 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PtBlogSlugRouteImport
       parentRoute: typeof PtRoute
     }
+    '/pt/blog/ai-supplier-negotiation-moq-price': {
+      id: '/pt/blog/ai-supplier-negotiation-moq-price'
+      path: '/blog/ai-supplier-negotiation-moq-price'
+      fullPath: '/pt/blog/ai-supplier-negotiation-moq-price'
+      preLoaderRoute: typeof PtBlogAiSupplierNegotiationMoqPriceRouteImport
+      parentRoute: typeof PtRoute
+    }
+    '/pt/blog/case-study-sourcing-electronics-48-hours': {
+      id: '/pt/blog/case-study-sourcing-electronics-48-hours'
+      path: '/blog/case-study-sourcing-electronics-48-hours'
+      fullPath: '/pt/blog/case-study-sourcing-electronics-48-hours'
+      preLoaderRoute: typeof PtBlogCaseStudySourcingElectronics48HoursRouteImport
+      parentRoute: typeof PtRoute
+    }
+    '/pt/blog/chatgpt-vs-accio-sourcing-agents': {
+      id: '/pt/blog/chatgpt-vs-accio-sourcing-agents'
+      path: '/blog/chatgpt-vs-accio-sourcing-agents'
+      fullPath: '/pt/blog/chatgpt-vs-accio-sourcing-agents'
+      preLoaderRoute: typeof PtBlogChatgptVsAccioSourcingAgentsRouteImport
+      parentRoute: typeof PtRoute
+    }
+    '/pt/blog/china-import-risk-audit-landed-cost': {
+      id: '/pt/blog/china-import-risk-audit-landed-cost'
+      path: '/blog/china-import-risk-audit-landed-cost'
+      fullPath: '/pt/blog/china-import-risk-audit-landed-cost'
+      preLoaderRoute: typeof PtBlogChinaImportRiskAuditLandedCostRouteImport
+      parentRoute: typeof PtRoute
+    }
+    '/pt/blog/china-sourcing': {
+      id: '/pt/blog/china-sourcing'
+      path: '/blog/china-sourcing'
+      fullPath: '/pt/blog/china-sourcing'
+      preLoaderRoute: typeof PtBlogChinaSourcingRouteImport
+      parentRoute: typeof PtRoute
+    }
+    '/pt/blog/how-to-find-verified-china-suppliers-ai': {
+      id: '/pt/blog/how-to-find-verified-china-suppliers-ai'
+      path: '/blog/how-to-find-verified-china-suppliers-ai'
+      fullPath: '/pt/blog/how-to-find-verified-china-suppliers-ai'
+      preLoaderRoute: typeof PtBlogHowToFindVerifiedChinaSuppliersAiRouteImport
+      parentRoute: typeof PtRoute
+    }
     '/pt/compare/': {
       id: '/pt/compare/'
       path: '/compare'
@@ -4127,6 +5114,48 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RuBlogSlugRouteImport
       parentRoute: typeof RuRoute
     }
+    '/ru/blog/ai-supplier-negotiation-moq-price': {
+      id: '/ru/blog/ai-supplier-negotiation-moq-price'
+      path: '/blog/ai-supplier-negotiation-moq-price'
+      fullPath: '/ru/blog/ai-supplier-negotiation-moq-price'
+      preLoaderRoute: typeof RuBlogAiSupplierNegotiationMoqPriceRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/ru/blog/case-study-sourcing-electronics-48-hours': {
+      id: '/ru/blog/case-study-sourcing-electronics-48-hours'
+      path: '/blog/case-study-sourcing-electronics-48-hours'
+      fullPath: '/ru/blog/case-study-sourcing-electronics-48-hours'
+      preLoaderRoute: typeof RuBlogCaseStudySourcingElectronics48HoursRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/ru/blog/chatgpt-vs-accio-sourcing-agents': {
+      id: '/ru/blog/chatgpt-vs-accio-sourcing-agents'
+      path: '/blog/chatgpt-vs-accio-sourcing-agents'
+      fullPath: '/ru/blog/chatgpt-vs-accio-sourcing-agents'
+      preLoaderRoute: typeof RuBlogChatgptVsAccioSourcingAgentsRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/ru/blog/china-import-risk-audit-landed-cost': {
+      id: '/ru/blog/china-import-risk-audit-landed-cost'
+      path: '/blog/china-import-risk-audit-landed-cost'
+      fullPath: '/ru/blog/china-import-risk-audit-landed-cost'
+      preLoaderRoute: typeof RuBlogChinaImportRiskAuditLandedCostRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/ru/blog/china-sourcing': {
+      id: '/ru/blog/china-sourcing'
+      path: '/blog/china-sourcing'
+      fullPath: '/ru/blog/china-sourcing'
+      preLoaderRoute: typeof RuBlogChinaSourcingRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/ru/blog/how-to-find-verified-china-suppliers-ai': {
+      id: '/ru/blog/how-to-find-verified-china-suppliers-ai'
+      path: '/blog/how-to-find-verified-china-suppliers-ai'
+      fullPath: '/ru/blog/how-to-find-verified-china-suppliers-ai'
+      preLoaderRoute: typeof RuBlogHowToFindVerifiedChinaSuppliersAiRouteImport
+      parentRoute: typeof RuRoute
+    }
     '/ru/compare/': {
       id: '/ru/compare/'
       path: '/compare'
@@ -4188,6 +5217,48 @@ declare module '@tanstack/react-router' {
       path: '/blog/$slug'
       fullPath: '/zh/blog/$slug'
       preLoaderRoute: typeof ZhBlogSlugRouteImport
+      parentRoute: typeof ZhRoute
+    }
+    '/zh/blog/ai-supplier-negotiation-moq-price': {
+      id: '/zh/blog/ai-supplier-negotiation-moq-price'
+      path: '/blog/ai-supplier-negotiation-moq-price'
+      fullPath: '/zh/blog/ai-supplier-negotiation-moq-price'
+      preLoaderRoute: typeof ZhBlogAiSupplierNegotiationMoqPriceRouteImport
+      parentRoute: typeof ZhRoute
+    }
+    '/zh/blog/case-study-sourcing-electronics-48-hours': {
+      id: '/zh/blog/case-study-sourcing-electronics-48-hours'
+      path: '/blog/case-study-sourcing-electronics-48-hours'
+      fullPath: '/zh/blog/case-study-sourcing-electronics-48-hours'
+      preLoaderRoute: typeof ZhBlogCaseStudySourcingElectronics48HoursRouteImport
+      parentRoute: typeof ZhRoute
+    }
+    '/zh/blog/chatgpt-vs-accio-sourcing-agents': {
+      id: '/zh/blog/chatgpt-vs-accio-sourcing-agents'
+      path: '/blog/chatgpt-vs-accio-sourcing-agents'
+      fullPath: '/zh/blog/chatgpt-vs-accio-sourcing-agents'
+      preLoaderRoute: typeof ZhBlogChatgptVsAccioSourcingAgentsRouteImport
+      parentRoute: typeof ZhRoute
+    }
+    '/zh/blog/china-import-risk-audit-landed-cost': {
+      id: '/zh/blog/china-import-risk-audit-landed-cost'
+      path: '/blog/china-import-risk-audit-landed-cost'
+      fullPath: '/zh/blog/china-import-risk-audit-landed-cost'
+      preLoaderRoute: typeof ZhBlogChinaImportRiskAuditLandedCostRouteImport
+      parentRoute: typeof ZhRoute
+    }
+    '/zh/blog/china-sourcing': {
+      id: '/zh/blog/china-sourcing'
+      path: '/blog/china-sourcing'
+      fullPath: '/zh/blog/china-sourcing'
+      preLoaderRoute: typeof ZhBlogChinaSourcingRouteImport
+      parentRoute: typeof ZhRoute
+    }
+    '/zh/blog/how-to-find-verified-china-suppliers-ai': {
+      id: '/zh/blog/how-to-find-verified-china-suppliers-ai'
+      path: '/blog/how-to-find-verified-china-suppliers-ai'
+      fullPath: '/zh/blog/how-to-find-verified-china-suppliers-ai'
+      preLoaderRoute: typeof ZhBlogHowToFindVerifiedChinaSuppliersAiRouteImport
       parentRoute: typeof ZhRoute
     }
     '/zh/compare/': {
@@ -4276,6 +5347,12 @@ interface ArRouteChildren {
   ArTiktokShopRoute: typeof ArTiktokShopRoute
   ArIndexRoute: typeof ArIndexRoute
   ArBlogSlugRoute: typeof ArBlogSlugRoute
+  ArBlogAiSupplierNegotiationMoqPriceRoute: typeof ArBlogAiSupplierNegotiationMoqPriceRoute
+  ArBlogCaseStudySourcingElectronics48HoursRoute: typeof ArBlogCaseStudySourcingElectronics48HoursRoute
+  ArBlogChatgptVsAccioSourcingAgentsRoute: typeof ArBlogChatgptVsAccioSourcingAgentsRoute
+  ArBlogChinaImportRiskAuditLandedCostRoute: typeof ArBlogChinaImportRiskAuditLandedCostRoute
+  ArBlogChinaSourcingRoute: typeof ArBlogChinaSourcingRoute
+  ArBlogHowToFindVerifiedChinaSuppliersAiRoute: typeof ArBlogHowToFindVerifiedChinaSuppliersAiRoute
   ArCompareCompetitorRoute: typeof ArCompareCompetitorRoute
   ArEventsFreeForeverRoute: typeof ArEventsFreeForeverRoute
   ArForUseCaseRoute: typeof ArForUseCaseRoute
@@ -4299,6 +5376,17 @@ const ArRouteChildren: ArRouteChildren = {
   ArTiktokShopRoute: ArTiktokShopRoute,
   ArIndexRoute: ArIndexRoute,
   ArBlogSlugRoute: ArBlogSlugRoute,
+  ArBlogAiSupplierNegotiationMoqPriceRoute:
+    ArBlogAiSupplierNegotiationMoqPriceRoute,
+  ArBlogCaseStudySourcingElectronics48HoursRoute:
+    ArBlogCaseStudySourcingElectronics48HoursRoute,
+  ArBlogChatgptVsAccioSourcingAgentsRoute:
+    ArBlogChatgptVsAccioSourcingAgentsRoute,
+  ArBlogChinaImportRiskAuditLandedCostRoute:
+    ArBlogChinaImportRiskAuditLandedCostRoute,
+  ArBlogChinaSourcingRoute: ArBlogChinaSourcingRoute,
+  ArBlogHowToFindVerifiedChinaSuppliersAiRoute:
+    ArBlogHowToFindVerifiedChinaSuppliersAiRoute,
   ArCompareCompetitorRoute: ArCompareCompetitorRoute,
   ArEventsFreeForeverRoute: ArEventsFreeForeverRoute,
   ArForUseCaseRoute: ArForUseCaseRoute,
@@ -4324,6 +5412,12 @@ interface DeRouteChildren {
   DeTiktokShopRoute: typeof DeTiktokShopRoute
   DeIndexRoute: typeof DeIndexRoute
   DeBlogSlugRoute: typeof DeBlogSlugRoute
+  DeBlogAiSupplierNegotiationMoqPriceRoute: typeof DeBlogAiSupplierNegotiationMoqPriceRoute
+  DeBlogCaseStudySourcingElectronics48HoursRoute: typeof DeBlogCaseStudySourcingElectronics48HoursRoute
+  DeBlogChatgptVsAccioSourcingAgentsRoute: typeof DeBlogChatgptVsAccioSourcingAgentsRoute
+  DeBlogChinaImportRiskAuditLandedCostRoute: typeof DeBlogChinaImportRiskAuditLandedCostRoute
+  DeBlogChinaSourcingRoute: typeof DeBlogChinaSourcingRoute
+  DeBlogHowToFindVerifiedChinaSuppliersAiRoute: typeof DeBlogHowToFindVerifiedChinaSuppliersAiRoute
   DeCompareCompetitorRoute: typeof DeCompareCompetitorRoute
   DeEventsFreeForeverRoute: typeof DeEventsFreeForeverRoute
   DeForUseCaseRoute: typeof DeForUseCaseRoute
@@ -4347,6 +5441,17 @@ const DeRouteChildren: DeRouteChildren = {
   DeTiktokShopRoute: DeTiktokShopRoute,
   DeIndexRoute: DeIndexRoute,
   DeBlogSlugRoute: DeBlogSlugRoute,
+  DeBlogAiSupplierNegotiationMoqPriceRoute:
+    DeBlogAiSupplierNegotiationMoqPriceRoute,
+  DeBlogCaseStudySourcingElectronics48HoursRoute:
+    DeBlogCaseStudySourcingElectronics48HoursRoute,
+  DeBlogChatgptVsAccioSourcingAgentsRoute:
+    DeBlogChatgptVsAccioSourcingAgentsRoute,
+  DeBlogChinaImportRiskAuditLandedCostRoute:
+    DeBlogChinaImportRiskAuditLandedCostRoute,
+  DeBlogChinaSourcingRoute: DeBlogChinaSourcingRoute,
+  DeBlogHowToFindVerifiedChinaSuppliersAiRoute:
+    DeBlogHowToFindVerifiedChinaSuppliersAiRoute,
   DeCompareCompetitorRoute: DeCompareCompetitorRoute,
   DeEventsFreeForeverRoute: DeEventsFreeForeverRoute,
   DeForUseCaseRoute: DeForUseCaseRoute,
@@ -4372,6 +5477,12 @@ interface EsRouteChildren {
   EsTiktokShopRoute: typeof EsTiktokShopRoute
   EsIndexRoute: typeof EsIndexRoute
   EsBlogSlugRoute: typeof EsBlogSlugRoute
+  EsBlogAiSupplierNegotiationMoqPriceRoute: typeof EsBlogAiSupplierNegotiationMoqPriceRoute
+  EsBlogCaseStudySourcingElectronics48HoursRoute: typeof EsBlogCaseStudySourcingElectronics48HoursRoute
+  EsBlogChatgptVsAccioSourcingAgentsRoute: typeof EsBlogChatgptVsAccioSourcingAgentsRoute
+  EsBlogChinaImportRiskAuditLandedCostRoute: typeof EsBlogChinaImportRiskAuditLandedCostRoute
+  EsBlogChinaSourcingRoute: typeof EsBlogChinaSourcingRoute
+  EsBlogHowToFindVerifiedChinaSuppliersAiRoute: typeof EsBlogHowToFindVerifiedChinaSuppliersAiRoute
   EsCompareCompetitorRoute: typeof EsCompareCompetitorRoute
   EsEventsFreeForeverRoute: typeof EsEventsFreeForeverRoute
   EsForUseCaseRoute: typeof EsForUseCaseRoute
@@ -4395,6 +5506,17 @@ const EsRouteChildren: EsRouteChildren = {
   EsTiktokShopRoute: EsTiktokShopRoute,
   EsIndexRoute: EsIndexRoute,
   EsBlogSlugRoute: EsBlogSlugRoute,
+  EsBlogAiSupplierNegotiationMoqPriceRoute:
+    EsBlogAiSupplierNegotiationMoqPriceRoute,
+  EsBlogCaseStudySourcingElectronics48HoursRoute:
+    EsBlogCaseStudySourcingElectronics48HoursRoute,
+  EsBlogChatgptVsAccioSourcingAgentsRoute:
+    EsBlogChatgptVsAccioSourcingAgentsRoute,
+  EsBlogChinaImportRiskAuditLandedCostRoute:
+    EsBlogChinaImportRiskAuditLandedCostRoute,
+  EsBlogChinaSourcingRoute: EsBlogChinaSourcingRoute,
+  EsBlogHowToFindVerifiedChinaSuppliersAiRoute:
+    EsBlogHowToFindVerifiedChinaSuppliersAiRoute,
   EsCompareCompetitorRoute: EsCompareCompetitorRoute,
   EsEventsFreeForeverRoute: EsEventsFreeForeverRoute,
   EsForUseCaseRoute: EsForUseCaseRoute,
@@ -4420,6 +5542,12 @@ interface FrRouteChildren {
   FrTiktokShopRoute: typeof FrTiktokShopRoute
   FrIndexRoute: typeof FrIndexRoute
   FrBlogSlugRoute: typeof FrBlogSlugRoute
+  FrBlogAiSupplierNegotiationMoqPriceRoute: typeof FrBlogAiSupplierNegotiationMoqPriceRoute
+  FrBlogCaseStudySourcingElectronics48HoursRoute: typeof FrBlogCaseStudySourcingElectronics48HoursRoute
+  FrBlogChatgptVsAccioSourcingAgentsRoute: typeof FrBlogChatgptVsAccioSourcingAgentsRoute
+  FrBlogChinaImportRiskAuditLandedCostRoute: typeof FrBlogChinaImportRiskAuditLandedCostRoute
+  FrBlogChinaSourcingRoute: typeof FrBlogChinaSourcingRoute
+  FrBlogHowToFindVerifiedChinaSuppliersAiRoute: typeof FrBlogHowToFindVerifiedChinaSuppliersAiRoute
   FrCompareCompetitorRoute: typeof FrCompareCompetitorRoute
   FrEventsFreeForeverRoute: typeof FrEventsFreeForeverRoute
   FrForUseCaseRoute: typeof FrForUseCaseRoute
@@ -4443,6 +5571,17 @@ const FrRouteChildren: FrRouteChildren = {
   FrTiktokShopRoute: FrTiktokShopRoute,
   FrIndexRoute: FrIndexRoute,
   FrBlogSlugRoute: FrBlogSlugRoute,
+  FrBlogAiSupplierNegotiationMoqPriceRoute:
+    FrBlogAiSupplierNegotiationMoqPriceRoute,
+  FrBlogCaseStudySourcingElectronics48HoursRoute:
+    FrBlogCaseStudySourcingElectronics48HoursRoute,
+  FrBlogChatgptVsAccioSourcingAgentsRoute:
+    FrBlogChatgptVsAccioSourcingAgentsRoute,
+  FrBlogChinaImportRiskAuditLandedCostRoute:
+    FrBlogChinaImportRiskAuditLandedCostRoute,
+  FrBlogChinaSourcingRoute: FrBlogChinaSourcingRoute,
+  FrBlogHowToFindVerifiedChinaSuppliersAiRoute:
+    FrBlogHowToFindVerifiedChinaSuppliersAiRoute,
   FrCompareCompetitorRoute: FrCompareCompetitorRoute,
   FrEventsFreeForeverRoute: FrEventsFreeForeverRoute,
   FrForUseCaseRoute: FrForUseCaseRoute,
@@ -4468,6 +5607,12 @@ interface HiRouteChildren {
   HiTiktokShopRoute: typeof HiTiktokShopRoute
   HiIndexRoute: typeof HiIndexRoute
   HiBlogSlugRoute: typeof HiBlogSlugRoute
+  HiBlogAiSupplierNegotiationMoqPriceRoute: typeof HiBlogAiSupplierNegotiationMoqPriceRoute
+  HiBlogCaseStudySourcingElectronics48HoursRoute: typeof HiBlogCaseStudySourcingElectronics48HoursRoute
+  HiBlogChatgptVsAccioSourcingAgentsRoute: typeof HiBlogChatgptVsAccioSourcingAgentsRoute
+  HiBlogChinaImportRiskAuditLandedCostRoute: typeof HiBlogChinaImportRiskAuditLandedCostRoute
+  HiBlogChinaSourcingRoute: typeof HiBlogChinaSourcingRoute
+  HiBlogHowToFindVerifiedChinaSuppliersAiRoute: typeof HiBlogHowToFindVerifiedChinaSuppliersAiRoute
   HiCompareCompetitorRoute: typeof HiCompareCompetitorRoute
   HiEventsFreeForeverRoute: typeof HiEventsFreeForeverRoute
   HiForUseCaseRoute: typeof HiForUseCaseRoute
@@ -4491,6 +5636,17 @@ const HiRouteChildren: HiRouteChildren = {
   HiTiktokShopRoute: HiTiktokShopRoute,
   HiIndexRoute: HiIndexRoute,
   HiBlogSlugRoute: HiBlogSlugRoute,
+  HiBlogAiSupplierNegotiationMoqPriceRoute:
+    HiBlogAiSupplierNegotiationMoqPriceRoute,
+  HiBlogCaseStudySourcingElectronics48HoursRoute:
+    HiBlogCaseStudySourcingElectronics48HoursRoute,
+  HiBlogChatgptVsAccioSourcingAgentsRoute:
+    HiBlogChatgptVsAccioSourcingAgentsRoute,
+  HiBlogChinaImportRiskAuditLandedCostRoute:
+    HiBlogChinaImportRiskAuditLandedCostRoute,
+  HiBlogChinaSourcingRoute: HiBlogChinaSourcingRoute,
+  HiBlogHowToFindVerifiedChinaSuppliersAiRoute:
+    HiBlogHowToFindVerifiedChinaSuppliersAiRoute,
   HiCompareCompetitorRoute: HiCompareCompetitorRoute,
   HiEventsFreeForeverRoute: HiEventsFreeForeverRoute,
   HiForUseCaseRoute: HiForUseCaseRoute,
@@ -4516,6 +5672,12 @@ interface ItRouteChildren {
   ItTiktokShopRoute: typeof ItTiktokShopRoute
   ItIndexRoute: typeof ItIndexRoute
   ItBlogSlugRoute: typeof ItBlogSlugRoute
+  ItBlogAiSupplierNegotiationMoqPriceRoute: typeof ItBlogAiSupplierNegotiationMoqPriceRoute
+  ItBlogCaseStudySourcingElectronics48HoursRoute: typeof ItBlogCaseStudySourcingElectronics48HoursRoute
+  ItBlogChatgptVsAccioSourcingAgentsRoute: typeof ItBlogChatgptVsAccioSourcingAgentsRoute
+  ItBlogChinaImportRiskAuditLandedCostRoute: typeof ItBlogChinaImportRiskAuditLandedCostRoute
+  ItBlogChinaSourcingRoute: typeof ItBlogChinaSourcingRoute
+  ItBlogHowToFindVerifiedChinaSuppliersAiRoute: typeof ItBlogHowToFindVerifiedChinaSuppliersAiRoute
   ItCompareCompetitorRoute: typeof ItCompareCompetitorRoute
   ItEventsFreeForeverRoute: typeof ItEventsFreeForeverRoute
   ItForUseCaseRoute: typeof ItForUseCaseRoute
@@ -4539,6 +5701,17 @@ const ItRouteChildren: ItRouteChildren = {
   ItTiktokShopRoute: ItTiktokShopRoute,
   ItIndexRoute: ItIndexRoute,
   ItBlogSlugRoute: ItBlogSlugRoute,
+  ItBlogAiSupplierNegotiationMoqPriceRoute:
+    ItBlogAiSupplierNegotiationMoqPriceRoute,
+  ItBlogCaseStudySourcingElectronics48HoursRoute:
+    ItBlogCaseStudySourcingElectronics48HoursRoute,
+  ItBlogChatgptVsAccioSourcingAgentsRoute:
+    ItBlogChatgptVsAccioSourcingAgentsRoute,
+  ItBlogChinaImportRiskAuditLandedCostRoute:
+    ItBlogChinaImportRiskAuditLandedCostRoute,
+  ItBlogChinaSourcingRoute: ItBlogChinaSourcingRoute,
+  ItBlogHowToFindVerifiedChinaSuppliersAiRoute:
+    ItBlogHowToFindVerifiedChinaSuppliersAiRoute,
   ItCompareCompetitorRoute: ItCompareCompetitorRoute,
   ItEventsFreeForeverRoute: ItEventsFreeForeverRoute,
   ItForUseCaseRoute: ItForUseCaseRoute,
@@ -4564,6 +5737,12 @@ interface PtRouteChildren {
   PtTiktokShopRoute: typeof PtTiktokShopRoute
   PtIndexRoute: typeof PtIndexRoute
   PtBlogSlugRoute: typeof PtBlogSlugRoute
+  PtBlogAiSupplierNegotiationMoqPriceRoute: typeof PtBlogAiSupplierNegotiationMoqPriceRoute
+  PtBlogCaseStudySourcingElectronics48HoursRoute: typeof PtBlogCaseStudySourcingElectronics48HoursRoute
+  PtBlogChatgptVsAccioSourcingAgentsRoute: typeof PtBlogChatgptVsAccioSourcingAgentsRoute
+  PtBlogChinaImportRiskAuditLandedCostRoute: typeof PtBlogChinaImportRiskAuditLandedCostRoute
+  PtBlogChinaSourcingRoute: typeof PtBlogChinaSourcingRoute
+  PtBlogHowToFindVerifiedChinaSuppliersAiRoute: typeof PtBlogHowToFindVerifiedChinaSuppliersAiRoute
   PtCompareCompetitorRoute: typeof PtCompareCompetitorRoute
   PtEventsFreeForeverRoute: typeof PtEventsFreeForeverRoute
   PtForUseCaseRoute: typeof PtForUseCaseRoute
@@ -4587,6 +5766,17 @@ const PtRouteChildren: PtRouteChildren = {
   PtTiktokShopRoute: PtTiktokShopRoute,
   PtIndexRoute: PtIndexRoute,
   PtBlogSlugRoute: PtBlogSlugRoute,
+  PtBlogAiSupplierNegotiationMoqPriceRoute:
+    PtBlogAiSupplierNegotiationMoqPriceRoute,
+  PtBlogCaseStudySourcingElectronics48HoursRoute:
+    PtBlogCaseStudySourcingElectronics48HoursRoute,
+  PtBlogChatgptVsAccioSourcingAgentsRoute:
+    PtBlogChatgptVsAccioSourcingAgentsRoute,
+  PtBlogChinaImportRiskAuditLandedCostRoute:
+    PtBlogChinaImportRiskAuditLandedCostRoute,
+  PtBlogChinaSourcingRoute: PtBlogChinaSourcingRoute,
+  PtBlogHowToFindVerifiedChinaSuppliersAiRoute:
+    PtBlogHowToFindVerifiedChinaSuppliersAiRoute,
   PtCompareCompetitorRoute: PtCompareCompetitorRoute,
   PtEventsFreeForeverRoute: PtEventsFreeForeverRoute,
   PtForUseCaseRoute: PtForUseCaseRoute,
@@ -4612,6 +5802,12 @@ interface RuRouteChildren {
   RuTiktokShopRoute: typeof RuTiktokShopRoute
   RuIndexRoute: typeof RuIndexRoute
   RuBlogSlugRoute: typeof RuBlogSlugRoute
+  RuBlogAiSupplierNegotiationMoqPriceRoute: typeof RuBlogAiSupplierNegotiationMoqPriceRoute
+  RuBlogCaseStudySourcingElectronics48HoursRoute: typeof RuBlogCaseStudySourcingElectronics48HoursRoute
+  RuBlogChatgptVsAccioSourcingAgentsRoute: typeof RuBlogChatgptVsAccioSourcingAgentsRoute
+  RuBlogChinaImportRiskAuditLandedCostRoute: typeof RuBlogChinaImportRiskAuditLandedCostRoute
+  RuBlogChinaSourcingRoute: typeof RuBlogChinaSourcingRoute
+  RuBlogHowToFindVerifiedChinaSuppliersAiRoute: typeof RuBlogHowToFindVerifiedChinaSuppliersAiRoute
   RuCompareCompetitorRoute: typeof RuCompareCompetitorRoute
   RuEventsFreeForeverRoute: typeof RuEventsFreeForeverRoute
   RuForUseCaseRoute: typeof RuForUseCaseRoute
@@ -4635,6 +5831,17 @@ const RuRouteChildren: RuRouteChildren = {
   RuTiktokShopRoute: RuTiktokShopRoute,
   RuIndexRoute: RuIndexRoute,
   RuBlogSlugRoute: RuBlogSlugRoute,
+  RuBlogAiSupplierNegotiationMoqPriceRoute:
+    RuBlogAiSupplierNegotiationMoqPriceRoute,
+  RuBlogCaseStudySourcingElectronics48HoursRoute:
+    RuBlogCaseStudySourcingElectronics48HoursRoute,
+  RuBlogChatgptVsAccioSourcingAgentsRoute:
+    RuBlogChatgptVsAccioSourcingAgentsRoute,
+  RuBlogChinaImportRiskAuditLandedCostRoute:
+    RuBlogChinaImportRiskAuditLandedCostRoute,
+  RuBlogChinaSourcingRoute: RuBlogChinaSourcingRoute,
+  RuBlogHowToFindVerifiedChinaSuppliersAiRoute:
+    RuBlogHowToFindVerifiedChinaSuppliersAiRoute,
   RuCompareCompetitorRoute: RuCompareCompetitorRoute,
   RuEventsFreeForeverRoute: RuEventsFreeForeverRoute,
   RuForUseCaseRoute: RuForUseCaseRoute,
@@ -4660,6 +5867,12 @@ interface ZhRouteChildren {
   ZhTiktokShopRoute: typeof ZhTiktokShopRoute
   ZhIndexRoute: typeof ZhIndexRoute
   ZhBlogSlugRoute: typeof ZhBlogSlugRoute
+  ZhBlogAiSupplierNegotiationMoqPriceRoute: typeof ZhBlogAiSupplierNegotiationMoqPriceRoute
+  ZhBlogCaseStudySourcingElectronics48HoursRoute: typeof ZhBlogCaseStudySourcingElectronics48HoursRoute
+  ZhBlogChatgptVsAccioSourcingAgentsRoute: typeof ZhBlogChatgptVsAccioSourcingAgentsRoute
+  ZhBlogChinaImportRiskAuditLandedCostRoute: typeof ZhBlogChinaImportRiskAuditLandedCostRoute
+  ZhBlogChinaSourcingRoute: typeof ZhBlogChinaSourcingRoute
+  ZhBlogHowToFindVerifiedChinaSuppliersAiRoute: typeof ZhBlogHowToFindVerifiedChinaSuppliersAiRoute
   ZhCompareCompetitorRoute: typeof ZhCompareCompetitorRoute
   ZhEventsFreeForeverRoute: typeof ZhEventsFreeForeverRoute
   ZhForUseCaseRoute: typeof ZhForUseCaseRoute
@@ -4683,6 +5896,17 @@ const ZhRouteChildren: ZhRouteChildren = {
   ZhTiktokShopRoute: ZhTiktokShopRoute,
   ZhIndexRoute: ZhIndexRoute,
   ZhBlogSlugRoute: ZhBlogSlugRoute,
+  ZhBlogAiSupplierNegotiationMoqPriceRoute:
+    ZhBlogAiSupplierNegotiationMoqPriceRoute,
+  ZhBlogCaseStudySourcingElectronics48HoursRoute:
+    ZhBlogCaseStudySourcingElectronics48HoursRoute,
+  ZhBlogChatgptVsAccioSourcingAgentsRoute:
+    ZhBlogChatgptVsAccioSourcingAgentsRoute,
+  ZhBlogChinaImportRiskAuditLandedCostRoute:
+    ZhBlogChinaImportRiskAuditLandedCostRoute,
+  ZhBlogChinaSourcingRoute: ZhBlogChinaSourcingRoute,
+  ZhBlogHowToFindVerifiedChinaSuppliersAiRoute:
+    ZhBlogHowToFindVerifiedChinaSuppliersAiRoute,
   ZhCompareCompetitorRoute: ZhCompareCompetitorRoute,
   ZhEventsFreeForeverRoute: ZhEventsFreeForeverRoute,
   ZhForUseCaseRoute: ZhForUseCaseRoute,
