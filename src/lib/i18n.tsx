@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import { useRouterState } from "@tanstack/react-router";
 import { translations, type Lang, type Dict } from "./translations";
 
 type I18nCtx = {
@@ -84,7 +85,12 @@ function detectInitial(): Lang {
 
 export function I18nProvider({ children }: { children: ReactNode }) {
   // SSR-safe: start with "en", then upgrade after mount to avoid hydration mismatch.
-  const [lang, setLangState] = useState<Lang>("en");
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const seg = pathname.split("/")[1]?.toLowerCase();
+  const pathLang = (["ru", "de", "it", "es", "zh", "pt", "hi", "fr", "ar"] as const).find(
+    (l) => l === seg,
+  );
+  const [lang, setLangState] = useState<Lang>(pathLang ?? "en");
 
   useEffect(() => {
     const initial = detectInitial();
