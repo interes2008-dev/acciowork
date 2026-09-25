@@ -1,9 +1,10 @@
 import { useMemo, useState } from "react";
 import { Check, Copy, ArrowRight, ShieldCheck, Sparkles } from "lucide-react";
 import { BlogShell } from "@/components/blog/BlogShell";
-import { PILLARS, SOURCING_CTA_URL, type Pillar } from "@/lib/sourcing-pillars";
+import { SOURCING_CTA_URL, type Pillar } from "@/lib/sourcing-pillars";
+import { langPrefix, pillarsFor, sourcingUi, type SourcingUi } from "@/lib/sourcing-i18n";
 
-function CopyBlock({ label, text }: { label: string; text: string }) {
+function CopyBlock({ label, text, u }: { label: string; text: string; u: SourcingUi }) {
   const [done, setDone] = useState(false);
   return (
     <div className="overflow-hidden rounded-2xl border border-border/70 bg-muted/40">
@@ -19,7 +20,7 @@ function CopyBlock({ label, text }: { label: string; text: string }) {
           className="flex items-center gap-1 rounded-full px-2 py-1 normal-case tracking-normal text-primary hover:bg-primary/10"
         >
           {done ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}
-          {done ? "Copied" : "Copy prompt"}
+          {done ? u.copied : u.copyPrompt}
         </button>
       </div>
       <pre className="whitespace-pre-wrap p-4 font-mono text-[14px] leading-relaxed text-foreground">
@@ -66,7 +67,7 @@ function Num({
   );
 }
 
-function SavingsWidget() {
+function SavingsWidget({ u }: { u: SourcingUi }) {
   const [suppliers, setSuppliers] = useState(10);
   const [orders, setOrders] = useState(2);
   const [rate, setRate] = useState(40);
@@ -76,24 +77,24 @@ function SavingsWidget() {
   return (
     <div className="grid gap-6 md:grid-cols-2">
       <div className="space-y-3">
-        <Num label="Suppliers contacted per product" value={suppliers} onChange={setSuppliers} />
-        <Num label="Sourcing rounds per month" value={orders} onChange={setOrders} />
-        <Num label="Your hourly value" value={rate} onChange={setRate} suffix="$/h" />
+        <Num label={u.suppliersPer} value={suppliers} onChange={setSuppliers} />
+        <Num label={u.rounds} value={orders} onChange={setOrders} />
+        <Num label={u.hourly} value={rate} onChange={setRate} suffix="$/h" />
       </div>
       <div className="flex flex-col justify-center rounded-2xl bg-primary/10 p-6">
-        <p className="text-sm text-foreground/70">Estimated time saved per month</p>
-        <p className="text-4xl font-bold text-primary">{saved.toFixed(0)} h</p>
-        <p className="mt-3 text-sm text-foreground/70">Worth about</p>
-        <p className="text-2xl font-bold text-foreground">${(saved * rate).toLocaleString("en-US", { maximumFractionDigits: 0 })}/mo</p>
+        <p className="text-sm text-foreground/70">{u.timeSaved}</p>
+        <p className="text-4xl font-bold text-primary">{saved.toFixed(0)} {u.hoursShort}</p>
+        <p className="mt-3 text-sm text-foreground/70">{u.worth}</p>
+        <p className="text-2xl font-bold text-foreground">${(saved * rate).toLocaleString("en-US", { maximumFractionDigits: 0 })}{u.perMonth}</p>
         <p className="mt-3 text-xs text-foreground/50">
-          Estimate: ~1.5 h manual work per supplier + 6 h setup vs. ~6 min review per supplier with an agent.
+          {u.savingsNote}
         </p>
       </div>
     </div>
   );
 }
 
-function LandedWidget() {
+function LandedWidget({ u }: { u: SourcingUi }) {
   const [exw, setExw] = useState(5.1);
   const [qty, setQty] = useState(500);
   const [freight, setFreight] = useState(350);
@@ -110,38 +111,38 @@ function LandedWidget() {
   return (
     <div className="grid gap-6 md:grid-cols-2">
       <div className="grid grid-cols-2 gap-3">
-        <Num label="EXW price / unit" value={exw} onChange={setExw} step={0.1} suffix="$" />
-        <Num label="Quantity" value={qty} onChange={setQty} />
-        <Num label="Freight total" value={freight} onChange={setFreight} suffix="$" />
-        <Num label="Duty rate" value={duty} onChange={setDuty} suffix="%" />
-        <Num label="Brokerage + port fees" value={fees} onChange={setFees} suffix="$" />
+        <Num label={u.exw} value={exw} onChange={setExw} step={0.1} suffix="$" />
+        <Num label={u.qty} value={qty} onChange={setQty} />
+        <Num label={u.freight} value={freight} onChange={setFreight} suffix="$" />
+        <Num label={u.duty} value={duty} onChange={setDuty} suffix="%" />
+        <Num label={u.fees} value={fees} onChange={setFees} suffix="$" />
       </div>
       <div className="flex flex-col justify-center rounded-2xl bg-primary/10 p-6">
-        <p className="text-sm text-foreground/70">Landed cost per unit</p>
+        <p className="text-sm text-foreground/70">{u.landedUnit}</p>
         <p className="text-4xl font-bold text-primary">${r.unit.toFixed(2)}</p>
         <p className="mt-3 text-sm text-foreground/70">
-          Total ${r.total.toLocaleString("en-US", { maximumFractionDigits: 0 })} - that's{" "}
-          <b className="text-foreground">+{r.markup.toFixed(0)}%</b> on top of EXW.
+          {u.total} ${r.total.toLocaleString("en-US", { maximumFractionDigits: 0 })} - {u.thats}{" "}
+          <b className="text-foreground">+{r.markup.toFixed(0)}%</b> {u.onTop}
         </p>
         <p className="mt-3 text-xs text-foreground/50">
-          Includes 0.8% insurance and 3% payment fees. Duty rates change - confirm with your broker.
+          {u.landedNote}
         </p>
       </div>
     </div>
   );
 }
 
-function CtaBanner() {
+function CtaBanner({ u }: { u: SourcingUi }) {
   return (
     <section className="my-14 overflow-hidden rounded-[32px] bg-foreground p-8 text-background md:p-12">
       <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-        <Sparkles className="h-4 w-4" /> Free to start
+        <Sparkles className="h-4 w-4" /> {u.freeStart}
       </p>
       <h2 className="mt-3 text-[28px] font-bold leading-tight md:text-[36px]">
-        Delegate your first China sourcing task for free tonight
+        {u.ctaTitle}
       </h2>
       <p className="mt-3 max-w-2xl text-lg opacity-80">
-        Paste one prompt. Wake up to a vetted supplier shortlist, RFQs sent and quotes in a spreadsheet.
+        {u.ctaText}
       </p>
       <a
         href={SOURCING_CTA_URL}
@@ -149,7 +150,7 @@ function CtaBanner() {
         rel="noopener"
         className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-4 text-base font-semibold text-primary-foreground hover:opacity-90"
       >
-        Start free with Accio Work <ArrowRight className="h-4 w-4" />
+        {u.ctaBtn} <ArrowRight className="h-4 w-4" />
       </a>
     </section>
   );
@@ -164,15 +165,17 @@ function H2({ n, children }: { n: number; children: React.ReactNode }) {
   );
 }
 
-export function PillarArticle({ pillar: p }: { pillar: Pillar }) {
-  const others = PILLARS.filter((x) => x.slug !== p.slug);
+export function PillarArticle({ pillar: p, lang = "en" }: { pillar: Pillar; lang?: string }) {
+  const u = sourcingUi(lang);
+  const pre = langPrefix(lang);
+  const others = pillarsFor(lang).filter((x) => x.slug !== p.slug);
   return (
     <BlogShell>
       <article className="mx-auto max-w-3xl text-[18px] leading-relaxed text-foreground/85">
         <nav className="mb-6 text-sm text-foreground/60">
-          <a href="/blog/china-sourcing" className="hover:text-foreground">China Sourcing Hub</a>
+          <a href={`${pre}/blog/china-sourcing`} className="hover:text-foreground">{u.hub}</a>
           <span className="mx-2">/</span>
-          <span>Part {p.n} of 5</span>
+          <span>{u.part} {p.n} {u.of5}</span>
         </nav>
         <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
           <ShieldCheck className="h-3.5 w-3.5" /> {p.badge}
@@ -181,7 +184,7 @@ export function PillarArticle({ pillar: p }: { pillar: Pillar }) {
           {p.title}
         </h1>
         <p className="mt-4 text-xl text-foreground/70">{p.description}</p>
-        <p className="mt-3 text-sm text-foreground/50">{p.readingMinutes} min read - Accio Work</p>
+        <p className="mt-3 text-sm text-foreground/50">{p.readingMinutes} {u.minRead} - Accio Work</p>
 
         <H2 n={1}>{p.hookTitle}</H2>
         {p.hook.map((t, i) => (
@@ -196,19 +199,19 @@ export function PillarArticle({ pillar: p }: { pillar: Pillar }) {
           ))}
         </div>
 
-        <H2 n={2}>The new way: one prompt to an AI agent team</H2>
-        <CopyBlock label="Prompt given to Accio Work" text={p.prompt} />
+        <H2 n={2}>{u.newWay}</H2>
+        <CopyBlock u={u} label={u.promptGiven} text={p.prompt} />
         {p.newWay.map((t, i) => (
           <p key={i} className="mt-4">{t}</p>
         ))}
 
-        <H2 n={3}>What the agent hands back</H2>
+        <H2 n={3}>{u.handsBack}</H2>
         <p className="mb-3 text-sm font-semibold text-foreground/70">{p.artifactCaption}</p>
         <div className="overflow-x-auto rounded-2xl border border-border/70">
           <table className="w-full min-w-[640px] text-left text-[15px]">
             <thead className="bg-muted/60 text-xs uppercase tracking-wider text-foreground/60">
               <tr>
-                {["Supplier", "Factory type", "Price tier", "MOQ", "Certifications", "Risk"].map((h) => (
+                {u.cols.map((h) => (
                   <th key={h} className="px-4 py-3 font-semibold">{h}</th>
                 ))}
               </tr>
@@ -253,7 +256,7 @@ export function PillarArticle({ pillar: p }: { pillar: Pillar }) {
           </>
         )}
 
-        <H2 n={4}>Step-by-step: apply this today</H2>
+        <H2 n={4}>{u.stepByStep}</H2>
         <ol className="space-y-4">
           {p.steps.map((s, i) => (
             <li key={s.title} className="flex gap-4 rounded-2xl border border-border/70 bg-card p-5">
@@ -265,19 +268,19 @@ export function PillarArticle({ pillar: p }: { pillar: Pillar }) {
             </li>
           ))}
         </ol>
-        <p className="mb-3 mt-8 font-semibold text-foreground">Quick-copy prompts</p>
+        <p className="mb-3 mt-8 font-semibold text-foreground">{u.quickCopy}</p>
         <div className="space-y-4">
-          {p.copyPrompts.map((c) => <CopyBlock key={c.label} {...c} />)}
+          {p.copyPrompts.map((c) => <CopyBlock u={u} key={c.label} {...c} />)}
         </div>
 
-        <H2 n={5}>{p.widget === "landed" ? "Landed cost calculator" : "Sourcing time-savings calculator"}</H2>
+        <H2 n={5}>{p.widget === "landed" ? u.landedCalc : u.savingsCalc}</H2>
         <div className="rounded-[32px] border border-border/70 bg-card p-6 md:p-8">
-          {p.widget === "landed" ? <LandedWidget /> : <SavingsWidget />}
+          {p.widget === "landed" ? <LandedWidget u={u} /> : <SavingsWidget u={u} />}
         </div>
 
-        <CtaBanner />
+        <CtaBanner u={u} />
 
-        <h2 className="mb-5 text-[28px] font-bold text-foreground">FAQ</h2>
+        <h2 className="mb-5 text-[28px] font-bold text-foreground">{u.faq}</h2>
         <div className="space-y-3">
           {p.faq.map((f) => (
             <details key={f.q} className="rounded-2xl border border-border/70 bg-card p-5">
@@ -287,11 +290,11 @@ export function PillarArticle({ pillar: p }: { pillar: Pillar }) {
           ))}
         </div>
 
-        <h2 className="mb-5 mt-14 text-[28px] font-bold text-foreground">More from the China Sourcing series</h2>
+        <h2 className="mb-5 mt-14 text-[28px] font-bold text-foreground">{u.more}</h2>
         <div className="grid gap-3 sm:grid-cols-2">
           {others.map((o) => (
-            <a key={o.slug} href={`/blog/${o.slug}`} className="rounded-2xl border border-border/70 bg-card p-5 transition hover:border-primary">
-              <p className="text-xs font-semibold text-primary">Part {o.n} - {o.badge}</p>
+            <a key={o.slug} href={`${pre}/blog/${o.slug}`} className="rounded-2xl border border-border/70 bg-card p-5 transition hover:border-primary">
+              <p className="text-xs font-semibold text-primary">{u.part} {o.n} - {o.badge}</p>
               <p className="mt-1 font-semibold leading-snug text-foreground">{o.title}</p>
             </a>
           ))}
@@ -301,30 +304,32 @@ export function PillarArticle({ pillar: p }: { pillar: Pillar }) {
   );
 }
 
-export function SourcingHub() {
+export function SourcingHub({ lang = "en" }: { lang?: string }) {
+  const u = sourcingUi(lang);
+  const pre = langPrefix(lang);
   return (
     <BlogShell>
       <section className="mx-auto max-w-4xl">
-        <span className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">China Sourcing Hub</span>
+        <span className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">{u.hub}</span>
         <h1 className="mt-4 text-[32px] font-bold leading-tight text-foreground md:text-[48px]">
-          Sourcing in China with AI agents: the complete playbook
+          {u.hubTitle}
         </h1>
         <p className="mt-4 text-xl text-foreground/70">
-          Five deep-dive guides on vetting factories, negotiating MOQs, calculating landed cost and running real sourcing workflows with an AI agent team backed by Alibaba data - 400M+ products and 1.5M+ verified suppliers.
+          {u.hubLede}
         </p>
         <div className="mt-10 grid gap-4">
-          {PILLARS.map((p) => (
-            <a key={p.slug} href={`/blog/${p.slug}`} className="group flex gap-5 rounded-[32px] border border-border/70 bg-card p-6 transition hover:border-primary md:p-8">
+          {pillarsFor(lang).map((p) => (
+            <a key={p.slug} href={`${pre}/blog/${p.slug}`} className="group flex gap-5 rounded-[32px] border border-border/70 bg-card p-6 transition hover:border-primary md:p-8">
               <span className="text-3xl font-bold text-primary">0{p.n}</span>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wider text-foreground/50">{p.badge} - {p.readingMinutes} min</p>
+                <p className="text-xs font-semibold uppercase tracking-wider text-foreground/50">{p.badge} - {p.readingMinutes} {u.min}</p>
                 <p className="mt-1 text-xl font-bold leading-snug text-foreground">{p.title}</p>
                 <p className="mt-2 text-[16px] text-foreground/70">{p.description}</p>
               </div>
             </a>
           ))}
         </div>
-        <CtaBanner />
+        <CtaBanner u={u} />
       </section>
     </BlogShell>
   );

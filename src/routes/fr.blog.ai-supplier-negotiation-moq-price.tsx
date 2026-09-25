@@ -3,11 +3,11 @@ import { I18nProvider } from "@/lib/i18n";
 import { PillarArticle } from "@/components/sourcing/PillarArticle";
 import { getPillarFor, pillarHeadFor } from "@/lib/sourcing-i18n";
 
-export const Route = createFileRoute("/blog/how-to-find-verified-china-suppliers-ai")({
-  head: () => pillarHeadFor("en", "how-to-find-verified-china-suppliers-ai"),
+export const Route = createFileRoute("/fr/blog/ai-supplier-negotiation-moq-price")({
+  head: () => pillarHeadFor("fr", "ai-supplier-negotiation-moq-price"),
   component: () => (
     <I18nProvider>
-      <PillarArticle lang="en" pillar={getPillarFor("en", "how-to-find-verified-china-suppliers-ai")} />
+      <PillarArticle lang="fr" pillar={getPillarFor("fr", "ai-supplier-negotiation-moq-price")} />
     </I18nProvider>
   ),
 });

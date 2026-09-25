@@ -130,7 +130,7 @@ export function BlogList({
         const [badge, title, cta] = H[lang] ?? H.en;
         return (
           <a
-            href="/blog/china-sourcing"
+            href={`${lang === "en" ? "" : "/" + lang}/blog/china-sourcing`}
             className="mb-12 flex flex-col gap-2 rounded-[32px] border border-primary/30 bg-primary/5 p-6 transition hover:border-primary md:p-8"
           >
             <span className="text-xs font-semibold uppercase tracking-wider text-primary">{badge}</span>

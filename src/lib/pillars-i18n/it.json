@@ -1,0 +1,784 @@
+{
+ "ui": {
+  "copied": "Copiato",
+  "copyPrompt": "Copia il prompt",
+  "suppliersPer": "Fornitori contattati per prodotto",
+  "rounds": "Cicli di sourcing al mese",
+  "hourly": "Il tuo valore orario",
+  "timeSaved": "Tempo stimato risparmiato al mese",
+  "hoursShort": "h",
+  "worth": "Valore circa",
+  "perMonth": "/mese",
+  "savingsNote": "Stima: ~1,5 h di lavoro manuale per fornitore + 6 h di configurazione vs. ~6 min di revisione per fornitore con un agente.",
+  "exw": "Prezzo EXW / unità",
+  "qty": "Quantità",
+  "freight": "Totale trasporto",
+  "duty": "Tasso doganale",
+  "fees": "Spese brokeraggio + portuali",
+  "landedUnit": "Costo sbarcato per unità",
+  "total": "Totale",
+  "thats": "cioè",
+  "onTop": "in aggiunta all'EXW.",
+  "landedNote": "Include 0,8% di assicurazione e 3% di commissioni di pagamento. I dazi doganali possono cambiare - conferma con il tuo broker.",
+  "freeStart": "Gratis per iniziare",
+  "ctaTitle": "Delega gratuitamente la tua prima attività di sourcing in Cina stasera",
+  "ctaText": "Incolla un prompt. Al tuo risveglio troverai una lista di fornitori selezionati, RFQ inviate e preventivi in un foglio di calcolo.",
+  "ctaBtn": "Inizia gratis con Accio Work",
+  "hub": "China Sourcing Hub",
+  "part": "Parte",
+  "of5": "di 5",
+  "minRead": "min lettura",
+  "min": "min",
+  "newWay": "Il nuovo modo: un prompt per un team di agenti AI",
+  "promptGiven": "Prompt fornito ad Accio Work",
+  "handsBack": "Cosa restituisce l'agente",
+  "cols": [
+   "Fornitore",
+   "Tipo di fabbrica",
+   "Fascia di prezzo",
+   "MOQ",
+   "Certificazioni",
+   "Risk"
+  ],
+  "stepByStep": "Step-by-step: applicalo oggi stesso",
+  "quickCopy": "Prompt copia-rapida",
+  "landedCalc": "Calcolatore costo sbarcato",
+  "savingsCalc": "Calcolatore risparmio tempo nel sourcing",
+  "faq": "FAQ",
+  "more": "Altro dalla serie China Sourcing",
+  "hubTitle": "Sourcing in Cina con agenti AI: la guida completa",
+  "hubLede": "Cinque guide approfondite su come selezionare fabbriche, negoziare i MOQ, calcolare i costi sbarcati e gestire veri workflow di sourcing con un team di agenti AI supportato dai dati di Alibaba - oltre 400 milioni di prodotti e 1,5 milioni di fornitori verificati.",
+  "hubSeoTitle": "China Sourcing con Agenti AI - Guida Completa | Accio Work",
+  "hubDesc": "Cinque guide pratiche per il sourcing in Cina con l'AI: seleziona fabbriche reali, negozia MOQ inferiori, calcola i costi sbarcati e automatizza le operazioni con i fornitori."
+ },
+ "pillars": [
+  {
+   "slug": "how-to-find-verified-china-suppliers-ai",
+   "n": 1,
+   "badge": "Valutazione fornitori",
+   "title": "Come trovare e valutare produttori cinesi diretti in pochi minuti (senza intermediari)",
+   "seoTitle": "Trova fornitori cinesi verificati con l'IA - Valuta le fabbriche velocemente",
+   "description": "Distingui le vere fabbriche OEM/ODM dalle società commerciali, controlla automaticamente licenze e certificazioni ISO/BSCI, e seleziona fornitori cinesi verificati in pochi minuti con un agente di sourcing AI.",
+   "keywords": [
+    "sourcing in Cina",
+    "fornitori verificati Alibaba",
+    "valutare fabbrica Cina",
+    "agente di sourcing AI",
+    "fabbrica OEM Cina"
+   ],
+   "readingMinutes": 8,
+   "hookTitle": "Il vero costo di \"cerca su Alibaba\"",
+   "hook": [
+    "Digita \"frullatore portatile\" in qualsiasi marketplace B2B e otterrai migliaia di inserzioni. Una gran parte sono società commerciali che rivendono la stessa produzione di fabbrica con un ricarico - e molte sembrano identiche al produttore effettivo.",
+    "Il metodo manuale: apri 40 schede, confronta le foto, scrivi a 15 venditori, attendi risposte attraverso i fusi orari, poi prova a verificare licenze commerciali scritte in cinese. La maggior parte degli acquirenti impiega una settimana intera prima ancora di sapere chi produce realmente il prodotto."
+   ],
+   "painStats": [
+    {
+     "value": "5-10 giorni",
+     "label": "tempo tipico per una selezione manuale"
+    },
+    {
+     "value": "15-30%",
+     "label": "ricarico che un intermediario può aggiungere"
+    },
+    {
+     "value": "0",
+     "label": "certificati che puoi leggere senza il cinese"
+    }
+   ],
+   "prompt": "Trova 5 fabbriche OEM verificate per frullatori portatili sotto i $6, MOQ < 300, con certificazione CE. Escludi le società commerciali. Per ognuna: verifica della licenza commerciale, anni di attività, dimensioni della fabbrica, certificazioni e un punteggio di rischio. Salva come foglio di calcolo.",
+   "newWay": [
+    "Accio Work non è un chatbot che tira a indovinare. È un team di agenti AI che cercano in tempo reale tra i dati di Alibaba - oltre 400 milioni di prodotti e 1.5 milioni di fornitori verificati - leggono i profili dei fornitori e le schede tecniche, e restituiscono una selezione strutturata.",
+    "L'agente segnala chi è un produttore rispetto a una società commerciale (ambito commerciale registrato, indirizzo della fabbrica, linee di produzione, personale R&D), controlla i certificati elencati nel profilo e assegna un punteggio di rischio a ogni fornitore."
+   ],
+   "artifactCaption": "Output dell'agente: selezione OEM verificata (formato di esempio)",
+   "rows": [
+    {
+     "supplier": "Ningbo factory A",
+     "type": "Produttore OEM/ODM",
+     "price": "$4.80-5.60",
+     "moq": "200",
+     "certs": "CE, RoHS, ISO 9001",
+     "risk": 12
+    },
+    {
+     "supplier": "Shenzhen factory B",
+     "type": "Produttore OEM",
+     "price": "$5.10-5.90",
+     "moq": "300",
+     "certs": "CE, FCC, BSCI",
+     "risk": 18
+    },
+    {
+     "supplier": "Zhongshan factory C",
+     "type": "Produttore ODM",
+     "price": "$4.40-5.20",
+     "moq": "500",
+     "certs": "CE, ISO 9001",
+     "risk": 27
+    },
+    {
+     "supplier": "Guangzhou seller D",
+     "type": "Società commerciale",
+     "price": "$5.50-6.40",
+     "moq": "100",
+     "certs": "CE (copia del rivenditore)",
+     "risk": 61
+    }
+   ],
+   "artifactNote": "Formato di output di esempio. Nomi dei fornitori anonimizzati - il tuo agente restituisce profili e link reali.",
+   "extraTable": {
+    "caption": "Produttore vs. società commerciale - cosa controlla l'agente",
+    "head": [
+     "Segnale",
+     "Fabbrica reale",
+     "Società commerciale"
+    ],
+    "rows": [
+     [
+      "Ambito commerciale sulla licenza",
+      "Produzione / manifattura",
+      "Solo commercio, import/export"
+     ],
+     [
+      "Gamma di prodotti",
+      "Ristretta, una categoria",
+      "Dozzine di categorie non correlate"
+     ],
+     [
+      "Indirizzo e foto della fabbrica",
+      "Zona industriale, linee di produzione",
+      "Edificio per uffici, foto stock"
+     ],
+     [
+      "Stampo personalizzato / OEM",
+      "Offre utensileria e lavoro sul logo",
+      "Reindirizza al \"nostro partner\""
+     ],
+     [
+      "Prezzo vs. concorrenti",
+      "Fascia più bassa a volume",
+      "Costantemente più alto"
+     ]
+    ]
+   },
+   "steps": [
+    {
+     "title": "Indica sempre i tuoi filtri stringenti nel primo prompt",
+     "body": "Massimale di prezzo, MOQ, certificazioni e \"escludere società commerciali\". Gli agenti filtrano con precisione quando i vincoli sono espliciti."
+    },
+    {
+     "title": "Chiedi le prove, non solo un verdetto",
+     "body": "Richiedi l'ambito commerciale della licenza, l'area della fabbrica e i numeri di certificato per ogni fornitore, in modo da poter verificare a campione qualsiasi cosa sembri sospetta."
+    },
+    {
+     "title": "Mantienine 5, non 50",
+     "body": "Una selezione ristretta di 5 fabbriche verificate è meglio di 50 sconosciuti. Invia RFQ solo ai primi 3-5 in base al punteggio di rischio."
+    },
+    {
+     "title": "Riverifica i certificati prima di pagare",
+     "body": "Chiedi all'agente di verificare i numeri dei certificati con l'ente emittente e di annotare le date di scadenza."
+    }
+   ],
+   "copyPrompts": [
+    {
+     "label": "Verifica fabbrica vs. commerciante",
+     "text": "Per questi 10 link di fornitori, dimmi quali sono veri produttori e quali sono società commerciali. Mostra le prove per ciascuno (ambito commerciale, indirizzo della fabbrica, gamma di prodotti)."
+    },
+    {
+     "label": "Audit certificati",
+     "text": "Elenca ogni certificato che ogni fornitore dichiara (CE, ISO 9001, BSCI, FCC). Segnala quelli mancanti, scaduti o non verificabili e salva i risultati in un foglio di calcolo."
+    }
+   ],
+   "widget": "savings",
+   "faq": [
+    {
+     "q": "Come faccio a sapere se un fornitore cinese è una vera fabbrica?",
+     "a": "Controlla l'ambito commerciale registrato sulla licenza (produzione vs. commercio), l'indirizzo e le foto della fabbrica, l'ampiezza della gamma di prodotti e se offrono attrezzature personalizzate. Accio Work controlla automaticamente questi segnali e segnala le società commerciali."
+    },
+    {
+     "q": "I fornitori verificati di Alibaba sono sempre produttori?",
+     "a": "No. La verifica conferma l'esistenza e l'ispezione dell'azienda, ma i venditori verificati possono comunque essere società commerciali. Controlla sempre il tipo di attività."
+    },
+    {
+     "q": "L'IA può leggere licenze commerciali e certificati cinesi?",
+     "a": "Sì. Gli agenti di Accio Work leggono profili di fornitori, schede tecniche e documenti e li riassumono nella tua lingua."
+    }
+   ]
+  },
+  {
+   "slug": "ai-supplier-negotiation-moq-price",
+   "n": 2,
+   "badge": "Negoziazione & RFQ",
+   "title": "Automatizzare le negoziazioni con i fornitori: ottenere MOQ inferiori e prezzi migliori tramite l'IA",
+   "seoTitle": "Negoziare con fornitori cinesi tramite AI - MOQ e Prezzo più bassi",
+   "description": "Come gli agenti IA autonomi redigono RFQ professionali in cinese e inglese, fanno follow-up 24 ore su 24, 7 giorni su 7, e confrontano i preventivi in un unico foglio di calcolo - per ottenere MOQ inferiori e prezzi migliori dai fornitori cinesi.",
+   "keywords": [
+    "negoziare con fornitori cinesi",
+    "MOQ Alibaba più basso",
+    "RFQ automatizzato",
+    "IA per la negoziazione con i fornitori"
+   ],
+   "readingMinutes": 7,
+   "hookTitle": "Perché la maggior parte degli acquirenti paga troppo di default",
+   "hook": [
+    "I fornitori quotano prezzi alti al primo messaggio perché la maggior parte degli acquirenti non controbatte mai. Coloro che ottengono le migliori condizioni inviano RFQ chiare a più fabbriche contemporaneamente, fanno follow-up rapidi e confrontano preventivi omogenei.",
+    "Fare ciò manualmente significa scrivere in una seconda lingua, monitorare 10 conversazioni attraverso un fuso orario di 12 ore e ricostruire ogni preventivo nello stesso formato. Quindi, la maggior parte delle persone accetta la prima offerta ragionevole."
+   ],
+   "painStats": [
+    {
+     "value": "12 h",
+     "label": "divario di fuso orario che rallenta le risposte"
+    },
+    {
+     "value": "1-2",
+     "label": "preventivi confrontati dalla maggior parte degli acquirenti"
+    },
+    {
+     "value": "5+",
+     "label": "preventivi necessari per un vero potere contrattuale"
+    }
+   ],
+   "prompt": "Invia un RFQ ai miei 5 fornitori preselezionati per 500 unità di frullatori portatili con logo personalizzato. Scrivi in inglese e cinese. Chiedi prezzi a livelli per 300/500/1000 unità, flessibilità sul MOQ, costo del campione, tempi di consegna e termini di pagamento. Fai un follow-up dopo 24h se non ci sono risposte, poi metti tutti i preventivi in un unico foglio di calcolo comparativo.",
+   "newWay": [
+    "L'agente scrive una RFQ professionale e specifica in entrambe le lingue - il tipo che le fabbriche prendono sul serio - e la invia a ogni fornitore nella tua lista.",
+    "Fa follow-up puntualmente, estrae ogni risposta nelle stesse colonne e usa i preventivi concorrenti come leva: \"Il fornitore B offre MOQ 200 a $5.10 - potete eguagliare?\" Tu approvi ogni contro-offerta prima che venga inviata."
+   ],
+   "artifactCaption": "Output dell'agente: confronto preventivi dopo 2 round di negoziazione (esempio)",
+   "rows": [
+    {
+     "supplier": "Factory A",
+     "type": "OEM",
+     "price": "$5.60 -> $5.05",
+     "moq": "500 -> 250",
+     "certs": "CE, RoHS",
+     "risk": 14
+    },
+    {
+     "supplier": "Factory B",
+     "type": "OEM",
+     "price": "$5.40 -> $5.10",
+     "moq": "300 -> 200",
+     "certs": "CE, FCC, BSCI",
+     "risk": 18
+    },
+    {
+     "supplier": "Factory C",
+     "type": "ODM",
+     "price": "$5.20 -> $4.85",
+     "moq": "1000 -> 500",
+     "certs": "CE, ISO 9001",
+     "risk": 25
+    },
+    {
+     "supplier": "Factory D",
+     "type": "OEM",
+     "price": "$6.10 (no reply)",
+     "moq": "300",
+     "certs": "CE",
+     "risk": 40
+    }
+   ],
+   "artifactNote": "Numeri illustrativi che mostrano il formato. I risultati effettivi dipendono dal prodotto, dal volume e dal fornitore.",
+   "steps": [
+    {
+     "title": "Preventivo su tre livelli di volume",
+     "body": "Chiedere prezzi per 300/500/1000 unità rivela la vera curva dei costi del fornitore e dove il MOQ è negoziabile."
+    },
+    {
+     "title": "Scambiare il MOQ con qualcos'altro",
+     "body": "Offri un prezzo unitario leggermente più alto, un tempo di consegna più lungo o un colore standard in cambio di un MOQ inferiore sul tuo primo ordine."
+    },
+    {
+     "title": "Usa i preventivi concorrenti - con tatto",
+     "body": "Condividi il miglior termine concorrente senza nominare il fornitore. Le fabbriche rispondono a dettagli specifici, non a \"dammi il tuo miglior prezzo\"."
+    },
+    {
+     "title": "Blocca le condizioni per iscritto",
+     "body": "Chiedi all'agente di riassumere prezzo finale, MOQ, costo del campione, tempi di consegna e termini di pagamento in un unico messaggio di conferma."
+    }
+   ],
+   "copyPrompts": [
+    {
+     "label": "RFQ bilingue",
+     "text": "Redigi un RFQ in inglese e cinese semplificato per [prodotto], [quantità] unità, logo personalizzato. Chiedi prezzi a 3 livelli, MOQ, costo del campione, tempi di consegna, termini di pagamento e opzioni di imballaggio."
+    },
+    {
+     "label": "Round di contro-offerta",
+     "text": "Confronta tutti i preventivi nel mio foglio di calcolo. Per ogni fornitore, redigi una contro-offerta cortese usando il miglior termine concorrente (senza nominare i concorrenti). Attendi la mia approvazione prima di inviare."
+    }
+   ],
+   "widget": "savings",
+   "faq": [
+    {
+     "q": "Posso davvero ottenere un MOQ inferiore dai fornitori di Alibaba?",
+     "a": "Spesso sì, specialmente sui primi ordini, se offri un compromesso come un piccolo aumento del prezzo unitario, colori standard o tempi di consegna più lunghi, e dimostri di avere alternative."
+    },
+    {
+     "q": "L'IA invia messaggi senza la mia approvazione?",
+     "a": "Decidi tu. Accio Work può redigere messaggi per la revisione o fare follow-up automaticamente secondo le regole che imposti."
+    },
+    {
+     "q": "Gli RFQ dovrebbero essere in cinese?",
+     "a": "Un RFQ bilingue riduce i malintesi e segnala un acquirente serio. L'agente scrive entrambe le versioni per te."
+    }
+   ]
+  },
+  {
+   "slug": "china-import-risk-audit-landed-cost",
+   "n": 3,
+   "badge": "Costo totale & rischio",
+   "title": "Importazioni B2B Sicure nel 2026: Guida al Calcolo del Costo Totale e all'Audit del Rischio",
+   "seoTitle": "Calcola il Costo Totale dalla Cina e Audita i Rischi di Importazione (2026)",
+   "description": "Una ripartizione completa del costo totale - franco fabbrica, trasporto, tariffe, dogana e tasse - più una checklist per la Trade Assurance e l'audit del rischio fornitore per importare dalla Cina in sicurezza nel 2026.",
+   "keywords": [
+    "calcola costo totale",
+    "rischi importare dalla Cina",
+    "audit Trade Assurance",
+    "spese doganali e di spedizione"
+   ],
+   "readingMinutes": 9,
+   "hookTitle": "Un prodotto da $5 non è mai un prodotto da $5",
+   "hook": [
+    "Il prezzo di fabbrica è solo l'inizio. Trasporto, dazi, intermediazione doganale, ispezione e costi di pagamento possono aggiungere una quota consistente - e le regole tariffarie continuano a cambiare.",
+    "Gli acquirenti che prezzano solo sul franco fabbrica scoprono il loro margine al porto. Aggiungete un fornitore non verificato o un ordine effettuato al di fuori della Trade Assurance, e una spedizione problematica può annullare il profitto di un trimestre."
+   ],
+   "painStats": [
+    {
+     "value": "EXW + 6",
+     "label": "livelli di costo in un costo totale reale"
+    },
+    {
+     "value": "1",
+     "label": "spedizione errata per perdere il margine di un trimestre"
+    },
+    {
+     "value": "2026",
+     "label": "le regole tariffarie continuano a cambiare - ricontrolla ogni ordine"
+    }
+   ],
+   "prompt": "Calcola il costo totale per gli Stati Uniti per 500 frullatori portatili a $5.10 EXW Shenzhen, trasporto marittimo LCL. Includi trasporto, assicurazione, dazio USA corrente per il codice HS, intermediazione doganale e costi di pagamento. Quindi esegui un audit del rischio sul fornitore: copertura Trade Assurance, cronologia delle controversie, validità dei certificati. Salva entrambi in un foglio di calcolo.",
+   "newWay": [
+    "L'agente cerca il probabile codice HS, il contesto tariffario corrente e le stime di trasporto, e crea un costo totale per unità riga per riga - così potrai prezzare con margini reali.",
+    "Parallelamente, audita il fornitore: idoneità alla Trade Assurance, anni di attività, segnali di risposta e controversie, validità dei certificati. Tutto finisce in un unico file che puoi condividere con il tuo partner o commercialista."
+   ],
+   "artifactCaption": "Output dell'agente: audit del rischio fornitore (campione)",
+   "rows": [
+    {
+     "supplier": "Factory B",
+     "type": "OEM, 9 yrs",
+     "price": "$5.10 EXW",
+     "moq": "200",
+     "certs": "CE, FCC, BSCI - valid",
+     "risk": 16
+    },
+    {
+     "supplier": "Factory A",
+     "type": "OEM, 6 yrs",
+     "price": "$5.05 EXW",
+     "moq": "250",
+     "certs": "CE valid, RoHS expiring",
+     "risk": 29
+    },
+    {
+     "supplier": "Factory C",
+     "type": "ODM, 3 yrs",
+     "price": "$4.85 EXW",
+     "moq": "500",
+     "certs": "ISO 9001 unverified",
+     "risk": 44
+    }
+   ],
+   "extraTable": {
+    "caption": "Ripartizione del costo totale per unità (illustrativo, 500 unità, LCL)",
+    "head": [
+     "Livello di costo",
+     "Per unità",
+     "Note"
+    ],
+    "rows": [
+     [
+      "Prodotto (EXW)",
+      "$5.10",
+      "Prezzo franco fabbrica"
+     ],
+     [
+      "Gestione interna + export",
+      "$0.15",
+      "Al porto, documenti di esportazione"
+     ],
+     [
+      "Trasporto marittimo (LCL)",
+      "$0.70",
+      "Basato sul volume, varia a seconda della stagione"
+     ],
+     [
+      "Assicurazione",
+      "$0.04",
+      "~0.5-1% del valore del carico"
+     ],
+     [
+      "Dazio all'importazione",
+      "varies",
+      "Dipende dal codice HS e dalle tariffe attuali - verifica per ogni ordine"
+     ],
+     [
+      "Intermediazione doganale e tasse",
+      "$0.30",
+      "Commissione broker, tasse portuali e di elaborazione"
+     ],
+     [
+      "Costi di pagamento / FX",
+      "$0.15",
+      "Trade Assurance, carta o bonifico"
+     ]
+    ]
+   },
+   "steps": [
+    {
+     "title": "Prezza in base al costo totale, mai EXW",
+     "body": "Costruisci il margine sul costo totale per unità. Utilizza il calcolatore qui sotto per vedere come ogni livello influisce sul numero."
+    },
+    {
+     "title": "Paga all'interno della Trade Assurance",
+     "body": "Mantieni i termini dell'ordine, le specifiche e i requisiti di ispezione all'interno dell'ordine protetto - non passare mai a pagamenti fuori piattaforma su richiesta."
+    },
+    {
+     "title": "Ricontrolla i dazi su ogni ordine",
+     "body": "Le tariffe cambiano. Chiedi all'agente di confermare il codice HS e la tariffa attuale prima di impegnarti su un prezzo."
+    },
+    {
+     "title": "Prenota un'ispezione pre-spedizione",
+     "body": "Per i primi ordini, un'ispezione di terze parti costa poco rispetto a un lotto rifiutato."
+    }
+   ],
+   "copyPrompts": [
+    {
+     "label": "Foglio costo totale",
+     "text": "Crea un foglio di calcolo del costo totale per [prodotto] da [città], [quantità] unità, [prezzo EXW], spedizione a [paese] via [mare/aria]. Includi trasporto, assicurazione, dazio per il probabile codice HS, intermediazione e costi di pagamento. Mostra il costo per unità e il totale."
+    },
+    {
+     "label": "Audit rischio fornitore",
+     "text": "Audita questi fornitori per il rischio di importazione: copertura Trade Assurance, anni di attività, validità dei certificati, segnali di controversie, tasso di risposta. Dai a ciascuno un punteggio di rischio da 0 a 100 con le motivazioni."
+    }
+   ],
+   "widget": "landed",
+   "faq": [
+    {
+     "q": "Cosa include il costo totale?",
+     "a": "Il prezzo del prodotto più la gestione interna, il trasporto internazionale, l'assicurazione, i dazi e le tasse di importazione, l'intermediazione doganale e le tasse portuali, e le commissioni di pagamento o di cambio valuta."
+    },
+    {
+     "q": "La Trade Assurance protegge ogni ordine?",
+     "a": "Copre gli ordini effettuati e pagati tramite la piattaforma secondo i suoi termini. Gli ordini pagati fuori piattaforma non sono protetti - mantieni tutto all'interno dell'ordine."
+    },
+    {
+     "q": "L'IA può dirmi il dazio esatto di importazione?",
+     "a": "L'agente ricerca il probabile codice HS e il contesto tariffario attuale, ma conferma sempre la classificazione finale con il tuo spedizioniere doganale."
+    }
+   ]
+  },
+  {
+   "slug": "chatgpt-vs-accio-sourcing-agents",
+   "n": 4,
+   "badge": "Agente AI vs Chatbot",
+   "title": "Perché ChatGPT Fallisce nell'Approvvigionamento: Chatbot vs. Agenti AI Orientati all'Azione",
+   "seoTitle": "ChatGPT per Sourcing su Alibaba? Confronto tra Chatbot e Agenti AI",
+   "description": "I chatbot generici scrivono testi sui fornitori. Gli agenti AI orientati all'azione cercano su Alibaba e 1688, leggono schede tecniche e salvano shortlist reali in file. Un confronto affiancato per i team della supply chain.",
+   "keywords": [
+    "AI per supply chain",
+    "ChatGPT per Alibaba",
+    "agenti autonomi vs chatbot",
+    "agente AI per sourcing"
+   ],
+   "readingMinutes": 6,
+   "hookTitle": "Chiedi a un chatbot i fornitori e otterrai un bel paragrafo",
+   "hook": [
+    "Chiedi a un chatbot generico \"trovami 5 fabbriche di frullatori in Cina\" e otterrai un testo sicuro di sé - a volte con fornitori inesistenti, prezzi obsoleti o consigli generici come \"controlla le loro recensioni\".",
+    "L'approvvigionamento non è un compito di scrittura. È una sequenza di azioni: cercare cataloghi dal vivo, aprire profili, leggere schede tecniche, confrontare, inviare messaggi e salvare i risultati. Un chatbot si ferma dove inizia il vero lavoro."
+   ],
+   "painStats": [
+    {
+     "value": "Testo",
+     "label": "cosa offre un chatbot"
+    },
+    {
+     "value": "File",
+     "label": "cosa offre un agente"
+    },
+    {
+     "value": "400M+",
+     "label": "prodotti che un agente Accio può cercare"
+    }
+   ],
+   "prompt": "Cerca su Alibaba e 1688 set di utensili da cucina in silicone, food-grade LFGB o FDA, sotto i $3 per set, MOQ inferiore a 500. Apri la scheda tecnica di ciascun fornitore, conferma il materiale e le certificazioni, e salva i primi 5 in un foglio di calcolo con i link.",
+   "newWay": [
+    "Accio Work gestisce un team di agenti con strumenti reali: ricerca dal vivo sui dati Alibaba, un browser per aprire le pagine dei fornitori, creazione di file e memoria delle tue preferenze.",
+    "Il risultato non è un consiglio - è un manufatto finito: una shortlist verificata con link, specifiche, prezzi e punteggi di rischio, salvata dove puoi usarla."
+   ],
+   "artifactCaption": "Output dell'agente: shortlist verificata con specifiche controllate",
+   "rows": [
+    {
+     "supplier": "Yangjiang factory A",
+     "type": "Produttore OEM",
+     "price": "$2.35-2.80",
+     "moq": "300",
+     "certs": "LFGB, FDA",
+     "risk": 13
+    },
+    {
+     "supplier": "Dongguan factory B",
+     "type": "OEM/ODM",
+     "price": "$2.10-2.60",
+     "moq": "500",
+     "certs": "FDA, BSCI",
+     "risk": 21
+    },
+    {
+     "supplier": "Ningbo factory C",
+     "type": "OEM",
+     "price": "$2.70-2.95",
+     "moq": "200",
+     "certs": "LFGB",
+     "risk": 26
+    }
+   ],
+   "artifactNote": "Risultato dell'agente per il prompt sopra (formato campione, nomi anonimizzati). Un chatbot restituisce un paragrafo.",
+   "extraTable": {
+    "caption": "Matrice di confronto: chatbot LLM generico vs. agenti Accio Work",
+    "head": [
+     "Funzionalità",
+     "Chatbot generico",
+     "Agenti Accio Work"
+    ],
+    "rows": [
+     [
+      "Cerca inserzioni live su Alibaba / 1688",
+      "No - si affida ai dati di addestramento",
+      "Sì - oltre 400 milioni di prodotti, oltre 1,5 milioni di fornitori"
+     ],
+     [
+      "Legge schede tecniche e profili dei fornitori",
+      "No",
+      "Sì - apre pagine e documenti"
+     ],
+     [
+      "Verifica fabbrica vs. commerciante",
+      "Consigli generici",
+      "Prove per ogni fornitore"
+     ],
+     [
+      "Redige e invia RFQ",
+      "Redige solo il testo",
+      "Redige, invia e segue"
+     ],
+     [
+      "Output strutturato",
+      "Markdown in chat",
+      "Fogli di calcolo e file salvati"
+     ],
+     [
+      "Funziona su programma",
+      "No",
+      "Sì - automazioni"
+     ],
+     [
+      "Rischio di fornitori inventati",
+      "Alto",
+      "I risultati linkano a inserzioni reali"
+     ]
+    ]
+   },
+   "steps": [
+    {
+     "title": "Usa i chatbot per pensare, gli agenti per agire",
+     "body": "Fai brainstorming di idee di prodotto con qualsiasi LLM. Affida l'esecuzione - ricerca, verifica, contatto - a un agente."
+    },
+    {
+     "title": "Richiedi link per ogni fornitore",
+     "body": "Se uno strumento non può fornire un link diretto all'inserzione, considera il fornitore non verificato."
+    },
+    {
+     "title": "Chiedi file, non risposte",
+     "body": "Termina ogni prompt di sourcing con \"salva come foglio di calcolo\". L'output strutturato è ciò su cui puoi agire."
+    }
+   ],
+   "copyPrompts": [
+    {
+     "label": "Prompt di sourcing in stile agente",
+     "text": "Cerca su Alibaba [prodotto] sotto [prezzo], MOQ inferiore a [n], con [certificazione]. Apri ogni scheda tecnica, verifica materiale e certificati, e salva i primi 5 con link, livelli di prezzo e punteggio di rischio in un foglio di calcolo."
+    }
+   ],
+   "widget": "savings",
+   "faq": [
+    {
+     "q": "ChatGPT può trovare fornitori su Alibaba?",
+     "a": "Un chatbot generico può descrivere come cercare, ma senza accesso diretto ai dati dei fornitori non può restituire in modo affidabile fornitori reali e attuali con prezzi e certificazioni."
+    },
+    {
+     "q": "Cos'è un agente AI orientato all'azione?",
+     "a": "Un'AI che utilizza strumenti per completare compiti - ricerca, navigazione, messaggistica, creazione di file - invece di generare solo testo."
+    },
+    {
+     "q": "Accio Work è connesso ai dati di Alibaba?",
+     "a": "Sì. Gli agenti di Accio Work sono supportati dai dati di Alibaba che coprono oltre 400 milioni di prodotti e oltre 1,5 milioni di fornitori verificati."
+    }
+   ]
+  },
+  {
+   "slug": "case-study-sourcing-electronics-48-hours",
+   "n": 5,
+   "badge": "Case study",
+   "title": "Case Study: Approvvigionamento di 1.000 unità di elettronica in 48 ore senza conoscere il cinese",
+   "seoTitle": "Case Study Sourcing Cina: 1.000 Unità Elettronica in 48h",
+   "description": "Un workflow di procurement B2B passo-passo: da un singolo prompt di prodotto a 5 offerte finalizzate di fornitori per 1.000 unità di elettronica di consumo in 48 ore - senza cinese, senza commissioni d'agente.",
+   "keywords": [
+    "case study sourcing Cina",
+    "workflow procurement B2B",
+    "automazione supply chain e-commerce"
+   ],
+   "readingMinutes": 8,
+   "hookTitle": "Il brief: 1.000 auricolari wireless, lancio in 6 settimane",
+   "hook": [
+    "Un venditore e-commerce ha bisogno di 1.000 unità di auricolari wireless private label con Bluetooth 5.3, certificazioni CE/FCC e packaging personalizzato. Nessun agente di sourcing, nessuna conoscenza del cinese, e una data di lancio che non può essere posticipata.",
+    "Il percorso tradizionale - assumere un agente di sourcing (spesso con il 5-10% di commissione) o passare due settimane a contattare i fornitori - non era adatto. Questo è il workflow illustrativo di come farlo con Accio Work in 48 ore."
+   ],
+   "painStats": [
+    {
+     "value": "48 h",
+     "label": "dal prompt a 5 offerte finali"
+    },
+    {
+     "value": "0",
+     "label": "parole di cinese necessarie"
+    },
+    {
+     "value": "5",
+     "label": "offerte fornitore pronte per la firma"
+    }
+   ],
+   "prompt": "Ho bisogno di 1.000 auricolari TWS private-label, Bluetooth 5.3, ENC, 30h di batteria con custodia, CE e FCC, scatola personalizzata. Target sotto $7.50/unità. Trova 10 fabbriche OEM verificate, vetele, invia RFQ bilingue, negozia e consegna le migliori 5 offerte con costo DDP per gli Stati Uniti in un foglio di calcolo.",
+   "newWay": [
+    "Ora 0-4: l'agente ha cercato e filtrato 10 fabbriche OEM con prove di Bluetooth e CE/FCC, ha rimosso 3 società commerciali. Ora 4-8: inviate RFQ bilingue con 3 livelli di volume e richieste di campioni.",
+    "Ora 8-40: follow-up automatici, estrazione quotazioni, due cicli di contro-offerte approvate dal venditore. Ora 40-48: costo DDP per fornitore, audit di rischio e un confronto finale con i termini dell'ordine provvisorio."
+   ],
+   "artifactCaption": "Deliverable finale: le migliori 5 offerte (illustrativo)",
+   "rows": [
+    {
+     "supplier": "Shenzhen OEM 1",
+     "type": "OEM, specialista BT",
+     "price": "$6.90",
+     "moq": "500",
+     "certs": "CE, FCC, RoHS",
+     "risk": 11
+    },
+    {
+     "supplier": "Shenzhen OEM 2",
+     "type": "OEM/ODM",
+     "price": "$7.10",
+     "moq": "1000",
+     "certs": "CE, FCC, BQB",
+     "risk": 15
+    },
+    {
+     "supplier": "Dongguan OEM 3",
+     "type": "OEM",
+     "price": "$6.60",
+     "moq": "1000",
+     "certs": "CE, FCC",
+     "risk": 24
+    },
+    {
+     "supplier": "Huizhou ODM 4",
+     "type": "ODM",
+     "price": "$7.40",
+     "moq": "300",
+     "certs": "CE, FCC, ISO 9001",
+     "risk": 19
+    },
+    {
+     "supplier": "Shenzhen OEM 5",
+     "type": "OEM",
+     "price": "$6.75",
+     "moq": "800",
+     "certs": "CE, FCC",
+     "risk": 31
+    }
+   ],
+   "artifactNote": "Workflow e cifre illustrative che mostrano il processo e il formato dell'output.",
+   "extraTable": {
+    "caption": "Cronologia di 48 ore",
+    "head": [
+     "Finestra",
+     "Azione dell'agente",
+     "Azione umana"
+    ],
+    "rows": [
+     [
+      "0-4 h",
+      "Ricerca, filtro, verifica di 10 fabbriche OEM",
+      "Scrivere un prompt"
+     ],
+     [
+      "4-8 h",
+      "RFQ bilingue + richieste campioni",
+      "Approvare il template RFQ"
+     ],
+     [
+      "8-40 h",
+      "Follow-up, estrazione quotazioni, 2 cicli di contro-offerte",
+      "Approvare le contro-offerte (15 min)"
+     ],
+     [
+      "40-48 h",
+      "Costo DDP, audit di rischio, confronto finale",
+      "Scegliere 5, richiedere campioni"
+     ]
+    ]
+   },
+   "steps": [
+    {
+     "title": "Inserisci tutte le specifiche in un unico prompt",
+     "body": "Specifiche, certificazioni, quantità, prezzo target e formato di consegna. Più completo è il brief, minori saranno i cicli di scambio di informazioni."
+    },
+    {
+     "title": "Imposta punti di controllo per l'approvazione",
+     "body": "Approva il template RFQ e ogni ciclo di contro-offerte. Mantieni il controllo, l'agente svolge il lavoro pesante."
+    },
+    {
+     "title": "Ordina campioni dai primi 2-3",
+     "body": "Testa sempre i campioni fisici prima di un ordine di 1.000 unità - specialmente per l'elettronica."
+    },
+    {
+     "title": "Pianifica una ri-quotazione settimanale",
+     "body": "Utilizza un'automazione per ricontrollare prezzi e disponibilità con la tua lista ristretta prima di ogni riordino."
+    }
+   ],
+   "copyPrompts": [
+    {
+     "label": "Brief completo di sourcing",
+     "text": "Ho bisogno di [quantità] unità di [prodotto] con [specifiche chiave] e [certificazioni], [packaging/logo] personalizzato. Target sotto [$prezzo]/unità. Trova 10 fabbriche OEM verificate, vetele, invia RFQ bilingue, negozia e consegna le migliori 5 offerte con costo DDP per [paese] in un foglio di calcolo."
+    },
+    {
+     "label": "Automazione ri-quotazione settimanale",
+     "text": "Ogni lunedì, chiedi ai miei 5 fornitori preselezionati il prezzo attuale, la disponibilità e i tempi di consegna per [prodotto] e aggiorna il foglio di calcolo di confronto. Segnala qualsiasi variazione superiore al 5%."
+    }
+   ],
+   "widget": "savings",
+   "faq": [
+    {
+     "q": "Posso fare sourcing dalla Cina senza parlare cinese?",
+     "a": "Sì. Accio Work scrive e legge le comunicazioni dei fornitori in cinese e inglese e riassume tutto nella tua lingua."
+    },
+    {
+     "q": "Ho ancora bisogno di un agente di sourcing?",
+     "a": "Per molti ordini, no. Gli agenti AI gestiscono la ricerca, la verifica, le RFQ e la negoziazione. Per un controllo qualità complesso, un ispettore locale è ancora prezioso."
+    },
+    {
+     "q": "Quanto tempo ci vuole per ricevere le offerte dei fornitori?",
+     "a": "Con brief completi, offerte strutturate da diversi fornitori possono arrivare entro 24-48 ore, a seconda dei tempi di risposta dei fornitori."
+    }
+   ]
+  }
+ ]
+}
