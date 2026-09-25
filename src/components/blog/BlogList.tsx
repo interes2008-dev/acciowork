@@ -114,16 +114,31 @@ export function BlogList({
         <p className="mt-4 text-lg text-foreground/70">{copy.lede}</p>
       </section>
 
-      {lang === "en" && (
-        <a
-          href="/blog/china-sourcing"
-          className="mb-12 flex flex-col gap-2 rounded-[32px] border border-primary/30 bg-primary/5 p-6 transition hover:border-primary md:p-8"
-        >
-          <span className="text-xs font-semibold uppercase tracking-wider text-primary">New series - 5 guides</span>
-          <span className="text-2xl font-bold text-foreground">China Sourcing Hub: vet factories, negotiate MOQs, calculate landed cost with AI</span>
-          <span className="text-foreground/70">Read the playbook &rarr;</span>
-        </a>
-      )}
+      {(() => {
+        const H: Record<string, [string, string, string]> = {
+          en: ["New series - 5 guides", "China Sourcing Hub: vet factories, negotiate MOQs, calculate landed cost with AI", "Read the playbook"],
+          ru: ["Новая серия - 5 гайдов", "Закупки в Китае: проверка фабрик, переговоры по MOQ и расчёт себестоимости с ИИ", "Читать руководство"],
+          de: ["Neue Serie - 5 Guides", "China-Sourcing-Hub: Fabriken prüfen, MOQs verhandeln, Landed Cost mit KI berechnen", "Zum Playbook"],
+          it: ["Nuova serie - 5 guide", "China Sourcing Hub: verifica fabbriche, negozia MOQ, calcola il costo sbarcato con l'AI", "Leggi il playbook"],
+          es: ["Nueva serie - 5 guías", "China Sourcing Hub: verifica fábricas, negocia MOQ y calcula el costo puesto en destino con IA", "Leer la guía"],
+          zh: ["新系列 - 5 篇指南", "中国采购中心：用 AI 核验工厂、谈判起订量、计算到岸成本", "阅读指南"],
+          pt: ["Nova série - 5 guias", "China Sourcing Hub: verifique fábricas, negocie MOQs e calcule o custo final com IA", "Ler o guia"],
+          hi: ["नई सीरीज़ - 5 गाइड", "चाइना सोर्सिंग हब: AI से फ़ैक्ट्री जाँचें, MOQ पर मोलभाव करें, लैंडेड कॉस्ट निकालें", "प्लेबुक पढ़ें"],
+          fr: ["Nouvelle série - 5 guides", "China Sourcing Hub : vérifier les usines, négocier les MOQ, calculer le coût rendu avec l’IA", "Lire le guide"],
+          ar: ["سلسلة جديدة - 5 أدلة", "مركز التوريد من الصين: تحقق من المصانع، فاوض على الحد الأدنى للطلب، واحسب التكلفة النهائية بالذكاء الاصطناعي", "اقرأ الدليل"],
+        };
+        const [badge, title, cta] = H[lang] ?? H.en;
+        return (
+          <a
+            href="/blog/china-sourcing"
+            className="mb-12 flex flex-col gap-2 rounded-[32px] border border-primary/30 bg-primary/5 p-6 transition hover:border-primary md:p-8"
+          >
+            <span className="text-xs font-semibold uppercase tracking-wider text-primary">{badge}</span>
+            <span className="text-2xl font-bold text-foreground">{title}</span>
+            <span className="text-foreground/70">{cta} {lang === "ar" ? "←" : "→"}</span>
+          </a>
+        );
+      })()}
       {articles.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-border/70 bg-muted/40 px-8 py-16 text-center text-foreground/60">
           {copy.empty}
