@@ -1,15 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { I18nProvider } from "@/lib/i18n";
 import { PillarArticle } from "@/components/sourcing/PillarArticle";
-import { getPillar, pillarHead } from "@/lib/sourcing-pillars";
-
-const pillar = getPillar("ai-supplier-negotiation-moq-price")!;
+import { getPillarFor, pillarHeadFor } from "@/lib/sourcing-i18n";
 
 export const Route = createFileRoute("/blog/ai-supplier-negotiation-moq-price")({
-  head: () => pillarHead(pillar),
+  head: () => pillarHeadFor("en", "ai-supplier-negotiation-moq-price"),
   component: () => (
     <I18nProvider>
-      <PillarArticle pillar={pillar} />
+      <PillarArticle lang="en" pillar={getPillarFor("en", "ai-supplier-negotiation-moq-price")} />
     </I18nProvider>
   ),
 });
