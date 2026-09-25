@@ -69,25 +69,7 @@ function LanguageSwitcher() {
                   setOpen(false);
                   if (typeof window !== "undefined") {
                     const target =
-                      code === "ru"
-                        ? "/ru/blog"
-                        : code === "de"
-                          ? "/de/blog"
-                          : code === "it"
-                            ? "/it/blog"
-                            : code === "es"
-                              ? "/es/blog"
-                              : code === "zh"
-                                ? "/zh/blog"
-                                : code === "pt"
-                                  ? "/pt/blog"
-                                  : code === "hi"
-                                    ? "/hi/blog"
-                                    : code === "fr"
-                                      ? "/fr/blog"
-                                      : code === "ar"
-                                        ? "/ar/blog"
-                                        : "/blog";
+                      (code === "en" ? "/blog" : `/${code}/blog`);
                     if (window.location.pathname !== target) {
                       window.location.assign(target);
                     }
@@ -131,23 +113,7 @@ export function BlogShell({ children }: { children: React.ReactNode }) {
                     ? "/fr"
                     : "/";
   const blog =
-    lang === "ru"
-      ? "/ru/blog"
-      : lang === "de"
-        ? "/de/blog"
-        : lang === "it"
-          ? "/it/blog"
-          : lang === "es"
-            ? "/es/blog"
-            : lang === "zh"
-              ? "/zh/blog"
-              : lang === "pt"
-                ? "/pt/blog"
-                : lang === "hi"
-                  ? "/hi/blog"
-                  : lang === "fr"
-                    ? "/fr/blog"
-                    : "/blog";
+    (lang === "en" ? "/blog" : `/${lang}/blog`);
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur">

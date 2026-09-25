@@ -117,23 +117,7 @@ export function BlogArticle({
   related?: Array<{ slug: string; title: string; reading_minutes: number }>;
 }) {
   const base =
-    lang === "ru"
-      ? "/ru/blog"
-      : lang === "de"
-        ? "/de/blog"
-        : lang === "it"
-          ? "/it/blog"
-          : lang === "es"
-            ? "/es/blog"
-            : lang === "zh"
-              ? "/zh/blog"
-              : lang === "pt"
-                ? "/pt/blog"
-                : lang === "hi"
-                  ? "/hi/blog"
-                  : lang === "fr"
-                    ? "/fr/blog"
-                    : "/blog";
+    (lang === "en" ? "/blog" : `/${lang}/blog`);
   const cta = CTA[lang];
   const date = new Date(article.published_at).toLocaleDateString(
     lang === "en"

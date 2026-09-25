@@ -86,23 +86,7 @@ export function BlogList({
 }) {
   const copy = COPY[lang];
   const base =
-    lang === "ru"
-      ? "/ru/blog"
-      : lang === "de"
-        ? "/de/blog"
-        : lang === "it"
-          ? "/it/blog"
-          : lang === "es"
-            ? "/es/blog"
-            : lang === "zh"
-              ? "/zh/blog"
-              : lang === "pt"
-                ? "/pt/blog"
-                : lang === "hi"
-                  ? "/hi/blog"
-                  : lang === "fr"
-                    ? "/fr/blog"
-                    : "/blog";
+    (lang === "en" ? "/blog" : `/${lang}/blog`);
 
   return (
     <BlogShell>

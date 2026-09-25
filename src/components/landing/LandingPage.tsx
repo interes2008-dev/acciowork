@@ -259,25 +259,7 @@ function NavDropdown({
 function Navbar() {
   const { t, lang } = useI18n();
   const [blogHref, setBlogHref] = useState(
-    lang === "ru"
-      ? "/ru/blog"
-      : lang === "de"
-        ? "/de/blog"
-        : lang === "it"
-          ? "/it/blog"
-          : lang === "es"
-            ? "/es/blog"
-            : lang === "zh"
-              ? "/zh/blog"
-              : lang === "pt"
-                ? "/pt/blog"
-                : lang === "hi"
-                  ? "/hi/blog"
-                  : lang === "fr"
-                    ? "/fr/blog"
-                    : lang === "ar"
-                      ? "/ar/blog"
-                      : "/blog",
+    (lang === "en" ? "/blog" : `/${lang}/blog`),
   );
   useEffect(() => {
     if (typeof window === "undefined") return;
