@@ -19,12 +19,12 @@ export const Route = createFileRoute("/fr/quiz")({
     const ogImg = loaderData?.ogImage ?? "https://acciowork.pro/og/og-fr.png";
     const alternates = LANGS.map((l) => ({
       rel: "alternate",
-      hrefLang: l as string,
+      hreflang: l as string,
       href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/quiz`,
     }));
     alternates.push({
       rel: "alternate",
-      hrefLang: "x-default",
+      hreflang: "x-default",
       href: "https://acciowork.pro/quiz",
     });
     return {

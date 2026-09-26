@@ -19,10 +19,10 @@ export const Route = createFileRoute("/ru/roi")({
     const ogImg = loaderData?.ogImage ?? "https://acciowork.pro/og/og-ru.png";
     const alternates = LANGS.map((l) => ({
       rel: "alternate",
-      hrefLang: l as string,
+      hreflang: l as string,
       href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/roi`,
     }));
-    alternates.push({ rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/roi" });
+    alternates.push({ rel: "alternate", hreflang: "x-default", href: "https://acciowork.pro/roi" });
     return {
       meta: [
         { title: c.metaTitle },

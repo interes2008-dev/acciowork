@@ -11,10 +11,10 @@ export const Route = createFileRoute("/zh/for/")({
     const url = "https://acciowork.pro/zh/for";
     const alternates = LANGS.map((l) => ({
       rel: "alternate",
-      hrefLang: l as string,
+      hreflang: l as string,
       href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/for`,
     }));
-    alternates.push({ rel: "alternate", hrefLang: "x-default", href: "https://acciowork.pro/for" });
+    alternates.push({ rel: "alternate", hreflang: "x-default", href: "https://acciowork.pro/for" });
     return {
       meta: [
         { title: c.hubMetaTitle },

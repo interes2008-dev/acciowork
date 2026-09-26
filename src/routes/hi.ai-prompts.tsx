@@ -11,12 +11,12 @@ export const Route = createFileRoute("/hi/ai-prompts")({
     const url = "https://acciowork.pro/hi/ai-prompts";
     const alternates = LANGS.map((l) => ({
       rel: "alternate",
-      hrefLang: l as string,
+      hreflang: l as string,
       href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/ai-prompts`,
     }));
     alternates.push({
       rel: "alternate",
-      hrefLang: "x-default",
+      hreflang: "x-default",
       href: "https://acciowork.pro/ai-prompts",
     });
     return {
