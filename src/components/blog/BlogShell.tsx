@@ -94,26 +94,8 @@ function LanguageSwitcher() {
 
 export function BlogShell({ children }: { children: React.ReactNode }) {
   const { lang } = useI18n();
-  const home =
-    lang === "ru"
-      ? "/ru"
-      : lang === "de"
-        ? "/de"
-        : lang === "it"
-          ? "/it"
-          : lang === "es"
-            ? "/es"
-            : lang === "zh"
-              ? "/zh"
-              : lang === "pt"
-                ? "/pt"
-                : lang === "hi"
-                  ? "/hi"
-                  : lang === "fr"
-                    ? "/fr"
-                    : "/";
-  const blog =
-    (lang === "en" ? "/blog" : `/${lang}/blog`);
+  const home = lang === "en" ? "/" : `/${lang}`;
+  const blog = lang === "en" ? "/blog" : `/${lang}/blog`;
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur">
