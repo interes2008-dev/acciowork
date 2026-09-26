@@ -19,12 +19,12 @@ export const Route = createFileRoute("/zh/ai-agent-tasks")({
     const ogImg = loaderData?.ogImage ?? "https://acciowork.pro/og/og-zh.png";
     const alternates = LANGS.map((l) => ({
       rel: "alternate",
-      hrefLang: l as string,
+      hreflang: l as string,
       href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/ai-agent-tasks`,
     }));
     alternates.push({
       rel: "alternate",
-      hrefLang: "x-default",
+      hreflang: "x-default",
       href: "https://acciowork.pro/ai-agent-tasks",
     });
     return {

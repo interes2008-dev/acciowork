@@ -11,12 +11,12 @@ export const Route = createFileRoute("/hi/de-minimis")({
     const url = "https://acciowork.pro/hi/de-minimis";
     const alternates = LANGS.map((l) => ({
       rel: "alternate",
-      hrefLang: l as string,
+      hreflang: l as string,
       href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/de-minimis`,
     }));
     alternates.push({
       rel: "alternate",
-      hrefLang: "x-default",
+      hreflang: "x-default",
       href: "https://acciowork.pro/de-minimis",
     });
     return {
