@@ -87,7 +87,7 @@ const altLinks = (path: string) => [
     hreflang: l,
     href: `https://acciowork.pro${langPrefix(l)}${path}`,
   })),
-  { rel: "alternate", hrefLang: "x-default", href: `https://acciowork.pro${path}` },
+  { rel: "alternate", hreflang: "x-default", href: `https://acciowork.pro${path}` },
 ];
 
 const ogImg = (lang: string) => `https://acciowork.pro/og/og-${lang}.png`;
