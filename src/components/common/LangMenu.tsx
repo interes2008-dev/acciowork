@@ -1,10 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 import { useRouterState } from "@tanstack/react-router";
 import { Globe, ChevronDown, Check } from "lucide-react";
+import { LANGUAGE_CODES, localizedPath } from "@/lib/i18n";
 
-const LANGS = ["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr", "ar"] as const;
-type L = (typeof LANGS)[number];
-const NONEN = ["ru", "de", "it", "es", "zh", "pt", "hi", "fr", "ar"];
+type L = (typeof LANGUAGE_CODES)[number];
 const NAMES: Record<L, string> = {
   en: "English",
   ru: "Русский",
@@ -31,14 +30,7 @@ export function LangMenu({ lang }: { lang: L }) {
     return () => document.removeEventListener("mousedown", onDoc);
   }, [open]);
 
-  // Strip the current language prefix to get the language-independent path.
-  const seg = pathname.split("/")[1];
-  const bare = NONEN.includes(seg) ? "/" + pathname.split("/").slice(2).join("/") : pathname;
-  const hrefFor = (l: L) => {
-    const prefix = l === "en" ? "" : `/${l}`;
-    const path = bare === "/" ? "" : bare;
-    return prefix + path || "/";
-  };
+  const hrefFor = (targetLang: L) => localizedPath(pathname, targetLang);
 
   return (
     <div ref={ref} className="relative">
@@ -61,7 +53,7 @@ export function LangMenu({ lang }: { lang: L }) {
           role="menu"
           className="absolute end-0 top-full z-50 mt-2 w-44 overflow-hidden rounded-2xl border border-border bg-card p-1.5 shadow-[0_8px_30px_rgba(0,0,0,0.12)]"
         >
-          {LANGS.map((l) => (
+          {LANGUAGE_CODES.map((l) => (
             <a
               key={l}
               href={hrefFor(l)}

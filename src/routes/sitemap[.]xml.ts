@@ -10,7 +10,7 @@ interface SitemapEntry {
   lastmod?: string;
   changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
   priority?: string;
-  alternates?: { hreflang: string; href: string }[];
+  alternates?: { hrefLang: string; href: string }[];
 }
 
 export const Route = createFileRoute("/sitemap.xml")({
@@ -18,33 +18,33 @@ export const Route = createFileRoute("/sitemap.xml")({
     handlers: {
       GET: async () => {
         const alternates = [
-          { hreflang: "en", href: `${BASE_URL}/` },
-          { hreflang: "ru", href: `${BASE_URL}/ru` },
-          { hreflang: "de", href: `${BASE_URL}/de` },
-          { hreflang: "it", href: `${BASE_URL}/it` },
-          { hreflang: "es", href: `${BASE_URL}/es` },
-          { hreflang: "zh", href: `${BASE_URL}/zh` },
-          { hreflang: "pt", href: `${BASE_URL}/pt` },
-          { hreflang: "hi", href: `${BASE_URL}/hi` },
-          { hreflang: "fr", href: `${BASE_URL}/fr` },
-          { hreflang: "ar", href: `${BASE_URL}/ar` },
-          { hreflang: "x-default", href: `${BASE_URL}/` },
+          { hrefLang: "en", href: `${BASE_URL}/` },
+          { hrefLang: "ru", href: `${BASE_URL}/ru` },
+          { hrefLang: "de", href: `${BASE_URL}/de` },
+          { hrefLang: "it", href: `${BASE_URL}/it` },
+          { hrefLang: "es", href: `${BASE_URL}/es` },
+          { hrefLang: "zh", href: `${BASE_URL}/zh` },
+          { hrefLang: "pt", href: `${BASE_URL}/pt` },
+          { hrefLang: "hi", href: `${BASE_URL}/hi` },
+          { hrefLang: "fr", href: `${BASE_URL}/fr` },
+          { hrefLang: "ar", href: `${BASE_URL}/ar` },
+          { hrefLang: "x-default", href: `${BASE_URL}/` },
         ];
         const SLANGS = ["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr"];
         const alts = (suffix: string) => {
           const list = SLANGS.map((l) => ({
-            hreflang: l,
+            hrefLang: l,
             href: `${BASE_URL}${l === "en" ? "" : "/" + l}${suffix}`,
           }));
-          list.push({ hreflang: "x-default", href: `${BASE_URL}${suffix}` });
+          list.push({ hrefLang: "x-default", href: `${BASE_URL}${suffix}` });
           return list;
         };
         const arAlts = (suffix: string) => {
           const list = [...SLANGS, "ar"].map((l) => ({
-            hreflang: l,
+            hrefLang: l,
             href: `${BASE_URL}${l === "en" ? "" : "/" + l}${suffix}`,
           }));
-          list.push({ hreflang: "x-default", href: `${BASE_URL}${suffix}` });
+          list.push({ hrefLang: "x-default", href: `${BASE_URL}${suffix}` });
           return list;
         };
         const entries: SitemapEntry[] = [
@@ -274,7 +274,7 @@ export const Route = createFileRoute("/sitemap.xml")({
             `    <loc>${BASE_URL}${e.path}</loc>`,
             ...(e.lastmod || TODAY ? [`    <lastmod>${e.lastmod ?? TODAY}</lastmod>`] : []),
             ...(e.alternates ?? []).map(
-              (a) => `    <xhtml:link rel="alternate" hreflang="${a.hreflang}" href="${a.href}" />`,
+              (a) => `    <xhtml:link rel="alternate" hreflang="${a.hrefLang}" href="${a.href}" />`,
             ),
             e.changefreq ? `    <changefreq>${e.changefreq}</changefreq>` : null,
             e.priority ? `    <priority>${e.priority}</priority>` : null,

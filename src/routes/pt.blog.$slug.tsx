@@ -40,14 +40,14 @@ export const Route = createFileRoute("/pt/blog/$slug")({
       .filter((x) => LANG_PATH[x.lang] !== undefined)
       .map((x) => ({
         rel: "alternate",
-        hreflang: x.lang,
+        hrefLang: x.lang,
         href: `https://acciowork.pro${LANG_PATH[x.lang]}/blog/${x.slug}`,
       }));
     const en = alternates.find((x) => x.lang === "en");
     if (en) {
       altLinks.push({
         rel: "alternate",
-        hreflang: "x-default",
+        hrefLang: "x-default",
         href: `https://acciowork.pro/blog/${en.slug}`,
       });
     }

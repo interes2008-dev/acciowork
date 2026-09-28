@@ -105,6 +105,7 @@ const KEEP_READING: Record<string, string> = {
   pt: "Continue lendo",
   hi: "आगे पढ़ें",
   fr: "Poursuivez la lecture",
+  ar: "تابع القراءة",
 };
 
 export function BlogArticle({

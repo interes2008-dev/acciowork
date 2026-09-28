@@ -84,10 +84,10 @@ export const getPillarFor = (lang: string, slug: string) =>
 const altLinks = (path: string) => [
   ...SOURCING_LANGS.map((l) => ({
     rel: "alternate",
-    hreflang: l,
+    hrefLang: l,
     href: `https://acciowork.pro${langPrefix(l)}${path}`,
   })),
-  { rel: "alternate", hreflang: "x-default", href: `https://acciowork.pro${path}` },
+  { rel: "alternate", hrefLang: "x-default", href: `https://acciowork.pro${path}` },
 ];
 
 const ogImg = (lang: string) => `https://acciowork.pro/og/og-${lang}.png`;

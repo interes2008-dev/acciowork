@@ -11,12 +11,12 @@ export const Route = createFileRoute("/compare/")({
     const url = "https://acciowork.pro/compare";
     const alternates = LANGS.map((l) => ({
       rel: "alternate",
-      hreflang: l as string,
+      hrefLang: l as string,
       href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/compare`,
     }));
     alternates.push({
       rel: "alternate",
-      hreflang: "x-default",
+      hrefLang: "x-default",
       href: "https://acciowork.pro/compare",
     });
     return {
