@@ -19,12 +19,12 @@ export const Route = createFileRoute("/ru/supplier-scorecard")({
     const ogImg = loaderData?.ogImage ?? "https://acciowork.pro/og/og-ru.png";
     const alternates = LANGS.map((l) => ({
       rel: "alternate",
-      hreflang: l as string,
+      hrefLang: l as string,
       href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/supplier-scorecard`,
     }));
     alternates.push({
       rel: "alternate",
-      hreflang: "x-default",
+      hrefLang: "x-default",
       href: "https://acciowork.pro/supplier-scorecard",
     });
     return {

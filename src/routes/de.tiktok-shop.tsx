@@ -11,12 +11,12 @@ export const Route = createFileRoute("/de/tiktok-shop")({
     const url = "https://acciowork.pro/de/tiktok-shop";
     const alternates = LANGS.map((l) => ({
       rel: "alternate",
-      hreflang: l as string,
+      hrefLang: l as string,
       href: `https://acciowork.pro${l === "en" ? "" : "/" + l}/tiktok-shop`,
     }));
     alternates.push({
       rel: "alternate",
-      hreflang: "x-default",
+      hrefLang: "x-default",
       href: "https://acciowork.pro/tiktok-shop",
     });
     return {
