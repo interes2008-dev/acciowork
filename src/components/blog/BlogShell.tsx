@@ -5,6 +5,19 @@ import { useI18n } from "@/lib/i18n";
 import { LANGUAGE_CODES, localizedPath } from "@/lib/i18n";
 import type { Lang } from "@/lib/translations";
 
+const BLOG_NAV: Record<Lang, { home: string; blog: string }> = {
+  en: { home: "Home", blog: "Blog" },
+  ru: { home: "Главная", blog: "Блог" },
+  de: { home: "Startseite", blog: "Blog" },
+  it: { home: "Home", blog: "Blog" },
+  es: { home: "Inicio", blog: "Blog" },
+  zh: { home: "首页", blog: "博客" },
+  pt: { home: "Início", blog: "Blog" },
+  hi: { home: "होम", blog: "ब्लॉग" },
+  fr: { home: "Accueil", blog: "Blog" },
+  ar: { home: "الرئيسية", blog: "المدونة" },
+};
+
 function Logo({ size = 28 }: { size?: number }) {
   return (
     <div className="flex items-center gap-1.5 font-bold tracking-tight" style={{ fontSize: size }}>
@@ -106,7 +119,8 @@ function LanguageSwitcher() {
 }
 
 export function BlogShell({ children }: { children: React.ReactNode }) {
-  const { lang, t } = useI18n();
+  const { lang } = useI18n();
+  const nav = BLOG_NAV[lang];
   const home = lang === "en" ? "/" : `/${lang}`;
   const blog = lang === "en" ? "/blog" : `/${lang}/blog`;
   return (
@@ -118,10 +132,10 @@ export function BlogShell({ children }: { children: React.ReactNode }) {
           </a>
           <nav className="flex items-center gap-6 text-sm text-foreground/80">
             <a href={home} className="hover:text-foreground">
-              {t.nav.home}
+              {nav.home}
             </a>
             <a href={blog} className="hover:text-foreground">
-              {t.nav.blog}
+              {nav.blog}
             </a>
             <ThemeToggle />
             <LanguageSwitcher />
