@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { ThemeToggle } from "@/components/common/ThemeToggle";
 import { Check, ChevronDown, Globe } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
+import { LANGUAGE_CODES, localizedPath } from "@/lib/i18n";
 import type { Lang } from "@/lib/translations";
 
 function Logo({ size = 28 }: { size?: number }) {
@@ -36,7 +37,7 @@ function LanguageSwitcher() {
     return () => document.removeEventListener("mousedown", onDoc);
   }, [open]);
 
-  const options: Lang[] = ["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr", "ar"];
+  const options: readonly Lang[] = LANGUAGE_CODES;
 
   return (
     <div ref={rootRef} className="relative">
@@ -68,8 +69,20 @@ function LanguageSwitcher() {
                   setLang(code);
                   setOpen(false);
                   if (typeof window !== "undefined") {
-                    const target =
-                      (code === "en" ? "/blog" : `/${code}/blog`);
+                    const currentPath = window.location.pathname;
+                    const barePath = localizedPath(currentPath, "en");
+                    const sharedArticle =
+                      barePath === "/blog/china-sourcing" ||
+                      barePath === "/blog/how-to-find-verified-china-suppliers-ai" ||
+                      barePath === "/blog/ai-supplier-negotiation-moq-price" ||
+                      barePath === "/blog/china-import-risk-audit-landed-cost" ||
+                      barePath === "/blog/chatgpt-vs-accio-sourcing-agents" ||
+                      barePath === "/blog/case-study-sourcing-electronics-48-hours";
+                    const target = sharedArticle
+                      ? localizedPath(currentPath, code)
+                      : code === "en"
+                        ? "/blog"
+                        : `/${code}/blog`;
                     if (window.location.pathname !== target) {
                       window.location.assign(target);
                     }
@@ -93,7 +106,7 @@ function LanguageSwitcher() {
 }
 
 export function BlogShell({ children }: { children: React.ReactNode }) {
-  const { lang } = useI18n();
+  const { lang, t } = useI18n();
   const home = lang === "en" ? "/" : `/${lang}`;
   const blog = lang === "en" ? "/blog" : `/${lang}/blog`;
   return (
@@ -105,10 +118,10 @@ export function BlogShell({ children }: { children: React.ReactNode }) {
           </a>
           <nav className="flex items-center gap-6 text-sm text-foreground/80">
             <a href={home} className="hover:text-foreground">
-              Home
+              {t.nav.home}
             </a>
             <a href={blog} className="hover:text-foreground">
-              Blog
+              {t.nav.blog}
             </a>
             <ThemeToggle />
             <LanguageSwitcher />

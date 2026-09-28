@@ -11,6 +11,37 @@ type I18nCtx = {
 const Ctx = createContext<I18nCtx | null>(null);
 const STORAGE_KEY = "accio_lang";
 
+export const LANGUAGE_CODES: readonly Lang[] = [
+  "en",
+  "ru",
+  "de",
+  "it",
+  "es",
+  "zh",
+  "pt",
+  "hi",
+  "fr",
+  "ar",
+];
+
+export function languageFromPath(pathname: string): Lang {
+  const segment = pathname.split("/")[1]?.toLowerCase();
+  return LANGUAGE_CODES.find((code) => code !== "en" && code === segment) ?? "en";
+}
+
+export function stripLanguagePrefix(pathname: string): string {
+  const current = languageFromPath(pathname);
+  if (current === "en") return pathname || "/";
+  const bare = pathname.slice(current.length + 1);
+  return bare || "/";
+}
+
+export function localizedPath(pathname: string, lang: Lang): string {
+  const bare = stripLanguagePrefix(pathname);
+  const normalized = bare.startsWith("/") ? bare : `/${bare}`;
+  return lang === "en" ? normalized : `/${lang}${normalized === "/" ? "" : normalized}`;
+}
+
 function detectInitial(): Lang {
   if (typeof window === "undefined") return "en";
   try {
@@ -86,11 +117,7 @@ function detectInitial(): Lang {
 export function I18nProvider({ children }: { children: ReactNode }) {
   // SSR-safe: start with "en", then upgrade after mount to avoid hydration mismatch.
   const pathname = useRouterState({ select: (s) => s.location.pathname });
-  const seg = pathname.split("/")[1]?.toLowerCase();
-  const pathLang = (["ru", "de", "it", "es", "zh", "pt", "hi", "fr", "ar"] as const).find(
-    (l) => l === seg,
-  );
-  const [lang, setLangState] = useState<Lang>(pathLang ?? "en");
+  const [lang, setLangState] = useState<Lang>(() => languageFromPath(pathname));
 
   useEffect(() => {
     const initial = detectInitial();

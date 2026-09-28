@@ -32,7 +32,13 @@ import verifiedSuppliersImageZh from "@/assets/accio-story/accio-verified-suppli
 import voiceSearchImageZh from "@/assets/accio-story/accio-voice-search-zh.png.asset.json";
 import { ArrowRight, ChevronDown, Check, Globe, Menu, Sparkles, X } from "lucide-react";
 import { ThemeToggle } from "@/components/common/ThemeToggle";
-import { I18nProvider, useI18n, renderHighlighted } from "@/lib/i18n";
+import {
+  I18nProvider,
+  LANGUAGE_CODES,
+  localizedPath,
+  useI18n,
+  renderHighlighted,
+} from "@/lib/i18n";
 import { rvPress, rvChrome } from "@/lib/reviews-data";
 import { roiChrome } from "@/lib/roi-data";
 import type { Lang, TabKey, Testimonial as TestimonialT } from "@/lib/translations";
@@ -111,7 +117,7 @@ function LanguageSwitcher() {
     return () => document.removeEventListener("mousedown", onDoc);
   }, [open]);
 
-  const options: Lang[] = ["en", "ru", "de", "it", "es", "zh", "pt", "hi", "fr", "ar"];
+  const options: readonly Lang[] = LANGUAGE_CODES;
 
   return (
     <div ref={rootRef} className="relative">
@@ -143,26 +149,9 @@ function LanguageSwitcher() {
                   setLang(code);
                   setOpen(false);
                   if (typeof window !== "undefined") {
-                    const target =
-                      code === "ru"
-                        ? "/ru"
-                        : code === "de"
-                          ? "/de"
-                          : code === "it"
-                            ? "/it"
-                            : code === "es"
-                              ? "/es"
-                              : code === "zh"
-                                ? "/zh"
-                                : code === "pt"
-                                  ? "/pt"
-                                  : code === "hi"
-                                    ? "/hi"
-                                    : code === "fr"
-                                      ? "/fr"
-                                      : "/";
+                    const target = localizedPath(window.location.pathname, code);
                     if (window.location.pathname !== target) {
-                      window.history.pushState({}, "", target);
+                      window.location.assign(target);
                     }
                   }
                 }}
@@ -258,23 +247,7 @@ function NavDropdown({
 /* ---------- Navbar ---------- */
 function Navbar() {
   const { t, lang } = useI18n();
-  const [blogHref, setBlogHref] = useState(
-    (lang === "en" ? "/blog" : `/${lang}/blog`),
-  );
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const p = window.location.pathname.toLowerCase();
-    if (p.startsWith("/ru")) setBlogHref("/ru/blog");
-    else if (p.startsWith("/de")) setBlogHref("/de/blog");
-    else if (p.startsWith("/it")) setBlogHref("/it/blog");
-    else if (p.startsWith("/es")) setBlogHref("/es/blog");
-    else if (p.startsWith("/zh")) setBlogHref("/zh/blog");
-    else if (p.startsWith("/pt")) setBlogHref("/pt/blog");
-    else if (p.startsWith("/hi")) setBlogHref("/hi/blog");
-    else if (p.startsWith("/fr")) setBlogHref("/fr/blog");
-    else if (p.startsWith("/ar")) setBlogHref("/ar/blog");
-    else setBlogHref("/blog");
-  }, [lang]);
+  const blogHref = lang === "en" ? "/blog" : `/${lang}/blog`;
   const compareHref = blogHref.replace("/blog", "/compare");
   const guideHref = blogHref.replace("/blog", "/guide");
   const reviewsHref = blogHref.replace("/blog", "/reviews");

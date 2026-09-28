@@ -22,9 +22,17 @@ export function renderErrorPage(): string {
       <p>Something went wrong on our end. You can try refreshing or head back home.</p>
       <div class="actions">
         <button class="primary" onclick="location.reload()">Try again</button>
-        <a class="secondary" href="/">Go home</a>
+        <a class="secondary" id="home-link" href="/">Go home</a>
       </div>
     </div>
+    <script>
+      (function () {
+        var supported = ["ru", "de", "it", "es", "zh", "pt", "hi", "fr", "ar"];
+        var lang = location.pathname.split("/")[1] || "";
+        var link = document.getElementById("home-link");
+        if (link && supported.indexOf(lang) !== -1) link.setAttribute("href", "/" + lang);
+      })();
+    </script>
   </body>
 </html>`;
 }
