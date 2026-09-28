@@ -274,7 +274,7 @@ export const Route = createFileRoute("/sitemap.xml")({
             `    <loc>${BASE_URL}${e.path}</loc>`,
             ...(e.lastmod || TODAY ? [`    <lastmod>${e.lastmod ?? TODAY}</lastmod>`] : []),
             ...(e.alternates ?? []).map(
-              (a) => `    <xhtml:link rel="alternate" hreflang="${a.hreflang}" href="${a.href}" />`,
+              (a) => `    <xhtml:link rel="alternate" hreflang="${a.hrefLang}" href="${a.href}" />`,
             ),
             e.changefreq ? `    <changefreq>${e.changefreq}</changefreq>` : null,
             e.priority ? `    <priority>${e.priority}</priority>` : null,
