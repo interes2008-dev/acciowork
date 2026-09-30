@@ -3,7 +3,6 @@ import type {} from "@tanstack/react-start";
 import { listAllPublishedForSitemap } from "@/lib/blog.functions";
 
 const BASE_URL = "https://acciowork.pro";
-const TODAY = new Date().toISOString().slice(0, 10);
 
 interface SitemapEntry {
   path: string;
