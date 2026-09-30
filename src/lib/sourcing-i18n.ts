@@ -1,3 +1,13 @@
+import seo_en from "./pillars-seo/en.json";
+import seo_ru from "./pillars-seo/ru.json";
+import seo_de from "./pillars-seo/de.json";
+import seo_it from "./pillars-seo/it.json";
+import seo_es from "./pillars-seo/es.json";
+import seo_zh from "./pillars-seo/zh.json";
+import seo_pt from "./pillars-seo/pt.json";
+import seo_hi from "./pillars-seo/hi.json";
+import seo_fr from "./pillars-seo/fr.json";
+import seo_ar from "./pillars-seo/ar.json";
 import { PILLARS, type Pillar } from "@/lib/sourcing-pillars";
 import ru from "@/lib/pillars-i18n/ru.json";
 import de from "@/lib/pillars-i18n/de.json";
@@ -77,7 +87,10 @@ const DATA: Record<string, { ui: SourcingUi; pillars: Pillar[] }> = {
 
 export const langPrefix = (lang: string) => (lang === "en" ? "" : `/${lang}`);
 export const sourcingUi = (lang: string) => DATA[lang]?.ui ?? EN_UI;
-export const pillarsFor = (lang: string) => DATA[lang]?.pillars ?? PILLARS;
+const SEO: Record<string, Record<string, Partial<Pillar>>> = { en: seo_en, ru: seo_ru, de: seo_de, it: seo_it, es: seo_es, zh: seo_zh, pt: seo_pt, hi: seo_hi, fr: seo_fr, ar: seo_ar } as never;
+const MERGED: Record<string, Pillar[]> = {};
+export const pillarsFor = (lang: string): Pillar[] =>
+  (MERGED[lang] ??= (DATA[lang]?.pillars ?? PILLARS).map((p) => ({ ...p, ...(SEO[lang]?.[p.slug] ?? SEO.en[p.slug] ?? {}) })));
 export const getPillarFor = (lang: string, slug: string) =>
   pillarsFor(lang).find((p) => p.slug === slug)!;
 

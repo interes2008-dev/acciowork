@@ -1,0 +1,102 @@
+{
+ "how-to-find-verified-china-suppliers-ai": {
+  "title": "Comment trouver des fournisseurs chinois vérifiés avec l'IA : Auditez les vraies usines en quelques minutes",
+  "seoTitle": "Trouver des fournisseurs chinois vérifiés avec l'IA (Guide 2026)",
+  "h2": {
+   "workflow": "Comment un agent d'approvisionnement IA trouve des fabricants vérifiés en Chine",
+   "artifacts": "Liste de fournisseurs: usine vs société commerciale, MOQ, certifications",
+   "steps": "4 étapes pour vérifier une usine chinoise avant de payer",
+   "widget": "Combien de temps l'audit IA des fournisseurs vous fait gagner"
+  },
+  "related": [
+   {
+    "slug": "ai-supplier-negotiation-moq-price",
+    "text": "Usines trouvées? Négociez MOQ et prix avec l'IA."
+   },
+   {
+    "slug": "china-import-risk-audit-landed-cost",
+    "text": "Avant de commander, évaluez les risques et calculez votre coût d'atterrissage."
+   }
+  ]
+ },
+ "ai-supplier-negotiation-moq-price": {
+  "title": "Négocier avec les fournisseurs chinois via l'IA : Réduire les MOQs et obtenir de meilleurs prix",
+  "seoTitle": "Négocier MOQ & Prix avec Fournisseurs Chinois par IA",
+  "h2": {
+   "workflow": "Comment un agent IA négocie MOQ et prix avec les fournisseurs chinois",
+   "artifacts": "Résultats de négociation: devis, MOQ et conditions de paiement comparés",
+   "steps": "4 tactiques éprouvées pour réduire le MOQ et le prix unitaire",
+   "widget": "Calculez le temps que la négociation IA vous fait gagner"
+  },
+  "related": [
+   {
+    "slug": "how-to-find-verified-china-suppliers-ai",
+    "text": "Négociez uniquement avec des usines vérifiées : trouvez des fournisseurs chinois avec l'IA."
+   },
+   {
+    "slug": "china-import-risk-audit-landed-cost",
+    "text": "Un prix bas ne suffit pas sans le tableau complet : calculez le coût d'atterrissage."
+   }
+  ]
+ },
+ "china-import-risk-audit-landed-cost": {
+  "title": "Coût d'atterrissage depuis la Chine en 2026: Comment le calculer et auditer les risques",
+  "seoTitle": "Calculateur Coût d'Atterrissage Chine + Audit Risques Import (2026)",
+  "h2": {
+   "workflow": "Comment un agent IA audite les risques d'importation et le coût d'atterrissage",
+   "artifacts": "Audit des risques d'importation: droits, fret, frais et signaux d'alerte fournisseur",
+   "steps": "4 règles pour un import B2B sécurisé depuis la Chine",
+   "widget": "Calculateur gratuit du coût d'atterrissage: Chine à votre entrepôt"
+  },
+  "related": [
+   {
+    "slug": "ai-supplier-negotiation-moq-price",
+    "text": "Connaissez votre coût? Négociez un meilleur prix et MOQ avec l'IA."
+   },
+   {
+    "slug": "case-study-sourcing-electronics-48-hours",
+    "text": "Un exemple réel: 1000 unités électroniques sourcées en Chine en 48h."
+   }
+  ]
+ },
+ "chatgpt-vs-accio-sourcing-agents": {
+  "title": "ChatGPT vs Agents d'Approvisionnement IA: Pourquoi les Chatbots échouent en Sourcing Chine",
+  "seoTitle": "ChatGPT vs Agents IA pour Sourcing Alibaba & Chine",
+  "h2": {
+   "workflow": "Ce qu'un agent d'approvisionnement IA fait que ChatGPT ne peut pas",
+   "artifacts": "ChatGPT vs Agent IA: comparaison de sourcing côte à côte",
+   "steps": "Quand utiliser un chatbot et quand utiliser un agent d'approvisionnement",
+   "widget": "Combien d'heures un agent d'approvisionnement IA fait gagner par mois"
+  },
+  "related": [
+   {
+    "slug": "how-to-find-verified-china-suppliers-ai",
+    "text": "L'agent en action: comment trouver des fournisseurs chinois vérifiés avec l'IA."
+   },
+   {
+    "slug": "case-study-sourcing-electronics-48-hours",
+    "text": "Résultats réels: une étude de cas d'approvisionnement électronique en 48 heures."
+   }
+  ]
+ },
+ "case-study-sourcing-electronics-48-hours": {
+  "title": "Étude de cas Sourcing Chine: 1000 unités électroniques en 48h avec un agent IA",
+  "seoTitle": "Étude de Cas: Sourcing Électronique Chine en 48h par IA",
+  "h2": {
+   "workflow": "Le prompt exact utilisé pour sourcer de l'électronique en Chine",
+   "artifacts": "Résultats: fournisseurs, devis et délais en 48 heures",
+   "steps": "Comment reproduire ce processus de sourcing pour votre produit",
+   "widget": "Estimez vos propres gains de temps en sourcing"
+  },
+  "related": [
+   {
+    "slug": "chatgpt-vs-accio-sourcing-agents",
+    "text": "Pourquoi un chatbot ne pourrait pas faire ça? Lisez ChatGPT vs Agents IA."
+   },
+   {
+    "slug": "china-import-risk-audit-landed-cost",
+    "text": "Prochaine étape après les devis: calculer le coût et auditer les risques."
+   }
+  ]
+ }
+}
