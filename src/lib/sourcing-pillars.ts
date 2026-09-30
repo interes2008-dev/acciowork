@@ -32,6 +32,8 @@ export type Pillar = {
   copyPrompts: { label: string; text: string }[];
   widget: "savings" | "landed";
   faq: { q: string; a: string }[];
+  h2?: { workflow: string; artifacts: string; steps: string; widget: string };
+  related?: { slug: string; text: string }[];
 };
 
 export const PILLARS: Pillar[] = [

@@ -165,6 +165,16 @@ function H2({ n, children }: { n: number; children: React.ReactNode }) {
   );
 }
 
+function ReadNext({ item, pre }: { item?: { slug: string; text: string }; pre: string }) {
+  if (!item) return null;
+  return (
+    <a href={`${pre}/blog/${item.slug}`} className="my-8 flex items-center gap-3 rounded-2xl border-l-4 border-primary bg-primary/5 p-5 font-semibold text-foreground transition hover:bg-primary/10">
+      <span className="flex-1">{item.text}</span>
+      <ArrowRight className="h-4 w-4 shrink-0 text-primary rtl:rotate-180" />
+    </a>
+  );
+}
+
 export function PillarArticle({ pillar: p, lang = "en" }: { pillar: Pillar; lang?: string }) {
   const u = sourcingUi(lang);
   const pre = langPrefix(lang);
@@ -199,13 +209,13 @@ export function PillarArticle({ pillar: p, lang = "en" }: { pillar: Pillar; lang
           ))}
         </div>
 
-        <H2 n={2}>{u.newWay}</H2>
+        <H2 n={2}>{p.h2?.workflow ?? u.newWay}</H2>
         <CopyBlock u={u} label={u.promptGiven} text={p.prompt} />
         {p.newWay.map((t, i) => (
           <p key={i} className="mt-4">{t}</p>
         ))}
 
-        <H2 n={3}>{u.handsBack}</H2>
+        <H2 n={3}>{p.h2?.artifacts ?? u.handsBack}</H2>
         <p className="mb-3 text-sm font-semibold text-foreground/70">{p.artifactCaption}</p>
         <div className="overflow-x-auto rounded-2xl border border-border/70">
           <table className="w-full min-w-[640px] text-left text-[15px]">
@@ -256,7 +266,9 @@ export function PillarArticle({ pillar: p, lang = "en" }: { pillar: Pillar; lang
           </>
         )}
 
-        <H2 n={4}>{u.stepByStep}</H2>
+        <ReadNext item={p.related?.[0]} pre={pre} />
+
+        <H2 n={4}>{p.h2?.steps ?? u.stepByStep}</H2>
         <ol className="space-y-4">
           {p.steps.map((s, i) => (
             <li key={s.title} className="flex gap-4 rounded-2xl border border-border/70 bg-card p-5">
@@ -273,7 +285,9 @@ export function PillarArticle({ pillar: p, lang = "en" }: { pillar: Pillar; lang
           {p.copyPrompts.map((c) => <CopyBlock u={u} key={c.label} {...c} />)}
         </div>
 
-        <H2 n={5}>{p.widget === "landed" ? u.landedCalc : u.savingsCalc}</H2>
+        <ReadNext item={p.related?.[1]} pre={pre} />
+
+        <H2 n={5}>{p.h2?.widget ?? (p.widget === "landed" ? u.landedCalc : u.savingsCalc)}</H2>
         <div className="rounded-[32px] border border-border/70 bg-card p-6 md:p-8">
           {p.widget === "landed" ? <LandedWidget u={u} /> : <SavingsWidget u={u} />}
         </div>
