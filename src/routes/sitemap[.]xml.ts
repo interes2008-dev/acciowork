@@ -3,7 +3,6 @@ import type {} from "@tanstack/react-start";
 import { listAllPublishedForSitemap } from "@/lib/blog.functions";
 
 const BASE_URL = "https://acciowork.pro";
-const TODAY = new Date().toISOString().slice(0, 10);
 
 interface SitemapEntry {
   path: string;
@@ -272,7 +271,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           [
             `  <url>`,
             `    <loc>${BASE_URL}${e.path}</loc>`,
-            ...(e.lastmod || TODAY ? [`    <lastmod>${e.lastmod ?? TODAY}</lastmod>`] : []),
+            ...(e.lastmod ? [`    <lastmod>${e.lastmod}</lastmod>`] : []),
             ...(e.alternates ?? []).map(
               (a) => `    <xhtml:link rel="alternate" hreflang="${a.hrefLang}" href="${a.href}" />`,
             ),
