@@ -1,0 +1,102 @@
+{
+ "how-to-find-verified-china-suppliers-ai": {
+  "title": "如何用AI找到中国认证供应商：几分钟内验证真实工厂",
+  "seoTitle": "AI如何找中国认证供应商 (2026最新指南)",
+  "h2": {
+   "workflow": "AI采购代理如何找到中国认证制造商",
+   "artifacts": "供应商短名单：工厂与贸易商，MOQ，认证信息",
+   "steps": "付款前验证中国工厂的4个步骤",
+   "widget": "AI供应商验证为您节省了多少时间"
+  },
+  "related": [
+   {
+    "slug": "ai-supplier-negotiation-moq-price",
+    "text": "找到工厂了？接下来，了解如何用AI谈判更低MOQ和价格。"
+   },
+   {
+    "slug": "china-import-risk-audit-landed-cost",
+    "text": "下单前，进行风险审计并计算您的实际到岸成本。"
+   }
+  ]
+ },
+ "ai-supplier-negotiation-moq-price": {
+  "title": "如何用AI与中国供应商谈判：降低MOQ和获得更优价格",
+  "seoTitle": "如何用AI与中国供应商谈判MOQ和价格",
+  "h2": {
+   "workflow": "AI代理如何与中国供应商谈判MOQ和价格",
+   "artifacts": "谈判结果：报价、MOQ和付款条款对比",
+   "steps": "降低MOQ和单位价格的4个实战策略",
+   "widget": "计算AI谈判为您节省的时间"
+  },
+  "related": [
+   {
+    "slug": "how-to-find-verified-china-suppliers-ai",
+    "text": "只与认证工厂谈判 - 了解如何用AI找到中国认证供应商。"
+   },
+   {
+    "slug": "china-import-risk-audit-landed-cost",
+    "text": "没有全面了解，低价格意义不大 - 计算您的中国到岸成本。"
+   }
+  ]
+ },
+ "china-import-risk-audit-landed-cost": {
+  "title": "2026年中国到岸成本：如何计算并审计进口风险",
+  "seoTitle": "中国到岸成本计算器 + 进口风险审计 (2026)",
+  "h2": {
+   "workflow": "AI代理如何审计进口风险和到岸成本",
+   "artifacts": "进口风险审计：关税、运费、费用和供应商红旗警告",
+   "steps": "从中国安全B2B进口的4条规则",
+   "widget": "免费到岸成本计算器：从中国到您的仓库"
+  },
+  "related": [
+   {
+    "slug": "ai-supplier-negotiation-moq-price",
+    "text": "了解您的到岸成本了吗？用它来用AI谈判更好的单位价格和MOQ。"
+   },
+   {
+    "slug": "case-study-sourcing-electronics-48-hours",
+    "text": "查看真实案例：48小时内从中国采购1,000件电子产品。"
+   }
+  ]
+ },
+ "chatgpt-vs-accio-sourcing-agents": {
+  "title": "ChatGPT与AI采购代理对比：为何聊天机器人无法胜任中国采购",
+  "seoTitle": "ChatGPT与AI采购代理：阿里巴巴&中国采购对比",
+  "h2": {
+   "workflow": "AI采购代理能做到哪些ChatGPT做不到的",
+   "artifacts": "ChatGPT与AI代理：采购功能并排对比",
+   "steps": "何时使用聊天机器人，何时使用采购代理",
+   "widget": "AI采购代理每月节省多少小时"
+  },
+  "related": [
+   {
+    "slug": "how-to-find-verified-china-suppliers-ai",
+    "text": "查看代理实际操作：AI如何找到中国认证供应商。"
+   },
+   {
+    "slug": "case-study-sourcing-electronics-48-hours",
+    "text": "真实结果：48小时电子产品采购案例研究。"
+   }
+  ]
+ },
+ "case-study-sourcing-electronics-48-hours": {
+  "title": "中国采购案例研究：用AI代理48小时采购1,000件电子产品",
+  "seoTitle": "案例：AI代理48小时从中国采购电子产品",
+  "h2": {
+   "workflow": "从中国采购电子产品所用的确切指令",
+   "artifacts": "结果：48小时内的供应商、报价和交货期",
+   "steps": "如何为您的产品重复此采购流程",
+   "widget": "估算您自己的采购时间节省"
+  },
+  "related": [
+   {
+    "slug": "chatgpt-vs-accio-sourcing-agents",
+    "text": "为何聊天机器人做不到？阅读ChatGPT与AI采购代理对比。"
+   },
+   {
+    "slug": "china-import-risk-audit-landed-cost",
+    "text": "收到报价后的下一步：计算到岸成本并审计进口风险。"
+   }
+  ]
+ }
+}

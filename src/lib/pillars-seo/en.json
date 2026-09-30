@@ -1,0 +1,72 @@
+{
+  "how-to-find-verified-china-suppliers-ai": {
+    "title": "How to Find Verified Chinese Suppliers with AI: Vet Real Factories in Minutes",
+    "seoTitle": "How to Find Verified Chinese Suppliers with AI (2026 Guide)",
+    "h2": {
+      "workflow": "How an AI sourcing agent finds verified manufacturers in China",
+      "artifacts": "Supplier shortlist: factory vs trading company, MOQ, certifications",
+      "steps": "4 steps to vet a Chinese factory before you pay",
+      "widget": "How much time AI supplier vetting saves you"
+    },
+    "related": [
+      { "slug": "ai-supplier-negotiation-moq-price", "text": "Found your factories? Next, learn how to negotiate lower MOQs and prices with AI." },
+      { "slug": "china-import-risk-audit-landed-cost", "text": "Before ordering, run a risk audit and calculate your true landed cost." }
+    ]
+  },
+  "ai-supplier-negotiation-moq-price": {
+    "title": "How to Negotiate with Chinese Suppliers Using AI: Lower MOQs and Better Prices",
+    "seoTitle": "How to Negotiate MOQ & Price with Chinese Suppliers Using AI",
+    "h2": {
+      "workflow": "How an AI agent negotiates MOQ and price with Chinese suppliers",
+      "artifacts": "Negotiation results: quotes, MOQ and payment terms compared",
+      "steps": "4 proven tactics to lower MOQ and unit price",
+      "widget": "Calculate the time AI negotiation saves you"
+    },
+    "related": [
+      { "slug": "how-to-find-verified-china-suppliers-ai", "text": "Only negotiate with vetted factories - see how to find verified Chinese suppliers with AI." },
+      { "slug": "china-import-risk-audit-landed-cost", "text": "A lower price means little without the full picture - calculate your landed cost from China." }
+    ]
+  },
+  "china-import-risk-audit-landed-cost": {
+    "title": "Landed Cost from China in 2026: How to Calculate It and Audit Import Risks",
+    "seoTitle": "Landed Cost Calculator from China + Import Risk Audit (2026)",
+    "h2": {
+      "workflow": "How an AI agent audits import risk and landed cost",
+      "artifacts": "Import risk audit: duties, freight, fees and supplier red flags",
+      "steps": "4 rules for safe B2B importing from China",
+      "widget": "Free landed cost calculator: China to your warehouse"
+    },
+    "related": [
+      { "slug": "ai-supplier-negotiation-moq-price", "text": "Know your landed cost? Use it to negotiate a better unit price and MOQ with AI." },
+      { "slug": "case-study-sourcing-electronics-48-hours", "text": "See a real example: 1,000 electronics units sourced from China in 48 hours." }
+    ]
+  },
+  "chatgpt-vs-accio-sourcing-agents": {
+    "title": "ChatGPT vs AI Sourcing Agents: Why Chatbots Fail at Sourcing from China",
+    "seoTitle": "ChatGPT vs AI Sourcing Agents for Alibaba & China Sourcing",
+    "h2": {
+      "workflow": "What an AI sourcing agent does that ChatGPT can't",
+      "artifacts": "ChatGPT vs AI agent: side-by-side sourcing comparison",
+      "steps": "When to use a chatbot and when to use a sourcing agent",
+      "widget": "How many hours an AI sourcing agent saves per month"
+    },
+    "related": [
+      { "slug": "how-to-find-verified-china-suppliers-ai", "text": "See the agent in action: how to find verified Chinese suppliers with AI." },
+      { "slug": "case-study-sourcing-electronics-48-hours", "text": "Real results: a 48-hour electronics sourcing case study." }
+    ]
+  },
+  "case-study-sourcing-electronics-48-hours": {
+    "title": "China Sourcing Case Study: 1,000 Electronics Units in 48 Hours with an AI Agent",
+    "seoTitle": "Case Study: Sourcing Electronics from China in 48 Hours with AI",
+    "h2": {
+      "workflow": "The exact prompt used to source electronics from China",
+      "artifacts": "Results: suppliers, quotes and lead times in 48 hours",
+      "steps": "How to repeat this sourcing workflow for your product",
+      "widget": "Estimate your own sourcing time savings"
+    },
+    "related": [
+      { "slug": "chatgpt-vs-accio-sourcing-agents", "text": "Why couldn't a chatbot do this? Read ChatGPT vs AI sourcing agents." },
+      { "slug": "china-import-risk-audit-landed-cost", "text": "Next step after quotes: calculate landed cost and audit import risks." }
+    ]
+  }
+}
