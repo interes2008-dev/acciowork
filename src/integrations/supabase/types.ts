@@ -109,6 +109,30 @@ export type Database = {
         }
         Relationships: []
       }
+      cta_clicks: {
+        Row: {
+          created_at: string
+          id: string
+          lang: string
+          referrer: string | null
+          source: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          lang?: string
+          referrer?: string | null
+          source: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          lang?: string
+          referrer?: string | null
+          source?: string
+        }
+        Relationships: []
+      }
       seo_monitor_config: {
         Row: {
           alert_email: string | null
