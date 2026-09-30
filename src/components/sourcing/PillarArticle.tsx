@@ -132,7 +132,7 @@ function LandedWidget({ u }: { u: SourcingUi }) {
   );
 }
 
-function CtaBanner({ u }: { u: SourcingUi }) {
+function CtaBanner({ u, src, lang }: { u: SourcingUi; src: string; lang: string }) {
   return (
     <section className="my-14 overflow-hidden rounded-[32px] bg-foreground p-8 text-background md:p-12">
       <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
