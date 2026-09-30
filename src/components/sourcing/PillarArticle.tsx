@@ -145,7 +145,7 @@ function CtaBanner({ u, src, lang }: { u: SourcingUi; src: string; lang: string 
         {u.ctaText}
       </p>
       <a
-        href={SOURCING_CTA_URL}
+        href={`/api/public/go?src=${encodeURIComponent(src)}&lang=${encodeURIComponent(lang)}`}
         target="_blank"
         rel="noopener"
         className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-4 text-base font-semibold text-primary-foreground hover:opacity-90"
