@@ -1,0 +1,1 @@
+CREATE POLICY "No public access to cta_clicks" ON public.cta_clicks FOR ALL TO authenticated USING (false) WITH CHECK (false);
