@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { Check, Copy, ArrowRight, ShieldCheck, Sparkles } from "lucide-react";
 import { BlogShell } from "@/components/blog/BlogShell";
-import { SOURCING_CTA_URL, type Pillar } from "@/lib/sourcing-pillars";
+import { type Pillar } from "@/lib/sourcing-pillars";
 import { langPrefix, pillarsFor, sourcingUi, type SourcingUi } from "@/lib/sourcing-i18n";
 
 function CopyBlock({ label, text, u }: { label: string; text: string; u: SourcingUi }) {
@@ -292,7 +292,7 @@ export function PillarArticle({ pillar: p, lang = "en" }: { pillar: Pillar; lang
           {p.widget === "landed" ? <LandedWidget u={u} /> : <SavingsWidget u={u} />}
         </div>
 
-        <CtaBanner u={u} />
+        <CtaBanner u={u} src={p.slug} lang={lang} />
 
         <h2 className="mb-5 text-[28px] font-bold text-foreground">{u.faq}</h2>
         <div className="space-y-3">
@@ -343,7 +343,7 @@ export function SourcingHub({ lang = "en" }: { lang?: string }) {
             </a>
           ))}
         </div>
-        <CtaBanner u={u} />
+        <CtaBanner u={u} src={p.slug} lang={lang} />
       </section>
     </BlogShell>
   );
