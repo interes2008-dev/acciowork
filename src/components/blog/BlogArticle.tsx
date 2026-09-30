@@ -195,7 +195,7 @@ export function BlogArticle({
           </h2>
           <p className="mt-4 text-lg text-foreground/75">{cta.body}</p>
           <a
-            href="https://www.accio.com/login?sId=KECtp1GttZ42%2FwpJUH5IxQ%3D%3D&ic=IC506004212009&tenant=accio&src=p_referral_IC506004212009&source=invite_center&return_url=https%3A%2F%2Fwww.accio.com%2Fwork%2F"
+            href={`/api/public/go?src=${encodeURIComponent(article.slug)}&lang=${encodeURIComponent(lang)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-7 inline-flex items-center rounded-full bg-foreground px-7 py-3.5 text-sm font-medium text-background transition hover:bg-foreground/90"
