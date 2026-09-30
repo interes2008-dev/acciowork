@@ -343,7 +343,7 @@ export function SourcingHub({ lang = "en" }: { lang?: string }) {
             </a>
           ))}
         </div>
-        <CtaBanner u={u} src={p.slug} lang={lang} />
+        <CtaBanner u={u} src="china-sourcing-hub" lang={lang} />
       </section>
     </BlogShell>
   );
