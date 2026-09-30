@@ -146,6 +146,7 @@ import { Route as ZhRoiRouteImport } from './routes/zh.roi'
 import { Route as ZhSupplierScorecardRouteImport } from './routes/zh.supplier-scorecard'
 import { Route as ZhTemplatesRouteImport } from './routes/zh.templates'
 import { Route as ZhTiktokShopRouteImport } from './routes/zh.tiktok-shop'
+import { Route as ApiPublicGoRouteImport } from './routes/api/public/go'
 import { Route as ArBlogIndexRouteImport } from './routes/ar.blog.index'
 import { Route as ArBlogSlugRouteImport } from './routes/ar.blog.$slug'
 import { Route as ArBlogAiSupplierNegotiationMoqPriceRouteImport } from './routes/ar.blog.ai-supplier-negotiation-moq-price'
@@ -974,6 +975,11 @@ const ZhTiktokShopRoute = ZhTiktokShopRouteImport.update({
   id: '/tiktok-shop',
   path: '/tiktok-shop',
   getParentRoute: () => ZhRoute,
+} as any)
+const ApiPublicGoRoute = ApiPublicGoRouteImport.update({
+  id: '/api/public/go',
+  path: '/api/public/go',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const ArBlogIndexRoute = ArBlogIndexRouteImport.update({
   id: '/blog/',
@@ -1850,6 +1856,7 @@ export interface FileRoutesByFullPath {
   '/pt/': typeof PtIndexRoute
   '/ru/': typeof RuIndexRoute
   '/zh/': typeof ZhIndexRoute
+  '/api/public/go': typeof ApiPublicGoRoute
   '/ar/blog/$slug': typeof ArBlogSlugRoute
   '/ar/blog/ai-supplier-negotiation-moq-price': typeof ArBlogAiSupplierNegotiationMoqPriceRoute
   '/ar/blog/case-study-sourcing-electronics-48-hours': typeof ArBlogCaseStudySourcingElectronics48HoursRoute
@@ -2118,6 +2125,7 @@ export interface FileRoutesByTo {
   '/pt': typeof PtIndexRoute
   '/ru': typeof RuIndexRoute
   '/zh': typeof ZhIndexRoute
+  '/api/public/go': typeof ApiPublicGoRoute
   '/ar/blog/$slug': typeof ArBlogSlugRoute
   '/ar/blog/ai-supplier-negotiation-moq-price': typeof ArBlogAiSupplierNegotiationMoqPriceRoute
   '/ar/blog/case-study-sourcing-electronics-48-hours': typeof ArBlogCaseStudySourcingElectronics48HoursRoute
@@ -2396,6 +2404,7 @@ export interface FileRoutesById {
   '/pt/': typeof PtIndexRoute
   '/ru/': typeof RuIndexRoute
   '/zh/': typeof ZhIndexRoute
+  '/api/public/go': typeof ApiPublicGoRoute
   '/ar/blog/$slug': typeof ArBlogSlugRoute
   '/ar/blog/ai-supplier-negotiation-moq-price': typeof ArBlogAiSupplierNegotiationMoqPriceRoute
   '/ar/blog/case-study-sourcing-electronics-48-hours': typeof ArBlogCaseStudySourcingElectronics48HoursRoute
@@ -2675,6 +2684,7 @@ export interface FileRouteTypes {
     | '/pt/'
     | '/ru/'
     | '/zh/'
+    | '/api/public/go'
     | '/ar/blog/$slug'
     | '/ar/blog/ai-supplier-negotiation-moq-price'
     | '/ar/blog/case-study-sourcing-electronics-48-hours'
@@ -2943,6 +2953,7 @@ export interface FileRouteTypes {
     | '/pt'
     | '/ru'
     | '/zh'
+    | '/api/public/go'
     | '/ar/blog/$slug'
     | '/ar/blog/ai-supplier-negotiation-moq-price'
     | '/ar/blog/case-study-sourcing-electronics-48-hours'
@@ -3220,6 +3231,7 @@ export interface FileRouteTypes {
     | '/pt/'
     | '/ru/'
     | '/zh/'
+    | '/api/public/go'
     | '/ar/blog/$slug'
     | '/ar/blog/ai-supplier-negotiation-moq-price'
     | '/ar/blog/case-study-sourcing-electronics-48-hours'
@@ -3399,6 +3411,7 @@ export interface RootRouteChildren {
   CompareIndexRoute: typeof CompareIndexRoute
   ForIndexRoute: typeof ForIndexRoute
   GuideIndexRoute: typeof GuideIndexRoute
+  ApiPublicGoRoute: typeof ApiPublicGoRoute
   ApiPublicBlogCoverIdRoute: typeof ApiPublicBlogCoverIdRoute
   ApiPublicCronGenerateArticlesRoute: typeof ApiPublicCronGenerateArticlesRoute
   ApiPublicCronSeoMonitorRoute: typeof ApiPublicCronSeoMonitorRoute
@@ -4364,6 +4377,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/zh/tiktok-shop'
       preLoaderRoute: typeof ZhTiktokShopRouteImport
       parentRoute: typeof ZhRoute
+    }
+    '/api/public/go': {
+      id: '/api/public/go'
+      path: '/api/public/go'
+      fullPath: '/api/public/go'
+      preLoaderRoute: typeof ApiPublicGoRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/ar/blog/': {
       id: '/ar/blog/'
@@ -5962,6 +5982,7 @@ const rootRouteChildren: RootRouteChildren = {
   CompareIndexRoute: CompareIndexRoute,
   ForIndexRoute: ForIndexRoute,
   GuideIndexRoute: GuideIndexRoute,
+  ApiPublicGoRoute: ApiPublicGoRoute,
   ApiPublicBlogCoverIdRoute: ApiPublicBlogCoverIdRoute,
   ApiPublicCronGenerateArticlesRoute: ApiPublicCronGenerateArticlesRoute,
   ApiPublicCronSeoMonitorRoute: ApiPublicCronSeoMonitorRoute,

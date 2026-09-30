@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { Check, Copy, ArrowRight, ShieldCheck, Sparkles } from "lucide-react";
 import { BlogShell } from "@/components/blog/BlogShell";
-import { SOURCING_CTA_URL, type Pillar } from "@/lib/sourcing-pillars";
+import { type Pillar } from "@/lib/sourcing-pillars";
 import { langPrefix, pillarsFor, sourcingUi, type SourcingUi } from "@/lib/sourcing-i18n";
 
 function CopyBlock({ label, text, u }: { label: string; text: string; u: SourcingUi }) {
@@ -132,7 +132,7 @@ function LandedWidget({ u }: { u: SourcingUi }) {
   );
 }
 
-function CtaBanner({ u }: { u: SourcingUi }) {
+function CtaBanner({ u, src, lang }: { u: SourcingUi; src: string; lang: string }) {
   return (
     <section className="my-14 overflow-hidden rounded-[32px] bg-foreground p-8 text-background md:p-12">
       <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
@@ -145,7 +145,7 @@ function CtaBanner({ u }: { u: SourcingUi }) {
         {u.ctaText}
       </p>
       <a
-        href={SOURCING_CTA_URL}
+        href={`/api/public/go?src=${encodeURIComponent(src)}&lang=${encodeURIComponent(lang)}`}
         target="_blank"
         rel="noopener"
         className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-4 text-base font-semibold text-primary-foreground hover:opacity-90"
@@ -292,7 +292,7 @@ export function PillarArticle({ pillar: p, lang = "en" }: { pillar: Pillar; lang
           {p.widget === "landed" ? <LandedWidget u={u} /> : <SavingsWidget u={u} />}
         </div>
 
-        <CtaBanner u={u} />
+        <CtaBanner u={u} src={p.slug} lang={lang} />
 
         <h2 className="mb-5 text-[28px] font-bold text-foreground">{u.faq}</h2>
         <div className="space-y-3">
@@ -343,7 +343,7 @@ export function SourcingHub({ lang = "en" }: { lang?: string }) {
             </a>
           ))}
         </div>
-        <CtaBanner u={u} />
+        <CtaBanner u={u} src="china-sourcing-hub" lang={lang} />
       </section>
     </BlogShell>
   );
