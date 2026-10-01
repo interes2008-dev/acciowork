@@ -135,7 +135,7 @@ export const Route = createFileRoute("/fr/blog/$slug")({
     };
   },
   component: ArticleFr,
-  errorComponent: ({ error }) => <div className="p-10 text-center">{error.message}</div>,
+  errorComponent: ({ error }) => <div className="p-10 text-center">{error instanceof Error ? error.message : String(error)}</div>,
   notFoundComponent: () => <div className="p-10 text-center">Article introuvable</div>,
 });
 

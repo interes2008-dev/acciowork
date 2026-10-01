@@ -1,102 +1,107 @@
 {
- "how-to-find-verified-china-suppliers-ai": {
-  "title": "Verifizierte China Lieferanten mit KI finden: Echte Fabriken in Minuten prüfen",
-  "seoTitle": "Verifizierte China Lieferanten mit KI finden (2026 Leitfaden)",
-  "h2": {
-   "workflow": "Wie ein KI-Sourcing-Agent verifizierte Hersteller in China findet",
-   "artifacts": "Lieferanten-Shortlist: Fabrik vs. Händler, MOQ, Zertifikate",
-   "steps": "4 Schritte zur Prüfung einer China Fabrik, bevor Sie zahlen",
-   "widget": "Wie viel Zeit die KI-Lieferantenprüfung spart"
+  "how-to-find-verified-china-suppliers-ai": {
+    "title": "Verifizierte Lieferanten in China mit einem KI-Sourcing-Agenten finden",
+    "seoTitle": "Verifizierte China-Lieferanten finden und prüfen mit KI",
+    "h2": {
+      "workflow": "Wie ein KI-Sourcing-Agent verifizierte Hersteller in China findet",
+      "artifacts": "Lieferanten-Shortlist: Fabrik vs. Händler, MOQ, Zertifikate",
+      "steps": "4 Schritte zur Prüfung einer China Fabrik, bevor Sie zahlen",
+      "widget": "Wie viel Zeit die KI-Lieferantenprüfung spart"
+    },
+    "related": [
+      {
+        "slug": "ai-supplier-negotiation-moq-price",
+        "text": "Fabriken gefunden? Als Nächstes lernen Sie, MOQs und Preise mit KI zu verhandeln."
+      },
+      {
+        "slug": "china-import-risk-audit-landed-cost",
+        "text": "Vor der Bestellung: Risikoaudit und wahre Landed Cost berechnen."
+      }
+    ],
+    "hookTitle": "Wie prüft man Lieferanten beim Sourcing in China?"
   },
-  "related": [
-   {
-    "slug": "ai-supplier-negotiation-moq-price",
-    "text": "Fabriken gefunden? Als Nächstes lernen Sie, MOQs und Preise mit KI zu verhandeln."
-   },
-   {
-    "slug": "china-import-risk-audit-landed-cost",
-    "text": "Vor der Bestellung: Risikoaudit und wahre Landed Cost berechnen."
-   }
-  ]
- },
- "ai-supplier-negotiation-moq-price": {
-  "title": "Mit KI mit China Lieferanten verhandeln: Niedrigere MOQs und bessere Preise",
-  "seoTitle": "MOQ & Preis mit China Lieferanten per KI verhandeln",
-  "h2": {
-   "workflow": "Wie ein KI-Agent MOQ und Preis mit China Lieferanten verhandelt",
-   "artifacts": "Verhandlungsergebnisse: Angebote, MOQ und Zahlungsbedingungen im Vergleich",
-   "steps": "4 bewährte Taktiken für niedrigere MOQ und Stückpreise",
-   "widget": "Berechnen Sie die Zeitersparnis durch KI-Verhandlungen"
+  "ai-supplier-negotiation-moq-price": {
+    "title": "MOQ und Preise mit geprüften Lieferanten in China verhandeln",
+    "seoTitle": "MOQ und Preise mit China-Lieferanten per KI verhandeln",
+    "h2": {
+      "workflow": "Wie ein KI-Agent MOQ und Preis mit China Lieferanten verhandelt",
+      "artifacts": "Verhandlungsergebnisse: Angebote, MOQ und Zahlungsbedingungen im Vergleich",
+      "steps": "4 bewährte Taktiken für niedrigere MOQ und Stückpreise",
+      "widget": "Berechnen Sie die Zeitersparnis durch KI-Verhandlungen"
+    },
+    "related": [
+      {
+        "slug": "how-to-find-verified-china-suppliers-ai",
+        "text": "Nur mit geprüften Fabriken verhandeln – so finden Sie verifizierte China Lieferanten mit KI."
+      },
+      {
+        "slug": "china-import-risk-audit-landed-cost",
+        "text": "Ein niedriger Preis ist wenig wert ohne das Gesamtbild – berechnen Sie Ihre Landed Cost aus China."
+      }
+    ],
+    "hookTitle": "Warum reicht das erste Angebot aus China nicht aus?"
   },
-  "related": [
-   {
-    "slug": "how-to-find-verified-china-suppliers-ai",
-    "text": "Nur mit geprüften Fabriken verhandeln – so finden Sie verifizierte China Lieferanten mit KI."
-   },
-   {
-    "slug": "china-import-risk-audit-landed-cost",
-    "text": "Ein niedriger Preis ist wenig wert ohne das Gesamtbild – berechnen Sie Ihre Landed Cost aus China."
-   }
-  ]
- },
- "china-import-risk-audit-landed-cost": {
-  "title": "Landed Cost aus China 2026: Berechnung und Importrisiko-Audit",
-  "seoTitle": "Landed Cost Rechner China + Import Risiko Audit (2026)",
-  "h2": {
-   "workflow": "Wie ein KI-Agent Importrisiko und Landed Cost prüft",
-   "artifacts": "Importrisiko-Audit: Zölle, Fracht, Gebühren und Lieferanten-Warnsignale",
-   "steps": "4 Regeln für sicheren B2B-Import aus China",
-   "widget": "Kostenloser Landed Cost Rechner: China bis Ihr Lager"
+  "china-import-risk-audit-landed-cost": {
+    "title": "China-Sourcing: Gesamtkosten berechnen und Lieferantenrisiken prüfen",
+    "seoTitle": "Importkosten aus China berechnen & Lieferanten prüfen",
+    "h2": {
+      "workflow": "Wie ein KI-Agent Importrisiko und Landed Cost prüft",
+      "artifacts": "Importrisiko-Audit: Zölle, Fracht, Gebühren und Lieferanten-Warnsignale",
+      "steps": "4 Regeln für sicheren B2B-Import aus China",
+      "widget": "Kostenloser Landed Cost Rechner: China bis Ihr Lager"
+    },
+    "related": [
+      {
+        "slug": "ai-supplier-negotiation-moq-price",
+        "text": "Kennen Sie Ihre Landed Cost? Nutzen Sie sie, um bessere Preise und MOQs zu verhandeln."
+      },
+      {
+        "slug": "case-study-sourcing-electronics-48-hours",
+        "text": "Sehen Sie einen beispielhaften 48-Stunden-Ablauf für Elektronik-Sourcing."
+      }
+    ],
+    "hookTitle": "Warum ist der Fabrikpreis nicht der endgültige Importpreis?"
   },
-  "related": [
-   {
-    "slug": "ai-supplier-negotiation-moq-price",
-    "text": "Kennen Sie Ihre Landed Cost? Nutzen Sie sie, um bessere Preise und MOQs zu verhandeln."
-   },
-   {
-    "slug": "case-study-sourcing-electronics-48-hours",
-    "text": "Ein reales Beispiel: 1.000 Elektronikeinheiten aus China in 48 Stunden gesourct."
-   }
-  ]
- },
- "chatgpt-vs-accio-sourcing-agents": {
-  "title": "ChatGPT vs. KI-Sourcing-Agenten: Warum Chatbots beim China-Sourcing scheitern",
-  "seoTitle": "ChatGPT vs. KI-Sourcing-Agenten für Alibaba & China Sourcing",
-  "h2": {
-   "workflow": "Was ein KI-Sourcing-Agent kann, was ChatGPT nicht kann",
-   "artifacts": "ChatGPT vs. KI-Agent: Sourcing-Vergleich im Detail",
-   "steps": "Wann Sie einen Chatbot und wann einen Sourcing-Agenten nutzen sollten",
-   "widget": "Wie viele Stunden ein KI-Sourcing-Agent pro Monat spart"
+  "chatgpt-vs-accio-sourcing-agents": {
+    "title": "KI-Sourcing-Agent oder ChatGPT für die Lieferantensuche in China?",
+    "seoTitle": "KI-Sourcing-Agent vs. ChatGPT für China-Sourcing",
+    "h2": {
+      "workflow": "Was ein KI-Sourcing-Agent kann, was ChatGPT nicht kann",
+      "artifacts": "ChatGPT vs. KI-Agent: Sourcing-Vergleich im Detail",
+      "steps": "Wann Sie einen Chatbot und wann einen Sourcing-Agenten nutzen sollten",
+      "widget": "Wie viele Stunden ein KI-Sourcing-Agent pro Monat spart"
+    },
+    "related": [
+      {
+        "slug": "how-to-find-verified-china-suppliers-ai",
+        "text": "Erleben Sie den Agenten in Aktion: So finden Sie verifizierte China Lieferanten mit KI."
+      },
+      {
+        "slug": "case-study-sourcing-electronics-48-hours",
+        "text": "Sehen Sie einen beispielhaften 48-Stunden-Ablauf für Elektronik-Sourcing."
+      }
+    ],
+    "hookTitle": "Kann ChatGPT chinesische Lieferanten verifizieren?"
   },
-  "related": [
-   {
-    "slug": "how-to-find-verified-china-suppliers-ai",
-    "text": "Erleben Sie den Agenten in Aktion: So finden Sie verifizierte China Lieferanten mit KI."
-   },
-   {
-    "slug": "case-study-sourcing-electronics-48-hours",
-    "text": "Echte Ergebnisse: Eine 48-Stunden-Fallstudie zum Elektronik-Sourcing."
-   }
-  ]
- },
- "case-study-sourcing-electronics-48-hours": {
-  "title": "China Sourcing Fallstudie: 1.000 Elektronikeinheiten in 48h mit KI-Agent",
-  "seoTitle": "Fallstudie: Elektronik Sourcing aus China in 48h mit KI",
-  "h2": {
-   "workflow": "Der genaue Prompt zum Sourcing von Elektronik aus China",
-   "artifacts": "Ergebnisse: Lieferanten, Angebote und Lieferzeiten in 48 Stunden",
-   "steps": "So wiederholen Sie diesen Sourcing-Workflow für Ihr Produkt",
-   "widget": "Schätzen Sie Ihre eigene Zeitersparnis beim Sourcing"
-  },
-  "related": [
-   {
-    "slug": "chatgpt-vs-accio-sourcing-agents",
-    "text": "Warum konnte ein Chatbot das nicht? Lesen Sie ChatGPT vs. KI-Sourcing-Agenten."
-   },
-   {
-    "slug": "china-import-risk-audit-landed-cost",
-    "text": "Nächster Schritt nach Angeboten: Landed Cost berechnen & Importrisiken prüfen."
-   }
-  ]
- }
+  "case-study-sourcing-electronics-48-hours": {
+    "title": "Elektronik aus China beschaffen: illustrativer 48-Stunden-Ablauf mit KI",
+    "seoTitle": "Elektronik-Sourcing aus China: Ablauf mit KI-Agent",
+    "h2": {
+      "workflow": "Der genaue Prompt zum Sourcing von Elektronik aus China",
+      "artifacts": "Ergebnisse: Lieferanten, Angebote und Lieferzeiten in 48 Stunden",
+      "steps": "So wiederholen Sie diesen Sourcing-Workflow für Ihr Produkt",
+      "widget": "Schätzen Sie Ihre eigene Zeitersparnis beim Sourcing"
+    },
+    "related": [
+      {
+        "slug": "chatgpt-vs-accio-sourcing-agents",
+        "text": "Warum konnte ein Chatbot das nicht? Lesen Sie ChatGPT vs. KI-Sourcing-Agenten."
+      },
+      {
+        "slug": "china-import-risk-audit-landed-cost",
+        "text": "Nächster Schritt nach Angeboten: Landed Cost berechnen & Importrisiken prüfen."
+      }
+    ],
+    "hookTitle": "Was gehört in ein Briefing für Elektronik-Sourcing?"
+  }
 }
