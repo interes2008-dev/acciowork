@@ -3,7 +3,8 @@ import { Check, Copy, ArrowRight, ShieldCheck, Sparkles } from "lucide-react";
 import { BlogShell } from "@/components/blog/BlogShell";
 import { type Pillar } from "@/lib/sourcing-pillars";
 import { pillarsFor, sourcingUi, type SourcingUi } from "@/lib/sourcing-i18n";
-import { localizedPath, type Lang } from "@/lib/i18n";
+import { localizedPath } from "@/lib/i18n";
+import type { Lang } from "@/lib/translations";
 
 function CopyBlock({ label, text, u }: { label: string; text: string; u: SourcingUi }) {
   const [done, setDone] = useState(false);
