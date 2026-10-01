@@ -18,7 +18,7 @@ export const Route = createFileRoute("/seo-monitor")({
     ],
   }),
   component: SeoMonitor,
-  errorComponent: ({ error }) => <div className="p-10 text-center">{error.message}</div>,
+  errorComponent: ({ error }) => <div className="p-10 text-center">{error instanceof Error ? error.message : String(error)}</div>,
 });
 
 function fmt(d: string | null) {
