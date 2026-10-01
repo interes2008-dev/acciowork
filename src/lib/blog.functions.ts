@@ -122,6 +122,28 @@ export type ArticleBundle = {
   related: Array<{ slug: string; title: string; reading_minutes: number }>;
 };
 
+function topicTerms(text: string): Set<string> {
+  const stop = new Set(["about", "after", "agent", "accio", "business", "from", "guide", "how", "into", "more", "para", "pour", "that", "the", "this", "using", "with", "work", "your"]);
+  return new Set((text.toLowerCase().match(/[\p{L}\p{N}]{4,}/gu) ?? []).filter((term) => !stop.has(term)));
+}
+
+// Match a focused procurement topic before recommending another article; unrelated
+// AI/business posts should not fill the related-reading area on sourcing guides.
+const SOURCING_TERMS = /\b(china|chinese|sourc\w*|suppl\w*|alibaba|factor\w*|manufactur\w*|import\w*|procure\w*|rfq)\b|закуп|кита|постав|фабрик|производ|进货|采购|供应商|工厂|fornec|importa|proveedor|fabri|lieferant|beschaff|approvision|مورد|الصين|التوريد|आपूर्ति|सप्लायर/i;
+
+function isSourcingArticle(text: string): boolean {
+  return SOURCING_TERMS.test(text);
+}
+
+function relatedScore(article: ArticleFull, candidate: { title: string; description: string; keywords: string[] }): number {
+  const sourceText = `${article.title} ${article.description} ${article.keywords.join(" ")}`;
+  const targetText = `${candidate.title} ${candidate.description} ${(candidate.keywords ?? []).join(" ")}`;
+  const source = topicTerms(sourceText);
+  const target = topicTerms(targetText);
+  const sameDomain = isSourcingArticle(sourceText) && isSourcingArticle(targetText);
+  return [...source].filter((term) => target.has(term)).length + (sameDomain ? 10 : 0);
+}
+
 export const getArticleBundle = createServerFn({ method: "GET" })
   .inputValidator((input: unknown) =>
     z.object({ lang: LangSchema, slug: z.string().min(1).max(200) }).parse(input),
@@ -164,13 +186,18 @@ export const getArticleBundle = createServerFn({ method: "GET" })
     }
 
     const { data: rel } = await (supabase.from("blog_articles") as any)
-      .select("slug, title, reading_minutes")
+      .select("slug, title, description, keywords, reading_minutes")
       .eq("lang", data.lang)
       .eq("status", "published")
       .neq("slug", article.slug)
       .order("published_at", { ascending: false })
-      .limit(4);
-    const related = (rel ?? []) as Array<{ slug: string; title: string; reading_minutes: number }>;
+      .limit(100);
+    const related = ((rel ?? []) as Array<{ slug: string; title: string; description: string; keywords: string[]; reading_minutes: number }>)
+      .filter((candidate) => !isSourcingArticle(`${article.title} ${article.description} ${article.keywords.join(" ")}`) || isSourcingArticle(`${candidate.title} ${candidate.description} ${(candidate.keywords ?? []).join(" ")}`))
+      .map((candidate, index) => ({ candidate, index, score: relatedScore(article, candidate) }))
+      .sort((a, b) => b.score - a.score || a.index - b.index)
+      .slice(0, 4)
+      .map(({ candidate }) => ({ slug: candidate.slug, title: candidate.title, reading_minutes: candidate.reading_minutes }));
 
     return { article, alternates, related };
   });

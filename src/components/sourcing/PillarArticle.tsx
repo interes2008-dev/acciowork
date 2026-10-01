@@ -2,7 +2,8 @@ import { useMemo, useState } from "react";
 import { Check, Copy, ArrowRight, ShieldCheck, Sparkles } from "lucide-react";
 import { BlogShell } from "@/components/blog/BlogShell";
 import { type Pillar } from "@/lib/sourcing-pillars";
-import { langPrefix, pillarsFor, sourcingUi, type SourcingUi } from "@/lib/sourcing-i18n";
+import { pillarsFor, sourcingUi, type SourcingUi } from "@/lib/sourcing-i18n";
+import { localizedPath, type Lang } from "@/lib/i18n";
 
 function CopyBlock({ label, text, u }: { label: string; text: string; u: SourcingUi }) {
   const [done, setDone] = useState(false);
@@ -165,25 +166,24 @@ function H2({ n, children }: { n: number; children: React.ReactNode }) {
   );
 }
 
-function ReadNext({ item, pre }: { item?: { slug: string; text: string }; pre: string }) {
+function ReadNext({ item, lang }: { item?: { slug: string; text: string }; lang: Lang }) {
   if (!item) return null;
   return (
-    <a href={`${pre}/blog/${item.slug}`} className="my-8 flex items-center gap-3 rounded-2xl border-l-4 border-primary bg-primary/5 p-5 font-semibold text-foreground transition hover:bg-primary/10">
+    <a href={localizedPath(`/blog/${item.slug}`, lang)} className="my-8 flex items-center gap-3 rounded-2xl border-l-4 border-primary bg-primary/5 p-5 font-semibold text-foreground transition hover:bg-primary/10">
       <span className="flex-1">{item.text}</span>
       <ArrowRight className="h-4 w-4 shrink-0 text-primary rtl:rotate-180" />
     </a>
   );
 }
 
-export function PillarArticle({ pillar: p, lang = "en" }: { pillar: Pillar; lang?: string }) {
+export function PillarArticle({ pillar: p, lang = "en" }: { pillar: Pillar; lang?: Lang }) {
   const u = sourcingUi(lang);
-  const pre = langPrefix(lang);
   const others = pillarsFor(lang).filter((x) => x.slug !== p.slug);
   return (
     <BlogShell>
       <article className="mx-auto max-w-3xl text-[18px] leading-relaxed text-foreground/85">
         <nav className="mb-6 text-sm text-foreground/60">
-          <a href={`${pre}/blog/china-sourcing`} className="hover:text-foreground">{u.hub}</a>
+          <a href={localizedPath("/blog/china-sourcing", lang)} className="hover:text-foreground">{u.hub}</a>
           <span className="mx-2">/</span>
           <span>{u.part} {p.n} {u.of5}</span>
         </nav>
@@ -266,7 +266,7 @@ export function PillarArticle({ pillar: p, lang = "en" }: { pillar: Pillar; lang
           </>
         )}
 
-        <ReadNext item={p.related?.[0]} pre={pre} />
+        <ReadNext item={p.related?.[0]} lang={lang} />
 
         <H2 n={4}>{p.h2?.steps ?? u.stepByStep}</H2>
         <ol className="space-y-4">
@@ -285,7 +285,7 @@ export function PillarArticle({ pillar: p, lang = "en" }: { pillar: Pillar; lang
           {p.copyPrompts.map((c) => <CopyBlock u={u} key={c.label} {...c} />)}
         </div>
 
-        <ReadNext item={p.related?.[1]} pre={pre} />
+        <ReadNext item={p.related?.[1]} lang={lang} />
 
         <H2 n={5}>{p.h2?.widget ?? (p.widget === "landed" ? u.landedCalc : u.savingsCalc)}</H2>
         <div className="rounded-[32px] border border-border/70 bg-card p-6 md:p-8">
@@ -307,7 +307,7 @@ export function PillarArticle({ pillar: p, lang = "en" }: { pillar: Pillar; lang
         <h2 className="mb-5 mt-14 text-[28px] font-bold text-foreground">{u.more}</h2>
         <div className="grid gap-3 sm:grid-cols-2">
           {others.map((o) => (
-            <a key={o.slug} href={`${pre}/blog/${o.slug}`} className="rounded-2xl border border-border/70 bg-card p-5 transition hover:border-primary">
+            <a key={o.slug} href={localizedPath(`/blog/${o.slug}`, lang)} className="rounded-2xl border border-border/70 bg-card p-5 transition hover:border-primary">
               <p className="text-xs font-semibold text-primary">{u.part} {o.n} - {o.badge}</p>
               <p className="mt-1 font-semibold leading-snug text-foreground">{o.title}</p>
             </a>
@@ -318,9 +318,8 @@ export function PillarArticle({ pillar: p, lang = "en" }: { pillar: Pillar; lang
   );
 }
 
-export function SourcingHub({ lang = "en" }: { lang?: string }) {
+export function SourcingHub({ lang = "en" }: { lang?: Lang }) {
   const u = sourcingUi(lang);
-  const pre = langPrefix(lang);
   return (
     <BlogShell>
       <section className="mx-auto max-w-4xl">
@@ -333,7 +332,7 @@ export function SourcingHub({ lang = "en" }: { lang?: string }) {
         </p>
         <div className="mt-10 grid gap-4">
           {pillarsFor(lang).map((p) => (
-            <a key={p.slug} href={`${pre}/blog/${p.slug}`} className="group flex gap-5 rounded-[32px] border border-border/70 bg-card p-6 transition hover:border-primary md:p-8">
+            <a key={p.slug} href={localizedPath(`/blog/${p.slug}`, lang)} className="group flex gap-5 rounded-[32px] border border-border/70 bg-card p-6 transition hover:border-primary md:p-8">
               <span className="text-3xl font-bold text-primary">0{p.n}</span>
               <div>
                 <p className="text-xs font-semibold uppercase tracking-wider text-foreground/50">{p.badge} - {p.readingMinutes} {u.min}</p>
