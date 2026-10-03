@@ -5,6 +5,8 @@ import { type Pillar } from "@/lib/sourcing-pillars";
 import { pillarsFor, sourcingUi, type SourcingUi } from "@/lib/sourcing-i18n";
 import { localizedPath } from "@/lib/i18n";
 import type { Lang } from "@/lib/translations";
+import { PromoVideo } from "@/components/common/PromoVideo";
+import { pillarVideo } from "@/lib/promo-videos";
 
 function CopyBlock({ label, text, u }: { label: string; text: string; u: SourcingUi }) {
   const [done, setDone] = useState(false);
@@ -209,6 +211,10 @@ export function PillarArticle({ pillar: p, lang = "en" }: { pillar: Pillar; lang
             </div>
           ))}
         </div>
+        {(() => {
+          const v = pillarVideo(lang, p.slug);
+          return v ? <PromoVideo video={v} /> : null;
+        })()}
 
         <H2 n={2}>{p.h2?.workflow ?? u.newWay}</H2>
         <CopyBlock u={u} label={u.promptGiven} text={p.prompt} />

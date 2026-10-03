@@ -9,6 +9,7 @@ import seo_hi from "./pillars-seo/hi.json";
 import seo_fr from "./pillars-seo/fr.json";
 import seo_ar from "./pillars-seo/ar.json";
 import { PILLARS, type Pillar } from "@/lib/sourcing-pillars";
+import { pillarVideo } from "@/lib/promo-videos";
 import ru from "@/lib/pillars-i18n/ru.json";
 import de from "@/lib/pillars-i18n/de.json";
 import it from "@/lib/pillars-i18n/it.json";
@@ -162,8 +163,37 @@ export function pillarHeadFor(lang: string, slug: string) {
           })),
         }),
       },
+      ...videoLd(lang, p.slug, url),
     ],
   };
+}
+
+function videoLd(lang: string, slug: string, pageUrl: string) {
+  const v = pillarVideo(lang, slug);
+  if (!v) return [];
+  const abs = (s: string) => `https://acciowork.pro${s}`;
+  return [
+    {
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        name: v.title,
+        description: v.caption,
+        inLanguage: lang,
+        thumbnailUrl: [abs(v.wide.poster), abs(v.tall.poster)],
+        contentUrl: abs(v.wide.src),
+        uploadDate: v.uploadDate,
+        duration: `PT${v.wide.duration}S`,
+        mainEntityOfPage: pageUrl,
+        publisher: {
+          "@type": "Organization",
+          name: "Accio Work",
+          logo: { "@type": "ImageObject", url: "https://acciowork.pro/favicon.svg" },
+        },
+      }),
+    },
+  ];
 }
 
 export function hubHeadFor(lang: string) {
