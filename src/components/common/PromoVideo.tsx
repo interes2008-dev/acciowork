@@ -9,8 +9,8 @@ const WIDE_MQ = "(min-width: 768px)";
  * mounted when the block nears the viewport, autoplays muted, pauses when it
  * leaves the screen and waits for a click if the reader prefers reduced motion.
  */
-export function PromoVideo({ video, labels }: { video: PromoVideoDef; labels?: { play: string; pause: string; soundOn: string; soundOff: string } }) {
-  const L = labels ?? { play: "Смотреть", pause: "Пауза", soundOn: "Включить звук", soundOff: "Выключить звук" };
+export function PromoVideo({ video }: { video: PromoVideoDef }) {
+  const L = video.labels;
   const boxRef = useRef<HTMLDivElement>(null);
   const vidRef = useRef<HTMLVideoElement>(null);
   const [mode, setMode] = useState<"wide" | "tall" | null>(null);

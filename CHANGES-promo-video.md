@@ -1,11 +1,12 @@
 # Промо-ролик в блоге
 
-Где: `/ru/blog/chatgpt-vs-accio-sourcing-agents`, после блока цифр первого раздела и перед заголовком «02».
+Где: статья `/blog/chatgpt-vs-accio-sourcing-agents` во всех 10 языковых версиях, после блока цифр первого раздела и перед заголовком «02». В каждой версии свой ролик: надписи, интерфейс и подпись на языке страницы.
 
 ## Файлы
-- `public/video/accio-ad-ru-wide.mp4` (60 с, 16:9, 3,4 МБ) и `accio-ad-ru-wide.jpg` (постер)
-- `public/video/accio-ad-ru-tall.mp4` (30 с, 9:16, 2,2 МБ) и `accio-ad-ru-tall.jpg` (постер)
-- `src/lib/promo-videos.ts`: реестр роликов, ключ `язык:slug`. Чтобы поставить ролик в другую статью, достаточно добавить строку.
+- `public/video/accio-ad-{язык}-wide.mp4` (60 с, 16:9, около 3,4 МБ) и `accio-ad-{язык}-wide.jpg` (постер)
+- `public/video/accio-ad-{язык}-tall.mp4` (30 с, 9:16, около 2,1 МБ) и `accio-ad-{язык}-tall.jpg` (постер)
+- Языки: ru, en, de, it, es, pt, fr, zh, hi, ar.
+- `src/lib/promo-videos.ts`: реестр роликов, ключ `язык:slug`, плюс название, подпись и подписи кнопок плеера на каждом языке.
 - `src/components/common/PromoVideo.tsx`: плеер.
 - `src/components/sourcing/PillarArticle.tsx`: вставка блока.
 - `src/lib/sourcing-i18n.ts`: разметка VideoObject в JSON-LD для страниц с роликом.
