@@ -176,13 +176,23 @@ export const Route = createFileRoute("/api/public/cron/generate-articles")({
           capability: topic.capability,
         };
 
-        // Generate a shared cover once (English prompt anyway) to save tokens
-        let sharedCoverPromptSource: string | null = null;
-        let sharedCoverUrl: string | null = null;
+        // Reuse the cover already generated for this topic in another language
+        const { data: sibling } = await supabaseAdmin
+          .from("blog_articles")
+          .select("cover_prompt, cover_url")
+          .eq("topic_id", topic.id)
+          .not("cover_url", "is", null)
+          .limit(1)
+          .maybeSingle();
+        let sharedCoverPromptSource: string | null = sibling?.cover_prompt ?? null;
+        let sharedCoverUrl: string | null = sibling?.cover_url ?? null;
 
         const results: Array<{ lang: BlogLang; slug: string; error?: string }> = [];
 
-        for (const lang of missingLangs) {
+        // Small batches: the worker is cut off after a few minutes, so the cron
+        // calls this endpoint several times a day instead of all languages at once.
+        const batch = missingLangs.slice(0, 3);
+        for (const lang of batch) {
           try {
             const { system, user } = buildArticlePrompt(lang, seed);
             const article = await callAI(system, user);
