@@ -213,5 +213,39 @@ export function hubHeadFor(lang: string) {
       { name: "twitter:image", content: img },
     ],
     links: [{ rel: "canonical", href: url }, ...altLinks("/blog/china-sourcing")],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: u.hubSeoTitle,
+          description: u.hubDesc,
+          url,
+          inLanguage: lang,
+          mainEntity: {
+            "@type": "ItemList",
+            itemListElement: pillarsFor(lang).map((p, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              name: p.title,
+              url: `https://acciowork.pro${langPrefix(lang)}/blog/${p.slug}`,
+            })),
+          },
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Accio Work", item: `https://acciowork.pro${langPrefix(lang) || "/"}` },
+            { "@type": "ListItem", position: 2, name: "Blog", item: `https://acciowork.pro${langPrefix(lang)}/blog` },
+            { "@type": "ListItem", position: 3, name: u.hubSeoTitle, item: url },
+          ],
+        }),
+      },
+    ],
   };
 }
