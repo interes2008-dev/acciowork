@@ -1,0 +1,67 @@
+{
+  "seoTitle": "Accio Sourcing Agent agora é grátis: encontre, compare e verifique fornecedores por US$ 0",
+  "description": "Accio Work 0.36.2: com o modelo Auto, busca de produtos, comparação, verificação de fornecedores e cálculo de lucro no Sourcing Agent são gratuitos. O que mudou e como começar.",
+  "keywords": ["accio grátis", "agente de ia para compras grátis", "encontrar fornecedores grátis", "verificar fornecedor da china", "accio work modelo auto", "accio sourcing agent"],
+  "badge": "Novidade do produto - 25 out 2026",
+  "title": "Accio Sourcing Agent agora é grátis: encontre, compare e verifique fornecedores sem custo",
+  "lede": "Com o modelo Auto, quase todas as tarefas de compras no Accio Work deixaram de gastar créditos. Veja o que ficou grátis, o que continua pago e como começar hoje.",
+  "dateLabel": "Atualizado em 25 de outubro de 2026 - Accio Work 0.36.2",
+  "readMin": "4 min de leitura",
+  "whatTitle": "O que mudou",
+  "what": [
+    "Na atualização Accio Work 0.36.2 (25 de outubro de 2026), o Sourcing Agent passou a ser gratuito com o modelo Auto. Todos os recursos, exceto o chat com fornecedores assistido por IA, agora funcionam dentro de uma cota gratuita.",
+    "Segundo a Accio, a grande maioria das tarefas de compras cabe nessa cota. Para uma pequena empresa, isso significa pesquisar produtos e checar fornecedores todo dia sem se preocupar com o saldo de créditos."
+  ],
+  "freeTitle": "Grátis ou pago: a lista completa",
+  "freeItems": [
+    { "name": "Busca de produtos no Alibaba.com e em outros catálogos", "free": true },
+    { "name": "Comparação de produtos lado a lado (com planilha Excel)", "free": true },
+    { "name": "Relatórios de verificação de fornecedores", "free": true },
+    { "name": "Cálculo de lucro por produto", "free": true },
+    { "name": "Chat e negociação com fornecedores assistidos por IA", "free": false }
+  ],
+  "freeLabel": "Grátis com Auto",
+  "paidLabel": "Usa créditos",
+  "freeNote": "O uso gratuito vale dentro de uma cota definida pela Accio. Em grandes volumes, créditos ainda podem ser usados; confira os limites atuais no app.",
+  "alsoTitle": "Outras novidades desta atualização",
+  "also": [
+    { "title": "Busca rápida", "body": "Pedidos simples em texto, como \"garrafa de aço inox 500 ml\", passam por um fluxo mais rápido e os produtos aparecem antes." },
+    { "title": "Ações com um clique", "body": "Selecione até 5 cards de produtos ou fornecedores e a Accio sugere ações prontas: comparar, negociar, verificar fornecedor, calcular lucro. O pedido é preenchido sozinho; revise e envie." },
+    { "title": "Comparação em Excel", "body": "A comparação agora termina com uma conclusão clara no chat e uma planilha Excel. Se você adicionar produtos ou critérios depois, a mesma planilha é atualizada." },
+    { "title": "Verificação de fornecedores mais completa", "body": "Os relatórios de verificação agora trazem relatórios presenciais e dados de referência da categoria, e os relatórios em HTML podem ser traduzidos." }
+  ],
+  "stepsTitle": "Como começar em 3 passos",
+  "steps": [
+    { "title": "Atualize o Accio Work", "body": "Instale a versão 0.36.2 ou mais recente no computador ou abra a versão web." },
+    { "title": "Escolha o modelo Auto", "body": "No Sourcing Agent, selecione Auto no seletor de modelos. É isso que deixa as tarefas grátis." },
+    { "title": "Descreva o que você precisa", "body": "Escreva o produto, o preço-alvo e a quantidade com palavras simples, ou copie o prompt abaixo." }
+  ],
+  "promptLabel": "Prompt para testar primeiro",
+  "prompt": "Encontre 10 fornecedores de [produto] com MOQ abaixo de [quantidade] unidades e preço-alvo de $[preço] por unidade. Compare-os em uma tabela (preço, MOQ, prazo de entrega, certificações, anos de mercado), verifique os 3 melhores e calcule meu lucro se eu vender a $[preço de venda].",
+  "limitsTitle": "Limites que vale conhecer",
+  "limits": [
+    "Conversar e negociar com fornecedores pela IA não faz parte da oferta gratuita e usa créditos.",
+    "As ações com um clique funcionam no computador e na web, com até 5 cards por vez. Produtos e fornecedores não podem ser selecionados juntos, e o cálculo de lucro vale só para produtos.",
+    "Os produtos do 1688 no Sourcing Agent ainda não estão disponíveis na Europa e nas Américas."
+  ],
+  "faq": [
+    { "q": "O Accio Sourcing Agent é mesmo grátis?", "a": "Sim, com o modelo Auto. Buscar produtos, comparar, verificar fornecedores e calcular lucro é grátis dentro de uma cota da Accio. Só o chat com fornecedores assistido por IA usa créditos." },
+    { "q": "O que é o modelo Auto no Accio Work?", "a": "Com o Auto, a própria Accio escolhe o modelo de IA certo para cada tarefa. Para comprar de graça, selecione Auto no seletor de modelos do Sourcing Agent." },
+    { "q": "Qual versão do Accio Work eu preciso?", "a": "A versão 0.36.2, lançada em 25 de outubro de 2026, ou mais recente. A versão web é atualizada automaticamente." },
+    { "q": "A negociação com fornecedores também é grátis?", "a": "Não. O chat e a negociação com fornecedores assistidos por IA continuam usando créditos. Tudo antes dessa etapa é grátis com Auto." }
+  ],
+  "ctaTitle": "Rode hoje à noite sua primeira tarefa de compras grátis",
+  "ctaText": "Cadastre-se, escolha o modelo Auto e deixe o Sourcing Agent encontrar, comparar e verificar fornecedores para você.",
+  "ctaBtn": "Testar o Sourcing Agent grátis",
+  "sourceLabel": "Fonte: notas de versão oficiais do Accio Work",
+  "moreTitle": "Aprofunde-se: guias de compras na China",
+  "promoBadge": "Novidade - agora grátis",
+  "promoTitle": "Accio Sourcing Agent agora é grátis: encontre, compare e verifique fornecedores por US$ 0",
+  "promoCta": "O que mudou",
+  "sectionBadge": "Novo - 25 out 2026",
+  "sectionTitle": "O Sourcing Agent agora é",
+  "sectionAccent": "grátis.",
+  "sectionLead": "Escolha o modelo Auto: buscar produtos, comparar, verificar fornecedores e calcular lucro não gastam mais créditos.",
+  "sectionPaid": "Só o chat por IA com fornecedores ainda usa créditos.",
+  "sectionMore": "O que mudou"
+}

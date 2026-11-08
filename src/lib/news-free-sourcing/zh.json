@@ -1,0 +1,67 @@
+{
+  "seoTitle": "Accio Sourcing Agent 现已免费：找供应商、比价、验厂 0 元",
+  "description": "Accio Work 0.36.2：使用 Auto 模型时，Sourcing Agent 的找货、商品对比、供应商核验和利润测算全部免费。本文说明更新内容和上手方法。",
+  "keywords": ["accio 免费", "免费 AI 采购助手", "免费找供应商", "供应商核验", "accio work auto 模型", "accio sourcing agent"],
+  "badge": "产品动态 - 2026 年 10 月 25 日",
+  "title": "Accio Sourcing Agent 现已免费：找货、比价、核验供应商，零成本",
+  "lede": "使用 Auto 模型后，Accio Work 中几乎所有采购任务都不再消耗积分。下面说明哪些功能免费、哪些仍需付费，以及今天如何开始。",
+  "dateLabel": "更新于 2026 年 10 月 25 日 - Accio Work 0.36.2",
+  "readMin": "阅读约 4 分钟",
+  "whatTitle": "有哪些变化",
+  "what": [
+    "在 Accio Work 0.36.2 更新（2026 年 10 月 25 日）中，Sourcing Agent 在使用 Auto 模型时可免费使用。除 AI 辅助的供应商沟通外，其他所有能力都在免费额度内运行。",
+    "据 Accio 介绍，绝大多数采购任务都能在免费额度内完成。对小企业来说，这意味着可以每天找货、查供应商，而不用盯着积分余额。"
+  ],
+  "freeTitle": "免费与付费：完整清单",
+  "freeItems": [
+    { "name": "在 Alibaba.com 等货源中找商品", "free": true },
+    { "name": "商品横向对比（附 Excel 表格）", "free": true },
+    { "name": "供应商核验报告", "free": true },
+    { "name": "单品利润测算", "free": true },
+    { "name": "AI 辅助的供应商沟通与议价", "free": false }
+  ],
+  "freeLabel": "Auto 模型免费",
+  "paidLabel": "消耗积分",
+  "freeNote": "免费使用以 Accio 设定的额度为准。用量很大时仍可能消耗积分，请在应用内查看当前限额。",
+  "alsoTitle": "本次更新的其他新功能",
+  "also": [
+    { "title": "快速搜索", "body": "像「500 毫升不锈钢水杯」这样的简单文字需求会走更快的搜索流程，候选商品出现得更早。" },
+    { "title": "卡片一键操作", "body": "选中最多 5 张商品或供应商卡片，Accio 会给出现成操作：对比、AI 议价、核验供应商、测算利润。指令会自动填好，确认后发送即可。" },
+    { "title": "Excel 对比表", "body": "商品对比现在会在对话中给出结论，并生成 Excel 表格。之后再添加商品或对比维度，会更新同一张表。" },
+    { "title": "更全面的供应商核验", "body": "核验报告新增线下报告和品类基准数据，HTML 报告支持翻译。" }
+  ],
+  "stepsTitle": "三步上手",
+  "steps": [
+    { "title": "更新 Accio Work", "body": "在电脑上安装 0.36.2 或更高版本，或直接打开网页版。" },
+    { "title": "选择 Auto 模型", "body": "在 Sourcing Agent 的模型选择中选 Auto，任务才会免费。" },
+    { "title": "描述你的需求", "body": "用大白话写出商品、目标价和数量，或复制下面的指令。" }
+  ],
+  "promptLabel": "推荐先试的指令",
+  "prompt": "帮我找 10 家 [商品] 供应商，起订量低于 [数量] 件，目标单价 $[价格]。用表格对比（价格、起订量、交期、认证、经营年限），核验排名前 3 的供应商，并按售价 $[零售价] 测算我的利润。",
+  "limitsTitle": "需要了解的限制",
+  "limits": [
+    "通过 AI 与供应商沟通、议价不在免费范围内，会消耗积分。",
+    "卡片一键操作支持电脑端和网页版，每次最多 5 张卡片。商品卡片与供应商卡片不能同时选择，利润测算仅适用于商品。",
+    "Sourcing Agent 中的 1688 货源目前在欧洲和美洲暂不可用。"
+  ],
+  "faq": [
+    { "q": "Accio Sourcing Agent 真的免费吗？", "a": "是的，使用 Auto 模型即可。找货、对比、核验供应商和测算利润都在 Accio 设定的免费额度内。只有 AI 辅助的供应商沟通会消耗积分。" },
+    { "q": "Accio Work 的 Auto 模型是什么？", "a": "Auto 会让 Accio 为每个任务自动挑选合适的 AI 模型。想免费采购，在 Sourcing Agent 的模型选择中选 Auto 即可。" },
+    { "q": "需要哪个版本的 Accio Work？", "a": "2026 年 10 月 25 日发布的 0.36.2 或更高版本。网页版会自动更新。" },
+    { "q": "与供应商议价也免费吗？", "a": "不免费。AI 辅助的供应商沟通与议价仍会消耗积分。在这一步之前的所有操作，使用 Auto 都免费。" }
+  ],
+  "ctaTitle": "今晚就免费跑通第一个采购任务",
+  "ctaText": "注册后选择 Auto 模型，让 Sourcing Agent 帮你找供应商、比价并完成核验。",
+  "ctaBtn": "免费试用 Sourcing Agent",
+  "sourceLabel": "来源：Accio Work 官方更新日志",
+  "moreTitle": "延伸阅读：中国采购指南",
+  "promoBadge": "新闻 - 现已免费",
+  "promoTitle": "Accio Sourcing Agent 现已免费：找供应商、比价、验厂 0 元",
+  "promoCta": "看看有哪些变化",
+  "sectionBadge": "新功能 - 2026 年 10 月 25 日",
+  "sectionTitle": "Sourcing Agent 现已",
+  "sectionAccent": "免费。",
+  "sectionLead": "选择 Auto 模型后，找货、商品对比、供应商核验和利润测算都不再消耗积分。",
+  "sectionPaid": "只有 AI 与供应商沟通仍消耗积分。",
+  "sectionMore": "看看有哪些变化"
+}

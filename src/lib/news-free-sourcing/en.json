@@ -1,0 +1,67 @@
+{
+  "seoTitle": "Accio Sourcing Agent Is Now Free: Find Suppliers, Compare and Verify at $0",
+  "description": "Accio Work 0.36.2: with the Auto model, product search, comparison, supplier verification and profit calculation in Sourcing Agent are free. What changed and how to use it.",
+  "keywords": ["accio sourcing agent free", "free ai sourcing agent", "accio work auto model", "free supplier verification", "ai product sourcing free", "accio work 0.36.2"],
+  "badge": "Product news - 25 Oct 2026",
+  "title": "Accio Sourcing Agent is now free: find, compare and verify suppliers at no cost",
+  "lede": "With the Auto model, almost every sourcing task in Accio Work no longer costs credits. Here is exactly what became free, what is still paid, and how to start today.",
+  "dateLabel": "Updated 25 October 2026 - Accio Work 0.36.2",
+  "readMin": "4 min read",
+  "whatTitle": "What changed",
+  "what": [
+    "In the Accio Work 0.36.2 update (25 October 2026), Sourcing Agent became free to use with the Auto model. Every capability of the agent except AI-assisted chat with suppliers now runs inside a free quota.",
+    "According to Accio, the vast majority of sourcing tasks fit into that free quota. For a small business this means you can research products and check suppliers every day without watching your credit balance."
+  ],
+  "freeTitle": "Free vs paid: the full list",
+  "freeItems": [
+    { "name": "Finding products on Alibaba.com and other catalogs", "free": true },
+    { "name": "Comparing products side by side (with an Excel table)", "free": true },
+    { "name": "Supplier verification reports", "free": true },
+    { "name": "Profit calculation per product", "free": true },
+    { "name": "AI-assisted chat and negotiation with suppliers", "free": false }
+  ],
+  "freeLabel": "Free with Auto",
+  "paidLabel": "Uses credits",
+  "freeNote": "Free use works within a quota set by Accio. Large volumes may still use credits; check the current limits in the app.",
+  "alsoTitle": "Also new in this update",
+  "also": [
+    { "title": "Fast search", "body": "Simple text requests like \"stainless steel water bottle 500 ml\" go through a quicker search flow, so candidate products appear sooner." },
+    { "title": "One-click actions on cards", "body": "Select up to 5 product or supplier cards and Accio offers ready actions: compare, negotiate, verify supplier, calculate profit. The request is filled in for you; review it and send." },
+    { "title": "Comparison in Excel", "body": "A comparison now ends with a clear conclusion in the chat plus an Excel table. Add more products or criteria later and the same table updates." },
+    { "title": "Stronger supplier checks", "body": "Verification reports now include offline reports and category benchmark data, and HTML reports can be translated." }
+  ],
+  "stepsTitle": "How to start in 3 steps",
+  "steps": [
+    { "title": "Update Accio Work", "body": "Install version 0.36.2 or newer on desktop, or open the web version." },
+    { "title": "Choose the Auto model", "body": "In Sourcing Agent, pick Auto in the model selector. This is what makes the tasks free." },
+    { "title": "Describe what you need", "body": "Write the product, target price and quantity in plain words, or copy the prompt below." }
+  ],
+  "promptLabel": "Prompt to try first",
+  "prompt": "Find 10 suppliers for [product] with MOQ under [quantity] units and a target price of $[price] per unit. Compare them in a table (price, MOQ, lead time, certifications, years in business), verify the top 3 suppliers and calculate my profit if I sell at $[retail price].",
+  "limitsTitle": "Limits worth knowing",
+  "limits": [
+    "Chatting and negotiating with suppliers through AI is not part of the free offer and uses credits.",
+    "One-click actions work on desktop and web, with up to 5 cards at a time. Products and suppliers cannot be selected together, and profit calculation works for products only.",
+    "1688 products in Sourcing Agent are not available in Europe and the Americas yet."
+  ],
+  "faq": [
+    { "q": "Is Accio Sourcing Agent really free?", "a": "Yes, with the Auto model. Finding products, comparing them, verifying suppliers and calculating profit are free within a quota set by Accio. Only AI-assisted supplier chat uses credits." },
+    { "q": "What is the Auto model in Accio Work?", "a": "Auto lets Accio pick the right AI model for each task by itself. To get free sourcing, choose Auto in the model selector of Sourcing Agent." },
+    { "q": "Which Accio Work version do I need?", "a": "Version 0.36.2, released on 25 October 2026, or newer. The web version is updated automatically." },
+    { "q": "Is supplier negotiation free too?", "a": "No. AI-assisted chat and negotiation with suppliers still uses credits. Everything before that step is free with Auto." }
+  ],
+  "ctaTitle": "Run your first free sourcing task tonight",
+  "ctaText": "Sign up, choose the Auto model and let Sourcing Agent find, compare and verify suppliers for you.",
+  "ctaBtn": "Try Sourcing Agent free",
+  "sourceLabel": "Source: official Accio Work release notes",
+  "moreTitle": "Go deeper: China sourcing guides",
+  "promoBadge": "News - free now",
+  "promoTitle": "Accio Sourcing Agent is now free: find, compare and verify suppliers at $0",
+  "promoCta": "What changed",
+  "sectionBadge": "New - 25 Oct 2026",
+  "sectionTitle": "Sourcing Agent is now",
+  "sectionAccent": "free.",
+  "sectionLead": "Choose the Auto model and finding products, comparing them, verifying suppliers and calculating profit no longer cost credits.",
+  "sectionPaid": "Only AI chat with suppliers still uses credits.",
+  "sectionMore": "Read what changed"
+}
