@@ -1,0 +1,67 @@
+{
+  "seoTitle": "Accio Sourcing Agent ora è gratis: trova, confronta e verifica fornitori a 0 $",
+  "description": "Accio Work 0.36.2: con il modello Auto ricerca prodotti, confronto, verifica fornitori e calcolo del profitto nel Sourcing Agent sono gratuiti. Cosa cambia e come iniziare.",
+  "keywords": ["accio gratis", "agente ai sourcing gratuito", "trovare fornitori gratis", "verifica fornitori cina", "accio work modello auto", "accio sourcing agent"],
+  "badge": "Novità prodotto - 25 ott 2026",
+  "title": "Accio Sourcing Agent ora è gratis: trova, confronta e verifica i fornitori senza costi",
+  "lede": "Con il modello Auto quasi tutte le attività di sourcing in Accio Work non consumano più crediti. Ecco cosa è diventato gratis, cosa resta a pagamento e come iniziare oggi.",
+  "dateLabel": "Aggiornato il 25 ottobre 2026 - Accio Work 0.36.2",
+  "readMin": "4 min di lettura",
+  "whatTitle": "Cosa è cambiato",
+  "what": [
+    "Con l'aggiornamento Accio Work 0.36.2 (25 ottobre 2026) il Sourcing Agent è gratuito con il modello Auto. Tutte le sue funzioni, tranne la chat con i fornitori assistita dall'AI, ora rientrano in una quota gratuita.",
+    "Secondo Accio, la stragrande maggioranza delle attività di sourcing sta dentro questa quota. Per una piccola impresa significa cercare prodotti e controllare fornitori ogni giorno senza guardare il saldo crediti."
+  ],
+  "freeTitle": "Gratis o a pagamento: l'elenco completo",
+  "freeItems": [
+    { "name": "Ricerca prodotti su Alibaba.com e altri cataloghi", "free": true },
+    { "name": "Confronto prodotti fianco a fianco (con tabella Excel)", "free": true },
+    { "name": "Report di verifica dei fornitori", "free": true },
+    { "name": "Calcolo del profitto per prodotto", "free": true },
+    { "name": "Chat e trattativa con i fornitori assistita dall'AI", "free": false }
+  ],
+  "freeLabel": "Gratis con Auto",
+  "paidLabel": "Usa crediti",
+  "freeNote": "L'uso gratuito vale entro una quota stabilita da Accio. Con grandi volumi i crediti possono comunque essere usati; controlla i limiti attuali nell'app.",
+  "alsoTitle": "Altre novità di questo aggiornamento",
+  "also": [
+    { "title": "Ricerca rapida", "body": "Le richieste testuali semplici come \"borraccia in acciaio inox 500 ml\" seguono un flusso più veloce e i prodotti candidati compaiono prima." },
+    { "title": "Azioni con un clic", "body": "Seleziona fino a 5 schede prodotto o fornitore e Accio propone azioni pronte: confronta, tratta, verifica il fornitore, calcola il profitto. La richiesta si compila da sola: controllala e inviala." },
+    { "title": "Confronto in Excel", "body": "Il confronto ora termina con una conclusione chiara in chat e una tabella Excel. Se aggiungi prodotti o criteri dopo, si aggiorna la stessa tabella." },
+    { "title": "Verifiche dei fornitori più solide", "body": "I report di verifica includono ora report offline e dati di riferimento della categoria; i report HTML si possono tradurre." }
+  ],
+  "stepsTitle": "Come iniziare in 3 passi",
+  "steps": [
+    { "title": "Aggiorna Accio Work", "body": "Installa la versione 0.36.2 o successiva sul desktop, oppure apri la versione web." },
+    { "title": "Scegli il modello Auto", "body": "Nel Sourcing Agent seleziona Auto tra i modelli. È questo che rende gratuite le attività." },
+    { "title": "Descrivi cosa ti serve", "body": "Scrivi prodotto, prezzo obiettivo e quantità con parole semplici, oppure copia il prompt qui sotto." }
+  ],
+  "promptLabel": "Prompt da provare per primo",
+  "prompt": "Trova 10 fornitori di [prodotto] con MOQ inferiore a [quantità] pezzi e un prezzo obiettivo di $[prezzo] al pezzo. Confrontali in una tabella (prezzo, MOQ, tempi di consegna, certificazioni, anni di attività), verifica i 3 migliori e calcola il mio profitto se vendo a $[prezzo al dettaglio].",
+  "limitsTitle": "Limiti da conoscere",
+  "limits": [
+    "Chattare e trattare con i fornitori tramite AI non rientra nell'offerta gratuita e usa crediti.",
+    "Le azioni con un clic funzionano su desktop e web, fino a 5 schede alla volta. Prodotti e fornitori non si possono selezionare insieme e il calcolo del profitto vale solo per i prodotti.",
+    "I prodotti 1688 nel Sourcing Agent non sono ancora disponibili in Europa e nelle Americhe."
+  ],
+  "faq": [
+    { "q": "Accio Sourcing Agent è davvero gratuito?", "a": "Sì, con il modello Auto. Ricerca, confronto, verifica fornitori e calcolo del profitto sono gratuiti entro una quota fissata da Accio. Solo la chat con i fornitori assistita dall'AI usa crediti." },
+    { "q": "Cos'è il modello Auto in Accio Work?", "a": "Con Auto è Accio a scegliere il modello AI giusto per ogni attività. Per il sourcing gratuito, seleziona Auto tra i modelli del Sourcing Agent." },
+    { "q": "Quale versione di Accio Work serve?", "a": "La versione 0.36.2, rilasciata il 25 ottobre 2026, o successiva. La versione web si aggiorna da sola." },
+    { "q": "Anche la trattativa con i fornitori è gratis?", "a": "No. Chat e trattativa con i fornitori assistite dall'AI usano ancora crediti. Tutto ciò che viene prima è gratis con Auto." }
+  ],
+  "ctaTitle": "Avvia stasera la tua prima attività di sourcing gratuita",
+  "ctaText": "Registrati, scegli il modello Auto e lascia che il Sourcing Agent trovi, confronti e verifichi i fornitori per te.",
+  "ctaBtn": "Prova gratis il Sourcing Agent",
+  "sourceLabel": "Fonte: note di rilascio ufficiali di Accio Work",
+  "moreTitle": "Approfondisci: guide al sourcing in Cina",
+  "promoBadge": "Novità - ora gratis",
+  "promoTitle": "Accio Sourcing Agent ora è gratis: trova, confronta e verifica fornitori a 0 $",
+  "promoCta": "Cosa cambia",
+  "sectionBadge": "Novità - 25 ott 2026",
+  "sectionTitle": "Il Sourcing Agent ora è",
+  "sectionAccent": "gratis.",
+  "sectionLead": "Scegli il modello Auto: ricerca prodotti, confronto, verifica fornitori e calcolo del profitto non consumano più crediti.",
+  "sectionPaid": "Solo la chat AI con i fornitori usa ancora crediti.",
+  "sectionMore": "Cosa cambia"
+}

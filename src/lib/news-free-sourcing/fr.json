@@ -1,0 +1,67 @@
+{
+  "seoTitle": "Accio Sourcing Agent devient gratuit : trouver, comparer et vérifier des fournisseurs pour 0 $",
+  "description": "Accio Work 0.36.2 : avec le modèle Auto, la recherche de produits, la comparaison, la vérification des fournisseurs et le calcul de marge dans Sourcing Agent sont gratuits. Ce qui change et comment démarrer.",
+  "keywords": ["accio gratuit", "agent ia achats gratuit", "trouver des fournisseurs gratuitement", "vérifier un fournisseur chinois", "accio work modèle auto", "accio sourcing agent"],
+  "badge": "Actu produit - 25 oct. 2026",
+  "title": "Accio Sourcing Agent devient gratuit : trouvez, comparez et vérifiez vos fournisseurs sans frais",
+  "lede": "Avec le modèle Auto, presque toutes les tâches d'achat dans Accio Work ne consomment plus de crédits. Voici ce qui est gratuit, ce qui reste payant et comment commencer dès aujourd'hui.",
+  "dateLabel": "Mis à jour le 25 octobre 2026 - Accio Work 0.36.2",
+  "readMin": "4 min de lecture",
+  "whatTitle": "Ce qui a changé",
+  "what": [
+    "Avec la mise à jour Accio Work 0.36.2 (25 octobre 2026), Sourcing Agent est gratuit avec le modèle Auto. Toutes ses fonctions, sauf le chat avec les fournisseurs assisté par IA, fonctionnent désormais dans un quota gratuit.",
+    "Selon Accio, la grande majorité des tâches d'achat tiennent dans ce quota. Pour une petite entreprise, cela veut dire rechercher des produits et contrôler des fournisseurs chaque jour sans surveiller son solde de crédits."
+  ],
+  "freeTitle": "Gratuit ou payant : la liste complète",
+  "freeItems": [
+    { "name": "Recherche de produits sur Alibaba.com et d'autres catalogues", "free": true },
+    { "name": "Comparaison de produits côte à côte (avec tableau Excel)", "free": true },
+    { "name": "Rapports de vérification des fournisseurs", "free": true },
+    { "name": "Calcul de marge par produit", "free": true },
+    { "name": "Chat et négociation avec les fournisseurs assistés par IA", "free": false }
+  ],
+  "freeLabel": "Gratuit avec Auto",
+  "paidLabel": "Utilise des crédits",
+  "freeNote": "L'usage gratuit s'applique dans un quota fixé par Accio. Pour de gros volumes, des crédits peuvent encore être utilisés ; consultez les limites actuelles dans l'application.",
+  "alsoTitle": "Autres nouveautés de cette mise à jour",
+  "also": [
+    { "title": "Recherche rapide", "body": "Les demandes textuelles simples comme « gourde inox 500 ml » passent par un parcours plus rapide, et les produits candidats s'affichent plus tôt." },
+    { "title": "Actions en un clic", "body": "Sélectionnez jusqu'à 5 fiches produits ou fournisseurs et Accio propose des actions prêtes : comparer, négocier, vérifier le fournisseur, calculer la marge. La demande se remplit seule ; relisez-la et envoyez." },
+    { "title": "Comparaison dans Excel", "body": "Une comparaison se termine désormais par une conclusion claire dans le chat et un tableau Excel. Ajoutez des produits ou des critères plus tard : le même tableau se met à jour." },
+    { "title": "Vérification des fournisseurs renforcée", "body": "Les rapports de vérification incluent désormais des rapports sur site et des données de référence de la catégorie, et les rapports HTML peuvent être traduits." }
+  ],
+  "stepsTitle": "Démarrer en 3 étapes",
+  "steps": [
+    { "title": "Mettez à jour Accio Work", "body": "Installez la version 0.36.2 ou plus récente sur ordinateur, ou ouvrez la version web." },
+    { "title": "Choisissez le modèle Auto", "body": "Dans Sourcing Agent, sélectionnez Auto dans le choix du modèle. C'est ce qui rend les tâches gratuites." },
+    { "title": "Décrivez votre besoin", "body": "Indiquez simplement le produit, le prix cible et la quantité, ou copiez le prompt ci-dessous." }
+  ],
+  "promptLabel": "Prompt à essayer en premier",
+  "prompt": "Trouve 10 fournisseurs de [produit] avec un MOQ inférieur à [quantité] unités et un prix cible de $[prix] l'unité. Compare-les dans un tableau (prix, MOQ, délai, certifications, années d'activité), vérifie les 3 meilleurs et calcule ma marge si je vends à $[prix de vente].",
+  "limitsTitle": "Limites à connaître",
+  "limits": [
+    "Discuter et négocier avec les fournisseurs via l'IA ne fait pas partie de l'offre gratuite et consomme des crédits.",
+    "Les actions en un clic fonctionnent sur ordinateur et sur le web, jusqu'à 5 fiches à la fois. On ne peut pas sélectionner produits et fournisseurs ensemble, et le calcul de marge ne concerne que les produits.",
+    "Les produits 1688 dans Sourcing Agent ne sont pas encore disponibles en Europe et sur le continent américain."
+  ],
+  "faq": [
+    { "q": "Accio Sourcing Agent est-il vraiment gratuit ?", "a": "Oui, avec le modèle Auto. Recherche, comparaison, vérification des fournisseurs et calcul de marge sont gratuits dans un quota fixé par Accio. Seul le chat avec les fournisseurs assisté par IA consomme des crédits." },
+    { "q": "Qu'est-ce que le modèle Auto dans Accio Work ?", "a": "Avec Auto, Accio choisit lui-même le bon modèle d'IA pour chaque tâche. Pour un sourcing gratuit, sélectionnez Auto dans le choix du modèle de Sourcing Agent." },
+    { "q": "Quelle version d'Accio Work faut-il ?", "a": "La version 0.36.2, sortie le 25 octobre 2026, ou plus récente. La version web se met à jour automatiquement." },
+    { "q": "La négociation avec les fournisseurs est-elle aussi gratuite ?", "a": "Non. Le chat et la négociation avec les fournisseurs assistés par IA consomment toujours des crédits. Tout ce qui précède est gratuit avec Auto." }
+  ],
+  "ctaTitle": "Lancez ce soir votre première tâche d'achat gratuite",
+  "ctaText": "Inscrivez-vous, choisissez le modèle Auto et laissez Sourcing Agent trouver, comparer et vérifier les fournisseurs pour vous.",
+  "ctaBtn": "Essayer Sourcing Agent gratuitement",
+  "sourceLabel": "Source : notes de version officielles d'Accio Work",
+  "moreTitle": "Pour aller plus loin : guides d'achat en Chine",
+  "promoBadge": "Actu - désormais gratuit",
+  "promoTitle": "Accio Sourcing Agent devient gratuit : trouver, comparer et vérifier des fournisseurs pour 0 $",
+  "promoCta": "Ce qui change",
+  "sectionBadge": "Nouveau - 25 oct. 2026",
+  "sectionTitle": "Sourcing Agent est désormais",
+  "sectionAccent": "gratuit.",
+  "sectionLead": "Choisissez le modèle Auto : rechercher, comparer, vérifier les fournisseurs et calculer la marge ne consomment plus de crédits.",
+  "sectionPaid": "Seul le chat IA avec les fournisseurs consomme encore des crédits.",
+  "sectionMore": "Ce qui change"
+}

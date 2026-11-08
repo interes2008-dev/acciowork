@@ -1,0 +1,67 @@
+{
+  "seoTitle": "Accio Sourcing Agent ya es gratis: busca, compara y verifica proveedores por 0 $",
+  "description": "Accio Work 0.36.2: con el modelo Auto, la búsqueda de productos, la comparación, la verificación de proveedores y el cálculo de ganancias en Sourcing Agent son gratis. Qué cambia y cómo empezar.",
+  "keywords": ["accio gratis", "agente ia de compras gratis", "buscar proveedores gratis", "verificar proveedores china", "accio work modelo auto", "accio sourcing agent"],
+  "badge": "Novedad del producto - 25 oct 2026",
+  "title": "Accio Sourcing Agent ya es gratis: busca, compara y verifica proveedores sin coste",
+  "lede": "Con el modelo Auto, casi todas las tareas de compras en Accio Work ya no gastan créditos. Te contamos qué es gratis, qué sigue siendo de pago y cómo empezar hoy.",
+  "dateLabel": "Actualizado el 25 de octubre de 2026 - Accio Work 0.36.2",
+  "readMin": "4 min de lectura",
+  "whatTitle": "Qué ha cambiado",
+  "what": [
+    "Con la actualización Accio Work 0.36.2 (25 de octubre de 2026), Sourcing Agent pasa a ser gratis con el modelo Auto. Todas sus funciones, salvo el chat con proveedores asistido por IA, funcionan ahora dentro de una cuota gratuita.",
+    "Según Accio, la gran mayoría de las tareas de compras caben en esa cuota. Para una pequeña empresa significa investigar productos y revisar proveedores cada día sin mirar el saldo de créditos."
+  ],
+  "freeTitle": "Gratis o de pago: la lista completa",
+  "freeItems": [
+    { "name": "Búsqueda de productos en Alibaba.com y otros catálogos", "free": true },
+    { "name": "Comparación de productos lado a lado (con tabla de Excel)", "free": true },
+    { "name": "Informes de verificación de proveedores", "free": true },
+    { "name": "Cálculo de ganancias por producto", "free": true },
+    { "name": "Chat y negociación con proveedores asistidos por IA", "free": false }
+  ],
+  "freeLabel": "Gratis con Auto",
+  "paidLabel": "Usa créditos",
+  "freeNote": "El uso gratuito funciona dentro de una cuota fijada por Accio. Con grandes volúmenes puede seguir usando créditos; consulta los límites actuales en la app.",
+  "alsoTitle": "Más novedades de esta actualización",
+  "also": [
+    { "title": "Búsqueda rápida", "body": "Las peticiones de texto sencillas como \"botella de acero inoxidable 500 ml\" pasan por un flujo más rápido y los productos candidatos aparecen antes." },
+    { "title": "Acciones con un clic", "body": "Selecciona hasta 5 tarjetas de productos o proveedores y Accio te propone acciones listas: comparar, negociar, verificar proveedor, calcular ganancias. La petición se rellena sola; revísala y envíala." },
+    { "title": "Comparación en Excel", "body": "Ahora cada comparación termina con una conclusión clara en el chat y una tabla de Excel. Si añades productos o criterios después, se actualiza la misma tabla." },
+    { "title": "Verificación de proveedores más completa", "body": "Los informes de verificación incluyen ahora informes presenciales y datos de referencia de la categoría, y los informes HTML se pueden traducir." }
+  ],
+  "stepsTitle": "Cómo empezar en 3 pasos",
+  "steps": [
+    { "title": "Actualiza Accio Work", "body": "Instala la versión 0.36.2 o posterior en el ordenador o abre la versión web." },
+    { "title": "Elige el modelo Auto", "body": "En Sourcing Agent, elige Auto en el selector de modelos. Eso es lo que hace gratis las tareas." },
+    { "title": "Describe lo que necesitas", "body": "Escribe el producto, el precio objetivo y la cantidad con palabras sencillas, o copia el prompt de abajo." }
+  ],
+  "promptLabel": "Prompt para empezar",
+  "prompt": "Encuentra 10 proveedores de [producto] con un MOQ inferior a [cantidad] unidades y un precio objetivo de $[precio] por unidad. Compáralos en una tabla (precio, MOQ, plazo de entrega, certificaciones, años en el negocio), verifica los 3 mejores y calcula mi ganancia si vendo a $[precio de venta].",
+  "limitsTitle": "Límites que conviene conocer",
+  "limits": [
+    "Chatear y negociar con proveedores mediante IA no forma parte de la oferta gratuita y usa créditos.",
+    "Las acciones con un clic funcionan en ordenador y web, con hasta 5 tarjetas a la vez. No se pueden seleccionar productos y proveedores juntos, y el cálculo de ganancias solo sirve para productos.",
+    "Los productos de 1688 en Sourcing Agent aún no están disponibles en Europa ni en América."
+  ],
+  "faq": [
+    { "q": "¿Accio Sourcing Agent es realmente gratis?", "a": "Sí, con el modelo Auto. Buscar productos, compararlos, verificar proveedores y calcular ganancias es gratis dentro de una cuota de Accio. Solo el chat con proveedores asistido por IA usa créditos." },
+    { "q": "¿Qué es el modelo Auto en Accio Work?", "a": "Con Auto, Accio elige por sí mismo el modelo de IA adecuado para cada tarea. Para comprar gratis, elige Auto en el selector de modelos de Sourcing Agent." },
+    { "q": "¿Qué versión de Accio Work necesito?", "a": "La versión 0.36.2, publicada el 25 de octubre de 2026, o posterior. La versión web se actualiza sola." },
+    { "q": "¿La negociación con proveedores también es gratis?", "a": "No. El chat y la negociación con proveedores asistidos por IA siguen usando créditos. Todo lo anterior a ese paso es gratis con Auto." }
+  ],
+  "ctaTitle": "Lanza esta noche tu primera tarea de compras gratis",
+  "ctaText": "Regístrate, elige el modelo Auto y deja que Sourcing Agent encuentre, compare y verifique proveedores por ti.",
+  "ctaBtn": "Probar Sourcing Agent gratis",
+  "sourceLabel": "Fuente: notas de versión oficiales de Accio Work",
+  "moreTitle": "Profundiza: guías para comprar en China",
+  "promoBadge": "Novedad - ya gratis",
+  "promoTitle": "Accio Sourcing Agent ya es gratis: busca, compara y verifica proveedores por 0 $",
+  "promoCta": "Qué cambia",
+  "sectionBadge": "Nuevo - 25 oct 2026",
+  "sectionTitle": "Sourcing Agent ahora es",
+  "sectionAccent": "gratis.",
+  "sectionLead": "Elige el modelo Auto: buscar productos, compararlos, verificar proveedores y calcular ganancias ya no gasta créditos.",
+  "sectionPaid": "Solo el chat con proveedores por IA sigue usando créditos.",
+  "sectionMore": "Qué cambia"
+}

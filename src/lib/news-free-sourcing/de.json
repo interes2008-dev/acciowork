@@ -1,0 +1,67 @@
+{
+  "seoTitle": "Accio Sourcing Agent jetzt kostenlos: Lieferanten finden, vergleichen und prüfen für 0 $",
+  "description": "Accio Work 0.36.2: Mit dem Auto-Modell sind Produktsuche, Vergleich, Lieferantenprüfung und Gewinnberechnung im Sourcing Agent kostenlos. Was sich ändert und wie Sie starten.",
+  "keywords": ["accio kostenlos", "kostenloser ki einkaufsagent", "lieferanten finden kostenlos", "lieferant prüfen china", "accio work auto modell", "accio sourcing agent"],
+  "badge": "Produktnews - 25. Okt. 2026",
+  "title": "Accio Sourcing Agent ist jetzt kostenlos: Lieferanten finden, vergleichen und prüfen ohne Kosten",
+  "lede": "Mit dem Auto-Modell kosten fast alle Einkaufsaufgaben in Accio Work keine Credits mehr. Was genau kostenlos ist, was weiter kostet und wie Sie heute starten.",
+  "dateLabel": "Aktualisiert am 25. Oktober 2026 - Accio Work 0.36.2",
+  "readMin": "4 Min. Lesezeit",
+  "whatTitle": "Was sich geändert hat",
+  "what": [
+    "Mit dem Update Accio Work 0.36.2 (25. Oktober 2026) ist der Sourcing Agent mit dem Auto-Modell kostenlos nutzbar. Alle Funktionen außer dem KI-gestützten Chat mit Lieferanten laufen jetzt in einem kostenlosen Kontingent.",
+    "Laut Accio passt die große Mehrheit der Einkaufsaufgaben in dieses Kontingent. Für kleine Unternehmen heißt das: Produkte recherchieren und Lieferanten prüfen, täglich, ohne auf das Credit-Guthaben zu schauen."
+  ],
+  "freeTitle": "Kostenlos oder kostenpflichtig: die komplette Liste",
+  "freeItems": [
+    { "name": "Produkte auf Alibaba.com und in anderen Katalogen finden", "free": true },
+    { "name": "Produkte direkt vergleichen (mit Excel-Tabelle)", "free": true },
+    { "name": "Berichte zur Lieferantenprüfung", "free": true },
+    { "name": "Gewinnberechnung pro Produkt", "free": true },
+    { "name": "KI-gestützter Chat und Verhandlung mit Lieferanten", "free": false }
+  ],
+  "freeLabel": "Kostenlos mit Auto",
+  "paidLabel": "Verbraucht Credits",
+  "freeNote": "Die kostenlose Nutzung gilt innerhalb eines von Accio festgelegten Kontingents. Bei großen Mengen können weiterhin Credits anfallen; aktuelle Limits sehen Sie in der App.",
+  "alsoTitle": "Außerdem neu in diesem Update",
+  "also": [
+    { "title": "Schnellsuche", "body": "Einfache Textanfragen wie „Edelstahl-Trinkflasche 500 ml“ laufen über einen schnelleren Suchablauf, passende Produkte erscheinen früher." },
+    { "title": "Aktionen mit einem Klick", "body": "Wählen Sie bis zu 5 Produkt- oder Lieferantenkarten, und Accio bietet fertige Aktionen an: vergleichen, verhandeln, Lieferant prüfen, Gewinn berechnen. Die Anfrage wird automatisch ausgefüllt; prüfen und absenden." },
+    { "title": "Vergleich in Excel", "body": "Ein Vergleich endet jetzt mit einem klaren Fazit im Chat und einer Excel-Tabelle. Später hinzugefügte Produkte oder Kriterien aktualisieren dieselbe Tabelle." },
+    { "title": "Gründlichere Lieferantenprüfung", "body": "Prüfberichte enthalten jetzt Offline-Berichte und Vergleichswerte der Kategorie, HTML-Berichte lassen sich übersetzen." }
+  ],
+  "stepsTitle": "In 3 Schritten starten",
+  "steps": [
+    { "title": "Accio Work aktualisieren", "body": "Installieren Sie Version 0.36.2 oder neuer auf dem Desktop oder öffnen Sie die Web-Version." },
+    { "title": "Auto-Modell wählen", "body": "Wählen Sie im Sourcing Agent in der Modellauswahl Auto. Genau das macht die Aufgaben kostenlos." },
+    { "title": "Bedarf beschreiben", "body": "Nennen Sie Produkt, Zielpreis und Menge in einfachen Worten oder kopieren Sie den Prompt unten." }
+  ],
+  "promptLabel": "Prompt für den ersten Test",
+  "prompt": "Finde 10 Lieferanten für [Produkt] mit einer Mindestbestellmenge unter [Menge] Stück und einem Zielpreis von $[Preis] pro Stück. Vergleiche sie in einer Tabelle (Preis, MOQ, Lieferzeit, Zertifikate, Jahre am Markt), prüfe die besten 3 Lieferanten und berechne meinen Gewinn bei einem Verkaufspreis von $[Verkaufspreis].",
+  "limitsTitle": "Grenzen, die Sie kennen sollten",
+  "limits": [
+    "Chatten und Verhandeln mit Lieferanten über KI gehört nicht zum kostenlosen Angebot und verbraucht Credits.",
+    "Aktionen mit einem Klick funktionieren auf dem Desktop und im Web, mit bis zu 5 Karten gleichzeitig. Produkte und Lieferanten lassen sich nicht zusammen auswählen, die Gewinnberechnung gilt nur für Produkte.",
+    "1688-Produkte sind im Sourcing Agent in Europa und Amerika noch nicht verfügbar."
+  ],
+  "faq": [
+    { "q": "Ist der Accio Sourcing Agent wirklich kostenlos?", "a": "Ja, mit dem Auto-Modell. Produktsuche, Vergleich, Lieferantenprüfung und Gewinnberechnung sind innerhalb eines Accio-Kontingents kostenlos. Nur der KI-gestützte Chat mit Lieferanten verbraucht Credits." },
+    { "q": "Was ist das Auto-Modell in Accio Work?", "a": "Mit Auto wählt Accio für jede Aufgabe selbst das passende KI-Modell. Für kostenloses Sourcing wählen Sie Auto in der Modellauswahl des Sourcing Agent." },
+    { "q": "Welche Version von Accio Work brauche ich?", "a": "Version 0.36.2 vom 25. Oktober 2026 oder neuer. Die Web-Version wird automatisch aktualisiert." },
+    { "q": "Ist auch das Verhandeln mit Lieferanten kostenlos?", "a": "Nein. KI-gestützter Chat und Verhandlung mit Lieferanten verbrauchen weiterhin Credits. Alles davor ist mit Auto kostenlos." }
+  ],
+  "ctaTitle": "Starten Sie heute Abend Ihre erste kostenlose Einkaufsaufgabe",
+  "ctaText": "Registrieren, Auto-Modell wählen und den Sourcing Agent Lieferanten finden, vergleichen und prüfen lassen.",
+  "ctaBtn": "Sourcing Agent kostenlos testen",
+  "sourceLabel": "Quelle: offizielle Release Notes von Accio Work",
+  "moreTitle": "Weiterlesen: Guides zum Einkauf in China",
+  "promoBadge": "News - jetzt kostenlos",
+  "promoTitle": "Accio Sourcing Agent jetzt kostenlos: Lieferanten finden, vergleichen und prüfen für 0 $",
+  "promoCta": "Was sich ändert",
+  "sectionBadge": "Neu - 25. Okt. 2026",
+  "sectionTitle": "Der Sourcing Agent ist jetzt",
+  "sectionAccent": "kostenlos.",
+  "sectionLead": "Wählen Sie das Auto-Modell: Produktsuche, Vergleich, Lieferantenprüfung und Gewinnberechnung kosten keine Credits mehr.",
+  "sectionPaid": "Nur der KI-Chat mit Lieferanten verbraucht weiter Credits.",
+  "sectionMore": "Was sich ändert"
+}
