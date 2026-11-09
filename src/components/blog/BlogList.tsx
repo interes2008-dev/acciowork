@@ -1,5 +1,7 @@
 import type { ArticleListItem } from "@/lib/blog.functions";
 import { BlogShell } from "./BlogShell";
+import { localizedPath } from "@/lib/i18n";
+import { FREE_SOURCING_PATH, freeSourcingNews } from "@/lib/news-free-sourcing";
 
 const COPY: Record<
   "en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr" | "ar",
@@ -112,15 +114,27 @@ export function BlogList({
           ar: ["سلسلة جديدة - 5 أدلة", "مركز التوريد من الصين: تحقق من المصانع، فاوض على الحد الأدنى للطلب، واحسب التكلفة النهائية بالذكاء الاصطناعي", "اقرأ الدليل"],
         };
         const [badge, title, cta] = H[lang] ?? H.en;
+        const news = freeSourcingNews(lang);
+        const arrow = lang === "ar" ? "←" : "→";
         return (
-          <a
-            href={`${lang === "en" ? "" : "/" + lang}/blog/china-sourcing`}
-            className="mb-12 flex flex-col gap-2 rounded-[32px] border border-primary/30 bg-primary/5 p-6 transition hover:border-primary md:p-8"
-          >
-            <span className="text-xs font-semibold uppercase tracking-wider text-primary">{badge}</span>
-            <span className="text-2xl font-bold text-foreground">{title}</span>
-            <span className="text-foreground/70">{cta} {lang === "ar" ? "←" : "→"}</span>
-          </a>
+          <div className="mb-12 grid gap-4 md:grid-cols-2">
+            <a
+              href={localizedPath(FREE_SOURCING_PATH, lang)}
+              className="flex flex-col gap-2 rounded-[32px] border border-primary/30 bg-primary/5 p-6 transition hover:border-primary md:p-8"
+            >
+              <span className="text-xs font-semibold uppercase tracking-wider text-primary">{news.promoBadge}</span>
+              <span className="text-2xl font-bold text-foreground">{news.promoTitle}</span>
+              <span className="text-foreground/70">{news.promoCta} {arrow}</span>
+            </a>
+            <a
+              href={localizedPath("/blog/china-sourcing", lang)}
+              className="flex flex-col gap-2 rounded-[32px] border border-primary/30 bg-primary/5 p-6 transition hover:border-primary md:p-8"
+            >
+              <span className="text-xs font-semibold uppercase tracking-wider text-primary">{badge}</span>
+              <span className="text-2xl font-bold text-foreground">{title}</span>
+              <span className="text-foreground/70">{cta} {arrow}</span>
+            </a>
+          </div>
         );
       })()}
       {articles.length === 0 ? (

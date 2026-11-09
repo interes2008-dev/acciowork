@@ -95,7 +95,7 @@ export const pillarsFor = (lang: string): Pillar[] =>
 export const getPillarFor = (lang: string, slug: string) =>
   pillarsFor(lang).find((p) => p.slug === slug)!;
 
-const altLinks = (path: string) => [
+export const altLinks = (path: string) => [
   ...SOURCING_LANGS.map((l) => ({
     rel: "alternate",
     hrefLang: l,
@@ -104,7 +104,7 @@ const altLinks = (path: string) => [
   { rel: "alternate", hrefLang: "x-default", href: `https://acciowork.pro${path}` },
 ];
 
-const ogImg = (lang: string) => `https://acciowork.pro/og/og-${lang}.png`;
+export const ogImg = (lang: string) => `https://acciowork.pro/og/og-${lang}.png`;
 
 export function pillarHeadFor(lang: string, slug: string) {
   const p = getPillarFor(lang, slug);
