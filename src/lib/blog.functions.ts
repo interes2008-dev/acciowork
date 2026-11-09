@@ -39,13 +39,26 @@ export const listArticles = createServerFn({ method: "GET" })
     // Never select cover_url in lists: covers are heavy base64 in the column and
     // pulling them times out Postgres. Select has_cover and serve the image via
     // /api/public/blog-cover/:id instead.
-    const { data: rows, error } = await (supabase.from("blog_articles") as any)
-      .select("id, slug, title, description, has_cover, reading_minutes, published_at, lang")
-      .eq("lang", data.lang)
-      .eq("status", "published")
-      .order("published_at", { ascending: false })
-      .limit(data.limit);
-    if (error) throw new Error(error.message);
+    // Fail soft: if the database is paused/unreachable, render the blog with its
+    // static guides and promos instead of crashing the whole page with a 500.
+    let rows: unknown[] | null = null;
+    try {
+      const res = await (supabase.from("blog_articles") as any)
+        .select("id, slug, title, description, has_cover, reading_minutes, published_at, lang")
+        .eq("lang", data.lang)
+        .eq("status", "published")
+        .order("published_at", { ascending: false })
+        .limit(data.limit)
+        .abortSignal(AbortSignal.timeout(5000));
+      if (res.error) {
+        console.error("listArticles failed:", res.error.message);
+        return [];
+      }
+      rows = res.data;
+    } catch (e) {
+      console.error("listArticles unreachable:", e instanceof Error ? e.message : e);
+      return [];
+    }
     return ((rows ?? []) as Array<Record<string, unknown>>).map((r) => ({
       id: r.id as string,
       slug: r.slug as string,
