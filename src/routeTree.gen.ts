@@ -45,6 +45,7 @@ import { Route as ArTemplatesRouteImport } from './routes/ar.templates'
 import { Route as ArTiktokShopRouteImport } from './routes/ar.tiktok-shop'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as BlogAccioSourcingAgentFreeRouteImport } from './routes/blog.accio-sourcing-agent-free'
 import { Route as BlogAiSupplierNegotiationMoqPriceRouteImport } from './routes/blog.ai-supplier-negotiation-moq-price'
 import { Route as BlogCaseStudySourcingElectronics48HoursRouteImport } from './routes/blog.case-study-sourcing-electronics-48-hours'
 import { Route as BlogChatgptVsAccioSourcingAgentsRouteImport } from './routes/blog.chatgpt-vs-accio-sourcing-agents'
@@ -149,6 +150,7 @@ import { Route as ZhTiktokShopRouteImport } from './routes/zh.tiktok-shop'
 import { Route as ApiPublicGoRouteImport } from './routes/api/public/go'
 import { Route as ArBlogIndexRouteImport } from './routes/ar.blog.index'
 import { Route as ArBlogSlugRouteImport } from './routes/ar.blog.$slug'
+import { Route as ArBlogAccioSourcingAgentFreeRouteImport } from './routes/ar.blog.accio-sourcing-agent-free'
 import { Route as ArBlogAiSupplierNegotiationMoqPriceRouteImport } from './routes/ar.blog.ai-supplier-negotiation-moq-price'
 import { Route as ArBlogCaseStudySourcingElectronics48HoursRouteImport } from './routes/ar.blog.case-study-sourcing-electronics-48-hours'
 import { Route as ArBlogChatgptVsAccioSourcingAgentsRouteImport } from './routes/ar.blog.chatgpt-vs-accio-sourcing-agents'
@@ -164,6 +166,7 @@ import { Route as ArGuideIndexRouteImport } from './routes/ar.guide.index'
 import { Route as ArGuideGuideRouteImport } from './routes/ar.guide.$guide'
 import { Route as DeBlogIndexRouteImport } from './routes/de.blog.index'
 import { Route as DeBlogSlugRouteImport } from './routes/de.blog.$slug'
+import { Route as DeBlogAccioSourcingAgentFreeRouteImport } from './routes/de.blog.accio-sourcing-agent-free'
 import { Route as DeBlogAiSupplierNegotiationMoqPriceRouteImport } from './routes/de.blog.ai-supplier-negotiation-moq-price'
 import { Route as DeBlogCaseStudySourcingElectronics48HoursRouteImport } from './routes/de.blog.case-study-sourcing-electronics-48-hours'
 import { Route as DeBlogChatgptVsAccioSourcingAgentsRouteImport } from './routes/de.blog.chatgpt-vs-accio-sourcing-agents'
@@ -179,6 +182,7 @@ import { Route as DeGuideIndexRouteImport } from './routes/de.guide.index'
 import { Route as DeGuideGuideRouteImport } from './routes/de.guide.$guide'
 import { Route as EsBlogIndexRouteImport } from './routes/es.blog.index'
 import { Route as EsBlogSlugRouteImport } from './routes/es.blog.$slug'
+import { Route as EsBlogAccioSourcingAgentFreeRouteImport } from './routes/es.blog.accio-sourcing-agent-free'
 import { Route as EsBlogAiSupplierNegotiationMoqPriceRouteImport } from './routes/es.blog.ai-supplier-negotiation-moq-price'
 import { Route as EsBlogCaseStudySourcingElectronics48HoursRouteImport } from './routes/es.blog.case-study-sourcing-electronics-48-hours'
 import { Route as EsBlogChatgptVsAccioSourcingAgentsRouteImport } from './routes/es.blog.chatgpt-vs-accio-sourcing-agents'
@@ -194,6 +198,7 @@ import { Route as EsGuideIndexRouteImport } from './routes/es.guide.index'
 import { Route as EsGuideGuideRouteImport } from './routes/es.guide.$guide'
 import { Route as FrBlogIndexRouteImport } from './routes/fr.blog.index'
 import { Route as FrBlogSlugRouteImport } from './routes/fr.blog.$slug'
+import { Route as FrBlogAccioSourcingAgentFreeRouteImport } from './routes/fr.blog.accio-sourcing-agent-free'
 import { Route as FrBlogAiSupplierNegotiationMoqPriceRouteImport } from './routes/fr.blog.ai-supplier-negotiation-moq-price'
 import { Route as FrBlogCaseStudySourcingElectronics48HoursRouteImport } from './routes/fr.blog.case-study-sourcing-electronics-48-hours'
 import { Route as FrBlogChatgptVsAccioSourcingAgentsRouteImport } from './routes/fr.blog.chatgpt-vs-accio-sourcing-agents'
@@ -209,6 +214,7 @@ import { Route as FrGuideIndexRouteImport } from './routes/fr.guide.index'
 import { Route as FrGuideGuideRouteImport } from './routes/fr.guide.$guide'
 import { Route as HiBlogIndexRouteImport } from './routes/hi.blog.index'
 import { Route as HiBlogSlugRouteImport } from './routes/hi.blog.$slug'
+import { Route as HiBlogAccioSourcingAgentFreeRouteImport } from './routes/hi.blog.accio-sourcing-agent-free'
 import { Route as HiBlogAiSupplierNegotiationMoqPriceRouteImport } from './routes/hi.blog.ai-supplier-negotiation-moq-price'
 import { Route as HiBlogCaseStudySourcingElectronics48HoursRouteImport } from './routes/hi.blog.case-study-sourcing-electronics-48-hours'
 import { Route as HiBlogChatgptVsAccioSourcingAgentsRouteImport } from './routes/hi.blog.chatgpt-vs-accio-sourcing-agents'
@@ -224,6 +230,7 @@ import { Route as HiGuideIndexRouteImport } from './routes/hi.guide.index'
 import { Route as HiGuideGuideRouteImport } from './routes/hi.guide.$guide'
 import { Route as ItBlogIndexRouteImport } from './routes/it.blog.index'
 import { Route as ItBlogSlugRouteImport } from './routes/it.blog.$slug'
+import { Route as ItBlogAccioSourcingAgentFreeRouteImport } from './routes/it.blog.accio-sourcing-agent-free'
 import { Route as ItBlogAiSupplierNegotiationMoqPriceRouteImport } from './routes/it.blog.ai-supplier-negotiation-moq-price'
 import { Route as ItBlogCaseStudySourcingElectronics48HoursRouteImport } from './routes/it.blog.case-study-sourcing-electronics-48-hours'
 import { Route as ItBlogChatgptVsAccioSourcingAgentsRouteImport } from './routes/it.blog.chatgpt-vs-accio-sourcing-agents'
@@ -239,6 +246,7 @@ import { Route as ItGuideIndexRouteImport } from './routes/it.guide.index'
 import { Route as ItGuideGuideRouteImport } from './routes/it.guide.$guide'
 import { Route as PtBlogIndexRouteImport } from './routes/pt.blog.index'
 import { Route as PtBlogSlugRouteImport } from './routes/pt.blog.$slug'
+import { Route as PtBlogAccioSourcingAgentFreeRouteImport } from './routes/pt.blog.accio-sourcing-agent-free'
 import { Route as PtBlogAiSupplierNegotiationMoqPriceRouteImport } from './routes/pt.blog.ai-supplier-negotiation-moq-price'
 import { Route as PtBlogCaseStudySourcingElectronics48HoursRouteImport } from './routes/pt.blog.case-study-sourcing-electronics-48-hours'
 import { Route as PtBlogChatgptVsAccioSourcingAgentsRouteImport } from './routes/pt.blog.chatgpt-vs-accio-sourcing-agents'
@@ -254,6 +262,7 @@ import { Route as PtGuideIndexRouteImport } from './routes/pt.guide.index'
 import { Route as PtGuideGuideRouteImport } from './routes/pt.guide.$guide'
 import { Route as RuBlogIndexRouteImport } from './routes/ru.blog.index'
 import { Route as RuBlogSlugRouteImport } from './routes/ru.blog.$slug'
+import { Route as RuBlogAccioSourcingAgentFreeRouteImport } from './routes/ru.blog.accio-sourcing-agent-free'
 import { Route as RuBlogAiSupplierNegotiationMoqPriceRouteImport } from './routes/ru.blog.ai-supplier-negotiation-moq-price'
 import { Route as RuBlogCaseStudySourcingElectronics48HoursRouteImport } from './routes/ru.blog.case-study-sourcing-electronics-48-hours'
 import { Route as RuBlogChatgptVsAccioSourcingAgentsRouteImport } from './routes/ru.blog.chatgpt-vs-accio-sourcing-agents'
@@ -269,6 +278,7 @@ import { Route as RuGuideIndexRouteImport } from './routes/ru.guide.index'
 import { Route as RuGuideGuideRouteImport } from './routes/ru.guide.$guide'
 import { Route as ZhBlogIndexRouteImport } from './routes/zh.blog.index'
 import { Route as ZhBlogSlugRouteImport } from './routes/zh.blog.$slug'
+import { Route as ZhBlogAccioSourcingAgentFreeRouteImport } from './routes/zh.blog.accio-sourcing-agent-free'
 import { Route as ZhBlogAiSupplierNegotiationMoqPriceRouteImport } from './routes/zh.blog.ai-supplier-negotiation-moq-price'
 import { Route as ZhBlogCaseStudySourcingElectronics48HoursRouteImport } from './routes/zh.blog.case-study-sourcing-electronics-48-hours'
 import { Route as ZhBlogChatgptVsAccioSourcingAgentsRouteImport } from './routes/zh.blog.chatgpt-vs-accio-sourcing-agents'
@@ -466,6 +476,12 @@ const BlogSlugRoute = BlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogAccioSourcingAgentFreeRoute =
+  BlogAccioSourcingAgentFreeRouteImport.update({
+    id: '/blog/accio-sourcing-agent-free',
+    path: '/blog/accio-sourcing-agent-free',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const BlogAiSupplierNegotiationMoqPriceRoute =
   BlogAiSupplierNegotiationMoqPriceRouteImport.update({
     id: '/blog/ai-supplier-negotiation-moq-price',
@@ -991,6 +1007,12 @@ const ArBlogSlugRoute = ArBlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => ArRoute,
 } as any)
+const ArBlogAccioSourcingAgentFreeRoute =
+  ArBlogAccioSourcingAgentFreeRouteImport.update({
+    id: '/blog/accio-sourcing-agent-free',
+    path: '/blog/accio-sourcing-agent-free',
+    getParentRoute: () => ArRoute,
+  } as any)
 const ArBlogAiSupplierNegotiationMoqPriceRoute =
   ArBlogAiSupplierNegotiationMoqPriceRouteImport.update({
     id: '/blog/ai-supplier-negotiation-moq-price',
@@ -1071,6 +1093,12 @@ const DeBlogSlugRoute = DeBlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => DeRoute,
 } as any)
+const DeBlogAccioSourcingAgentFreeRoute =
+  DeBlogAccioSourcingAgentFreeRouteImport.update({
+    id: '/blog/accio-sourcing-agent-free',
+    path: '/blog/accio-sourcing-agent-free',
+    getParentRoute: () => DeRoute,
+  } as any)
 const DeBlogAiSupplierNegotiationMoqPriceRoute =
   DeBlogAiSupplierNegotiationMoqPriceRouteImport.update({
     id: '/blog/ai-supplier-negotiation-moq-price',
@@ -1151,6 +1179,12 @@ const EsBlogSlugRoute = EsBlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => EsRoute,
 } as any)
+const EsBlogAccioSourcingAgentFreeRoute =
+  EsBlogAccioSourcingAgentFreeRouteImport.update({
+    id: '/blog/accio-sourcing-agent-free',
+    path: '/blog/accio-sourcing-agent-free',
+    getParentRoute: () => EsRoute,
+  } as any)
 const EsBlogAiSupplierNegotiationMoqPriceRoute =
   EsBlogAiSupplierNegotiationMoqPriceRouteImport.update({
     id: '/blog/ai-supplier-negotiation-moq-price',
@@ -1231,6 +1265,12 @@ const FrBlogSlugRoute = FrBlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => FrRoute,
 } as any)
+const FrBlogAccioSourcingAgentFreeRoute =
+  FrBlogAccioSourcingAgentFreeRouteImport.update({
+    id: '/blog/accio-sourcing-agent-free',
+    path: '/blog/accio-sourcing-agent-free',
+    getParentRoute: () => FrRoute,
+  } as any)
 const FrBlogAiSupplierNegotiationMoqPriceRoute =
   FrBlogAiSupplierNegotiationMoqPriceRouteImport.update({
     id: '/blog/ai-supplier-negotiation-moq-price',
@@ -1311,6 +1351,12 @@ const HiBlogSlugRoute = HiBlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => HiRoute,
 } as any)
+const HiBlogAccioSourcingAgentFreeRoute =
+  HiBlogAccioSourcingAgentFreeRouteImport.update({
+    id: '/blog/accio-sourcing-agent-free',
+    path: '/blog/accio-sourcing-agent-free',
+    getParentRoute: () => HiRoute,
+  } as any)
 const HiBlogAiSupplierNegotiationMoqPriceRoute =
   HiBlogAiSupplierNegotiationMoqPriceRouteImport.update({
     id: '/blog/ai-supplier-negotiation-moq-price',
@@ -1391,6 +1437,12 @@ const ItBlogSlugRoute = ItBlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => ItRoute,
 } as any)
+const ItBlogAccioSourcingAgentFreeRoute =
+  ItBlogAccioSourcingAgentFreeRouteImport.update({
+    id: '/blog/accio-sourcing-agent-free',
+    path: '/blog/accio-sourcing-agent-free',
+    getParentRoute: () => ItRoute,
+  } as any)
 const ItBlogAiSupplierNegotiationMoqPriceRoute =
   ItBlogAiSupplierNegotiationMoqPriceRouteImport.update({
     id: '/blog/ai-supplier-negotiation-moq-price',
@@ -1471,6 +1523,12 @@ const PtBlogSlugRoute = PtBlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => PtRoute,
 } as any)
+const PtBlogAccioSourcingAgentFreeRoute =
+  PtBlogAccioSourcingAgentFreeRouteImport.update({
+    id: '/blog/accio-sourcing-agent-free',
+    path: '/blog/accio-sourcing-agent-free',
+    getParentRoute: () => PtRoute,
+  } as any)
 const PtBlogAiSupplierNegotiationMoqPriceRoute =
   PtBlogAiSupplierNegotiationMoqPriceRouteImport.update({
     id: '/blog/ai-supplier-negotiation-moq-price',
@@ -1551,6 +1609,12 @@ const RuBlogSlugRoute = RuBlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => RuRoute,
 } as any)
+const RuBlogAccioSourcingAgentFreeRoute =
+  RuBlogAccioSourcingAgentFreeRouteImport.update({
+    id: '/blog/accio-sourcing-agent-free',
+    path: '/blog/accio-sourcing-agent-free',
+    getParentRoute: () => RuRoute,
+  } as any)
 const RuBlogAiSupplierNegotiationMoqPriceRoute =
   RuBlogAiSupplierNegotiationMoqPriceRouteImport.update({
     id: '/blog/ai-supplier-negotiation-moq-price',
@@ -1631,6 +1695,12 @@ const ZhBlogSlugRoute = ZhBlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => ZhRoute,
 } as any)
+const ZhBlogAccioSourcingAgentFreeRoute =
+  ZhBlogAccioSourcingAgentFreeRouteImport.update({
+    id: '/blog/accio-sourcing-agent-free',
+    path: '/blog/accio-sourcing-agent-free',
+    getParentRoute: () => ZhRoute,
+  } as any)
 const ZhBlogAiSupplierNegotiationMoqPriceRoute =
   ZhBlogAiSupplierNegotiationMoqPriceRouteImport.update({
     id: '/blog/ai-supplier-negotiation-moq-price',
@@ -1753,6 +1823,7 @@ export interface FileRoutesByFullPath {
   '/ar/templates': typeof ArTemplatesRoute
   '/ar/tiktok-shop': typeof ArTiktokShopRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/blog/accio-sourcing-agent-free': typeof BlogAccioSourcingAgentFreeRoute
   '/blog/ai-supplier-negotiation-moq-price': typeof BlogAiSupplierNegotiationMoqPriceRoute
   '/blog/case-study-sourcing-electronics-48-hours': typeof BlogCaseStudySourcingElectronics48HoursRoute
   '/blog/chatgpt-vs-accio-sourcing-agents': typeof BlogChatgptVsAccioSourcingAgentsRoute
@@ -1858,6 +1929,7 @@ export interface FileRoutesByFullPath {
   '/zh/': typeof ZhIndexRoute
   '/api/public/go': typeof ApiPublicGoRoute
   '/ar/blog/$slug': typeof ArBlogSlugRoute
+  '/ar/blog/accio-sourcing-agent-free': typeof ArBlogAccioSourcingAgentFreeRoute
   '/ar/blog/ai-supplier-negotiation-moq-price': typeof ArBlogAiSupplierNegotiationMoqPriceRoute
   '/ar/blog/case-study-sourcing-electronics-48-hours': typeof ArBlogCaseStudySourcingElectronics48HoursRoute
   '/ar/blog/chatgpt-vs-accio-sourcing-agents': typeof ArBlogChatgptVsAccioSourcingAgentsRoute
@@ -1869,6 +1941,7 @@ export interface FileRoutesByFullPath {
   '/ar/for/$useCase': typeof ArForUseCaseRoute
   '/ar/guide/$guide': typeof ArGuideGuideRoute
   '/de/blog/$slug': typeof DeBlogSlugRoute
+  '/de/blog/accio-sourcing-agent-free': typeof DeBlogAccioSourcingAgentFreeRoute
   '/de/blog/ai-supplier-negotiation-moq-price': typeof DeBlogAiSupplierNegotiationMoqPriceRoute
   '/de/blog/case-study-sourcing-electronics-48-hours': typeof DeBlogCaseStudySourcingElectronics48HoursRoute
   '/de/blog/chatgpt-vs-accio-sourcing-agents': typeof DeBlogChatgptVsAccioSourcingAgentsRoute
@@ -1880,6 +1953,7 @@ export interface FileRoutesByFullPath {
   '/de/for/$useCase': typeof DeForUseCaseRoute
   '/de/guide/$guide': typeof DeGuideGuideRoute
   '/es/blog/$slug': typeof EsBlogSlugRoute
+  '/es/blog/accio-sourcing-agent-free': typeof EsBlogAccioSourcingAgentFreeRoute
   '/es/blog/ai-supplier-negotiation-moq-price': typeof EsBlogAiSupplierNegotiationMoqPriceRoute
   '/es/blog/case-study-sourcing-electronics-48-hours': typeof EsBlogCaseStudySourcingElectronics48HoursRoute
   '/es/blog/chatgpt-vs-accio-sourcing-agents': typeof EsBlogChatgptVsAccioSourcingAgentsRoute
@@ -1891,6 +1965,7 @@ export interface FileRoutesByFullPath {
   '/es/for/$useCase': typeof EsForUseCaseRoute
   '/es/guide/$guide': typeof EsGuideGuideRoute
   '/fr/blog/$slug': typeof FrBlogSlugRoute
+  '/fr/blog/accio-sourcing-agent-free': typeof FrBlogAccioSourcingAgentFreeRoute
   '/fr/blog/ai-supplier-negotiation-moq-price': typeof FrBlogAiSupplierNegotiationMoqPriceRoute
   '/fr/blog/case-study-sourcing-electronics-48-hours': typeof FrBlogCaseStudySourcingElectronics48HoursRoute
   '/fr/blog/chatgpt-vs-accio-sourcing-agents': typeof FrBlogChatgptVsAccioSourcingAgentsRoute
@@ -1902,6 +1977,7 @@ export interface FileRoutesByFullPath {
   '/fr/for/$useCase': typeof FrForUseCaseRoute
   '/fr/guide/$guide': typeof FrGuideGuideRoute
   '/hi/blog/$slug': typeof HiBlogSlugRoute
+  '/hi/blog/accio-sourcing-agent-free': typeof HiBlogAccioSourcingAgentFreeRoute
   '/hi/blog/ai-supplier-negotiation-moq-price': typeof HiBlogAiSupplierNegotiationMoqPriceRoute
   '/hi/blog/case-study-sourcing-electronics-48-hours': typeof HiBlogCaseStudySourcingElectronics48HoursRoute
   '/hi/blog/chatgpt-vs-accio-sourcing-agents': typeof HiBlogChatgptVsAccioSourcingAgentsRoute
@@ -1913,6 +1989,7 @@ export interface FileRoutesByFullPath {
   '/hi/for/$useCase': typeof HiForUseCaseRoute
   '/hi/guide/$guide': typeof HiGuideGuideRoute
   '/it/blog/$slug': typeof ItBlogSlugRoute
+  '/it/blog/accio-sourcing-agent-free': typeof ItBlogAccioSourcingAgentFreeRoute
   '/it/blog/ai-supplier-negotiation-moq-price': typeof ItBlogAiSupplierNegotiationMoqPriceRoute
   '/it/blog/case-study-sourcing-electronics-48-hours': typeof ItBlogCaseStudySourcingElectronics48HoursRoute
   '/it/blog/chatgpt-vs-accio-sourcing-agents': typeof ItBlogChatgptVsAccioSourcingAgentsRoute
@@ -1924,6 +2001,7 @@ export interface FileRoutesByFullPath {
   '/it/for/$useCase': typeof ItForUseCaseRoute
   '/it/guide/$guide': typeof ItGuideGuideRoute
   '/pt/blog/$slug': typeof PtBlogSlugRoute
+  '/pt/blog/accio-sourcing-agent-free': typeof PtBlogAccioSourcingAgentFreeRoute
   '/pt/blog/ai-supplier-negotiation-moq-price': typeof PtBlogAiSupplierNegotiationMoqPriceRoute
   '/pt/blog/case-study-sourcing-electronics-48-hours': typeof PtBlogCaseStudySourcingElectronics48HoursRoute
   '/pt/blog/chatgpt-vs-accio-sourcing-agents': typeof PtBlogChatgptVsAccioSourcingAgentsRoute
@@ -1935,6 +2013,7 @@ export interface FileRoutesByFullPath {
   '/pt/for/$useCase': typeof PtForUseCaseRoute
   '/pt/guide/$guide': typeof PtGuideGuideRoute
   '/ru/blog/$slug': typeof RuBlogSlugRoute
+  '/ru/blog/accio-sourcing-agent-free': typeof RuBlogAccioSourcingAgentFreeRoute
   '/ru/blog/ai-supplier-negotiation-moq-price': typeof RuBlogAiSupplierNegotiationMoqPriceRoute
   '/ru/blog/case-study-sourcing-electronics-48-hours': typeof RuBlogCaseStudySourcingElectronics48HoursRoute
   '/ru/blog/chatgpt-vs-accio-sourcing-agents': typeof RuBlogChatgptVsAccioSourcingAgentsRoute
@@ -1946,6 +2025,7 @@ export interface FileRoutesByFullPath {
   '/ru/for/$useCase': typeof RuForUseCaseRoute
   '/ru/guide/$guide': typeof RuGuideGuideRoute
   '/zh/blog/$slug': typeof ZhBlogSlugRoute
+  '/zh/blog/accio-sourcing-agent-free': typeof ZhBlogAccioSourcingAgentFreeRoute
   '/zh/blog/ai-supplier-negotiation-moq-price': typeof ZhBlogAiSupplierNegotiationMoqPriceRoute
   '/zh/blog/case-study-sourcing-electronics-48-hours': typeof ZhBlogCaseStudySourcingElectronics48HoursRoute
   '/zh/blog/chatgpt-vs-accio-sourcing-agents': typeof ZhBlogChatgptVsAccioSourcingAgentsRoute
@@ -2022,6 +2102,7 @@ export interface FileRoutesByTo {
   '/ar/templates': typeof ArTemplatesRoute
   '/ar/tiktok-shop': typeof ArTiktokShopRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/blog/accio-sourcing-agent-free': typeof BlogAccioSourcingAgentFreeRoute
   '/blog/ai-supplier-negotiation-moq-price': typeof BlogAiSupplierNegotiationMoqPriceRoute
   '/blog/case-study-sourcing-electronics-48-hours': typeof BlogCaseStudySourcingElectronics48HoursRoute
   '/blog/chatgpt-vs-accio-sourcing-agents': typeof BlogChatgptVsAccioSourcingAgentsRoute
@@ -2127,6 +2208,7 @@ export interface FileRoutesByTo {
   '/zh': typeof ZhIndexRoute
   '/api/public/go': typeof ApiPublicGoRoute
   '/ar/blog/$slug': typeof ArBlogSlugRoute
+  '/ar/blog/accio-sourcing-agent-free': typeof ArBlogAccioSourcingAgentFreeRoute
   '/ar/blog/ai-supplier-negotiation-moq-price': typeof ArBlogAiSupplierNegotiationMoqPriceRoute
   '/ar/blog/case-study-sourcing-electronics-48-hours': typeof ArBlogCaseStudySourcingElectronics48HoursRoute
   '/ar/blog/chatgpt-vs-accio-sourcing-agents': typeof ArBlogChatgptVsAccioSourcingAgentsRoute
@@ -2138,6 +2220,7 @@ export interface FileRoutesByTo {
   '/ar/for/$useCase': typeof ArForUseCaseRoute
   '/ar/guide/$guide': typeof ArGuideGuideRoute
   '/de/blog/$slug': typeof DeBlogSlugRoute
+  '/de/blog/accio-sourcing-agent-free': typeof DeBlogAccioSourcingAgentFreeRoute
   '/de/blog/ai-supplier-negotiation-moq-price': typeof DeBlogAiSupplierNegotiationMoqPriceRoute
   '/de/blog/case-study-sourcing-electronics-48-hours': typeof DeBlogCaseStudySourcingElectronics48HoursRoute
   '/de/blog/chatgpt-vs-accio-sourcing-agents': typeof DeBlogChatgptVsAccioSourcingAgentsRoute
@@ -2149,6 +2232,7 @@ export interface FileRoutesByTo {
   '/de/for/$useCase': typeof DeForUseCaseRoute
   '/de/guide/$guide': typeof DeGuideGuideRoute
   '/es/blog/$slug': typeof EsBlogSlugRoute
+  '/es/blog/accio-sourcing-agent-free': typeof EsBlogAccioSourcingAgentFreeRoute
   '/es/blog/ai-supplier-negotiation-moq-price': typeof EsBlogAiSupplierNegotiationMoqPriceRoute
   '/es/blog/case-study-sourcing-electronics-48-hours': typeof EsBlogCaseStudySourcingElectronics48HoursRoute
   '/es/blog/chatgpt-vs-accio-sourcing-agents': typeof EsBlogChatgptVsAccioSourcingAgentsRoute
@@ -2160,6 +2244,7 @@ export interface FileRoutesByTo {
   '/es/for/$useCase': typeof EsForUseCaseRoute
   '/es/guide/$guide': typeof EsGuideGuideRoute
   '/fr/blog/$slug': typeof FrBlogSlugRoute
+  '/fr/blog/accio-sourcing-agent-free': typeof FrBlogAccioSourcingAgentFreeRoute
   '/fr/blog/ai-supplier-negotiation-moq-price': typeof FrBlogAiSupplierNegotiationMoqPriceRoute
   '/fr/blog/case-study-sourcing-electronics-48-hours': typeof FrBlogCaseStudySourcingElectronics48HoursRoute
   '/fr/blog/chatgpt-vs-accio-sourcing-agents': typeof FrBlogChatgptVsAccioSourcingAgentsRoute
@@ -2171,6 +2256,7 @@ export interface FileRoutesByTo {
   '/fr/for/$useCase': typeof FrForUseCaseRoute
   '/fr/guide/$guide': typeof FrGuideGuideRoute
   '/hi/blog/$slug': typeof HiBlogSlugRoute
+  '/hi/blog/accio-sourcing-agent-free': typeof HiBlogAccioSourcingAgentFreeRoute
   '/hi/blog/ai-supplier-negotiation-moq-price': typeof HiBlogAiSupplierNegotiationMoqPriceRoute
   '/hi/blog/case-study-sourcing-electronics-48-hours': typeof HiBlogCaseStudySourcingElectronics48HoursRoute
   '/hi/blog/chatgpt-vs-accio-sourcing-agents': typeof HiBlogChatgptVsAccioSourcingAgentsRoute
@@ -2182,6 +2268,7 @@ export interface FileRoutesByTo {
   '/hi/for/$useCase': typeof HiForUseCaseRoute
   '/hi/guide/$guide': typeof HiGuideGuideRoute
   '/it/blog/$slug': typeof ItBlogSlugRoute
+  '/it/blog/accio-sourcing-agent-free': typeof ItBlogAccioSourcingAgentFreeRoute
   '/it/blog/ai-supplier-negotiation-moq-price': typeof ItBlogAiSupplierNegotiationMoqPriceRoute
   '/it/blog/case-study-sourcing-electronics-48-hours': typeof ItBlogCaseStudySourcingElectronics48HoursRoute
   '/it/blog/chatgpt-vs-accio-sourcing-agents': typeof ItBlogChatgptVsAccioSourcingAgentsRoute
@@ -2193,6 +2280,7 @@ export interface FileRoutesByTo {
   '/it/for/$useCase': typeof ItForUseCaseRoute
   '/it/guide/$guide': typeof ItGuideGuideRoute
   '/pt/blog/$slug': typeof PtBlogSlugRoute
+  '/pt/blog/accio-sourcing-agent-free': typeof PtBlogAccioSourcingAgentFreeRoute
   '/pt/blog/ai-supplier-negotiation-moq-price': typeof PtBlogAiSupplierNegotiationMoqPriceRoute
   '/pt/blog/case-study-sourcing-electronics-48-hours': typeof PtBlogCaseStudySourcingElectronics48HoursRoute
   '/pt/blog/chatgpt-vs-accio-sourcing-agents': typeof PtBlogChatgptVsAccioSourcingAgentsRoute
@@ -2204,6 +2292,7 @@ export interface FileRoutesByTo {
   '/pt/for/$useCase': typeof PtForUseCaseRoute
   '/pt/guide/$guide': typeof PtGuideGuideRoute
   '/ru/blog/$slug': typeof RuBlogSlugRoute
+  '/ru/blog/accio-sourcing-agent-free': typeof RuBlogAccioSourcingAgentFreeRoute
   '/ru/blog/ai-supplier-negotiation-moq-price': typeof RuBlogAiSupplierNegotiationMoqPriceRoute
   '/ru/blog/case-study-sourcing-electronics-48-hours': typeof RuBlogCaseStudySourcingElectronics48HoursRoute
   '/ru/blog/chatgpt-vs-accio-sourcing-agents': typeof RuBlogChatgptVsAccioSourcingAgentsRoute
@@ -2215,6 +2304,7 @@ export interface FileRoutesByTo {
   '/ru/for/$useCase': typeof RuForUseCaseRoute
   '/ru/guide/$guide': typeof RuGuideGuideRoute
   '/zh/blog/$slug': typeof ZhBlogSlugRoute
+  '/zh/blog/accio-sourcing-agent-free': typeof ZhBlogAccioSourcingAgentFreeRoute
   '/zh/blog/ai-supplier-negotiation-moq-price': typeof ZhBlogAiSupplierNegotiationMoqPriceRoute
   '/zh/blog/case-study-sourcing-electronics-48-hours': typeof ZhBlogCaseStudySourcingElectronics48HoursRoute
   '/zh/blog/chatgpt-vs-accio-sourcing-agents': typeof ZhBlogChatgptVsAccioSourcingAgentsRoute
@@ -2301,6 +2391,7 @@ export interface FileRoutesById {
   '/ar/templates': typeof ArTemplatesRoute
   '/ar/tiktok-shop': typeof ArTiktokShopRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/blog/accio-sourcing-agent-free': typeof BlogAccioSourcingAgentFreeRoute
   '/blog/ai-supplier-negotiation-moq-price': typeof BlogAiSupplierNegotiationMoqPriceRoute
   '/blog/case-study-sourcing-electronics-48-hours': typeof BlogCaseStudySourcingElectronics48HoursRoute
   '/blog/chatgpt-vs-accio-sourcing-agents': typeof BlogChatgptVsAccioSourcingAgentsRoute
@@ -2406,6 +2497,7 @@ export interface FileRoutesById {
   '/zh/': typeof ZhIndexRoute
   '/api/public/go': typeof ApiPublicGoRoute
   '/ar/blog/$slug': typeof ArBlogSlugRoute
+  '/ar/blog/accio-sourcing-agent-free': typeof ArBlogAccioSourcingAgentFreeRoute
   '/ar/blog/ai-supplier-negotiation-moq-price': typeof ArBlogAiSupplierNegotiationMoqPriceRoute
   '/ar/blog/case-study-sourcing-electronics-48-hours': typeof ArBlogCaseStudySourcingElectronics48HoursRoute
   '/ar/blog/chatgpt-vs-accio-sourcing-agents': typeof ArBlogChatgptVsAccioSourcingAgentsRoute
@@ -2417,6 +2509,7 @@ export interface FileRoutesById {
   '/ar/for/$useCase': typeof ArForUseCaseRoute
   '/ar/guide/$guide': typeof ArGuideGuideRoute
   '/de/blog/$slug': typeof DeBlogSlugRoute
+  '/de/blog/accio-sourcing-agent-free': typeof DeBlogAccioSourcingAgentFreeRoute
   '/de/blog/ai-supplier-negotiation-moq-price': typeof DeBlogAiSupplierNegotiationMoqPriceRoute
   '/de/blog/case-study-sourcing-electronics-48-hours': typeof DeBlogCaseStudySourcingElectronics48HoursRoute
   '/de/blog/chatgpt-vs-accio-sourcing-agents': typeof DeBlogChatgptVsAccioSourcingAgentsRoute
@@ -2428,6 +2521,7 @@ export interface FileRoutesById {
   '/de/for/$useCase': typeof DeForUseCaseRoute
   '/de/guide/$guide': typeof DeGuideGuideRoute
   '/es/blog/$slug': typeof EsBlogSlugRoute
+  '/es/blog/accio-sourcing-agent-free': typeof EsBlogAccioSourcingAgentFreeRoute
   '/es/blog/ai-supplier-negotiation-moq-price': typeof EsBlogAiSupplierNegotiationMoqPriceRoute
   '/es/blog/case-study-sourcing-electronics-48-hours': typeof EsBlogCaseStudySourcingElectronics48HoursRoute
   '/es/blog/chatgpt-vs-accio-sourcing-agents': typeof EsBlogChatgptVsAccioSourcingAgentsRoute
@@ -2439,6 +2533,7 @@ export interface FileRoutesById {
   '/es/for/$useCase': typeof EsForUseCaseRoute
   '/es/guide/$guide': typeof EsGuideGuideRoute
   '/fr/blog/$slug': typeof FrBlogSlugRoute
+  '/fr/blog/accio-sourcing-agent-free': typeof FrBlogAccioSourcingAgentFreeRoute
   '/fr/blog/ai-supplier-negotiation-moq-price': typeof FrBlogAiSupplierNegotiationMoqPriceRoute
   '/fr/blog/case-study-sourcing-electronics-48-hours': typeof FrBlogCaseStudySourcingElectronics48HoursRoute
   '/fr/blog/chatgpt-vs-accio-sourcing-agents': typeof FrBlogChatgptVsAccioSourcingAgentsRoute
@@ -2450,6 +2545,7 @@ export interface FileRoutesById {
   '/fr/for/$useCase': typeof FrForUseCaseRoute
   '/fr/guide/$guide': typeof FrGuideGuideRoute
   '/hi/blog/$slug': typeof HiBlogSlugRoute
+  '/hi/blog/accio-sourcing-agent-free': typeof HiBlogAccioSourcingAgentFreeRoute
   '/hi/blog/ai-supplier-negotiation-moq-price': typeof HiBlogAiSupplierNegotiationMoqPriceRoute
   '/hi/blog/case-study-sourcing-electronics-48-hours': typeof HiBlogCaseStudySourcingElectronics48HoursRoute
   '/hi/blog/chatgpt-vs-accio-sourcing-agents': typeof HiBlogChatgptVsAccioSourcingAgentsRoute
@@ -2461,6 +2557,7 @@ export interface FileRoutesById {
   '/hi/for/$useCase': typeof HiForUseCaseRoute
   '/hi/guide/$guide': typeof HiGuideGuideRoute
   '/it/blog/$slug': typeof ItBlogSlugRoute
+  '/it/blog/accio-sourcing-agent-free': typeof ItBlogAccioSourcingAgentFreeRoute
   '/it/blog/ai-supplier-negotiation-moq-price': typeof ItBlogAiSupplierNegotiationMoqPriceRoute
   '/it/blog/case-study-sourcing-electronics-48-hours': typeof ItBlogCaseStudySourcingElectronics48HoursRoute
   '/it/blog/chatgpt-vs-accio-sourcing-agents': typeof ItBlogChatgptVsAccioSourcingAgentsRoute
@@ -2472,6 +2569,7 @@ export interface FileRoutesById {
   '/it/for/$useCase': typeof ItForUseCaseRoute
   '/it/guide/$guide': typeof ItGuideGuideRoute
   '/pt/blog/$slug': typeof PtBlogSlugRoute
+  '/pt/blog/accio-sourcing-agent-free': typeof PtBlogAccioSourcingAgentFreeRoute
   '/pt/blog/ai-supplier-negotiation-moq-price': typeof PtBlogAiSupplierNegotiationMoqPriceRoute
   '/pt/blog/case-study-sourcing-electronics-48-hours': typeof PtBlogCaseStudySourcingElectronics48HoursRoute
   '/pt/blog/chatgpt-vs-accio-sourcing-agents': typeof PtBlogChatgptVsAccioSourcingAgentsRoute
@@ -2483,6 +2581,7 @@ export interface FileRoutesById {
   '/pt/for/$useCase': typeof PtForUseCaseRoute
   '/pt/guide/$guide': typeof PtGuideGuideRoute
   '/ru/blog/$slug': typeof RuBlogSlugRoute
+  '/ru/blog/accio-sourcing-agent-free': typeof RuBlogAccioSourcingAgentFreeRoute
   '/ru/blog/ai-supplier-negotiation-moq-price': typeof RuBlogAiSupplierNegotiationMoqPriceRoute
   '/ru/blog/case-study-sourcing-electronics-48-hours': typeof RuBlogCaseStudySourcingElectronics48HoursRoute
   '/ru/blog/chatgpt-vs-accio-sourcing-agents': typeof RuBlogChatgptVsAccioSourcingAgentsRoute
@@ -2494,6 +2593,7 @@ export interface FileRoutesById {
   '/ru/for/$useCase': typeof RuForUseCaseRoute
   '/ru/guide/$guide': typeof RuGuideGuideRoute
   '/zh/blog/$slug': typeof ZhBlogSlugRoute
+  '/zh/blog/accio-sourcing-agent-free': typeof ZhBlogAccioSourcingAgentFreeRoute
   '/zh/blog/ai-supplier-negotiation-moq-price': typeof ZhBlogAiSupplierNegotiationMoqPriceRoute
   '/zh/blog/case-study-sourcing-electronics-48-hours': typeof ZhBlogCaseStudySourcingElectronics48HoursRoute
   '/zh/blog/chatgpt-vs-accio-sourcing-agents': typeof ZhBlogChatgptVsAccioSourcingAgentsRoute
@@ -2581,6 +2681,7 @@ export interface FileRouteTypes {
     | '/ar/templates'
     | '/ar/tiktok-shop'
     | '/blog/$slug'
+    | '/blog/accio-sourcing-agent-free'
     | '/blog/ai-supplier-negotiation-moq-price'
     | '/blog/case-study-sourcing-electronics-48-hours'
     | '/blog/chatgpt-vs-accio-sourcing-agents'
@@ -2686,6 +2787,7 @@ export interface FileRouteTypes {
     | '/zh/'
     | '/api/public/go'
     | '/ar/blog/$slug'
+    | '/ar/blog/accio-sourcing-agent-free'
     | '/ar/blog/ai-supplier-negotiation-moq-price'
     | '/ar/blog/case-study-sourcing-electronics-48-hours'
     | '/ar/blog/chatgpt-vs-accio-sourcing-agents'
@@ -2697,6 +2799,7 @@ export interface FileRouteTypes {
     | '/ar/for/$useCase'
     | '/ar/guide/$guide'
     | '/de/blog/$slug'
+    | '/de/blog/accio-sourcing-agent-free'
     | '/de/blog/ai-supplier-negotiation-moq-price'
     | '/de/blog/case-study-sourcing-electronics-48-hours'
     | '/de/blog/chatgpt-vs-accio-sourcing-agents'
@@ -2708,6 +2811,7 @@ export interface FileRouteTypes {
     | '/de/for/$useCase'
     | '/de/guide/$guide'
     | '/es/blog/$slug'
+    | '/es/blog/accio-sourcing-agent-free'
     | '/es/blog/ai-supplier-negotiation-moq-price'
     | '/es/blog/case-study-sourcing-electronics-48-hours'
     | '/es/blog/chatgpt-vs-accio-sourcing-agents'
@@ -2719,6 +2823,7 @@ export interface FileRouteTypes {
     | '/es/for/$useCase'
     | '/es/guide/$guide'
     | '/fr/blog/$slug'
+    | '/fr/blog/accio-sourcing-agent-free'
     | '/fr/blog/ai-supplier-negotiation-moq-price'
     | '/fr/blog/case-study-sourcing-electronics-48-hours'
     | '/fr/blog/chatgpt-vs-accio-sourcing-agents'
@@ -2730,6 +2835,7 @@ export interface FileRouteTypes {
     | '/fr/for/$useCase'
     | '/fr/guide/$guide'
     | '/hi/blog/$slug'
+    | '/hi/blog/accio-sourcing-agent-free'
     | '/hi/blog/ai-supplier-negotiation-moq-price'
     | '/hi/blog/case-study-sourcing-electronics-48-hours'
     | '/hi/blog/chatgpt-vs-accio-sourcing-agents'
@@ -2741,6 +2847,7 @@ export interface FileRouteTypes {
     | '/hi/for/$useCase'
     | '/hi/guide/$guide'
     | '/it/blog/$slug'
+    | '/it/blog/accio-sourcing-agent-free'
     | '/it/blog/ai-supplier-negotiation-moq-price'
     | '/it/blog/case-study-sourcing-electronics-48-hours'
     | '/it/blog/chatgpt-vs-accio-sourcing-agents'
@@ -2752,6 +2859,7 @@ export interface FileRouteTypes {
     | '/it/for/$useCase'
     | '/it/guide/$guide'
     | '/pt/blog/$slug'
+    | '/pt/blog/accio-sourcing-agent-free'
     | '/pt/blog/ai-supplier-negotiation-moq-price'
     | '/pt/blog/case-study-sourcing-electronics-48-hours'
     | '/pt/blog/chatgpt-vs-accio-sourcing-agents'
@@ -2763,6 +2871,7 @@ export interface FileRouteTypes {
     | '/pt/for/$useCase'
     | '/pt/guide/$guide'
     | '/ru/blog/$slug'
+    | '/ru/blog/accio-sourcing-agent-free'
     | '/ru/blog/ai-supplier-negotiation-moq-price'
     | '/ru/blog/case-study-sourcing-electronics-48-hours'
     | '/ru/blog/chatgpt-vs-accio-sourcing-agents'
@@ -2774,6 +2883,7 @@ export interface FileRouteTypes {
     | '/ru/for/$useCase'
     | '/ru/guide/$guide'
     | '/zh/blog/$slug'
+    | '/zh/blog/accio-sourcing-agent-free'
     | '/zh/blog/ai-supplier-negotiation-moq-price'
     | '/zh/blog/case-study-sourcing-electronics-48-hours'
     | '/zh/blog/chatgpt-vs-accio-sourcing-agents'
@@ -2850,6 +2960,7 @@ export interface FileRouteTypes {
     | '/ar/templates'
     | '/ar/tiktok-shop'
     | '/blog/$slug'
+    | '/blog/accio-sourcing-agent-free'
     | '/blog/ai-supplier-negotiation-moq-price'
     | '/blog/case-study-sourcing-electronics-48-hours'
     | '/blog/chatgpt-vs-accio-sourcing-agents'
@@ -2955,6 +3066,7 @@ export interface FileRouteTypes {
     | '/zh'
     | '/api/public/go'
     | '/ar/blog/$slug'
+    | '/ar/blog/accio-sourcing-agent-free'
     | '/ar/blog/ai-supplier-negotiation-moq-price'
     | '/ar/blog/case-study-sourcing-electronics-48-hours'
     | '/ar/blog/chatgpt-vs-accio-sourcing-agents'
@@ -2966,6 +3078,7 @@ export interface FileRouteTypes {
     | '/ar/for/$useCase'
     | '/ar/guide/$guide'
     | '/de/blog/$slug'
+    | '/de/blog/accio-sourcing-agent-free'
     | '/de/blog/ai-supplier-negotiation-moq-price'
     | '/de/blog/case-study-sourcing-electronics-48-hours'
     | '/de/blog/chatgpt-vs-accio-sourcing-agents'
@@ -2977,6 +3090,7 @@ export interface FileRouteTypes {
     | '/de/for/$useCase'
     | '/de/guide/$guide'
     | '/es/blog/$slug'
+    | '/es/blog/accio-sourcing-agent-free'
     | '/es/blog/ai-supplier-negotiation-moq-price'
     | '/es/blog/case-study-sourcing-electronics-48-hours'
     | '/es/blog/chatgpt-vs-accio-sourcing-agents'
@@ -2988,6 +3102,7 @@ export interface FileRouteTypes {
     | '/es/for/$useCase'
     | '/es/guide/$guide'
     | '/fr/blog/$slug'
+    | '/fr/blog/accio-sourcing-agent-free'
     | '/fr/blog/ai-supplier-negotiation-moq-price'
     | '/fr/blog/case-study-sourcing-electronics-48-hours'
     | '/fr/blog/chatgpt-vs-accio-sourcing-agents'
@@ -2999,6 +3114,7 @@ export interface FileRouteTypes {
     | '/fr/for/$useCase'
     | '/fr/guide/$guide'
     | '/hi/blog/$slug'
+    | '/hi/blog/accio-sourcing-agent-free'
     | '/hi/blog/ai-supplier-negotiation-moq-price'
     | '/hi/blog/case-study-sourcing-electronics-48-hours'
     | '/hi/blog/chatgpt-vs-accio-sourcing-agents'
@@ -3010,6 +3126,7 @@ export interface FileRouteTypes {
     | '/hi/for/$useCase'
     | '/hi/guide/$guide'
     | '/it/blog/$slug'
+    | '/it/blog/accio-sourcing-agent-free'
     | '/it/blog/ai-supplier-negotiation-moq-price'
     | '/it/blog/case-study-sourcing-electronics-48-hours'
     | '/it/blog/chatgpt-vs-accio-sourcing-agents'
@@ -3021,6 +3138,7 @@ export interface FileRouteTypes {
     | '/it/for/$useCase'
     | '/it/guide/$guide'
     | '/pt/blog/$slug'
+    | '/pt/blog/accio-sourcing-agent-free'
     | '/pt/blog/ai-supplier-negotiation-moq-price'
     | '/pt/blog/case-study-sourcing-electronics-48-hours'
     | '/pt/blog/chatgpt-vs-accio-sourcing-agents'
@@ -3032,6 +3150,7 @@ export interface FileRouteTypes {
     | '/pt/for/$useCase'
     | '/pt/guide/$guide'
     | '/ru/blog/$slug'
+    | '/ru/blog/accio-sourcing-agent-free'
     | '/ru/blog/ai-supplier-negotiation-moq-price'
     | '/ru/blog/case-study-sourcing-electronics-48-hours'
     | '/ru/blog/chatgpt-vs-accio-sourcing-agents'
@@ -3043,6 +3162,7 @@ export interface FileRouteTypes {
     | '/ru/for/$useCase'
     | '/ru/guide/$guide'
     | '/zh/blog/$slug'
+    | '/zh/blog/accio-sourcing-agent-free'
     | '/zh/blog/ai-supplier-negotiation-moq-price'
     | '/zh/blog/case-study-sourcing-electronics-48-hours'
     | '/zh/blog/chatgpt-vs-accio-sourcing-agents'
@@ -3128,6 +3248,7 @@ export interface FileRouteTypes {
     | '/ar/templates'
     | '/ar/tiktok-shop'
     | '/blog/$slug'
+    | '/blog/accio-sourcing-agent-free'
     | '/blog/ai-supplier-negotiation-moq-price'
     | '/blog/case-study-sourcing-electronics-48-hours'
     | '/blog/chatgpt-vs-accio-sourcing-agents'
@@ -3233,6 +3354,7 @@ export interface FileRouteTypes {
     | '/zh/'
     | '/api/public/go'
     | '/ar/blog/$slug'
+    | '/ar/blog/accio-sourcing-agent-free'
     | '/ar/blog/ai-supplier-negotiation-moq-price'
     | '/ar/blog/case-study-sourcing-electronics-48-hours'
     | '/ar/blog/chatgpt-vs-accio-sourcing-agents'
@@ -3244,6 +3366,7 @@ export interface FileRouteTypes {
     | '/ar/for/$useCase'
     | '/ar/guide/$guide'
     | '/de/blog/$slug'
+    | '/de/blog/accio-sourcing-agent-free'
     | '/de/blog/ai-supplier-negotiation-moq-price'
     | '/de/blog/case-study-sourcing-electronics-48-hours'
     | '/de/blog/chatgpt-vs-accio-sourcing-agents'
@@ -3255,6 +3378,7 @@ export interface FileRouteTypes {
     | '/de/for/$useCase'
     | '/de/guide/$guide'
     | '/es/blog/$slug'
+    | '/es/blog/accio-sourcing-agent-free'
     | '/es/blog/ai-supplier-negotiation-moq-price'
     | '/es/blog/case-study-sourcing-electronics-48-hours'
     | '/es/blog/chatgpt-vs-accio-sourcing-agents'
@@ -3266,6 +3390,7 @@ export interface FileRouteTypes {
     | '/es/for/$useCase'
     | '/es/guide/$guide'
     | '/fr/blog/$slug'
+    | '/fr/blog/accio-sourcing-agent-free'
     | '/fr/blog/ai-supplier-negotiation-moq-price'
     | '/fr/blog/case-study-sourcing-electronics-48-hours'
     | '/fr/blog/chatgpt-vs-accio-sourcing-agents'
@@ -3277,6 +3402,7 @@ export interface FileRouteTypes {
     | '/fr/for/$useCase'
     | '/fr/guide/$guide'
     | '/hi/blog/$slug'
+    | '/hi/blog/accio-sourcing-agent-free'
     | '/hi/blog/ai-supplier-negotiation-moq-price'
     | '/hi/blog/case-study-sourcing-electronics-48-hours'
     | '/hi/blog/chatgpt-vs-accio-sourcing-agents'
@@ -3288,6 +3414,7 @@ export interface FileRouteTypes {
     | '/hi/for/$useCase'
     | '/hi/guide/$guide'
     | '/it/blog/$slug'
+    | '/it/blog/accio-sourcing-agent-free'
     | '/it/blog/ai-supplier-negotiation-moq-price'
     | '/it/blog/case-study-sourcing-electronics-48-hours'
     | '/it/blog/chatgpt-vs-accio-sourcing-agents'
@@ -3299,6 +3426,7 @@ export interface FileRouteTypes {
     | '/it/for/$useCase'
     | '/it/guide/$guide'
     | '/pt/blog/$slug'
+    | '/pt/blog/accio-sourcing-agent-free'
     | '/pt/blog/ai-supplier-negotiation-moq-price'
     | '/pt/blog/case-study-sourcing-electronics-48-hours'
     | '/pt/blog/chatgpt-vs-accio-sourcing-agents'
@@ -3310,6 +3438,7 @@ export interface FileRouteTypes {
     | '/pt/for/$useCase'
     | '/pt/guide/$guide'
     | '/ru/blog/$slug'
+    | '/ru/blog/accio-sourcing-agent-free'
     | '/ru/blog/ai-supplier-negotiation-moq-price'
     | '/ru/blog/case-study-sourcing-electronics-48-hours'
     | '/ru/blog/chatgpt-vs-accio-sourcing-agents'
@@ -3321,6 +3450,7 @@ export interface FileRouteTypes {
     | '/ru/for/$useCase'
     | '/ru/guide/$guide'
     | '/zh/blog/$slug'
+    | '/zh/blog/accio-sourcing-agent-free'
     | '/zh/blog/ai-supplier-negotiation-moq-price'
     | '/zh/blog/case-study-sourcing-electronics-48-hours'
     | '/zh/blog/chatgpt-vs-accio-sourcing-agents'
@@ -3397,6 +3527,7 @@ export interface RootRouteChildren {
   ZhRoute: typeof ZhRouteWithChildren
   ApiOgRoute: typeof ApiOgRoute
   BlogSlugRoute: typeof BlogSlugRoute
+  BlogAccioSourcingAgentFreeRoute: typeof BlogAccioSourcingAgentFreeRoute
   BlogAiSupplierNegotiationMoqPriceRoute: typeof BlogAiSupplierNegotiationMoqPriceRoute
   BlogCaseStudySourcingElectronics48HoursRoute: typeof BlogCaseStudySourcingElectronics48HoursRoute
   BlogChatgptVsAccioSourcingAgentsRoute: typeof BlogChatgptVsAccioSourcingAgentsRoute
@@ -3669,6 +3800,13 @@ declare module '@tanstack/react-router' {
       path: '/blog/$slug'
       fullPath: '/blog/$slug'
       preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/accio-sourcing-agent-free': {
+      id: '/blog/accio-sourcing-agent-free'
+      path: '/blog/accio-sourcing-agent-free'
+      fullPath: '/blog/accio-sourcing-agent-free'
+      preLoaderRoute: typeof BlogAccioSourcingAgentFreeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog/ai-supplier-negotiation-moq-price': {
@@ -4399,6 +4537,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ArBlogSlugRouteImport
       parentRoute: typeof ArRoute
     }
+    '/ar/blog/accio-sourcing-agent-free': {
+      id: '/ar/blog/accio-sourcing-agent-free'
+      path: '/blog/accio-sourcing-agent-free'
+      fullPath: '/ar/blog/accio-sourcing-agent-free'
+      preLoaderRoute: typeof ArBlogAccioSourcingAgentFreeRouteImport
+      parentRoute: typeof ArRoute
+    }
     '/ar/blog/ai-supplier-negotiation-moq-price': {
       id: '/ar/blog/ai-supplier-negotiation-moq-price'
       path: '/blog/ai-supplier-negotiation-moq-price'
@@ -4502,6 +4647,13 @@ declare module '@tanstack/react-router' {
       path: '/blog/$slug'
       fullPath: '/de/blog/$slug'
       preLoaderRoute: typeof DeBlogSlugRouteImport
+      parentRoute: typeof DeRoute
+    }
+    '/de/blog/accio-sourcing-agent-free': {
+      id: '/de/blog/accio-sourcing-agent-free'
+      path: '/blog/accio-sourcing-agent-free'
+      fullPath: '/de/blog/accio-sourcing-agent-free'
+      preLoaderRoute: typeof DeBlogAccioSourcingAgentFreeRouteImport
       parentRoute: typeof DeRoute
     }
     '/de/blog/ai-supplier-negotiation-moq-price': {
@@ -4609,6 +4761,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EsBlogSlugRouteImport
       parentRoute: typeof EsRoute
     }
+    '/es/blog/accio-sourcing-agent-free': {
+      id: '/es/blog/accio-sourcing-agent-free'
+      path: '/blog/accio-sourcing-agent-free'
+      fullPath: '/es/blog/accio-sourcing-agent-free'
+      preLoaderRoute: typeof EsBlogAccioSourcingAgentFreeRouteImport
+      parentRoute: typeof EsRoute
+    }
     '/es/blog/ai-supplier-negotiation-moq-price': {
       id: '/es/blog/ai-supplier-negotiation-moq-price'
       path: '/blog/ai-supplier-negotiation-moq-price'
@@ -4712,6 +4871,13 @@ declare module '@tanstack/react-router' {
       path: '/blog/$slug'
       fullPath: '/fr/blog/$slug'
       preLoaderRoute: typeof FrBlogSlugRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/blog/accio-sourcing-agent-free': {
+      id: '/fr/blog/accio-sourcing-agent-free'
+      path: '/blog/accio-sourcing-agent-free'
+      fullPath: '/fr/blog/accio-sourcing-agent-free'
+      preLoaderRoute: typeof FrBlogAccioSourcingAgentFreeRouteImport
       parentRoute: typeof FrRoute
     }
     '/fr/blog/ai-supplier-negotiation-moq-price': {
@@ -4819,6 +4985,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HiBlogSlugRouteImport
       parentRoute: typeof HiRoute
     }
+    '/hi/blog/accio-sourcing-agent-free': {
+      id: '/hi/blog/accio-sourcing-agent-free'
+      path: '/blog/accio-sourcing-agent-free'
+      fullPath: '/hi/blog/accio-sourcing-agent-free'
+      preLoaderRoute: typeof HiBlogAccioSourcingAgentFreeRouteImport
+      parentRoute: typeof HiRoute
+    }
     '/hi/blog/ai-supplier-negotiation-moq-price': {
       id: '/hi/blog/ai-supplier-negotiation-moq-price'
       path: '/blog/ai-supplier-negotiation-moq-price'
@@ -4922,6 +5095,13 @@ declare module '@tanstack/react-router' {
       path: '/blog/$slug'
       fullPath: '/it/blog/$slug'
       preLoaderRoute: typeof ItBlogSlugRouteImport
+      parentRoute: typeof ItRoute
+    }
+    '/it/blog/accio-sourcing-agent-free': {
+      id: '/it/blog/accio-sourcing-agent-free'
+      path: '/blog/accio-sourcing-agent-free'
+      fullPath: '/it/blog/accio-sourcing-agent-free'
+      preLoaderRoute: typeof ItBlogAccioSourcingAgentFreeRouteImport
       parentRoute: typeof ItRoute
     }
     '/it/blog/ai-supplier-negotiation-moq-price': {
@@ -5029,6 +5209,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PtBlogSlugRouteImport
       parentRoute: typeof PtRoute
     }
+    '/pt/blog/accio-sourcing-agent-free': {
+      id: '/pt/blog/accio-sourcing-agent-free'
+      path: '/blog/accio-sourcing-agent-free'
+      fullPath: '/pt/blog/accio-sourcing-agent-free'
+      preLoaderRoute: typeof PtBlogAccioSourcingAgentFreeRouteImport
+      parentRoute: typeof PtRoute
+    }
     '/pt/blog/ai-supplier-negotiation-moq-price': {
       id: '/pt/blog/ai-supplier-negotiation-moq-price'
       path: '/blog/ai-supplier-negotiation-moq-price'
@@ -5134,6 +5321,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RuBlogSlugRouteImport
       parentRoute: typeof RuRoute
     }
+    '/ru/blog/accio-sourcing-agent-free': {
+      id: '/ru/blog/accio-sourcing-agent-free'
+      path: '/blog/accio-sourcing-agent-free'
+      fullPath: '/ru/blog/accio-sourcing-agent-free'
+      preLoaderRoute: typeof RuBlogAccioSourcingAgentFreeRouteImport
+      parentRoute: typeof RuRoute
+    }
     '/ru/blog/ai-supplier-negotiation-moq-price': {
       id: '/ru/blog/ai-supplier-negotiation-moq-price'
       path: '/blog/ai-supplier-negotiation-moq-price'
@@ -5237,6 +5431,13 @@ declare module '@tanstack/react-router' {
       path: '/blog/$slug'
       fullPath: '/zh/blog/$slug'
       preLoaderRoute: typeof ZhBlogSlugRouteImport
+      parentRoute: typeof ZhRoute
+    }
+    '/zh/blog/accio-sourcing-agent-free': {
+      id: '/zh/blog/accio-sourcing-agent-free'
+      path: '/blog/accio-sourcing-agent-free'
+      fullPath: '/zh/blog/accio-sourcing-agent-free'
+      preLoaderRoute: typeof ZhBlogAccioSourcingAgentFreeRouteImport
       parentRoute: typeof ZhRoute
     }
     '/zh/blog/ai-supplier-negotiation-moq-price': {
@@ -5367,6 +5568,7 @@ interface ArRouteChildren {
   ArTiktokShopRoute: typeof ArTiktokShopRoute
   ArIndexRoute: typeof ArIndexRoute
   ArBlogSlugRoute: typeof ArBlogSlugRoute
+  ArBlogAccioSourcingAgentFreeRoute: typeof ArBlogAccioSourcingAgentFreeRoute
   ArBlogAiSupplierNegotiationMoqPriceRoute: typeof ArBlogAiSupplierNegotiationMoqPriceRoute
   ArBlogCaseStudySourcingElectronics48HoursRoute: typeof ArBlogCaseStudySourcingElectronics48HoursRoute
   ArBlogChatgptVsAccioSourcingAgentsRoute: typeof ArBlogChatgptVsAccioSourcingAgentsRoute
@@ -5396,6 +5598,7 @@ const ArRouteChildren: ArRouteChildren = {
   ArTiktokShopRoute: ArTiktokShopRoute,
   ArIndexRoute: ArIndexRoute,
   ArBlogSlugRoute: ArBlogSlugRoute,
+  ArBlogAccioSourcingAgentFreeRoute: ArBlogAccioSourcingAgentFreeRoute,
   ArBlogAiSupplierNegotiationMoqPriceRoute:
     ArBlogAiSupplierNegotiationMoqPriceRoute,
   ArBlogCaseStudySourcingElectronics48HoursRoute:
@@ -5432,6 +5635,7 @@ interface DeRouteChildren {
   DeTiktokShopRoute: typeof DeTiktokShopRoute
   DeIndexRoute: typeof DeIndexRoute
   DeBlogSlugRoute: typeof DeBlogSlugRoute
+  DeBlogAccioSourcingAgentFreeRoute: typeof DeBlogAccioSourcingAgentFreeRoute
   DeBlogAiSupplierNegotiationMoqPriceRoute: typeof DeBlogAiSupplierNegotiationMoqPriceRoute
   DeBlogCaseStudySourcingElectronics48HoursRoute: typeof DeBlogCaseStudySourcingElectronics48HoursRoute
   DeBlogChatgptVsAccioSourcingAgentsRoute: typeof DeBlogChatgptVsAccioSourcingAgentsRoute
@@ -5461,6 +5665,7 @@ const DeRouteChildren: DeRouteChildren = {
   DeTiktokShopRoute: DeTiktokShopRoute,
   DeIndexRoute: DeIndexRoute,
   DeBlogSlugRoute: DeBlogSlugRoute,
+  DeBlogAccioSourcingAgentFreeRoute: DeBlogAccioSourcingAgentFreeRoute,
   DeBlogAiSupplierNegotiationMoqPriceRoute:
     DeBlogAiSupplierNegotiationMoqPriceRoute,
   DeBlogCaseStudySourcingElectronics48HoursRoute:
@@ -5497,6 +5702,7 @@ interface EsRouteChildren {
   EsTiktokShopRoute: typeof EsTiktokShopRoute
   EsIndexRoute: typeof EsIndexRoute
   EsBlogSlugRoute: typeof EsBlogSlugRoute
+  EsBlogAccioSourcingAgentFreeRoute: typeof EsBlogAccioSourcingAgentFreeRoute
   EsBlogAiSupplierNegotiationMoqPriceRoute: typeof EsBlogAiSupplierNegotiationMoqPriceRoute
   EsBlogCaseStudySourcingElectronics48HoursRoute: typeof EsBlogCaseStudySourcingElectronics48HoursRoute
   EsBlogChatgptVsAccioSourcingAgentsRoute: typeof EsBlogChatgptVsAccioSourcingAgentsRoute
@@ -5526,6 +5732,7 @@ const EsRouteChildren: EsRouteChildren = {
   EsTiktokShopRoute: EsTiktokShopRoute,
   EsIndexRoute: EsIndexRoute,
   EsBlogSlugRoute: EsBlogSlugRoute,
+  EsBlogAccioSourcingAgentFreeRoute: EsBlogAccioSourcingAgentFreeRoute,
   EsBlogAiSupplierNegotiationMoqPriceRoute:
     EsBlogAiSupplierNegotiationMoqPriceRoute,
   EsBlogCaseStudySourcingElectronics48HoursRoute:
@@ -5562,6 +5769,7 @@ interface FrRouteChildren {
   FrTiktokShopRoute: typeof FrTiktokShopRoute
   FrIndexRoute: typeof FrIndexRoute
   FrBlogSlugRoute: typeof FrBlogSlugRoute
+  FrBlogAccioSourcingAgentFreeRoute: typeof FrBlogAccioSourcingAgentFreeRoute
   FrBlogAiSupplierNegotiationMoqPriceRoute: typeof FrBlogAiSupplierNegotiationMoqPriceRoute
   FrBlogCaseStudySourcingElectronics48HoursRoute: typeof FrBlogCaseStudySourcingElectronics48HoursRoute
   FrBlogChatgptVsAccioSourcingAgentsRoute: typeof FrBlogChatgptVsAccioSourcingAgentsRoute
@@ -5591,6 +5799,7 @@ const FrRouteChildren: FrRouteChildren = {
   FrTiktokShopRoute: FrTiktokShopRoute,
   FrIndexRoute: FrIndexRoute,
   FrBlogSlugRoute: FrBlogSlugRoute,
+  FrBlogAccioSourcingAgentFreeRoute: FrBlogAccioSourcingAgentFreeRoute,
   FrBlogAiSupplierNegotiationMoqPriceRoute:
     FrBlogAiSupplierNegotiationMoqPriceRoute,
   FrBlogCaseStudySourcingElectronics48HoursRoute:
@@ -5627,6 +5836,7 @@ interface HiRouteChildren {
   HiTiktokShopRoute: typeof HiTiktokShopRoute
   HiIndexRoute: typeof HiIndexRoute
   HiBlogSlugRoute: typeof HiBlogSlugRoute
+  HiBlogAccioSourcingAgentFreeRoute: typeof HiBlogAccioSourcingAgentFreeRoute
   HiBlogAiSupplierNegotiationMoqPriceRoute: typeof HiBlogAiSupplierNegotiationMoqPriceRoute
   HiBlogCaseStudySourcingElectronics48HoursRoute: typeof HiBlogCaseStudySourcingElectronics48HoursRoute
   HiBlogChatgptVsAccioSourcingAgentsRoute: typeof HiBlogChatgptVsAccioSourcingAgentsRoute
@@ -5656,6 +5866,7 @@ const HiRouteChildren: HiRouteChildren = {
   HiTiktokShopRoute: HiTiktokShopRoute,
   HiIndexRoute: HiIndexRoute,
   HiBlogSlugRoute: HiBlogSlugRoute,
+  HiBlogAccioSourcingAgentFreeRoute: HiBlogAccioSourcingAgentFreeRoute,
   HiBlogAiSupplierNegotiationMoqPriceRoute:
     HiBlogAiSupplierNegotiationMoqPriceRoute,
   HiBlogCaseStudySourcingElectronics48HoursRoute:
@@ -5692,6 +5903,7 @@ interface ItRouteChildren {
   ItTiktokShopRoute: typeof ItTiktokShopRoute
   ItIndexRoute: typeof ItIndexRoute
   ItBlogSlugRoute: typeof ItBlogSlugRoute
+  ItBlogAccioSourcingAgentFreeRoute: typeof ItBlogAccioSourcingAgentFreeRoute
   ItBlogAiSupplierNegotiationMoqPriceRoute: typeof ItBlogAiSupplierNegotiationMoqPriceRoute
   ItBlogCaseStudySourcingElectronics48HoursRoute: typeof ItBlogCaseStudySourcingElectronics48HoursRoute
   ItBlogChatgptVsAccioSourcingAgentsRoute: typeof ItBlogChatgptVsAccioSourcingAgentsRoute
@@ -5721,6 +5933,7 @@ const ItRouteChildren: ItRouteChildren = {
   ItTiktokShopRoute: ItTiktokShopRoute,
   ItIndexRoute: ItIndexRoute,
   ItBlogSlugRoute: ItBlogSlugRoute,
+  ItBlogAccioSourcingAgentFreeRoute: ItBlogAccioSourcingAgentFreeRoute,
   ItBlogAiSupplierNegotiationMoqPriceRoute:
     ItBlogAiSupplierNegotiationMoqPriceRoute,
   ItBlogCaseStudySourcingElectronics48HoursRoute:
@@ -5757,6 +5970,7 @@ interface PtRouteChildren {
   PtTiktokShopRoute: typeof PtTiktokShopRoute
   PtIndexRoute: typeof PtIndexRoute
   PtBlogSlugRoute: typeof PtBlogSlugRoute
+  PtBlogAccioSourcingAgentFreeRoute: typeof PtBlogAccioSourcingAgentFreeRoute
   PtBlogAiSupplierNegotiationMoqPriceRoute: typeof PtBlogAiSupplierNegotiationMoqPriceRoute
   PtBlogCaseStudySourcingElectronics48HoursRoute: typeof PtBlogCaseStudySourcingElectronics48HoursRoute
   PtBlogChatgptVsAccioSourcingAgentsRoute: typeof PtBlogChatgptVsAccioSourcingAgentsRoute
@@ -5786,6 +6000,7 @@ const PtRouteChildren: PtRouteChildren = {
   PtTiktokShopRoute: PtTiktokShopRoute,
   PtIndexRoute: PtIndexRoute,
   PtBlogSlugRoute: PtBlogSlugRoute,
+  PtBlogAccioSourcingAgentFreeRoute: PtBlogAccioSourcingAgentFreeRoute,
   PtBlogAiSupplierNegotiationMoqPriceRoute:
     PtBlogAiSupplierNegotiationMoqPriceRoute,
   PtBlogCaseStudySourcingElectronics48HoursRoute:
@@ -5822,6 +6037,7 @@ interface RuRouteChildren {
   RuTiktokShopRoute: typeof RuTiktokShopRoute
   RuIndexRoute: typeof RuIndexRoute
   RuBlogSlugRoute: typeof RuBlogSlugRoute
+  RuBlogAccioSourcingAgentFreeRoute: typeof RuBlogAccioSourcingAgentFreeRoute
   RuBlogAiSupplierNegotiationMoqPriceRoute: typeof RuBlogAiSupplierNegotiationMoqPriceRoute
   RuBlogCaseStudySourcingElectronics48HoursRoute: typeof RuBlogCaseStudySourcingElectronics48HoursRoute
   RuBlogChatgptVsAccioSourcingAgentsRoute: typeof RuBlogChatgptVsAccioSourcingAgentsRoute
@@ -5851,6 +6067,7 @@ const RuRouteChildren: RuRouteChildren = {
   RuTiktokShopRoute: RuTiktokShopRoute,
   RuIndexRoute: RuIndexRoute,
   RuBlogSlugRoute: RuBlogSlugRoute,
+  RuBlogAccioSourcingAgentFreeRoute: RuBlogAccioSourcingAgentFreeRoute,
   RuBlogAiSupplierNegotiationMoqPriceRoute:
     RuBlogAiSupplierNegotiationMoqPriceRoute,
   RuBlogCaseStudySourcingElectronics48HoursRoute:
@@ -5887,6 +6104,7 @@ interface ZhRouteChildren {
   ZhTiktokShopRoute: typeof ZhTiktokShopRoute
   ZhIndexRoute: typeof ZhIndexRoute
   ZhBlogSlugRoute: typeof ZhBlogSlugRoute
+  ZhBlogAccioSourcingAgentFreeRoute: typeof ZhBlogAccioSourcingAgentFreeRoute
   ZhBlogAiSupplierNegotiationMoqPriceRoute: typeof ZhBlogAiSupplierNegotiationMoqPriceRoute
   ZhBlogCaseStudySourcingElectronics48HoursRoute: typeof ZhBlogCaseStudySourcingElectronics48HoursRoute
   ZhBlogChatgptVsAccioSourcingAgentsRoute: typeof ZhBlogChatgptVsAccioSourcingAgentsRoute
@@ -5916,6 +6134,7 @@ const ZhRouteChildren: ZhRouteChildren = {
   ZhTiktokShopRoute: ZhTiktokShopRoute,
   ZhIndexRoute: ZhIndexRoute,
   ZhBlogSlugRoute: ZhBlogSlugRoute,
+  ZhBlogAccioSourcingAgentFreeRoute: ZhBlogAccioSourcingAgentFreeRoute,
   ZhBlogAiSupplierNegotiationMoqPriceRoute:
     ZhBlogAiSupplierNegotiationMoqPriceRoute,
   ZhBlogCaseStudySourcingElectronics48HoursRoute:
@@ -5964,6 +6183,7 @@ const rootRouteChildren: RootRouteChildren = {
   ZhRoute: ZhRouteWithChildren,
   ApiOgRoute: ApiOgRoute,
   BlogSlugRoute: BlogSlugRoute,
+  BlogAccioSourcingAgentFreeRoute: BlogAccioSourcingAgentFreeRoute,
   BlogAiSupplierNegotiationMoqPriceRoute:
     BlogAiSupplierNegotiationMoqPriceRoute,
   BlogCaseStudySourcingElectronics48HoursRoute:
