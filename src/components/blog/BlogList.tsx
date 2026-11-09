@@ -1,5 +1,7 @@
 import type { ArticleListItem } from "@/lib/blog.functions";
 import { BlogShell } from "./BlogShell";
+import { localizedPath } from "@/lib/i18n";
+import { FREE_SOURCING_PATH, freeSourcingNews } from "@/lib/news-free-sourcing";
 
 const COPY: Record<
   "en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr" | "ar",
