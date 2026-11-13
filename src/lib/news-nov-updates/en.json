@@ -1,0 +1,57 @@
+{
+  "seoTitle": "Accio Work November 2026 Updates: 8 New Features for Sourcing and Selling",
+  "description": "Accio Work 0.37-0.39: Sourcing Expert opportunity reports, Approve for Me, store sales dashboard, Expert Team scheduled tasks, editable web pages and more. What is useful for your business.",
+  "keywords": ["accio work update", "accio work november 2026", "accio work 0.39", "accio sourcing expert", "accio approve for me", "ai agent store dashboard", "accio scheduled tasks"],
+  "badge": "Product news - 13 Nov 2026",
+  "title": "What's new in Accio Work: 8 November updates that save a business owner time",
+  "lede": "Four releases in two weeks (0.37 to 0.39). We picked the changes that actually matter if you source products, run a store or automate routine work, and skipped the bug fixes.",
+  "dateLabel": "Updated 13 November 2026 - Accio Work 0.37.1 to 0.39.0",
+  "readMin": "5 min read",
+  "introTitle": "In short",
+  "intro": [
+    "Between 30 October and 11 November 2026, Accio released Accio Work 0.37.1, 0.38.0, 0.38.2 and 0.39.0. The common thread: fewer clicks before you get a result, and agents that keep working without you watching them.",
+    "Below are the 8 changes we find most useful for small businesses, each with what it gives you in practice."
+  ],
+  "topTitle": "The 8 most useful changes",
+  "whyLabel": "What it gives you",
+  "items": [
+    { "tag": "Sourcing", "version": "0.38.0 - 4 Nov", "title": "Sourcing Expert homepage with opportunity reports", "body": "After you link your store, the Sourcing Expert homepage shows product opportunity reports for your main categories, without starting a task. There is also a gallery of ready cases: product discovery, supplier search, inquiry and negotiation, comparison, logistics.", "why": "You see what to source next and can start a proven task in one click instead of writing a prompt from scratch." },
+    { "tag": "Automation", "version": "0.38.0 - 4 Nov", "title": "Approve for Me mode", "body": "The agent approves routine safe operations by itself and still asks you to confirm high-risk actions. In 0.39.0, choosing Always Allow also stops repeated confirmation pop-ups.", "why": "Long tasks no longer stop and wait for you to click OK, but risky steps stay under your control." },
+    { "tag": "Stores", "version": "0.38.2 - 10 Nov", "title": "Store sales dashboard and My Stores", "body": "On the Ecommerce Expert homepage, a connected store shows revenue, visitors, conversion rate, average order value, orders and paying buyers, compared with the same period last week. A new two-step flow connects Alibaba.com, 1688, Taobao, Tmall, Pinduoduo, Doudian and JD stores.", "why": "Your key store numbers are visible right away, without building a report or opening each marketplace." },
+    { "tag": "Automation", "version": "0.39.0 - 11 Nov", "title": "Scheduled tasks run by an Expert Team", "body": "A scheduled task can now be assigned to a team of experts that work on it together. Each run happens in its own separate session, so runs do not interfere with each other.", "why": "Weekly price checks, competitor monitoring or reports can be handled by several specialised agents at once, on a schedule." },
+    { "tag": "Workspace", "version": "0.39.0 - 11 Nov", "title": "Edit generated web pages directly", "body": "Landing pages and web pages created by the agent can be edited right on the canvas: change text and content and see the result immediately, without regenerating.", "why": "Fixing a price or a headline on a product page takes seconds and does not cost a new generation." },
+    { "tag": "Automation", "version": "0.39.0 - 11 Nov", "title": "Tools from API documentation", "body": "In the desktop app you can upload API documentation; Accio finds the endpoints and builds ready-to-use tools from them.", "why": "Connect your CRM, warehouse or payment service to the agent without hiring a developer for the integration." },
+    { "tag": "Workspace", "version": "0.38.0 / 0.39.0", "title": "Experts in the cloud, tabs and several Gmail accounts", "body": "Experts you set up can sync to the cloud and work on the app, the web and other computers. The right panel opens files, canvas, browser and Knowledge Base in tabs at the same time, and several Gmail accounts can be connected at once.", "why": "Your setup follows you between devices, and the agent can handle sales and supplier mailboxes side by side." },
+    { "tag": "Speed", "version": "0.37.1 / 0.39.0", "title": "Parallel browser tasks and faster negotiation", "body": "Browser automation can run tasks in parallel batches. Product sourcing and price negotiation answer faster, and adding a follow-up requirement no longer overwrites your draft.", "why": "Checking many supplier pages or listings at once takes less time." }
+  ],
+  "ctaTitle": "Try the new features on a real task",
+  "ctaText": "Sign up for Accio Work, open the Sourcing Expert and start one of the ready cases. Sourcing with the Auto model is free within Accio's quota.",
+  "ctaBtn": "Open Accio Work free",
+  "stepsTitle": "How to get the updates",
+  "steps": [
+    { "title": "Update to 0.39.0 or newer", "body": "The desktop app updates itself; the web version is always current. API-documentation tools are desktop only." },
+    { "title": "Connect your store and mailbox", "body": "Use My Stores above the input box to add a store, then connect Gmail. The dashboard and opportunity reports appear after that." },
+    { "title": "Set up a weekly task", "body": "Turn on Approve for Me, then create a scheduled task for an Expert Team. You can copy the prompt below." }
+  ],
+  "promptLabel": "Scheduled task to try",
+  "prompt": "Every Monday at 9:00, check the current price, MOQ and lead time of my 5 shortlisted suppliers for [product]. Flag any price change above 5%, compare them in a table and send the summary to my Gmail [email].",
+  "limitsTitle": "Good to know",
+  "limits": [
+    "Most store connections in the new flow are for Alibaba.com and Chinese marketplaces (1688, Taobao, Tmall, Pinduoduo, Doudian, JD).",
+    "1688 products in sourcing are still not available in Europe and the Americas.",
+    "Building tools from API documentation works in the desktop app only.",
+    "Some tasks, such as AI chat with suppliers and media generation, use credits. Check current limits in the app."
+  ],
+  "faq": [
+    { "q": "What is the latest version of Accio Work?", "a": "Version 0.39.0, released on 11 November 2026. It added multi-tab workspace, direct editing of generated web pages, Expert Team scheduled tasks and several Gmail accounts." },
+    { "q": "What does Approve for Me do in Accio Work?", "a": "It lets the agent approve routine safe operations automatically while high-risk actions still need your manual confirmation." },
+    { "q": "Which stores can I connect to the Accio dashboard?", "a": "The new connection flow covers Alibaba.com, 1688, Taobao, Tmall, Pinduoduo, Doudian and JD. Seller and buyer accounts are added separately." },
+    { "q": "Is the Sourcing Expert still free?", "a": "Yes. Since version 0.36.2, sourcing tasks with the Auto model are free within Accio's quota; only AI-assisted supplier chat uses credits." }
+  ],
+  "sourceLabel": "Source: official Accio Work release notes",
+  "moreTitle": "Read next",
+  "freeNewsLabel": "News",
+  "promoBadge": "News - November updates",
+  "promoTitle": "Accio Work in November: 8 new features for sourcing and selling",
+  "promoCta": "See what's new"
+}
