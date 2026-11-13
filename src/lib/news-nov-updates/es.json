@@ -1,0 +1,57 @@
+{
+  "seoTitle": "Novedades de Accio Work noviembre 2026: 8 funciones nuevas para comprar y vender",
+  "description": "Accio Work 0.37-0.39: informes de oportunidades en Sourcing Expert, modo Aprobar por mí, panel de ventas de la tienda, tareas programadas para equipos de expertos y páginas web editables. Lo útil para tu negocio.",
+  "keywords": ["actualización accio work", "accio work noviembre 2026", "accio work 0.39", "accio sourcing expert", "agente ia compras", "panel de ventas tienda ia", "tareas programadas agente ia"],
+  "badge": "Novedades - 13 nov 2026",
+  "title": "Novedades de Accio Work: 8 actualizaciones de noviembre que ahorran tiempo al emprendedor",
+  "lede": "Cuatro versiones en dos semanas (de la 0.37 a la 0.39). Elegimos los cambios que importan de verdad si compras productos, gestionas una tienda o automatizas tareas rutinarias, y dejamos fuera las correcciones de errores.",
+  "dateLabel": "Actualizado el 13 de noviembre de 2026 - Accio Work de 0.37.1 a 0.39.0",
+  "readMin": "5 min de lectura",
+  "introTitle": "En resumen",
+  "intro": [
+    "Entre el 30 de octubre y el 11 de noviembre de 2026, Accio lanzó Accio Work 0.37.1, 0.38.0, 0.38.2 y 0.39.0. La idea común: menos clics hasta el resultado y agentes que siguen trabajando sin que tengas que vigilarlos.",
+    "Estos son los 8 cambios que consideramos más útiles para pequeñas empresas, cada uno con lo que te aporta en la práctica."
+  ],
+  "topTitle": "Los 8 cambios más útiles",
+  "whyLabel": "Qué te aporta",
+  "items": [
+    { "tag": "Compras", "version": "0.38.0 - 4 nov", "title": "Inicio de Sourcing Expert con informes de oportunidades", "body": "Tras vincular tu tienda, el inicio de Sourcing Expert muestra informes de oportunidades de producto para tus categorías principales, sin iniciar una tarea. También hay una galería de casos listos: búsqueda de producto, búsqueda de proveedores, consulta y negociación, comparación y logística.", "why": "Ves qué comprar a continuación y lanzas un flujo probado con un clic en lugar de escribir un prompt desde cero." },
+    { "tag": "Automatización", "version": "0.38.0 - 4 nov", "title": "Modo Aprobar por mí", "body": "El agente aprueba por sí mismo las operaciones rutinarias seguras y sigue pidiéndote confirmación para las acciones de alto riesgo. En la 0.39.0, elegir Permitir siempre también elimina las ventanas de confirmación repetidas.", "why": "Las tareas largas ya no se detienen esperando tu clic, y los pasos arriesgados siguen bajo tu control." },
+    { "tag": "Tiendas", "version": "0.38.2 - 10 nov", "title": "Panel de ventas y Mis tiendas", "body": "En el inicio de Ecommerce Expert, una tienda conectada muestra ingresos, visitantes, tasa de conversión, ticket medio, pedidos y compradores que pagan, comparados con el mismo periodo de la semana anterior. Un nuevo flujo de dos pasos conecta tiendas de Alibaba.com, 1688, Taobao, Tmall, Pinduoduo, Doudian y JD.", "why": "Las cifras clave de tu tienda se ven al instante, sin preparar informes ni abrir cada marketplace." },
+    { "tag": "Automatización", "version": "0.39.0 - 11 nov", "title": "Tareas programadas para un equipo de expertos", "body": "Ahora una tarea programada puede asignarse a un equipo de expertos que trabaja en ella en conjunto. Cada ejecución ocurre en una sesión independiente, así no se interfieren entre sí.", "why": "Controles de precios semanales, seguimiento de la competencia o informes los pueden llevar varios agentes especializados a la vez, según calendario." },
+    { "tag": "Espacio de trabajo", "version": "0.39.0 - 11 nov", "title": "Edición directa de páginas web generadas", "body": "Las landing pages y páginas web creadas por el agente se editan directamente en el lienzo: cambias texto y contenido y ves el resultado al momento, sin regenerar.", "why": "Corregir un precio o un titular en una página de producto lleva segundos y no cuesta una nueva generación." },
+    { "tag": "Automatización", "version": "0.39.0 - 11 nov", "title": "Herramientas a partir de documentación de API", "body": "En la app de escritorio puedes subir la documentación de una API; Accio detecta los endpoints y crea herramientas listas para usar.", "why": "Conecta tu CRM, almacén o servicio de pagos al agente sin contratar a un desarrollador para la integración." },
+    { "tag": "Espacio de trabajo", "version": "0.38.0 / 0.39.0", "title": "Expertos en la nube, pestañas y varias cuentas de Gmail", "body": "Los expertos que configuras se sincronizan en la nube y funcionan en la app, en la web y en otros ordenadores. El panel derecho abre archivos, lienzo, navegador y base de conocimiento en pestañas a la vez, y puedes conectar varias cuentas de Gmail simultáneamente.", "why": "Tu configuración te acompaña entre dispositivos y el agente gestiona en paralelo el correo de ventas y el de proveedores." },
+    { "tag": "Velocidad", "version": "0.37.1 / 0.39.0", "title": "Tareas de navegador en paralelo y negociación más rápida", "body": "La automatización del navegador ejecuta tareas en lotes paralelos. La búsqueda de productos y la negociación de precios responden más rápido, y añadir un requisito ya no sobrescribe tu borrador.", "why": "Revisar muchas páginas de proveedores o anuncios a la vez lleva menos tiempo." }
+  ],
+  "ctaTitle": "Prueba las novedades en una tarea real",
+  "ctaText": "Regístrate en Accio Work, abre Sourcing Expert y lanza uno de los casos listos. Las compras con el modelo Auto son gratuitas dentro de la cuota de Accio.",
+  "ctaBtn": "Abrir Accio Work gratis",
+  "stepsTitle": "Cómo obtener las novedades",
+  "steps": [
+    { "title": "Actualiza a la 0.39.0 o superior", "body": "La app de escritorio se actualiza sola y la versión web siempre está al día. Las herramientas desde documentación de API solo están en escritorio." },
+    { "title": "Conecta tu tienda y tu correo", "body": "Desde Mis tiendas, encima del cuadro de texto, añade una tienda y luego conecta Gmail. Después aparecen el panel y los informes de oportunidades." },
+    { "title": "Configura una tarea semanal", "body": "Activa Aprobar por mí y crea una tarea programada para un equipo de expertos. Puedes copiar el prompt de abajo." }
+  ],
+  "promptLabel": "Tarea programada para probar",
+  "prompt": "Cada lunes a las 9:00 revisa el precio actual, el MOQ y el plazo de producción de mis 5 proveedores preseleccionados de [producto]. Marca cualquier cambio de precio superior al 5%, compáralos en una tabla y envía el resumen a mi Gmail [email].",
+  "limitsTitle": "Conviene saber",
+  "limits": [
+    "El nuevo flujo de conexión está pensado sobre todo para Alibaba.com y marketplaces chinos (1688, Taobao, Tmall, Pinduoduo, Doudian, JD).",
+    "Los productos de 1688 en compras siguen sin estar disponibles en Europa y América.",
+    "Las herramientas desde documentación de API solo se crean en la app de escritorio.",
+    "Algunas tareas, como el chat con proveedores por IA y la generación de contenido multimedia, consumen créditos. Consulta los límites actuales en la app."
+  ],
+  "faq": [
+    { "q": "¿Cuál es la última versión de Accio Work?", "a": "La versión 0.39.0, publicada el 11 de noviembre de 2026. Añadió pestañas en el espacio de trabajo, edición directa de páginas web generadas, tareas programadas para equipos de expertos y varias cuentas de Gmail." },
+    { "q": "¿Qué hace Aprobar por mí en Accio Work?", "a": "Permite que el agente apruebe automáticamente las operaciones rutinarias seguras, mientras que las acciones de alto riesgo siguen necesitando tu confirmación manual." },
+    { "q": "¿Qué tiendas puedo conectar al panel de Accio?", "a": "El nuevo flujo admite Alibaba.com, 1688, Taobao, Tmall, Pinduoduo, Doudian y JD. Las cuentas de vendedor y de comprador se añaden por separado." },
+    { "q": "¿Sigue siendo gratis Sourcing Expert?", "a": "Sí. Desde la versión 0.36.2, las tareas de compras con el modelo Auto son gratuitas dentro de la cuota de Accio; solo el chat con proveedores por IA consume créditos." }
+  ],
+  "sourceLabel": "Fuente: notas de versión oficiales de Accio Work",
+  "moreTitle": "Sigue leyendo",
+  "freeNewsLabel": "Novedades",
+  "promoBadge": "Novedades - actualizaciones de noviembre",
+  "promoTitle": "Accio Work en noviembre: 8 funciones nuevas para comprar y vender",
+  "promoCta": "Ver novedades"
+}

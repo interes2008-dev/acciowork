@@ -2,6 +2,7 @@ import type { ArticleListItem } from "@/lib/blog.functions";
 import { BlogShell } from "./BlogShell";
 import { localizedPath } from "@/lib/i18n";
 import { FREE_SOURCING_PATH, freeSourcingNews } from "@/lib/news-free-sourcing";
+import { NOV_UPDATES_PATH, novUpdatesNews } from "@/lib/news-nov-updates";
 
 const COPY: Record<
   "en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr" | "ar",
@@ -115,9 +116,18 @@ export function BlogList({
         };
         const [badge, title, cta] = H[lang] ?? H.en;
         const news = freeSourcingNews(lang);
+        const nov = novUpdatesNews(lang);
         const arrow = lang === "ar" ? "←" : "→";
         return (
-          <div className="mb-12 grid gap-4 md:grid-cols-2">
+          <div className="mb-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <a
+              href={localizedPath(NOV_UPDATES_PATH, lang)}
+              className="flex flex-col gap-2 rounded-[32px] border border-primary/30 bg-primary/5 p-6 transition hover:border-primary md:p-8"
+            >
+              <span className="text-xs font-semibold uppercase tracking-wider text-primary">{nov.promoBadge}</span>
+              <span className="text-2xl font-bold text-foreground">{nov.promoTitle}</span>
+              <span className="text-foreground/70">{nov.promoCta} {arrow}</span>
+            </a>
             <a
               href={localizedPath(FREE_SOURCING_PATH, lang)}
               className="flex flex-col gap-2 rounded-[32px] border border-primary/30 bg-primary/5 p-6 transition hover:border-primary md:p-8"

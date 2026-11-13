@@ -1,0 +1,57 @@
+{
+  "seoTitle": "Nouveautés Accio Work novembre 2026 : 8 fonctions pour acheter et vendre",
+  "description": "Accio Work 0.37-0.39 : rapports d’opportunités dans le Sourcing Expert, mode Approuver pour moi, tableau de bord des ventes, tâches planifiées pour une équipe d’experts et pages web modifiables. Ce qui sert votre entreprise.",
+  "keywords": ["mise à jour accio work", "accio work novembre 2026", "accio work 0.39", "accio sourcing expert", "agent ia achats", "tableau de bord boutique ia", "tâches planifiées agent ia"],
+  "badge": "Actualité produit - 13 nov. 2026",
+  "title": "Quoi de neuf dans Accio Work : 8 mises à jour de novembre qui font gagner du temps aux entrepreneurs",
+  "lede": "Quatre versions en deux semaines (de 0.37 à 0.39). Nous avons retenu les changements qui comptent vraiment si vous achetez des produits, gérez une boutique ou automatisez des tâches répétitives, sans les corrections de bugs.",
+  "dateLabel": "Mis à jour le 13 novembre 2026 - Accio Work de 0.37.1 à 0.39.0",
+  "readMin": "5 min de lecture",
+  "introTitle": "En bref",
+  "intro": [
+    "Entre le 30 octobre et le 11 novembre 2026, Accio a publié Accio Work 0.37.1, 0.38.0, 0.38.2 et 0.39.0. Le fil rouge : moins de clics avant le résultat et des agents qui continuent à travailler sans que vous les surveilliez.",
+    "Voici les 8 changements que nous jugeons les plus utiles pour les petites entreprises, chacun avec son bénéfice concret."
+  ],
+  "topTitle": "Les 8 changements les plus utiles",
+  "whyLabel": "Ce que ça vous apporte",
+  "items": [
+    { "tag": "Achats", "version": "0.38.0 - 4 nov.", "title": "Accueil du Sourcing Expert avec rapports d’opportunités", "body": "Une fois votre boutique liée, l’accueil du Sourcing Expert affiche des rapports d’opportunités produit pour vos catégories principales, sans lancer de tâche. Une galerie de cas prêts est aussi proposée : recherche de produits, recherche de fournisseurs, demande de prix et négociation, comparaison, logistique.", "why": "Vous voyez quoi acheter ensuite et lancez un scénario éprouvé en un clic au lieu d’écrire un prompt de zéro." },
+    { "tag": "Automatisation", "version": "0.38.0 - 4 nov.", "title": "Mode Approuver pour moi", "body": "L’agent approuve lui-même les opérations courantes sans risque et vous demande toujours confirmation pour les actions à risque. Depuis la 0.39.0, choisir Toujours autoriser supprime aussi les fenêtres de confirmation répétées.", "why": "Les longues tâches ne s’arrêtent plus en attendant votre clic, et les étapes risquées restent sous votre contrôle." },
+    { "tag": "Boutiques", "version": "0.38.2 - 10 nov.", "title": "Tableau de bord des ventes et Mes boutiques", "body": "Sur l’accueil de l’Ecommerce Expert, une boutique connectée affiche chiffre d’affaires, visiteurs, taux de conversion, panier moyen, commandes et acheteurs payants, comparés à la même période de la semaine précédente. Un nouveau parcours en deux étapes connecte les boutiques Alibaba.com, 1688, Taobao, Tmall, Pinduoduo, Doudian et JD.", "why": "Vos chiffres clés sont visibles tout de suite, sans construire de rapport ni ouvrir chaque marketplace." },
+    { "tag": "Automatisation", "version": "0.39.0 - 11 nov.", "title": "Tâches planifiées confiées à une équipe d’experts", "body": "Une tâche planifiée peut désormais être confiée à une équipe d’experts qui y travaillent ensemble. Chaque exécution se déroule dans une session distincte, sans interférence entre les exécutions.", "why": "Contrôle hebdomadaire des prix, veille concurrentielle ou rapports peuvent être assurés par plusieurs agents spécialisés à la fois, selon un calendrier." },
+    { "tag": "Espace de travail", "version": "0.39.0 - 11 nov.", "title": "Modifier directement les pages web générées", "body": "Les landing pages et pages web créées par l’agent se modifient directement sur le canevas : changez le texte et le contenu et voyez le résultat aussitôt, sans regénérer.", "why": "Corriger un prix ou un titre sur une fiche produit prend quelques secondes et ne coûte pas une nouvelle génération." },
+    { "tag": "Automatisation", "version": "0.39.0 - 11 nov.", "title": "Des outils à partir d’une documentation d’API", "body": "Dans l’application de bureau, vous pouvez importer une documentation d’API ; Accio repère les points d’accès et en fait des outils prêts à l’emploi.", "why": "Reliez votre CRM, votre entrepôt ou votre service de paiement à l’agent sans embaucher un développeur pour l’intégration." },
+    { "tag": "Espace de travail", "version": "0.38.0 / 0.39.0", "title": "Experts dans le cloud, onglets et plusieurs comptes Gmail", "body": "Les experts que vous configurez se synchronisent dans le cloud et fonctionnent dans l’application, sur le web et sur d’autres ordinateurs. Le panneau de droite ouvre fichiers, canevas, navigateur et base de connaissances en onglets simultanés, et plusieurs comptes Gmail peuvent être connectés en même temps.", "why": "Votre configuration vous suit d’un appareil à l’autre, et l’agent gère en parallèle la boîte ventes et la boîte fournisseurs." },
+    { "tag": "Vitesse", "version": "0.37.1 / 0.39.0", "title": "Tâches navigateur en parallèle et négociation plus rapide", "body": "L’automatisation du navigateur exécute les tâches par lots parallèles. La recherche de produits et la négociation des prix répondent plus vite, et ajouter une exigence n’écrase plus votre brouillon.", "why": "Vérifier de nombreuses pages fournisseurs ou annonces à la fois prend moins de temps." }
+  ],
+  "ctaTitle": "Testez les nouveautés sur une vraie tâche",
+  "ctaText": "Inscrivez-vous sur Accio Work, ouvrez le Sourcing Expert et lancez l’un des cas prêts. Le sourcing avec le modèle Auto est gratuit dans la limite du quota Accio.",
+  "ctaBtn": "Ouvrir Accio Work gratuitement",
+  "stepsTitle": "Comment obtenir les mises à jour",
+  "steps": [
+    { "title": "Passez à la 0.39.0 ou plus récente", "body": "L’application de bureau se met à jour seule, la version web est toujours à jour. Les outils depuis une documentation d’API sont réservés au bureau." },
+    { "title": "Connectez boutique et messagerie", "body": "Via Mes boutiques, au-dessus de la zone de saisie, ajoutez une boutique, puis connectez Gmail. Le tableau de bord et les rapports d’opportunités apparaissent ensuite." },
+    { "title": "Créez une tâche hebdomadaire", "body": "Activez Approuver pour moi, puis créez une tâche planifiée pour une équipe d’experts. Vous pouvez copier le prompt ci-dessous." }
+  ],
+  "promptLabel": "Tâche planifiée à essayer",
+  "prompt": "Chaque lundi à 9 h, vérifie le prix actuel, le MOQ et le délai de production de mes 5 fournisseurs présélectionnés pour [produit]. Signale toute variation de prix supérieure à 5 %, compare-les dans un tableau et envoie le résumé sur mon Gmail [email].",
+  "limitsTitle": "Bon à savoir",
+  "limits": [
+    "Le nouveau parcours de connexion vise surtout Alibaba.com et les marketplaces chinoises (1688, Taobao, Tmall, Pinduoduo, Doudian, JD).",
+    "Les produits 1688 dans le sourcing ne sont toujours pas disponibles en Europe ni dans les Amériques.",
+    "Les outils depuis une documentation d’API ne se créent que dans l’application de bureau.",
+    "Certaines tâches, comme le chat IA avec les fournisseurs et la génération de médias, consomment des crédits. Vérifiez les limites actuelles dans l’application."
+  ],
+  "faq": [
+    { "q": "Quelle est la dernière version d’Accio Work ?", "a": "La version 0.39.0, publiée le 11 novembre 2026. Elle ajoute les onglets dans l’espace de travail, la modification directe des pages web générées, les tâches planifiées pour une équipe d’experts et plusieurs comptes Gmail." },
+    { "q": "Que fait le mode Approuver pour moi dans Accio Work ?", "a": "Il permet à l’agent d’approuver automatiquement les opérations courantes sans risque, tandis que les actions à risque demandent toujours votre confirmation manuelle." },
+    { "q": "Quelles boutiques puis-je connecter au tableau de bord Accio ?", "a": "Le nouveau parcours prend en charge Alibaba.com, 1688, Taobao, Tmall, Pinduoduo, Doudian et JD. Les comptes vendeur et acheteur s’ajoutent séparément." },
+    { "q": "Le Sourcing Expert est-il toujours gratuit ?", "a": "Oui. Depuis la version 0.36.2, les tâches de sourcing avec le modèle Auto sont gratuites dans le quota Accio ; seul le chat IA avec les fournisseurs consomme des crédits." }
+  ],
+  "sourceLabel": "Source : notes de version officielles d’Accio Work",
+  "moreTitle": "À lire ensuite",
+  "freeNewsLabel": "Actualité",
+  "promoBadge": "Actualité - mises à jour de novembre",
+  "promoTitle": "Accio Work en novembre : 8 nouvelles fonctions pour acheter et vendre",
+  "promoCta": "Voir les nouveautés"
+}

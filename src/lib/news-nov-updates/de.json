@@ -1,0 +1,57 @@
+{
+  "seoTitle": "Accio Work Updates November 2026: 8 neue Funktionen für Einkauf und Verkauf",
+  "description": "Accio Work 0.37-0.39: Chancenberichte im Sourcing Expert, „Für mich genehmigen“, Shop-Umsatz-Dashboard, geplante Aufgaben für Experten-Teams und direkt bearbeitbare Webseiten. Was Ihrem Business hilft.",
+  "keywords": ["accio work update", "accio work november 2026", "accio work 0.39", "accio sourcing expert", "ki agent einkauf", "shop dashboard ki", "geplante aufgaben ki agent"],
+  "badge": "Produkt-News - 13. Nov. 2026",
+  "title": "Neu in Accio Work: 8 November-Updates, die Unternehmern Zeit sparen",
+  "lede": "Vier Releases in zwei Wochen (0.37 bis 0.39). Wir haben die Änderungen ausgewählt, die wirklich zählen, wenn Sie Waren einkaufen, einen Shop betreiben oder Routinearbeit automatisieren, und die Fehlerbehebungen weggelassen.",
+  "dateLabel": "Aktualisiert am 13. November 2026 - Accio Work 0.37.1 bis 0.39.0",
+  "readMin": "5 Min. Lesezeit",
+  "introTitle": "Kurz gesagt",
+  "intro": [
+    "Zwischen dem 30. Oktober und dem 11. November 2026 hat Accio die Versionen 0.37.1, 0.38.0, 0.38.2 und 0.39.0 von Accio Work veröffentlicht. Der rote Faden: weniger Klicks bis zum Ergebnis und Agenten, die weiterarbeiten, ohne dass Sie zusehen müssen.",
+    "Hier sind die 8 Änderungen, die wir für kleine Unternehmen am nützlichsten finden, jeweils mit dem praktischen Nutzen."
+  ],
+  "topTitle": "Die 8 nützlichsten Änderungen",
+  "whyLabel": "Ihr Nutzen",
+  "items": [
+    { "tag": "Einkauf", "version": "0.38.0 - 4. Nov.", "title": "Sourcing-Expert-Startseite mit Chancenberichten", "body": "Nach dem Verknüpfen Ihres Shops zeigt die Startseite des Sourcing Expert Produktchancen für Ihre Hauptkategorien, ohne dass Sie eine Aufgabe starten. Dazu gibt es eine Galerie fertiger Fälle: Produktsuche, Lieferantensuche, Anfrage und Verhandlung, Vergleich, Logistik.", "why": "Sie sehen, was Sie als Nächstes beschaffen sollten, und starten einen erprobten Ablauf mit einem Klick statt mit einem leeren Prompt." },
+    { "tag": "Automatisierung", "version": "0.38.0 - 4. Nov.", "title": "Modus „Für mich genehmigen“", "body": "Der Agent genehmigt routinemäßige, sichere Vorgänge selbst und fragt bei riskanten Aktionen weiterhin nach. Ab 0.39.0 beendet „Immer erlauben“ auch wiederholte Bestätigungsfenster.", "why": "Lange Aufgaben bleiben nicht mehr hängen, bis Sie auf OK klicken, und riskante Schritte bleiben unter Ihrer Kontrolle." },
+    { "tag": "Shops", "version": "0.38.2 - 10. Nov.", "title": "Umsatz-Dashboard und „Meine Shops“", "body": "Auf der Startseite des E-Commerce Expert zeigt ein verbundener Shop Umsatz, Besucher, Conversion-Rate, durchschnittlichen Bestellwert, Bestellungen und zahlende Käufer im Vergleich zur Vorwoche. Ein neuer Zwei-Schritt-Ablauf verbindet Shops auf Alibaba.com, 1688, Taobao, Tmall, Pinduoduo, Doudian und JD.", "why": "Ihre wichtigsten Shop-Zahlen sind sofort sichtbar, ohne Bericht und ohne jeden Marktplatz einzeln zu öffnen." },
+    { "tag": "Automatisierung", "version": "0.39.0 - 11. Nov.", "title": "Geplante Aufgaben für ein Experten-Team", "body": "Eine geplante Aufgabe kann jetzt einem Team von Experten zugewiesen werden, das gemeinsam daran arbeitet. Jeder Lauf findet in einer eigenen Sitzung statt, sodass sich Läufe nicht stören.", "why": "Wöchentliche Preischecks, Wettbewerbsbeobachtung oder Berichte erledigen mehrere spezialisierte Agenten gleichzeitig nach Zeitplan." },
+    { "tag": "Arbeitsbereich", "version": "0.39.0 - 11. Nov.", "title": "Erstellte Webseiten direkt bearbeiten", "body": "Landingpages und Webseiten des Agenten lassen sich direkt auf der Arbeitsfläche bearbeiten: Text und Inhalt ändern und das Ergebnis sofort sehen, ohne neu zu generieren.", "why": "Einen Preis oder eine Überschrift auf einer Produktseite zu korrigieren dauert Sekunden und kostet keine neue Generierung." },
+    { "tag": "Automatisierung", "version": "0.39.0 - 11. Nov.", "title": "Tools aus API-Dokumentation", "body": "In der Desktop-App können Sie eine API-Dokumentation hochladen; Accio erkennt die Endpunkte und baut daraus einsatzbereite Tools.", "why": "Verbinden Sie CRM, Lager oder Zahlungsdienst mit dem Agenten, ohne einen Entwickler für die Integration zu beauftragen." },
+    { "tag": "Arbeitsbereich", "version": "0.38.0 / 0.39.0", "title": "Experten in der Cloud, Tabs und mehrere Gmail-Konten", "body": "Eingerichtete Experten synchronisieren sich in die Cloud und funktionieren in der App, im Web und auf anderen Computern. Das rechte Panel öffnet Dateien, Arbeitsfläche, Browser und Wissensbasis gleichzeitig in Tabs, und mehrere Gmail-Konten lassen sich parallel verbinden.", "why": "Ihre Einrichtung zieht mit Ihnen um, und der Agent betreut Verkaufs- und Lieferantenpostfach nebeneinander." },
+    { "tag": "Tempo", "version": "0.37.1 / 0.39.0", "title": "Parallele Browser-Aufgaben und schnellere Verhandlung", "body": "Die Browser-Automatisierung führt Aufgaben in parallelen Stapeln aus. Produktsuche und Preisverhandlung antworten schneller, und Nachträge überschreiben Ihren Entwurf nicht mehr.", "why": "Viele Lieferantenseiten oder Angebote gleichzeitig zu prüfen geht schneller." }
+  ],
+  "ctaTitle": "Testen Sie die neuen Funktionen an einer echten Aufgabe",
+  "ctaText": "Registrieren Sie sich bei Accio Work, öffnen Sie den Sourcing Expert und starten Sie einen der fertigen Fälle. Sourcing mit dem Auto-Modell ist im Rahmen des Accio-Kontingents kostenlos.",
+  "ctaBtn": "Accio Work kostenlos öffnen",
+  "stepsTitle": "So erhalten Sie die Updates",
+  "steps": [
+    { "title": "Auf 0.39.0 oder neuer aktualisieren", "body": "Die Desktop-App aktualisiert sich selbst, die Web-Version ist immer aktuell. Tools aus API-Dokumentation gibt es nur am Desktop." },
+    { "title": "Shop und Postfach verbinden", "body": "Fügen Sie über „Meine Shops“ oberhalb des Eingabefelds einen Shop hinzu und verbinden Sie danach Gmail. Dann erscheinen Dashboard und Chancenberichte." },
+    { "title": "Eine wöchentliche Aufgabe einrichten", "body": "Aktivieren Sie „Für mich genehmigen“ und legen Sie eine geplante Aufgabe für ein Experten-Team an. Den Prompt unten können Sie kopieren." }
+  ],
+  "promptLabel": "Geplante Aufgabe zum Ausprobieren",
+  "prompt": "Prüfe jeden Montag um 9:00 Uhr den aktuellen Preis, die MOQ und die Lieferzeit meiner 5 ausgewählten Lieferanten für [Produkt]. Markiere Preisänderungen über 5 %, vergleiche sie in einer Tabelle und sende die Zusammenfassung an mein Gmail [E-Mail].",
+  "limitsTitle": "Gut zu wissen",
+  "limits": [
+    "Der neue Verbindungsablauf richtet sich vor allem an Alibaba.com und chinesische Marktplätze (1688, Taobao, Tmall, Pinduoduo, Doudian, JD).",
+    "1688-Produkte im Sourcing sind in Europa und Amerika weiterhin nicht verfügbar.",
+    "Tools aus API-Dokumentation entstehen nur in der Desktop-App.",
+    "Manche Aufgaben, etwa KI-Chat mit Lieferanten und Mediengenerierung, verbrauchen Credits. Aktuelle Limits sehen Sie in der App."
+  ],
+  "faq": [
+    { "q": "Was ist die neueste Version von Accio Work?", "a": "Version 0.39.0 vom 11. November 2026. Sie bringt Tabs im Arbeitsbereich, direkte Bearbeitung erstellter Webseiten, geplante Aufgaben für Experten-Teams und mehrere Gmail-Konten." },
+    { "q": "Was macht „Für mich genehmigen“ in Accio Work?", "a": "Der Agent genehmigt routinemäßige sichere Vorgänge automatisch, riskante Aktionen brauchen weiterhin Ihre manuelle Bestätigung." },
+    { "q": "Welche Shops kann ich mit dem Accio-Dashboard verbinden?", "a": "Der neue Ablauf unterstützt Alibaba.com, 1688, Taobao, Tmall, Pinduoduo, Doudian und JD. Verkäufer- und Käuferkonten werden getrennt hinzugefügt." },
+    { "q": "Ist der Sourcing Expert noch kostenlos?", "a": "Ja. Seit Version 0.36.2 sind Sourcing-Aufgaben mit dem Auto-Modell im Accio-Kontingent kostenlos; nur der KI-Chat mit Lieferanten verbraucht Credits." }
+  ],
+  "sourceLabel": "Quelle: offizielle Release Notes von Accio Work",
+  "moreTitle": "Weiterlesen",
+  "freeNewsLabel": "News",
+  "promoBadge": "News - November-Updates",
+  "promoTitle": "Accio Work im November: 8 neue Funktionen für Einkauf und Verkauf",
+  "promoCta": "Was ist neu"
+}
