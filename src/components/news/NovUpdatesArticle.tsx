@@ -7,7 +7,7 @@ import { pillarsFor } from "@/lib/sourcing-i18n";
 import { NOV_UPDATES_RELEASE_URL, NOV_UPDATES_SLUG, novUpdatesNews } from "@/lib/news-nov-updates";
 import { FREE_SOURCING_PATH, freeSourcingNews } from "@/lib/news-free-sourcing";
 
-const COPY_UI: Record<string, [string, string]> = {
+export const COPY_UI: Record<string, [string, string]> = {
   en: ["Copy prompt", "Copied"],
   ru: ["Скопировать", "Скопировано"],
   de: ["Prompt kopieren", "Kopiert"],
@@ -20,13 +20,13 @@ const COPY_UI: Record<string, [string, string]> = {
   ar: ["انسخ الطلب", "تم النسخ"],
 };
 
-function H2({ children }: { children: React.ReactNode }) {
+export function H2({ children }: { children: React.ReactNode }) {
   return (
     <h2 className="mb-5 mt-14 text-[28px] font-bold leading-tight text-foreground md:text-[36px]">{children}</h2>
   );
 }
 
-function PromptBlock({ label, text, copy, copied }: { label: string; text: string; copy: string; copied: string }) {
+export function PromptBlock({ label, text, copy, copied }: { label: string; text: string; copy: string; copied: string }) {
   const [done, setDone] = useState(false);
   return (
     <div className="overflow-hidden rounded-2xl border border-border/70 bg-muted/40">

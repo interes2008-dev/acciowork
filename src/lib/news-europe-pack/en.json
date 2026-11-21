@@ -1,0 +1,70 @@
+{
+  "seoTitle": "Accio Sourcing Expert Free for European SMEs: the Startup Pack Explained",
+  "description": "On 19 Nov 2026 Alibaba.com made Accio Sourcing Expert free in Auto Mode for European small businesses. What the European SME Startup Pack includes, the $3.69 vs $9.27 cost benchmark and how to start.",
+  "keywords": ["accio european sme startup pack", "accio sourcing expert free", "alibaba cocreate europe 2026", "free ai sourcing agent europe", "ai sourcing agent for small business", "accio vs codex cost", "source products from china with ai"],
+  "badge": "News - 22 November 2026",
+  "title": "Accio Sourcing Expert is now free for European SMEs: what the new Startup Pack gives your business",
+  "lede": "Alibaba.com announced the European SME Startup Pack at CoCreate Europe in London. Product research, supplier checks and profit calculation run in Auto Mode at no cost. Here are the numbers, the limits and a prompt to start tonight.",
+  "dateLabel": "Published 22 November 2026 - based on the Alibaba.com announcement of 19 November",
+  "readMin": "4 min read",
+  "introTitle": "In short",
+  "intro": [
+    "On 19 November 2026, at the opening of its two-day CoCreate Europe summit at ExCeL London, Alibaba.com launched the European SME Startup Pack. Its core is free access to Accio Sourcing Expert in Auto Mode for small and medium-sized businesses across Europe.",
+    "The pack bundles sourcing and design tools and automates the slow parts of buying: product research, supplier vetting and profit analysis. Alibaba.com presents it as a way for small teams to do more with less in 2027."
+  ],
+  "factsTitle": "The numbers behind the launch",
+  "facts": [
+    { "value": "1.28M", "label": "products listed by European sellers on Alibaba.com, January-November 2026" },
+    { "value": "+78%", "label": "growth in European seller listings year over year" },
+    { "value": "$3.69", "label": "Accio's cost for 107 standard e-commerce tasks, vs $9.27 for Codex and $9.51 for Claude Code" },
+    { "value": "5%", "label": "of UK small businesses use agentic AI regularly, while 68% want to learn how" }
+  ],
+  "packTitle": "What you can do for free",
+  "packIntro": "In Auto Mode, Sourcing Expert covers the whole research part of a purchase. You describe what you need, the agent does the legwork and returns tables you can act on.",
+  "pack": [
+    { "title": "Find products", "body": "Describe the product, target price and market. The agent searches suppliers and returns candidates with prices, MOQ and lead times." },
+    { "title": "Compare options", "body": "Select up to 5 product or supplier cards and get a conclusion plus an Excel comparison table that updates as you add more." },
+    { "title": "Verify suppliers", "body": "Check years in business, certifications, trade history and risk signals before you send money. Reports now include category benchmarks." },
+    { "title": "Calculate profit", "body": "Estimate your margin from the supplier price, shipping and your selling price before you commit to an order." }
+  ],
+  "benchTitle": "Why it costs less: the benchmark",
+  "benchText": "Alibaba.com ran its Commerce Agent Bench: 107 standardised e-commerce tasks. Running cost for the whole set:",
+  "benchNote": "This is Alibaba.com's own test, not an independent study. Alibaba.com says Accio matched the task quality of the other agents at about half the cost.",
+  "whoTitle": "Who gets it",
+  "who": [
+    "Small and medium-sized businesses in Europe: the pack was announced for the European market at CoCreate Europe.",
+    "Everyone else: since version 0.36.2 (25 October 2026), Sourcing Agent tasks in Auto Mode are already free within Accio's quota worldwide, except AI-assisted supplier chat.",
+    "Alibaba.com has not said how long the European offer runs or exactly which countries it covers, so check the conditions in your account."
+  ],
+  "ctaTitle": "Delegate your first sourcing task for free tonight",
+  "ctaText": "Sign up for Accio Work, open Sourcing Expert, keep Auto Mode on and paste the prompt below. You will have a shortlist of suppliers by morning.",
+  "ctaBtn": "Start Accio Work for free",
+  "stepsTitle": "How to start in 3 steps",
+  "steps": [
+    { "title": "Create an Accio Work account", "body": "Sign up on the web or install the desktop app. The web version is always up to date." },
+    { "title": "Open Sourcing Expert and keep Auto", "body": "Choose Sourcing Expert and leave the model on Auto. That is the mode covered by the free offer." },
+    { "title": "Give it a concrete task", "body": "Name the product, quantity, target price and destination country. Use the prompt below as a starting point." }
+  ],
+  "promptLabel": "First free sourcing task",
+  "prompt": "Find 5 verified suppliers for [product] with MOQ under [quantity] units and a unit price under [price] EUR. For each, show years in business, certifications, MOQ, lead time and a risk note. Compare them in a table and calculate my margin if I sell at [selling price] EUR in [country], including estimated shipping.",
+  "limitsTitle": "What to keep in mind",
+  "limits": [
+    "Free access applies to Auto Mode. AI-assisted chat and negotiation with suppliers uses credits.",
+    "The duration and exact country list of the European offer have not been published.",
+    "1688 products in sourcing are still not available in Europe and the Americas.",
+    "The benchmark figures come from Alibaba.com. Test the agent on your own task before relying on it."
+  ],
+  "faq": [
+    { "q": "What is the European SME Startup Pack?", "a": "A package from Alibaba.com, launched on 19 November 2026, that gives European small and medium-sized businesses free access to Accio Sourcing Expert in Auto Mode, together with sourcing and design tools." },
+    { "q": "Is Accio Sourcing Expert really free?", "a": "Yes, in Auto Mode: product search, comparison, supplier verification and profit calculation. AI-assisted supplier chat uses credits." },
+    { "q": "How much cheaper is Accio than other AI agents?", "a": "In Alibaba.com's 107-task benchmark, Accio cost $3.69, versus $9.27 for OpenAI Codex and $9.51 for Anthropic Claude Code, so roughly half or less. This is the vendor's own test." },
+    { "q": "Can I use it outside Europe?", "a": "Yes. Since version 0.36.2, Sourcing Agent tasks in Auto Mode are free within Accio's quota for all users, except AI-assisted supplier chat." }
+  ],
+  "sourceLabel": "Source: Alibaba.com press release, 19 November 2026",
+  "sourceLabel2": "Benchmark figures: eBusiness.de, 21 November 2026",
+  "moreTitle": "Read next",
+  "newsLabel": "News",
+  "promoBadge": "News - free for Europe",
+  "promoTitle": "Accio Sourcing Expert is now free for European SMEs",
+  "promoCta": "What's in the pack"
+}
