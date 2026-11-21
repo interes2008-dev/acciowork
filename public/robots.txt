@@ -76,4 +76,17 @@ Allow: /
 User-agent: YandexBot
 Allow: /
 
+# China search engines (Baidu, Sogou, 360)
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Baiduspider-image
+Allow: /
+
+User-agent: Sogou web spider
+Allow: /
+
+User-agent: 360Spider
+Allow: /
+
 Sitemap: https://acciowork.pro/sitemap.xml
