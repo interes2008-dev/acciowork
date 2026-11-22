@@ -67,6 +67,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/hi/blog", changefreq: "daily", priority: "0.8", alternates: arAlts("/blog") },
           { path: "/fr/blog", changefreq: "daily", priority: "0.8", alternates: arAlts("/blog") },
           { path: "/ar/blog", changefreq: "daily", priority: "0.8", alternates: arAlts("/blog") },
+          ...["ai-friendly-supply-factory-guide", "alibaba-business-assistant-accio-work-5-scenarios", "1688-zero-experience-export-guide"].map((s) => ({ path: `/zh/blog/${s}`, changefreq: "monthly" as const, priority: "0.8", lastmod: "2026-11-22" })),
           ...["", "/ru", "/de", "/it", "/es", "/zh", "/pt", "/hi", "/fr", "/ar"].flatMap((l) => [
             { path: `${l}/blog/china-sourcing`, changefreq: "weekly" as const, priority: "0.8", alternates: arAlts("/blog/china-sourcing") },
             { path: `${l}/blog/accio-sourcing-expert-free-europe`, changefreq: "monthly" as const, priority: "0.8", lastmod: "2026-11-22", alternates: arAlts("/blog/accio-sourcing-expert-free-europe") },

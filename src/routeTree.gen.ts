@@ -296,10 +296,13 @@ import { Route as RuGuideIndexRouteImport } from './routes/ru.guide.index'
 import { Route as RuGuideGuideRouteImport } from './routes/ru.guide.$guide'
 import { Route as ZhBlogIndexRouteImport } from './routes/zh.blog.index'
 import { Route as ZhBlogSlugRouteImport } from './routes/zh.blog.$slug'
+import { Route as ZhBlog1688ZeroExperienceExportGuideRouteImport } from './routes/zh.blog.1688-zero-experience-export-guide'
 import { Route as ZhBlogAccioSourcingAgentFreeRouteImport } from './routes/zh.blog.accio-sourcing-agent-free'
 import { Route as ZhBlogAccioSourcingExpertFreeEuropeRouteImport } from './routes/zh.blog.accio-sourcing-expert-free-europe'
 import { Route as ZhBlogAccioWorkNovember2026UpdatesRouteImport } from './routes/zh.blog.accio-work-november-2026-updates'
+import { Route as ZhBlogAiFriendlySupplyFactoryGuideRouteImport } from './routes/zh.blog.ai-friendly-supply-factory-guide'
 import { Route as ZhBlogAiSupplierNegotiationMoqPriceRouteImport } from './routes/zh.blog.ai-supplier-negotiation-moq-price'
+import { Route as ZhBlogAlibabaBusinessAssistantAccioWork5ScenariosRouteImport } from './routes/zh.blog.alibaba-business-assistant-accio-work-5-scenarios'
 import { Route as ZhBlogCaseStudySourcingElectronics48HoursRouteImport } from './routes/zh.blog.case-study-sourcing-electronics-48-hours'
 import { Route as ZhBlogChatgptVsAccioSourcingAgentsRouteImport } from './routes/zh.blog.chatgpt-vs-accio-sourcing-agents'
 import { Route as ZhBlogChinaImportRiskAuditLandedCostRouteImport } from './routes/zh.blog.china-import-risk-audit-landed-cost'
@@ -1823,6 +1826,12 @@ const ZhBlogSlugRoute = ZhBlogSlugRouteImport.update({
   path: '/blog/$slug',
   getParentRoute: () => ZhRoute,
 } as any)
+const ZhBlog1688ZeroExperienceExportGuideRoute =
+  ZhBlog1688ZeroExperienceExportGuideRouteImport.update({
+    id: '/blog/1688-zero-experience-export-guide',
+    path: '/blog/1688-zero-experience-export-guide',
+    getParentRoute: () => ZhRoute,
+  } as any)
 const ZhBlogAccioSourcingAgentFreeRoute =
   ZhBlogAccioSourcingAgentFreeRouteImport.update({
     id: '/blog/accio-sourcing-agent-free',
@@ -1841,10 +1850,22 @@ const ZhBlogAccioWorkNovember2026UpdatesRoute =
     path: '/blog/accio-work-november-2026-updates',
     getParentRoute: () => ZhRoute,
   } as any)
+const ZhBlogAiFriendlySupplyFactoryGuideRoute =
+  ZhBlogAiFriendlySupplyFactoryGuideRouteImport.update({
+    id: '/blog/ai-friendly-supply-factory-guide',
+    path: '/blog/ai-friendly-supply-factory-guide',
+    getParentRoute: () => ZhRoute,
+  } as any)
 const ZhBlogAiSupplierNegotiationMoqPriceRoute =
   ZhBlogAiSupplierNegotiationMoqPriceRouteImport.update({
     id: '/blog/ai-supplier-negotiation-moq-price',
     path: '/blog/ai-supplier-negotiation-moq-price',
+    getParentRoute: () => ZhRoute,
+  } as any)
+const ZhBlogAlibabaBusinessAssistantAccioWork5ScenariosRoute =
+  ZhBlogAlibabaBusinessAssistantAccioWork5ScenariosRouteImport.update({
+    id: '/blog/alibaba-business-assistant-accio-work-5-scenarios',
+    path: '/blog/alibaba-business-assistant-accio-work-5-scenarios',
     getParentRoute: () => ZhRoute,
   } as any)
 const ZhBlogCaseStudySourcingElectronics48HoursRoute =
@@ -2183,10 +2204,13 @@ export interface FileRoutesByFullPath {
   '/ru/for/$useCase': typeof RuForUseCaseRoute
   '/ru/guide/$guide': typeof RuGuideGuideRoute
   '/zh/blog/$slug': typeof ZhBlogSlugRoute
+  '/zh/blog/1688-zero-experience-export-guide': typeof ZhBlog1688ZeroExperienceExportGuideRoute
   '/zh/blog/accio-sourcing-agent-free': typeof ZhBlogAccioSourcingAgentFreeRoute
   '/zh/blog/accio-sourcing-expert-free-europe': typeof ZhBlogAccioSourcingExpertFreeEuropeRoute
   '/zh/blog/accio-work-november-2026-updates': typeof ZhBlogAccioWorkNovember2026UpdatesRoute
+  '/zh/blog/ai-friendly-supply-factory-guide': typeof ZhBlogAiFriendlySupplyFactoryGuideRoute
   '/zh/blog/ai-supplier-negotiation-moq-price': typeof ZhBlogAiSupplierNegotiationMoqPriceRoute
+  '/zh/blog/alibaba-business-assistant-accio-work-5-scenarios': typeof ZhBlogAlibabaBusinessAssistantAccioWork5ScenariosRoute
   '/zh/blog/case-study-sourcing-electronics-48-hours': typeof ZhBlogCaseStudySourcingElectronics48HoursRoute
   '/zh/blog/chatgpt-vs-accio-sourcing-agents': typeof ZhBlogChatgptVsAccioSourcingAgentsRoute
   '/zh/blog/china-import-risk-audit-landed-cost': typeof ZhBlogChinaImportRiskAuditLandedCostRoute
@@ -2482,10 +2506,13 @@ export interface FileRoutesByTo {
   '/ru/for/$useCase': typeof RuForUseCaseRoute
   '/ru/guide/$guide': typeof RuGuideGuideRoute
   '/zh/blog/$slug': typeof ZhBlogSlugRoute
+  '/zh/blog/1688-zero-experience-export-guide': typeof ZhBlog1688ZeroExperienceExportGuideRoute
   '/zh/blog/accio-sourcing-agent-free': typeof ZhBlogAccioSourcingAgentFreeRoute
   '/zh/blog/accio-sourcing-expert-free-europe': typeof ZhBlogAccioSourcingExpertFreeEuropeRoute
   '/zh/blog/accio-work-november-2026-updates': typeof ZhBlogAccioWorkNovember2026UpdatesRoute
+  '/zh/blog/ai-friendly-supply-factory-guide': typeof ZhBlogAiFriendlySupplyFactoryGuideRoute
   '/zh/blog/ai-supplier-negotiation-moq-price': typeof ZhBlogAiSupplierNegotiationMoqPriceRoute
+  '/zh/blog/alibaba-business-assistant-accio-work-5-scenarios': typeof ZhBlogAlibabaBusinessAssistantAccioWork5ScenariosRoute
   '/zh/blog/case-study-sourcing-electronics-48-hours': typeof ZhBlogCaseStudySourcingElectronics48HoursRoute
   '/zh/blog/chatgpt-vs-accio-sourcing-agents': typeof ZhBlogChatgptVsAccioSourcingAgentsRoute
   '/zh/blog/china-import-risk-audit-landed-cost': typeof ZhBlogChinaImportRiskAuditLandedCostRoute
@@ -2791,10 +2818,13 @@ export interface FileRoutesById {
   '/ru/for/$useCase': typeof RuForUseCaseRoute
   '/ru/guide/$guide': typeof RuGuideGuideRoute
   '/zh/blog/$slug': typeof ZhBlogSlugRoute
+  '/zh/blog/1688-zero-experience-export-guide': typeof ZhBlog1688ZeroExperienceExportGuideRoute
   '/zh/blog/accio-sourcing-agent-free': typeof ZhBlogAccioSourcingAgentFreeRoute
   '/zh/blog/accio-sourcing-expert-free-europe': typeof ZhBlogAccioSourcingExpertFreeEuropeRoute
   '/zh/blog/accio-work-november-2026-updates': typeof ZhBlogAccioWorkNovember2026UpdatesRoute
+  '/zh/blog/ai-friendly-supply-factory-guide': typeof ZhBlogAiFriendlySupplyFactoryGuideRoute
   '/zh/blog/ai-supplier-negotiation-moq-price': typeof ZhBlogAiSupplierNegotiationMoqPriceRoute
+  '/zh/blog/alibaba-business-assistant-accio-work-5-scenarios': typeof ZhBlogAlibabaBusinessAssistantAccioWork5ScenariosRoute
   '/zh/blog/case-study-sourcing-electronics-48-hours': typeof ZhBlogCaseStudySourcingElectronics48HoursRoute
   '/zh/blog/chatgpt-vs-accio-sourcing-agents': typeof ZhBlogChatgptVsAccioSourcingAgentsRoute
   '/zh/blog/china-import-risk-audit-landed-cost': typeof ZhBlogChinaImportRiskAuditLandedCostRoute
@@ -3101,10 +3131,13 @@ export interface FileRouteTypes {
     | '/ru/for/$useCase'
     | '/ru/guide/$guide'
     | '/zh/blog/$slug'
+    | '/zh/blog/1688-zero-experience-export-guide'
     | '/zh/blog/accio-sourcing-agent-free'
     | '/zh/blog/accio-sourcing-expert-free-europe'
     | '/zh/blog/accio-work-november-2026-updates'
+    | '/zh/blog/ai-friendly-supply-factory-guide'
     | '/zh/blog/ai-supplier-negotiation-moq-price'
+    | '/zh/blog/alibaba-business-assistant-accio-work-5-scenarios'
     | '/zh/blog/case-study-sourcing-electronics-48-hours'
     | '/zh/blog/chatgpt-vs-accio-sourcing-agents'
     | '/zh/blog/china-import-risk-audit-landed-cost'
@@ -3400,10 +3433,13 @@ export interface FileRouteTypes {
     | '/ru/for/$useCase'
     | '/ru/guide/$guide'
     | '/zh/blog/$slug'
+    | '/zh/blog/1688-zero-experience-export-guide'
     | '/zh/blog/accio-sourcing-agent-free'
     | '/zh/blog/accio-sourcing-expert-free-europe'
     | '/zh/blog/accio-work-november-2026-updates'
+    | '/zh/blog/ai-friendly-supply-factory-guide'
     | '/zh/blog/ai-supplier-negotiation-moq-price'
+    | '/zh/blog/alibaba-business-assistant-accio-work-5-scenarios'
     | '/zh/blog/case-study-sourcing-electronics-48-hours'
     | '/zh/blog/chatgpt-vs-accio-sourcing-agents'
     | '/zh/blog/china-import-risk-audit-landed-cost'
@@ -3708,10 +3744,13 @@ export interface FileRouteTypes {
     | '/ru/for/$useCase'
     | '/ru/guide/$guide'
     | '/zh/blog/$slug'
+    | '/zh/blog/1688-zero-experience-export-guide'
     | '/zh/blog/accio-sourcing-agent-free'
     | '/zh/blog/accio-sourcing-expert-free-europe'
     | '/zh/blog/accio-work-november-2026-updates'
+    | '/zh/blog/ai-friendly-supply-factory-guide'
     | '/zh/blog/ai-supplier-negotiation-moq-price'
+    | '/zh/blog/alibaba-business-assistant-accio-work-5-scenarios'
     | '/zh/blog/case-study-sourcing-electronics-48-hours'
     | '/zh/blog/chatgpt-vs-accio-sourcing-agents'
     | '/zh/blog/china-import-risk-audit-landed-cost'
@@ -5821,6 +5860,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ZhBlogSlugRouteImport
       parentRoute: typeof ZhRoute
     }
+    '/zh/blog/1688-zero-experience-export-guide': {
+      id: '/zh/blog/1688-zero-experience-export-guide'
+      path: '/blog/1688-zero-experience-export-guide'
+      fullPath: '/zh/blog/1688-zero-experience-export-guide'
+      preLoaderRoute: typeof ZhBlog1688ZeroExperienceExportGuideRouteImport
+      parentRoute: typeof ZhRoute
+    }
     '/zh/blog/accio-sourcing-agent-free': {
       id: '/zh/blog/accio-sourcing-agent-free'
       path: '/blog/accio-sourcing-agent-free'
@@ -5842,11 +5888,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ZhBlogAccioWorkNovember2026UpdatesRouteImport
       parentRoute: typeof ZhRoute
     }
+    '/zh/blog/ai-friendly-supply-factory-guide': {
+      id: '/zh/blog/ai-friendly-supply-factory-guide'
+      path: '/blog/ai-friendly-supply-factory-guide'
+      fullPath: '/zh/blog/ai-friendly-supply-factory-guide'
+      preLoaderRoute: typeof ZhBlogAiFriendlySupplyFactoryGuideRouteImport
+      parentRoute: typeof ZhRoute
+    }
     '/zh/blog/ai-supplier-negotiation-moq-price': {
       id: '/zh/blog/ai-supplier-negotiation-moq-price'
       path: '/blog/ai-supplier-negotiation-moq-price'
       fullPath: '/zh/blog/ai-supplier-negotiation-moq-price'
       preLoaderRoute: typeof ZhBlogAiSupplierNegotiationMoqPriceRouteImport
+      parentRoute: typeof ZhRoute
+    }
+    '/zh/blog/alibaba-business-assistant-accio-work-5-scenarios': {
+      id: '/zh/blog/alibaba-business-assistant-accio-work-5-scenarios'
+      path: '/blog/alibaba-business-assistant-accio-work-5-scenarios'
+      fullPath: '/zh/blog/alibaba-business-assistant-accio-work-5-scenarios'
+      preLoaderRoute: typeof ZhBlogAlibabaBusinessAssistantAccioWork5ScenariosRouteImport
       parentRoute: typeof ZhRoute
     }
     '/zh/blog/case-study-sourcing-electronics-48-hours': {
@@ -6554,10 +6614,13 @@ interface ZhRouteChildren {
   ZhTiktokShopRoute: typeof ZhTiktokShopRoute
   ZhIndexRoute: typeof ZhIndexRoute
   ZhBlogSlugRoute: typeof ZhBlogSlugRoute
+  ZhBlog1688ZeroExperienceExportGuideRoute: typeof ZhBlog1688ZeroExperienceExportGuideRoute
   ZhBlogAccioSourcingAgentFreeRoute: typeof ZhBlogAccioSourcingAgentFreeRoute
   ZhBlogAccioSourcingExpertFreeEuropeRoute: typeof ZhBlogAccioSourcingExpertFreeEuropeRoute
   ZhBlogAccioWorkNovember2026UpdatesRoute: typeof ZhBlogAccioWorkNovember2026UpdatesRoute
+  ZhBlogAiFriendlySupplyFactoryGuideRoute: typeof ZhBlogAiFriendlySupplyFactoryGuideRoute
   ZhBlogAiSupplierNegotiationMoqPriceRoute: typeof ZhBlogAiSupplierNegotiationMoqPriceRoute
+  ZhBlogAlibabaBusinessAssistantAccioWork5ScenariosRoute: typeof ZhBlogAlibabaBusinessAssistantAccioWork5ScenariosRoute
   ZhBlogCaseStudySourcingElectronics48HoursRoute: typeof ZhBlogCaseStudySourcingElectronics48HoursRoute
   ZhBlogChatgptVsAccioSourcingAgentsRoute: typeof ZhBlogChatgptVsAccioSourcingAgentsRoute
   ZhBlogChinaImportRiskAuditLandedCostRoute: typeof ZhBlogChinaImportRiskAuditLandedCostRoute
@@ -6586,13 +6649,19 @@ const ZhRouteChildren: ZhRouteChildren = {
   ZhTiktokShopRoute: ZhTiktokShopRoute,
   ZhIndexRoute: ZhIndexRoute,
   ZhBlogSlugRoute: ZhBlogSlugRoute,
+  ZhBlog1688ZeroExperienceExportGuideRoute:
+    ZhBlog1688ZeroExperienceExportGuideRoute,
   ZhBlogAccioSourcingAgentFreeRoute: ZhBlogAccioSourcingAgentFreeRoute,
   ZhBlogAccioSourcingExpertFreeEuropeRoute:
     ZhBlogAccioSourcingExpertFreeEuropeRoute,
   ZhBlogAccioWorkNovember2026UpdatesRoute:
     ZhBlogAccioWorkNovember2026UpdatesRoute,
+  ZhBlogAiFriendlySupplyFactoryGuideRoute:
+    ZhBlogAiFriendlySupplyFactoryGuideRoute,
   ZhBlogAiSupplierNegotiationMoqPriceRoute:
     ZhBlogAiSupplierNegotiationMoqPriceRoute,
+  ZhBlogAlibabaBusinessAssistantAccioWork5ScenariosRoute:
+    ZhBlogAlibabaBusinessAssistantAccioWork5ScenariosRoute,
   ZhBlogCaseStudySourcingElectronics48HoursRoute:
     ZhBlogCaseStudySourcingElectronics48HoursRoute,
   ZhBlogChatgptVsAccioSourcingAgentsRoute:

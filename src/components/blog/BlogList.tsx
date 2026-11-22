@@ -4,6 +4,7 @@ import { localizedPath } from "@/lib/i18n";
 import { FREE_SOURCING_PATH, freeSourcingNews } from "@/lib/news-free-sourcing";
 import { NOV_UPDATES_PATH, novUpdatesNews } from "@/lib/news-nov-updates";
 import { EUROPE_PACK_PATH, europePackNews } from "@/lib/news-europe-pack";
+import { ZH_SELLER_ARTICLES, ZH_SELLER_SERIES, zhSellerPath } from "@/lib/news-zh-sellers";
 
 const COPY: Record<
   "en" | "ru" | "de" | "it" | "es" | "zh" | "pt" | "hi" | "fr" | "ar",
@@ -122,6 +123,23 @@ export function BlogList({
         const arrow = lang === "ar" ? "←" : "→";
         return (
           <div className="mb-12 grid gap-4 md:grid-cols-2">
+            {lang === "zh" && (
+              <div className="flex flex-col gap-4 rounded-[32px] border border-primary/30 bg-primary/5 p-6 md:col-span-2 md:p-8">
+                <span className="text-xs font-semibold uppercase tracking-wider text-primary">{ZH_SELLER_SERIES.badge}</span>
+                <span className="text-2xl font-bold text-foreground">{ZH_SELLER_SERIES.title}</span>
+                <div className="grid gap-3 md:grid-cols-3">
+                  {ZH_SELLER_ARTICLES.map((z) => (
+                    <a
+                      key={z.slug}
+                      href={zhSellerPath(z.slug)}
+                      className="rounded-2xl border border-border/70 bg-card p-4 font-semibold leading-snug text-foreground transition hover:border-primary"
+                    >
+                      {z.cardTitle} {arrow}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
             <a
               href={localizedPath(EUROPE_PACK_PATH, lang)}
               className="flex flex-col gap-2 rounded-[32px] border border-primary/30 bg-primary/5 p-6 transition hover:border-primary md:p-8"
