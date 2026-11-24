@@ -1,0 +1,86 @@
+{
+  "seoTitle": "What to Sell in 2027: Fastest-Growing Product Categories in Europe",
+  "description": "Alibaba.com data from CoCreate Europe: creative toys and gifts +231%, motorcycles and scooters +141%, auto parts and electronic components growing fast. Product ideas, compliance checks and a 24-hour plan to validate a product with AI.",
+  "keywords": ["what to sell in 2027", "trending products 2027", "best products to sell online 2027", "fastest growing product categories europe", "products to import from china 2027", "product research ai", "accio product research"],
+  "badge": "Trends - 24 November 2026",
+  "title": "What to sell in 2027: the product categories growing fastest in Europe",
+  "lede": "At CoCreate Europe in London, Alibaba.com shared which categories European buyers ordered most this year. Creative toys and gifts grew 231%, motorcycles and scooters 141%. Here is what that means for your next product and how to test an idea in 24 hours.",
+  "dateLabel": "Published 24 November 2026 - based on data shared at CoCreate Europe, 19 November",
+  "readMin": "6 min read",
+  "introTitle": "In short",
+  "intro": [
+    "On 19 November 2026, at the CoCreate summit in London attended by more than 5,000 European business owners, Alibaba.com said its European orders and buyers have each grown 70% over three years.",
+    "The breakdown by category is the useful part. It shows where European small businesses are already putting money, and where suppliers, samples and data are easy to find. Below are the four growing categories, product ideas for each and what to check before you order."
+  ],
+  "factsTitle": "The numbers",
+  "facts": [
+    { "value": "+231%", "label": "year-over-year GMV growth in creative toys and gifts from European buyers" },
+    { "value": "+141%", "label": "growth in motorcycles and scooters" },
+    { "value": "+70%", "label": "growth in Alibaba.com's European orders and buyers over three years" },
+    { "value": "1.28M", "label": "products listed by European sellers on Alibaba.com, up 78% year over year" }
+  ],
+  "catsTitle": "4 categories to look at for 2027",
+  "catsIntro": "Pick a category to see product ideas, what to check and a ready prompt for your AI agent.",
+  "cats": [
+    {
+      "name": "Creative toys and gifts",
+      "growth": "+231%",
+      "ideas": ["STEM and building kits", "Personalised and custom-printed gifts", "Plush toys based on niche hobbies", "Party and seasonal gift sets"],
+      "check": "Toys sold in the EU need the CE mark and EN 71 safety testing. Ask for test reports before you order samples, and check small-part and age labelling.",
+      "prompt": "Find 5 verified suppliers of [creative toy or gift idea] that already have EN 71 and CE test reports. MOQ under 300 units, unit price under [price] EUR. Compare price, MOQ, lead time, customisation options and certificates in a table, and calculate my margin if I sell at [price] EUR in [country]."
+    },
+    {
+      "name": "Motorcycles and scooters",
+      "growth": "+141%",
+      "ideas": ["Kick scooters and accessories", "Helmets, locks and lights", "Spare parts: tyres, brakes, batteries", "Phone mounts and storage bags"],
+      "check": "E-scooters and their batteries face strict EU rules (CE, EN 17128 for light electric vehicles, battery transport rules). Accessories and parts are often an easier way into the category.",
+      "prompt": "I want to sell [scooter or motorcycle accessory] in [country]. Find 5 verified suppliers, show certifications relevant to EU sales, MOQ, unit price, lead time and shipping restrictions for batteries if any. Rank them by risk and calculate landed cost and margin at a selling price of [price] EUR."
+    },
+    {
+      "name": "Auto parts",
+      "growth": "Double-digit growth",
+      "ideas": ["Car interior organisers", "LED and lighting upgrades", "Wiper blades and filters", "Detailing and cleaning kits"],
+      "check": "Fitment data is everything: list exact car models and part numbers. Lighting and safety parts may need E-mark approval for road use.",
+      "prompt": "Find 5 verified suppliers of [auto part] compatible with [car models]. For each, show part numbers, E-mark or other certifications, MOQ, unit price and lead time. Flag any supplier without clear fitment data and calculate my margin at [price] EUR."
+    },
+    {
+      "name": "Electronic components",
+      "growth": "Double-digit growth",
+      "ideas": ["Chargers and cables", "Smart home sensors", "DIY electronics and maker kits", "Replacement batteries and modules"],
+      "check": "Consumer electronics need CE and RoHS, and you are responsible for WEEE and battery take-back in many EU countries. Verify that certificates match the exact model.",
+      "prompt": "Find 5 verified suppliers of [electronic product] with valid CE and RoHS certificates for the exact model. Compare price, MOQ, lead time, warranty and reorder rate in a table, list what I need for WEEE compliance in [country] and calculate my margin at [price] EUR."
+    }
+  ],
+  "howTitle": "How to validate a product in 24 hours with Accio",
+  "howIntro": "You do not need weeks of spreadsheets to know whether an idea is worth a sample order. This is an example plan for one working day with Accio Work's agents.",
+  "how": [
+    { "when": "Hours 0-2", "title": "Market check", "body": "Ask the agent for demand signals, competitor prices and reviews for your idea in your target country." },
+    { "when": "Hours 2-8", "title": "Suppliers and verification", "body": "Get 5 verified suppliers with MOQ, price, lead time, certificates and risk notes in one table." },
+    { "when": "Hours 8-16", "title": "Profit and samples", "body": "Calculate landed cost and margin, then let the agent draft sample requests to the top two suppliers." },
+    { "when": "Hours 16-24", "title": "Launch assets", "body": "Generate a product listing, key selling points and product images so you can test demand while samples ship." }
+  ],
+  "howNote": "Timing is an example. Samples, certification and shipping take longer than a day; the agent speeds up the research and decision part.",
+  "ctaTitle": "Test your 2027 product idea for free tonight",
+  "ctaText": "Sign up for Accio Work, open the sourcing agent, choose a category above and paste its prompt. You will know by morning whether the idea is worth a sample.",
+  "ctaBtn": "Start Accio Work for free",
+  "promptLabel": "Ready prompt for this category",
+  "limitsTitle": "Read the numbers carefully",
+  "limits": [
+    "Growth figures are Alibaba.com's own data for orders from European buyers on its platform, not the whole European market.",
+    "High percentage growth can start from a small base. Check real demand in your own country before ordering.",
+    "Toys, scooters, auto parts and electronics are regulated categories. Budget time and money for compliance.",
+    "Plan around Chinese New Year 2027: orders placed after mid-December may not ship until March."
+  ],
+  "faq": [
+    { "q": "What products will sell well in 2027?", "a": "Alibaba.com data for European buyers shows the fastest growth in creative toys and gifts (+231%), motorcycles and scooters (+141%), and double-digit growth in auto parts and electronic components." },
+    { "q": "Where does this data come from?", "a": "From Alibaba.com's CoCreate summit in London on 19 November 2026, as reported by TMTPost, Ebrun and others. It reflects GMV from European buyers on Alibaba.com." },
+    { "q": "Which category is easiest for a beginner?", "a": "Gifts and accessories usually have lower MOQs and simpler logistics than e-scooters or electronics. Still check CE and safety requirements for your market." },
+    { "q": "Can I really validate a product in 24 hours?", "a": "You can complete the research and decision part in a day with AI agents: demand, suppliers, verification and margin. Samples and certification take longer." }
+  ],
+  "sourceLabels": ["Category data: TMTPost, 20 November 2026", "Category data: Ebrun, 20 November 2026", "European seller data: Alibaba.com press release, 19 November 2026"],
+  "moreTitle": "Read next",
+  "newsLabel": "News",
+  "promoBadge": "Trends - what to sell in 2027",
+  "promoTitle": "What to sell in 2027: categories growing up to 231% in Europe",
+  "promoCta": "See the categories and prompts"
+}

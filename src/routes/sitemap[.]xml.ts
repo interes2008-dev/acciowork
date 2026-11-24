@@ -70,6 +70,8 @@ export const Route = createFileRoute("/sitemap.xml")({
           ...["ai-friendly-supply-factory-guide", "alibaba-business-assistant-accio-work-5-scenarios", "1688-zero-experience-export-guide"].map((s) => ({ path: `/zh/blog/${s}`, changefreq: "monthly" as const, priority: "0.8", lastmod: "2026-11-22" })),
           ...["", "/ru", "/de", "/it", "/es", "/zh", "/pt", "/hi", "/fr", "/ar"].flatMap((l) => [
             { path: `${l}/blog/china-sourcing`, changefreq: "weekly" as const, priority: "0.8", alternates: arAlts("/blog/china-sourcing") },
+            { path: `${l}/blog/chinese-new-year-2027-order-deadlines`, changefreq: "weekly" as const, priority: "0.9", lastmod: "2026-11-24", alternates: arAlts("/blog/chinese-new-year-2027-order-deadlines") },
+            { path: `${l}/blog/what-to-sell-2027-trending-products-europe`, changefreq: "weekly" as const, priority: "0.9", lastmod: "2026-11-24", alternates: arAlts("/blog/what-to-sell-2027-trending-products-europe") },
             { path: `${l}/blog/accio-sourcing-expert-free-europe`, changefreq: "monthly" as const, priority: "0.8", lastmod: "2026-11-22", alternates: arAlts("/blog/accio-sourcing-expert-free-europe") },
             { path: `${l}/blog/accio-work-november-2026-updates`, changefreq: "monthly" as const, priority: "0.8", lastmod: "2026-11-13", alternates: arAlts("/blog/accio-work-november-2026-updates") },
             { path: `${l}/blog/accio-sourcing-agent-free`, changefreq: "monthly" as const, priority: "0.8", lastmod: "2026-11-07", alternates: arAlts("/blog/accio-sourcing-agent-free") },

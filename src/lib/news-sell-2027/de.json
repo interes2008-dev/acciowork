@@ -1,0 +1,158 @@
+{
+  "seoTitle": "Was 2027 verkaufen? Die am schnellsten wachsenden Produktkategorien in Europa",
+  "description": "Alibaba.com-Daten von CoCreate Europe: Kreatives Spielzeug und Geschenke +231%, Motorräder und Roller +141%, starkes Wachstum bei Autoteilen und elektronischen Bauteilen. Produktideen, Compliance-Checks und ein 24-Stunden-Plan, um eine Produktidee mit KI zu prüfen.",
+  "keywords": [
+    "was verkaufen 2027",
+    "trendprodukte 2027",
+    "welche produkte online verkaufen 2027",
+    "am schnellsten wachsende produktkategorien europa",
+    "welche produkte aus china importieren 2027",
+    "produktrecherche mit ki",
+    "accio produktrecherche"
+  ],
+  "badge": "Trends - 24. November 2026",
+  "title": "Was 2027 verkaufen? Diese Produktkategorien wachsen in Europa am schnellsten",
+  "lede": "Auf der CoCreate Europe in London hat Alibaba.com vorgestellt, welche Kategorien europäische Einkäufer dieses Jahr am häufigsten bestellt haben. Kreatives Spielzeug und Geschenke legten um 231% zu, Motorräder und Roller um 141%. Hier erfahren Sie, was das für Ihr nächstes Produkt bedeutet und wie Sie eine Idee in 24 Stunden prüfen.",
+  "dateLabel": "Veröffentlicht am 24. November 2026 - auf Basis der am 19. November bei CoCreate Europe vorgestellten Daten",
+  "readMin": "6 Min. Lesezeit",
+  "introTitle": "Kurz zusammengefasst",
+  "intro": [
+    "Am 19. November 2026 teilte Alibaba.com auf dem CoCreate-Gipfel in London mit mehr als 5,000 europäischen Unternehmern mit, dass die Zahl seiner europäischen Bestellungen und Einkäufer innerhalb von drei Jahren jeweils um 70% gestiegen ist.",
+    "Besonders hilfreich ist die Aufschlüsselung nach Kategorien. Sie zeigt, wo europäische Kleinunternehmen bereits investieren und wo sich Lieferanten, Muster und Daten leicht finden lassen. Im Folgenden finden Sie die vier wachsenden Kategorien, passende Produktideen und die wichtigsten Prüfpunkte vor der Bestellung."
+  ],
+  "factsTitle": "Die Zahlen",
+  "facts": [
+    {
+      "value": "+231%",
+      "label": "GMV-Wachstum gegenüber dem Vorjahr bei kreativem Spielzeug und Geschenken durch europäische Einkäufer"
+    },
+    {
+      "value": "+141%",
+      "label": "Wachstum bei Motorrädern und Rollern"
+    },
+    {
+      "value": "+70%",
+      "label": "Wachstum bei europäischen Bestellungen und Einkäufern auf Alibaba.com innerhalb von drei Jahren"
+    },
+    {
+      "value": "1.28M",
+      "label": "von europäischen Verkäufern auf Alibaba.com gelistete Produkte, 78% mehr als im Vorjahr"
+    }
+  ],
+  "catsTitle": "4 Kategorien, die Sie für 2027 prüfen sollten",
+  "catsIntro": "Wählen Sie eine Kategorie: Sie erhalten Produktideen, wichtige Prüfpunkte und einen fertigen Prompt für Ihren KI-Agenten.",
+  "cats": [
+    {
+      "name": "Kreatives Spielzeug und Geschenke",
+      "growth": "+231%",
+      "ideas": [
+        "MINT- und Bausets",
+        "Personalisierte und individuell bedruckte Geschenke",
+        "Plüschspielzeug für Nischenhobbys",
+        "Geschenksets für Partys und saisonale Anlässe"
+      ],
+      "check": "Spielzeug, das in der EU verkauft wird, benötigt die CE-Kennzeichnung und Sicherheitsprüfungen nach EN 71. Fordern Sie Prüfberichte an, bevor Sie Muster bestellen, und prüfen Sie Warnhinweise zu Kleinteilen sowie Altersangaben.",
+      "prompt": "Finde 5 verifizierte Lieferanten für [Idee für kreatives Spielzeug oder Geschenke], die bereits über Prüfberichte zu EN 71 und CE verfügen. MOQ unter 300 Stück, Stückpreis unter [Preis] EUR. Vergleiche Preis, MOQ, Lieferzeit, Individualisierungsmöglichkeiten und Zertifikate in einer Tabelle und berechne meine Marge bei einem Verkaufspreis von [Preis] EUR in [Land]."
+    },
+    {
+      "name": "Motorräder und Roller",
+      "growth": "+141%",
+      "ideas": [
+        "Tretroller und Zubehör",
+        "Helme, Schlösser und Leuchten",
+        "Ersatzteile: Reifen, Bremsen, Akkus",
+        "Handyhalterungen und Gepäcktaschen"
+      ],
+      "check": "Für E-Scooter und ihre Akkus gelten strenge EU-Vorschriften (CE, EN 17128 für leichte Elektrofahrzeuge, Vorschriften zum Batterietransport). Zubehör und Ersatzteile bieten oft einen einfacheren Einstieg in diese Kategorie.",
+      "prompt": "Ich möchte [Roller- oder Motorradzubehör] in [Land] verkaufen. Finde 5 verifizierte Lieferanten und zeige die für den EU-Vertrieb relevanten Zertifizierungen, MOQ, Stückpreis, Lieferzeit und gegebenenfalls Versandbeschränkungen für Akkus. Ordne die Lieferanten nach Risiko und berechne die Gesamtkosten bis zum Bestimmungsort sowie die Marge bei einem Verkaufspreis von [Preis] EUR."
+    },
+    {
+      "name": "Autoteile",
+      "growth": "Zweistelliges Wachstum",
+      "ideas": [
+        "Organizer für den Fahrzeuginnenraum",
+        "LED- und Beleuchtungsnachrüstungen",
+        "Scheibenwischer und Filter",
+        "Sets zur Fahrzeugaufbereitung und Reinigung"
+      ],
+      "check": "Genaue Angaben zur Fahrzeugkompatibilität sind entscheidend: Listen Sie die konkreten Fahrzeugmodelle und Teilenummern auf. Beleuchtung und sicherheitsrelevante Teile können für den Einsatz im Straßenverkehr eine E-mark-Genehmigung benötigen.",
+      "prompt": "Finde 5 verifizierte Lieferanten für [Autoteil], das mit [Fahrzeugmodelle] kompatibel ist. Zeige für jeden Lieferanten Teilenummern, E-mark oder andere Zertifizierungen, MOQ, Stückpreis und Lieferzeit. Markiere Lieferanten ohne eindeutige Angaben zur Fahrzeugkompatibilität und berechne meine Marge bei einem Verkaufspreis von [Preis] EUR."
+    },
+    {
+      "name": "Elektronische Bauteile",
+      "growth": "Zweistelliges Wachstum",
+      "ideas": [
+        "Ladegeräte und Kabel",
+        "Smart-Home-Sensoren",
+        "Elektronik-Bausätze und Maker-Kits",
+        "Ersatzakkus und Module"
+      ],
+      "check": "Unterhaltungselektronik muss die Anforderungen von CE und RoHS erfüllen. In vielen EU-Ländern sind Sie zudem für die Einhaltung der WEEE-Vorgaben und die Batterierücknahme verantwortlich. Prüfen Sie, ob die Zertifikate genau zum jeweiligen Modell passen.",
+      "prompt": "Finde 5 verifizierte Lieferanten für [Elektronikprodukt] mit gültigen CE- und RoHS-Zertifikaten für genau dieses Modell. Vergleiche Preis, MOQ, Lieferzeit, Garantie und Nachbestellquote in einer Tabelle. Liste auf, was ich für die WEEE-Konformität in [Land] benötige, und berechne meine Marge bei einem Verkaufspreis von [Preis] EUR."
+    }
+  ],
+  "howTitle": "So prüfen Sie eine Produktidee mit Accio in 24 Stunden",
+  "howIntro": "Sie müssen nicht wochenlang Tabellen auswerten, um zu entscheiden, ob sich eine Musterbestellung lohnt. Hier ist ein beispielhafter Ablauf für einen Arbeitstag mit den Agenten von Accio Work.",
+  "how": [
+    {
+      "when": "Stunden 0-2",
+      "title": "Marktcheck",
+      "body": "Lassen Sie den Agenten Nachfrageindikatoren, Wettbewerbspreise und Rezensionen zu Ihrer Idee im Zielland recherchieren."
+    },
+    {
+      "when": "Stunden 2-8",
+      "title": "Lieferanten suchen und prüfen",
+      "body": "Lassen Sie sich 5 verifizierte Lieferanten mit MOQ, Preis, Lieferzeit, Zertifikaten und Risikohinweisen in einer Tabelle zusammenstellen."
+    },
+    {
+      "when": "Stunden 8-16",
+      "title": "Gewinn und Muster",
+      "body": "Berechnen Sie die Gesamtkosten bis zum Bestimmungsort und Ihre Marge. Lassen Sie den Agenten anschließend Musteranfragen an die zwei besten Lieferanten entwerfen."
+    },
+    {
+      "when": "Stunden 16-24",
+      "title": "Material für den Verkaufsstart",
+      "body": "Erstellen Sie ein Produktangebot, zentrale Verkaufsargumente und Produktbilder, um die Nachfrage zu testen, während die Muster unterwegs sind."
+    }
+  ],
+  "howNote": "Die Zeitangaben sind beispielhaft. Muster, Zertifizierung und Versand benötigen mehr als einen Tag. Der Agent beschleunigt die Recherche und Entscheidungsfindung.",
+  "ctaTitle": "Prüfen Sie Ihre Produktidee für 2027 noch heute Abend kostenlos",
+  "ctaText": "Registrieren Sie sich bei Accio Work, öffnen Sie den Beschaffungsagenten, wählen Sie oben eine Kategorie und fügen Sie den zugehörigen Prompt ein. Bis morgen früh wissen Sie, ob sich eine Musterbestellung lohnt.",
+  "ctaBtn": "Accio Work kostenlos starten",
+  "promptLabel": "Fertiger Prompt für diese Kategorie",
+  "limitsTitle": "Die Zahlen richtig einordnen",
+  "limits": [
+    "Die Wachstumszahlen stammen von Alibaba.com und beziehen sich auf Bestellungen europäischer Einkäufer auf der Plattform, nicht auf den gesamten europäischen Markt.",
+    "Hohes prozentuales Wachstum kann von einer kleinen Ausgangsbasis ausgehen. Prüfen Sie die tatsächliche Nachfrage in Ihrem Land, bevor Sie bestellen.",
+    "Spielzeug, Roller, Autoteile und Elektronik sind regulierte Kategorien. Planen Sie Zeit und Budget für die Einhaltung der Vorschriften ein.",
+    "Berücksichtigen Sie das chinesische Neujahr 2027: Bestellungen nach Mitte Dezember werden möglicherweise erst im März versendet."
+  ],
+  "faq": [
+    {
+      "q": "Welche Produkte werden sich 2027 gut verkaufen?",
+      "a": "Die Alibaba.com-Daten zu europäischen Einkäufern zeigen das stärkste Wachstum bei kreativem Spielzeug und Geschenken (+231%) sowie Motorrädern und Rollern (+141%). Autoteile und elektronische Bauteile verzeichnen zweistelliges Wachstum."
+    },
+    {
+      "q": "Woher stammen diese Daten?",
+      "a": "Vom CoCreate-Gipfel von Alibaba.com am 19. November 2026 in London, über den unter anderem TMTPost und Ebrun berichtet haben. Die Daten bilden das GMV europäischer Einkäufer auf Alibaba.com ab."
+    },
+    {
+      "q": "Welche Kategorie eignet sich am besten für Einsteiger?",
+      "a": "Bei Geschenken und Zubehör sind die MOQ in der Regel niedriger und die Logistik einfacher als bei E-Scootern oder Elektronik. Prüfen Sie trotzdem die CE- und Sicherheitsanforderungen für Ihren Markt."
+    },
+    {
+      "q": "Kann ich eine Produktidee wirklich in 24 Stunden prüfen?",
+      "a": "Mit KI-Agenten können Sie die Recherche und Entscheidungsfindung an einem Tag abschließen: Nachfrage, Lieferantensuche, Überprüfung und Margenberechnung. Muster und Zertifizierung dauern länger."
+    }
+  ],
+  "sourceLabels": [
+    "Kategoriedaten: TMTPost, 20. November 2026",
+    "Kategoriedaten: Ebrun, 20. November 2026",
+    "Daten zu europäischen Verkäufern: Pressemitteilung von Alibaba.com, 19. November 2026"
+  ],
+  "moreTitle": "Weiterlesen",
+  "newsLabel": "Aktuelles",
+  "promoBadge": "Trends - was 2027 verkaufen?",
+  "promoTitle": "Was 2027 verkaufen? Kategorien mit bis zu 231% Wachstum in Europa",
+  "promoCta": "Kategorien und Prompts ansehen"
+}

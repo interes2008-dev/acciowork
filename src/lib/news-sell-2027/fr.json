@@ -1,0 +1,158 @@
+{
+  "seoTitle": "Que vendre en 2027 : les catégories de produits à plus forte croissance en Europe",
+  "description": "Données Alibaba.com présentées à CoCreate Europe : jouets créatifs et cadeaux +231%, motos et scooters +141%, forte croissance des pièces automobiles et des composants électroniques. Idées de produits, contrôles de conformité et plan sur 24 heures pour valider un produit avec l’IA.",
+  "keywords": [
+    "que vendre en 2027",
+    "produits tendance 2027",
+    "meilleurs produits à vendre en ligne en 2027",
+    "catégories de produits en forte croissance en Europe",
+    "produits à importer de Chine en 2027",
+    "recherche de produits avec l’IA",
+    "recherche de produits Accio"
+  ],
+  "badge": "Tendances - 24 novembre 2026",
+  "title": "Que vendre en 2027 : les catégories de produits à plus forte croissance en Europe",
+  "lede": "Lors de CoCreate Europe à Londres, Alibaba.com a présenté les catégories les plus commandées cette année par les acheteurs européens. Les jouets créatifs et cadeaux ont progressé de 231%, les motos et scooters de 141%. Voici ce que cela implique pour votre prochain produit et comment tester une idée en 24 heures.",
+  "dateLabel": "Publié le 24 novembre 2026 - d’après les données présentées à CoCreate Europe le 19 novembre",
+  "readMin": "6 min de lecture",
+  "introTitle": "En bref",
+  "intro": [
+    "Le 19 novembre 2026, lors du sommet CoCreate à Londres réunissant plus de 5,000 dirigeants d’entreprise européens, Alibaba.com a annoncé une hausse de 70% de ses commandes européennes et de son nombre d’acheteurs européens sur trois ans.",
+    "La répartition par catégorie est la plus utile. Elle indique où les petites entreprises européennes investissent déjà, et pour quels produits il est facile de trouver des fournisseurs, des échantillons et des données. Voici les quatre catégories en croissance, des idées de produits pour chacune et les points à vérifier avant de commander."
+  ],
+  "factsTitle": "Les chiffres",
+  "facts": [
+    {
+      "value": "+231%",
+      "label": "de croissance annuelle du GMV des achats de jouets créatifs et cadeaux par les acheteurs européens"
+    },
+    {
+      "value": "+141%",
+      "label": "de croissance pour les motos et scooters"
+    },
+    {
+      "value": "+70%",
+      "label": "de croissance des commandes européennes et du nombre d’acheteurs européens sur Alibaba.com en trois ans"
+    },
+    {
+      "value": "1.28M",
+      "label": "de produits proposés par les vendeurs européens sur Alibaba.com, en hausse de 78% sur un an"
+    }
+  ],
+  "catsTitle": "4 catégories à explorer pour 2027",
+  "catsIntro": "Choisissez une catégorie pour découvrir des idées de produits, les points à vérifier et un prompt prêt à l’emploi pour votre agent IA.",
+  "cats": [
+    {
+      "name": "Jouets créatifs et cadeaux",
+      "growth": "+231%",
+      "ideas": [
+        "Kits éducatifs scientifiques et jeux de construction",
+        "Cadeaux personnalisés et imprimés sur mesure",
+        "Peluches inspirées de loisirs de niche",
+        "Coffrets cadeaux pour les fêtes et les temps forts saisonniers"
+      ],
+      "check": "Les jouets vendus dans l’UE doivent porter le marquage CE et être soumis aux essais de sécurité EN 71. Demandez les rapports d’essai avant de commander des échantillons et vérifiez les mentions relatives aux petites pièces et à l’âge.",
+      "prompt": "Trouve 5 fournisseurs vérifiés de [idée de jouet créatif ou de cadeau] disposant déjà de rapports d’essai EN 71 et CE. MOQ inférieure à 300 unités, prix unitaire inférieur à [prix] EUR. Compare dans un tableau les prix, la MOQ, les délais, les options de personnalisation et les certificats, puis calcule ma marge si je vends à [prix] EUR dans le pays suivant : [pays]."
+    },
+    {
+      "name": "Motos et scooters",
+      "growth": "+141%",
+      "ideas": [
+        "Trottinettes et accessoires",
+        "Casques, antivols et éclairages",
+        "Pièces détachées : pneus, freins, batteries",
+        "Supports de téléphone et sacoches"
+      ],
+      "check": "Les trottinettes électriques et leurs batteries sont soumises à des règles strictes dans l’UE : CE, EN 17128 pour les véhicules électriques légers et règles de transport des batteries. Les accessoires et les pièces détachées constituent souvent un point d’entrée plus accessible dans cette catégorie.",
+      "prompt": "Je souhaite vendre [accessoire pour trottinette ou moto] dans le pays suivant : [pays]. Trouve 5 fournisseurs vérifiés et indique les certifications pertinentes pour la vente dans l’UE, la MOQ, le prix unitaire, les délais et les éventuelles restrictions d’expédition des batteries. Classe-les par niveau de risque et calcule le coût de revient rendu à destination ainsi que la marge pour un prix de vente de [prix] EUR."
+    },
+    {
+      "name": "Pièces automobiles",
+      "growth": "Croissance à deux chiffres",
+      "ideas": [
+        "Organisateurs pour habitacle",
+        "LED et solutions d’amélioration de l’éclairage",
+        "Balais d’essuie-glace et filtres",
+        "Kits de nettoyage et de rénovation automobile"
+      ],
+      "check": "Les données de compatibilité sont essentielles : précisez les modèles de véhicules et les références exactes des pièces. Les pièces d’éclairage et de sécurité peuvent nécessiter une homologation E-mark pour un usage routier.",
+      "prompt": "Trouve 5 fournisseurs vérifiés de [pièce automobile] compatibles avec [modèles de véhicules]. Pour chacun, indique les références des pièces, l’homologation E-mark ou les autres certifications, la MOQ, le prix unitaire et les délais. Signale tout fournisseur dont les données de compatibilité manquent de clarté et calcule ma marge pour un prix de vente de [prix] EUR."
+    },
+    {
+      "name": "Composants électroniques",
+      "growth": "Croissance à deux chiffres",
+      "ideas": [
+        "Chargeurs et câbles",
+        "Capteurs domotiques",
+        "Kits d’électronique à monter soi-même et kits pour makers",
+        "Batteries et modules de remplacement"
+      ],
+      "check": "Les produits électroniques grand public doivent respecter les exigences CE et RoHS. Dans de nombreux pays de l’UE, vous êtes également responsable des obligations WEEE et de la reprise des batteries. Vérifiez que les certificats correspondent au modèle exact.",
+      "prompt": "Trouve 5 fournisseurs vérifiés de [produit électronique] disposant de certificats CE et RoHS valides pour le modèle exact. Compare dans un tableau les prix, la MOQ, les délais, la garantie et le taux de réachat. Liste les démarches nécessaires pour respecter les obligations WEEE dans le pays suivant : [pays], puis calcule ma marge pour un prix de vente de [prix] EUR."
+    }
+  ],
+  "howTitle": "Comment valider un produit en 24 heures avec Accio",
+  "howIntro": "Pas besoin de passer des semaines sur des tableurs pour savoir si une idée mérite une commande d’échantillons. Voici un exemple de programme de travail sur une journée avec les agents d’Accio Work.",
+  "how": [
+    {
+      "when": "Heures 0-2",
+      "title": "Analyse du marché",
+      "body": "Demandez à l’agent des indicateurs de demande, les prix des concurrents et les avis clients pour votre idée dans le pays ciblé."
+    },
+    {
+      "when": "Heures 2-8",
+      "title": "Fournisseurs et vérifications",
+      "body": "Obtenez un tableau regroupant 5 fournisseurs vérifiés avec leur MOQ, leurs prix, leurs délais, leurs certificats et les risques identifiés."
+    },
+    {
+      "when": "Heures 8-16",
+      "title": "Rentabilité et échantillons",
+      "body": "Calculez le coût de revient rendu à destination et la marge, puis laissez l’agent rédiger des demandes d’échantillons à envoyer aux deux meilleurs fournisseurs."
+    },
+    {
+      "when": "Heures 16-24",
+      "title": "Supports de lancement",
+      "body": "Générez une fiche produit, les principaux arguments de vente et des visuels pour tester la demande pendant l’acheminement des échantillons."
+    }
+  ],
+  "howNote": "Ce calendrier est donné à titre d’exemple. L’obtention des échantillons, la certification et l’expédition prennent plus d’une journée ; l’agent accélère la recherche et la prise de décision.",
+  "ctaTitle": "Testez gratuitement votre idée de produit pour 2027 dès ce soir",
+  "ctaText": "Inscrivez-vous à Accio Work, ouvrez l’agent de sourcing, choisissez une catégorie ci-dessus et collez le prompt correspondant. Dès demain matin, vous saurez si l’idée mérite une commande d’échantillon.",
+  "ctaBtn": "Démarrer gratuitement avec Accio Work",
+  "promptLabel": "Prompt prêt à l’emploi pour cette catégorie",
+  "limitsTitle": "Interprétez les chiffres avec prudence",
+  "limits": [
+    "Les chiffres de croissance proviennent des données internes d’Alibaba.com sur les commandes des acheteurs européens sur sa plateforme. Ils ne représentent pas l’ensemble du marché européen.",
+    "Un fort pourcentage de croissance peut partir d’une base faible. Vérifiez la demande réelle dans votre pays avant de commander.",
+    "Les jouets, les scooters, les pièces automobiles et les produits électroniques sont des catégories réglementées. Prévoyez du temps et un budget pour la mise en conformité.",
+    "Anticipez le Nouvel An chinois 2027 : les commandes passées après la mi-décembre risquent de n’être expédiées qu’en mars."
+  ],
+  "faq": [
+    {
+      "q": "Quels produits se vendront bien en 2027 ?",
+      "a": "Les données d’Alibaba.com sur les acheteurs européens montrent les plus fortes progressions pour les jouets créatifs et cadeaux (+231%) et les motos et scooters (+141%), ainsi qu’une croissance à deux chiffres pour les pièces automobiles et les composants électroniques."
+    },
+    {
+      "q": "D’où viennent ces données ?",
+      "a": "Elles ont été présentées lors du sommet CoCreate d’Alibaba.com à Londres le 19 novembre 2026, puis relayées notamment par TMTPost et Ebrun. Elles reflètent le GMV généré par les acheteurs européens sur Alibaba.com."
+    },
+    {
+      "q": "Quelle catégorie est la plus accessible pour débuter ?",
+      "a": "Les cadeaux et les accessoires ont généralement des MOQ plus faibles et une logistique plus simple que les trottinettes électriques ou les produits électroniques. Vérifiez néanmoins les exigences CE et les règles de sécurité applicables à votre marché."
+    },
+    {
+      "q": "Peut-on vraiment valider un produit en 24 heures ?",
+      "a": "Avec des agents IA, vous pouvez mener la recherche et prendre une décision en une journée : demande, fournisseurs, vérifications et marge. L’obtention des échantillons et la certification prennent plus de temps."
+    }
+  ],
+  "sourceLabels": [
+    "Données par catégorie : TMTPost, 20 novembre 2026",
+    "Données par catégorie : Ebrun, 20 novembre 2026",
+    "Données sur les vendeurs européens : communiqué de presse Alibaba.com, 19 novembre 2026"
+  ],
+  "moreTitle": "À lire ensuite",
+  "newsLabel": "Actualités",
+  "promoBadge": "Tendances - que vendre en 2027",
+  "promoTitle": "Que vendre en 2027 : des catégories en croissance jusqu’à 231% en Europe",
+  "promoCta": "Voir les catégories et les prompts"
+}

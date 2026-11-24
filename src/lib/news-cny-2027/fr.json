@@ -1,0 +1,161 @@
+{
+  "seoTitle": "Nouvel An chinois 2027 : fermetures d'usines, dates limites de commande et calculateur",
+  "description": "Le Nouvel An chinois 2027 tombe le 6 février, mais les usines chinoises ralentissent dès fin janvier. Dates clés, calculateur de date limite de commande et checklist IA pour faire expédier votre stock avant la fermeture.",
+  "keywords": [
+    "fermeture usines nouvel an chinois 2027",
+    "date limite commande nouvel an chinois 2027",
+    "date limite expédition nouvel an chinois 2027",
+    "fermeture usines chine 2027",
+    "quand commander avant le nouvel an chinois",
+    "fournisseurs nouvel an lunaire 2027",
+    "calendrier production fête du printemps 2027"
+  ],
+  "badge": "Guide des échéances - mis à jour le 24 novembre 2026",
+  "title": "Nouvel An chinois 2027 : quand commander avant la fermeture des usines chinoises",
+  "lede": "Le Nouvel An chinois tombe le 6 février 2027, mais la production s'arrête une à deux semaines plus tôt et reprend progressivement. Si votre stock du premier trimestre est fabriqué en Chine, la véritable échéance se situe en décembre. Voici les dates, un calculateur et une méthode pour obtenir par écrit le calendrier de chaque fournisseur dès ce soir.",
+  "dateLabel": "Publié le 24 novembre 2026",
+  "readMin": "6 min de lecture",
+  "introTitle": "En bref",
+  "intro": [
+    "Le Nouvel An chinois (fête du Printemps) 2027 tombe le samedi 6 février. Le réveillon a lieu le 5 février et les jours fériés légaux en Chine continentale vont du 5 au 8 février. Avec les week-ends et les jours travaillés réaménagés, la période officielle de congés dure généralement environ 8-9 jours.",
+    "Les usines ferment bien plus longtemps. Les ouvriers rentrent chez eux durant la dernière semaine de janvier, de nombreuses lignes s'arrêtent vers le 25-27 janvier et la pleine capacité de production n'est souvent rétablie qu'en mars. La date qui compte pour vous n'est donc pas le 6 février, mais le dernier jour d'enlèvement chez votre fournisseur."
+  ],
+  "datesTitle": "Les dates clés pour les acheteurs",
+  "dates": [
+    {
+      "date": "30 nov. 2026",
+      "label": "Date recommandée pour confirmer par écrit le choix des fournisseurs, les prix et les calendriers de fermeture"
+    },
+    {
+      "date": "Mi-déc. 2026",
+      "label": "Date limite généralement recommandée pour commander sans risque des marchandises à produire et à expédier avant les congés"
+    },
+    {
+      "date": "~15 janv. 2027",
+      "label": "Date limite habituelle de confirmation des commandes de produits fabriqués à la demande dans de nombreuses usines"
+    },
+    {
+      "date": "~22-26 janv. 2027",
+      "label": "Derniers enlèvements en usine chez de nombreux fournisseurs ; réservez le transport à l'avance"
+    },
+    {
+      "date": "5-8 févr. 2027",
+      "label": "Jours fériés légaux de la fête du Printemps en Chine continentale (le 6 février est le jour du Nouvel An)"
+    },
+    {
+      "date": "~20 févr. 2027",
+      "label": "Fête des Lanternes ; de nombreuses usines reprennent progressivement leur activité autour de cette date"
+    },
+    {
+      "date": "Mars 2027",
+      "label": "Retour habituel à pleine capacité avec le retour des ouvriers et la formation des nouvelles recrues"
+    }
+  ],
+  "datesNote": "Chaque usine fixe ses propres dates de fermeture. Les jours de congé exacts en Chine continentale sont fixés par un avis du Conseil des affaires d'État. Confirmez toujours les dates auprès de votre fournisseur et de votre transitaire.",
+  "calcTitle": "Calculateur : votre date limite de commande",
+  "calcIntro": "Saisissez le dernier jour d'enlèvement chez votre fournisseur et le délai de production. Le calculateur établit un rétroplanning et indique quand passer commande et à quelle date les marchandises devraient arriver.",
+  "calcPickup": "Dernier jour d'enlèvement chez le fournisseur",
+  "calcProd": "Délai de production, en jours",
+  "calcQc": "Inspection et emballage, en jours",
+  "calcMode": "Transport",
+  "modeSea": "Fret maritime (~35 jours)",
+  "modeRail": "Fret ferroviaire vers l'Europe (~25 jours)",
+  "modeAir": "Fret aérien (~7 jours)",
+  "resOrder": "Commander au plus tard le",
+  "resArrive": "Arrivée estimée",
+  "resLate": "Cette date est déjà passée. Demandez au fournisseur s'il dispose de stock prêt à expédier, s'il peut produire une plus petite série ou livrer après les congés.",
+  "calcNote": "Les délais de transport sont des moyennes approximatives destinées à la planification. Prévoyez une marge pour la congestion portuaire avant les congés.",
+  "timelineTitle": "Plan d'action par semaine",
+  "timeline": [
+    {
+      "when": "Cette semaine",
+      "title": "Obtenez les calendriers par écrit",
+      "body": "Demandez quatre dates à chaque fournisseur : dernier jour de commande, dernier jour de production, dernier jour d'enlèvement et date de reprise de la production à pleine capacité."
+    },
+    {
+      "when": "D'ici le 30 novembre",
+      "title": "Validez les spécifications et les prix",
+      "body": "Approuvez dès maintenant les échantillons, les fichiers graphiques et les emballages. Toute modification en janvier relance le cycle de production et vous fait manquer le créneau."
+    },
+    {
+      "when": "D'ici mi-décembre",
+      "title": "Passez commande et versez les acomptes",
+      "body": "Commandez 6-10 semaines de stock supplémentaire pour couvrir la fermeture et la reprise progressive. Réservez en parallèle la capacité de transport nécessaire."
+    },
+    {
+      "when": "Début à mi-janvier",
+      "title": "Inspectez avant l'expédition",
+      "body": "Planifiez une inspection avant expédition. Les problèmes de qualité apparaissent généralement sur les séries produites dans l'urgence avant la fin de l'année chinoise."
+    },
+    {
+      "when": "Après les congés",
+      "title": "Revérifiez la qualité et les prix",
+      "body": "De nombreux ouvriers changent d'emploi après les fêtes. Inspectez le premier lot produit après les congés et revérifiez les devis et les délais."
+    }
+  ],
+  "agentTitle": "Ce qu'un agent IA peut faire pour vous dès ce soir",
+  "agentIntro": "Recueillir manuellement les calendriers de fermeture de dix fournisseurs prend plusieurs jours d'échanges entre fuseaux horaires. Dans Accio Work, confiez cette tâche à l'agent de sourcing et obtenez un tableau unique.",
+  "agent": [
+    {
+      "title": "Recueillir tous les calendriers",
+      "body": "L'agent rédige une demande de calendrier de fermeture pour chaque fournisseur et regroupe les réponses dans un tableau comparatif unique."
+    },
+    {
+      "title": "Trouver des fournisseurs de secours",
+      "body": "Si votre usine principale ferme tôt, l'agent recherche d'autres fournisseurs vérifiés disposant de stock prêt à expédier ou proposant des délais plus courts."
+    },
+    {
+      "title": "Planifier le stock de sécurité",
+      "body": "Indiquez-lui vos ventes mensuelles : il estime le nombre de semaines de stock nécessaires pour couvrir la fermeture et la reprise."
+    },
+    {
+      "title": "Vérifier le coût rendu",
+      "body": "Les tarifs de fret augmentent avant les congés. L'agent recalcule votre marge avec les frais de transport actuels avant que vous ne payiez."
+    }
+  ],
+  "ctaTitle": "Déléguez dès ce soir votre planification du Nouvel An chinois",
+  "ctaText": "Inscrivez-vous à Accio Work, ouvrez l'agent de sourcing et collez la consigne ci-dessous. Vous obtiendrez un tableau des échéances fournisseurs au lieu de passer une semaine à relancer vos contacts.",
+  "ctaBtn": "Démarrer gratuitement avec Accio Work",
+  "promptLabel": "Vérification des échéances du Nouvel An chinois 2027",
+  "prompt": "J'achète [produit] en Chine et j'ai besoin de stock pour couvrir février-mars 2027. Le Nouvel An chinois tombe le 6 février 2027. Pour mes fournisseurs actuels [noms ou liens] et 3 fournisseurs de secours vérifiés : demande la date limite de commande, le dernier jour de production, le dernier jour d'enlèvement et la date de reprise à pleine capacité. Regroupe les réponses dans un tableau, signale tout fournisseur qui ferme avant le 25 janvier et calcule combien d'unités je dois commander au plus tard le 15 décembre si je vends [unités] par mois et fais expédier les marchandises par voie [maritime/ferroviaire/aérienne] vers [pays].",
+  "risksTitle": "Erreurs fréquentes",
+  "risks": [
+    "Planifier en fonction du 6 février plutôt que du dernier jour d'enlèvement chez le fournisseur.",
+    "Modifier l'emballage ou les spécifications en janvier, ce qui relance le cycle de production.",
+    "Commander uniquement pour février : la reprise progressive prolonge souvent les délais jusqu'en mars.",
+    "Négliger l'inspection des séries produites dans l'urgence avant la fin de l'année chinoise et du premier lot produit après les congés.",
+    "Réserver le transport trop tard : les capacités se raréfient et les tarifs augmentent dans les semaines précédant les congés."
+  ],
+  "faq": [
+    {
+      "q": "Quand tombe le Nouvel An chinois 2027 ?",
+      "a": "Le samedi 6 février 2027. Le réveillon a lieu le 5 février et les jours fériés légaux en Chine continentale vont du 5 au 8 février. Les jours de congé définitifs sont fixés par un avis du Conseil des affaires d'État."
+    },
+    {
+      "q": "Quand les usines chinoises ferment-elles pour le Nouvel An chinois 2027 ?",
+      "a": "Cela dépend de l'usine. Beaucoup arrêtent la production vers le 25-27 janvier 2027 et reprennent autour de la fête des Lanternes, le 20 février. La pleine capacité n'est souvent rétablie qu'en mars."
+    },
+    {
+      "q": "Quelle est la date limite pour commander avant le Nouvel An chinois 2027 ?",
+      "a": "Pour les marchandises à expédier avant les congés, la plupart des fournisseurs recommandent de passer commande au plus tard à la mi-décembre 2026. Utilisez le calculateur ci-dessus avec la date réelle du dernier enlèvement et le délai de production de votre fournisseur."
+    },
+    {
+      "q": "Combien de stock supplémentaire faut-il commander ?",
+      "a": "Une règle courante consiste à prévoir 6-10 semaines de stock supplémentaire pour couvrir la fermeture, la reprise progressive et le transport. Les produits à forte rotation peuvent nécessiter davantage de stock."
+    },
+    {
+      "q": "L'IA peut-elle aider à planifier les approvisionnements pour le Nouvel An chinois ?",
+      "a": "Oui. Un agent IA de sourcing comme Accio peut demander les calendriers de fermeture aux fournisseurs, les comparer dans un tableau unique, trouver des fournisseurs de secours et recalculer le coût rendu."
+    }
+  ],
+  "sourceLabels": [
+    "Dates : Cambridge China Bridge, guide du Nouvel An chinois 2027",
+    "Exemple de calendrier d'usine : Kehui, avis sur la production en 2027",
+    "Calendrier des commandes : iFunSmart, échéances du Nouvel An chinois 2027"
+  ],
+  "moreTitle": "À lire ensuite",
+  "newsLabel": "Actualités",
+  "promoBadge": "Date limite - Nouvel An chinois 2027",
+  "promoTitle": "Nouvel An chinois 2027 : commandez avant la fermeture des usines chinoises",
+  "promoCta": "Consulter les dates et le calculateur"
+}

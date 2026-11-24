@@ -1,0 +1,161 @@
+{
+  "seoTitle": "Chinesisches Neujahr 2027: Fabrikschließungen, Bestellfristen und Rechner",
+  "description": "Das chinesische Neujahr 2027 fällt auf den 6. Februar, doch Chinas Fabriken fahren die Produktion schon ab Ende Januar herunter. Wichtige Termine, ein Bestellfrist-Rechner und eine KI-Checkliste für den Versand vor der Betriebspause.",
+  "keywords": [
+    "chinesisches neujahr 2027 fabrikschließungen",
+    "chinesisches neujahr 2027 bestellfrist",
+    "chinesisches neujahr 2027 letzter versandtermin",
+    "china fabrikstillstand 2027",
+    "wann vor chinesischem neujahr bestellen",
+    "chinesisches neujahr 2027 lieferanten",
+    "frühlingsfest 2027 produktionsplanung"
+  ],
+  "badge": "Leitfaden zu Bestellfristen - aktualisiert am 24. November 2026",
+  "title": "Chinesisches Neujahr 2027: Wann Sie bestellen müssen, bevor Chinas Fabriken schließen",
+  "lede": "Das Fest fällt auf den 6. Februar 2027, doch die Produktion stoppt bereits ein bis zwei Wochen vorher und läuft danach nur langsam wieder an. Wenn Ihre Ware für das erste Quartal aus China kommt, liegt die entscheidende Bestellfrist im Dezember. Hier finden Sie die Termine, einen Rechner und einen Weg, sich die Zeitpläne aller Lieferanten noch heute Abend schriftlich bestätigen zu lassen.",
+  "dateLabel": "Veröffentlicht am 24. November 2026",
+  "readMin": "6 Min. Lesezeit",
+  "introTitle": "Das Wichtigste in Kürze",
+  "intro": [
+    "Das chinesische Neujahr (Frühlingsfest) 2027 fällt auf Samstag, den 6. Februar. Der Vorabend des Neujahrsfests ist der 5. Februar, und die gesetzlichen Feiertage in Festlandchina dauern vom 5. bis 8. Februar. Mit Wochenenden und verlegten Arbeitstagen umfasst die offizielle Feiertagspause meist etwa 8-9 Tage.",
+    "Fabriken schließen deutlich länger. Beschäftigte reisen in der letzten Januarwoche nach Hause, viele Produktionslinien stehen bereits um den 25.-27. Januar still, und die volle Kapazität wird oft erst im März wieder erreicht. Entscheidend ist für Sie deshalb nicht der 6. Februar, sondern der letzte Abholtermin Ihres Lieferanten."
+  ],
+  "datesTitle": "Wichtige Termine für Einkäufer",
+  "dates": [
+    {
+      "date": "30. Nov. 2026",
+      "label": "Unsere Empfehlung: Bis zu diesem Datum Lieferanten, Preise und Betriebsferien schriftlich bestätigen lassen"
+    },
+    {
+      "date": "Mitte Dez. 2026",
+      "label": "Üblicherweise der letzte sichere Termin für einen Produktionsauftrag, wenn die Ware noch vor der Betriebspause versendet werden muss"
+    },
+    {
+      "date": "ca. 15. Jan. 2027",
+      "label": "Bei vielen Fabriken der letzte Termin zur Auftragsbestätigung für auf Bestellung gefertigte Ware"
+    },
+    {
+      "date": "ca. 22.-26. Jan. 2027",
+      "label": "Letzte Abholungen ab Werk bei vielen Lieferanten; Frachtkapazitäten frühzeitig buchen"
+    },
+    {
+      "date": "5.-8. Feb. 2027",
+      "label": "Gesetzliche Feiertage zum Frühlingsfest in Festlandchina (der 6. Februar ist Neujahrstag)"
+    },
+    {
+      "date": "ca. 20. Feb. 2027",
+      "label": "Laternenfest; viele Fabriken nehmen um diesen Termin die Produktion langsam wieder auf"
+    },
+    {
+      "date": "März 2027",
+      "label": "Die volle Kapazität wird in der Regel wieder erreicht, sobald die Beschäftigten zurückgekehrt und neue Mitarbeitende eingearbeitet sind"
+    }
+  ],
+  "datesNote": "Jede Fabrik legt ihre Betriebsferien selbst fest. Die genauen arbeitsfreien Tage in Festlandchina werden durch die Bekanntmachung des Staatsrats festgelegt. Bestätigen Sie die Termine immer mit Ihrem Lieferanten und Ihrer Spedition.",
+  "calcTitle": "Rechner: Ihr letzter Bestelltermin",
+  "calcIntro": "Geben Sie den letzten Abholtermin Ihres Lieferanten und die Produktionsdauer ein. Der Rechner rechnet rückwärts und zeigt, bis wann Sie bestellen müssen und wann die Ware voraussichtlich eintrifft.",
+  "calcPickup": "Letzter Abholtermin beim Lieferanten",
+  "calcProd": "Produktionsdauer in Tagen",
+  "calcQc": "Qualitätsprüfung und Verpackung in Tagen",
+  "calcMode": "Transportart",
+  "modeSea": "Seefracht (ca. 35 Tage)",
+  "modeRail": "Bahntransport nach Europa (ca. 25 Tage)",
+  "modeAir": "Luftfracht (ca. 7 Tage)",
+  "resOrder": "Bestellen bis",
+  "resArrive": "Voraussichtliche Ankunft",
+  "resLate": "Dieser Termin ist bereits verstrichen. Fragen Sie den Lieferanten nach Lagerware, einer kleineren Produktionsmenge oder einer Lieferung nach den Feiertagen.",
+  "calcNote": "Die Transportzeiten sind grobe Durchschnittswerte für die Planung. Planen Sie einen Puffer für überlastete Häfen vor den Feiertagen ein.",
+  "timelineTitle": "Aktionsplan nach Wochen",
+  "timeline": [
+    {
+      "when": "Diese Woche",
+      "title": "Zeitpläne schriftlich bestätigen lassen",
+      "body": "Fragen Sie jeden Lieferanten nach vier Terminen: letzter Bestelltag, letzter Produktionstag, letzter Abholtag und Rückkehr zur vollen Produktionskapazität."
+    },
+    {
+      "when": "Bis zum 30. November",
+      "title": "Spezifikationen und Preise verbindlich festlegen",
+      "body": "Geben Sie Muster, Druckdaten und Verpackungen jetzt frei. Jede Änderung im Januar setzt den Produktionsprozess zurück und führt dazu, dass Sie das Zeitfenster verpassen."
+    },
+    {
+      "when": "Bis Mitte Dezember",
+      "title": "Bestellungen aufgeben und Anzahlungen leisten",
+      "body": "Bestellen Sie zusätzlichen Bestand für 6-10 Wochen, um die Betriebspause und den langsamen Wiederanlauf abzudecken. Buchen Sie gleichzeitig Frachtkapazitäten."
+    },
+    {
+      "when": "Anfang bis Mitte Januar",
+      "title": "Ware vor dem Versand prüfen",
+      "body": "Planen Sie eine Qualitätsprüfung vor dem Versand ein. Bei der Produktion unter Zeitdruck zum Jahresende treten besonders häufig Qualitätsprobleme auf."
+    },
+    {
+      "when": "Nach den Feiertagen",
+      "title": "Qualität und Preise erneut prüfen",
+      "body": "Viele Beschäftigte wechseln nach dem Fest den Arbeitsplatz. Prüfen Sie die erste Charge nach den Feiertagen und kontrollieren Sie Angebote und Lieferzeiten erneut."
+    }
+  ],
+  "agentTitle": "Was ein KI-Agent noch heute Abend für Sie erledigen kann",
+  "agentIntro": "Die Betriebsferien von zehn Lieferanten manuell abzufragen, bedeutet oft tagelangen Nachrichtenaustausch über Zeitzonen hinweg. In Accio Work übergeben Sie diese Aufgabe dem Beschaffungsagenten und erhalten eine einzige Übersichtstabelle zurück.",
+  "agent": [
+    {
+      "title": "Alle Zeitpläne zusammentragen",
+      "body": "Der Agent formuliert für jeden Lieferanten eine Anfrage zu den Betriebsferien und fasst die Antworten in einer Vergleichstabelle zusammen."
+    },
+    {
+      "title": "Ersatzlieferanten finden",
+      "body": "Wenn Ihre Hauptfabrik früh schließt, sucht der Agent nach verifizierten Alternativen mit Lagerware oder kürzeren Lieferzeiten."
+    },
+    {
+      "title": "Sicherheitsbestand planen",
+      "body": "Geben Sie Ihren monatlichen Absatz an. Der Agent schätzt, für wie viele Wochen Sie Bestand benötigen, um die Betriebspause und den Wiederanlauf abzudecken."
+    },
+    {
+      "title": "Gesamtkosten bis zum Zielort prüfen",
+      "body": "Vor den Feiertagen steigen die Frachtraten. Der Agent berechnet Ihre Marge mit den aktuellen Versandkosten neu, bevor Sie bezahlen."
+    }
+  ],
+  "ctaTitle": "Delegieren Sie Ihre Planung für das chinesische Neujahr noch heute Abend",
+  "ctaText": "Registrieren Sie sich bei Accio Work, öffnen Sie den Beschaffungsagenten und fügen Sie den folgenden Prompt ein. So erhalten Sie eine Tabelle mit den Fristen Ihrer Lieferanten, statt eine Woche lang Antworten hinterherzulaufen.",
+  "ctaBtn": "Accio Work kostenlos starten",
+  "promptLabel": "Fristencheck für das chinesische Neujahr 2027",
+  "prompt": "Ich kaufe [Produkt] aus China und benötige ausreichend Bestand für Februar-März 2027. Das chinesische Neujahr ist am 6. Februar 2027. Frage bei meinen aktuellen Lieferanten [Namen oder Links] und 3 verifizierten Ersatzlieferanten nach dem letzten Bestelltermin, dem letzten Produktionstag, dem letzten Abholtag und dem Termin für die Rückkehr zur vollen Produktionskapazität. Fasse die Antworten in einer Tabelle zusammen, markiere alle Lieferanten, die vor dem 25. Januar schließen, und berechne, wie viele Einheiten ich bis zum 15. Dezember bestellen muss, wenn ich monatlich [Einheiten] verkaufe und per [Seefracht/Bahn/Luftfracht] nach [Land] versende.",
+  "risksTitle": "Häufige Fehler",
+  "risks": [
+    "Mit dem 6. Februar statt mit dem letzten Abholtermin des Lieferanten planen.",
+    "Verpackungen oder Spezifikationen im Januar ändern und dadurch den Produktionsprozess zurücksetzen.",
+    "Nur für Februar bestellen: Durch den langsamen Wiederanlauf reichen die Lieferzeiten oft bis in den März.",
+    "Bei eiligen Produktionschargen zum Jahresende und der ersten Charge nach den Feiertagen auf die Qualitätsprüfung verzichten.",
+    "Fracht zu spät buchen: In den Wochen vor den Feiertagen werden Kapazitäten knapp und die Frachtraten steigen."
+  ],
+  "faq": [
+    {
+      "q": "Wann ist das chinesische Neujahr 2027?",
+      "a": "Am Samstag, den 6. Februar 2027. Der Vorabend des Neujahrsfests ist der 5. Februar, und die gesetzlichen Feiertage in Festlandchina dauern vom 5.-8. Februar. Die endgültigen arbeitsfreien Tage werden durch die Bekanntmachung des Staatsrats festgelegt."
+    },
+    {
+      "q": "Wann schließen chinesische Fabriken zum chinesischen Neujahr 2027?",
+      "a": "Das hängt von der jeweiligen Fabrik ab. Viele stellen die Produktion um den 25.-27. Januar 2027 ein und nehmen sie rund um das Laternenfest am 20. Februar wieder auf. Die volle Kapazität wird oft erst im März erreicht."
+    },
+    {
+      "q": "Bis wann muss ich vor dem chinesischen Neujahr 2027 bestellen?",
+      "a": "Für Waren, die noch vor der Betriebspause versendet werden müssen, empfehlen die meisten Lieferanten eine Bestellung bis Mitte Dezember 2026. Nutzen Sie den Rechner oben mit dem tatsächlichen Abholtermin und der Produktionsdauer Ihres Lieferanten."
+    },
+    {
+      "q": "Wie viel zusätzlichen Bestand sollte ich bestellen?",
+      "a": "Eine gängige Faustregel ist zusätzlicher Bestand für 6-10 Wochen: für die Betriebspause selbst, den langsamen Wiederanlauf und die Transportzeit. Bei Produkten mit hohem Warenumschlag kann mehr nötig sein."
+    },
+    {
+      "q": "Kann KI bei der Planung für das chinesische Neujahr helfen?",
+      "a": "Ja. Ein KI-Beschaffungsagent wie Accio kann die Betriebsferien von Lieferanten abfragen, sie in einer Tabelle vergleichen, Ersatzlieferanten finden und die Gesamtkosten bis zum Zielort neu berechnen."
+    }
+  ],
+  "sourceLabels": [
+    "Termine: Cambridge China Bridge, Leitfaden zum chinesischen Neujahr 2027",
+    "Beispiel für einen Fabrikzeitplan: Kehui, Produktionsmitteilung 2027",
+    "Bestellplanung: iFunSmart, Fristen zum chinesischen Neujahr 2027"
+  ],
+  "moreTitle": "Weiterlesen",
+  "newsLabel": "Aktuelles",
+  "promoBadge": "Bestellfrist - Chinesisches Neujahr 2027",
+  "promoTitle": "Chinesisches Neujahr 2027: Bestellen, bevor Chinas Fabriken schließen",
+  "promoCta": "Termine und Rechner ansehen"
+}

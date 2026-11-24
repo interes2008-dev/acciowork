@@ -53,7 +53,9 @@ import { Route as BlogCaseStudySourcingElectronics48HoursRouteImport } from './r
 import { Route as BlogChatgptVsAccioSourcingAgentsRouteImport } from './routes/blog.chatgpt-vs-accio-sourcing-agents'
 import { Route as BlogChinaImportRiskAuditLandedCostRouteImport } from './routes/blog.china-import-risk-audit-landed-cost'
 import { Route as BlogChinaSourcingRouteImport } from './routes/blog.china-sourcing'
+import { Route as BlogChineseNewYear2027OrderDeadlinesRouteImport } from './routes/blog.chinese-new-year-2027-order-deadlines'
 import { Route as BlogHowToFindVerifiedChinaSuppliersAiRouteImport } from './routes/blog.how-to-find-verified-china-suppliers-ai'
+import { Route as BlogWhatToSell2027TrendingProductsEuropeRouteImport } from './routes/blog.what-to-sell-2027-trending-products-europe'
 import { Route as CompareIndexRouteImport } from './routes/compare.index'
 import { Route as CompareCompetitorRouteImport } from './routes/compare.$competitor'
 import { Route as DeIndexRouteImport } from './routes/de.index'
@@ -160,7 +162,9 @@ import { Route as ArBlogCaseStudySourcingElectronics48HoursRouteImport } from '.
 import { Route as ArBlogChatgptVsAccioSourcingAgentsRouteImport } from './routes/ar.blog.chatgpt-vs-accio-sourcing-agents'
 import { Route as ArBlogChinaImportRiskAuditLandedCostRouteImport } from './routes/ar.blog.china-import-risk-audit-landed-cost'
 import { Route as ArBlogChinaSourcingRouteImport } from './routes/ar.blog.china-sourcing'
+import { Route as ArBlogChineseNewYear2027OrderDeadlinesRouteImport } from './routes/ar.blog.chinese-new-year-2027-order-deadlines'
 import { Route as ArBlogHowToFindVerifiedChinaSuppliersAiRouteImport } from './routes/ar.blog.how-to-find-verified-china-suppliers-ai'
+import { Route as ArBlogWhatToSell2027TrendingProductsEuropeRouteImport } from './routes/ar.blog.what-to-sell-2027-trending-products-europe'
 import { Route as ArCompareIndexRouteImport } from './routes/ar.compare.index'
 import { Route as ArCompareCompetitorRouteImport } from './routes/ar.compare.$competitor'
 import { Route as ArEventsFreeForeverRouteImport } from './routes/ar.events.free-forever'
@@ -178,7 +182,9 @@ import { Route as DeBlogCaseStudySourcingElectronics48HoursRouteImport } from '.
 import { Route as DeBlogChatgptVsAccioSourcingAgentsRouteImport } from './routes/de.blog.chatgpt-vs-accio-sourcing-agents'
 import { Route as DeBlogChinaImportRiskAuditLandedCostRouteImport } from './routes/de.blog.china-import-risk-audit-landed-cost'
 import { Route as DeBlogChinaSourcingRouteImport } from './routes/de.blog.china-sourcing'
+import { Route as DeBlogChineseNewYear2027OrderDeadlinesRouteImport } from './routes/de.blog.chinese-new-year-2027-order-deadlines'
 import { Route as DeBlogHowToFindVerifiedChinaSuppliersAiRouteImport } from './routes/de.blog.how-to-find-verified-china-suppliers-ai'
+import { Route as DeBlogWhatToSell2027TrendingProductsEuropeRouteImport } from './routes/de.blog.what-to-sell-2027-trending-products-europe'
 import { Route as DeCompareIndexRouteImport } from './routes/de.compare.index'
 import { Route as DeCompareCompetitorRouteImport } from './routes/de.compare.$competitor'
 import { Route as DeEventsFreeForeverRouteImport } from './routes/de.events.free-forever'
@@ -196,7 +202,9 @@ import { Route as EsBlogCaseStudySourcingElectronics48HoursRouteImport } from '.
 import { Route as EsBlogChatgptVsAccioSourcingAgentsRouteImport } from './routes/es.blog.chatgpt-vs-accio-sourcing-agents'
 import { Route as EsBlogChinaImportRiskAuditLandedCostRouteImport } from './routes/es.blog.china-import-risk-audit-landed-cost'
 import { Route as EsBlogChinaSourcingRouteImport } from './routes/es.blog.china-sourcing'
+import { Route as EsBlogChineseNewYear2027OrderDeadlinesRouteImport } from './routes/es.blog.chinese-new-year-2027-order-deadlines'
 import { Route as EsBlogHowToFindVerifiedChinaSuppliersAiRouteImport } from './routes/es.blog.how-to-find-verified-china-suppliers-ai'
+import { Route as EsBlogWhatToSell2027TrendingProductsEuropeRouteImport } from './routes/es.blog.what-to-sell-2027-trending-products-europe'
 import { Route as EsCompareIndexRouteImport } from './routes/es.compare.index'
 import { Route as EsCompareCompetitorRouteImport } from './routes/es.compare.$competitor'
 import { Route as EsEventsFreeForeverRouteImport } from './routes/es.events.free-forever'
@@ -214,7 +222,9 @@ import { Route as FrBlogCaseStudySourcingElectronics48HoursRouteImport } from '.
 import { Route as FrBlogChatgptVsAccioSourcingAgentsRouteImport } from './routes/fr.blog.chatgpt-vs-accio-sourcing-agents'
 import { Route as FrBlogChinaImportRiskAuditLandedCostRouteImport } from './routes/fr.blog.china-import-risk-audit-landed-cost'
 import { Route as FrBlogChinaSourcingRouteImport } from './routes/fr.blog.china-sourcing'
+import { Route as FrBlogChineseNewYear2027OrderDeadlinesRouteImport } from './routes/fr.blog.chinese-new-year-2027-order-deadlines'
 import { Route as FrBlogHowToFindVerifiedChinaSuppliersAiRouteImport } from './routes/fr.blog.how-to-find-verified-china-suppliers-ai'
+import { Route as FrBlogWhatToSell2027TrendingProductsEuropeRouteImport } from './routes/fr.blog.what-to-sell-2027-trending-products-europe'
 import { Route as FrCompareIndexRouteImport } from './routes/fr.compare.index'
 import { Route as FrCompareCompetitorRouteImport } from './routes/fr.compare.$competitor'
 import { Route as FrEventsFreeForeverRouteImport } from './routes/fr.events.free-forever'
@@ -232,7 +242,9 @@ import { Route as HiBlogCaseStudySourcingElectronics48HoursRouteImport } from '.
 import { Route as HiBlogChatgptVsAccioSourcingAgentsRouteImport } from './routes/hi.blog.chatgpt-vs-accio-sourcing-agents'
 import { Route as HiBlogChinaImportRiskAuditLandedCostRouteImport } from './routes/hi.blog.china-import-risk-audit-landed-cost'
 import { Route as HiBlogChinaSourcingRouteImport } from './routes/hi.blog.china-sourcing'
+import { Route as HiBlogChineseNewYear2027OrderDeadlinesRouteImport } from './routes/hi.blog.chinese-new-year-2027-order-deadlines'
 import { Route as HiBlogHowToFindVerifiedChinaSuppliersAiRouteImport } from './routes/hi.blog.how-to-find-verified-china-suppliers-ai'
+import { Route as HiBlogWhatToSell2027TrendingProductsEuropeRouteImport } from './routes/hi.blog.what-to-sell-2027-trending-products-europe'
 import { Route as HiCompareIndexRouteImport } from './routes/hi.compare.index'
 import { Route as HiCompareCompetitorRouteImport } from './routes/hi.compare.$competitor'
 import { Route as HiEventsFreeForeverRouteImport } from './routes/hi.events.free-forever'
@@ -250,7 +262,9 @@ import { Route as ItBlogCaseStudySourcingElectronics48HoursRouteImport } from '.
 import { Route as ItBlogChatgptVsAccioSourcingAgentsRouteImport } from './routes/it.blog.chatgpt-vs-accio-sourcing-agents'
 import { Route as ItBlogChinaImportRiskAuditLandedCostRouteImport } from './routes/it.blog.china-import-risk-audit-landed-cost'
 import { Route as ItBlogChinaSourcingRouteImport } from './routes/it.blog.china-sourcing'
+import { Route as ItBlogChineseNewYear2027OrderDeadlinesRouteImport } from './routes/it.blog.chinese-new-year-2027-order-deadlines'
 import { Route as ItBlogHowToFindVerifiedChinaSuppliersAiRouteImport } from './routes/it.blog.how-to-find-verified-china-suppliers-ai'
+import { Route as ItBlogWhatToSell2027TrendingProductsEuropeRouteImport } from './routes/it.blog.what-to-sell-2027-trending-products-europe'
 import { Route as ItCompareIndexRouteImport } from './routes/it.compare.index'
 import { Route as ItCompareCompetitorRouteImport } from './routes/it.compare.$competitor'
 import { Route as ItEventsFreeForeverRouteImport } from './routes/it.events.free-forever'
@@ -268,7 +282,9 @@ import { Route as PtBlogCaseStudySourcingElectronics48HoursRouteImport } from '.
 import { Route as PtBlogChatgptVsAccioSourcingAgentsRouteImport } from './routes/pt.blog.chatgpt-vs-accio-sourcing-agents'
 import { Route as PtBlogChinaImportRiskAuditLandedCostRouteImport } from './routes/pt.blog.china-import-risk-audit-landed-cost'
 import { Route as PtBlogChinaSourcingRouteImport } from './routes/pt.blog.china-sourcing'
+import { Route as PtBlogChineseNewYear2027OrderDeadlinesRouteImport } from './routes/pt.blog.chinese-new-year-2027-order-deadlines'
 import { Route as PtBlogHowToFindVerifiedChinaSuppliersAiRouteImport } from './routes/pt.blog.how-to-find-verified-china-suppliers-ai'
+import { Route as PtBlogWhatToSell2027TrendingProductsEuropeRouteImport } from './routes/pt.blog.what-to-sell-2027-trending-products-europe'
 import { Route as PtCompareIndexRouteImport } from './routes/pt.compare.index'
 import { Route as PtCompareCompetitorRouteImport } from './routes/pt.compare.$competitor'
 import { Route as PtEventsFreeForeverRouteImport } from './routes/pt.events.free-forever'
@@ -286,7 +302,9 @@ import { Route as RuBlogCaseStudySourcingElectronics48HoursRouteImport } from '.
 import { Route as RuBlogChatgptVsAccioSourcingAgentsRouteImport } from './routes/ru.blog.chatgpt-vs-accio-sourcing-agents'
 import { Route as RuBlogChinaImportRiskAuditLandedCostRouteImport } from './routes/ru.blog.china-import-risk-audit-landed-cost'
 import { Route as RuBlogChinaSourcingRouteImport } from './routes/ru.blog.china-sourcing'
+import { Route as RuBlogChineseNewYear2027OrderDeadlinesRouteImport } from './routes/ru.blog.chinese-new-year-2027-order-deadlines'
 import { Route as RuBlogHowToFindVerifiedChinaSuppliersAiRouteImport } from './routes/ru.blog.how-to-find-verified-china-suppliers-ai'
+import { Route as RuBlogWhatToSell2027TrendingProductsEuropeRouteImport } from './routes/ru.blog.what-to-sell-2027-trending-products-europe'
 import { Route as RuCompareIndexRouteImport } from './routes/ru.compare.index'
 import { Route as RuCompareCompetitorRouteImport } from './routes/ru.compare.$competitor'
 import { Route as RuEventsFreeForeverRouteImport } from './routes/ru.events.free-forever'
@@ -307,7 +325,9 @@ import { Route as ZhBlogCaseStudySourcingElectronics48HoursRouteImport } from '.
 import { Route as ZhBlogChatgptVsAccioSourcingAgentsRouteImport } from './routes/zh.blog.chatgpt-vs-accio-sourcing-agents'
 import { Route as ZhBlogChinaImportRiskAuditLandedCostRouteImport } from './routes/zh.blog.china-import-risk-audit-landed-cost'
 import { Route as ZhBlogChinaSourcingRouteImport } from './routes/zh.blog.china-sourcing'
+import { Route as ZhBlogChineseNewYear2027OrderDeadlinesRouteImport } from './routes/zh.blog.chinese-new-year-2027-order-deadlines'
 import { Route as ZhBlogHowToFindVerifiedChinaSuppliersAiRouteImport } from './routes/zh.blog.how-to-find-verified-china-suppliers-ai'
+import { Route as ZhBlogWhatToSell2027TrendingProductsEuropeRouteImport } from './routes/zh.blog.what-to-sell-2027-trending-products-europe'
 import { Route as ZhCompareIndexRouteImport } from './routes/zh.compare.index'
 import { Route as ZhCompareCompetitorRouteImport } from './routes/zh.compare.$competitor'
 import { Route as ZhEventsFreeForeverRouteImport } from './routes/zh.events.free-forever'
@@ -546,10 +566,22 @@ const BlogChinaSourcingRoute = BlogChinaSourcingRouteImport.update({
   path: '/blog/china-sourcing',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogChineseNewYear2027OrderDeadlinesRoute =
+  BlogChineseNewYear2027OrderDeadlinesRouteImport.update({
+    id: '/blog/chinese-new-year-2027-order-deadlines',
+    path: '/blog/chinese-new-year-2027-order-deadlines',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const BlogHowToFindVerifiedChinaSuppliersAiRoute =
   BlogHowToFindVerifiedChinaSuppliersAiRouteImport.update({
     id: '/blog/how-to-find-verified-china-suppliers-ai',
     path: '/blog/how-to-find-verified-china-suppliers-ai',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const BlogWhatToSell2027TrendingProductsEuropeRoute =
+  BlogWhatToSell2027TrendingProductsEuropeRouteImport.update({
+    id: '/blog/what-to-sell-2027-trending-products-europe',
+    path: '/blog/what-to-sell-2027-trending-products-europe',
     getParentRoute: () => rootRouteImport,
   } as any)
 const CompareIndexRoute = CompareIndexRouteImport.update({
@@ -1089,10 +1121,22 @@ const ArBlogChinaSourcingRoute = ArBlogChinaSourcingRouteImport.update({
   path: '/blog/china-sourcing',
   getParentRoute: () => ArRoute,
 } as any)
+const ArBlogChineseNewYear2027OrderDeadlinesRoute =
+  ArBlogChineseNewYear2027OrderDeadlinesRouteImport.update({
+    id: '/blog/chinese-new-year-2027-order-deadlines',
+    path: '/blog/chinese-new-year-2027-order-deadlines',
+    getParentRoute: () => ArRoute,
+  } as any)
 const ArBlogHowToFindVerifiedChinaSuppliersAiRoute =
   ArBlogHowToFindVerifiedChinaSuppliersAiRouteImport.update({
     id: '/blog/how-to-find-verified-china-suppliers-ai',
     path: '/blog/how-to-find-verified-china-suppliers-ai',
+    getParentRoute: () => ArRoute,
+  } as any)
+const ArBlogWhatToSell2027TrendingProductsEuropeRoute =
+  ArBlogWhatToSell2027TrendingProductsEuropeRouteImport.update({
+    id: '/blog/what-to-sell-2027-trending-products-europe',
+    path: '/blog/what-to-sell-2027-trending-products-europe',
     getParentRoute: () => ArRoute,
   } as any)
 const ArCompareIndexRoute = ArCompareIndexRouteImport.update({
@@ -1187,10 +1231,22 @@ const DeBlogChinaSourcingRoute = DeBlogChinaSourcingRouteImport.update({
   path: '/blog/china-sourcing',
   getParentRoute: () => DeRoute,
 } as any)
+const DeBlogChineseNewYear2027OrderDeadlinesRoute =
+  DeBlogChineseNewYear2027OrderDeadlinesRouteImport.update({
+    id: '/blog/chinese-new-year-2027-order-deadlines',
+    path: '/blog/chinese-new-year-2027-order-deadlines',
+    getParentRoute: () => DeRoute,
+  } as any)
 const DeBlogHowToFindVerifiedChinaSuppliersAiRoute =
   DeBlogHowToFindVerifiedChinaSuppliersAiRouteImport.update({
     id: '/blog/how-to-find-verified-china-suppliers-ai',
     path: '/blog/how-to-find-verified-china-suppliers-ai',
+    getParentRoute: () => DeRoute,
+  } as any)
+const DeBlogWhatToSell2027TrendingProductsEuropeRoute =
+  DeBlogWhatToSell2027TrendingProductsEuropeRouteImport.update({
+    id: '/blog/what-to-sell-2027-trending-products-europe',
+    path: '/blog/what-to-sell-2027-trending-products-europe',
     getParentRoute: () => DeRoute,
   } as any)
 const DeCompareIndexRoute = DeCompareIndexRouteImport.update({
@@ -1285,10 +1341,22 @@ const EsBlogChinaSourcingRoute = EsBlogChinaSourcingRouteImport.update({
   path: '/blog/china-sourcing',
   getParentRoute: () => EsRoute,
 } as any)
+const EsBlogChineseNewYear2027OrderDeadlinesRoute =
+  EsBlogChineseNewYear2027OrderDeadlinesRouteImport.update({
+    id: '/blog/chinese-new-year-2027-order-deadlines',
+    path: '/blog/chinese-new-year-2027-order-deadlines',
+    getParentRoute: () => EsRoute,
+  } as any)
 const EsBlogHowToFindVerifiedChinaSuppliersAiRoute =
   EsBlogHowToFindVerifiedChinaSuppliersAiRouteImport.update({
     id: '/blog/how-to-find-verified-china-suppliers-ai',
     path: '/blog/how-to-find-verified-china-suppliers-ai',
+    getParentRoute: () => EsRoute,
+  } as any)
+const EsBlogWhatToSell2027TrendingProductsEuropeRoute =
+  EsBlogWhatToSell2027TrendingProductsEuropeRouteImport.update({
+    id: '/blog/what-to-sell-2027-trending-products-europe',
+    path: '/blog/what-to-sell-2027-trending-products-europe',
     getParentRoute: () => EsRoute,
   } as any)
 const EsCompareIndexRoute = EsCompareIndexRouteImport.update({
@@ -1383,10 +1451,22 @@ const FrBlogChinaSourcingRoute = FrBlogChinaSourcingRouteImport.update({
   path: '/blog/china-sourcing',
   getParentRoute: () => FrRoute,
 } as any)
+const FrBlogChineseNewYear2027OrderDeadlinesRoute =
+  FrBlogChineseNewYear2027OrderDeadlinesRouteImport.update({
+    id: '/blog/chinese-new-year-2027-order-deadlines',
+    path: '/blog/chinese-new-year-2027-order-deadlines',
+    getParentRoute: () => FrRoute,
+  } as any)
 const FrBlogHowToFindVerifiedChinaSuppliersAiRoute =
   FrBlogHowToFindVerifiedChinaSuppliersAiRouteImport.update({
     id: '/blog/how-to-find-verified-china-suppliers-ai',
     path: '/blog/how-to-find-verified-china-suppliers-ai',
+    getParentRoute: () => FrRoute,
+  } as any)
+const FrBlogWhatToSell2027TrendingProductsEuropeRoute =
+  FrBlogWhatToSell2027TrendingProductsEuropeRouteImport.update({
+    id: '/blog/what-to-sell-2027-trending-products-europe',
+    path: '/blog/what-to-sell-2027-trending-products-europe',
     getParentRoute: () => FrRoute,
   } as any)
 const FrCompareIndexRoute = FrCompareIndexRouteImport.update({
@@ -1481,10 +1561,22 @@ const HiBlogChinaSourcingRoute = HiBlogChinaSourcingRouteImport.update({
   path: '/blog/china-sourcing',
   getParentRoute: () => HiRoute,
 } as any)
+const HiBlogChineseNewYear2027OrderDeadlinesRoute =
+  HiBlogChineseNewYear2027OrderDeadlinesRouteImport.update({
+    id: '/blog/chinese-new-year-2027-order-deadlines',
+    path: '/blog/chinese-new-year-2027-order-deadlines',
+    getParentRoute: () => HiRoute,
+  } as any)
 const HiBlogHowToFindVerifiedChinaSuppliersAiRoute =
   HiBlogHowToFindVerifiedChinaSuppliersAiRouteImport.update({
     id: '/blog/how-to-find-verified-china-suppliers-ai',
     path: '/blog/how-to-find-verified-china-suppliers-ai',
+    getParentRoute: () => HiRoute,
+  } as any)
+const HiBlogWhatToSell2027TrendingProductsEuropeRoute =
+  HiBlogWhatToSell2027TrendingProductsEuropeRouteImport.update({
+    id: '/blog/what-to-sell-2027-trending-products-europe',
+    path: '/blog/what-to-sell-2027-trending-products-europe',
     getParentRoute: () => HiRoute,
   } as any)
 const HiCompareIndexRoute = HiCompareIndexRouteImport.update({
@@ -1579,10 +1671,22 @@ const ItBlogChinaSourcingRoute = ItBlogChinaSourcingRouteImport.update({
   path: '/blog/china-sourcing',
   getParentRoute: () => ItRoute,
 } as any)
+const ItBlogChineseNewYear2027OrderDeadlinesRoute =
+  ItBlogChineseNewYear2027OrderDeadlinesRouteImport.update({
+    id: '/blog/chinese-new-year-2027-order-deadlines',
+    path: '/blog/chinese-new-year-2027-order-deadlines',
+    getParentRoute: () => ItRoute,
+  } as any)
 const ItBlogHowToFindVerifiedChinaSuppliersAiRoute =
   ItBlogHowToFindVerifiedChinaSuppliersAiRouteImport.update({
     id: '/blog/how-to-find-verified-china-suppliers-ai',
     path: '/blog/how-to-find-verified-china-suppliers-ai',
+    getParentRoute: () => ItRoute,
+  } as any)
+const ItBlogWhatToSell2027TrendingProductsEuropeRoute =
+  ItBlogWhatToSell2027TrendingProductsEuropeRouteImport.update({
+    id: '/blog/what-to-sell-2027-trending-products-europe',
+    path: '/blog/what-to-sell-2027-trending-products-europe',
     getParentRoute: () => ItRoute,
   } as any)
 const ItCompareIndexRoute = ItCompareIndexRouteImport.update({
@@ -1677,10 +1781,22 @@ const PtBlogChinaSourcingRoute = PtBlogChinaSourcingRouteImport.update({
   path: '/blog/china-sourcing',
   getParentRoute: () => PtRoute,
 } as any)
+const PtBlogChineseNewYear2027OrderDeadlinesRoute =
+  PtBlogChineseNewYear2027OrderDeadlinesRouteImport.update({
+    id: '/blog/chinese-new-year-2027-order-deadlines',
+    path: '/blog/chinese-new-year-2027-order-deadlines',
+    getParentRoute: () => PtRoute,
+  } as any)
 const PtBlogHowToFindVerifiedChinaSuppliersAiRoute =
   PtBlogHowToFindVerifiedChinaSuppliersAiRouteImport.update({
     id: '/blog/how-to-find-verified-china-suppliers-ai',
     path: '/blog/how-to-find-verified-china-suppliers-ai',
+    getParentRoute: () => PtRoute,
+  } as any)
+const PtBlogWhatToSell2027TrendingProductsEuropeRoute =
+  PtBlogWhatToSell2027TrendingProductsEuropeRouteImport.update({
+    id: '/blog/what-to-sell-2027-trending-products-europe',
+    path: '/blog/what-to-sell-2027-trending-products-europe',
     getParentRoute: () => PtRoute,
   } as any)
 const PtCompareIndexRoute = PtCompareIndexRouteImport.update({
@@ -1775,10 +1891,22 @@ const RuBlogChinaSourcingRoute = RuBlogChinaSourcingRouteImport.update({
   path: '/blog/china-sourcing',
   getParentRoute: () => RuRoute,
 } as any)
+const RuBlogChineseNewYear2027OrderDeadlinesRoute =
+  RuBlogChineseNewYear2027OrderDeadlinesRouteImport.update({
+    id: '/blog/chinese-new-year-2027-order-deadlines',
+    path: '/blog/chinese-new-year-2027-order-deadlines',
+    getParentRoute: () => RuRoute,
+  } as any)
 const RuBlogHowToFindVerifiedChinaSuppliersAiRoute =
   RuBlogHowToFindVerifiedChinaSuppliersAiRouteImport.update({
     id: '/blog/how-to-find-verified-china-suppliers-ai',
     path: '/blog/how-to-find-verified-china-suppliers-ai',
+    getParentRoute: () => RuRoute,
+  } as any)
+const RuBlogWhatToSell2027TrendingProductsEuropeRoute =
+  RuBlogWhatToSell2027TrendingProductsEuropeRouteImport.update({
+    id: '/blog/what-to-sell-2027-trending-products-europe',
+    path: '/blog/what-to-sell-2027-trending-products-europe',
     getParentRoute: () => RuRoute,
   } as any)
 const RuCompareIndexRoute = RuCompareIndexRouteImport.update({
@@ -1891,10 +2019,22 @@ const ZhBlogChinaSourcingRoute = ZhBlogChinaSourcingRouteImport.update({
   path: '/blog/china-sourcing',
   getParentRoute: () => ZhRoute,
 } as any)
+const ZhBlogChineseNewYear2027OrderDeadlinesRoute =
+  ZhBlogChineseNewYear2027OrderDeadlinesRouteImport.update({
+    id: '/blog/chinese-new-year-2027-order-deadlines',
+    path: '/blog/chinese-new-year-2027-order-deadlines',
+    getParentRoute: () => ZhRoute,
+  } as any)
 const ZhBlogHowToFindVerifiedChinaSuppliersAiRoute =
   ZhBlogHowToFindVerifiedChinaSuppliersAiRouteImport.update({
     id: '/blog/how-to-find-verified-china-suppliers-ai',
     path: '/blog/how-to-find-verified-china-suppliers-ai',
+    getParentRoute: () => ZhRoute,
+  } as any)
+const ZhBlogWhatToSell2027TrendingProductsEuropeRoute =
+  ZhBlogWhatToSell2027TrendingProductsEuropeRouteImport.update({
+    id: '/blog/what-to-sell-2027-trending-products-europe',
+    path: '/blog/what-to-sell-2027-trending-products-europe',
     getParentRoute: () => ZhRoute,
   } as any)
 const ZhCompareIndexRoute = ZhCompareIndexRouteImport.update({
@@ -1992,7 +2132,9 @@ export interface FileRoutesByFullPath {
   '/blog/chatgpt-vs-accio-sourcing-agents': typeof BlogChatgptVsAccioSourcingAgentsRoute
   '/blog/china-import-risk-audit-landed-cost': typeof BlogChinaImportRiskAuditLandedCostRoute
   '/blog/china-sourcing': typeof BlogChinaSourcingRoute
+  '/blog/chinese-new-year-2027-order-deadlines': typeof BlogChineseNewYear2027OrderDeadlinesRoute
   '/blog/how-to-find-verified-china-suppliers-ai': typeof BlogHowToFindVerifiedChinaSuppliersAiRoute
+  '/blog/what-to-sell-2027-trending-products-europe': typeof BlogWhatToSell2027TrendingProductsEuropeRoute
   '/compare/$competitor': typeof CompareCompetitorRoute
   '/de/ai-agent-tasks': typeof DeAiAgentTasksRoute
   '/de/ai-prompts': typeof DeAiPromptsRoute
@@ -2100,7 +2242,9 @@ export interface FileRoutesByFullPath {
   '/ar/blog/chatgpt-vs-accio-sourcing-agents': typeof ArBlogChatgptVsAccioSourcingAgentsRoute
   '/ar/blog/china-import-risk-audit-landed-cost': typeof ArBlogChinaImportRiskAuditLandedCostRoute
   '/ar/blog/china-sourcing': typeof ArBlogChinaSourcingRoute
+  '/ar/blog/chinese-new-year-2027-order-deadlines': typeof ArBlogChineseNewYear2027OrderDeadlinesRoute
   '/ar/blog/how-to-find-verified-china-suppliers-ai': typeof ArBlogHowToFindVerifiedChinaSuppliersAiRoute
+  '/ar/blog/what-to-sell-2027-trending-products-europe': typeof ArBlogWhatToSell2027TrendingProductsEuropeRoute
   '/ar/compare/$competitor': typeof ArCompareCompetitorRoute
   '/ar/events/free-forever': typeof ArEventsFreeForeverRoute
   '/ar/for/$useCase': typeof ArForUseCaseRoute
@@ -2114,7 +2258,9 @@ export interface FileRoutesByFullPath {
   '/de/blog/chatgpt-vs-accio-sourcing-agents': typeof DeBlogChatgptVsAccioSourcingAgentsRoute
   '/de/blog/china-import-risk-audit-landed-cost': typeof DeBlogChinaImportRiskAuditLandedCostRoute
   '/de/blog/china-sourcing': typeof DeBlogChinaSourcingRoute
+  '/de/blog/chinese-new-year-2027-order-deadlines': typeof DeBlogChineseNewYear2027OrderDeadlinesRoute
   '/de/blog/how-to-find-verified-china-suppliers-ai': typeof DeBlogHowToFindVerifiedChinaSuppliersAiRoute
+  '/de/blog/what-to-sell-2027-trending-products-europe': typeof DeBlogWhatToSell2027TrendingProductsEuropeRoute
   '/de/compare/$competitor': typeof DeCompareCompetitorRoute
   '/de/events/free-forever': typeof DeEventsFreeForeverRoute
   '/de/for/$useCase': typeof DeForUseCaseRoute
@@ -2128,7 +2274,9 @@ export interface FileRoutesByFullPath {
   '/es/blog/chatgpt-vs-accio-sourcing-agents': typeof EsBlogChatgptVsAccioSourcingAgentsRoute
   '/es/blog/china-import-risk-audit-landed-cost': typeof EsBlogChinaImportRiskAuditLandedCostRoute
   '/es/blog/china-sourcing': typeof EsBlogChinaSourcingRoute
+  '/es/blog/chinese-new-year-2027-order-deadlines': typeof EsBlogChineseNewYear2027OrderDeadlinesRoute
   '/es/blog/how-to-find-verified-china-suppliers-ai': typeof EsBlogHowToFindVerifiedChinaSuppliersAiRoute
+  '/es/blog/what-to-sell-2027-trending-products-europe': typeof EsBlogWhatToSell2027TrendingProductsEuropeRoute
   '/es/compare/$competitor': typeof EsCompareCompetitorRoute
   '/es/events/free-forever': typeof EsEventsFreeForeverRoute
   '/es/for/$useCase': typeof EsForUseCaseRoute
@@ -2142,7 +2290,9 @@ export interface FileRoutesByFullPath {
   '/fr/blog/chatgpt-vs-accio-sourcing-agents': typeof FrBlogChatgptVsAccioSourcingAgentsRoute
   '/fr/blog/china-import-risk-audit-landed-cost': typeof FrBlogChinaImportRiskAuditLandedCostRoute
   '/fr/blog/china-sourcing': typeof FrBlogChinaSourcingRoute
+  '/fr/blog/chinese-new-year-2027-order-deadlines': typeof FrBlogChineseNewYear2027OrderDeadlinesRoute
   '/fr/blog/how-to-find-verified-china-suppliers-ai': typeof FrBlogHowToFindVerifiedChinaSuppliersAiRoute
+  '/fr/blog/what-to-sell-2027-trending-products-europe': typeof FrBlogWhatToSell2027TrendingProductsEuropeRoute
   '/fr/compare/$competitor': typeof FrCompareCompetitorRoute
   '/fr/events/free-forever': typeof FrEventsFreeForeverRoute
   '/fr/for/$useCase': typeof FrForUseCaseRoute
@@ -2156,7 +2306,9 @@ export interface FileRoutesByFullPath {
   '/hi/blog/chatgpt-vs-accio-sourcing-agents': typeof HiBlogChatgptVsAccioSourcingAgentsRoute
   '/hi/blog/china-import-risk-audit-landed-cost': typeof HiBlogChinaImportRiskAuditLandedCostRoute
   '/hi/blog/china-sourcing': typeof HiBlogChinaSourcingRoute
+  '/hi/blog/chinese-new-year-2027-order-deadlines': typeof HiBlogChineseNewYear2027OrderDeadlinesRoute
   '/hi/blog/how-to-find-verified-china-suppliers-ai': typeof HiBlogHowToFindVerifiedChinaSuppliersAiRoute
+  '/hi/blog/what-to-sell-2027-trending-products-europe': typeof HiBlogWhatToSell2027TrendingProductsEuropeRoute
   '/hi/compare/$competitor': typeof HiCompareCompetitorRoute
   '/hi/events/free-forever': typeof HiEventsFreeForeverRoute
   '/hi/for/$useCase': typeof HiForUseCaseRoute
@@ -2170,7 +2322,9 @@ export interface FileRoutesByFullPath {
   '/it/blog/chatgpt-vs-accio-sourcing-agents': typeof ItBlogChatgptVsAccioSourcingAgentsRoute
   '/it/blog/china-import-risk-audit-landed-cost': typeof ItBlogChinaImportRiskAuditLandedCostRoute
   '/it/blog/china-sourcing': typeof ItBlogChinaSourcingRoute
+  '/it/blog/chinese-new-year-2027-order-deadlines': typeof ItBlogChineseNewYear2027OrderDeadlinesRoute
   '/it/blog/how-to-find-verified-china-suppliers-ai': typeof ItBlogHowToFindVerifiedChinaSuppliersAiRoute
+  '/it/blog/what-to-sell-2027-trending-products-europe': typeof ItBlogWhatToSell2027TrendingProductsEuropeRoute
   '/it/compare/$competitor': typeof ItCompareCompetitorRoute
   '/it/events/free-forever': typeof ItEventsFreeForeverRoute
   '/it/for/$useCase': typeof ItForUseCaseRoute
@@ -2184,7 +2338,9 @@ export interface FileRoutesByFullPath {
   '/pt/blog/chatgpt-vs-accio-sourcing-agents': typeof PtBlogChatgptVsAccioSourcingAgentsRoute
   '/pt/blog/china-import-risk-audit-landed-cost': typeof PtBlogChinaImportRiskAuditLandedCostRoute
   '/pt/blog/china-sourcing': typeof PtBlogChinaSourcingRoute
+  '/pt/blog/chinese-new-year-2027-order-deadlines': typeof PtBlogChineseNewYear2027OrderDeadlinesRoute
   '/pt/blog/how-to-find-verified-china-suppliers-ai': typeof PtBlogHowToFindVerifiedChinaSuppliersAiRoute
+  '/pt/blog/what-to-sell-2027-trending-products-europe': typeof PtBlogWhatToSell2027TrendingProductsEuropeRoute
   '/pt/compare/$competitor': typeof PtCompareCompetitorRoute
   '/pt/events/free-forever': typeof PtEventsFreeForeverRoute
   '/pt/for/$useCase': typeof PtForUseCaseRoute
@@ -2198,7 +2354,9 @@ export interface FileRoutesByFullPath {
   '/ru/blog/chatgpt-vs-accio-sourcing-agents': typeof RuBlogChatgptVsAccioSourcingAgentsRoute
   '/ru/blog/china-import-risk-audit-landed-cost': typeof RuBlogChinaImportRiskAuditLandedCostRoute
   '/ru/blog/china-sourcing': typeof RuBlogChinaSourcingRoute
+  '/ru/blog/chinese-new-year-2027-order-deadlines': typeof RuBlogChineseNewYear2027OrderDeadlinesRoute
   '/ru/blog/how-to-find-verified-china-suppliers-ai': typeof RuBlogHowToFindVerifiedChinaSuppliersAiRoute
+  '/ru/blog/what-to-sell-2027-trending-products-europe': typeof RuBlogWhatToSell2027TrendingProductsEuropeRoute
   '/ru/compare/$competitor': typeof RuCompareCompetitorRoute
   '/ru/events/free-forever': typeof RuEventsFreeForeverRoute
   '/ru/for/$useCase': typeof RuForUseCaseRoute
@@ -2215,7 +2373,9 @@ export interface FileRoutesByFullPath {
   '/zh/blog/chatgpt-vs-accio-sourcing-agents': typeof ZhBlogChatgptVsAccioSourcingAgentsRoute
   '/zh/blog/china-import-risk-audit-landed-cost': typeof ZhBlogChinaImportRiskAuditLandedCostRoute
   '/zh/blog/china-sourcing': typeof ZhBlogChinaSourcingRoute
+  '/zh/blog/chinese-new-year-2027-order-deadlines': typeof ZhBlogChineseNewYear2027OrderDeadlinesRoute
   '/zh/blog/how-to-find-verified-china-suppliers-ai': typeof ZhBlogHowToFindVerifiedChinaSuppliersAiRoute
+  '/zh/blog/what-to-sell-2027-trending-products-europe': typeof ZhBlogWhatToSell2027TrendingProductsEuropeRoute
   '/zh/compare/$competitor': typeof ZhCompareCompetitorRoute
   '/zh/events/free-forever': typeof ZhEventsFreeForeverRoute
   '/zh/for/$useCase': typeof ZhForUseCaseRoute
@@ -2294,7 +2454,9 @@ export interface FileRoutesByTo {
   '/blog/chatgpt-vs-accio-sourcing-agents': typeof BlogChatgptVsAccioSourcingAgentsRoute
   '/blog/china-import-risk-audit-landed-cost': typeof BlogChinaImportRiskAuditLandedCostRoute
   '/blog/china-sourcing': typeof BlogChinaSourcingRoute
+  '/blog/chinese-new-year-2027-order-deadlines': typeof BlogChineseNewYear2027OrderDeadlinesRoute
   '/blog/how-to-find-verified-china-suppliers-ai': typeof BlogHowToFindVerifiedChinaSuppliersAiRoute
+  '/blog/what-to-sell-2027-trending-products-europe': typeof BlogWhatToSell2027TrendingProductsEuropeRoute
   '/compare/$competitor': typeof CompareCompetitorRoute
   '/de/ai-agent-tasks': typeof DeAiAgentTasksRoute
   '/de/ai-prompts': typeof DeAiPromptsRoute
@@ -2402,7 +2564,9 @@ export interface FileRoutesByTo {
   '/ar/blog/chatgpt-vs-accio-sourcing-agents': typeof ArBlogChatgptVsAccioSourcingAgentsRoute
   '/ar/blog/china-import-risk-audit-landed-cost': typeof ArBlogChinaImportRiskAuditLandedCostRoute
   '/ar/blog/china-sourcing': typeof ArBlogChinaSourcingRoute
+  '/ar/blog/chinese-new-year-2027-order-deadlines': typeof ArBlogChineseNewYear2027OrderDeadlinesRoute
   '/ar/blog/how-to-find-verified-china-suppliers-ai': typeof ArBlogHowToFindVerifiedChinaSuppliersAiRoute
+  '/ar/blog/what-to-sell-2027-trending-products-europe': typeof ArBlogWhatToSell2027TrendingProductsEuropeRoute
   '/ar/compare/$competitor': typeof ArCompareCompetitorRoute
   '/ar/events/free-forever': typeof ArEventsFreeForeverRoute
   '/ar/for/$useCase': typeof ArForUseCaseRoute
@@ -2416,7 +2580,9 @@ export interface FileRoutesByTo {
   '/de/blog/chatgpt-vs-accio-sourcing-agents': typeof DeBlogChatgptVsAccioSourcingAgentsRoute
   '/de/blog/china-import-risk-audit-landed-cost': typeof DeBlogChinaImportRiskAuditLandedCostRoute
   '/de/blog/china-sourcing': typeof DeBlogChinaSourcingRoute
+  '/de/blog/chinese-new-year-2027-order-deadlines': typeof DeBlogChineseNewYear2027OrderDeadlinesRoute
   '/de/blog/how-to-find-verified-china-suppliers-ai': typeof DeBlogHowToFindVerifiedChinaSuppliersAiRoute
+  '/de/blog/what-to-sell-2027-trending-products-europe': typeof DeBlogWhatToSell2027TrendingProductsEuropeRoute
   '/de/compare/$competitor': typeof DeCompareCompetitorRoute
   '/de/events/free-forever': typeof DeEventsFreeForeverRoute
   '/de/for/$useCase': typeof DeForUseCaseRoute
@@ -2430,7 +2596,9 @@ export interface FileRoutesByTo {
   '/es/blog/chatgpt-vs-accio-sourcing-agents': typeof EsBlogChatgptVsAccioSourcingAgentsRoute
   '/es/blog/china-import-risk-audit-landed-cost': typeof EsBlogChinaImportRiskAuditLandedCostRoute
   '/es/blog/china-sourcing': typeof EsBlogChinaSourcingRoute
+  '/es/blog/chinese-new-year-2027-order-deadlines': typeof EsBlogChineseNewYear2027OrderDeadlinesRoute
   '/es/blog/how-to-find-verified-china-suppliers-ai': typeof EsBlogHowToFindVerifiedChinaSuppliersAiRoute
+  '/es/blog/what-to-sell-2027-trending-products-europe': typeof EsBlogWhatToSell2027TrendingProductsEuropeRoute
   '/es/compare/$competitor': typeof EsCompareCompetitorRoute
   '/es/events/free-forever': typeof EsEventsFreeForeverRoute
   '/es/for/$useCase': typeof EsForUseCaseRoute
@@ -2444,7 +2612,9 @@ export interface FileRoutesByTo {
   '/fr/blog/chatgpt-vs-accio-sourcing-agents': typeof FrBlogChatgptVsAccioSourcingAgentsRoute
   '/fr/blog/china-import-risk-audit-landed-cost': typeof FrBlogChinaImportRiskAuditLandedCostRoute
   '/fr/blog/china-sourcing': typeof FrBlogChinaSourcingRoute
+  '/fr/blog/chinese-new-year-2027-order-deadlines': typeof FrBlogChineseNewYear2027OrderDeadlinesRoute
   '/fr/blog/how-to-find-verified-china-suppliers-ai': typeof FrBlogHowToFindVerifiedChinaSuppliersAiRoute
+  '/fr/blog/what-to-sell-2027-trending-products-europe': typeof FrBlogWhatToSell2027TrendingProductsEuropeRoute
   '/fr/compare/$competitor': typeof FrCompareCompetitorRoute
   '/fr/events/free-forever': typeof FrEventsFreeForeverRoute
   '/fr/for/$useCase': typeof FrForUseCaseRoute
@@ -2458,7 +2628,9 @@ export interface FileRoutesByTo {
   '/hi/blog/chatgpt-vs-accio-sourcing-agents': typeof HiBlogChatgptVsAccioSourcingAgentsRoute
   '/hi/blog/china-import-risk-audit-landed-cost': typeof HiBlogChinaImportRiskAuditLandedCostRoute
   '/hi/blog/china-sourcing': typeof HiBlogChinaSourcingRoute
+  '/hi/blog/chinese-new-year-2027-order-deadlines': typeof HiBlogChineseNewYear2027OrderDeadlinesRoute
   '/hi/blog/how-to-find-verified-china-suppliers-ai': typeof HiBlogHowToFindVerifiedChinaSuppliersAiRoute
+  '/hi/blog/what-to-sell-2027-trending-products-europe': typeof HiBlogWhatToSell2027TrendingProductsEuropeRoute
   '/hi/compare/$competitor': typeof HiCompareCompetitorRoute
   '/hi/events/free-forever': typeof HiEventsFreeForeverRoute
   '/hi/for/$useCase': typeof HiForUseCaseRoute
@@ -2472,7 +2644,9 @@ export interface FileRoutesByTo {
   '/it/blog/chatgpt-vs-accio-sourcing-agents': typeof ItBlogChatgptVsAccioSourcingAgentsRoute
   '/it/blog/china-import-risk-audit-landed-cost': typeof ItBlogChinaImportRiskAuditLandedCostRoute
   '/it/blog/china-sourcing': typeof ItBlogChinaSourcingRoute
+  '/it/blog/chinese-new-year-2027-order-deadlines': typeof ItBlogChineseNewYear2027OrderDeadlinesRoute
   '/it/blog/how-to-find-verified-china-suppliers-ai': typeof ItBlogHowToFindVerifiedChinaSuppliersAiRoute
+  '/it/blog/what-to-sell-2027-trending-products-europe': typeof ItBlogWhatToSell2027TrendingProductsEuropeRoute
   '/it/compare/$competitor': typeof ItCompareCompetitorRoute
   '/it/events/free-forever': typeof ItEventsFreeForeverRoute
   '/it/for/$useCase': typeof ItForUseCaseRoute
@@ -2486,7 +2660,9 @@ export interface FileRoutesByTo {
   '/pt/blog/chatgpt-vs-accio-sourcing-agents': typeof PtBlogChatgptVsAccioSourcingAgentsRoute
   '/pt/blog/china-import-risk-audit-landed-cost': typeof PtBlogChinaImportRiskAuditLandedCostRoute
   '/pt/blog/china-sourcing': typeof PtBlogChinaSourcingRoute
+  '/pt/blog/chinese-new-year-2027-order-deadlines': typeof PtBlogChineseNewYear2027OrderDeadlinesRoute
   '/pt/blog/how-to-find-verified-china-suppliers-ai': typeof PtBlogHowToFindVerifiedChinaSuppliersAiRoute
+  '/pt/blog/what-to-sell-2027-trending-products-europe': typeof PtBlogWhatToSell2027TrendingProductsEuropeRoute
   '/pt/compare/$competitor': typeof PtCompareCompetitorRoute
   '/pt/events/free-forever': typeof PtEventsFreeForeverRoute
   '/pt/for/$useCase': typeof PtForUseCaseRoute
@@ -2500,7 +2676,9 @@ export interface FileRoutesByTo {
   '/ru/blog/chatgpt-vs-accio-sourcing-agents': typeof RuBlogChatgptVsAccioSourcingAgentsRoute
   '/ru/blog/china-import-risk-audit-landed-cost': typeof RuBlogChinaImportRiskAuditLandedCostRoute
   '/ru/blog/china-sourcing': typeof RuBlogChinaSourcingRoute
+  '/ru/blog/chinese-new-year-2027-order-deadlines': typeof RuBlogChineseNewYear2027OrderDeadlinesRoute
   '/ru/blog/how-to-find-verified-china-suppliers-ai': typeof RuBlogHowToFindVerifiedChinaSuppliersAiRoute
+  '/ru/blog/what-to-sell-2027-trending-products-europe': typeof RuBlogWhatToSell2027TrendingProductsEuropeRoute
   '/ru/compare/$competitor': typeof RuCompareCompetitorRoute
   '/ru/events/free-forever': typeof RuEventsFreeForeverRoute
   '/ru/for/$useCase': typeof RuForUseCaseRoute
@@ -2517,7 +2695,9 @@ export interface FileRoutesByTo {
   '/zh/blog/chatgpt-vs-accio-sourcing-agents': typeof ZhBlogChatgptVsAccioSourcingAgentsRoute
   '/zh/blog/china-import-risk-audit-landed-cost': typeof ZhBlogChinaImportRiskAuditLandedCostRoute
   '/zh/blog/china-sourcing': typeof ZhBlogChinaSourcingRoute
+  '/zh/blog/chinese-new-year-2027-order-deadlines': typeof ZhBlogChineseNewYear2027OrderDeadlinesRoute
   '/zh/blog/how-to-find-verified-china-suppliers-ai': typeof ZhBlogHowToFindVerifiedChinaSuppliersAiRoute
+  '/zh/blog/what-to-sell-2027-trending-products-europe': typeof ZhBlogWhatToSell2027TrendingProductsEuropeRoute
   '/zh/compare/$competitor': typeof ZhCompareCompetitorRoute
   '/zh/events/free-forever': typeof ZhEventsFreeForeverRoute
   '/zh/for/$useCase': typeof ZhForUseCaseRoute
@@ -2606,7 +2786,9 @@ export interface FileRoutesById {
   '/blog/chatgpt-vs-accio-sourcing-agents': typeof BlogChatgptVsAccioSourcingAgentsRoute
   '/blog/china-import-risk-audit-landed-cost': typeof BlogChinaImportRiskAuditLandedCostRoute
   '/blog/china-sourcing': typeof BlogChinaSourcingRoute
+  '/blog/chinese-new-year-2027-order-deadlines': typeof BlogChineseNewYear2027OrderDeadlinesRoute
   '/blog/how-to-find-verified-china-suppliers-ai': typeof BlogHowToFindVerifiedChinaSuppliersAiRoute
+  '/blog/what-to-sell-2027-trending-products-europe': typeof BlogWhatToSell2027TrendingProductsEuropeRoute
   '/compare/$competitor': typeof CompareCompetitorRoute
   '/de/ai-agent-tasks': typeof DeAiAgentTasksRoute
   '/de/ai-prompts': typeof DeAiPromptsRoute
@@ -2714,7 +2896,9 @@ export interface FileRoutesById {
   '/ar/blog/chatgpt-vs-accio-sourcing-agents': typeof ArBlogChatgptVsAccioSourcingAgentsRoute
   '/ar/blog/china-import-risk-audit-landed-cost': typeof ArBlogChinaImportRiskAuditLandedCostRoute
   '/ar/blog/china-sourcing': typeof ArBlogChinaSourcingRoute
+  '/ar/blog/chinese-new-year-2027-order-deadlines': typeof ArBlogChineseNewYear2027OrderDeadlinesRoute
   '/ar/blog/how-to-find-verified-china-suppliers-ai': typeof ArBlogHowToFindVerifiedChinaSuppliersAiRoute
+  '/ar/blog/what-to-sell-2027-trending-products-europe': typeof ArBlogWhatToSell2027TrendingProductsEuropeRoute
   '/ar/compare/$competitor': typeof ArCompareCompetitorRoute
   '/ar/events/free-forever': typeof ArEventsFreeForeverRoute
   '/ar/for/$useCase': typeof ArForUseCaseRoute
@@ -2728,7 +2912,9 @@ export interface FileRoutesById {
   '/de/blog/chatgpt-vs-accio-sourcing-agents': typeof DeBlogChatgptVsAccioSourcingAgentsRoute
   '/de/blog/china-import-risk-audit-landed-cost': typeof DeBlogChinaImportRiskAuditLandedCostRoute
   '/de/blog/china-sourcing': typeof DeBlogChinaSourcingRoute
+  '/de/blog/chinese-new-year-2027-order-deadlines': typeof DeBlogChineseNewYear2027OrderDeadlinesRoute
   '/de/blog/how-to-find-verified-china-suppliers-ai': typeof DeBlogHowToFindVerifiedChinaSuppliersAiRoute
+  '/de/blog/what-to-sell-2027-trending-products-europe': typeof DeBlogWhatToSell2027TrendingProductsEuropeRoute
   '/de/compare/$competitor': typeof DeCompareCompetitorRoute
   '/de/events/free-forever': typeof DeEventsFreeForeverRoute
   '/de/for/$useCase': typeof DeForUseCaseRoute
@@ -2742,7 +2928,9 @@ export interface FileRoutesById {
   '/es/blog/chatgpt-vs-accio-sourcing-agents': typeof EsBlogChatgptVsAccioSourcingAgentsRoute
   '/es/blog/china-import-risk-audit-landed-cost': typeof EsBlogChinaImportRiskAuditLandedCostRoute
   '/es/blog/china-sourcing': typeof EsBlogChinaSourcingRoute
+  '/es/blog/chinese-new-year-2027-order-deadlines': typeof EsBlogChineseNewYear2027OrderDeadlinesRoute
   '/es/blog/how-to-find-verified-china-suppliers-ai': typeof EsBlogHowToFindVerifiedChinaSuppliersAiRoute
+  '/es/blog/what-to-sell-2027-trending-products-europe': typeof EsBlogWhatToSell2027TrendingProductsEuropeRoute
   '/es/compare/$competitor': typeof EsCompareCompetitorRoute
   '/es/events/free-forever': typeof EsEventsFreeForeverRoute
   '/es/for/$useCase': typeof EsForUseCaseRoute
@@ -2756,7 +2944,9 @@ export interface FileRoutesById {
   '/fr/blog/chatgpt-vs-accio-sourcing-agents': typeof FrBlogChatgptVsAccioSourcingAgentsRoute
   '/fr/blog/china-import-risk-audit-landed-cost': typeof FrBlogChinaImportRiskAuditLandedCostRoute
   '/fr/blog/china-sourcing': typeof FrBlogChinaSourcingRoute
+  '/fr/blog/chinese-new-year-2027-order-deadlines': typeof FrBlogChineseNewYear2027OrderDeadlinesRoute
   '/fr/blog/how-to-find-verified-china-suppliers-ai': typeof FrBlogHowToFindVerifiedChinaSuppliersAiRoute
+  '/fr/blog/what-to-sell-2027-trending-products-europe': typeof FrBlogWhatToSell2027TrendingProductsEuropeRoute
   '/fr/compare/$competitor': typeof FrCompareCompetitorRoute
   '/fr/events/free-forever': typeof FrEventsFreeForeverRoute
   '/fr/for/$useCase': typeof FrForUseCaseRoute
@@ -2770,7 +2960,9 @@ export interface FileRoutesById {
   '/hi/blog/chatgpt-vs-accio-sourcing-agents': typeof HiBlogChatgptVsAccioSourcingAgentsRoute
   '/hi/blog/china-import-risk-audit-landed-cost': typeof HiBlogChinaImportRiskAuditLandedCostRoute
   '/hi/blog/china-sourcing': typeof HiBlogChinaSourcingRoute
+  '/hi/blog/chinese-new-year-2027-order-deadlines': typeof HiBlogChineseNewYear2027OrderDeadlinesRoute
   '/hi/blog/how-to-find-verified-china-suppliers-ai': typeof HiBlogHowToFindVerifiedChinaSuppliersAiRoute
+  '/hi/blog/what-to-sell-2027-trending-products-europe': typeof HiBlogWhatToSell2027TrendingProductsEuropeRoute
   '/hi/compare/$competitor': typeof HiCompareCompetitorRoute
   '/hi/events/free-forever': typeof HiEventsFreeForeverRoute
   '/hi/for/$useCase': typeof HiForUseCaseRoute
@@ -2784,7 +2976,9 @@ export interface FileRoutesById {
   '/it/blog/chatgpt-vs-accio-sourcing-agents': typeof ItBlogChatgptVsAccioSourcingAgentsRoute
   '/it/blog/china-import-risk-audit-landed-cost': typeof ItBlogChinaImportRiskAuditLandedCostRoute
   '/it/blog/china-sourcing': typeof ItBlogChinaSourcingRoute
+  '/it/blog/chinese-new-year-2027-order-deadlines': typeof ItBlogChineseNewYear2027OrderDeadlinesRoute
   '/it/blog/how-to-find-verified-china-suppliers-ai': typeof ItBlogHowToFindVerifiedChinaSuppliersAiRoute
+  '/it/blog/what-to-sell-2027-trending-products-europe': typeof ItBlogWhatToSell2027TrendingProductsEuropeRoute
   '/it/compare/$competitor': typeof ItCompareCompetitorRoute
   '/it/events/free-forever': typeof ItEventsFreeForeverRoute
   '/it/for/$useCase': typeof ItForUseCaseRoute
@@ -2798,7 +2992,9 @@ export interface FileRoutesById {
   '/pt/blog/chatgpt-vs-accio-sourcing-agents': typeof PtBlogChatgptVsAccioSourcingAgentsRoute
   '/pt/blog/china-import-risk-audit-landed-cost': typeof PtBlogChinaImportRiskAuditLandedCostRoute
   '/pt/blog/china-sourcing': typeof PtBlogChinaSourcingRoute
+  '/pt/blog/chinese-new-year-2027-order-deadlines': typeof PtBlogChineseNewYear2027OrderDeadlinesRoute
   '/pt/blog/how-to-find-verified-china-suppliers-ai': typeof PtBlogHowToFindVerifiedChinaSuppliersAiRoute
+  '/pt/blog/what-to-sell-2027-trending-products-europe': typeof PtBlogWhatToSell2027TrendingProductsEuropeRoute
   '/pt/compare/$competitor': typeof PtCompareCompetitorRoute
   '/pt/events/free-forever': typeof PtEventsFreeForeverRoute
   '/pt/for/$useCase': typeof PtForUseCaseRoute
@@ -2812,7 +3008,9 @@ export interface FileRoutesById {
   '/ru/blog/chatgpt-vs-accio-sourcing-agents': typeof RuBlogChatgptVsAccioSourcingAgentsRoute
   '/ru/blog/china-import-risk-audit-landed-cost': typeof RuBlogChinaImportRiskAuditLandedCostRoute
   '/ru/blog/china-sourcing': typeof RuBlogChinaSourcingRoute
+  '/ru/blog/chinese-new-year-2027-order-deadlines': typeof RuBlogChineseNewYear2027OrderDeadlinesRoute
   '/ru/blog/how-to-find-verified-china-suppliers-ai': typeof RuBlogHowToFindVerifiedChinaSuppliersAiRoute
+  '/ru/blog/what-to-sell-2027-trending-products-europe': typeof RuBlogWhatToSell2027TrendingProductsEuropeRoute
   '/ru/compare/$competitor': typeof RuCompareCompetitorRoute
   '/ru/events/free-forever': typeof RuEventsFreeForeverRoute
   '/ru/for/$useCase': typeof RuForUseCaseRoute
@@ -2829,7 +3027,9 @@ export interface FileRoutesById {
   '/zh/blog/chatgpt-vs-accio-sourcing-agents': typeof ZhBlogChatgptVsAccioSourcingAgentsRoute
   '/zh/blog/china-import-risk-audit-landed-cost': typeof ZhBlogChinaImportRiskAuditLandedCostRoute
   '/zh/blog/china-sourcing': typeof ZhBlogChinaSourcingRoute
+  '/zh/blog/chinese-new-year-2027-order-deadlines': typeof ZhBlogChineseNewYear2027OrderDeadlinesRoute
   '/zh/blog/how-to-find-verified-china-suppliers-ai': typeof ZhBlogHowToFindVerifiedChinaSuppliersAiRoute
+  '/zh/blog/what-to-sell-2027-trending-products-europe': typeof ZhBlogWhatToSell2027TrendingProductsEuropeRoute
   '/zh/compare/$competitor': typeof ZhCompareCompetitorRoute
   '/zh/events/free-forever': typeof ZhEventsFreeForeverRoute
   '/zh/for/$useCase': typeof ZhForUseCaseRoute
@@ -2919,7 +3119,9 @@ export interface FileRouteTypes {
     | '/blog/chatgpt-vs-accio-sourcing-agents'
     | '/blog/china-import-risk-audit-landed-cost'
     | '/blog/china-sourcing'
+    | '/blog/chinese-new-year-2027-order-deadlines'
     | '/blog/how-to-find-verified-china-suppliers-ai'
+    | '/blog/what-to-sell-2027-trending-products-europe'
     | '/compare/$competitor'
     | '/de/ai-agent-tasks'
     | '/de/ai-prompts'
@@ -3027,7 +3229,9 @@ export interface FileRouteTypes {
     | '/ar/blog/chatgpt-vs-accio-sourcing-agents'
     | '/ar/blog/china-import-risk-audit-landed-cost'
     | '/ar/blog/china-sourcing'
+    | '/ar/blog/chinese-new-year-2027-order-deadlines'
     | '/ar/blog/how-to-find-verified-china-suppliers-ai'
+    | '/ar/blog/what-to-sell-2027-trending-products-europe'
     | '/ar/compare/$competitor'
     | '/ar/events/free-forever'
     | '/ar/for/$useCase'
@@ -3041,7 +3245,9 @@ export interface FileRouteTypes {
     | '/de/blog/chatgpt-vs-accio-sourcing-agents'
     | '/de/blog/china-import-risk-audit-landed-cost'
     | '/de/blog/china-sourcing'
+    | '/de/blog/chinese-new-year-2027-order-deadlines'
     | '/de/blog/how-to-find-verified-china-suppliers-ai'
+    | '/de/blog/what-to-sell-2027-trending-products-europe'
     | '/de/compare/$competitor'
     | '/de/events/free-forever'
     | '/de/for/$useCase'
@@ -3055,7 +3261,9 @@ export interface FileRouteTypes {
     | '/es/blog/chatgpt-vs-accio-sourcing-agents'
     | '/es/blog/china-import-risk-audit-landed-cost'
     | '/es/blog/china-sourcing'
+    | '/es/blog/chinese-new-year-2027-order-deadlines'
     | '/es/blog/how-to-find-verified-china-suppliers-ai'
+    | '/es/blog/what-to-sell-2027-trending-products-europe'
     | '/es/compare/$competitor'
     | '/es/events/free-forever'
     | '/es/for/$useCase'
@@ -3069,7 +3277,9 @@ export interface FileRouteTypes {
     | '/fr/blog/chatgpt-vs-accio-sourcing-agents'
     | '/fr/blog/china-import-risk-audit-landed-cost'
     | '/fr/blog/china-sourcing'
+    | '/fr/blog/chinese-new-year-2027-order-deadlines'
     | '/fr/blog/how-to-find-verified-china-suppliers-ai'
+    | '/fr/blog/what-to-sell-2027-trending-products-europe'
     | '/fr/compare/$competitor'
     | '/fr/events/free-forever'
     | '/fr/for/$useCase'
@@ -3083,7 +3293,9 @@ export interface FileRouteTypes {
     | '/hi/blog/chatgpt-vs-accio-sourcing-agents'
     | '/hi/blog/china-import-risk-audit-landed-cost'
     | '/hi/blog/china-sourcing'
+    | '/hi/blog/chinese-new-year-2027-order-deadlines'
     | '/hi/blog/how-to-find-verified-china-suppliers-ai'
+    | '/hi/blog/what-to-sell-2027-trending-products-europe'
     | '/hi/compare/$competitor'
     | '/hi/events/free-forever'
     | '/hi/for/$useCase'
@@ -3097,7 +3309,9 @@ export interface FileRouteTypes {
     | '/it/blog/chatgpt-vs-accio-sourcing-agents'
     | '/it/blog/china-import-risk-audit-landed-cost'
     | '/it/blog/china-sourcing'
+    | '/it/blog/chinese-new-year-2027-order-deadlines'
     | '/it/blog/how-to-find-verified-china-suppliers-ai'
+    | '/it/blog/what-to-sell-2027-trending-products-europe'
     | '/it/compare/$competitor'
     | '/it/events/free-forever'
     | '/it/for/$useCase'
@@ -3111,7 +3325,9 @@ export interface FileRouteTypes {
     | '/pt/blog/chatgpt-vs-accio-sourcing-agents'
     | '/pt/blog/china-import-risk-audit-landed-cost'
     | '/pt/blog/china-sourcing'
+    | '/pt/blog/chinese-new-year-2027-order-deadlines'
     | '/pt/blog/how-to-find-verified-china-suppliers-ai'
+    | '/pt/blog/what-to-sell-2027-trending-products-europe'
     | '/pt/compare/$competitor'
     | '/pt/events/free-forever'
     | '/pt/for/$useCase'
@@ -3125,7 +3341,9 @@ export interface FileRouteTypes {
     | '/ru/blog/chatgpt-vs-accio-sourcing-agents'
     | '/ru/blog/china-import-risk-audit-landed-cost'
     | '/ru/blog/china-sourcing'
+    | '/ru/blog/chinese-new-year-2027-order-deadlines'
     | '/ru/blog/how-to-find-verified-china-suppliers-ai'
+    | '/ru/blog/what-to-sell-2027-trending-products-europe'
     | '/ru/compare/$competitor'
     | '/ru/events/free-forever'
     | '/ru/for/$useCase'
@@ -3142,7 +3360,9 @@ export interface FileRouteTypes {
     | '/zh/blog/chatgpt-vs-accio-sourcing-agents'
     | '/zh/blog/china-import-risk-audit-landed-cost'
     | '/zh/blog/china-sourcing'
+    | '/zh/blog/chinese-new-year-2027-order-deadlines'
     | '/zh/blog/how-to-find-verified-china-suppliers-ai'
+    | '/zh/blog/what-to-sell-2027-trending-products-europe'
     | '/zh/compare/$competitor'
     | '/zh/events/free-forever'
     | '/zh/for/$useCase'
@@ -3221,7 +3441,9 @@ export interface FileRouteTypes {
     | '/blog/chatgpt-vs-accio-sourcing-agents'
     | '/blog/china-import-risk-audit-landed-cost'
     | '/blog/china-sourcing'
+    | '/blog/chinese-new-year-2027-order-deadlines'
     | '/blog/how-to-find-verified-china-suppliers-ai'
+    | '/blog/what-to-sell-2027-trending-products-europe'
     | '/compare/$competitor'
     | '/de/ai-agent-tasks'
     | '/de/ai-prompts'
@@ -3329,7 +3551,9 @@ export interface FileRouteTypes {
     | '/ar/blog/chatgpt-vs-accio-sourcing-agents'
     | '/ar/blog/china-import-risk-audit-landed-cost'
     | '/ar/blog/china-sourcing'
+    | '/ar/blog/chinese-new-year-2027-order-deadlines'
     | '/ar/blog/how-to-find-verified-china-suppliers-ai'
+    | '/ar/blog/what-to-sell-2027-trending-products-europe'
     | '/ar/compare/$competitor'
     | '/ar/events/free-forever'
     | '/ar/for/$useCase'
@@ -3343,7 +3567,9 @@ export interface FileRouteTypes {
     | '/de/blog/chatgpt-vs-accio-sourcing-agents'
     | '/de/blog/china-import-risk-audit-landed-cost'
     | '/de/blog/china-sourcing'
+    | '/de/blog/chinese-new-year-2027-order-deadlines'
     | '/de/blog/how-to-find-verified-china-suppliers-ai'
+    | '/de/blog/what-to-sell-2027-trending-products-europe'
     | '/de/compare/$competitor'
     | '/de/events/free-forever'
     | '/de/for/$useCase'
@@ -3357,7 +3583,9 @@ export interface FileRouteTypes {
     | '/es/blog/chatgpt-vs-accio-sourcing-agents'
     | '/es/blog/china-import-risk-audit-landed-cost'
     | '/es/blog/china-sourcing'
+    | '/es/blog/chinese-new-year-2027-order-deadlines'
     | '/es/blog/how-to-find-verified-china-suppliers-ai'
+    | '/es/blog/what-to-sell-2027-trending-products-europe'
     | '/es/compare/$competitor'
     | '/es/events/free-forever'
     | '/es/for/$useCase'
@@ -3371,7 +3599,9 @@ export interface FileRouteTypes {
     | '/fr/blog/chatgpt-vs-accio-sourcing-agents'
     | '/fr/blog/china-import-risk-audit-landed-cost'
     | '/fr/blog/china-sourcing'
+    | '/fr/blog/chinese-new-year-2027-order-deadlines'
     | '/fr/blog/how-to-find-verified-china-suppliers-ai'
+    | '/fr/blog/what-to-sell-2027-trending-products-europe'
     | '/fr/compare/$competitor'
     | '/fr/events/free-forever'
     | '/fr/for/$useCase'
@@ -3385,7 +3615,9 @@ export interface FileRouteTypes {
     | '/hi/blog/chatgpt-vs-accio-sourcing-agents'
     | '/hi/blog/china-import-risk-audit-landed-cost'
     | '/hi/blog/china-sourcing'
+    | '/hi/blog/chinese-new-year-2027-order-deadlines'
     | '/hi/blog/how-to-find-verified-china-suppliers-ai'
+    | '/hi/blog/what-to-sell-2027-trending-products-europe'
     | '/hi/compare/$competitor'
     | '/hi/events/free-forever'
     | '/hi/for/$useCase'
@@ -3399,7 +3631,9 @@ export interface FileRouteTypes {
     | '/it/blog/chatgpt-vs-accio-sourcing-agents'
     | '/it/blog/china-import-risk-audit-landed-cost'
     | '/it/blog/china-sourcing'
+    | '/it/blog/chinese-new-year-2027-order-deadlines'
     | '/it/blog/how-to-find-verified-china-suppliers-ai'
+    | '/it/blog/what-to-sell-2027-trending-products-europe'
     | '/it/compare/$competitor'
     | '/it/events/free-forever'
     | '/it/for/$useCase'
@@ -3413,7 +3647,9 @@ export interface FileRouteTypes {
     | '/pt/blog/chatgpt-vs-accio-sourcing-agents'
     | '/pt/blog/china-import-risk-audit-landed-cost'
     | '/pt/blog/china-sourcing'
+    | '/pt/blog/chinese-new-year-2027-order-deadlines'
     | '/pt/blog/how-to-find-verified-china-suppliers-ai'
+    | '/pt/blog/what-to-sell-2027-trending-products-europe'
     | '/pt/compare/$competitor'
     | '/pt/events/free-forever'
     | '/pt/for/$useCase'
@@ -3427,7 +3663,9 @@ export interface FileRouteTypes {
     | '/ru/blog/chatgpt-vs-accio-sourcing-agents'
     | '/ru/blog/china-import-risk-audit-landed-cost'
     | '/ru/blog/china-sourcing'
+    | '/ru/blog/chinese-new-year-2027-order-deadlines'
     | '/ru/blog/how-to-find-verified-china-suppliers-ai'
+    | '/ru/blog/what-to-sell-2027-trending-products-europe'
     | '/ru/compare/$competitor'
     | '/ru/events/free-forever'
     | '/ru/for/$useCase'
@@ -3444,7 +3682,9 @@ export interface FileRouteTypes {
     | '/zh/blog/chatgpt-vs-accio-sourcing-agents'
     | '/zh/blog/china-import-risk-audit-landed-cost'
     | '/zh/blog/china-sourcing'
+    | '/zh/blog/chinese-new-year-2027-order-deadlines'
     | '/zh/blog/how-to-find-verified-china-suppliers-ai'
+    | '/zh/blog/what-to-sell-2027-trending-products-europe'
     | '/zh/compare/$competitor'
     | '/zh/events/free-forever'
     | '/zh/for/$useCase'
@@ -3532,7 +3772,9 @@ export interface FileRouteTypes {
     | '/blog/chatgpt-vs-accio-sourcing-agents'
     | '/blog/china-import-risk-audit-landed-cost'
     | '/blog/china-sourcing'
+    | '/blog/chinese-new-year-2027-order-deadlines'
     | '/blog/how-to-find-verified-china-suppliers-ai'
+    | '/blog/what-to-sell-2027-trending-products-europe'
     | '/compare/$competitor'
     | '/de/ai-agent-tasks'
     | '/de/ai-prompts'
@@ -3640,7 +3882,9 @@ export interface FileRouteTypes {
     | '/ar/blog/chatgpt-vs-accio-sourcing-agents'
     | '/ar/blog/china-import-risk-audit-landed-cost'
     | '/ar/blog/china-sourcing'
+    | '/ar/blog/chinese-new-year-2027-order-deadlines'
     | '/ar/blog/how-to-find-verified-china-suppliers-ai'
+    | '/ar/blog/what-to-sell-2027-trending-products-europe'
     | '/ar/compare/$competitor'
     | '/ar/events/free-forever'
     | '/ar/for/$useCase'
@@ -3654,7 +3898,9 @@ export interface FileRouteTypes {
     | '/de/blog/chatgpt-vs-accio-sourcing-agents'
     | '/de/blog/china-import-risk-audit-landed-cost'
     | '/de/blog/china-sourcing'
+    | '/de/blog/chinese-new-year-2027-order-deadlines'
     | '/de/blog/how-to-find-verified-china-suppliers-ai'
+    | '/de/blog/what-to-sell-2027-trending-products-europe'
     | '/de/compare/$competitor'
     | '/de/events/free-forever'
     | '/de/for/$useCase'
@@ -3668,7 +3914,9 @@ export interface FileRouteTypes {
     | '/es/blog/chatgpt-vs-accio-sourcing-agents'
     | '/es/blog/china-import-risk-audit-landed-cost'
     | '/es/blog/china-sourcing'
+    | '/es/blog/chinese-new-year-2027-order-deadlines'
     | '/es/blog/how-to-find-verified-china-suppliers-ai'
+    | '/es/blog/what-to-sell-2027-trending-products-europe'
     | '/es/compare/$competitor'
     | '/es/events/free-forever'
     | '/es/for/$useCase'
@@ -3682,7 +3930,9 @@ export interface FileRouteTypes {
     | '/fr/blog/chatgpt-vs-accio-sourcing-agents'
     | '/fr/blog/china-import-risk-audit-landed-cost'
     | '/fr/blog/china-sourcing'
+    | '/fr/blog/chinese-new-year-2027-order-deadlines'
     | '/fr/blog/how-to-find-verified-china-suppliers-ai'
+    | '/fr/blog/what-to-sell-2027-trending-products-europe'
     | '/fr/compare/$competitor'
     | '/fr/events/free-forever'
     | '/fr/for/$useCase'
@@ -3696,7 +3946,9 @@ export interface FileRouteTypes {
     | '/hi/blog/chatgpt-vs-accio-sourcing-agents'
     | '/hi/blog/china-import-risk-audit-landed-cost'
     | '/hi/blog/china-sourcing'
+    | '/hi/blog/chinese-new-year-2027-order-deadlines'
     | '/hi/blog/how-to-find-verified-china-suppliers-ai'
+    | '/hi/blog/what-to-sell-2027-trending-products-europe'
     | '/hi/compare/$competitor'
     | '/hi/events/free-forever'
     | '/hi/for/$useCase'
@@ -3710,7 +3962,9 @@ export interface FileRouteTypes {
     | '/it/blog/chatgpt-vs-accio-sourcing-agents'
     | '/it/blog/china-import-risk-audit-landed-cost'
     | '/it/blog/china-sourcing'
+    | '/it/blog/chinese-new-year-2027-order-deadlines'
     | '/it/blog/how-to-find-verified-china-suppliers-ai'
+    | '/it/blog/what-to-sell-2027-trending-products-europe'
     | '/it/compare/$competitor'
     | '/it/events/free-forever'
     | '/it/for/$useCase'
@@ -3724,7 +3978,9 @@ export interface FileRouteTypes {
     | '/pt/blog/chatgpt-vs-accio-sourcing-agents'
     | '/pt/blog/china-import-risk-audit-landed-cost'
     | '/pt/blog/china-sourcing'
+    | '/pt/blog/chinese-new-year-2027-order-deadlines'
     | '/pt/blog/how-to-find-verified-china-suppliers-ai'
+    | '/pt/blog/what-to-sell-2027-trending-products-europe'
     | '/pt/compare/$competitor'
     | '/pt/events/free-forever'
     | '/pt/for/$useCase'
@@ -3738,7 +3994,9 @@ export interface FileRouteTypes {
     | '/ru/blog/chatgpt-vs-accio-sourcing-agents'
     | '/ru/blog/china-import-risk-audit-landed-cost'
     | '/ru/blog/china-sourcing'
+    | '/ru/blog/chinese-new-year-2027-order-deadlines'
     | '/ru/blog/how-to-find-verified-china-suppliers-ai'
+    | '/ru/blog/what-to-sell-2027-trending-products-europe'
     | '/ru/compare/$competitor'
     | '/ru/events/free-forever'
     | '/ru/for/$useCase'
@@ -3755,7 +4013,9 @@ export interface FileRouteTypes {
     | '/zh/blog/chatgpt-vs-accio-sourcing-agents'
     | '/zh/blog/china-import-risk-audit-landed-cost'
     | '/zh/blog/china-sourcing'
+    | '/zh/blog/chinese-new-year-2027-order-deadlines'
     | '/zh/blog/how-to-find-verified-china-suppliers-ai'
+    | '/zh/blog/what-to-sell-2027-trending-products-europe'
     | '/zh/compare/$competitor'
     | '/zh/events/free-forever'
     | '/zh/for/$useCase'
@@ -3834,7 +4094,9 @@ export interface RootRouteChildren {
   BlogChatgptVsAccioSourcingAgentsRoute: typeof BlogChatgptVsAccioSourcingAgentsRoute
   BlogChinaImportRiskAuditLandedCostRoute: typeof BlogChinaImportRiskAuditLandedCostRoute
   BlogChinaSourcingRoute: typeof BlogChinaSourcingRoute
+  BlogChineseNewYear2027OrderDeadlinesRoute: typeof BlogChineseNewYear2027OrderDeadlinesRoute
   BlogHowToFindVerifiedChinaSuppliersAiRoute: typeof BlogHowToFindVerifiedChinaSuppliersAiRoute
+  BlogWhatToSell2027TrendingProductsEuropeRoute: typeof BlogWhatToSell2027TrendingProductsEuropeRoute
   CompareCompetitorRoute: typeof CompareCompetitorRoute
   EventsFreeForeverRoute: typeof EventsFreeForeverRoute
   ForUseCaseRoute: typeof ForUseCaseRoute
@@ -4159,11 +4421,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogChinaSourcingRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/chinese-new-year-2027-order-deadlines': {
+      id: '/blog/chinese-new-year-2027-order-deadlines'
+      path: '/blog/chinese-new-year-2027-order-deadlines'
+      fullPath: '/blog/chinese-new-year-2027-order-deadlines'
+      preLoaderRoute: typeof BlogChineseNewYear2027OrderDeadlinesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/how-to-find-verified-china-suppliers-ai': {
       id: '/blog/how-to-find-verified-china-suppliers-ai'
       path: '/blog/how-to-find-verified-china-suppliers-ai'
       fullPath: '/blog/how-to-find-verified-china-suppliers-ai'
       preLoaderRoute: typeof BlogHowToFindVerifiedChinaSuppliersAiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/what-to-sell-2027-trending-products-europe': {
+      id: '/blog/what-to-sell-2027-trending-products-europe'
+      path: '/blog/what-to-sell-2027-trending-products-europe'
+      fullPath: '/blog/what-to-sell-2027-trending-products-europe'
+      preLoaderRoute: typeof BlogWhatToSell2027TrendingProductsEuropeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/compare/': {
@@ -4908,11 +5184,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ArBlogChinaSourcingRouteImport
       parentRoute: typeof ArRoute
     }
+    '/ar/blog/chinese-new-year-2027-order-deadlines': {
+      id: '/ar/blog/chinese-new-year-2027-order-deadlines'
+      path: '/blog/chinese-new-year-2027-order-deadlines'
+      fullPath: '/ar/blog/chinese-new-year-2027-order-deadlines'
+      preLoaderRoute: typeof ArBlogChineseNewYear2027OrderDeadlinesRouteImport
+      parentRoute: typeof ArRoute
+    }
     '/ar/blog/how-to-find-verified-china-suppliers-ai': {
       id: '/ar/blog/how-to-find-verified-china-suppliers-ai'
       path: '/blog/how-to-find-verified-china-suppliers-ai'
       fullPath: '/ar/blog/how-to-find-verified-china-suppliers-ai'
       preLoaderRoute: typeof ArBlogHowToFindVerifiedChinaSuppliersAiRouteImport
+      parentRoute: typeof ArRoute
+    }
+    '/ar/blog/what-to-sell-2027-trending-products-europe': {
+      id: '/ar/blog/what-to-sell-2027-trending-products-europe'
+      path: '/blog/what-to-sell-2027-trending-products-europe'
+      fullPath: '/ar/blog/what-to-sell-2027-trending-products-europe'
+      preLoaderRoute: typeof ArBlogWhatToSell2027TrendingProductsEuropeRouteImport
       parentRoute: typeof ArRoute
     }
     '/ar/compare/': {
@@ -5034,11 +5324,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DeBlogChinaSourcingRouteImport
       parentRoute: typeof DeRoute
     }
+    '/de/blog/chinese-new-year-2027-order-deadlines': {
+      id: '/de/blog/chinese-new-year-2027-order-deadlines'
+      path: '/blog/chinese-new-year-2027-order-deadlines'
+      fullPath: '/de/blog/chinese-new-year-2027-order-deadlines'
+      preLoaderRoute: typeof DeBlogChineseNewYear2027OrderDeadlinesRouteImport
+      parentRoute: typeof DeRoute
+    }
     '/de/blog/how-to-find-verified-china-suppliers-ai': {
       id: '/de/blog/how-to-find-verified-china-suppliers-ai'
       path: '/blog/how-to-find-verified-china-suppliers-ai'
       fullPath: '/de/blog/how-to-find-verified-china-suppliers-ai'
       preLoaderRoute: typeof DeBlogHowToFindVerifiedChinaSuppliersAiRouteImport
+      parentRoute: typeof DeRoute
+    }
+    '/de/blog/what-to-sell-2027-trending-products-europe': {
+      id: '/de/blog/what-to-sell-2027-trending-products-europe'
+      path: '/blog/what-to-sell-2027-trending-products-europe'
+      fullPath: '/de/blog/what-to-sell-2027-trending-products-europe'
+      preLoaderRoute: typeof DeBlogWhatToSell2027TrendingProductsEuropeRouteImport
       parentRoute: typeof DeRoute
     }
     '/de/compare/': {
@@ -5160,11 +5464,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EsBlogChinaSourcingRouteImport
       parentRoute: typeof EsRoute
     }
+    '/es/blog/chinese-new-year-2027-order-deadlines': {
+      id: '/es/blog/chinese-new-year-2027-order-deadlines'
+      path: '/blog/chinese-new-year-2027-order-deadlines'
+      fullPath: '/es/blog/chinese-new-year-2027-order-deadlines'
+      preLoaderRoute: typeof EsBlogChineseNewYear2027OrderDeadlinesRouteImport
+      parentRoute: typeof EsRoute
+    }
     '/es/blog/how-to-find-verified-china-suppliers-ai': {
       id: '/es/blog/how-to-find-verified-china-suppliers-ai'
       path: '/blog/how-to-find-verified-china-suppliers-ai'
       fullPath: '/es/blog/how-to-find-verified-china-suppliers-ai'
       preLoaderRoute: typeof EsBlogHowToFindVerifiedChinaSuppliersAiRouteImport
+      parentRoute: typeof EsRoute
+    }
+    '/es/blog/what-to-sell-2027-trending-products-europe': {
+      id: '/es/blog/what-to-sell-2027-trending-products-europe'
+      path: '/blog/what-to-sell-2027-trending-products-europe'
+      fullPath: '/es/blog/what-to-sell-2027-trending-products-europe'
+      preLoaderRoute: typeof EsBlogWhatToSell2027TrendingProductsEuropeRouteImport
       parentRoute: typeof EsRoute
     }
     '/es/compare/': {
@@ -5286,11 +5604,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FrBlogChinaSourcingRouteImport
       parentRoute: typeof FrRoute
     }
+    '/fr/blog/chinese-new-year-2027-order-deadlines': {
+      id: '/fr/blog/chinese-new-year-2027-order-deadlines'
+      path: '/blog/chinese-new-year-2027-order-deadlines'
+      fullPath: '/fr/blog/chinese-new-year-2027-order-deadlines'
+      preLoaderRoute: typeof FrBlogChineseNewYear2027OrderDeadlinesRouteImport
+      parentRoute: typeof FrRoute
+    }
     '/fr/blog/how-to-find-verified-china-suppliers-ai': {
       id: '/fr/blog/how-to-find-verified-china-suppliers-ai'
       path: '/blog/how-to-find-verified-china-suppliers-ai'
       fullPath: '/fr/blog/how-to-find-verified-china-suppliers-ai'
       preLoaderRoute: typeof FrBlogHowToFindVerifiedChinaSuppliersAiRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/blog/what-to-sell-2027-trending-products-europe': {
+      id: '/fr/blog/what-to-sell-2027-trending-products-europe'
+      path: '/blog/what-to-sell-2027-trending-products-europe'
+      fullPath: '/fr/blog/what-to-sell-2027-trending-products-europe'
+      preLoaderRoute: typeof FrBlogWhatToSell2027TrendingProductsEuropeRouteImport
       parentRoute: typeof FrRoute
     }
     '/fr/compare/': {
@@ -5412,11 +5744,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HiBlogChinaSourcingRouteImport
       parentRoute: typeof HiRoute
     }
+    '/hi/blog/chinese-new-year-2027-order-deadlines': {
+      id: '/hi/blog/chinese-new-year-2027-order-deadlines'
+      path: '/blog/chinese-new-year-2027-order-deadlines'
+      fullPath: '/hi/blog/chinese-new-year-2027-order-deadlines'
+      preLoaderRoute: typeof HiBlogChineseNewYear2027OrderDeadlinesRouteImport
+      parentRoute: typeof HiRoute
+    }
     '/hi/blog/how-to-find-verified-china-suppliers-ai': {
       id: '/hi/blog/how-to-find-verified-china-suppliers-ai'
       path: '/blog/how-to-find-verified-china-suppliers-ai'
       fullPath: '/hi/blog/how-to-find-verified-china-suppliers-ai'
       preLoaderRoute: typeof HiBlogHowToFindVerifiedChinaSuppliersAiRouteImport
+      parentRoute: typeof HiRoute
+    }
+    '/hi/blog/what-to-sell-2027-trending-products-europe': {
+      id: '/hi/blog/what-to-sell-2027-trending-products-europe'
+      path: '/blog/what-to-sell-2027-trending-products-europe'
+      fullPath: '/hi/blog/what-to-sell-2027-trending-products-europe'
+      preLoaderRoute: typeof HiBlogWhatToSell2027TrendingProductsEuropeRouteImport
       parentRoute: typeof HiRoute
     }
     '/hi/compare/': {
@@ -5538,11 +5884,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ItBlogChinaSourcingRouteImport
       parentRoute: typeof ItRoute
     }
+    '/it/blog/chinese-new-year-2027-order-deadlines': {
+      id: '/it/blog/chinese-new-year-2027-order-deadlines'
+      path: '/blog/chinese-new-year-2027-order-deadlines'
+      fullPath: '/it/blog/chinese-new-year-2027-order-deadlines'
+      preLoaderRoute: typeof ItBlogChineseNewYear2027OrderDeadlinesRouteImport
+      parentRoute: typeof ItRoute
+    }
     '/it/blog/how-to-find-verified-china-suppliers-ai': {
       id: '/it/blog/how-to-find-verified-china-suppliers-ai'
       path: '/blog/how-to-find-verified-china-suppliers-ai'
       fullPath: '/it/blog/how-to-find-verified-china-suppliers-ai'
       preLoaderRoute: typeof ItBlogHowToFindVerifiedChinaSuppliersAiRouteImport
+      parentRoute: typeof ItRoute
+    }
+    '/it/blog/what-to-sell-2027-trending-products-europe': {
+      id: '/it/blog/what-to-sell-2027-trending-products-europe'
+      path: '/blog/what-to-sell-2027-trending-products-europe'
+      fullPath: '/it/blog/what-to-sell-2027-trending-products-europe'
+      preLoaderRoute: typeof ItBlogWhatToSell2027TrendingProductsEuropeRouteImport
       parentRoute: typeof ItRoute
     }
     '/it/compare/': {
@@ -5664,11 +6024,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PtBlogChinaSourcingRouteImport
       parentRoute: typeof PtRoute
     }
+    '/pt/blog/chinese-new-year-2027-order-deadlines': {
+      id: '/pt/blog/chinese-new-year-2027-order-deadlines'
+      path: '/blog/chinese-new-year-2027-order-deadlines'
+      fullPath: '/pt/blog/chinese-new-year-2027-order-deadlines'
+      preLoaderRoute: typeof PtBlogChineseNewYear2027OrderDeadlinesRouteImport
+      parentRoute: typeof PtRoute
+    }
     '/pt/blog/how-to-find-verified-china-suppliers-ai': {
       id: '/pt/blog/how-to-find-verified-china-suppliers-ai'
       path: '/blog/how-to-find-verified-china-suppliers-ai'
       fullPath: '/pt/blog/how-to-find-verified-china-suppliers-ai'
       preLoaderRoute: typeof PtBlogHowToFindVerifiedChinaSuppliersAiRouteImport
+      parentRoute: typeof PtRoute
+    }
+    '/pt/blog/what-to-sell-2027-trending-products-europe': {
+      id: '/pt/blog/what-to-sell-2027-trending-products-europe'
+      path: '/blog/what-to-sell-2027-trending-products-europe'
+      fullPath: '/pt/blog/what-to-sell-2027-trending-products-europe'
+      preLoaderRoute: typeof PtBlogWhatToSell2027TrendingProductsEuropeRouteImport
       parentRoute: typeof PtRoute
     }
     '/pt/compare/': {
@@ -5790,11 +6164,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RuBlogChinaSourcingRouteImport
       parentRoute: typeof RuRoute
     }
+    '/ru/blog/chinese-new-year-2027-order-deadlines': {
+      id: '/ru/blog/chinese-new-year-2027-order-deadlines'
+      path: '/blog/chinese-new-year-2027-order-deadlines'
+      fullPath: '/ru/blog/chinese-new-year-2027-order-deadlines'
+      preLoaderRoute: typeof RuBlogChineseNewYear2027OrderDeadlinesRouteImport
+      parentRoute: typeof RuRoute
+    }
     '/ru/blog/how-to-find-verified-china-suppliers-ai': {
       id: '/ru/blog/how-to-find-verified-china-suppliers-ai'
       path: '/blog/how-to-find-verified-china-suppliers-ai'
       fullPath: '/ru/blog/how-to-find-verified-china-suppliers-ai'
       preLoaderRoute: typeof RuBlogHowToFindVerifiedChinaSuppliersAiRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/ru/blog/what-to-sell-2027-trending-products-europe': {
+      id: '/ru/blog/what-to-sell-2027-trending-products-europe'
+      path: '/blog/what-to-sell-2027-trending-products-europe'
+      fullPath: '/ru/blog/what-to-sell-2027-trending-products-europe'
+      preLoaderRoute: typeof RuBlogWhatToSell2027TrendingProductsEuropeRouteImport
       parentRoute: typeof RuRoute
     }
     '/ru/compare/': {
@@ -5937,11 +6325,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ZhBlogChinaSourcingRouteImport
       parentRoute: typeof ZhRoute
     }
+    '/zh/blog/chinese-new-year-2027-order-deadlines': {
+      id: '/zh/blog/chinese-new-year-2027-order-deadlines'
+      path: '/blog/chinese-new-year-2027-order-deadlines'
+      fullPath: '/zh/blog/chinese-new-year-2027-order-deadlines'
+      preLoaderRoute: typeof ZhBlogChineseNewYear2027OrderDeadlinesRouteImport
+      parentRoute: typeof ZhRoute
+    }
     '/zh/blog/how-to-find-verified-china-suppliers-ai': {
       id: '/zh/blog/how-to-find-verified-china-suppliers-ai'
       path: '/blog/how-to-find-verified-china-suppliers-ai'
       fullPath: '/zh/blog/how-to-find-verified-china-suppliers-ai'
       preLoaderRoute: typeof ZhBlogHowToFindVerifiedChinaSuppliersAiRouteImport
+      parentRoute: typeof ZhRoute
+    }
+    '/zh/blog/what-to-sell-2027-trending-products-europe': {
+      id: '/zh/blog/what-to-sell-2027-trending-products-europe'
+      path: '/blog/what-to-sell-2027-trending-products-europe'
+      fullPath: '/zh/blog/what-to-sell-2027-trending-products-europe'
+      preLoaderRoute: typeof ZhBlogWhatToSell2027TrendingProductsEuropeRouteImport
       parentRoute: typeof ZhRoute
     }
     '/zh/compare/': {
@@ -6038,7 +6440,9 @@ interface ArRouteChildren {
   ArBlogChatgptVsAccioSourcingAgentsRoute: typeof ArBlogChatgptVsAccioSourcingAgentsRoute
   ArBlogChinaImportRiskAuditLandedCostRoute: typeof ArBlogChinaImportRiskAuditLandedCostRoute
   ArBlogChinaSourcingRoute: typeof ArBlogChinaSourcingRoute
+  ArBlogChineseNewYear2027OrderDeadlinesRoute: typeof ArBlogChineseNewYear2027OrderDeadlinesRoute
   ArBlogHowToFindVerifiedChinaSuppliersAiRoute: typeof ArBlogHowToFindVerifiedChinaSuppliersAiRoute
+  ArBlogWhatToSell2027TrendingProductsEuropeRoute: typeof ArBlogWhatToSell2027TrendingProductsEuropeRoute
   ArCompareCompetitorRoute: typeof ArCompareCompetitorRoute
   ArEventsFreeForeverRoute: typeof ArEventsFreeForeverRoute
   ArForUseCaseRoute: typeof ArForUseCaseRoute
@@ -6076,8 +6480,12 @@ const ArRouteChildren: ArRouteChildren = {
   ArBlogChinaImportRiskAuditLandedCostRoute:
     ArBlogChinaImportRiskAuditLandedCostRoute,
   ArBlogChinaSourcingRoute: ArBlogChinaSourcingRoute,
+  ArBlogChineseNewYear2027OrderDeadlinesRoute:
+    ArBlogChineseNewYear2027OrderDeadlinesRoute,
   ArBlogHowToFindVerifiedChinaSuppliersAiRoute:
     ArBlogHowToFindVerifiedChinaSuppliersAiRoute,
+  ArBlogWhatToSell2027TrendingProductsEuropeRoute:
+    ArBlogWhatToSell2027TrendingProductsEuropeRoute,
   ArCompareCompetitorRoute: ArCompareCompetitorRoute,
   ArEventsFreeForeverRoute: ArEventsFreeForeverRoute,
   ArForUseCaseRoute: ArForUseCaseRoute,
@@ -6111,7 +6519,9 @@ interface DeRouteChildren {
   DeBlogChatgptVsAccioSourcingAgentsRoute: typeof DeBlogChatgptVsAccioSourcingAgentsRoute
   DeBlogChinaImportRiskAuditLandedCostRoute: typeof DeBlogChinaImportRiskAuditLandedCostRoute
   DeBlogChinaSourcingRoute: typeof DeBlogChinaSourcingRoute
+  DeBlogChineseNewYear2027OrderDeadlinesRoute: typeof DeBlogChineseNewYear2027OrderDeadlinesRoute
   DeBlogHowToFindVerifiedChinaSuppliersAiRoute: typeof DeBlogHowToFindVerifiedChinaSuppliersAiRoute
+  DeBlogWhatToSell2027TrendingProductsEuropeRoute: typeof DeBlogWhatToSell2027TrendingProductsEuropeRoute
   DeCompareCompetitorRoute: typeof DeCompareCompetitorRoute
   DeEventsFreeForeverRoute: typeof DeEventsFreeForeverRoute
   DeForUseCaseRoute: typeof DeForUseCaseRoute
@@ -6149,8 +6559,12 @@ const DeRouteChildren: DeRouteChildren = {
   DeBlogChinaImportRiskAuditLandedCostRoute:
     DeBlogChinaImportRiskAuditLandedCostRoute,
   DeBlogChinaSourcingRoute: DeBlogChinaSourcingRoute,
+  DeBlogChineseNewYear2027OrderDeadlinesRoute:
+    DeBlogChineseNewYear2027OrderDeadlinesRoute,
   DeBlogHowToFindVerifiedChinaSuppliersAiRoute:
     DeBlogHowToFindVerifiedChinaSuppliersAiRoute,
+  DeBlogWhatToSell2027TrendingProductsEuropeRoute:
+    DeBlogWhatToSell2027TrendingProductsEuropeRoute,
   DeCompareCompetitorRoute: DeCompareCompetitorRoute,
   DeEventsFreeForeverRoute: DeEventsFreeForeverRoute,
   DeForUseCaseRoute: DeForUseCaseRoute,
@@ -6184,7 +6598,9 @@ interface EsRouteChildren {
   EsBlogChatgptVsAccioSourcingAgentsRoute: typeof EsBlogChatgptVsAccioSourcingAgentsRoute
   EsBlogChinaImportRiskAuditLandedCostRoute: typeof EsBlogChinaImportRiskAuditLandedCostRoute
   EsBlogChinaSourcingRoute: typeof EsBlogChinaSourcingRoute
+  EsBlogChineseNewYear2027OrderDeadlinesRoute: typeof EsBlogChineseNewYear2027OrderDeadlinesRoute
   EsBlogHowToFindVerifiedChinaSuppliersAiRoute: typeof EsBlogHowToFindVerifiedChinaSuppliersAiRoute
+  EsBlogWhatToSell2027TrendingProductsEuropeRoute: typeof EsBlogWhatToSell2027TrendingProductsEuropeRoute
   EsCompareCompetitorRoute: typeof EsCompareCompetitorRoute
   EsEventsFreeForeverRoute: typeof EsEventsFreeForeverRoute
   EsForUseCaseRoute: typeof EsForUseCaseRoute
@@ -6222,8 +6638,12 @@ const EsRouteChildren: EsRouteChildren = {
   EsBlogChinaImportRiskAuditLandedCostRoute:
     EsBlogChinaImportRiskAuditLandedCostRoute,
   EsBlogChinaSourcingRoute: EsBlogChinaSourcingRoute,
+  EsBlogChineseNewYear2027OrderDeadlinesRoute:
+    EsBlogChineseNewYear2027OrderDeadlinesRoute,
   EsBlogHowToFindVerifiedChinaSuppliersAiRoute:
     EsBlogHowToFindVerifiedChinaSuppliersAiRoute,
+  EsBlogWhatToSell2027TrendingProductsEuropeRoute:
+    EsBlogWhatToSell2027TrendingProductsEuropeRoute,
   EsCompareCompetitorRoute: EsCompareCompetitorRoute,
   EsEventsFreeForeverRoute: EsEventsFreeForeverRoute,
   EsForUseCaseRoute: EsForUseCaseRoute,
@@ -6257,7 +6677,9 @@ interface FrRouteChildren {
   FrBlogChatgptVsAccioSourcingAgentsRoute: typeof FrBlogChatgptVsAccioSourcingAgentsRoute
   FrBlogChinaImportRiskAuditLandedCostRoute: typeof FrBlogChinaImportRiskAuditLandedCostRoute
   FrBlogChinaSourcingRoute: typeof FrBlogChinaSourcingRoute
+  FrBlogChineseNewYear2027OrderDeadlinesRoute: typeof FrBlogChineseNewYear2027OrderDeadlinesRoute
   FrBlogHowToFindVerifiedChinaSuppliersAiRoute: typeof FrBlogHowToFindVerifiedChinaSuppliersAiRoute
+  FrBlogWhatToSell2027TrendingProductsEuropeRoute: typeof FrBlogWhatToSell2027TrendingProductsEuropeRoute
   FrCompareCompetitorRoute: typeof FrCompareCompetitorRoute
   FrEventsFreeForeverRoute: typeof FrEventsFreeForeverRoute
   FrForUseCaseRoute: typeof FrForUseCaseRoute
@@ -6295,8 +6717,12 @@ const FrRouteChildren: FrRouteChildren = {
   FrBlogChinaImportRiskAuditLandedCostRoute:
     FrBlogChinaImportRiskAuditLandedCostRoute,
   FrBlogChinaSourcingRoute: FrBlogChinaSourcingRoute,
+  FrBlogChineseNewYear2027OrderDeadlinesRoute:
+    FrBlogChineseNewYear2027OrderDeadlinesRoute,
   FrBlogHowToFindVerifiedChinaSuppliersAiRoute:
     FrBlogHowToFindVerifiedChinaSuppliersAiRoute,
+  FrBlogWhatToSell2027TrendingProductsEuropeRoute:
+    FrBlogWhatToSell2027TrendingProductsEuropeRoute,
   FrCompareCompetitorRoute: FrCompareCompetitorRoute,
   FrEventsFreeForeverRoute: FrEventsFreeForeverRoute,
   FrForUseCaseRoute: FrForUseCaseRoute,
@@ -6330,7 +6756,9 @@ interface HiRouteChildren {
   HiBlogChatgptVsAccioSourcingAgentsRoute: typeof HiBlogChatgptVsAccioSourcingAgentsRoute
   HiBlogChinaImportRiskAuditLandedCostRoute: typeof HiBlogChinaImportRiskAuditLandedCostRoute
   HiBlogChinaSourcingRoute: typeof HiBlogChinaSourcingRoute
+  HiBlogChineseNewYear2027OrderDeadlinesRoute: typeof HiBlogChineseNewYear2027OrderDeadlinesRoute
   HiBlogHowToFindVerifiedChinaSuppliersAiRoute: typeof HiBlogHowToFindVerifiedChinaSuppliersAiRoute
+  HiBlogWhatToSell2027TrendingProductsEuropeRoute: typeof HiBlogWhatToSell2027TrendingProductsEuropeRoute
   HiCompareCompetitorRoute: typeof HiCompareCompetitorRoute
   HiEventsFreeForeverRoute: typeof HiEventsFreeForeverRoute
   HiForUseCaseRoute: typeof HiForUseCaseRoute
@@ -6368,8 +6796,12 @@ const HiRouteChildren: HiRouteChildren = {
   HiBlogChinaImportRiskAuditLandedCostRoute:
     HiBlogChinaImportRiskAuditLandedCostRoute,
   HiBlogChinaSourcingRoute: HiBlogChinaSourcingRoute,
+  HiBlogChineseNewYear2027OrderDeadlinesRoute:
+    HiBlogChineseNewYear2027OrderDeadlinesRoute,
   HiBlogHowToFindVerifiedChinaSuppliersAiRoute:
     HiBlogHowToFindVerifiedChinaSuppliersAiRoute,
+  HiBlogWhatToSell2027TrendingProductsEuropeRoute:
+    HiBlogWhatToSell2027TrendingProductsEuropeRoute,
   HiCompareCompetitorRoute: HiCompareCompetitorRoute,
   HiEventsFreeForeverRoute: HiEventsFreeForeverRoute,
   HiForUseCaseRoute: HiForUseCaseRoute,
@@ -6403,7 +6835,9 @@ interface ItRouteChildren {
   ItBlogChatgptVsAccioSourcingAgentsRoute: typeof ItBlogChatgptVsAccioSourcingAgentsRoute
   ItBlogChinaImportRiskAuditLandedCostRoute: typeof ItBlogChinaImportRiskAuditLandedCostRoute
   ItBlogChinaSourcingRoute: typeof ItBlogChinaSourcingRoute
+  ItBlogChineseNewYear2027OrderDeadlinesRoute: typeof ItBlogChineseNewYear2027OrderDeadlinesRoute
   ItBlogHowToFindVerifiedChinaSuppliersAiRoute: typeof ItBlogHowToFindVerifiedChinaSuppliersAiRoute
+  ItBlogWhatToSell2027TrendingProductsEuropeRoute: typeof ItBlogWhatToSell2027TrendingProductsEuropeRoute
   ItCompareCompetitorRoute: typeof ItCompareCompetitorRoute
   ItEventsFreeForeverRoute: typeof ItEventsFreeForeverRoute
   ItForUseCaseRoute: typeof ItForUseCaseRoute
@@ -6441,8 +6875,12 @@ const ItRouteChildren: ItRouteChildren = {
   ItBlogChinaImportRiskAuditLandedCostRoute:
     ItBlogChinaImportRiskAuditLandedCostRoute,
   ItBlogChinaSourcingRoute: ItBlogChinaSourcingRoute,
+  ItBlogChineseNewYear2027OrderDeadlinesRoute:
+    ItBlogChineseNewYear2027OrderDeadlinesRoute,
   ItBlogHowToFindVerifiedChinaSuppliersAiRoute:
     ItBlogHowToFindVerifiedChinaSuppliersAiRoute,
+  ItBlogWhatToSell2027TrendingProductsEuropeRoute:
+    ItBlogWhatToSell2027TrendingProductsEuropeRoute,
   ItCompareCompetitorRoute: ItCompareCompetitorRoute,
   ItEventsFreeForeverRoute: ItEventsFreeForeverRoute,
   ItForUseCaseRoute: ItForUseCaseRoute,
@@ -6476,7 +6914,9 @@ interface PtRouteChildren {
   PtBlogChatgptVsAccioSourcingAgentsRoute: typeof PtBlogChatgptVsAccioSourcingAgentsRoute
   PtBlogChinaImportRiskAuditLandedCostRoute: typeof PtBlogChinaImportRiskAuditLandedCostRoute
   PtBlogChinaSourcingRoute: typeof PtBlogChinaSourcingRoute
+  PtBlogChineseNewYear2027OrderDeadlinesRoute: typeof PtBlogChineseNewYear2027OrderDeadlinesRoute
   PtBlogHowToFindVerifiedChinaSuppliersAiRoute: typeof PtBlogHowToFindVerifiedChinaSuppliersAiRoute
+  PtBlogWhatToSell2027TrendingProductsEuropeRoute: typeof PtBlogWhatToSell2027TrendingProductsEuropeRoute
   PtCompareCompetitorRoute: typeof PtCompareCompetitorRoute
   PtEventsFreeForeverRoute: typeof PtEventsFreeForeverRoute
   PtForUseCaseRoute: typeof PtForUseCaseRoute
@@ -6514,8 +6954,12 @@ const PtRouteChildren: PtRouteChildren = {
   PtBlogChinaImportRiskAuditLandedCostRoute:
     PtBlogChinaImportRiskAuditLandedCostRoute,
   PtBlogChinaSourcingRoute: PtBlogChinaSourcingRoute,
+  PtBlogChineseNewYear2027OrderDeadlinesRoute:
+    PtBlogChineseNewYear2027OrderDeadlinesRoute,
   PtBlogHowToFindVerifiedChinaSuppliersAiRoute:
     PtBlogHowToFindVerifiedChinaSuppliersAiRoute,
+  PtBlogWhatToSell2027TrendingProductsEuropeRoute:
+    PtBlogWhatToSell2027TrendingProductsEuropeRoute,
   PtCompareCompetitorRoute: PtCompareCompetitorRoute,
   PtEventsFreeForeverRoute: PtEventsFreeForeverRoute,
   PtForUseCaseRoute: PtForUseCaseRoute,
@@ -6549,7 +6993,9 @@ interface RuRouteChildren {
   RuBlogChatgptVsAccioSourcingAgentsRoute: typeof RuBlogChatgptVsAccioSourcingAgentsRoute
   RuBlogChinaImportRiskAuditLandedCostRoute: typeof RuBlogChinaImportRiskAuditLandedCostRoute
   RuBlogChinaSourcingRoute: typeof RuBlogChinaSourcingRoute
+  RuBlogChineseNewYear2027OrderDeadlinesRoute: typeof RuBlogChineseNewYear2027OrderDeadlinesRoute
   RuBlogHowToFindVerifiedChinaSuppliersAiRoute: typeof RuBlogHowToFindVerifiedChinaSuppliersAiRoute
+  RuBlogWhatToSell2027TrendingProductsEuropeRoute: typeof RuBlogWhatToSell2027TrendingProductsEuropeRoute
   RuCompareCompetitorRoute: typeof RuCompareCompetitorRoute
   RuEventsFreeForeverRoute: typeof RuEventsFreeForeverRoute
   RuForUseCaseRoute: typeof RuForUseCaseRoute
@@ -6587,8 +7033,12 @@ const RuRouteChildren: RuRouteChildren = {
   RuBlogChinaImportRiskAuditLandedCostRoute:
     RuBlogChinaImportRiskAuditLandedCostRoute,
   RuBlogChinaSourcingRoute: RuBlogChinaSourcingRoute,
+  RuBlogChineseNewYear2027OrderDeadlinesRoute:
+    RuBlogChineseNewYear2027OrderDeadlinesRoute,
   RuBlogHowToFindVerifiedChinaSuppliersAiRoute:
     RuBlogHowToFindVerifiedChinaSuppliersAiRoute,
+  RuBlogWhatToSell2027TrendingProductsEuropeRoute:
+    RuBlogWhatToSell2027TrendingProductsEuropeRoute,
   RuCompareCompetitorRoute: RuCompareCompetitorRoute,
   RuEventsFreeForeverRoute: RuEventsFreeForeverRoute,
   RuForUseCaseRoute: RuForUseCaseRoute,
@@ -6625,7 +7075,9 @@ interface ZhRouteChildren {
   ZhBlogChatgptVsAccioSourcingAgentsRoute: typeof ZhBlogChatgptVsAccioSourcingAgentsRoute
   ZhBlogChinaImportRiskAuditLandedCostRoute: typeof ZhBlogChinaImportRiskAuditLandedCostRoute
   ZhBlogChinaSourcingRoute: typeof ZhBlogChinaSourcingRoute
+  ZhBlogChineseNewYear2027OrderDeadlinesRoute: typeof ZhBlogChineseNewYear2027OrderDeadlinesRoute
   ZhBlogHowToFindVerifiedChinaSuppliersAiRoute: typeof ZhBlogHowToFindVerifiedChinaSuppliersAiRoute
+  ZhBlogWhatToSell2027TrendingProductsEuropeRoute: typeof ZhBlogWhatToSell2027TrendingProductsEuropeRoute
   ZhCompareCompetitorRoute: typeof ZhCompareCompetitorRoute
   ZhEventsFreeForeverRoute: typeof ZhEventsFreeForeverRoute
   ZhForUseCaseRoute: typeof ZhForUseCaseRoute
@@ -6669,8 +7121,12 @@ const ZhRouteChildren: ZhRouteChildren = {
   ZhBlogChinaImportRiskAuditLandedCostRoute:
     ZhBlogChinaImportRiskAuditLandedCostRoute,
   ZhBlogChinaSourcingRoute: ZhBlogChinaSourcingRoute,
+  ZhBlogChineseNewYear2027OrderDeadlinesRoute:
+    ZhBlogChineseNewYear2027OrderDeadlinesRoute,
   ZhBlogHowToFindVerifiedChinaSuppliersAiRoute:
     ZhBlogHowToFindVerifiedChinaSuppliersAiRoute,
+  ZhBlogWhatToSell2027TrendingProductsEuropeRoute:
+    ZhBlogWhatToSell2027TrendingProductsEuropeRoute,
   ZhCompareCompetitorRoute: ZhCompareCompetitorRoute,
   ZhEventsFreeForeverRoute: ZhEventsFreeForeverRoute,
   ZhForUseCaseRoute: ZhForUseCaseRoute,
@@ -6720,8 +7176,12 @@ const rootRouteChildren: RootRouteChildren = {
   BlogChinaImportRiskAuditLandedCostRoute:
     BlogChinaImportRiskAuditLandedCostRoute,
   BlogChinaSourcingRoute: BlogChinaSourcingRoute,
+  BlogChineseNewYear2027OrderDeadlinesRoute:
+    BlogChineseNewYear2027OrderDeadlinesRoute,
   BlogHowToFindVerifiedChinaSuppliersAiRoute:
     BlogHowToFindVerifiedChinaSuppliersAiRoute,
+  BlogWhatToSell2027TrendingProductsEuropeRoute:
+    BlogWhatToSell2027TrendingProductsEuropeRoute,
   CompareCompetitorRoute: CompareCompetitorRoute,
   EventsFreeForeverRoute: EventsFreeForeverRoute,
   ForUseCaseRoute: ForUseCaseRoute,

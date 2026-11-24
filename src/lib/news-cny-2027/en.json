@@ -1,0 +1,81 @@
+{
+  "seoTitle": "Chinese New Year 2027 Factory Closures: Order Deadlines and Calculator",
+  "description": "Chinese New Year 2027 is on 6 February, but Chinese factories wind down from late January. Key dates, a last-order-date calculator and an AI checklist to get stock shipped before the shutdown.",
+  "keywords": ["chinese new year 2027 factory closure", "chinese new year 2027 order deadline", "cny 2027 shipping deadline", "china factory shutdown 2027", "when to order before chinese new year", "lunar new year 2027 suppliers", "spring festival 2027 production schedule"],
+  "badge": "Deadline guide - updated 24 November 2026",
+  "title": "Chinese New Year 2027: when to place orders before Chinese factories close",
+  "lede": "The holiday is on 6 February 2027, but production stops one to two weeks earlier and restarts slowly. If your Q1 stock is made in China, the real deadline is in December. Here are the dates, a calculator and a way to get every supplier's schedule in writing tonight.",
+  "dateLabel": "Published 24 November 2026",
+  "readMin": "6 min read",
+  "introTitle": "In short",
+  "intro": [
+    "Chinese New Year (Spring Festival) 2027 falls on Saturday, 6 February. New Year's Eve is 5 February, and the statutory public holidays in mainland China run from 5 to 8 February. With weekends and adjusted working days, the official break is usually around 8-9 days.",
+    "Factories close much longer than that. Workers travel home in the last week of January, many lines stop around 25-27 January and full capacity often only returns in March. That is why the date that matters for you is not 6 February but your supplier's last pickup day."
+  ],
+  "datesTitle": "Key dates for buyers",
+  "dates": [
+    { "date": "30 Nov 2026", "label": "Our recommended date to confirm suppliers, prices and holiday schedules in writing" },
+    { "date": "Mid-Dec 2026", "label": "Typical last safe date to place a production order for goods that must ship before the break" },
+    { "date": "~15 Jan 2027", "label": "Common last order confirmation for made-to-order goods at many factories" },
+    { "date": "~22-26 Jan 2027", "label": "Last ex-factory pickups at many suppliers; book freight in advance" },
+    { "date": "5-8 Feb 2027", "label": "Statutory Spring Festival holidays in mainland China (6 Feb is New Year's Day)" },
+    { "date": "~20 Feb 2027", "label": "Lantern Festival; many factories restart around this date, slowly" },
+    { "date": "March 2027", "label": "Full capacity typically returns as workers come back and new staff are trained" }
+  ],
+  "datesNote": "Each factory sets its own closure. Mainland China's exact days off are fixed by the State Council notice. Always confirm the dates with your supplier and forwarder.",
+  "calcTitle": "Calculator: your last order date",
+  "calcIntro": "Enter your supplier's last pickup day and production time. The calculator works backward and shows when you must place the order and when the goods would arrive.",
+  "calcPickup": "Supplier's last pickup day",
+  "calcProd": "Production time, days",
+  "calcQc": "Inspection and packing, days",
+  "calcMode": "Shipping",
+  "modeSea": "Sea freight (~35 days)",
+  "modeRail": "Rail to Europe (~25 days)",
+  "modeAir": "Air freight (~7 days)",
+  "resOrder": "Place the order by",
+  "resArrive": "Estimated arrival",
+  "resLate": "This date has already passed. Ask the supplier about ready stock, a shorter run or post-holiday delivery.",
+  "calcNote": "Transit times are rough averages for planning. Add a buffer for port congestion before the holiday.",
+  "timelineTitle": "Action plan by week",
+  "timeline": [
+    { "when": "This week", "title": "Get schedules in writing", "body": "Ask every supplier for four dates: last order day, last production day, last pickup day and the day production fully restarts." },
+    { "when": "By 30 November", "title": "Lock specs and prices", "body": "Approve samples, artwork and packaging now. Any change in January restarts production and misses the window." },
+    { "when": "By mid-December", "title": "Place orders and pay deposits", "body": "Order 6-10 weeks of extra stock to cover the closure and the slow restart. Book freight space at the same time." },
+    { "when": "Early-mid January", "title": "Inspect before it leaves", "body": "Schedule a pre-shipment inspection. Rushed end-of-year production is where quality problems usually appear." },
+    { "when": "After the holiday", "title": "Re-check quality and prices", "body": "Many workers change jobs after the festival. Inspect the first post-holiday batch and recheck quotes and lead times." }
+  ],
+  "agentTitle": "What an AI agent can do for you tonight",
+  "agentIntro": "Collecting holiday schedules from ten suppliers by hand takes days of messages across time zones. In Accio Work, you hand this to the sourcing agent and get one table back.",
+  "agent": [
+    { "title": "Collect every schedule", "body": "The agent drafts a holiday-schedule request for each supplier and gathers the answers into one comparison table." },
+    { "title": "Find backup suppliers", "body": "If your main factory closes early, the agent searches for verified alternatives with ready stock or shorter lead times." },
+    { "title": "Plan the buffer stock", "body": "Give it your monthly sales and it estimates how many weeks of stock you need to cover the closure and restart." },
+    { "title": "Check landed cost", "body": "Pre-holiday freight rates rise. The agent recalculates your margin with current shipping costs before you pay." }
+  ],
+  "ctaTitle": "Delegate your Chinese New Year planning tonight",
+  "ctaText": "Sign up for Accio Work, open the sourcing agent and paste the prompt below. You will have a table of supplier deadlines instead of a week of chasing replies.",
+  "ctaBtn": "Start Accio Work for free",
+  "promptLabel": "Chinese New Year 2027 deadline check",
+  "prompt": "I buy [product] from China and need stock to cover February-March 2027. Chinese New Year is on 6 February 2027. For my current suppliers [names or links] and 3 verified backup suppliers: ask for the last order date, last production day, last pickup day and full restart date. Put the answers in one table, flag anyone who closes before 25 January, and calculate how many units I must order by 15 December if I sell [units] per month and ship by [sea/rail/air] to [country].",
+  "risksTitle": "Common mistakes",
+  "risks": [
+    "Planning against 6 February instead of the supplier's last pickup day.",
+    "Changing packaging or specs in January, which restarts production.",
+    "Ordering only for February: the slow restart often stretches lead times into March.",
+    "Skipping inspection on rushed end-of-year runs and on the first post-holiday batch.",
+    "Booking freight late: space and rates tighten in the weeks before the holiday."
+  ],
+  "faq": [
+    { "q": "When is Chinese New Year 2027?", "a": "Saturday, 6 February 2027. New Year's Eve is 5 February, and mainland China's statutory holidays are 5-8 February. The final days off are set by the State Council notice." },
+    { "q": "When do Chinese factories close for Chinese New Year 2027?", "a": "It depends on the factory. Many stop production around 25-27 January 2027 and restart around the Lantern Festival on 20 February, with full capacity often only in March." },
+    { "q": "What is the last date to order before Chinese New Year 2027?", "a": "For goods that must ship before the break, most suppliers recommend placing orders by mid-December 2026. Use the calculator above with your supplier's real pickup date and production time." },
+    { "q": "How much extra stock should I order?", "a": "A common rule is 6-10 weeks of extra stock: the closure itself plus the slow restart and transit. Fast-moving products may need more." },
+    { "q": "Can AI help with Chinese New Year planning?", "a": "Yes. An AI sourcing agent such as Accio can request holiday schedules from suppliers, compare them in one table, find backup suppliers and recalculate landed cost." }
+  ],
+  "sourceLabels": ["Dates: Cambridge China Bridge, Chinese New Year 2027 guide", "Example factory schedule: Kehui, 2027 production notice", "Order timing: iFunSmart, Chinese New Year 2027 deadlines"],
+  "moreTitle": "Read next",
+  "newsLabel": "News",
+  "promoBadge": "Deadline - Chinese New Year 2027",
+  "promoTitle": "Chinese New Year 2027: order before Chinese factories close",
+  "promoCta": "See the dates and calculator"
+}

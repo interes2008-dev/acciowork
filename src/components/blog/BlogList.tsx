@@ -4,6 +4,8 @@ import { localizedPath } from "@/lib/i18n";
 import { FREE_SOURCING_PATH, freeSourcingNews } from "@/lib/news-free-sourcing";
 import { NOV_UPDATES_PATH, novUpdatesNews } from "@/lib/news-nov-updates";
 import { EUROPE_PACK_PATH, europePackNews } from "@/lib/news-europe-pack";
+import { CNY_PATH, cnyNews } from "@/lib/news-cny-2027";
+import { SELL_PATH, sellNews } from "@/lib/news-sell-2027";
 import { ZH_SELLER_ARTICLES, ZH_SELLER_SERIES, zhSellerPath } from "@/lib/news-zh-sellers";
 
 const COPY: Record<
@@ -120,6 +122,8 @@ export function BlogList({
         const news = freeSourcingNews(lang);
         const nov = novUpdatesNews(lang);
         const eu = europePackNews(lang);
+        const cny = cnyNews(lang);
+        const sell = sellNews(lang);
         const arrow = lang === "ar" ? "←" : "→";
         return (
           <div className="mb-12 grid gap-4 md:grid-cols-2">
@@ -140,6 +144,22 @@ export function BlogList({
                 </div>
               </div>
             )}
+            <a
+              href={localizedPath(CNY_PATH, lang)}
+              className="flex flex-col gap-2 rounded-[32px] border border-primary/30 bg-primary/5 p-6 transition hover:border-primary md:p-8"
+            >
+              <span className="text-xs font-semibold uppercase tracking-wider text-primary">{cny.promoBadge}</span>
+              <span className="text-2xl font-bold text-foreground">{cny.promoTitle}</span>
+              <span className="text-foreground/70">{cny.promoCta} {arrow}</span>
+            </a>
+            <a
+              href={localizedPath(SELL_PATH, lang)}
+              className="flex flex-col gap-2 rounded-[32px] border border-primary/30 bg-primary/5 p-6 transition hover:border-primary md:p-8"
+            >
+              <span className="text-xs font-semibold uppercase tracking-wider text-primary">{sell.promoBadge}</span>
+              <span className="text-2xl font-bold text-foreground">{sell.promoTitle}</span>
+              <span className="text-foreground/70">{sell.promoCta} {arrow}</span>
+            </a>
             <a
               href={localizedPath(EUROPE_PACK_PATH, lang)}
               className="flex flex-col gap-2 rounded-[32px] border border-primary/30 bg-primary/5 p-6 transition hover:border-primary md:p-8"
