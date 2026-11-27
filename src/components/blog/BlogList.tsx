@@ -4,6 +4,7 @@ import { localizedPath } from "@/lib/i18n";
 import { FREE_SOURCING_PATH, freeSourcingNews } from "@/lib/news-free-sourcing";
 import { NOV_UPDATES_PATH, novUpdatesNews } from "@/lib/news-nov-updates";
 import { EUROPE_PACK_PATH, europePackNews } from "@/lib/news-europe-pack";
+import { WEBINARS_PATH, webinarsEvent } from "@/lib/events-webinars";
 import { CNY_PATH, cnyNews } from "@/lib/news-cny-2027";
 import { SELL_PATH, sellNews } from "@/lib/news-sell-2027";
 import { ZH_SELLER_ARTICLES, ZH_SELLER_SERIES, zhSellerPath } from "@/lib/news-zh-sellers";
@@ -159,6 +160,14 @@ export function BlogList({
               <span className="text-xs font-semibold uppercase tracking-wider text-primary">{sell.promoBadge}</span>
               <span className="text-2xl font-bold text-foreground">{sell.promoTitle}</span>
               <span className="text-foreground/70">{sell.promoCta} {arrow}</span>
+            </a>
+            <a
+              href={localizedPath(WEBINARS_PATH, lang)}
+              className="flex flex-col gap-2 rounded-[32px] border border-primary/30 bg-primary/5 p-6 transition hover:border-primary md:p-8"
+            >
+              <span className="text-xs font-semibold uppercase tracking-wider text-primary">{webinarsEvent(lang).badge}</span>
+              <span className="text-2xl font-bold text-foreground">{webinarsEvent(lang).promoTitle}</span>
+              <span className="text-foreground/70">{eu.promoCta} {arrow}</span>
             </a>
             <a
               href={localizedPath(EUROPE_PACK_PATH, lang)}

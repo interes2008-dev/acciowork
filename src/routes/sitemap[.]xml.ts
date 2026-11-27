@@ -241,6 +241,16 @@ export const Route = createFileRoute("/sitemap.xml")({
           });
         }
 
+        for (const l of arLangs) {
+          entries.push({
+            path: `${l}/events/accio-live-webinars`,
+            changefreq: "weekly",
+            priority: "0.7",
+            lastmod: "2026-11-27",
+            alternates: arAlts("/events/accio-live-webinars"),
+          });
+        }
+
         try {
           const articles = await listAllPublishedForSitemap();
           for (const a of articles) {

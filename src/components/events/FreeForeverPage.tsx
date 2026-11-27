@@ -6,6 +6,7 @@ import { fillAr } from "@/lib/fill-ar";
 import { CreditsUpdate } from "./CreditsUpdate";
 import { EcomWorkspace } from "./EcomWorkspace";
 import { FreeSourcingSection } from "./FreeSourcingSection";
+import { WEBINARS_PATH, webinarsEvent } from "@/lib/events-webinars";
 import aiAgentImage from "@/assets/event-feature-ai-agent.png";
 import browserImage from "@/assets/event-feature-browser.png";
 import integrationsImage from "@/assets/event-feature-integrations.png";
@@ -2481,6 +2482,16 @@ export function FreeForeverPage({ lang }: { lang: Lang }) {
       <main>
         <Hero lang={lang} d={d} />
         <Stats d={d} locale={LOCALES[lang]} />
+        <section className="mx-auto max-w-6xl px-6 py-6">
+          <a
+            href={`${lang === "en" ? "" : `/${lang}`}${WEBINARS_PATH}`}
+            className="flex flex-col gap-2 rounded-[32px] border border-primary/30 bg-primary/5 p-6 transition hover:border-primary md:p-8"
+          >
+            <span className="text-xs font-semibold uppercase tracking-wider text-primary">{webinarsEvent(lang).badge}</span>
+            <span className="text-2xl font-bold text-foreground">{webinarsEvent(lang).promoTitle}</span>
+            <span className="text-foreground/70">{webinarsEvent(lang).lede}</span>
+          </a>
+        </section>
         <MarketAlerts d={d} lang={lang} />
         <FreeSourcingSection lang={lang} />
         <CreditsUpdate lang={lang} />

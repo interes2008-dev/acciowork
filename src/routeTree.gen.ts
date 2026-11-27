@@ -80,6 +80,7 @@ import { Route as EsRoiRouteImport } from './routes/es.roi'
 import { Route as EsSupplierScorecardRouteImport } from './routes/es.supplier-scorecard'
 import { Route as EsTemplatesRouteImport } from './routes/es.templates'
 import { Route as EsTiktokShopRouteImport } from './routes/es.tiktok-shop'
+import { Route as EventsAccioLiveWebinarsRouteImport } from './routes/events.accio-live-webinars'
 import { Route as EventsFreeForeverRouteImport } from './routes/events.free-forever'
 import { Route as ForIndexRouteImport } from './routes/for.index'
 import { Route as ForUseCaseRouteImport } from './routes/for.$useCase'
@@ -167,6 +168,7 @@ import { Route as ArBlogHowToFindVerifiedChinaSuppliersAiRouteImport } from './r
 import { Route as ArBlogWhatToSell2027TrendingProductsEuropeRouteImport } from './routes/ar.blog.what-to-sell-2027-trending-products-europe'
 import { Route as ArCompareIndexRouteImport } from './routes/ar.compare.index'
 import { Route as ArCompareCompetitorRouteImport } from './routes/ar.compare.$competitor'
+import { Route as ArEventsAccioLiveWebinarsRouteImport } from './routes/ar.events.accio-live-webinars'
 import { Route as ArEventsFreeForeverRouteImport } from './routes/ar.events.free-forever'
 import { Route as ArForIndexRouteImport } from './routes/ar.for.index'
 import { Route as ArForUseCaseRouteImport } from './routes/ar.for.$useCase'
@@ -187,6 +189,7 @@ import { Route as DeBlogHowToFindVerifiedChinaSuppliersAiRouteImport } from './r
 import { Route as DeBlogWhatToSell2027TrendingProductsEuropeRouteImport } from './routes/de.blog.what-to-sell-2027-trending-products-europe'
 import { Route as DeCompareIndexRouteImport } from './routes/de.compare.index'
 import { Route as DeCompareCompetitorRouteImport } from './routes/de.compare.$competitor'
+import { Route as DeEventsAccioLiveWebinarsRouteImport } from './routes/de.events.accio-live-webinars'
 import { Route as DeEventsFreeForeverRouteImport } from './routes/de.events.free-forever'
 import { Route as DeForIndexRouteImport } from './routes/de.for.index'
 import { Route as DeForUseCaseRouteImport } from './routes/de.for.$useCase'
@@ -207,6 +210,7 @@ import { Route as EsBlogHowToFindVerifiedChinaSuppliersAiRouteImport } from './r
 import { Route as EsBlogWhatToSell2027TrendingProductsEuropeRouteImport } from './routes/es.blog.what-to-sell-2027-trending-products-europe'
 import { Route as EsCompareIndexRouteImport } from './routes/es.compare.index'
 import { Route as EsCompareCompetitorRouteImport } from './routes/es.compare.$competitor'
+import { Route as EsEventsAccioLiveWebinarsRouteImport } from './routes/es.events.accio-live-webinars'
 import { Route as EsEventsFreeForeverRouteImport } from './routes/es.events.free-forever'
 import { Route as EsForIndexRouteImport } from './routes/es.for.index'
 import { Route as EsForUseCaseRouteImport } from './routes/es.for.$useCase'
@@ -227,6 +231,7 @@ import { Route as FrBlogHowToFindVerifiedChinaSuppliersAiRouteImport } from './r
 import { Route as FrBlogWhatToSell2027TrendingProductsEuropeRouteImport } from './routes/fr.blog.what-to-sell-2027-trending-products-europe'
 import { Route as FrCompareIndexRouteImport } from './routes/fr.compare.index'
 import { Route as FrCompareCompetitorRouteImport } from './routes/fr.compare.$competitor'
+import { Route as FrEventsAccioLiveWebinarsRouteImport } from './routes/fr.events.accio-live-webinars'
 import { Route as FrEventsFreeForeverRouteImport } from './routes/fr.events.free-forever'
 import { Route as FrForIndexRouteImport } from './routes/fr.for.index'
 import { Route as FrForUseCaseRouteImport } from './routes/fr.for.$useCase'
@@ -247,6 +252,7 @@ import { Route as HiBlogHowToFindVerifiedChinaSuppliersAiRouteImport } from './r
 import { Route as HiBlogWhatToSell2027TrendingProductsEuropeRouteImport } from './routes/hi.blog.what-to-sell-2027-trending-products-europe'
 import { Route as HiCompareIndexRouteImport } from './routes/hi.compare.index'
 import { Route as HiCompareCompetitorRouteImport } from './routes/hi.compare.$competitor'
+import { Route as HiEventsAccioLiveWebinarsRouteImport } from './routes/hi.events.accio-live-webinars'
 import { Route as HiEventsFreeForeverRouteImport } from './routes/hi.events.free-forever'
 import { Route as HiForIndexRouteImport } from './routes/hi.for.index'
 import { Route as HiForUseCaseRouteImport } from './routes/hi.for.$useCase'
@@ -267,6 +273,7 @@ import { Route as ItBlogHowToFindVerifiedChinaSuppliersAiRouteImport } from './r
 import { Route as ItBlogWhatToSell2027TrendingProductsEuropeRouteImport } from './routes/it.blog.what-to-sell-2027-trending-products-europe'
 import { Route as ItCompareIndexRouteImport } from './routes/it.compare.index'
 import { Route as ItCompareCompetitorRouteImport } from './routes/it.compare.$competitor'
+import { Route as ItEventsAccioLiveWebinarsRouteImport } from './routes/it.events.accio-live-webinars'
 import { Route as ItEventsFreeForeverRouteImport } from './routes/it.events.free-forever'
 import { Route as ItForIndexRouteImport } from './routes/it.for.index'
 import { Route as ItForUseCaseRouteImport } from './routes/it.for.$useCase'
@@ -287,6 +294,7 @@ import { Route as PtBlogHowToFindVerifiedChinaSuppliersAiRouteImport } from './r
 import { Route as PtBlogWhatToSell2027TrendingProductsEuropeRouteImport } from './routes/pt.blog.what-to-sell-2027-trending-products-europe'
 import { Route as PtCompareIndexRouteImport } from './routes/pt.compare.index'
 import { Route as PtCompareCompetitorRouteImport } from './routes/pt.compare.$competitor'
+import { Route as PtEventsAccioLiveWebinarsRouteImport } from './routes/pt.events.accio-live-webinars'
 import { Route as PtEventsFreeForeverRouteImport } from './routes/pt.events.free-forever'
 import { Route as PtForIndexRouteImport } from './routes/pt.for.index'
 import { Route as PtForUseCaseRouteImport } from './routes/pt.for.$useCase'
@@ -307,6 +315,7 @@ import { Route as RuBlogHowToFindVerifiedChinaSuppliersAiRouteImport } from './r
 import { Route as RuBlogWhatToSell2027TrendingProductsEuropeRouteImport } from './routes/ru.blog.what-to-sell-2027-trending-products-europe'
 import { Route as RuCompareIndexRouteImport } from './routes/ru.compare.index'
 import { Route as RuCompareCompetitorRouteImport } from './routes/ru.compare.$competitor'
+import { Route as RuEventsAccioLiveWebinarsRouteImport } from './routes/ru.events.accio-live-webinars'
 import { Route as RuEventsFreeForeverRouteImport } from './routes/ru.events.free-forever'
 import { Route as RuForIndexRouteImport } from './routes/ru.for.index'
 import { Route as RuForUseCaseRouteImport } from './routes/ru.for.$useCase'
@@ -330,6 +339,7 @@ import { Route as ZhBlogHowToFindVerifiedChinaSuppliersAiRouteImport } from './r
 import { Route as ZhBlogWhatToSell2027TrendingProductsEuropeRouteImport } from './routes/zh.blog.what-to-sell-2027-trending-products-europe'
 import { Route as ZhCompareIndexRouteImport } from './routes/zh.compare.index'
 import { Route as ZhCompareCompetitorRouteImport } from './routes/zh.compare.$competitor'
+import { Route as ZhEventsAccioLiveWebinarsRouteImport } from './routes/zh.events.accio-live-webinars'
 import { Route as ZhEventsFreeForeverRouteImport } from './routes/zh.events.free-forever'
 import { Route as ZhForIndexRouteImport } from './routes/zh.for.index'
 import { Route as ZhForUseCaseRouteImport } from './routes/zh.for.$useCase'
@@ -703,6 +713,11 @@ const EsTiktokShopRoute = EsTiktokShopRouteImport.update({
   id: '/tiktok-shop',
   path: '/tiktok-shop',
   getParentRoute: () => EsRoute,
+} as any)
+const EventsAccioLiveWebinarsRoute = EventsAccioLiveWebinarsRouteImport.update({
+  id: '/events/accio-live-webinars',
+  path: '/events/accio-live-webinars',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const EventsFreeForeverRoute = EventsFreeForeverRouteImport.update({
   id: '/events/free-forever',
@@ -1149,6 +1164,12 @@ const ArCompareCompetitorRoute = ArCompareCompetitorRouteImport.update({
   path: '/compare/$competitor',
   getParentRoute: () => ArRoute,
 } as any)
+const ArEventsAccioLiveWebinarsRoute =
+  ArEventsAccioLiveWebinarsRouteImport.update({
+    id: '/events/accio-live-webinars',
+    path: '/events/accio-live-webinars',
+    getParentRoute: () => ArRoute,
+  } as any)
 const ArEventsFreeForeverRoute = ArEventsFreeForeverRouteImport.update({
   id: '/events/free-forever',
   path: '/events/free-forever',
@@ -1259,6 +1280,12 @@ const DeCompareCompetitorRoute = DeCompareCompetitorRouteImport.update({
   path: '/compare/$competitor',
   getParentRoute: () => DeRoute,
 } as any)
+const DeEventsAccioLiveWebinarsRoute =
+  DeEventsAccioLiveWebinarsRouteImport.update({
+    id: '/events/accio-live-webinars',
+    path: '/events/accio-live-webinars',
+    getParentRoute: () => DeRoute,
+  } as any)
 const DeEventsFreeForeverRoute = DeEventsFreeForeverRouteImport.update({
   id: '/events/free-forever',
   path: '/events/free-forever',
@@ -1369,6 +1396,12 @@ const EsCompareCompetitorRoute = EsCompareCompetitorRouteImport.update({
   path: '/compare/$competitor',
   getParentRoute: () => EsRoute,
 } as any)
+const EsEventsAccioLiveWebinarsRoute =
+  EsEventsAccioLiveWebinarsRouteImport.update({
+    id: '/events/accio-live-webinars',
+    path: '/events/accio-live-webinars',
+    getParentRoute: () => EsRoute,
+  } as any)
 const EsEventsFreeForeverRoute = EsEventsFreeForeverRouteImport.update({
   id: '/events/free-forever',
   path: '/events/free-forever',
@@ -1479,6 +1512,12 @@ const FrCompareCompetitorRoute = FrCompareCompetitorRouteImport.update({
   path: '/compare/$competitor',
   getParentRoute: () => FrRoute,
 } as any)
+const FrEventsAccioLiveWebinarsRoute =
+  FrEventsAccioLiveWebinarsRouteImport.update({
+    id: '/events/accio-live-webinars',
+    path: '/events/accio-live-webinars',
+    getParentRoute: () => FrRoute,
+  } as any)
 const FrEventsFreeForeverRoute = FrEventsFreeForeverRouteImport.update({
   id: '/events/free-forever',
   path: '/events/free-forever',
@@ -1589,6 +1628,12 @@ const HiCompareCompetitorRoute = HiCompareCompetitorRouteImport.update({
   path: '/compare/$competitor',
   getParentRoute: () => HiRoute,
 } as any)
+const HiEventsAccioLiveWebinarsRoute =
+  HiEventsAccioLiveWebinarsRouteImport.update({
+    id: '/events/accio-live-webinars',
+    path: '/events/accio-live-webinars',
+    getParentRoute: () => HiRoute,
+  } as any)
 const HiEventsFreeForeverRoute = HiEventsFreeForeverRouteImport.update({
   id: '/events/free-forever',
   path: '/events/free-forever',
@@ -1699,6 +1744,12 @@ const ItCompareCompetitorRoute = ItCompareCompetitorRouteImport.update({
   path: '/compare/$competitor',
   getParentRoute: () => ItRoute,
 } as any)
+const ItEventsAccioLiveWebinarsRoute =
+  ItEventsAccioLiveWebinarsRouteImport.update({
+    id: '/events/accio-live-webinars',
+    path: '/events/accio-live-webinars',
+    getParentRoute: () => ItRoute,
+  } as any)
 const ItEventsFreeForeverRoute = ItEventsFreeForeverRouteImport.update({
   id: '/events/free-forever',
   path: '/events/free-forever',
@@ -1809,6 +1860,12 @@ const PtCompareCompetitorRoute = PtCompareCompetitorRouteImport.update({
   path: '/compare/$competitor',
   getParentRoute: () => PtRoute,
 } as any)
+const PtEventsAccioLiveWebinarsRoute =
+  PtEventsAccioLiveWebinarsRouteImport.update({
+    id: '/events/accio-live-webinars',
+    path: '/events/accio-live-webinars',
+    getParentRoute: () => PtRoute,
+  } as any)
 const PtEventsFreeForeverRoute = PtEventsFreeForeverRouteImport.update({
   id: '/events/free-forever',
   path: '/events/free-forever',
@@ -1919,6 +1976,12 @@ const RuCompareCompetitorRoute = RuCompareCompetitorRouteImport.update({
   path: '/compare/$competitor',
   getParentRoute: () => RuRoute,
 } as any)
+const RuEventsAccioLiveWebinarsRoute =
+  RuEventsAccioLiveWebinarsRouteImport.update({
+    id: '/events/accio-live-webinars',
+    path: '/events/accio-live-webinars',
+    getParentRoute: () => RuRoute,
+  } as any)
 const RuEventsFreeForeverRoute = RuEventsFreeForeverRouteImport.update({
   id: '/events/free-forever',
   path: '/events/free-forever',
@@ -2047,6 +2110,12 @@ const ZhCompareCompetitorRoute = ZhCompareCompetitorRouteImport.update({
   path: '/compare/$competitor',
   getParentRoute: () => ZhRoute,
 } as any)
+const ZhEventsAccioLiveWebinarsRoute =
+  ZhEventsAccioLiveWebinarsRouteImport.update({
+    id: '/events/accio-live-webinars',
+    path: '/events/accio-live-webinars',
+    getParentRoute: () => ZhRoute,
+  } as any)
 const ZhEventsFreeForeverRoute = ZhEventsFreeForeverRouteImport.update({
   id: '/events/free-forever',
   path: '/events/free-forever',
@@ -2156,6 +2225,7 @@ export interface FileRoutesByFullPath {
   '/es/supplier-scorecard': typeof EsSupplierScorecardRoute
   '/es/templates': typeof EsTemplatesRoute
   '/es/tiktok-shop': typeof EsTiktokShopRoute
+  '/events/accio-live-webinars': typeof EventsAccioLiveWebinarsRoute
   '/events/free-forever': typeof EventsFreeForeverRoute
   '/for/$useCase': typeof ForUseCaseRoute
   '/fr/ai-agent-tasks': typeof FrAiAgentTasksRoute
@@ -2246,6 +2316,7 @@ export interface FileRoutesByFullPath {
   '/ar/blog/how-to-find-verified-china-suppliers-ai': typeof ArBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/ar/blog/what-to-sell-2027-trending-products-europe': typeof ArBlogWhatToSell2027TrendingProductsEuropeRoute
   '/ar/compare/$competitor': typeof ArCompareCompetitorRoute
+  '/ar/events/accio-live-webinars': typeof ArEventsAccioLiveWebinarsRoute
   '/ar/events/free-forever': typeof ArEventsFreeForeverRoute
   '/ar/for/$useCase': typeof ArForUseCaseRoute
   '/ar/guide/$guide': typeof ArGuideGuideRoute
@@ -2262,6 +2333,7 @@ export interface FileRoutesByFullPath {
   '/de/blog/how-to-find-verified-china-suppliers-ai': typeof DeBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/de/blog/what-to-sell-2027-trending-products-europe': typeof DeBlogWhatToSell2027TrendingProductsEuropeRoute
   '/de/compare/$competitor': typeof DeCompareCompetitorRoute
+  '/de/events/accio-live-webinars': typeof DeEventsAccioLiveWebinarsRoute
   '/de/events/free-forever': typeof DeEventsFreeForeverRoute
   '/de/for/$useCase': typeof DeForUseCaseRoute
   '/de/guide/$guide': typeof DeGuideGuideRoute
@@ -2278,6 +2350,7 @@ export interface FileRoutesByFullPath {
   '/es/blog/how-to-find-verified-china-suppliers-ai': typeof EsBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/es/blog/what-to-sell-2027-trending-products-europe': typeof EsBlogWhatToSell2027TrendingProductsEuropeRoute
   '/es/compare/$competitor': typeof EsCompareCompetitorRoute
+  '/es/events/accio-live-webinars': typeof EsEventsAccioLiveWebinarsRoute
   '/es/events/free-forever': typeof EsEventsFreeForeverRoute
   '/es/for/$useCase': typeof EsForUseCaseRoute
   '/es/guide/$guide': typeof EsGuideGuideRoute
@@ -2294,6 +2367,7 @@ export interface FileRoutesByFullPath {
   '/fr/blog/how-to-find-verified-china-suppliers-ai': typeof FrBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/fr/blog/what-to-sell-2027-trending-products-europe': typeof FrBlogWhatToSell2027TrendingProductsEuropeRoute
   '/fr/compare/$competitor': typeof FrCompareCompetitorRoute
+  '/fr/events/accio-live-webinars': typeof FrEventsAccioLiveWebinarsRoute
   '/fr/events/free-forever': typeof FrEventsFreeForeverRoute
   '/fr/for/$useCase': typeof FrForUseCaseRoute
   '/fr/guide/$guide': typeof FrGuideGuideRoute
@@ -2310,6 +2384,7 @@ export interface FileRoutesByFullPath {
   '/hi/blog/how-to-find-verified-china-suppliers-ai': typeof HiBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/hi/blog/what-to-sell-2027-trending-products-europe': typeof HiBlogWhatToSell2027TrendingProductsEuropeRoute
   '/hi/compare/$competitor': typeof HiCompareCompetitorRoute
+  '/hi/events/accio-live-webinars': typeof HiEventsAccioLiveWebinarsRoute
   '/hi/events/free-forever': typeof HiEventsFreeForeverRoute
   '/hi/for/$useCase': typeof HiForUseCaseRoute
   '/hi/guide/$guide': typeof HiGuideGuideRoute
@@ -2326,6 +2401,7 @@ export interface FileRoutesByFullPath {
   '/it/blog/how-to-find-verified-china-suppliers-ai': typeof ItBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/it/blog/what-to-sell-2027-trending-products-europe': typeof ItBlogWhatToSell2027TrendingProductsEuropeRoute
   '/it/compare/$competitor': typeof ItCompareCompetitorRoute
+  '/it/events/accio-live-webinars': typeof ItEventsAccioLiveWebinarsRoute
   '/it/events/free-forever': typeof ItEventsFreeForeverRoute
   '/it/for/$useCase': typeof ItForUseCaseRoute
   '/it/guide/$guide': typeof ItGuideGuideRoute
@@ -2342,6 +2418,7 @@ export interface FileRoutesByFullPath {
   '/pt/blog/how-to-find-verified-china-suppliers-ai': typeof PtBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/pt/blog/what-to-sell-2027-trending-products-europe': typeof PtBlogWhatToSell2027TrendingProductsEuropeRoute
   '/pt/compare/$competitor': typeof PtCompareCompetitorRoute
+  '/pt/events/accio-live-webinars': typeof PtEventsAccioLiveWebinarsRoute
   '/pt/events/free-forever': typeof PtEventsFreeForeverRoute
   '/pt/for/$useCase': typeof PtForUseCaseRoute
   '/pt/guide/$guide': typeof PtGuideGuideRoute
@@ -2358,6 +2435,7 @@ export interface FileRoutesByFullPath {
   '/ru/blog/how-to-find-verified-china-suppliers-ai': typeof RuBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/ru/blog/what-to-sell-2027-trending-products-europe': typeof RuBlogWhatToSell2027TrendingProductsEuropeRoute
   '/ru/compare/$competitor': typeof RuCompareCompetitorRoute
+  '/ru/events/accio-live-webinars': typeof RuEventsAccioLiveWebinarsRoute
   '/ru/events/free-forever': typeof RuEventsFreeForeverRoute
   '/ru/for/$useCase': typeof RuForUseCaseRoute
   '/ru/guide/$guide': typeof RuGuideGuideRoute
@@ -2377,6 +2455,7 @@ export interface FileRoutesByFullPath {
   '/zh/blog/how-to-find-verified-china-suppliers-ai': typeof ZhBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/zh/blog/what-to-sell-2027-trending-products-europe': typeof ZhBlogWhatToSell2027TrendingProductsEuropeRoute
   '/zh/compare/$competitor': typeof ZhCompareCompetitorRoute
+  '/zh/events/accio-live-webinars': typeof ZhEventsAccioLiveWebinarsRoute
   '/zh/events/free-forever': typeof ZhEventsFreeForeverRoute
   '/zh/for/$useCase': typeof ZhForUseCaseRoute
   '/zh/guide/$guide': typeof ZhGuideGuideRoute
@@ -2478,6 +2557,7 @@ export interface FileRoutesByTo {
   '/es/supplier-scorecard': typeof EsSupplierScorecardRoute
   '/es/templates': typeof EsTemplatesRoute
   '/es/tiktok-shop': typeof EsTiktokShopRoute
+  '/events/accio-live-webinars': typeof EventsAccioLiveWebinarsRoute
   '/events/free-forever': typeof EventsFreeForeverRoute
   '/for/$useCase': typeof ForUseCaseRoute
   '/fr/ai-agent-tasks': typeof FrAiAgentTasksRoute
@@ -2568,6 +2648,7 @@ export interface FileRoutesByTo {
   '/ar/blog/how-to-find-verified-china-suppliers-ai': typeof ArBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/ar/blog/what-to-sell-2027-trending-products-europe': typeof ArBlogWhatToSell2027TrendingProductsEuropeRoute
   '/ar/compare/$competitor': typeof ArCompareCompetitorRoute
+  '/ar/events/accio-live-webinars': typeof ArEventsAccioLiveWebinarsRoute
   '/ar/events/free-forever': typeof ArEventsFreeForeverRoute
   '/ar/for/$useCase': typeof ArForUseCaseRoute
   '/ar/guide/$guide': typeof ArGuideGuideRoute
@@ -2584,6 +2665,7 @@ export interface FileRoutesByTo {
   '/de/blog/how-to-find-verified-china-suppliers-ai': typeof DeBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/de/blog/what-to-sell-2027-trending-products-europe': typeof DeBlogWhatToSell2027TrendingProductsEuropeRoute
   '/de/compare/$competitor': typeof DeCompareCompetitorRoute
+  '/de/events/accio-live-webinars': typeof DeEventsAccioLiveWebinarsRoute
   '/de/events/free-forever': typeof DeEventsFreeForeverRoute
   '/de/for/$useCase': typeof DeForUseCaseRoute
   '/de/guide/$guide': typeof DeGuideGuideRoute
@@ -2600,6 +2682,7 @@ export interface FileRoutesByTo {
   '/es/blog/how-to-find-verified-china-suppliers-ai': typeof EsBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/es/blog/what-to-sell-2027-trending-products-europe': typeof EsBlogWhatToSell2027TrendingProductsEuropeRoute
   '/es/compare/$competitor': typeof EsCompareCompetitorRoute
+  '/es/events/accio-live-webinars': typeof EsEventsAccioLiveWebinarsRoute
   '/es/events/free-forever': typeof EsEventsFreeForeverRoute
   '/es/for/$useCase': typeof EsForUseCaseRoute
   '/es/guide/$guide': typeof EsGuideGuideRoute
@@ -2616,6 +2699,7 @@ export interface FileRoutesByTo {
   '/fr/blog/how-to-find-verified-china-suppliers-ai': typeof FrBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/fr/blog/what-to-sell-2027-trending-products-europe': typeof FrBlogWhatToSell2027TrendingProductsEuropeRoute
   '/fr/compare/$competitor': typeof FrCompareCompetitorRoute
+  '/fr/events/accio-live-webinars': typeof FrEventsAccioLiveWebinarsRoute
   '/fr/events/free-forever': typeof FrEventsFreeForeverRoute
   '/fr/for/$useCase': typeof FrForUseCaseRoute
   '/fr/guide/$guide': typeof FrGuideGuideRoute
@@ -2632,6 +2716,7 @@ export interface FileRoutesByTo {
   '/hi/blog/how-to-find-verified-china-suppliers-ai': typeof HiBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/hi/blog/what-to-sell-2027-trending-products-europe': typeof HiBlogWhatToSell2027TrendingProductsEuropeRoute
   '/hi/compare/$competitor': typeof HiCompareCompetitorRoute
+  '/hi/events/accio-live-webinars': typeof HiEventsAccioLiveWebinarsRoute
   '/hi/events/free-forever': typeof HiEventsFreeForeverRoute
   '/hi/for/$useCase': typeof HiForUseCaseRoute
   '/hi/guide/$guide': typeof HiGuideGuideRoute
@@ -2648,6 +2733,7 @@ export interface FileRoutesByTo {
   '/it/blog/how-to-find-verified-china-suppliers-ai': typeof ItBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/it/blog/what-to-sell-2027-trending-products-europe': typeof ItBlogWhatToSell2027TrendingProductsEuropeRoute
   '/it/compare/$competitor': typeof ItCompareCompetitorRoute
+  '/it/events/accio-live-webinars': typeof ItEventsAccioLiveWebinarsRoute
   '/it/events/free-forever': typeof ItEventsFreeForeverRoute
   '/it/for/$useCase': typeof ItForUseCaseRoute
   '/it/guide/$guide': typeof ItGuideGuideRoute
@@ -2664,6 +2750,7 @@ export interface FileRoutesByTo {
   '/pt/blog/how-to-find-verified-china-suppliers-ai': typeof PtBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/pt/blog/what-to-sell-2027-trending-products-europe': typeof PtBlogWhatToSell2027TrendingProductsEuropeRoute
   '/pt/compare/$competitor': typeof PtCompareCompetitorRoute
+  '/pt/events/accio-live-webinars': typeof PtEventsAccioLiveWebinarsRoute
   '/pt/events/free-forever': typeof PtEventsFreeForeverRoute
   '/pt/for/$useCase': typeof PtForUseCaseRoute
   '/pt/guide/$guide': typeof PtGuideGuideRoute
@@ -2680,6 +2767,7 @@ export interface FileRoutesByTo {
   '/ru/blog/how-to-find-verified-china-suppliers-ai': typeof RuBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/ru/blog/what-to-sell-2027-trending-products-europe': typeof RuBlogWhatToSell2027TrendingProductsEuropeRoute
   '/ru/compare/$competitor': typeof RuCompareCompetitorRoute
+  '/ru/events/accio-live-webinars': typeof RuEventsAccioLiveWebinarsRoute
   '/ru/events/free-forever': typeof RuEventsFreeForeverRoute
   '/ru/for/$useCase': typeof RuForUseCaseRoute
   '/ru/guide/$guide': typeof RuGuideGuideRoute
@@ -2699,6 +2787,7 @@ export interface FileRoutesByTo {
   '/zh/blog/how-to-find-verified-china-suppliers-ai': typeof ZhBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/zh/blog/what-to-sell-2027-trending-products-europe': typeof ZhBlogWhatToSell2027TrendingProductsEuropeRoute
   '/zh/compare/$competitor': typeof ZhCompareCompetitorRoute
+  '/zh/events/accio-live-webinars': typeof ZhEventsAccioLiveWebinarsRoute
   '/zh/events/free-forever': typeof ZhEventsFreeForeverRoute
   '/zh/for/$useCase': typeof ZhForUseCaseRoute
   '/zh/guide/$guide': typeof ZhGuideGuideRoute
@@ -2810,6 +2899,7 @@ export interface FileRoutesById {
   '/es/supplier-scorecard': typeof EsSupplierScorecardRoute
   '/es/templates': typeof EsTemplatesRoute
   '/es/tiktok-shop': typeof EsTiktokShopRoute
+  '/events/accio-live-webinars': typeof EventsAccioLiveWebinarsRoute
   '/events/free-forever': typeof EventsFreeForeverRoute
   '/for/$useCase': typeof ForUseCaseRoute
   '/fr/ai-agent-tasks': typeof FrAiAgentTasksRoute
@@ -2900,6 +2990,7 @@ export interface FileRoutesById {
   '/ar/blog/how-to-find-verified-china-suppliers-ai': typeof ArBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/ar/blog/what-to-sell-2027-trending-products-europe': typeof ArBlogWhatToSell2027TrendingProductsEuropeRoute
   '/ar/compare/$competitor': typeof ArCompareCompetitorRoute
+  '/ar/events/accio-live-webinars': typeof ArEventsAccioLiveWebinarsRoute
   '/ar/events/free-forever': typeof ArEventsFreeForeverRoute
   '/ar/for/$useCase': typeof ArForUseCaseRoute
   '/ar/guide/$guide': typeof ArGuideGuideRoute
@@ -2916,6 +3007,7 @@ export interface FileRoutesById {
   '/de/blog/how-to-find-verified-china-suppliers-ai': typeof DeBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/de/blog/what-to-sell-2027-trending-products-europe': typeof DeBlogWhatToSell2027TrendingProductsEuropeRoute
   '/de/compare/$competitor': typeof DeCompareCompetitorRoute
+  '/de/events/accio-live-webinars': typeof DeEventsAccioLiveWebinarsRoute
   '/de/events/free-forever': typeof DeEventsFreeForeverRoute
   '/de/for/$useCase': typeof DeForUseCaseRoute
   '/de/guide/$guide': typeof DeGuideGuideRoute
@@ -2932,6 +3024,7 @@ export interface FileRoutesById {
   '/es/blog/how-to-find-verified-china-suppliers-ai': typeof EsBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/es/blog/what-to-sell-2027-trending-products-europe': typeof EsBlogWhatToSell2027TrendingProductsEuropeRoute
   '/es/compare/$competitor': typeof EsCompareCompetitorRoute
+  '/es/events/accio-live-webinars': typeof EsEventsAccioLiveWebinarsRoute
   '/es/events/free-forever': typeof EsEventsFreeForeverRoute
   '/es/for/$useCase': typeof EsForUseCaseRoute
   '/es/guide/$guide': typeof EsGuideGuideRoute
@@ -2948,6 +3041,7 @@ export interface FileRoutesById {
   '/fr/blog/how-to-find-verified-china-suppliers-ai': typeof FrBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/fr/blog/what-to-sell-2027-trending-products-europe': typeof FrBlogWhatToSell2027TrendingProductsEuropeRoute
   '/fr/compare/$competitor': typeof FrCompareCompetitorRoute
+  '/fr/events/accio-live-webinars': typeof FrEventsAccioLiveWebinarsRoute
   '/fr/events/free-forever': typeof FrEventsFreeForeverRoute
   '/fr/for/$useCase': typeof FrForUseCaseRoute
   '/fr/guide/$guide': typeof FrGuideGuideRoute
@@ -2964,6 +3058,7 @@ export interface FileRoutesById {
   '/hi/blog/how-to-find-verified-china-suppliers-ai': typeof HiBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/hi/blog/what-to-sell-2027-trending-products-europe': typeof HiBlogWhatToSell2027TrendingProductsEuropeRoute
   '/hi/compare/$competitor': typeof HiCompareCompetitorRoute
+  '/hi/events/accio-live-webinars': typeof HiEventsAccioLiveWebinarsRoute
   '/hi/events/free-forever': typeof HiEventsFreeForeverRoute
   '/hi/for/$useCase': typeof HiForUseCaseRoute
   '/hi/guide/$guide': typeof HiGuideGuideRoute
@@ -2980,6 +3075,7 @@ export interface FileRoutesById {
   '/it/blog/how-to-find-verified-china-suppliers-ai': typeof ItBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/it/blog/what-to-sell-2027-trending-products-europe': typeof ItBlogWhatToSell2027TrendingProductsEuropeRoute
   '/it/compare/$competitor': typeof ItCompareCompetitorRoute
+  '/it/events/accio-live-webinars': typeof ItEventsAccioLiveWebinarsRoute
   '/it/events/free-forever': typeof ItEventsFreeForeverRoute
   '/it/for/$useCase': typeof ItForUseCaseRoute
   '/it/guide/$guide': typeof ItGuideGuideRoute
@@ -2996,6 +3092,7 @@ export interface FileRoutesById {
   '/pt/blog/how-to-find-verified-china-suppliers-ai': typeof PtBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/pt/blog/what-to-sell-2027-trending-products-europe': typeof PtBlogWhatToSell2027TrendingProductsEuropeRoute
   '/pt/compare/$competitor': typeof PtCompareCompetitorRoute
+  '/pt/events/accio-live-webinars': typeof PtEventsAccioLiveWebinarsRoute
   '/pt/events/free-forever': typeof PtEventsFreeForeverRoute
   '/pt/for/$useCase': typeof PtForUseCaseRoute
   '/pt/guide/$guide': typeof PtGuideGuideRoute
@@ -3012,6 +3109,7 @@ export interface FileRoutesById {
   '/ru/blog/how-to-find-verified-china-suppliers-ai': typeof RuBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/ru/blog/what-to-sell-2027-trending-products-europe': typeof RuBlogWhatToSell2027TrendingProductsEuropeRoute
   '/ru/compare/$competitor': typeof RuCompareCompetitorRoute
+  '/ru/events/accio-live-webinars': typeof RuEventsAccioLiveWebinarsRoute
   '/ru/events/free-forever': typeof RuEventsFreeForeverRoute
   '/ru/for/$useCase': typeof RuForUseCaseRoute
   '/ru/guide/$guide': typeof RuGuideGuideRoute
@@ -3031,6 +3129,7 @@ export interface FileRoutesById {
   '/zh/blog/how-to-find-verified-china-suppliers-ai': typeof ZhBlogHowToFindVerifiedChinaSuppliersAiRoute
   '/zh/blog/what-to-sell-2027-trending-products-europe': typeof ZhBlogWhatToSell2027TrendingProductsEuropeRoute
   '/zh/compare/$competitor': typeof ZhCompareCompetitorRoute
+  '/zh/events/accio-live-webinars': typeof ZhEventsAccioLiveWebinarsRoute
   '/zh/events/free-forever': typeof ZhEventsFreeForeverRoute
   '/zh/for/$useCase': typeof ZhForUseCaseRoute
   '/zh/guide/$guide': typeof ZhGuideGuideRoute
@@ -3143,6 +3242,7 @@ export interface FileRouteTypes {
     | '/es/supplier-scorecard'
     | '/es/templates'
     | '/es/tiktok-shop'
+    | '/events/accio-live-webinars'
     | '/events/free-forever'
     | '/for/$useCase'
     | '/fr/ai-agent-tasks'
@@ -3233,6 +3333,7 @@ export interface FileRouteTypes {
     | '/ar/blog/how-to-find-verified-china-suppliers-ai'
     | '/ar/blog/what-to-sell-2027-trending-products-europe'
     | '/ar/compare/$competitor'
+    | '/ar/events/accio-live-webinars'
     | '/ar/events/free-forever'
     | '/ar/for/$useCase'
     | '/ar/guide/$guide'
@@ -3249,6 +3350,7 @@ export interface FileRouteTypes {
     | '/de/blog/how-to-find-verified-china-suppliers-ai'
     | '/de/blog/what-to-sell-2027-trending-products-europe'
     | '/de/compare/$competitor'
+    | '/de/events/accio-live-webinars'
     | '/de/events/free-forever'
     | '/de/for/$useCase'
     | '/de/guide/$guide'
@@ -3265,6 +3367,7 @@ export interface FileRouteTypes {
     | '/es/blog/how-to-find-verified-china-suppliers-ai'
     | '/es/blog/what-to-sell-2027-trending-products-europe'
     | '/es/compare/$competitor'
+    | '/es/events/accio-live-webinars'
     | '/es/events/free-forever'
     | '/es/for/$useCase'
     | '/es/guide/$guide'
@@ -3281,6 +3384,7 @@ export interface FileRouteTypes {
     | '/fr/blog/how-to-find-verified-china-suppliers-ai'
     | '/fr/blog/what-to-sell-2027-trending-products-europe'
     | '/fr/compare/$competitor'
+    | '/fr/events/accio-live-webinars'
     | '/fr/events/free-forever'
     | '/fr/for/$useCase'
     | '/fr/guide/$guide'
@@ -3297,6 +3401,7 @@ export interface FileRouteTypes {
     | '/hi/blog/how-to-find-verified-china-suppliers-ai'
     | '/hi/blog/what-to-sell-2027-trending-products-europe'
     | '/hi/compare/$competitor'
+    | '/hi/events/accio-live-webinars'
     | '/hi/events/free-forever'
     | '/hi/for/$useCase'
     | '/hi/guide/$guide'
@@ -3313,6 +3418,7 @@ export interface FileRouteTypes {
     | '/it/blog/how-to-find-verified-china-suppliers-ai'
     | '/it/blog/what-to-sell-2027-trending-products-europe'
     | '/it/compare/$competitor'
+    | '/it/events/accio-live-webinars'
     | '/it/events/free-forever'
     | '/it/for/$useCase'
     | '/it/guide/$guide'
@@ -3329,6 +3435,7 @@ export interface FileRouteTypes {
     | '/pt/blog/how-to-find-verified-china-suppliers-ai'
     | '/pt/blog/what-to-sell-2027-trending-products-europe'
     | '/pt/compare/$competitor'
+    | '/pt/events/accio-live-webinars'
     | '/pt/events/free-forever'
     | '/pt/for/$useCase'
     | '/pt/guide/$guide'
@@ -3345,6 +3452,7 @@ export interface FileRouteTypes {
     | '/ru/blog/how-to-find-verified-china-suppliers-ai'
     | '/ru/blog/what-to-sell-2027-trending-products-europe'
     | '/ru/compare/$competitor'
+    | '/ru/events/accio-live-webinars'
     | '/ru/events/free-forever'
     | '/ru/for/$useCase'
     | '/ru/guide/$guide'
@@ -3364,6 +3472,7 @@ export interface FileRouteTypes {
     | '/zh/blog/how-to-find-verified-china-suppliers-ai'
     | '/zh/blog/what-to-sell-2027-trending-products-europe'
     | '/zh/compare/$competitor'
+    | '/zh/events/accio-live-webinars'
     | '/zh/events/free-forever'
     | '/zh/for/$useCase'
     | '/zh/guide/$guide'
@@ -3465,6 +3574,7 @@ export interface FileRouteTypes {
     | '/es/supplier-scorecard'
     | '/es/templates'
     | '/es/tiktok-shop'
+    | '/events/accio-live-webinars'
     | '/events/free-forever'
     | '/for/$useCase'
     | '/fr/ai-agent-tasks'
@@ -3555,6 +3665,7 @@ export interface FileRouteTypes {
     | '/ar/blog/how-to-find-verified-china-suppliers-ai'
     | '/ar/blog/what-to-sell-2027-trending-products-europe'
     | '/ar/compare/$competitor'
+    | '/ar/events/accio-live-webinars'
     | '/ar/events/free-forever'
     | '/ar/for/$useCase'
     | '/ar/guide/$guide'
@@ -3571,6 +3682,7 @@ export interface FileRouteTypes {
     | '/de/blog/how-to-find-verified-china-suppliers-ai'
     | '/de/blog/what-to-sell-2027-trending-products-europe'
     | '/de/compare/$competitor'
+    | '/de/events/accio-live-webinars'
     | '/de/events/free-forever'
     | '/de/for/$useCase'
     | '/de/guide/$guide'
@@ -3587,6 +3699,7 @@ export interface FileRouteTypes {
     | '/es/blog/how-to-find-verified-china-suppliers-ai'
     | '/es/blog/what-to-sell-2027-trending-products-europe'
     | '/es/compare/$competitor'
+    | '/es/events/accio-live-webinars'
     | '/es/events/free-forever'
     | '/es/for/$useCase'
     | '/es/guide/$guide'
@@ -3603,6 +3716,7 @@ export interface FileRouteTypes {
     | '/fr/blog/how-to-find-verified-china-suppliers-ai'
     | '/fr/blog/what-to-sell-2027-trending-products-europe'
     | '/fr/compare/$competitor'
+    | '/fr/events/accio-live-webinars'
     | '/fr/events/free-forever'
     | '/fr/for/$useCase'
     | '/fr/guide/$guide'
@@ -3619,6 +3733,7 @@ export interface FileRouteTypes {
     | '/hi/blog/how-to-find-verified-china-suppliers-ai'
     | '/hi/blog/what-to-sell-2027-trending-products-europe'
     | '/hi/compare/$competitor'
+    | '/hi/events/accio-live-webinars'
     | '/hi/events/free-forever'
     | '/hi/for/$useCase'
     | '/hi/guide/$guide'
@@ -3635,6 +3750,7 @@ export interface FileRouteTypes {
     | '/it/blog/how-to-find-verified-china-suppliers-ai'
     | '/it/blog/what-to-sell-2027-trending-products-europe'
     | '/it/compare/$competitor'
+    | '/it/events/accio-live-webinars'
     | '/it/events/free-forever'
     | '/it/for/$useCase'
     | '/it/guide/$guide'
@@ -3651,6 +3767,7 @@ export interface FileRouteTypes {
     | '/pt/blog/how-to-find-verified-china-suppliers-ai'
     | '/pt/blog/what-to-sell-2027-trending-products-europe'
     | '/pt/compare/$competitor'
+    | '/pt/events/accio-live-webinars'
     | '/pt/events/free-forever'
     | '/pt/for/$useCase'
     | '/pt/guide/$guide'
@@ -3667,6 +3784,7 @@ export interface FileRouteTypes {
     | '/ru/blog/how-to-find-verified-china-suppliers-ai'
     | '/ru/blog/what-to-sell-2027-trending-products-europe'
     | '/ru/compare/$competitor'
+    | '/ru/events/accio-live-webinars'
     | '/ru/events/free-forever'
     | '/ru/for/$useCase'
     | '/ru/guide/$guide'
@@ -3686,6 +3804,7 @@ export interface FileRouteTypes {
     | '/zh/blog/how-to-find-verified-china-suppliers-ai'
     | '/zh/blog/what-to-sell-2027-trending-products-europe'
     | '/zh/compare/$competitor'
+    | '/zh/events/accio-live-webinars'
     | '/zh/events/free-forever'
     | '/zh/for/$useCase'
     | '/zh/guide/$guide'
@@ -3796,6 +3915,7 @@ export interface FileRouteTypes {
     | '/es/supplier-scorecard'
     | '/es/templates'
     | '/es/tiktok-shop'
+    | '/events/accio-live-webinars'
     | '/events/free-forever'
     | '/for/$useCase'
     | '/fr/ai-agent-tasks'
@@ -3886,6 +4006,7 @@ export interface FileRouteTypes {
     | '/ar/blog/how-to-find-verified-china-suppliers-ai'
     | '/ar/blog/what-to-sell-2027-trending-products-europe'
     | '/ar/compare/$competitor'
+    | '/ar/events/accio-live-webinars'
     | '/ar/events/free-forever'
     | '/ar/for/$useCase'
     | '/ar/guide/$guide'
@@ -3902,6 +4023,7 @@ export interface FileRouteTypes {
     | '/de/blog/how-to-find-verified-china-suppliers-ai'
     | '/de/blog/what-to-sell-2027-trending-products-europe'
     | '/de/compare/$competitor'
+    | '/de/events/accio-live-webinars'
     | '/de/events/free-forever'
     | '/de/for/$useCase'
     | '/de/guide/$guide'
@@ -3918,6 +4040,7 @@ export interface FileRouteTypes {
     | '/es/blog/how-to-find-verified-china-suppliers-ai'
     | '/es/blog/what-to-sell-2027-trending-products-europe'
     | '/es/compare/$competitor'
+    | '/es/events/accio-live-webinars'
     | '/es/events/free-forever'
     | '/es/for/$useCase'
     | '/es/guide/$guide'
@@ -3934,6 +4057,7 @@ export interface FileRouteTypes {
     | '/fr/blog/how-to-find-verified-china-suppliers-ai'
     | '/fr/blog/what-to-sell-2027-trending-products-europe'
     | '/fr/compare/$competitor'
+    | '/fr/events/accio-live-webinars'
     | '/fr/events/free-forever'
     | '/fr/for/$useCase'
     | '/fr/guide/$guide'
@@ -3950,6 +4074,7 @@ export interface FileRouteTypes {
     | '/hi/blog/how-to-find-verified-china-suppliers-ai'
     | '/hi/blog/what-to-sell-2027-trending-products-europe'
     | '/hi/compare/$competitor'
+    | '/hi/events/accio-live-webinars'
     | '/hi/events/free-forever'
     | '/hi/for/$useCase'
     | '/hi/guide/$guide'
@@ -3966,6 +4091,7 @@ export interface FileRouteTypes {
     | '/it/blog/how-to-find-verified-china-suppliers-ai'
     | '/it/blog/what-to-sell-2027-trending-products-europe'
     | '/it/compare/$competitor'
+    | '/it/events/accio-live-webinars'
     | '/it/events/free-forever'
     | '/it/for/$useCase'
     | '/it/guide/$guide'
@@ -3982,6 +4108,7 @@ export interface FileRouteTypes {
     | '/pt/blog/how-to-find-verified-china-suppliers-ai'
     | '/pt/blog/what-to-sell-2027-trending-products-europe'
     | '/pt/compare/$competitor'
+    | '/pt/events/accio-live-webinars'
     | '/pt/events/free-forever'
     | '/pt/for/$useCase'
     | '/pt/guide/$guide'
@@ -3998,6 +4125,7 @@ export interface FileRouteTypes {
     | '/ru/blog/how-to-find-verified-china-suppliers-ai'
     | '/ru/blog/what-to-sell-2027-trending-products-europe'
     | '/ru/compare/$competitor'
+    | '/ru/events/accio-live-webinars'
     | '/ru/events/free-forever'
     | '/ru/for/$useCase'
     | '/ru/guide/$guide'
@@ -4017,6 +4145,7 @@ export interface FileRouteTypes {
     | '/zh/blog/how-to-find-verified-china-suppliers-ai'
     | '/zh/blog/what-to-sell-2027-trending-products-europe'
     | '/zh/compare/$competitor'
+    | '/zh/events/accio-live-webinars'
     | '/zh/events/free-forever'
     | '/zh/for/$useCase'
     | '/zh/guide/$guide'
@@ -4098,6 +4227,7 @@ export interface RootRouteChildren {
   BlogHowToFindVerifiedChinaSuppliersAiRoute: typeof BlogHowToFindVerifiedChinaSuppliersAiRoute
   BlogWhatToSell2027TrendingProductsEuropeRoute: typeof BlogWhatToSell2027TrendingProductsEuropeRoute
   CompareCompetitorRoute: typeof CompareCompetitorRoute
+  EventsAccioLiveWebinarsRoute: typeof EventsAccioLiveWebinarsRoute
   EventsFreeForeverRoute: typeof EventsFreeForeverRoute
   ForUseCaseRoute: typeof ForUseCaseRoute
   GuideGuideRoute: typeof GuideGuideRoute
@@ -4609,6 +4739,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/es/tiktok-shop'
       preLoaderRoute: typeof EsTiktokShopRouteImport
       parentRoute: typeof EsRoute
+    }
+    '/events/accio-live-webinars': {
+      id: '/events/accio-live-webinars'
+      path: '/events/accio-live-webinars'
+      fullPath: '/events/accio-live-webinars'
+      preLoaderRoute: typeof EventsAccioLiveWebinarsRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/events/free-forever': {
       id: '/events/free-forever'
@@ -5219,6 +5356,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ArCompareCompetitorRouteImport
       parentRoute: typeof ArRoute
     }
+    '/ar/events/accio-live-webinars': {
+      id: '/ar/events/accio-live-webinars'
+      path: '/events/accio-live-webinars'
+      fullPath: '/ar/events/accio-live-webinars'
+      preLoaderRoute: typeof ArEventsAccioLiveWebinarsRouteImport
+      parentRoute: typeof ArRoute
+    }
     '/ar/events/free-forever': {
       id: '/ar/events/free-forever'
       path: '/events/free-forever'
@@ -5357,6 +5501,13 @@ declare module '@tanstack/react-router' {
       path: '/compare/$competitor'
       fullPath: '/de/compare/$competitor'
       preLoaderRoute: typeof DeCompareCompetitorRouteImport
+      parentRoute: typeof DeRoute
+    }
+    '/de/events/accio-live-webinars': {
+      id: '/de/events/accio-live-webinars'
+      path: '/events/accio-live-webinars'
+      fullPath: '/de/events/accio-live-webinars'
+      preLoaderRoute: typeof DeEventsAccioLiveWebinarsRouteImport
       parentRoute: typeof DeRoute
     }
     '/de/events/free-forever': {
@@ -5499,6 +5650,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EsCompareCompetitorRouteImport
       parentRoute: typeof EsRoute
     }
+    '/es/events/accio-live-webinars': {
+      id: '/es/events/accio-live-webinars'
+      path: '/events/accio-live-webinars'
+      fullPath: '/es/events/accio-live-webinars'
+      preLoaderRoute: typeof EsEventsAccioLiveWebinarsRouteImport
+      parentRoute: typeof EsRoute
+    }
     '/es/events/free-forever': {
       id: '/es/events/free-forever'
       path: '/events/free-forever'
@@ -5637,6 +5795,13 @@ declare module '@tanstack/react-router' {
       path: '/compare/$competitor'
       fullPath: '/fr/compare/$competitor'
       preLoaderRoute: typeof FrCompareCompetitorRouteImport
+      parentRoute: typeof FrRoute
+    }
+    '/fr/events/accio-live-webinars': {
+      id: '/fr/events/accio-live-webinars'
+      path: '/events/accio-live-webinars'
+      fullPath: '/fr/events/accio-live-webinars'
+      preLoaderRoute: typeof FrEventsAccioLiveWebinarsRouteImport
       parentRoute: typeof FrRoute
     }
     '/fr/events/free-forever': {
@@ -5779,6 +5944,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HiCompareCompetitorRouteImport
       parentRoute: typeof HiRoute
     }
+    '/hi/events/accio-live-webinars': {
+      id: '/hi/events/accio-live-webinars'
+      path: '/events/accio-live-webinars'
+      fullPath: '/hi/events/accio-live-webinars'
+      preLoaderRoute: typeof HiEventsAccioLiveWebinarsRouteImport
+      parentRoute: typeof HiRoute
+    }
     '/hi/events/free-forever': {
       id: '/hi/events/free-forever'
       path: '/events/free-forever'
@@ -5917,6 +6089,13 @@ declare module '@tanstack/react-router' {
       path: '/compare/$competitor'
       fullPath: '/it/compare/$competitor'
       preLoaderRoute: typeof ItCompareCompetitorRouteImport
+      parentRoute: typeof ItRoute
+    }
+    '/it/events/accio-live-webinars': {
+      id: '/it/events/accio-live-webinars'
+      path: '/events/accio-live-webinars'
+      fullPath: '/it/events/accio-live-webinars'
+      preLoaderRoute: typeof ItEventsAccioLiveWebinarsRouteImport
       parentRoute: typeof ItRoute
     }
     '/it/events/free-forever': {
@@ -6059,6 +6238,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PtCompareCompetitorRouteImport
       parentRoute: typeof PtRoute
     }
+    '/pt/events/accio-live-webinars': {
+      id: '/pt/events/accio-live-webinars'
+      path: '/events/accio-live-webinars'
+      fullPath: '/pt/events/accio-live-webinars'
+      preLoaderRoute: typeof PtEventsAccioLiveWebinarsRouteImport
+      parentRoute: typeof PtRoute
+    }
     '/pt/events/free-forever': {
       id: '/pt/events/free-forever'
       path: '/events/free-forever'
@@ -6197,6 +6383,13 @@ declare module '@tanstack/react-router' {
       path: '/compare/$competitor'
       fullPath: '/ru/compare/$competitor'
       preLoaderRoute: typeof RuCompareCompetitorRouteImport
+      parentRoute: typeof RuRoute
+    }
+    '/ru/events/accio-live-webinars': {
+      id: '/ru/events/accio-live-webinars'
+      path: '/events/accio-live-webinars'
+      fullPath: '/ru/events/accio-live-webinars'
+      preLoaderRoute: typeof RuEventsAccioLiveWebinarsRouteImport
       parentRoute: typeof RuRoute
     }
     '/ru/events/free-forever': {
@@ -6360,6 +6553,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ZhCompareCompetitorRouteImport
       parentRoute: typeof ZhRoute
     }
+    '/zh/events/accio-live-webinars': {
+      id: '/zh/events/accio-live-webinars'
+      path: '/events/accio-live-webinars'
+      fullPath: '/zh/events/accio-live-webinars'
+      preLoaderRoute: typeof ZhEventsAccioLiveWebinarsRouteImport
+      parentRoute: typeof ZhRoute
+    }
     '/zh/events/free-forever': {
       id: '/zh/events/free-forever'
       path: '/events/free-forever'
@@ -6444,6 +6644,7 @@ interface ArRouteChildren {
   ArBlogHowToFindVerifiedChinaSuppliersAiRoute: typeof ArBlogHowToFindVerifiedChinaSuppliersAiRoute
   ArBlogWhatToSell2027TrendingProductsEuropeRoute: typeof ArBlogWhatToSell2027TrendingProductsEuropeRoute
   ArCompareCompetitorRoute: typeof ArCompareCompetitorRoute
+  ArEventsAccioLiveWebinarsRoute: typeof ArEventsAccioLiveWebinarsRoute
   ArEventsFreeForeverRoute: typeof ArEventsFreeForeverRoute
   ArForUseCaseRoute: typeof ArForUseCaseRoute
   ArGuideGuideRoute: typeof ArGuideGuideRoute
@@ -6487,6 +6688,7 @@ const ArRouteChildren: ArRouteChildren = {
   ArBlogWhatToSell2027TrendingProductsEuropeRoute:
     ArBlogWhatToSell2027TrendingProductsEuropeRoute,
   ArCompareCompetitorRoute: ArCompareCompetitorRoute,
+  ArEventsAccioLiveWebinarsRoute: ArEventsAccioLiveWebinarsRoute,
   ArEventsFreeForeverRoute: ArEventsFreeForeverRoute,
   ArForUseCaseRoute: ArForUseCaseRoute,
   ArGuideGuideRoute: ArGuideGuideRoute,
@@ -6523,6 +6725,7 @@ interface DeRouteChildren {
   DeBlogHowToFindVerifiedChinaSuppliersAiRoute: typeof DeBlogHowToFindVerifiedChinaSuppliersAiRoute
   DeBlogWhatToSell2027TrendingProductsEuropeRoute: typeof DeBlogWhatToSell2027TrendingProductsEuropeRoute
   DeCompareCompetitorRoute: typeof DeCompareCompetitorRoute
+  DeEventsAccioLiveWebinarsRoute: typeof DeEventsAccioLiveWebinarsRoute
   DeEventsFreeForeverRoute: typeof DeEventsFreeForeverRoute
   DeForUseCaseRoute: typeof DeForUseCaseRoute
   DeGuideGuideRoute: typeof DeGuideGuideRoute
@@ -6566,6 +6769,7 @@ const DeRouteChildren: DeRouteChildren = {
   DeBlogWhatToSell2027TrendingProductsEuropeRoute:
     DeBlogWhatToSell2027TrendingProductsEuropeRoute,
   DeCompareCompetitorRoute: DeCompareCompetitorRoute,
+  DeEventsAccioLiveWebinarsRoute: DeEventsAccioLiveWebinarsRoute,
   DeEventsFreeForeverRoute: DeEventsFreeForeverRoute,
   DeForUseCaseRoute: DeForUseCaseRoute,
   DeGuideGuideRoute: DeGuideGuideRoute,
@@ -6602,6 +6806,7 @@ interface EsRouteChildren {
   EsBlogHowToFindVerifiedChinaSuppliersAiRoute: typeof EsBlogHowToFindVerifiedChinaSuppliersAiRoute
   EsBlogWhatToSell2027TrendingProductsEuropeRoute: typeof EsBlogWhatToSell2027TrendingProductsEuropeRoute
   EsCompareCompetitorRoute: typeof EsCompareCompetitorRoute
+  EsEventsAccioLiveWebinarsRoute: typeof EsEventsAccioLiveWebinarsRoute
   EsEventsFreeForeverRoute: typeof EsEventsFreeForeverRoute
   EsForUseCaseRoute: typeof EsForUseCaseRoute
   EsGuideGuideRoute: typeof EsGuideGuideRoute
@@ -6645,6 +6850,7 @@ const EsRouteChildren: EsRouteChildren = {
   EsBlogWhatToSell2027TrendingProductsEuropeRoute:
     EsBlogWhatToSell2027TrendingProductsEuropeRoute,
   EsCompareCompetitorRoute: EsCompareCompetitorRoute,
+  EsEventsAccioLiveWebinarsRoute: EsEventsAccioLiveWebinarsRoute,
   EsEventsFreeForeverRoute: EsEventsFreeForeverRoute,
   EsForUseCaseRoute: EsForUseCaseRoute,
   EsGuideGuideRoute: EsGuideGuideRoute,
@@ -6681,6 +6887,7 @@ interface FrRouteChildren {
   FrBlogHowToFindVerifiedChinaSuppliersAiRoute: typeof FrBlogHowToFindVerifiedChinaSuppliersAiRoute
   FrBlogWhatToSell2027TrendingProductsEuropeRoute: typeof FrBlogWhatToSell2027TrendingProductsEuropeRoute
   FrCompareCompetitorRoute: typeof FrCompareCompetitorRoute
+  FrEventsAccioLiveWebinarsRoute: typeof FrEventsAccioLiveWebinarsRoute
   FrEventsFreeForeverRoute: typeof FrEventsFreeForeverRoute
   FrForUseCaseRoute: typeof FrForUseCaseRoute
   FrGuideGuideRoute: typeof FrGuideGuideRoute
@@ -6724,6 +6931,7 @@ const FrRouteChildren: FrRouteChildren = {
   FrBlogWhatToSell2027TrendingProductsEuropeRoute:
     FrBlogWhatToSell2027TrendingProductsEuropeRoute,
   FrCompareCompetitorRoute: FrCompareCompetitorRoute,
+  FrEventsAccioLiveWebinarsRoute: FrEventsAccioLiveWebinarsRoute,
   FrEventsFreeForeverRoute: FrEventsFreeForeverRoute,
   FrForUseCaseRoute: FrForUseCaseRoute,
   FrGuideGuideRoute: FrGuideGuideRoute,
@@ -6760,6 +6968,7 @@ interface HiRouteChildren {
   HiBlogHowToFindVerifiedChinaSuppliersAiRoute: typeof HiBlogHowToFindVerifiedChinaSuppliersAiRoute
   HiBlogWhatToSell2027TrendingProductsEuropeRoute: typeof HiBlogWhatToSell2027TrendingProductsEuropeRoute
   HiCompareCompetitorRoute: typeof HiCompareCompetitorRoute
+  HiEventsAccioLiveWebinarsRoute: typeof HiEventsAccioLiveWebinarsRoute
   HiEventsFreeForeverRoute: typeof HiEventsFreeForeverRoute
   HiForUseCaseRoute: typeof HiForUseCaseRoute
   HiGuideGuideRoute: typeof HiGuideGuideRoute
@@ -6803,6 +7012,7 @@ const HiRouteChildren: HiRouteChildren = {
   HiBlogWhatToSell2027TrendingProductsEuropeRoute:
     HiBlogWhatToSell2027TrendingProductsEuropeRoute,
   HiCompareCompetitorRoute: HiCompareCompetitorRoute,
+  HiEventsAccioLiveWebinarsRoute: HiEventsAccioLiveWebinarsRoute,
   HiEventsFreeForeverRoute: HiEventsFreeForeverRoute,
   HiForUseCaseRoute: HiForUseCaseRoute,
   HiGuideGuideRoute: HiGuideGuideRoute,
@@ -6839,6 +7049,7 @@ interface ItRouteChildren {
   ItBlogHowToFindVerifiedChinaSuppliersAiRoute: typeof ItBlogHowToFindVerifiedChinaSuppliersAiRoute
   ItBlogWhatToSell2027TrendingProductsEuropeRoute: typeof ItBlogWhatToSell2027TrendingProductsEuropeRoute
   ItCompareCompetitorRoute: typeof ItCompareCompetitorRoute
+  ItEventsAccioLiveWebinarsRoute: typeof ItEventsAccioLiveWebinarsRoute
   ItEventsFreeForeverRoute: typeof ItEventsFreeForeverRoute
   ItForUseCaseRoute: typeof ItForUseCaseRoute
   ItGuideGuideRoute: typeof ItGuideGuideRoute
@@ -6882,6 +7093,7 @@ const ItRouteChildren: ItRouteChildren = {
   ItBlogWhatToSell2027TrendingProductsEuropeRoute:
     ItBlogWhatToSell2027TrendingProductsEuropeRoute,
   ItCompareCompetitorRoute: ItCompareCompetitorRoute,
+  ItEventsAccioLiveWebinarsRoute: ItEventsAccioLiveWebinarsRoute,
   ItEventsFreeForeverRoute: ItEventsFreeForeverRoute,
   ItForUseCaseRoute: ItForUseCaseRoute,
   ItGuideGuideRoute: ItGuideGuideRoute,
@@ -6918,6 +7130,7 @@ interface PtRouteChildren {
   PtBlogHowToFindVerifiedChinaSuppliersAiRoute: typeof PtBlogHowToFindVerifiedChinaSuppliersAiRoute
   PtBlogWhatToSell2027TrendingProductsEuropeRoute: typeof PtBlogWhatToSell2027TrendingProductsEuropeRoute
   PtCompareCompetitorRoute: typeof PtCompareCompetitorRoute
+  PtEventsAccioLiveWebinarsRoute: typeof PtEventsAccioLiveWebinarsRoute
   PtEventsFreeForeverRoute: typeof PtEventsFreeForeverRoute
   PtForUseCaseRoute: typeof PtForUseCaseRoute
   PtGuideGuideRoute: typeof PtGuideGuideRoute
@@ -6961,6 +7174,7 @@ const PtRouteChildren: PtRouteChildren = {
   PtBlogWhatToSell2027TrendingProductsEuropeRoute:
     PtBlogWhatToSell2027TrendingProductsEuropeRoute,
   PtCompareCompetitorRoute: PtCompareCompetitorRoute,
+  PtEventsAccioLiveWebinarsRoute: PtEventsAccioLiveWebinarsRoute,
   PtEventsFreeForeverRoute: PtEventsFreeForeverRoute,
   PtForUseCaseRoute: PtForUseCaseRoute,
   PtGuideGuideRoute: PtGuideGuideRoute,
@@ -6997,6 +7211,7 @@ interface RuRouteChildren {
   RuBlogHowToFindVerifiedChinaSuppliersAiRoute: typeof RuBlogHowToFindVerifiedChinaSuppliersAiRoute
   RuBlogWhatToSell2027TrendingProductsEuropeRoute: typeof RuBlogWhatToSell2027TrendingProductsEuropeRoute
   RuCompareCompetitorRoute: typeof RuCompareCompetitorRoute
+  RuEventsAccioLiveWebinarsRoute: typeof RuEventsAccioLiveWebinarsRoute
   RuEventsFreeForeverRoute: typeof RuEventsFreeForeverRoute
   RuForUseCaseRoute: typeof RuForUseCaseRoute
   RuGuideGuideRoute: typeof RuGuideGuideRoute
@@ -7040,6 +7255,7 @@ const RuRouteChildren: RuRouteChildren = {
   RuBlogWhatToSell2027TrendingProductsEuropeRoute:
     RuBlogWhatToSell2027TrendingProductsEuropeRoute,
   RuCompareCompetitorRoute: RuCompareCompetitorRoute,
+  RuEventsAccioLiveWebinarsRoute: RuEventsAccioLiveWebinarsRoute,
   RuEventsFreeForeverRoute: RuEventsFreeForeverRoute,
   RuForUseCaseRoute: RuForUseCaseRoute,
   RuGuideGuideRoute: RuGuideGuideRoute,
@@ -7079,6 +7295,7 @@ interface ZhRouteChildren {
   ZhBlogHowToFindVerifiedChinaSuppliersAiRoute: typeof ZhBlogHowToFindVerifiedChinaSuppliersAiRoute
   ZhBlogWhatToSell2027TrendingProductsEuropeRoute: typeof ZhBlogWhatToSell2027TrendingProductsEuropeRoute
   ZhCompareCompetitorRoute: typeof ZhCompareCompetitorRoute
+  ZhEventsAccioLiveWebinarsRoute: typeof ZhEventsAccioLiveWebinarsRoute
   ZhEventsFreeForeverRoute: typeof ZhEventsFreeForeverRoute
   ZhForUseCaseRoute: typeof ZhForUseCaseRoute
   ZhGuideGuideRoute: typeof ZhGuideGuideRoute
@@ -7128,6 +7345,7 @@ const ZhRouteChildren: ZhRouteChildren = {
   ZhBlogWhatToSell2027TrendingProductsEuropeRoute:
     ZhBlogWhatToSell2027TrendingProductsEuropeRoute,
   ZhCompareCompetitorRoute: ZhCompareCompetitorRoute,
+  ZhEventsAccioLiveWebinarsRoute: ZhEventsAccioLiveWebinarsRoute,
   ZhEventsFreeForeverRoute: ZhEventsFreeForeverRoute,
   ZhForUseCaseRoute: ZhForUseCaseRoute,
   ZhGuideGuideRoute: ZhGuideGuideRoute,
@@ -7183,6 +7401,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogWhatToSell2027TrendingProductsEuropeRoute:
     BlogWhatToSell2027TrendingProductsEuropeRoute,
   CompareCompetitorRoute: CompareCompetitorRoute,
+  EventsAccioLiveWebinarsRoute: EventsAccioLiveWebinarsRoute,
   EventsFreeForeverRoute: EventsFreeForeverRoute,
   ForUseCaseRoute: ForUseCaseRoute,
   GuideGuideRoute: GuideGuideRoute,
